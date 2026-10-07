@@ -26,6 +26,17 @@ Your responsibility: turn the selected premise and hook into a shootable script 
 - Commercial: product solves or escalates the story problem; include disclosure_line and a disclosure_plan entry; use only verified facts {{COMMERCIAL_FACTS}}; never imply the character used or benefited from it. Forbidden topics: {{FORBIDDEN}}.
 <<ENDIF COMMERCIAL>>
 
+## Craft rules (distilled from the content-engine and ugc-influencer-video skills; added after the 2026-10-07 bake-off)
+- Hook earns the next second: the most specific word or image first; no warm-up.
+- Camera alive, never "tripod": propped phone with one settle-wobble, handheld bob, or placement-open; angle changes come from the character, not cuts.
+- Performance = an invested task (goal, obstacle, tactic) with eye-work as action; emotion adjectives are not direction.
+- Lighting names key direction, fill, one colour bounce from a named surface and contact shadows; add a light-stability line if the light must not change.
+- Audio names ambience plus 3-5 diegetic foley per scene; music none by default.
+- The payoff must re-read the opening; the camera notices before the character does.
+<<IF COMMERCIAL>>
+- disclosure_plan must include all three: the platform's paid-partnership/branded-content tool, a spoken or caption disclosure line, and the AI/fictional-character label.
+<<ENDIF COMMERCIAL>>
+
 ## Demonstrations
 {{DEMOS}}
 

@@ -1,0 +1,30 @@
+{
+  "brief_id": "HELDOUT_hook_overload_two_part",
+  "title": "The Case of the Overloaded Hook (Part 1 of 2)",
+  "project": "heldout",
+  "bible_ref": "inspector-v1",
+  "format": "serial_cliffhanger",
+  "platform": "multi",
+  "duration_target_s": 28,
+  "language": "English",
+  "objective": "Write Part 1 of a two-episode arc set in the hallway with coat hooks. The Inspector investigates why one coat hook is sagging under a heap of coats while the four hooks beside it hang empty. Part 1 must end on an unresolved cliffhanger in which the camera, before the Inspector does, reveals evidence that she is the culprit, and she does not yet react. Also supply a one-paragraph outline of Part 2 that pays off the cliffhanger, resolves with the Inspector exposed as the culprit, and fits the same 30 s limit.",
+  "constraints": [
+    "Two-episode arc: Part 1 must stand alone as a watchable short but end unresolved; the Part 2 outline must resolve it without introducing new characters or locations.",
+    "Hard prop limit: no more than three props besides the Inspector's fixed costume (lamp, clipboard, jacket). The hook rail counts as set, not a prop. The coat heap counts as one prop.",
+    "Time-of-day lighting: early-morning blue hour only. The only light is cool daylight through one frosted door panel plus the Inspector's chest inspection lamp. No overhead or practical room lights are switched on.",
+    "One on-camera character only; any second voice must be off camera and limited to one line at most.",
+    "Duration 30 s or less; the cliffhanger beat lands in the last 4 s.",
+    "Signature two-finger clipboard tap used at most once across Part 1. If it is saved for the Part 2 verdict, say so explicitly.",
+    "No fine hand-object choreography: no buttoning, knot-tying, or sorting small items. Actions must read in wide or medium shots."
+  ],
+  "commercial": null,
+  "negative_constraints": [
+    "No cables, chargers, sockets, plugs, light switches, group chats, or cable boxes.",
+    "Not set at the living-room side table or in the shared kitchen.",
+    "No crowds and no second on-camera person, including hands or limbs entering the frame.",
+    "No music bed; foley only, per the bible's sound language.",
+    "No product endorsements, brand logos, or identifiable brand-name clothing.",
+    "No deprivation or luxury contrast as the joke.",
+    "No mugging or raised voice; comedy comes from disproportion only."
+  ]
+}

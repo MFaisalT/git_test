@@ -1,1 +1,2 @@
 fix: prop matching = word-subset ignoring parentheticals; stage check now includes continuity (2026-10-07, after B2 false positive)
+tuning 2 (post bake-off, pre-freeze): craft-rules block added to script_storyboard.md; COMMERCIAL_NO_PLATFORM_TOOL warning added. FREEZE after this commit; held-out brief authored independently after freeze.

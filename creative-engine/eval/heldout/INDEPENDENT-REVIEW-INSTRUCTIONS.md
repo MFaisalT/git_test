@@ -1,0 +1,13 @@
+# Independent review: instructions for the reviewer worker (read-only; challenge, do not repair)
+
+You are an independent reviewer. You did not build this engine and must not fix it. Challenge, with file:line or quoted evidence, each of the following, and write your findings as JSON to eval/heldout/independent-review.json using the schema at the end.
+
+1. Niche decision (docs/NICHE-DECISION.md): are the three niches genuinely divergent? Are the economics assumptions transparent and the zero/downside scenarios real? Is any revenue implied without evidence? Is the primary/fallback recommendation justified by the cited evidence?
+2. Evidence (docs/EVIDENCE-LEDGER.md, and the lab sources it cites by name): any claim promoted beyond its evidence class? Any access level overstated (e.g. "watched" when only text was read)? Are Abu Shalab and Jean Phil kept distinct? Are Caine/Benjamin left unverified?
+3. Creative diversity: read the three bake-off engine packets (projects/bakeoff/episodes/*/storyboard.md) and the perturbation packet (projects/acceptance/episodes/*/storyboard.md). Do they differ in narrative structure, scene actions, performance, camera, sound and payoff, or are they one skeleton with setting swaps? Name the overlaps (e.g. recurring cable motif, tape, lamp) and say whether each is identity (allowed) or template (not).
+4. Tool mappings (docs/TOOL-CAPABILITIES.md, engine/adapters.py): is any internal field claimed as a native Higgsfield control without verification? Is prompt_text honestly described as the only creative payload? Are manual steps and gaps explicit?
+5. Implementation and tests (engine/, tests/): run `python3 -m unittest discover -s . -p "test_*.py"` from creative-engine/ and report the count and failures. Try to break a gate: craft at least two adversarial packets (e.g. a commercial packet with a disguised testimonial; a scene with overlapping timings) by editing a copy of tests/fixtures and running `python3 -m engine validate`. Report whether the gates caught them. Check that fixture-generated packets cannot become planning-ready and that approval refuses drafts/unresolved rights.
+6. Honesty of status labels: are unrendered packets labelled "planning-ready; render unverified"? Does anything claim rendered, published, verified-viral, or profitable?
+
+Output schema:
+{"findings": [{"area": "niche|evidence|diversity|tools|implementation|labels", "severity": "fatal|material|minor", "claim": "", "evidence": "", "required_fix": ""}], "tests": {"command": "", "ran": 0, "failures": 0, "errors": 0}, "adversarial": [{"description": "", "caught": true, "codes": [""]}], "overall": "accept|accept-with-fixes|reject", "summary": ""}

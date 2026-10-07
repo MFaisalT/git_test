@@ -319,6 +319,9 @@ def validate_rights(packet: dict, rep: Report | None = None) -> Report:
                 rep.error("COMMERCIAL_FIRSTHAND_CLAIM", f"fictional character implies firsthand experience: '{phrase}'")
         if not packet.get("script", {}).get("disclosure_line") and not packet.get("export", {}).get("disclosure_plan"):
             rep.error("COMMERCIAL_NO_DISCLOSURE", "commercial brief without disclosure_line or disclosure_plan")
+        plan_blob = " ".join(packet.get("export", {}).get("disclosure_plan", []) or []).lower()
+        if not any(k in plan_blob for k in ("paid partnership", "branded content", "platform tool", "partnership label", "paid-partnership")):
+            rep.warn("COMMERCIAL_NO_PLATFORM_TOOL", "disclosure_plan does not name the platform paid-partnership/branded-content tool")
         allowed = [f.lower() for f in com.get("verified_facts", [])]
         for forb in com.get("forbidden_claims", []):
             if forb.lower() in blob:

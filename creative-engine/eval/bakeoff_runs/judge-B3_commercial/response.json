@@ -1,0 +1,50 @@
+{
+  "scores": {
+    "X": {"originality": 4, "hook": 4, "coherence": 4, "identity": 5, "audiovisual": 5, "feasibility": 4, "grounding": 5, "commercial_fit": 5, "weighted_total": 4.45},
+    "Y": {"originality": 3, "hook": 3, "coherence": 3, "identity": 1, "audiovisual": 3, "feasibility": 3, "grounding": 3, "commercial_fit": 3, "weighted_total": 2.80},
+    "Z": {"originality": 4, "hook": 4, "coherence": 4, "identity": 5, "audiovisual": 4, "feasibility": 4, "grounding": 5, "commercial_fit": 4, "weighted_total": 4.18}
+  },
+  "evidence": {
+    "X": {
+      "originality": "Making the box's six-cable limit expose the Inspector's own lamp lead as the 'seventh offender' is a specific, product-driven twist rather than a generic tidy-up gag.",
+      "hook": "A tight low-angle on the knot, lamp beam and open box, with a loud tape rip and 'Cable incident. Six suspects.', gives a concrete noun and count that can be followed with sound off.",
+      "coherence": "The beats build cleanly from count to lid failure to trace to reveal, but the plan never explains why her lamp lead, which is not in the box, stops the lid closing, so the unplug-then-click payoff skips a causal step.",
+      "identity": "Aubergine jacket, chest lamp, clipboard lanyard, low bun, glasses and warm disappointment all match the bible, and the two-finger tap is used once in S5.",
+      "audiovisual": "Every scene sets out goal, obstacle and tactic, the lens and rig, keyed lighting with bounce and contact shadows, layered foley, and props carried from frame one.",
+      "feasibility": "One 15 s take with no cuts and simple tabletop props is shootable, though a single generated take with a tilt-down reveal and a plug pull is demanding to keep consistent.",
+      "grounding": "It uses only the 'holds up to six cables' fact, shows no brand marks, comes to 20 spoken words, and uses a recurring location.",
+      "commercial_fit": "The box's capacity drives the plot and closes the story, the character makes no use claim, and disclosure is complete: platform label, a spoken 'Paid partnership.' and #ad in the caption."
+    },
+    "Y": {
+      "originality": "A seventh cable from her own pocket tripping her is a familiar slapstick turn, and the box's capacity is not what causes it.",
+      "hook": "An extreme close-up of the knot with a torch and 'Structural failure' is clear, but it looks like generic dark under-furniture footage with no tie to the show.",
+      "coherence": "The seventh cable wrapping her ankle from a coat pocket is physically contrived and has nothing to do with the box, so setup and payoff are only loosely joined.",
+      "identity": "It swaps in a severe bob, trench coat, torch and gloves for the bible silhouette (the bob is on the do-not list) and drops the clipboard-tap signature gesture.",
+      "audiovisual": "Scenes give shot, lens, lighting and foley, but there is no rig, performance direction is thin, and premise fields such as obstacle and escalation are missing.",
+      "feasibility": "A slow stiff fall to the floor with an ankle snag over four cuts is achievable but is hard to generate cleanly and risks reading as mugging.",
+      "grounding": "Product facts and the 15-word count are compliant, but the TV-console location and costume ignore the bible's recurring locations and silhouette.",
+      "commercial_fit": "Disclosure through the platform label and caption is compliant and 'Finding: holds up to six cables' is accurate, but the box only sits beside the joke and is not the comic mechanism."
+    },
+    "Z": {
+      "originality": "The police line-up framing, with cables 'read their rights' inside an orange-tape cordon in the hallway, gives fresh texture to the seventh-cable-is-hers reveal.",
+      "hook": "The first frame plants her lead visibly to the wall and the opening line states 'The box holds six', a strong setup, though a wide locked-off frame is less arresting than a tight opener.",
+      "coherence": "Count, recount, strap tug, then a pull-wide on the taut lead follows causally, and the lead is planted in frame one so the camera notices before she does.",
+      "identity": "Bible costume and anchors are exact, the hallway is a recurring location, and the single two-finger tap lands on the verdict.",
+      "audiovisual": "Lens, rig, lighting, foley and props are specified per scene and units are grouped for generation, but environment and prop blocks are repeated verbatim with little per-beat variation.",
+      "feasibility": "Two generation units, propped-phone setups and one slider pull-back are realistic, and the dragged cordon is a modest practical gag.",
+      "grounding": "Only the six-cable fact is used, there are no marks, it comes to 17 spoken words, and the caption adds an explicit line that the fictional character has not used the product.",
+      "commercial_fit": "Capacity drives the count gag and the box closes the story, and caption plus on-screen disclosure are present, but the plan never says to enable the platform paid-partnership tool, which the brief requires."
+    }
+  },
+  "thresholds": {
+    "X": {"character_intent": true, "premise_specific_payoff": true, "complete_direction": true, "commercial_fit": true},
+    "Y": {"character_intent": false, "premise_specific_payoff": true, "complete_direction": false, "commercial_fit": true},
+    "Z": {"character_intent": true, "premise_specific_payoff": true, "complete_direction": true, "commercial_fit": false}
+  },
+  "ranking": ["X", "Z", "Y"],
+  "anti_template": {
+    "any_two_share_skeleton": true,
+    "evidence": "X and Z share almost the same skeleton: six cables go into a six-capacity box, a seventh turns out to be her own chest-lamp charging lead plugged into the wall, she does a two-finger tap, unplugs, and the lid closes. Y uses the same 'seventh cable is her own charger' turn but resolves it with a trip."
+  },
+  "notes": "X is the most complete and shootable plan, with full three-part disclosure and the product limit causing the reveal; Z is nearly as strong but omits the platform tool and shares X's skeleton. Y breaks the bible silhouette (bob, trench coat, torch) and leaves the product off to the side of the joke."
+}
