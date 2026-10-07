@@ -1,1 +1,2 @@
 {"type": "bible_version", "bible_id": "inspector-v1", "version": 1, "reason": "", "at": "2026-10-07T23:17:47Z"}
+{"type": "bible_version", "bible_id": "inspector-v1", "version": 2, "reason": "add approved_assets registry (voice, locations, character reference) so declared rights are cross-checked; no identity change", "at": "2026-10-07T23:53:25Z"}

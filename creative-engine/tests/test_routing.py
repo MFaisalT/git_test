@@ -45,3 +45,14 @@ class TestRouting(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestRegistryRights(unittest.TestCase):
+    def test_pending_asset_cannot_be_owned(self):
+        from engine.pipeline import _normalise_rights_against_registry
+        p = valid_packet()
+        p["asset_rights"] = [{"asset": "loc-kitchen-01 still", "kind": "location_still", "source": "x", "rights_status": "owned", "scope": "s"},
+                             {"asset": "Inspector character reference per bible", "kind": "character_reference", "source": "x", "rights_status": "owned", "scope": "s"}]
+        _normalise_rights_against_registry(p, bible())
+        self.assertEqual({r["rights_status"] for r in p["asset_rights"]}, {"unresolved"})
+        self.assertTrue(any("downgraded" in e["claim"] for e in p["evidence"]))

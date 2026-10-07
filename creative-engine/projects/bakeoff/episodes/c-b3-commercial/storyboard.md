@@ -3,7 +3,7 @@
 **Status:** planning-ready; render unverified  
 **Brief:** B3_commercial - 15-second sponsored episode: a cable-management box (fictional advertiser) must be the comic mechanism  
 **Format / platform / target:** sponsored_episode / instagram_reels / 15 s  
-**Bible:** inspector-v1 v1  
+**Bible:** inspector-v1 v2  
 
 ## Production format
 (not declared; pre-format packet)
@@ -67,7 +67,7 @@ Disclosure: Paid partnership with fictional-cable-box-co. The Inspector is a fic
 - Notes: Silhouette, rule and register fixed per bible v1. Signature clipboard tap used once, in S4. The lead from chest strap to wall socket must be faintly visible in S1 and taut in S4. Box and cables carry no text or logos. Only claim: box holds up to six cables.
 
 ## Rights and approval checklist
-- [x] character_reference: Inspector character reference - owned (this episode and series)
+- [ ] character_reference: Inspector character reference - unresolved (this episode and series)
 - [x] location_still: Hallway location - not_needed (this episode)
 - [ ] product_image: Generic cable-organiser box - unresolved (confirm advertiser approval before release)
 - [ ] voice: Inspector voice - unresolved (confirm voice licence before release)

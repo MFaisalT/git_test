@@ -3,7 +3,7 @@
 **Status:** planning-ready; render unverified  
 **Brief:** B4_trend_aware - Trend-aware 18-second episode: the Inspector opens a case on a single sock that keeps reappearing in the hallway; use the current trend radar to choose format and hook  
 **Format / platform / target:** spoken_episode / youtube_shorts / 18 s  
-**Bible:** inspector-v1 v1  
+**Bible:** inspector-v1 v2  
 
 ## Production format
 (not declared; pre-format packet)
@@ -66,7 +66,7 @@ Disclosure: AI-generated video.
 - Notes: Moving props: grey sock (floor, hook, box, collar, hook), small plain cardboard box. The grey toe sliver of a second sock at her nape is visible from S2 onward. No cables, chargers, sockets, tape or cones. Single speaker, no off-camera voices. Signature two-finger clipboard tap occurs once, in S4. Light stays constant.
 
 ## Rights and approval checklist
-- [x] character_reference: Inspector character appearance - owned (this episode)
+- [ ] character_reference: Inspector character appearance - unresolved (this episode)
 - [x] location_still: Hallway location - not_needed (this episode)
 - [ ] voice: Inspector voice - unresolved (confirm tool voice terms before publishing)
 - [x] font: Case title card font - not_needed (caption only)

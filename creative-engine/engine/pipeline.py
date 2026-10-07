@@ -27,6 +27,30 @@ class StageFailure(Exception):
     pass
 
 
+PENDING_ASSET_STATES = ("to_be_generated", "to_be_designed", "to_be_recorded", "pending", "planned")
+
+
+def _normalise_rights_against_registry(packet: dict, bible: dict) -> None:
+    """A worker may call an asset 'owned' that does not exist yet. Cross-check against the bible's approved_assets registry:
+    an asset whose registry status is still pending is downgraded to 'unresolved' (never upgraded). Recorded in evidence."""
+    reg = bible.get("approved_assets") or {}
+    by_id = {}
+    if reg.get("voice"):
+        by_id[reg["voice"].get("asset_id")] = reg["voice"]
+    if reg.get("character_reference"):
+        by_id[reg["character_reference"].get("asset_id")] = reg["character_reference"]
+    for loc in reg.get("locations", []) or []:
+        by_id[loc.get("asset_id")] = loc
+    kind_default = {"character_reference": reg.get("character_reference"), "voice": reg.get("voice")}
+    for r in packet.get("asset_rights", []):
+        entry = next((v for k, v in by_id.items() if k and k in str(r.get("asset", ""))), None) or kind_default.get(r.get("kind"))
+        if entry is None and r.get("kind") == "location_still" and reg.get("locations"):
+            entry = next((l for l in reg["locations"] if l.get("label", "").lower() in str(r.get("asset", "")).lower()), None)
+        if entry and str(entry.get("status", "")).lower() in PENDING_ASSET_STATES and r.get("rights_status") in ("owned", "licensed", "consented"):
+            packet.setdefault("evidence", []).append({"claim": f"asset '{r.get('asset')}' declared {r['rights_status']} but registry status is {entry.get('status')}; downgraded to unresolved", "kind": "fact", "source": "bible.approved_assets", "confidence": "high"})
+            r["rights_status"] = "unresolved"
+
+
 def _stage_check(stage: str, out: dict, brief: dict, bible: dict | None = None, context: dict | None = None) -> Report:
     rep = Report()
     if stage == "premises":
@@ -217,6 +241,7 @@ class Pipeline:
         if pf:
             pf.setdefault("chosen_by", "brief" if (brief.get("production_format") or {}).get("shot_architecture") else "engine")
             packet["production_format"] = pf
+        _normalise_rights_against_registry(packet, bible)
         packet["tool_mapping"] = adapter_plan(packet, bible, QUOTES_2026_10_07)
         packet["qa"]["repetition"] = compare(packet, history)
         return packet

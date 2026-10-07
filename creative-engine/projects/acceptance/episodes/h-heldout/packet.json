@@ -34,8 +34,8 @@
   },
   "bible_version": {
     "bible_id": "inspector-v1",
-    "version": 1,
-    "sha256": "a386a164d7970dee3d3924525060e7e62d22ef1bb06d4fc3909ecc03bf6da411"
+    "version": 2,
+    "sha256": "3bbc1269a4390b3f490210e2044e3321485559dbae633bfb3149ded272e93685"
   },
   "evidence": [
     {
@@ -736,7 +736,7 @@
     ],
     "asset_requests": [
       {
-        "asset_id": "char-ref",
+        "asset_id": "char-inspector-v1",
         "kind": "character_reference",
         "model": "nano_banana_pro",
         "controls": {
@@ -849,7 +849,7 @@
         },
         "premise": {
           "max_similarity": 0.028,
-          "closest_packet": "T-B4_trend_aware"
+          "closest_packet": "F-B5_format_open"
         },
         "payoff": {
           "max_similarity": 0.122,
@@ -876,53 +876,28 @@
       "recurring_motifs": [
         {
           "motif": "mechanism:visible_problem",
-          "episodes": 4,
-          "share": 0.67
-        },
-        {
-          "motif": "prop:lamp",
-          "episodes": 4,
-          "share": 0.67
-        },
-        {
-          "motif": "prop:inspection",
-          "episodes": 4,
-          "share": 0.67
+          "episodes": 5,
+          "share": 0.71
         },
         {
           "motif": "prop:clipboard",
-          "episodes": 4,
-          "share": 0.67
+          "episodes": 5,
+          "share": 0.71
+        },
+        {
+          "motif": "prop:lamp",
+          "episodes": 5,
+          "share": 0.71
+        },
+        {
+          "motif": "prop:inspection",
+          "episodes": 5,
+          "share": 0.71
         },
         {
           "motif": "prop:lanyard",
           "episodes": 4,
-          "share": 0.67
-        },
-        {
-          "motif": "prop:phone",
-          "episodes": 3,
-          "share": 0.5
-        },
-        {
-          "motif": "prop:safety",
-          "episodes": 3,
-          "share": 0.5
-        },
-        {
-          "motif": "prop:tape",
-          "episodes": 3,
-          "share": 0.5
-        },
-        {
-          "motif": "prop:orange",
-          "episodes": 3,
-          "share": 0.5
-        },
-        {
-          "motif": "prop:plain",
-          "episodes": 3,
-          "share": 0.5
+          "share": 0.57
         }
       ],
       "verdict": "no-lexical-repetition-detected",
@@ -943,7 +918,7 @@
     }
   ],
   "provenance": {
-    "generated_at": "2026-10-07T23:50:18Z",
+    "generated_at": "2026-10-07T23:53:26Z",
     "provider": "broker",
     "requested_model": "sonnet",
     "observed_model": "not independently observable (Agent tool; model=sonnet requested)",

@@ -3,7 +3,7 @@
 **Status:** planning-ready; render unverified  
 **Brief:** HELDOUT_hook_overload_two_part - The Case of the Overloaded Hook (Part 1 of 2)  
 **Format / platform / target:** serial_cliffhanger / multi / 28 s  
-**Bible:** inspector-v1 v1  
+**Bible:** inspector-v1 v2  
 
 ## Production format
 (not declared; pre-format packet)

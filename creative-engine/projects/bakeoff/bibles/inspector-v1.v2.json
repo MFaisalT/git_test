@@ -1,0 +1,69 @@
+{
+  "bible_id": "inspector-v1",
+  "version": 2,
+  "show_title": "Inspector of Tiny Problems (working title; name/IP uncleared)",
+  "logline": "A composed inspector treats trivial household faults as major infrastructure investigations, and always ends up committing the same fault herself.",
+  "character": {
+    "name": "The Inspector (unnamed on screen)",
+    "age_range": "35-45",
+    "silhouette": "Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun.",
+    "identity_anchors": "Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger.",
+    "desire": "To restore order to a world that keeps producing one-centimetre problems.",
+    "flaw": "She is the main source of the faults she investigates.",
+    "rule": "Every investigation ends with the Inspector exposed as the culprit or the next offender; the camera notices before she does.",
+    "performance_register": "Stillness and procedure; comedy comes from disproportion, never from mugging.",
+    "voice": "Measured, bureaucratic cadence; short declarative lines; never raises her voice.",
+    "signature_gesture": "A slow two-finger tap on the clipboard before delivering a verdict (rationed: once per episode)."
+  },
+  "world": {
+    "recurring_locations": [
+      "living room side table",
+      "shared kitchen",
+      "hallway with coat hooks"
+    ],
+    "visual_language": "Clean modern phone look, eye-level, slightly too formal framing for the triviality; procedural colour accents (aubergine, safety-orange tape).",
+    "sound_language": "Diegetic foley exaggerated one notch (clicks, tape, clipboard); no music by default; optional licensed sting only in edit."
+  },
+  "do_not": [
+    "No bob/moustache/white-tunic combination or any researched creator's identity.",
+    "No deprivation/luxury contrast as the joke.",
+    "No firsthand product endorsements."
+  ],
+  "evolution_policy": "Costume and locations may vary per episode; silhouette, rule, register and signature gesture are fixed until a versioned bible bump with a stated reason.",
+  "provenance": {
+    "created": "2026-10-07",
+    "basis": "comedy-report.md hypothesis 1, sharpened per independent-audit.md C2",
+    "status": "hypothesis, untested",
+    "saved_at": "2026-10-07T23:53:25Z",
+    "bump_reason": "add approved_assets registry (voice, locations, character reference) so declared rights are cross-checked; no identity change"
+  },
+  "approved_assets": {
+    "voice": {
+      "asset_id": "voice-inspector-v1",
+      "status": "to_be_recorded",
+      "rights": "owner-generated original voice; consent n/a; register media_id after generation approval",
+      "note": "same voice across episodes unless continuity_reuse.voice=new"
+    },
+    "locations": [
+      {
+        "asset_id": "loc-living-room-01",
+        "label": "living room side table",
+        "status": "to_be_generated"
+      },
+      {
+        "asset_id": "loc-kitchen-01",
+        "label": "shared kitchen",
+        "status": "to_be_generated"
+      },
+      {
+        "asset_id": "loc-hallway-01",
+        "label": "hallway with coat hooks",
+        "status": "to_be_generated"
+      }
+    ],
+    "character_reference": {
+      "asset_id": "char-inspector-v1",
+      "status": "to_be_designed"
+    }
+  }
+}

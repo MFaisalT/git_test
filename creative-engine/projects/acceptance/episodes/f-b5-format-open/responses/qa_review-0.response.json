@@ -1,0 +1,18 @@
+{
+  "scores": {"originality": 4, "hook": 4, "coherence": 4, "identity": 4, "audiovisual": 4, "feasibility": 3, "grounding": 4, "commercial_fit": 3},
+  "evidence": {
+    "originality": "The camera-notices-first single glide with a ringing source that migrates onto the investigator's own pocket, plus the re-wind and re-ring button, is a fresh spatial gag distinct from the other four premises' text, loop and cut structures.",
+    "hook": "Frame one pairs an open empty oven with a visibly trembling lowest pocket and a burned-in case caption, so the mismatch reads on mute in one second, though a small pocket tremble at 26mm wide risks being missed on a phone screen.",
+    "coherence": "The beats escalate cleanly from oven to dial to cupboard to chest with the ring always 'one step behind' and a logical reversal, with only a mild stretch in that she never glances down despite her own pocket buzzing against her.",
+    "identity": "Aubergine four-flap jacket, lamp, lanyard clipboard, glasses nudge, warm disappointment micro-expression and the single two-finger tap all honour the bible, and she stays culpable-but-deadpan rather than out of character.",
+    "audiovisual": "Each scene specifies lens, glide, light direction, layered foley (ratchet click, flap flip, bell cut to silence) and a silent-mode rationale where the bell is the joke, giving a nearly complete shootable direction.",
+    "feasibility": "A 16 s unbroken 4-beat phone glide with crouch, ear-to-cupboard, drift-in, prop extraction, rewind and walk-out in one generation unit while keeping a small pocket tremble legible is a high-risk ask for current video models with no fallback cut plan.",
+    "grounding": "The prop logic (wind-up timer hidden in the pocket from frame one, oven always empty and open, constraints list of banned objects honoured, no brand text) is consistent across brief, script, scenes and continuity notes.",
+    "commercial_fit": "There is no product by brief design, and the non-commercial fit is served by a shareable 'it's in your pocket' premise with a case-numbered series hook and a falsifiable share-rate hypothesis, but no CTA and only light trend use."
+  },
+  "weighted_total": 3.78,
+  "pass_thresholds": {"character_intent": true, "premise_specific_payoff": true, "complete_direction": true, "commercial_fit": true},
+  "summary": "A well-specified silent single-take that makes the camera the first to find the culprit pocket, with strong format justification and consistent props, identity and sound design. The main weakness is generation risk: one 16 s continuous move carrying many distinct actions and a tiny hook detail.",
+  "top_fix": "Make the frame-one pocket tremble unmissable (tighter start framing or a visible timer-shaped bulge and jingle of the lanyard) and add a fallback plan to split U1 into two continuous 8 s units if the single 16 s take fails."
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->

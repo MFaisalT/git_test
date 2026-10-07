@@ -37,8 +37,8 @@
   },
   "bible_version": {
     "bible_id": "inspector-v1",
-    "version": 1,
-    "sha256": "ab7f8a41ece6c54d31902e3b4100fef1dd5fb75ac92596162bc9b4572ac359a3"
+    "version": 2,
+    "sha256": "3bbc1269a4390b3f490210e2044e3321485559dbae633bfb3149ded272e93685"
   },
   "evidence": [
     {
@@ -58,6 +58,12 @@
       "kind": "hypothesis",
       "source": "bible rule, untested",
       "confidence": "low"
+    },
+    {
+      "claim": "asset 'Inspector character reference' declared owned but registry status is to_be_designed; downgraded to unresolved",
+      "kind": "fact",
+      "source": "bible.approved_assets",
+      "confidence": "high"
     }
   ],
   "premises": [
@@ -465,7 +471,7 @@
       "asset": "Inspector character reference",
       "kind": "character_reference",
       "source": "generated from bible inspector-v1",
-      "rights_status": "owned",
+      "rights_status": "unresolved",
       "scope": "this episode and series"
     },
     {
@@ -643,7 +649,7 @@
     ],
     "asset_requests": [
       {
-        "asset_id": "char-ref",
+        "asset_id": "char-inspector-v1",
         "kind": "character_reference",
         "model": "nano_banana_pro",
         "controls": {
@@ -729,7 +735,7 @@
         {
           "code": "RIGHTS_UNRESOLVED",
           "severity": "warning",
-          "message": "unresolved rights: ['Generic cable-organiser box', 'Inspector voice'] (acceptable while planning)",
+          "message": "unresolved rights: ['Inspector character reference', 'Generic cable-organiser box', 'Inspector voice'] (acceptable while planning)",
           "path": ""
         }
       ]
@@ -800,22 +806,12 @@
       "flagged_fields": [],
       "recurring_motifs": [
         {
-          "motif": "prop:tape",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
-          "motif": "prop:clipboard",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
-          "motif": "prop:orange",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
           "motif": "prop:safety",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:tape",
           "episodes": 3,
           "share": 1.0
         },
@@ -825,7 +821,7 @@
           "share": 1.0
         },
         {
-          "motif": "prop:inspection",
+          "motif": "prop:clipboard",
           "episodes": 3,
           "share": 1.0
         },
@@ -835,12 +831,22 @@
           "share": 1.0
         },
         {
+          "motif": "prop:inspection",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:orange",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
           "motif": "prop:wall",
           "episodes": 2,
           "share": 0.67
         },
         {
-          "motif": "prop:socket",
+          "motif": "prop:cable",
           "episodes": 2,
           "share": 0.67
         },
@@ -850,7 +856,7 @@
           "share": 0.67
         },
         {
-          "motif": "prop:cable",
+          "motif": "prop:socket",
           "episodes": 2,
           "share": 0.67
         }
@@ -873,7 +879,7 @@
     }
   ],
   "provenance": {
-    "generated_at": "2026-10-07T23:50:19Z",
+    "generated_at": "2026-10-07T23:53:26Z",
     "provider": "broker",
     "requested_model": "sonnet",
     "observed_model": "not independently observable (Agent tool; model=sonnet requested)",

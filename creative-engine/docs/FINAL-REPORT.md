@@ -8,7 +8,7 @@ A working local creative engine exists, is tested, and has repeatedly turned new
 
 | Item | Status |
 |---|---|
-| Engine code (schema, validators, pipeline, adapters, prompts, retrieval, repetition, trend radar, store, CLI) | **Implemented**; 78 unit/contract tests pass (`python3 -m unittest discover -s . -p "test_*.py"`) |
+| Engine code (schema, validators, pipeline, adapters, prompts, retrieval, repetition, trend radar, store, CLI) | **Implemented**; 95 unit/contract tests pass (`python3 -m unittest discover -s . -p "test_*.py"`) |
 | Deterministic gates (schema, timing gaps/overlaps/total, speech rate, missing camera/audio, continuity/props, unsupported tool controls, unit cut limits, rights, approval order, fixture quarantine, format-aware beats) | **Implemented and actually tested** with positive and negative cases; also exercised on 9 bake-off outputs and 5 real packets |
 | Broker provider (live Claude path via Agent-tool workers inside this authorised session) | **Actually used**: 31 worker calls for generation/QA (incl. 1 repair and the trend-aware run) (+3 blind judges, 1 held-out author, 1 trend refresh, 1 independent reviewer) |
 | `claude_cli` provider (`claude -p --output-format json`) | **Implemented, not exercised live** (non-interactive Fable may bill usage credits; see docs/MODEL-EVIDENCE.md) |
@@ -16,9 +16,10 @@ A working local creative engine exists, is tested, and has repeatedly turned new
 | Three deliverable packets (silent gag, spoken episode, sponsored episode) | **Planning-ready; render unverified** — `projects/bakeoff/episodes/c-b1-silent-gag`, `c-b2-dialogue-episode`, `c-b3-commercial` |
 | Anti-template perturbation packet | **Planning-ready; render unverified** — `projects/acceptance/episodes/p-b1p-perturbed` (1 bounded repair) |
 | Held-out acceptance packet | **Planning-ready; render unverified** — `projects/acceptance/episodes/h-heldout` (0 creative repairs; two engine gate bugs found and fixed) |
-| Production-format variety (shot architecture / audio mode / voice-location reuse as a tracked, diversified, validated decision) | **Implemented and tested** (`engine/formats.py`, 8 tests); demonstrated on `F-B5_format_open` (see ACCEPTANCE-RESULTS §7) |
+| Production-format variety (shot architecture / audio mode / voice-location reuse as a tracked, diversified, validated decision) | **Implemented and tested** (`engine/formats.py`, 8 tests); **demonstrated live** on `F-B5_format_open`: engine chose single_take_moving_camera + silent, 0 gate errors, QA 3.78 (ACCEPTANCE-RESULTS §7) |
+| Higgsfield production routing (Nano Banana Pro / NB 2.1 / Seedance 2.5 & Mini / Cinema Studio 4.0 & 3.0 / Genjutsu) with get_cost preflights | **Implemented and tested** (`engine/routing.py`, 9 tests); catalogue verified read-only; nothing generated; Cinema Studio 4.0 control ids = gap |
 | Trend-aware packet | **Planning-ready; render unverified** — `projects/acceptance/episodes/t-b4-trend-aware` (0 repairs; cites 5 dated trend ids; rights warnings surfaced) |
-| Higgsfield adapter | **Dry-run only**; no job submitted, no media uploaded; controls verified read-only via MCP catalogue |
+| Higgsfield adapter | **Dry-run only**; no job submitted, no media uploaded; controls verified read-only via MCP catalogue; per-unit routing + image asset requests with credit estimates |
 | Rendered media | **None.** Requires owner approval, uploaded references, `get_cost` preflight, credit cap, then post-render inspection |
 | Drive copy into the lab folder | **Not done** (upload needs approval); everything is in the git branch |
 
@@ -63,7 +64,7 @@ See `eval/heldout/ACCEPTANCE-RESULTS.md` §1–§4 for the three deliverables, t
 
 ## 7. Tests: commands, counts, failures
 
-`python3 -m unittest discover -s . -p "test_*.py"` → **78 tests, 0 failures, 0 errors** (validators 29; engine/pipeline 25; trends 6; review-driven regressions 18). Negative tests cover schema errors, gaps/overlaps/total, speech too fast, silent-with-dialogue, >1 cut, missing camera/audio, multi-speaker shot, undeclared prop, anchor drift, bible do-not token, unsupported control, unknown model, duration out of range, unmapped scene, motion transfer without driving video, music undeclared, driving-footage rights, unresolved rights at render, firsthand claim, missing disclosure, forbidden claim, render status without approval, rendered-verified without inspection, fixture quarantine, hook/premise mismatch, missing payoff/turn beat, unit with two cuts, trend staleness/rights/unknown. Independent reviewer's adversarial results: `eval/heldout/independent-review.json`.
+`python3 -m unittest discover -s . -p "test_*.py"` → **95 tests, 0 failures, 0 errors** (validators 29; engine/pipeline 25; trends 6; review-driven regressions 18; formats 8; routing 9). Negative tests cover schema errors, gaps/overlaps/total, speech too fast, silent-with-dialogue, >1 cut, missing camera/audio, multi-speaker shot, undeclared prop, anchor drift, bible do-not token, unsupported control, unknown model, duration out of range, unmapped scene, motion transfer without driving video, music undeclared, driving-footage rights, unresolved rights at render, firsthand claim, missing disclosure, forbidden claim, render status without approval, rendered-verified without inspection, fixture quarantine, hook/premise mismatch, missing payoff/turn beat, unit with two cuts, trend staleness/rights/unknown. Independent reviewer's adversarial results: `eval/heldout/independent-review.json`.
 
 ## 8. Evidence limitations (honest)
 
@@ -82,7 +83,8 @@ Opus reviewer, separate from the builder: **accept-with-fixes** (0 fatal, 13 mat
 
 1. **Region / entity / audience language** — needed to resolve payouts and disclosure rules.
 2. **Copy `creative-engine/` into the lab folder on Drive** (an upload; needs your approval) and register it in RESEARCH-INDEX.md / PROJECT-FILE-CATALOG.csv.
-3. **Render approval for one packet** (suggest `C-B1_silent_gag`, 12 s, one mini unit, quoted 8 credits/attempt): approve a credit cap, upload an approved character reference still, run `get_cost` preflight, then one generation; inspect the output against `qa.render_inspection` before any further spend.
+3. **First render approval** - suggested order: (a) character sheet on Nano Banana Pro (2 credits) and the kitchen/living-room stills (2 each), approve them into the registry; (b) `C-B1_silent_gag` on Seedance 2.0 Mini (12 s, ~12 credits) or `F-B5_format_open` as a Seedance 2.5 480p draft (~48 credits); inspect against `qa.render_inspection` before any further spend. Say a credit cap and whether to run the NB 2.1 comparison.
+7. **Cinema Studio 4.0**: approve a read-only retrieval of its creative-control ids (lens/lighting/pacing) so the packet's camera and lighting fields can map to native controls instead of prompt text.
 4. **Niche path** — revised: N3 productized service as the business bet, N1 character pilot as the learning engine, N2 fallback (`docs/NICHE-DECISION.md`); say yes/no or redirect.
 5. **Trend refresh cadence** — recommended every two weeks during the pilot plus event triggers; no automation created.
 6. **GitHub**: pushes work now; if you want a PR, say so.

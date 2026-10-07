@@ -3,7 +3,7 @@
 **Status:** planning-ready; render unverified  
 **Brief:** B2_dialogue_episode - 20-second spoken episode: the Inspector investigates a group-chat 'seen' with no reply  
 **Format / platform / target:** spoken_episode / tiktok / 20 s  
-**Bible:** inspector-v1 v1  
+**Bible:** inspector-v1 v2  
 
 ## Production format
 (not declared; pre-format packet)

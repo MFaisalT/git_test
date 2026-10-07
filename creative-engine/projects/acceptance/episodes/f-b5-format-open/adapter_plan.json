@@ -1,0 +1,91 @@
+{
+  "adapter": "higgsfield-mcp/generate_video + generate_image",
+  "verified_on": "2026-10-07",
+  "units": [
+    {
+      "generation_unit": "U1",
+      "scene_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "model": "seedance_2_5",
+      "routing": {
+        "why": "16s exceeds the 15 s mini/Cinema-3.0 ceiling; Seedance 2.5 keeps identity refs + native audio up to 30 s",
+        "status": "verified_controls",
+        "fallback": "cinematic_studio_video_4_0 omni_reference (same ranges; native lens/lighting controls once control ids are retrieved)",
+        "optimisation": "draft=true at 480p first (quoted 48 vs 112 credits at 16 s), finalize the approved take at 1080p within 7 days"
+      },
+      "controls": {
+        "duration": 16,
+        "aspect_ratio": "9:16",
+        "resolution": "720p",
+        "generate_audio": false,
+        "mode": "omni_reference"
+      },
+      "prompt_text": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. NO dialogue anywhere; ambient SFX and foley only.\n3. Props exist from frame one and never appear, disappear or change design: oven, oven dial, cupboard, inspection lamp, clipboard, wind-up timer, lowest flap pocket.\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger. Costume: Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun. Same costume as the bible silhouette; no change during the clip.. Register: Stillness and procedure; comedy comes from disproportion, never from mugging.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S1 (0.0-4.0s) ---\nLocation: Shared kitchen, daytime, wide on the oven and counter. Environment: Clean modern kitchen, white cabinets, steel oven with open glass door and bare shelves, empty pale worktop, small oven dial on the control panel, one cupboard door beside the counter. No readable brand text.\nAction: The frame opens on the clean oven with its glass door open and bare shelves, and an empty counter. The Inspector stands at the left edge, side-on and still, in her aubergine utility jacket with the inspection lamp on its chest strap. Her lowest flap pocket trembles in time with each muffled bell ring. After a tiny phone settle, she turns her head to the oven and steps toward it, and the camera starts to glide right with her.\nPerformance: Invested task: she is locating the source of the ring by listening with her whole head, tilting an ear toward the oven mouth and ignoring her own hip. Her eyes sweep the empty shelves left to right, never down at the pocket. Micro-expression: Straight dark brows pull together a millimetre as the ring repeats; one slow blink.\nCamera: wide, eye level, formally symmetrical on the oven, Inspector at left edge; lens feel 26mm-equivalent phone main camera; movement one tiny settle-wobble in the first half second, then a slow lateral glide to the right motivated by her first step toward the oven; rig handheld phone, gimbal-smooth, operator walking slowly\nLighting: Key from a daylight window frame-left, soft fill from white cabinet fronts, warm bounce from a pale wood worktop, soft contact shadows under the oven door and at her shoes. Daylight stays constant for all 16 s.\nAudio: ambience quiet daytime kitchen room tone, faint fridge hum, distant street murmur; foley: muffled wind-up bell ring, exaggerated one notch, repeating, soft jacket fabric rustle, single shoe step on tile, phone settle thump; no music\n--- S2 (4.0-8.0s) ---\nLocation: Shared kitchen, at the oven. Environment: Same kitchen: steel oven interior lit by the lamp beam, bare shelves, oven dial on the control panel at knee height, pale worktop above.\nAction: The camera tracks right with her as she reaches the oven. She switches on the inspection lamp and sweeps its beam across the empty shelves and back wall of the oven cavity. She crouches to the oven dial, taps it, and tilts her head. The ring has not moved. She stands; the ring is now louder.\nPerformance: Invested task: she is ruling out the oven cavity and then the dial as the source, and her lamp beam is her evidence method. Her eyes follow the beam to every corner, then drop to the dial; she refuses to look away from the oven when the ring grows louder. Micro-expression: Lips press flat, glasses nudged down a hair as she crouches.\nCamera: medium wide, eye level, then a slight drop as she crouches; lens feel 26mm-equivalent phone main camera; movement continuing lateral tracking glide to stay beside her, easing down about ten centimetres to follow her crouch to the dial; rig handheld phone, gimbal-smooth, operator side-stepping\nLighting: Key from the daylight window frame-left, the inspection lamp adds a small warm-white pool inside the oven, steel interior bounces a cool glint onto her face, soft contact shadow under her crouching shoes and the dial housing. No change in daylight.\nAudio: ambience same kitchen room tone, faint fridge hum; foley: wind-up bell ring, slightly louder than before, lamp switch click, dial tap, knee crack and jacket creak as she crouches; no music\n--- S3 (8.0-11.0s) ---\nLocation: Shared kitchen, beside the counter and cupboard. Environment: Cupboard door beside the counter, pale worktop edge, aubergine jacket filling more of frame as the camera nears.\nAction: She straightens and walks to the cupboard beside the counter, presses her ear flat to the door and holds still. The ring is loudest right here. She straightens again, puzzled, and the camera begins its slow drift in and down from her face to her chest, where the lowest flap pocket is visibly buzzing against the jacket.\nPerformance: Invested task: she is verifying the cupboard by ear contact, stone-still to hear a single ring, then triangulating with a slow head turn that does not look down. The camera is the one that finds the pocket. Micro-expression: Eyes narrow while listening, then widen very slightly as the sound refuses to move.\nCamera: medium close at eye level, easing toward chest-level close; lens feel 26mm-equivalent phone main camera; movement slow drift in and down, about thirty centimetres forward and twenty down, from her face toward her chest; rig handheld phone, gimbal-smooth, operator stepping in\nLighting: Key from the daylight window frame-left, white cupboard bounce fills her face softly, aubergine jacket picks up a faint warm bounce from the pale worktop, soft contact shadow where her ear meets the cupboard door and under the pocket flap. Daylight constant.\nAudio: ambience same kitchen room tone, fridge hum; foley: loud wind-up bell ring, now close and rattling, ear and cheek brush on cupboard door, jacket fabric rub, small metal buzz of the timer against the pocket; no music\n--- S4 (11.0-16.0s) ---\nLocation: Shared kitchen, at the counter. Environment: Pocket flap, jacket texture and lanyard at close range, then pale worktop and the open oven in the empty background as she exits.\nAction: The camera settles close on her chest. She finally looks down. She lifts the lowest flap pocket flap and takes out the wind-up timer; the ring dies. She looks at it for a beat of warm disappointment, then gives one slow two-finger tap on the clipboard. She winds the wind-up timer a quarter turn, slides it back into the lowest flap pocket, closes the flap and walks out of frame left. The camera holds on the empty counter, and the muffled ring starts again.\nPerformance: Invested task: she is closing the case with procedure, lifting the flap, extracting the evidence with two fingers, taking her verdict, then winding it a quarter turn 'to test it'. Her eyes stay on the timer throughout and never meet the lens. Micro-expression: Brows lift slightly at the pocket, then settle into warm disappointment, a slow breath out through the nose.\nCamera: close on chest and hands, widening slightly to medium as she exits, then holding on the empty counter; lens feel 26mm-equivalent phone main camera; movement drift in and down finishes on the pocket, then a gentle rise and ease back as she leaves, ending in a slow hold on the empty counter; rig handheld phone, gimbal-smooth, operator easing to a stop\nLighting: Key from the daylight window frame-left, aubergine jacket takes a warm bounce from the pale worktop, the inspection lamp lens throws a small white reflection on the clipboard, soft contact shadows under the pocket flap and clipboard. Daylight constant.\nAudio: ambience same kitchen room tone, fridge hum; foley: pocket flap velcro-free fabric flip, wind-up bell cuts out into silence, slow two-finger clipboard tap, ratchet click of a quarter wind, footsteps leaving, then a faint bell ring restarting; no music\nON-SCREEN TEXT: none (added in post).",
+      "medias": [
+        {
+          "value": "<media_id of approved character reference (asset char-inspector-v1)>",
+          "role": "image_references"
+        },
+        {
+          "value": "<media_id of approved location still>",
+          "role": "image_references"
+        }
+      ],
+      "manual_steps": [
+        "Upload approved reference stills via media_upload (owner action; upload requires approval).",
+        "Burn captions/on-screen text in edit.",
+        "Add licensed music in edit if any.",
+        "Assemble generation units with hard cuts in edit; verify total duration and loop.",
+        "Run get_cost:true preflight and record quote before any submit; submit only after render_approved and credit_cap."
+      ],
+      "gaps": [
+        "No fps/container control; inspect exported file.",
+        "Lip-sync and exact SFX timing are not controllable; inspect output.",
+        "Lens is prompt language only."
+      ],
+      "estimated_credits": 112,
+      "estimated_credits_draft": 48,
+      "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
+    }
+  ],
+  "asset_requests": [
+    {
+      "asset_id": "loc-loc-kitchen-01",
+      "kind": "location_still",
+      "model": "nano_banana_pro",
+      "controls": {
+        "resolution": "2k",
+        "aspect_ratio": "9:16"
+      },
+      "why": "empty lived-in location, no people, planned key light; reused across episodes for a consistent world",
+      "status": "verified_controls",
+      "alternatives": [
+        "cinematic_studio_2_5 for dramatic establishing stills"
+      ],
+      "prompt_text": "Authentic candid iPhone photo of an empty loc-kitchen-01, no people, lived-in not staged, casual slightly imperfect framing, eye level, Clean modern phone look, eye-level, slightly too formal framing for the triviality; procedural colour accents (aubergine, safety-orange tape)., soft window daylight from one side already planned as the key light for a later video, mild HDR, true-to-life colors, subtle sensor grain, no retouching, no readable text, no brands, no logos, vertical 9:16 composition with calm upper third for captions",
+      "reuse": "approved once per recurring location; continuity_reuse.location=same reuses it"
+    },
+    {
+      "asset_id": "char-inspector-v1",
+      "kind": "character_reference",
+      "model": "nano_banana_pro",
+      "controls": {
+        "resolution": "2k",
+        "aspect_ratio": "16:9"
+      },
+      "why": "split-screen character sheet per Higgsfield character-sheet workflow (photoreal-unretouched preset); 16:9 for split-screen",
+      "status": "verified_controls",
+      "alternatives": [
+        "nano_banana_2_1 (NB 2.1: image+video refs, inpaint - to be tested)",
+        "soul_2 / soul_cast (Higgsfield identity models; different pipeline)"
+      ],
+      "prompt_text": "Split-screen character sheet composition, left side a full-body shot of the character standing upright in a neutral straight standing pose facing the camera with both feet flat on the ground and arms relaxed at the sides, full head-to-toe framing with the whole body and both feet visible, right side a tight close-up chest-up portrait of the same character, identical original female character on both sides, single subject only exactly one person with only the character in frame, pure white seamless studio background, professional character sheet presentation, adult woman 35-45, Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger., mature adult bone structure and facial proportions, not a youthful rounded babyface, naturally muted catchlights, no oversized specular glare in the iris, eye color muted rather than glowing, hair in a tight low bun with a matte finish, visible fine skin texture with natural pores, fine lines, subtle asymmetries and texture irregularities, natural visible makeup with slightly uneven foundation blending, slight natural sheen rather than glossy retouched finish, no digital smoothing, no beauty filter, no AI-airbrushed look, matte-to-natural complexion, average build with balanced proportions, wearing Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun., plain dark trousers, flat black work shoes, no jewellery, no bag, natural anatomy, high-end but unretouched commercial photography style, soft diffused studio lighting without harsh reflections, cinematic realism, clean white background, 4K quality, sharp focus on skin texture detail, single subject only, exactly one person, only the character in frame, no other people, no duplicate figures, no mannequin, no reflections, no props, no furniture, no background objects, empty seamless studio, left panel standing full-body head-to-toe not cropped not sitting, right panel tight close-up not full body, no text, no watermark, no logos, no frame borders, no babyface, no plastic skin, original character that does not resemble any real person or existing copyrighted character",
+      "reuse": "approved once, reused every episode (continuity_reuse.costume=same unless bumped)"
+    }
+  ],
+  "notes": "DRY RUN. No job submitted. prompt_text is free text, the only creative payload the tool accepts; internal JSON is not a native format. Field map: scene.action->prompt_text; scene.performance->prompt_text; scene.microexpression->prompt_text; scene.camera.shot->prompt_text; scene.camera.lens->prompt_text; scene.camera.movement->prompt_text; scene.lighting->prompt_text; scene.environment->prompt_text; scene.sound.ambience->native+prompt_text; scene.sound.music->manual; scene.dialogue->prompt_text; scene.captions->manual; scene.transition_out->manual; scene.cuts_inside_clip->prompt_text; continuity.identity_anchors->native+prompt_text; duration->native; aspect_ratio->native; resolution->native; export.fps->gap; export.container->gap; disclosure->manual"
+}

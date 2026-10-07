@@ -3,7 +3,7 @@
 **Status:** planning-ready; render unverified  
 **Brief:** B1_silent_gag - Silent 12-second gag: the one-centimetre-short charger cable  
 **Format / platform / target:** silent_gag / instagram_reels / 12 s  
-**Bible:** inspector-v1 v1  
+**Bible:** inspector-v1 v2  
 
 ## Production format
 (not declared; pre-format packet)
@@ -61,7 +61,7 @@ Disclosure: AI-generated video; fictional character; no product endorsement.
 - Notes: The cable tie is cinched at the cable midpoint in every scene until S4 and must stay centre frame and legible; the gap between plug and socket is one centimetre in S1 and again at the end. The two-finger clipboard tap is used once (S2). Unbranded cable, phone and socket; no readable text or app UI. The last pose matches the first pose for the loop.
 
 ## Rights and approval checklist
-- [x] character_reference: Inspector character reference - owned (this series, all platforms)
+- [ ] character_reference: Inspector character reference - unresolved (this series, all platforms)
 - [x] location_still: Living-room location still - owned (this episode)
 - [x] other: Foley and ambience - owned (this episode)
 - [ ] music: Optional licensed sting - unresolved (optional; use only a platform-cleared track)

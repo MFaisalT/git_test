@@ -235,7 +235,7 @@
   ],
   "asset_requests": [
     {
-      "asset_id": "char-ref",
+      "asset_id": "char-inspector-v1",
       "kind": "character_reference",
       "model": "nano_banana_pro",
       "controls": {

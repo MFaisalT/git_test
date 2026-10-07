@@ -25,8 +25,8 @@
   },
   "bible_version": {
     "bible_id": "inspector-v1",
-    "version": 1,
-    "sha256": "ab7f8a41ece6c54d31902e3b4100fef1dd5fb75ac92596162bc9b4572ac359a3"
+    "version": 2,
+    "sha256": "3bbc1269a4390b3f490210e2044e3321485559dbae633bfb3149ded272e93685"
   },
   "evidence": [
     {
@@ -601,7 +601,7 @@
     ],
     "asset_requests": [
       {
-        "asset_id": "char-ref",
+        "asset_id": "char-inspector-v1",
         "kind": "character_reference",
         "model": "nano_banana_pro",
         "controls": {
@@ -741,7 +741,7 @@
       "flagged_fields": [],
       "recurring_motifs": [
         {
-          "motif": "prop:tape",
+          "motif": "prop:clipboard",
           "episodes": 3,
           "share": 1.0
         },
@@ -756,12 +756,7 @@
           "share": 1.0
         },
         {
-          "motif": "prop:clipboard",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
-          "motif": "prop:lanyard",
+          "motif": "prop:tape",
           "episodes": 3,
           "share": 1.0
         },
@@ -771,12 +766,17 @@
           "share": 1.0
         },
         {
+          "motif": "prop:lanyard",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
           "motif": "prop:safety",
           "episodes": 3,
           "share": 1.0
         },
         {
-          "motif": "prop:socket",
+          "motif": "prop:cable",
           "episodes": 2,
           "share": 0.67
         },
@@ -786,12 +786,12 @@
           "share": 0.67
         },
         {
-          "motif": "prop:wall",
+          "motif": "prop:socket",
           "episodes": 2,
           "share": 0.67
         },
         {
-          "motif": "prop:cable",
+          "motif": "prop:wall",
           "episodes": 2,
           "share": 0.67
         }
@@ -814,7 +814,7 @@
     }
   ],
   "provenance": {
-    "generated_at": "2026-10-07T23:50:19Z",
+    "generated_at": "2026-10-07T23:53:26Z",
     "provider": "broker",
     "requested_model": "sonnet",
     "observed_model": "not independently observable (Agent tool; model=sonnet requested)",

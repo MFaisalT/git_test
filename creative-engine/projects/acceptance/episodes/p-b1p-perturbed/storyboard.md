@@ -3,7 +3,7 @@
 **Status:** planning-ready; render unverified  
 **Brief:** B1p_perturbed - Anti-template perturbation of B1: same fault (a cable one centimetre short), but a spoken 20-second night-kitchen episode with an off-camera flatmate and a hard two-prop limit  
 **Format / platform / target:** spoken_episode / tiktok / 20 s  
-**Bible:** inspector-v1 v1  
+**Bible:** inspector-v1 v2  
 
 ## Production format
 (not declared; pre-format packet)
@@ -70,7 +70,7 @@ Disclosure: AI-generated characters and scenes.
 - Notes: Exactly two props move: the phone (stays on the middle shelf throughout, charging when the plug seats) and the plain milk carton (taken from the door shelf in S4 to wedge the door). The fridge door and the plug are fixtures, not props; the door and plug move only as the fixture's own behaviour. Butter dish, jar, socket, lead and the clipboard on its lanyard are set dressing/worn costume. The flatmate is never seen and the only light sources are the fridge light and the chest lamp. No readable brand text; no cable ties or wrapped cable, no cordon tape, cones or tick-counting; the clipboard tap occurs once, in S5.
 
 ## Rights and approval checklist
-- [x] character_reference: Inspector character appearance - owned (this episode)
+- [ ] character_reference: Inspector character appearance - unresolved (this episode)
 - [x] location_still: Kitchen set - not_needed (this episode)
 - [ ] voice: Inspector and flatmate voices - unresolved (check tool terms before publishing)
 - [x] music: Music - not_needed (none)

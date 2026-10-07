@@ -27,8 +27,8 @@
   },
   "bible_version": {
     "bible_id": "inspector-v1",
-    "version": 1,
-    "sha256": "a386a164d7970dee3d3924525060e7e62d22ef1bb06d4fc3909ecc03bf6da411"
+    "version": 2,
+    "sha256": "3bbc1269a4390b3f490210e2044e3321485559dbae633bfb3149ded272e93685"
   },
   "evidence": [
     {
@@ -41,6 +41,12 @@
       "claim": "Speech is at most 1.75 words per second per scene",
       "kind": "fact",
       "source": "Computed from the script",
+      "confidence": "high"
+    },
+    {
+      "claim": "asset 'Inspector character appearance' declared owned but registry status is to_be_designed; downgraded to unresolved",
+      "kind": "fact",
+      "source": "bible.approved_assets",
       "confidence": "high"
     }
   ],
@@ -498,7 +504,7 @@
       "asset": "Inspector character appearance",
       "kind": "character_reference",
       "source": "Bible inspector-v1 description, AI-generated",
-      "rights_status": "owned",
+      "rights_status": "unresolved",
       "scope": "this episode"
     },
     {
@@ -580,7 +586,7 @@
     ],
     "asset_requests": [
       {
-        "asset_id": "char-ref",
+        "asset_id": "char-inspector-v1",
         "kind": "character_reference",
         "model": "nano_banana_pro",
         "controls": {
@@ -648,7 +654,7 @@
         {
           "code": "RIGHTS_UNRESOLVED",
           "severity": "warning",
-          "message": "unresolved rights: ['Inspector and flatmate voices'] (acceptable while planning)",
+          "message": "unresolved rights: ['Inspector character appearance', 'Inspector and flatmate voices'] (acceptable while planning)",
           "path": ""
         }
       ]
@@ -719,54 +725,29 @@
       "flagged_fields": [],
       "recurring_motifs": [
         {
-          "motif": "prop:clipboard",
-          "episodes": 4,
-          "share": 0.67
+          "motif": "mechanism:visible_problem",
+          "episodes": 5,
+          "share": 0.71
         },
         {
-          "motif": "prop:inspection",
-          "episodes": 4,
-          "share": 0.67
+          "motif": "prop:clipboard",
+          "episodes": 5,
+          "share": 0.71
         },
         {
           "motif": "prop:lamp",
-          "episodes": 4,
-          "share": 0.67
+          "episodes": 5,
+          "share": 0.71
         },
         {
-          "motif": "mechanism:visible_problem",
-          "episodes": 4,
-          "share": 0.67
+          "motif": "prop:inspection",
+          "episodes": 5,
+          "share": 0.71
         },
         {
           "motif": "prop:lanyard",
           "episodes": 4,
-          "share": 0.67
-        },
-        {
-          "motif": "prop:phone",
-          "episodes": 3,
-          "share": 0.5
-        },
-        {
-          "motif": "prop:safety",
-          "episodes": 3,
-          "share": 0.5
-        },
-        {
-          "motif": "prop:orange",
-          "episodes": 3,
-          "share": 0.5
-        },
-        {
-          "motif": "prop:tape",
-          "episodes": 3,
-          "share": 0.5
-        },
-        {
-          "motif": "prop:plain",
-          "episodes": 3,
-          "share": 0.5
+          "share": 0.57
         }
       ],
       "verdict": "no-lexical-repetition-detected",
@@ -787,7 +768,7 @@
     }
   ],
   "provenance": {
-    "generated_at": "2026-10-07T23:50:18Z",
+    "generated_at": "2026-10-07T23:53:25Z",
     "provider": "broker",
     "requested_model": "sonnet",
     "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
