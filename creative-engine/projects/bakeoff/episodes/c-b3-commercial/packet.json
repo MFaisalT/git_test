@@ -498,7 +498,7 @@
     }
   ],
   "tool_mapping": {
-    "adapter": "higgsfield-mcp/generate_video",
+    "adapter": "higgsfield-mcp/generate_video + generate_image",
     "verified_on": "2026-10-07",
     "units": [
       {
@@ -506,17 +506,24 @@
         "scene_ids": [
           "S1"
         ],
-        "model": "seedance_2_0_mini",
+        "model": "seedance_2_5",
+        "routing": {
+          "why": "dialogue + identity lock: Seedance 2.5 omni_reference carries image + audio references (voice lock) with native audio",
+          "status": "verified_controls",
+          "fallback": "seedance_2_0_mini for drafts; cinematic_studio_video_4_0 for premium look",
+          "optimisation": "480p draft -> finalize"
+        },
         "controls": {
           "duration": 4,
           "aspect_ratio": "9:16",
           "resolution": "720p",
-          "generate_audio": true
+          "generate_audio": true,
+          "mode": "omni_reference"
         },
         "prompt_text": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. Speak ONLY the quoted lines, in English, lips still when no line is spoken.\n3. Props exist from frame one and never appear, disappear or change design: plain unbranded cable-organiser box (no text), six loose cables (neutral colours, no logos), safety-orange tape cordon, inspection lamp on chest strap, tiny clipboard on lanyard, lamp charging lead (seventh cable) running from chest strap to wall socket, wall socket with plain faceplate.\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger. Costume: Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun. (same costume throughout the episode).. Register: Stillness and procedure; comedy comes from disproportion, never from mugging.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S1 (0.0-4.0s) ---\nLocation: Hallway with coat hooks. Environment: Narrow modern hallway, pale grey walls, three plain coat hooks with a beige coat, light oak floor, wall socket low on the left wall; orange tape square on the floor around six cables laid in a neat row beside the open box.\nAction: Locked-off wide. The Inspector stands centre holding the clipboard level. She clicks the chest lamp on, sweeps its beam along the six cables in the tape cordon, then states the case. A thin lead is faintly visible from her chest strap back toward the wall socket, unremarked.\nPerformance: Invested task: conducts a formal site briefing, eyes tracking each cable in the beam as if reading a charge sheet. Micro-expression: Neutral, one slow blink as the beam reaches the sixth cable.\nCamera: wide, eye level, slightly formal symmetrical framing; lens feel 24mm-equivalent phone main camera; movement static, locked off; rig phone propped on a hallway shelf at chest height\nLighting: Key: soft daylight from a window frame-left at the hallway end; warm bounce off the oak floor; lamp beam adds a cool white highlight on the cables; soft contact shadows under the cables and the box.\nAudio: ambience quiet flat room tone, faint fridge hum from beyond; foley: lamp click, clipboard plastic tick, one slow boot step on wood; no music\nDialogue (Inspector, on-camera): \"Cable Incident. Six suspects. The box holds six.\" - flat, measured, bureaucratic, each sentence separated by a short pause\nON-SCREEN TEXT: none (added in post).",
         "medias": [
           {
-            "value": "<media_id of approved character reference>",
+            "value": "<media_id of approved character reference (asset char-inspector-v1)>",
             "role": "image_references"
           },
           {
@@ -536,8 +543,9 @@
           "Lip-sync and exact SFX timing are not controllable; inspect output.",
           "Lens is prompt language only."
         ],
-        "estimated_credits": 8,
-        "quote_source": "cost-quotes.json 2026-10-07 (8s/720p: mini 8, seedance_2_5 56); not a measured completed-output cost"
+        "estimated_credits": 28,
+        "estimated_credits_draft": 12,
+        "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
       },
       {
         "generation_unit": "U2",
@@ -545,17 +553,24 @@
           "S2",
           "S3"
         ],
-        "model": "seedance_2_0_mini",
+        "model": "seedance_2_5",
+        "routing": {
+          "why": "dialogue + identity lock: Seedance 2.5 omni_reference carries image + audio references (voice lock) with native audio",
+          "status": "verified_controls",
+          "fallback": "seedance_2_0_mini for drafts; cinematic_studio_video_4_0 for premium look",
+          "optimisation": "480p draft -> finalize"
+        },
         "controls": {
           "duration": 7,
           "aspect_ratio": "9:16",
           "resolution": "720p",
-          "generate_audio": true
+          "generate_audio": true,
+          "mode": "omni_reference"
         },
         "prompt_text": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. Speak ONLY the quoted lines, in English, lips still when no line is spoken.\n3. Props exist from frame one and never appear, disappear or change design: plain unbranded cable-organiser box (no text), six loose cables (neutral colours, no logos), safety-orange tape cordon, inspection lamp on chest strap, tiny clipboard on lanyard, lamp charging lead (seventh cable) running from chest strap to wall socket, wall socket with plain faceplate.\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger. Costume: Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun. (same costume throughout the episode).. Register: Stillness and procedure; comedy comes from disproportion, never from mugging.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S2 (4.0-8.0s) ---\nLocation: Hallway with coat hooks. Environment: Narrow modern hallway, pale grey walls, three plain coat hooks with a beige coat, light oak floor, wall socket low on the left wall; orange tape square on the floor around six cables laid in a neat row beside the open box.\nAction: Medium. She picks up each cable in turn, reads it a formal 'right' with a mouthed nod, drops it into the box with a clipboard tick. Cable six lands. A seventh cable end still lies on the floor. She steps back to count and the cordon tape drags a few centimetres with her.\nPerformance: Invested task: processes each cable like a suspect, ticking the clipboard, then tallies with a pointing finger. Micro-expression: Brow lifts a fraction on the count.\nCamera: medium, eye level; lens feel 35mm-equivalent phone main camera; movement static with a small settle-wobble on the cut; rig phone propped on a hallway shelf at chest height\nLighting: Key: window light frame-left; warm oak-floor bounce; lamp spills a cool circle on the box lid; hard small contact shadow of the box on the floor.\nAudio: ambience same room tone; foley: cable drop thuds into plastic box x6, clipboard ticks, tape peel creak; no music\nDialogue (Inspector, on-camera): \"Count: seven.\" - quiet, level, a beat of puzzlement underneath\n--- S3 (8.0-11.0s) ---\nLocation: Hallway with coat hooks. Environment: Narrow modern hallway, pale grey walls, three plain coat hooks with a beige coat, light oak floor, wall socket low on the left wall; orange tape square on the floor around six cables laid in a neat row beside the open box.\nAction: Close on her upper body. She repeats the count with more ceremony, pointing at each cable inside the box, then the one on the floor. The lead on her chest strap tugs taut and her lamp tilts slightly as she leans.\nPerformance: Invested task: recounts with slower, more official gestures, committed to the procedure and not noticing the pull on her chest. Micro-expression: Eyes narrow slightly behind the glasses; the lamp bobs.\nCamera: medium close-up, eye level; lens feel 50mm-equivalent phone telephoto; movement static, slight breathing drift; rig phone propped on a hallway shelf\nLighting: Key: window light frame-left; warm floor bounce under the chin; lamp glint on her glasses; soft shadow of the clipboard on the jacket.\nAudio: ambience room tone, slightly tighter; foley: finger tap on box lid, strap creak, lamp rattle; no music\nDialogue (Inspector, on-camera): \"Recount. Seven.\" - slower, more formal, same volume\nON-SCREEN TEXT: none (added in post).",
         "medias": [
           {
-            "value": "<media_id of approved character reference>",
+            "value": "<media_id of approved character reference (asset char-inspector-v1)>",
             "role": "image_references"
           },
           {
@@ -575,25 +590,33 @@
           "Lip-sync and exact SFX timing are not controllable; inspect output.",
           "Lens is prompt language only."
         ],
-        "estimated_credits": 8,
-        "quote_source": "cost-quotes.json 2026-10-07 (8s/720p: mini 8, seedance_2_5 56); not a measured completed-output cost"
+        "estimated_credits": 49,
+        "estimated_credits_draft": 21,
+        "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
       },
       {
         "generation_unit": "U3",
         "scene_ids": [
           "S4"
         ],
-        "model": "seedance_2_0_mini",
+        "model": "seedance_2_5",
+        "routing": {
+          "why": "dialogue + identity lock: Seedance 2.5 omni_reference carries image + audio references (voice lock) with native audio",
+          "status": "verified_controls",
+          "fallback": "seedance_2_0_mini for drafts; cinematic_studio_video_4_0 for premium look",
+          "optimisation": "480p draft -> finalize"
+        },
         "controls": {
           "duration": 4,
           "aspect_ratio": "9:16",
           "resolution": "720p",
-          "generate_audio": true
+          "generate_audio": true,
+          "mode": "omni_reference"
         },
         "prompt_text": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. Speak ONLY the quoted lines, in English, lips still when no line is spoken.\n3. Props exist from frame one and never appear, disappear or change design: plain unbranded cable-organiser box (no text), six loose cables (neutral colours, no logos), safety-orange tape cordon, inspection lamp on chest strap, tiny clipboard on lanyard, lamp charging lead (seventh cable) running from chest strap to wall socket, wall socket with plain faceplate.\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger. Costume: Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun. (same costume throughout the episode).. Register: Stillness and procedure; comedy comes from disproportion, never from mugging.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S4 (11.0-15.0s) ---\nLocation: Hallway with coat hooks. Environment: Narrow modern hallway, pale grey walls, three plain coat hooks with a beige coat, light oak floor, wall socket low on the left wall; orange tape square on the floor around six cables laid in a neat row beside the open box.\nAction: Camera pulls wide. The lead is visibly taut from her chest strap across the hallway to the wall socket behind her; the cordon and cables have been dragged along it. She looks down, performs her single slow two-finger tap on the clipboard, delivers the verdict, unplugs the lead from the socket, and closes the box lid on six cables.\nPerformance: Invested task: issues her verdict with procedural calm, then completes the paperwork of unplugging herself. Micro-expression: Warm disappointment: a slow exhale and eyes lowered to the lead.\nCamera: wide, eye level, ending on a held frame; lens feel 24mm-equivalent phone main camera; movement smooth pull-back from medium to wide over 1.5 s, then static; rig phone on a slow slider along the hallway floor rail\nLighting: Key: window light frame-left; warm oak bounce; lamp beam cool on the taut lead; thin shadow line of the lead on the floor.\nAudio: ambience room tone; foley: two-finger clipboard tap, plug pulling from socket, box lid click; no music\nDialogue (Inspector, on-camera): \"Six fit. One is mine.\" - dry, deadpan, lowered slightly at the end\nON-SCREEN TEXT: none (added in post).",
         "medias": [
           {
-            "value": "<media_id of approved character reference>",
+            "value": "<media_id of approved character reference (asset char-inspector-v1)>",
             "role": "image_references"
           },
           {
@@ -613,8 +636,60 @@
           "Lip-sync and exact SFX timing are not controllable; inspect output.",
           "Lens is prompt language only."
         ],
-        "estimated_credits": 8,
-        "quote_source": "cost-quotes.json 2026-10-07 (8s/720p: mini 8, seedance_2_5 56); not a measured completed-output cost"
+        "estimated_credits": 28,
+        "estimated_credits_draft": 12,
+        "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
+      }
+    ],
+    "asset_requests": [
+      {
+        "asset_id": "char-ref",
+        "kind": "character_reference",
+        "model": "nano_banana_pro",
+        "controls": {
+          "resolution": "2k",
+          "aspect_ratio": "16:9"
+        },
+        "why": "split-screen character sheet per Higgsfield character-sheet workflow (photoreal-unretouched preset); 16:9 for split-screen",
+        "status": "verified_controls",
+        "alternatives": [
+          "nano_banana_2_1 (NB 2.1: image+video refs, inpaint - to be tested)",
+          "soul_2 / soul_cast (Higgsfield identity models; different pipeline)"
+        ],
+        "prompt_text": "Split-screen character sheet composition, left side a full-body shot of the character standing upright in a neutral straight standing pose facing the camera with both feet flat on the ground and arms relaxed at the sides, full head-to-toe framing with the whole body and both feet visible, right side a tight close-up chest-up portrait of the same character, identical original female character on both sides, single subject only exactly one person with only the character in frame, pure white seamless studio background, professional character sheet presentation, adult woman 35-45, Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger., mature adult bone structure and facial proportions, not a youthful rounded babyface, naturally muted catchlights, no oversized specular glare in the iris, eye color muted rather than glowing, hair in a tight low bun with a matte finish, visible fine skin texture with natural pores, fine lines, subtle asymmetries and texture irregularities, natural visible makeup with slightly uneven foundation blending, slight natural sheen rather than glossy retouched finish, no digital smoothing, no beauty filter, no AI-airbrushed look, matte-to-natural complexion, average build with balanced proportions, wearing Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun., plain dark trousers, flat black work shoes, no jewellery, no bag, natural anatomy, high-end but unretouched commercial photography style, soft diffused studio lighting without harsh reflections, cinematic realism, clean white background, 4K quality, sharp focus on skin texture detail, single subject only, exactly one person, only the character in frame, no other people, no duplicate figures, no mannequin, no reflections, no props, no furniture, no background objects, empty seamless studio, left panel standing full-body head-to-toe not cropped not sitting, right panel tight close-up not full body, no text, no watermark, no logos, no frame borders, no babyface, no plastic skin, original character that does not resemble any real person or existing copyrighted character",
+        "reuse": "approved once, reused every episode (continuity_reuse.costume=same unless bumped)"
+      },
+      {
+        "asset_id": "loc-hallway-location",
+        "kind": "location_still",
+        "model": "nano_banana_pro",
+        "controls": {
+          "resolution": "2k",
+          "aspect_ratio": "9:16"
+        },
+        "why": "empty lived-in location, no people, planned key light; reused across episodes for a consistent world",
+        "status": "verified_controls",
+        "alternatives": [
+          "cinematic_studio_2_5 for dramatic establishing stills"
+        ],
+        "prompt_text": "Authentic candid iPhone photo of an empty Hallway location, no people, lived-in not staged, casual slightly imperfect framing, eye level, Clean modern phone look, eye-level, slightly too formal framing for the triviality; procedural colour accents (aubergine, safety-orange tape)., soft window daylight from one side already planned as the key light for a later video, mild HDR, true-to-life colors, subtle sensor grain, no retouching, no readable text, no brands, no logos, vertical 9:16 composition with calm upper third for captions",
+        "reuse": "approved once per recurring location; continuity_reuse.location=same reuses it"
+      },
+      {
+        "asset_id": "product-ref",
+        "kind": "product_image",
+        "model": "nano_banana_pro",
+        "controls": {
+          "resolution": "2k",
+          "aspect_ratio": "1:1"
+        },
+        "why": "generic product reference, no brand text",
+        "status": "recommended_untested",
+        "alternatives": [
+          "product-photoshoot workflow"
+        ],
+        "prompt_text": "Plain generic Generic cable-organiser box on a neutral surface, no brand text, soft daylight, 1:1",
+        "reuse": "per advertiser"
       }
     ],
     "notes": "DRY RUN. No job submitted. prompt_text is free text, the only creative payload the tool accepts; internal JSON is not a native format. Field map: scene.action->prompt_text; scene.performance->prompt_text; scene.microexpression->prompt_text; scene.camera.shot->prompt_text; scene.camera.lens->prompt_text; scene.camera.movement->prompt_text; scene.lighting->prompt_text; scene.environment->prompt_text; scene.sound.ambience->native+prompt_text; scene.sound.music->manual; scene.dialogue->prompt_text; scene.captions->manual; scene.transition_out->manual; scene.cuts_inside_clip->prompt_text; continuity.identity_anchors->native+prompt_text; duration->native; aspect_ratio->native; resolution->native; export.fps->gap; export.container->gap; disclosure->manual"
@@ -725,6 +800,21 @@
       "flagged_fields": [],
       "recurring_motifs": [
         {
+          "motif": "prop:tape",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:clipboard",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:orange",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
           "motif": "prop:safety",
           "episodes": 3,
           "share": 1.0
@@ -745,26 +835,6 @@
           "share": 1.0
         },
         {
-          "motif": "prop:clipboard",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
-          "motif": "prop:tape",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
-          "motif": "prop:orange",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
-          "motif": "prop:cable",
-          "episodes": 2,
-          "share": 0.67
-        },
-        {
           "motif": "prop:wall",
           "episodes": 2,
           "share": 0.67
@@ -776,6 +846,11 @@
         },
         {
           "motif": "prop:phone",
+          "episodes": 2,
+          "share": 0.67
+        },
+        {
+          "motif": "prop:cable",
           "episodes": 2,
           "share": 0.67
         }
@@ -798,7 +873,7 @@
     }
   ],
   "provenance": {
-    "generated_at": "2026-10-07T23:44:33Z",
+    "generated_at": "2026-10-07T23:50:19Z",
     "provider": "broker",
     "requested_model": "sonnet",
     "observed_model": "not independently observable (Agent tool; model=sonnet requested)",

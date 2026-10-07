@@ -80,15 +80,15 @@ Disclosure: Paid partnership with fictional-cable-box-co. The Inspector is a fic
 - Disclosure: On-screen 'Paid partnership' text from 0 s
 
 ## Tool mapping (dry run)
-- U1 -> seedance_2_0_mini scenes S1; controls {'duration': 4, 'aspect_ratio': '9:16', 'resolution': '720p', 'generate_audio': True}; est. credits 8 (cost-quotes.json 2026-10-07 (8s/720p: mini 8, seedance_2_5 56); not a measured completed-output cost)
+- U1 -> seedance_2_5 scenes S1; controls {'duration': 4, 'aspect_ratio': '9:16', 'resolution': '720p', 'generate_audio': True, 'mode': 'omni_reference'}; est. credits 28 (generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply)
   - gap: No fps/container control; inspect exported file.
   - gap: Lip-sync and exact SFX timing are not controllable; inspect output.
   - gap: Lens is prompt language only.
-- U2 -> seedance_2_0_mini scenes S2, S3; controls {'duration': 7, 'aspect_ratio': '9:16', 'resolution': '720p', 'generate_audio': True}; est. credits 8 (cost-quotes.json 2026-10-07 (8s/720p: mini 8, seedance_2_5 56); not a measured completed-output cost)
+- U2 -> seedance_2_5 scenes S2, S3; controls {'duration': 7, 'aspect_ratio': '9:16', 'resolution': '720p', 'generate_audio': True, 'mode': 'omni_reference'}; est. credits 49 (generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply)
   - gap: No fps/container control; inspect exported file.
   - gap: Lip-sync and exact SFX timing are not controllable; inspect output.
   - gap: Lens is prompt language only.
-- U3 -> seedance_2_0_mini scenes S4; controls {'duration': 4, 'aspect_ratio': '9:16', 'resolution': '720p', 'generate_audio': True}; est. credits 8 (cost-quotes.json 2026-10-07 (8s/720p: mini 8, seedance_2_5 56); not a measured completed-output cost)
+- U3 -> seedance_2_5 scenes S4; controls {'duration': 4, 'aspect_ratio': '9:16', 'resolution': '720p', 'generate_audio': True, 'mode': 'omni_reference'}; est. credits 28 (generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply)
   - gap: No fps/container control; inspect exported file.
   - gap: Lip-sync and exact SFX timing are not controllable; inspect output.
   - gap: Lens is prompt language only.

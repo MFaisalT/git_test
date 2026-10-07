@@ -72,7 +72,7 @@ Disclosure: AI-generated video; fictional character; no product endorsement.
 - Disclosure: State in the caption or description that the video is AI-generated and fictional.
 
 ## Tool mapping (dry run)
-- U1 -> seedance_2_0_mini scenes S1, S2, S3, S4; controls {'duration': 12, 'aspect_ratio': '9:16', 'resolution': '720p', 'generate_audio': True}; est. credits 8 (cost-quotes.json 2026-10-07 (8s/720p: mini 8, seedance_2_5 56); not a measured completed-output cost)
+- U1 -> seedance_2_0_mini scenes S1, S2, S3, S4; controls {'duration': 12, 'aspect_ratio': '9:16', 'resolution': '720p', 'generate_audio': False}; est. credits 12 (generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply)
   - gap: No fps/container control; inspect exported file.
   - gap: Lip-sync and exact SFX timing are not controllable; inspect output.
   - gap: Lens is prompt language only.

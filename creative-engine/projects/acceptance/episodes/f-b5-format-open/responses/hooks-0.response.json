@@ -1,0 +1,64 @@
+{
+  "hook_variants": [
+    {
+      "id": "H1",
+      "premise_id": "P1",
+      "first_frame": "Wide, eye-level, formally symmetrical shot of the shared kitchen in daylight: a clean empty oven with its glass door open and bare shelves, empty counter, a small caption card 'CASE 12: UNAUTHORISED RING' in the lower third. The Inspector stands at the edge of frame, still, side-on, in the aubergine jacket, lamp on chest strap.",
+      "first_line_or_action": "Silent. A tiny visible ring-shake pulses the lowest flap pocket of her jacket in time with a bell animation on the oven dial, while she stares at the empty oven; she then walks left and the camera starts its glide with her.",
+      "mechanism": "visible_problem",
+      "score": 7,
+      "rationale": "The empty oven and the vibrating pocket are legible muted and specific, but the pocket jiggle at the frame edge is slightly easy to miss in one second, which holds back the legibility score."
+    },
+    {
+      "id": "H2",
+      "premise_id": "P1",
+      "first_frame": "Opening on an empty oven interior in tight frame with a small wind-up bell timer ring visible as a vibrating blur at the bottom edge of the shot (the Inspector's lowest flap pocket is slightly in shot, reading as the 'wrong' object), with a fast subtitle-free visual of sound waves from the oven mouth.",
+      "first_line_or_action": "She crouches into frame and peers into the oven mouth with her lamp, hand raised to hold the oven door; the lowest pocket buzzes visibly against her hip in the foreground, and the camera begins to drift back.",
+      "mechanism": "status_contradiction",
+      "score": 6,
+      "rationale": "It states the paradox (she investigates the oven while the pocket in foreground is shaking) but the foreground-lamp-and-oven composition is busy and the first frame competes for attention."
+    },
+    {
+      "id": "H3",
+      "premise_id": "P1",
+      "first_frame": "Static-looking wide on the empty oven and bare counter, formal framing with the formal case title card 'CASE 12' in the top corner and an animated bell icon pulsing; nobody is in shot yet.",
+      "first_line_or_action": "Silent. The bell icon pulses and the Inspector steps into frame from the right, lamp on, stops, and her lowest flap pocket is already trembling; the camera starts to glide with her toward the oven.",
+      "mechanism": "curiosity_gap",
+      "score": 6,
+      "rationale": "The title card plus empty oven follows the trend of a silent, specific opening, but with no person in the first frame the one-second read is 'something is wrong with this oven', which is less specific than a visible tell."
+    },
+    {
+      "id": "H4",
+      "premise_id": "P3",
+      "first_frame": "Selfie-angle phone shot of the Inspector's face close to the lens in the shared kitchen, small round glasses slipping, lamp glowing at her chest; behind her shoulder a small pan with an egg bubbles on the hob, slightly out of focus, with steam rising.",
+      "first_line_or_action": "She says, to lens: 'Item one. The oven. Empty.' and reverses the phone toward the oven door, still with the pan visible at the edge of the frame as she turns.",
+      "mechanism": "callout",
+      "score": 7,
+      "rationale": "The bubbling pan behind her makes the culprit visible in frame one, which is strong for send-ability to the flatmate who looks in the wrong room, but it relies on the spoken line and is weaker when muted."
+    },
+    {
+      "id": "H5",
+      "premise_id": "P3",
+      "first_frame": "Phone held against the oven door glass: an empty oven interior in close-up, with the faint reflection of a bubbling pan and the Inspector's glasses and lamp visible in the glass.",
+      "first_line_or_action": "A formal timestamp overlay 'EVIDENCE 01' appears and she says 'Oven shelf. Empty.' in a flat voice while the reflected steam climbs behind her head.",
+      "mechanism": "visible_problem",
+      "score": 5,
+      "rationale": "The reflected pan is a clever tell for rewatchers, but at one second the reflection is hard to read and the frame mostly looks like a plain empty oven."
+    },
+    {
+      "id": "H6",
+      "premise_id": "P3",
+      "first_frame": "A shaky character-held phone view sweeping fast across the kitchen, pausing on the Inspector's gloved hand pointing at the oven while a small timer beside a boiling pan sits at the lower corner of the frame.",
+      "first_line_or_action": "Her hand taps the clipboard (rationed signature gesture) too early and she says 'Admissible.' while the camera sweeps past the pan.",
+      "mechanism": "escalating_ritual",
+      "score": 5,
+      "rationale": "The early signature gesture spends the rationed tap and weakens the final payoff, and the sweep is a muddier first frame than the selfie variants."
+    }
+  ],
+  "selected": {
+    "premise_id": "P1",
+    "hook_id": "H1",
+    "rationale": "P1 with H1 gives the clearest muted, one-second read: an empty oven plus a trembling pocket sets the bible rule up so the camera notices before she does. Its production-format pair (single_take_moving_camera, silent_ambience) differs from the recent episodes' locked-off/spoken/cut-heavy pairs and from P3's (pov_handheld, on_camera_dialogue) that leans on speech, so it best demonstrates the format choice. The trade-off against the runner-up H4 (P3) is that H4 has a more immediate culprit reveal in frame one but is weaker muted and keeps a spoken register closer to recent episodes."
+  }
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->

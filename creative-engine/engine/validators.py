@@ -25,8 +25,13 @@ TOOL_LIMITS = {
     "kling3_0": {"min_s": 3, "max_s": 15, "aspect": ["16:9", "9:16", "1:1"], "res": ["std", "pro", "4k"], "audio": True, "media_roles": ["start_image", "end_image"]},
     "hf_mult_motion_control": {"min_s": 4, "max_s": 30, "aspect": [], "res": ["480p", "720p", "1080p"], "audio": False, "media_roles": ["image_references", "video_references"],
                                "requires_driving_video": True},
+    "cinematic_studio_video_4_0": {"min_s": 4, "max_s": 30, "aspect": ["auto", "21:9", "16:9", "4:3", "1:1", "3:4", "9:16"], "res": ["480p", "720p", "1080p"], "audio": True,
+                                   "media_roles": ["start_image", "end_image", "image_references", "video_references", "audio_references"]},
+    "cinematic_studio_3_0": {"min_s": 4, "max_s": 15, "aspect": ["auto", "21:9", "16:9", "4:3", "1:1", "3:4", "9:16"], "res": ["480p", "720p", "1080p", "4k"], "audio": True, "media_roles": ["image", "start_image", "end_image"]},
+    "cinematic_studio_video_v2": {"min_s": 3, "max_s": 12, "aspect": ["1:1", "4:3", "3:4", "16:9", "9:16"], "res": [], "audio": True, "media_roles": ["image", "start_image", "end_image"]},
 }
-SUPPORTED_CONTROLS = {"model", "prompt", "duration", "aspect_ratio", "resolution", "generate_audio", "medias", "mode", "sound", "bitrate_mode", "genre"}
+SUPPORTED_CONTROLS = {"model", "prompt", "duration", "aspect_ratio", "resolution", "generate_audio", "medias", "mode", "sound", "bitrate_mode", "genre", "draft", "draft_job_id", "extension_mode",
+                      "era_id", "camera_model_id", "camera_lens_id", "camera_aperture_id", "pacing_id", "genre_id", "light", "light_id", "light_custom", "color_palette", "multi_shots", "multi_shot_mode", "speedramp", "cfg_scale"}
 FIRSTHAND_PATTERNS = [
     r"\bi(?:'ve| have)? (?:use|used|tested|tried|bought|own|owned|recommend|swear by|love|rely on)\b",
     r"\b(?:mine|my \w+)(?:'s| has| have| is)? been (?:\w+ ){0,3}(?:for|since)\b",

@@ -1,0 +1,169 @@
+{
+  "script": {
+    "title": "Case 12: Unauthorised Ring",
+    "synopsis": "One unbroken phone glide through the shared kitchen follows a ringing timer from the empty oven to the Inspector's own lowest flap pocket, which has been trembling in frame since the first second. She finds the wind-up timer, silences it, delivers her one clipboard verdict, then winds it a quarter turn and pockets it again, so it rings as she leaves.",
+    "beats": [
+      {"beat": "Empty open oven, bare counter, caption card; the Inspector stands side-on and her lowest flap pocket visibly trembles in time with a bell ring.", "function": "hook"},
+      {"beat": "She steps to the oven, lights the empty cavity with her inspection lamp, then crouches to read the oven dial; the ring does not come from the oven.", "function": "setup"},
+      {"beat": "She presses her ear to the cupboard beside the counter; the ring is louder wherever she goes, and the camera begins to drift in and down toward her chest.", "function": "escalation"},
+      {"beat": "The camera arrives at the lowest flap pocket, buzzing against the jacket, before she notices; she lifts the flap and takes out the wind-up timer, the ring dies.", "function": "turn"},
+      {"beat": "Beat of warm disappointment, one slow two-finger tap on the clipboard, then she winds the timer a quarter turn 'to test it', pockets it and walks out; it starts to ring again as she exits.", "function": "payoff"}
+    ],
+    "dialogue": [],
+    "caption_text": "CASE 12: UNAUTHORISED RING",
+    "cta": "",
+    "disclosure_line": "AI-generated characters and scenes."
+  },
+  "scenes": [
+    {
+      "scene_id": "S1",
+      "start_s": 0,
+      "end_s": 4,
+      "location": "Shared kitchen, daytime, wide on the oven and counter",
+      "action": "The frame opens on the clean oven with its glass door open and bare shelves, and an empty counter. The Inspector stands at the left edge, side-on and still, in her aubergine utility jacket with the inspection lamp on its chest strap. Her lowest flap pocket trembles in time with each muffled bell ring. After a tiny phone settle, she turns her head to the oven and steps toward it, and the camera starts to glide right with her.",
+      "performance": "Invested task: she is locating the source of the ring by listening with her whole head, tilting an ear toward the oven mouth and ignoring her own hip. Her eyes sweep the empty shelves left to right, never down at the pocket.",
+      "microexpression": "Straight dark brows pull together a millimetre as the ring repeats; one slow blink.",
+      "dialogue": [],
+      "camera": {
+        "shot": "wide, eye level, formally symmetrical on the oven, Inspector at left edge",
+        "lens": "26mm-equivalent phone main camera",
+        "movement": "one tiny settle-wobble in the first half second, then a slow lateral glide to the right motivated by her first step toward the oven",
+        "rig": "handheld phone, gimbal-smooth, operator walking slowly"
+      },
+      "lighting": "Key from a daylight window frame-left, soft fill from white cabinet fronts, warm bounce from a pale wood worktop, soft contact shadows under the oven door and at her shoes. Daylight stays constant for all 16 s.",
+      "environment": "Clean modern kitchen, white cabinets, steel oven with open glass door and bare shelves, empty pale worktop, small oven dial on the control panel, one cupboard door beside the counter. No readable brand text.",
+      "sound": {
+        "ambience": "quiet daytime kitchen room tone, faint fridge hum, distant street murmur",
+        "foley": ["muffled wind-up bell ring, exaggerated one notch, repeating", "soft jacket fabric rustle", "single shoe step on tile", "phone settle thump"],
+        "music": "none",
+        "voice": "none"
+      },
+      "captions": "CASE 12: UNAUTHORISED RING (lower third, burned in post)",
+      "transition_out": "continuous",
+      "props_from_frame_one": ["oven", "oven dial", "cupboard", "inspection lamp", "clipboard", "wind-up timer", "lowest flap pocket"],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1"
+    },
+    {
+      "scene_id": "S2",
+      "start_s": 4,
+      "end_s": 8,
+      "location": "Shared kitchen, at the oven",
+      "action": "The camera tracks right with her as she reaches the oven. She switches on the inspection lamp and sweeps its beam across the empty shelves and back wall of the oven cavity. She crouches to the oven dial, taps it, and tilts her head. The ring has not moved. She stands; the ring is now louder.",
+      "performance": "Invested task: she is ruling out the oven cavity and then the dial as the source, and her lamp beam is her evidence method. Her eyes follow the beam to every corner, then drop to the dial; she refuses to look away from the oven when the ring grows louder.",
+      "microexpression": "Lips press flat, glasses nudged down a hair as she crouches.",
+      "dialogue": [],
+      "camera": {
+        "shot": "medium wide, eye level, then a slight drop as she crouches",
+        "lens": "26mm-equivalent phone main camera",
+        "movement": "continuing lateral tracking glide to stay beside her, easing down about ten centimetres to follow her crouch to the dial",
+        "rig": "handheld phone, gimbal-smooth, operator side-stepping"
+      },
+      "lighting": "Key from the daylight window frame-left, the inspection lamp adds a small warm-white pool inside the oven, steel interior bounces a cool glint onto her face, soft contact shadow under her crouching shoes and the dial housing. No change in daylight.",
+      "environment": "Same kitchen: steel oven interior lit by the lamp beam, bare shelves, oven dial on the control panel at knee height, pale worktop above.",
+      "sound": {
+        "ambience": "same kitchen room tone, faint fridge hum",
+        "foley": ["wind-up bell ring, slightly louder than before", "lamp switch click", "dial tap", "knee crack and jacket creak as she crouches"],
+        "music": "none",
+        "voice": "none"
+      },
+      "captions": "",
+      "transition_out": "continuous",
+      "props_from_frame_one": ["oven", "oven dial", "inspection lamp", "wind-up timer", "lowest flap pocket"],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1"
+    },
+    {
+      "scene_id": "S3",
+      "start_s": 8,
+      "end_s": 11,
+      "location": "Shared kitchen, beside the counter and cupboard",
+      "action": "She straightens and walks to the cupboard beside the counter, presses her ear flat to the door and holds still. The ring is loudest right here. She straightens again, puzzled, and the camera begins its slow drift in and down from her face to her chest, where the lowest flap pocket is visibly buzzing against the jacket.",
+      "performance": "Invested task: she is verifying the cupboard by ear contact, stone-still to hear a single ring, then triangulating with a slow head turn that does not look down. The camera is the one that finds the pocket.",
+      "microexpression": "Eyes narrow while listening, then widen very slightly as the sound refuses to move.",
+      "dialogue": [],
+      "camera": {
+        "shot": "medium close at eye level, easing toward chest-level close",
+        "lens": "26mm-equivalent phone main camera",
+        "movement": "slow drift in and down, about thirty centimetres forward and twenty down, from her face toward her chest",
+        "rig": "handheld phone, gimbal-smooth, operator stepping in"
+      },
+      "lighting": "Key from the daylight window frame-left, white cupboard bounce fills her face softly, aubergine jacket picks up a faint warm bounce from the pale worktop, soft contact shadow where her ear meets the cupboard door and under the pocket flap. Daylight constant.",
+      "environment": "Cupboard door beside the counter, pale worktop edge, aubergine jacket filling more of frame as the camera nears.",
+      "sound": {
+        "ambience": "same kitchen room tone, fridge hum",
+        "foley": ["loud wind-up bell ring, now close and rattling", "ear and cheek brush on cupboard door", "jacket fabric rub", "small metal buzz of the timer against the pocket"],
+        "music": "none",
+        "voice": "none"
+      },
+      "captions": "",
+      "transition_out": "continuous",
+      "props_from_frame_one": ["cupboard", "wind-up timer", "lowest flap pocket", "inspection lamp"],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1"
+    },
+    {
+      "scene_id": "S4",
+      "start_s": 11,
+      "end_s": 16,
+      "location": "Shared kitchen, at the counter",
+      "action": "The camera settles close on her chest. She finally looks down. She lifts the lowest flap pocket flap and takes out the wind-up timer; the ring dies. She looks at it for a beat of warm disappointment, then gives one slow two-finger tap on the clipboard. She winds the wind-up timer a quarter turn, slides it back into the lowest flap pocket, closes the flap and walks out of frame left. The camera holds on the empty counter, and the muffled ring starts again.",
+      "performance": "Invested task: she is closing the case with procedure, lifting the flap, extracting the evidence with two fingers, taking her verdict, then winding it a quarter turn 'to test it'. Her eyes stay on the timer throughout and never meet the lens.",
+      "microexpression": "Brows lift slightly at the pocket, then settle into warm disappointment, a slow breath out through the nose.",
+      "dialogue": [],
+      "camera": {
+        "shot": "close on chest and hands, widening slightly to medium as she exits, then holding on the empty counter",
+        "lens": "26mm-equivalent phone main camera",
+        "movement": "drift in and down finishes on the pocket, then a gentle rise and ease back as she leaves, ending in a slow hold on the empty counter",
+        "rig": "handheld phone, gimbal-smooth, operator easing to a stop"
+      },
+      "lighting": "Key from the daylight window frame-left, aubergine jacket takes a warm bounce from the pale worktop, the inspection lamp lens throws a small white reflection on the clipboard, soft contact shadows under the pocket flap and clipboard. Daylight constant.",
+      "environment": "Pocket flap, jacket texture and lanyard at close range, then pale worktop and the open oven in the empty background as she exits.",
+      "sound": {
+        "ambience": "same kitchen room tone, fridge hum",
+        "foley": ["pocket flap velcro-free fabric flip", "wind-up bell cuts out into silence", "slow two-finger clipboard tap", "ratchet click of a quarter wind", "footsteps leaving, then a faint bell ring restarting"],
+        "music": "none",
+        "voice": "none"
+      },
+      "captions": "",
+      "transition_out": "hold",
+      "props_from_frame_one": ["wind-up timer", "lowest flap pocket", "clipboard", "inspection lamp", "oven"],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1"
+    }
+  ],
+  "continuity": {
+    "identity_anchors": "Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger.",
+    "costume": "Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun. Same costume as the bible silhouette; no change during the clip.",
+    "props": ["oven", "oven dial", "cupboard", "inspection lamp", "clipboard", "wind-up timer", "lowest flap pocket"],
+    "notes": "Single take, one generation unit U1 of 16 s, no cuts. The wind-up timer is hidden in the lowest flap pocket from frame one and must be the only source of the ring; the oven stays empty and open. The signature two-finger clipboard tap happens exactly once, in S4. Daylight does not change. The camera is the first to notice the pocket. Silent mode: no speech, no music; the bell foley carries the joke. Same kitchen as loc-kitchen-01, no cables, sockets, tape, cones, socks, coat hooks or fridge alarms. No readable brand text."
+  },
+  "asset_rights": [
+    {"asset": "loc-kitchen-01", "kind": "location_still", "source": "Bible approved_assets: shared kitchen location still, asset_id loc-kitchen-01", "rights_status": "owned", "scope": "Reference for the kitchen in all scenes of this episode"},
+    {"asset": "Inspector character reference per bible inspector-v1", "kind": "character_reference", "source": "Bible silhouette and identity anchors", "rights_status": "owned", "scope": "Character appearance for the episode"},
+    {"asset": "Diegetic bell and ambience foley", "kind": "other", "source": "Generated or recorded in edit by the production", "rights_status": "owned", "scope": "Episode audio; no music or voice used"}
+  ],
+  "export": {
+    "aspect_ratio": "9:16",
+    "resolution": "1080x1920",
+    "fps": 30,
+    "container": "mp4",
+    "max_duration_s": 16,
+    "edit_plan": [
+      "One 16 s generation unit U1, no cuts; trim only head and tail handles",
+      "Burn the CASE 12 caption card into the lower third during the first 2 s in post",
+      "Mix ambience and exaggerated bell foley; no music, no voice",
+      "Check the last frame holds on the empty counter with the bell restarting before the platform loop"
+    ],
+    "disclosure_plan": ["Add AI-generated content label on the platform at publish"]
+  },
+  "growth_hypotheses": [
+    {"hypothesis": "A silent single take that ends on the character's own pocket ringing again gets a higher rewatch and share rate than the recent cut-heavy spoken episodes.", "metric": "Average watch time share and shares per 1,000 views on Reels", "falsifier": "Shares per 1,000 views are not higher than the recent episodes' median after 7 days."},
+    {"hypothesis": "A trembling pocket in frame one makes viewers spot the culprit before the Inspector, which increases comments saying 'it's in her pocket'.", "metric": "Share of comments naming the pocket", "falsifier": "Fewer than 5 percent of comments mention the pocket within 48 hours."}
+  ],
+  "evidence": [
+    {"claim": "The format single_take_moving_camera plus silent_ambience differs from the recent locked-off, spoken and cut-heavy episodes.", "kind": "fact", "source": "Selected premise P1 production_format rationale", "confidence": "medium"},
+    {"claim": "A visible problem in frame one and a payoff that re-reads it should improve muted-autoplay comprehension.", "kind": "hypothesis", "source": "Selected hook H1 mechanism visible_problem and trend T-20261007-05", "confidence": "low"}
+  ]
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->

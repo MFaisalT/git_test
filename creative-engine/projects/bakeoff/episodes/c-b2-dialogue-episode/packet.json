@@ -545,7 +545,7 @@
     }
   ],
   "tool_mapping": {
-    "adapter": "higgsfield-mcp/generate_video",
+    "adapter": "higgsfield-mcp/generate_video + generate_image",
     "verified_on": "2026-10-07",
     "units": [
       {
@@ -558,16 +558,23 @@
           "S5"
         ],
         "model": "seedance_2_5",
+        "routing": {
+          "why": "20s exceeds the 15 s mini/Cinema-3.0 ceiling; Seedance 2.5 keeps identity refs + native audio up to 30 s",
+          "status": "verified_controls",
+          "fallback": "cinematic_studio_video_4_0 omni_reference (same ranges; native lens/lighting controls once control ids are retrieved)",
+          "optimisation": "draft=true at 480p first (quoted 48 vs 112 credits at 16 s), finalize the approved take at 1080p within 7 days"
+        },
         "controls": {
           "duration": 20,
           "aspect_ratio": "9:16",
           "resolution": "720p",
-          "generate_audio": true
+          "generate_audio": true,
+          "mode": "omni_reference"
         },
         "prompt_text": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. Speak ONLY the quoted lines, in English, lips still when no line is spoken.\n3. Props exist from frame one and never appear, disappear or change design: main phone (face-up, generic tick glyph, no readable text), second phone (face-down at table edge under torn orange strips), safety-orange tape roll, torn safety-orange tape strips, inspection lamp, clipboard on lanyard.\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger. Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun. Costume: Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun; plain dark trousers; small round glasses worn throughout.. Register: Stillness and procedure; comedy comes from disproportion, never from mugging.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S1 (0.0-4.5s) ---\nLocation: Living room side table. Environment: Tidy modern living room, off-white wall behind her, a plain grey sofa edge at left, wooden side table with nothing on it except the two phones and the tape roll.\nAction: The Inspector sits behind a small wooden side table and presses the final strip of safety-orange tape down around a face-up phone with one finger, her lamp trained on it. At the table's right edge a second phone lies half out of frame, face-down under a few torn orange strips. She raises the clipboard and speaks to the lens.\nPerformance: She is completing a cordon with careful procedure: smoothing the tape corner flat with her fingertip, then lifting the clipboard to chest height before delivering the line deadpan, eyes on the lens and never glancing at the second phone. Micro-expression: Brows stay level; one small tightening at the corner of the mouth as she says 'suspect'.\nCamera: medium shot, eye level, slightly too formal symmetrical framing; lens feel 26mm-equivalent phone main camera; movement locked off with one barely perceptible settle; rig phone propped on a stack of books on a shelf opposite the table\nLighting: Key from a window camera-left, soft and neutral; her chest lamp adds a small bright pool on the main phone; warm bounce off the pale wooden table onto her chin and jacket; hard contact shadows under the phones and tape strips.\nAudio: ambience quiet room tone with faint distant street hum; foley: tape peel and press, exaggerated one notch, soft clipboard lift knock, jacket fabric rustle; no music\nDialogue (Inspector, on-camera): \"Everyone who leaves a friend on seen is a suspect.\" - measured bureaucratic cadence, flat, no emphasis\n--- S2 (4.5-9.0s) ---\nLocation: Living room side table. Environment: Same living room; the cordon now has two layers of orange tape and a loose strip hangs from the table edge.\nAction: She tears another strip of tape with her fingertips and tapes the phone's edge to the table, then leans a fraction forward, lamp beam tightening on the tick glyph as she states her findings.\nPerformance: She is annotating the case as she tapes: eyes drop to the clipboard, a finger traces a line down the page, then back up to the phone for each finding. Micro-expression: A slow, single blink on 'negligence'.\nCamera: medium shot, eye level; lens feel 26mm-equivalent phone main camera; movement locked off, with a very slow 3 percent push-in; rig same propped phone on books\nLighting: Same window key camera-left; lamp pool slightly tighter and brighter on the phone; warm wooden bounce under her jaw; crisp contact shadow of the tape strip on the table.\nAudio: ambience same quiet room tone; foley: tape tear, tape press squeak, fingertip drag on clipboard paper; no music\nDialogue (Inspector, on-camera): \"Seen. Four hours. That is delay. Delay is negligence.\" - each sentence a notch calmer and quieter\n--- S3 (9.0-14.0s) ---\nLocation: Living room side table. Environment: Same living room; the table edge now carries a full orange tape line and the second phone remains half out of frame at the right edge.\nAction: She tapes a long strip across the whole table edge as if cordoning the entire surface, then states the final finding. An off-camera voice asks one mild question. She pauses with the tape held mid-air.\nPerformance: She is laying a straight cordon line along the table edge with ruler-straight attention, stating each finding to the tape, not the lens; at the off-camera question she freezes, tape strip held mid-air, and listens. Micro-expression: Eyebrows lift one millimetre at the question; eyes flick to the lens and back down.\nCamera: medium shot, eye level; lens feel 26mm-equivalent phone main camera; movement locked off; rig same propped phone on books\nLighting: Same window key camera-left; lamp pool steady on the phone; warm wooden bounce; thin contact shadow under the long tape strip.\nAudio: ambience same quiet room tone, slightly more hush when the off-camera voice speaks; foley: long tape peel, tape tension twang, small intake of breath; no music\nDialogue (Inspector, on-camera): \"Delay. Negligence. Dereliction.\" - each word quieter and calmer than the last\nDialogue (Friend, off-camera): \"Did you get my message about Saturday?\" - gentle, neutral, close-mic, from behind camera\n--- S4 (14.0-17.5s) ---\nLocation: Living room side table. Environment: Same living room; the second phone comes into frame, face-down under strips of the same orange tape.\nAction: She lowers the tape, raises the clipboard and delivers the verdict with the single slow two-finger tap on the clipboard. As she speaks, the camera begins a slow lateral slide right, leaving her face and moving along the table edge toward the second phone.\nPerformance: She is issuing a formal finding: two fingers tap the clipboard slowly once, then rest, while her gaze stays fixed on the first phone and she does not notice the camera leaving her. Micro-expression: Composed stillness; a faint flicker of doubt in the jaw only as the tap lands.\nCamera: medium shot sliding to a close-up of the table edge; lens feel 26mm-equivalent phone main camera; movement slow lateral slide right of about 40 cm, ending on the second phone; rig phone on a small hand-pushed slider on the shelf\nLighting: Same window key camera-left; her lamp spill falls across the table edge and brightens the second phone as the camera slides; warm wooden bounce; crisp contact shadows under the tape strips.\nAudio: ambience same quiet room tone; foley: slow two-finger clipboard tap, one notch louder, soft slider glide hum; no music\nDialogue (Inspector, on-camera): \"Inconclusive.\" - serene, final, as if a verdict of guilt\n--- S5 (17.5-20.0s) ---\nLocation: Living room side table. Environment: Same living room; the second phone is face-up under strips of orange tape, wrapped like evidence, its generic grey bubbles illegible.\nAction: The camera settles close on the second phone: its edge-lit screen glows through torn orange tape, showing a tall stack of identical grey message bubbles, all marked with the same generic tick glyph, no readable text. The Inspector's lamp swings into frame beside it and she exhales once, warmly disappointed, still not looking at the camera.\nPerformance: She is squaring the clipboard against her chest to file the case, eyes on the page, as the off-camera friend speaks. Micro-expression: Warm disappointment: brows lift and fall, mouth softens, a single slow exhale.\nCamera: close-up on the second phone with the Inspector's jacket and lamp soft at the edge; lens feel 26mm-equivalent phone main camera; movement settles to a locked frame, final slow breath-like drift; rig phone on the same small slider, lock at end\nLighting: Second phone screen is the key at close range, cool and soft; her lamp as warm rim from frame-right; orange tape bounce colours the table; hard contact shadows under the tape.\nAudio: ambience same quiet room tone; foley: soft phone glow buzz, clipboard tap to chest, single warm exhale; no music\nDialogue (Friend, off-camera): \"That's my sixth one, you know.\" - gentle, amused, close-mic, from behind camera\nON-SCREEN TEXT: none (added in post).",
         "medias": [
           {
-            "value": "<media_id of approved character reference>",
+            "value": "<media_id of approved character reference (asset char-inspector-v1)>",
             "role": "image_references"
           },
           {
@@ -587,8 +594,44 @@
           "Lip-sync and exact SFX timing are not controllable; inspect output.",
           "Lens is prompt language only."
         ],
-        "estimated_credits": 56,
-        "quote_source": "cost-quotes.json 2026-10-07 (8s/720p: mini 8, seedance_2_5 56); not a measured completed-output cost"
+        "estimated_credits": 140,
+        "estimated_credits_draft": 60,
+        "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
+      }
+    ],
+    "asset_requests": [
+      {
+        "asset_id": "char-ref",
+        "kind": "character_reference",
+        "model": "nano_banana_pro",
+        "controls": {
+          "resolution": "2k",
+          "aspect_ratio": "16:9"
+        },
+        "why": "split-screen character sheet per Higgsfield character-sheet workflow (photoreal-unretouched preset); 16:9 for split-screen",
+        "status": "verified_controls",
+        "alternatives": [
+          "nano_banana_2_1 (NB 2.1: image+video refs, inpaint - to be tested)",
+          "soul_2 / soul_cast (Higgsfield identity models; different pipeline)"
+        ],
+        "prompt_text": "Split-screen character sheet composition, left side a full-body shot of the character standing upright in a neutral straight standing pose facing the camera with both feet flat on the ground and arms relaxed at the sides, full head-to-toe framing with the whole body and both feet visible, right side a tight close-up chest-up portrait of the same character, identical original female character on both sides, single subject only exactly one person with only the character in frame, pure white seamless studio background, professional character sheet presentation, adult woman 35-45, Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger., mature adult bone structure and facial proportions, not a youthful rounded babyface, naturally muted catchlights, no oversized specular glare in the iris, eye color muted rather than glowing, hair in a tight low bun with a matte finish, visible fine skin texture with natural pores, fine lines, subtle asymmetries and texture irregularities, natural visible makeup with slightly uneven foundation blending, slight natural sheen rather than glossy retouched finish, no digital smoothing, no beauty filter, no AI-airbrushed look, matte-to-natural complexion, average build with balanced proportions, wearing Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun., plain dark trousers, flat black work shoes, no jewellery, no bag, natural anatomy, high-end but unretouched commercial photography style, soft diffused studio lighting without harsh reflections, cinematic realism, clean white background, 4K quality, sharp focus on skin texture detail, single subject only, exactly one person, only the character in frame, no other people, no duplicate figures, no mannequin, no reflections, no props, no furniture, no background objects, empty seamless studio, left panel standing full-body head-to-toe not cropped not sitting, right panel tight close-up not full body, no text, no watermark, no logos, no frame borders, no babyface, no plastic skin, original character that does not resemble any real person or existing copyrighted character",
+        "reuse": "approved once, reused every episode (continuity_reuse.costume=same unless bumped)"
+      },
+      {
+        "asset_id": "loc-living-room-side-table-locatio",
+        "kind": "location_still",
+        "model": "nano_banana_pro",
+        "controls": {
+          "resolution": "2k",
+          "aspect_ratio": "9:16"
+        },
+        "why": "empty lived-in location, no people, planned key light; reused across episodes for a consistent world",
+        "status": "verified_controls",
+        "alternatives": [
+          "cinematic_studio_2_5 for dramatic establishing stills"
+        ],
+        "prompt_text": "Authentic candid iPhone photo of an empty Living room side table location, no people, lived-in not staged, casual slightly imperfect framing, eye level, Clean modern phone look, eye-level, slightly too formal framing for the triviality; procedural colour accents (aubergine, safety-orange tape)., soft window daylight from one side already planned as the key light for a later video, mild HDR, true-to-life colors, subtle sensor grain, no retouching, no readable text, no brands, no logos, vertical 9:16 composition with calm upper third for captions",
+        "reuse": "approved once per recurring location; continuity_reuse.location=same reuses it"
       }
     ],
     "notes": "DRY RUN. No job submitted. prompt_text is free text, the only creative payload the tool accepts; internal JSON is not a native format. Field map: scene.action->prompt_text; scene.performance->prompt_text; scene.microexpression->prompt_text; scene.camera.shot->prompt_text; scene.camera.lens->prompt_text; scene.camera.movement->prompt_text; scene.lighting->prompt_text; scene.environment->prompt_text; scene.sound.ambience->native+prompt_text; scene.sound.music->manual; scene.dialogue->prompt_text; scene.captions->manual; scene.transition_out->manual; scene.cuts_inside_clip->prompt_text; continuity.identity_anchors->native+prompt_text; duration->native; aspect_ratio->native; resolution->native; export.fps->gap; export.container->gap; disclosure->manual"
@@ -698,32 +741,7 @@
       "flagged_fields": [],
       "recurring_motifs": [
         {
-          "motif": "prop:inspection",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
           "motif": "prop:tape",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
-          "motif": "prop:safety",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
-          "motif": "prop:clipboard",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
-          "motif": "prop:orange",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
-          "motif": "prop:lanyard",
           "episodes": 3,
           "share": 1.0
         },
@@ -733,7 +751,32 @@
           "share": 1.0
         },
         {
-          "motif": "prop:cable",
+          "motif": "prop:orange",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:clipboard",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:lanyard",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:inspection",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:safety",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:socket",
           "episodes": 2,
           "share": 0.67
         },
@@ -748,7 +791,7 @@
           "share": 0.67
         },
         {
-          "motif": "prop:socket",
+          "motif": "prop:cable",
           "episodes": 2,
           "share": 0.67
         }
@@ -771,7 +814,7 @@
     }
   ],
   "provenance": {
-    "generated_at": "2026-10-07T23:44:33Z",
+    "generated_at": "2026-10-07T23:50:19Z",
     "provider": "broker",
     "requested_model": "sonnet",
     "observed_model": "not independently observable (Agent tool; model=sonnet requested)",

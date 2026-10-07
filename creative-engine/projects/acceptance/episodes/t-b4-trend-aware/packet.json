@@ -453,7 +453,7 @@
     }
   ],
   "tool_mapping": {
-    "adapter": "higgsfield-mcp/generate_video",
+    "adapter": "higgsfield-mcp/generate_video + generate_image",
     "verified_on": "2026-10-07",
     "units": [
       {
@@ -462,17 +462,24 @@
           "S1",
           "S2"
         ],
-        "model": "seedance_2_0_mini",
+        "model": "seedance_2_5",
+        "routing": {
+          "why": "dialogue + identity lock: Seedance 2.5 omni_reference carries image + audio references (voice lock) with native audio",
+          "status": "verified_controls",
+          "fallback": "seedance_2_0_mini for drafts; cinematic_studio_video_4_0 for premium look",
+          "optimisation": "480p draft -> finalize"
+        },
         "controls": {
           "duration": 8,
           "aspect_ratio": "9:16",
           "resolution": "720p",
-          "generate_audio": true
+          "generate_audio": true,
+          "mode": "omni_reference"
         },
         "prompt_text": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. Speak ONLY the quoted lines, in English, lips still when no line is spoken.\n3. Props exist from frame one and never appear, disappear or change design: grey sock, coat hook rail, clipboard on lanyard, inspection lamp, small plain cardboard box, shoe shelf, case title card overlay.\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger. Silhouette: Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun. Costume: Aubergine utility jacket with four flap pockets, bright circular inspection lamp on chest strap, tiny clipboard on lanyard, hair in tight low bun, small round glasses, dark trousers and plain flat shoes, no readable text or logos.. Register: Stillness and procedure; comedy comes from disproportion, never from mugging.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S1 (0.0-3.0s) ---\nLocation: Hallway with coat hooks, daytime. Environment: Narrow daytime hallway, a wooden rail of five plain coat hooks with unbranded coats, a low shoe shelf beneath, pale wall, oak floor.\nAction: Frame one is a single grey sock lying on the oak floor beside the foot of the coat-hook rail, with a sliver of aubergine jacket hem at the extreme top edge. Held still for 1.5 s, then a shoe and the lower edge of a clipboard enter frame-right as the camera settles.\nPerformance: Silent. The sock holds the frame alone; the arriving shoe stops precisely a hand's width from it, as if respecting a crime-scene marker. Micro-expression: None visible; face out of frame.\nCamera: tight close-up, low angle on the floor; lens feel phone main lens, 26mm equivalent; movement propped phone with one small settle-wobble, then a slow tilt up 10 degrees as the shoe arrives; rig phone propped against the skirting board\nLighting: Key: soft daylight from a window at frame-left end of the hallway; fill: pale wall bounce from the right; one colour bounce: warm oak floorboards lifting the underside of the jacket; contact shadows: soft dark under the sock, under the hook and under her shoe soles. Light must not change across the clip.\nAudio: ambience quiet daytime flat, faint distant fridge hum, muffled street outside; foley: soft fabric brush of jacket hem, single measured shoe step on oak, clipboard corner knock on lanyard clip; no music\n--- S2 (3.0-8.0s) ---\nLocation: Hallway with coat hooks, daytime. Environment: Narrow daytime hallway, a wooden rail of five plain coat hooks with unbranded coats, a low shoe shelf beneath, pale wall, oak floor.\nAction: The camera rises to a medium shot of the Inspector standing over the sock. She reads her clipboard, lifts the sock between two fingers, hangs it on the nearest coat hook, smooths it flat and turns her back to the camera to write. The grey toe of a second sock is faintly visible at the nape of her collar as she turns.\nPerformance: Invested task: log the sock into the register and restore it to its hook with exact, procedural movements; eyes go from clipboard to sock to hook, never to camera. Micro-expression: Brief tightening around the mouth as she checks the sock is aligned.\nCamera: medium shot, eye level; lens feel phone main lens, 26mm equivalent; movement gentle handheld bob with a slow push-in of about 10 cm; rig handheld phone, elbows tucked\nLighting: Key: soft daylight from a window at frame-left end of the hallway; fill: pale wall bounce from the right; one colour bounce: warm oak floorboards lifting the underside of the jacket; contact shadows: soft dark under the sock, under the hook and under her shoe soles. Light must not change across the clip.\nAudio: ambience quiet daytime flat, faint distant fridge hum, muffled street outside; foley: sock lifted with a faint fabric rasp, hook rail wooden tick as sock is hung, pen scratch on clipboard, heel turn on oak; no music\nDialogue (Inspector, on-camera): \"Case eleven. One sock. Missing from its hook.\" - measured, bureaucratic cadence, flat and quiet\nON-SCREEN TEXT: none (added in post).",
         "medias": [
           {
-            "value": "<media_id of approved character reference>",
+            "value": "<media_id of approved character reference (asset char-inspector-v1)>",
             "role": "image_references"
           },
           {
@@ -492,8 +499,9 @@
           "Lip-sync and exact SFX timing are not controllable; inspect output.",
           "Lens is prompt language only."
         ],
-        "estimated_credits": 8,
-        "quote_source": "cost-quotes.json 2026-10-07 (8s/720p: mini 8, seedance_2_5 56); not a measured completed-output cost"
+        "estimated_credits": 56,
+        "estimated_credits_draft": 24,
+        "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
       },
       {
         "generation_unit": "U2",
@@ -501,17 +509,24 @@
           "S3",
           "S4"
         ],
-        "model": "seedance_2_0_mini",
+        "model": "seedance_2_5",
+        "routing": {
+          "why": "dialogue + identity lock: Seedance 2.5 omni_reference carries image + audio references (voice lock) with native audio",
+          "status": "verified_controls",
+          "fallback": "seedance_2_0_mini for drafts; cinematic_studio_video_4_0 for premium look",
+          "optimisation": "480p draft -> finalize"
+        },
         "controls": {
           "duration": 10,
           "aspect_ratio": "9:16",
           "resolution": "720p",
-          "generate_audio": true
+          "generate_audio": true,
+          "mode": "omni_reference"
         },
         "prompt_text": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. Speak ONLY the quoted lines, in English, lips still when no line is spoken.\n3. Props exist from frame one and never appear, disappear or change design: grey sock, coat hook rail, clipboard on lanyard, inspection lamp, small plain cardboard box, shoe shelf, case title card overlay.\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger. Silhouette: Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun. Costume: Aubergine utility jacket with four flap pockets, bright circular inspection lamp on chest strap, tiny clipboard on lanyard, hair in tight low bun, small round glasses, dark trousers and plain flat shoes, no readable text or logos.. Register: Stillness and procedure; comedy comes from disproportion, never from mugging.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S3 (8.0-13.0s) ---\nLocation: Hallway with coat hooks, daytime. Environment: Narrow daytime hallway, a wooden rail of five plain coat hooks with unbranded coats, a low shoe shelf beneath, pale wall, oak floor.\nAction: The grey sock is back on the floor at her feet. She stares at the empty hook, then at the sock, picks it up, drops it into a small plain cardboard box on the shoe shelf, closes the flap and turns away. As she turns the camera drifts around behind her and the sock is again lying on the floor by her heel; the grey toe of a second sock is visibly clinging to the nape of her aubergine jacket.\nPerformance: Invested task: contain the suspect in the evidence box and secure the lid; she searches the hallway corners for the culprit, eyes sweeping left to right, and never checks herself. Micro-expression: Eyebrows lower one millimetre, jaw set in stern suspicion.\nCamera: medium shot, eye level, drifting to over-the-shoulder rear; lens feel phone main lens, 26mm equivalent; movement slow handheld arc of about 90 degrees from front to behind her; rig handheld phone\nLighting: Key: soft daylight from a window at frame-left end of the hallway; fill: pale wall bounce from the right; one colour bounce: warm oak floorboards lifting the underside of the jacket; contact shadows: soft dark under the sock, under the hook and under her shoe soles. Light must not change across the clip.\nAudio: ambience quiet daytime flat, faint distant fridge hum, muffled street outside; foley: cardboard flap fold, box lid pressed with a dull tap, soft sock plop on oak floor, faint static crackle near her collar; no music\nDialogue (Inspector, on-camera): \"Repeat offender. Repeat.\" - quiet, level, each word clipped\n--- S4 (13.0-18.0s) ---\nLocation: Hallway with coat hooks, daytime. Environment: Narrow daytime hallway, a wooden rail of five plain coat hooks with unbranded coats, a low shoe shelf beneath, pale wall, oak floor.\nAction: With the camera behind her, the Inspector gives one slow two-finger tap on the clipboard, then says her verdict. She reaches back, peels the sock from her collar, hangs it on the hook, steps back one pace and the sock drops free to cling to her jacket again at the nape. Final pose is her standing square to the hook, matching the opening stillness.\nPerformance: Invested task: close the case with formal finality; she squares her shoulders, delivers the verdict to the hook rather than to camera, and files the sock with great ceremony. Micro-expression: Eyes close for one long blink, then warm disappointment settles on her mouth.\nCamera: medium over-the-shoulder rear shot, then a slight push to the nape; lens feel phone main lens, 26mm equivalent; movement handheld settle with a slow 5 cm push-in on the nape; rig handheld phone\nLighting: Key: soft daylight from a window at frame-left end of the hallway; fill: pale wall bounce from the right; one colour bounce: warm oak floorboards lifting the underside of the jacket; contact shadows: soft dark under the sock, under the hook and under her shoe soles. Light must not change across the clip.\nAudio: ambience quiet daytime flat, faint distant fridge hum, muffled street outside; foley: slow two-finger tap on clipboard, static peel crackle of sock leaving fabric, hook rail tick, fabric cling snap as sock returns; no music\nDialogue (Inspector, on-camera): \"The suspect is on my back. The suspect is me.\" - measured, bureaucratic, slightly lower on the last two words\nON-SCREEN TEXT: none (added in post).",
         "medias": [
           {
-            "value": "<media_id of approved character reference>",
+            "value": "<media_id of approved character reference (asset char-inspector-v1)>",
             "role": "image_references"
           },
           {
@@ -531,8 +546,44 @@
           "Lip-sync and exact SFX timing are not controllable; inspect output.",
           "Lens is prompt language only."
         ],
-        "estimated_credits": 8,
-        "quote_source": "cost-quotes.json 2026-10-07 (8s/720p: mini 8, seedance_2_5 56); not a measured completed-output cost"
+        "estimated_credits": 70,
+        "estimated_credits_draft": 30,
+        "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
+      }
+    ],
+    "asset_requests": [
+      {
+        "asset_id": "char-ref",
+        "kind": "character_reference",
+        "model": "nano_banana_pro",
+        "controls": {
+          "resolution": "2k",
+          "aspect_ratio": "16:9"
+        },
+        "why": "split-screen character sheet per Higgsfield character-sheet workflow (photoreal-unretouched preset); 16:9 for split-screen",
+        "status": "verified_controls",
+        "alternatives": [
+          "nano_banana_2_1 (NB 2.1: image+video refs, inpaint - to be tested)",
+          "soul_2 / soul_cast (Higgsfield identity models; different pipeline)"
+        ],
+        "prompt_text": "Split-screen character sheet composition, left side a full-body shot of the character standing upright in a neutral straight standing pose facing the camera with both feet flat on the ground and arms relaxed at the sides, full head-to-toe framing with the whole body and both feet visible, right side a tight close-up chest-up portrait of the same character, identical original female character on both sides, single subject only exactly one person with only the character in frame, pure white seamless studio background, professional character sheet presentation, adult woman 35-45, Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger., mature adult bone structure and facial proportions, not a youthful rounded babyface, naturally muted catchlights, no oversized specular glare in the iris, eye color muted rather than glowing, hair in a tight low bun with a matte finish, visible fine skin texture with natural pores, fine lines, subtle asymmetries and texture irregularities, natural visible makeup with slightly uneven foundation blending, slight natural sheen rather than glossy retouched finish, no digital smoothing, no beauty filter, no AI-airbrushed look, matte-to-natural complexion, average build with balanced proportions, wearing Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun., plain dark trousers, flat black work shoes, no jewellery, no bag, natural anatomy, high-end but unretouched commercial photography style, soft diffused studio lighting without harsh reflections, cinematic realism, clean white background, 4K quality, sharp focus on skin texture detail, single subject only, exactly one person, only the character in frame, no other people, no duplicate figures, no mannequin, no reflections, no props, no furniture, no background objects, empty seamless studio, left panel standing full-body head-to-toe not cropped not sitting, right panel tight close-up not full body, no text, no watermark, no logos, no frame borders, no babyface, no plastic skin, original character that does not resemble any real person or existing copyrighted character",
+        "reuse": "approved once, reused every episode (continuity_reuse.costume=same unless bumped)"
+      },
+      {
+        "asset_id": "loc-hallway-location",
+        "kind": "location_still",
+        "model": "nano_banana_pro",
+        "controls": {
+          "resolution": "2k",
+          "aspect_ratio": "9:16"
+        },
+        "why": "empty lived-in location, no people, planned key light; reused across episodes for a consistent world",
+        "status": "verified_controls",
+        "alternatives": [
+          "cinematic_studio_2_5 for dramatic establishing stills"
+        ],
+        "prompt_text": "Authentic candid iPhone photo of an empty Hallway location, no people, lived-in not staged, casual slightly imperfect framing, eye level, Clean modern phone look, eye-level, slightly too formal framing for the triviality; procedural colour accents (aubergine, safety-orange tape)., soft window daylight from one side already planned as the key light for a later video, mild HDR, true-to-life colors, subtle sensor grain, no retouching, no readable text, no brands, no logos, vertical 9:16 composition with calm upper third for captions",
+        "reuse": "approved once per recurring location; continuity_reuse.location=same reuses it"
       }
     ],
     "notes": "DRY RUN. No job submitted. prompt_text is free text, the only creative payload the tool accepts; internal JSON is not a native format. Field map: scene.action->prompt_text; scene.performance->prompt_text; scene.microexpression->prompt_text; scene.camera.shot->prompt_text; scene.camera.lens->prompt_text; scene.camera.movement->prompt_text; scene.lighting->prompt_text; scene.environment->prompt_text; scene.sound.ambience->native+prompt_text; scene.sound.music->manual; scene.dialogue->prompt_text; scene.captions->manual; scene.transition_out->manual; scene.cuts_inside_clip->prompt_text; continuity.identity_anchors->native+prompt_text; duration->native; aspect_ratio->native; resolution->native; export.fps->gap; export.container->gap; disclosure->manual"
@@ -658,6 +709,16 @@
       "flagged_fields": [],
       "recurring_motifs": [
         {
+          "motif": "prop:clipboard",
+          "episodes": 4,
+          "share": 0.67
+        },
+        {
+          "motif": "prop:lanyard",
+          "episodes": 4,
+          "share": 0.67
+        },
+        {
           "motif": "mechanism:visible_problem",
           "episodes": 4,
           "share": 0.67
@@ -668,27 +729,17 @@
           "share": 0.67
         },
         {
-          "motif": "prop:clipboard",
-          "episodes": 4,
-          "share": 0.67
-        },
-        {
           "motif": "prop:inspection",
           "episodes": 4,
           "share": 0.67
         },
         {
-          "motif": "prop:lanyard",
-          "episodes": 4,
-          "share": 0.67
-        },
-        {
-          "motif": "prop:tape",
+          "motif": "prop:safety",
           "episodes": 3,
           "share": 0.5
         },
         {
-          "motif": "prop:safety",
+          "motif": "prop:tape",
           "episodes": 3,
           "share": 0.5
         },
@@ -726,7 +777,7 @@
     }
   ],
   "provenance": {
-    "generated_at": "2026-10-07T23:44:32Z",
+    "generated_at": "2026-10-07T23:50:18Z",
     "provider": "broker",
     "requested_model": "sonnet",
     "observed_model": "not independently observable (Agent tool; model=sonnet requested)",

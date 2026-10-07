@@ -14,6 +14,8 @@ Your responsibility: for the top two premises, write three hook variants each (s
 {{TRENDS}}
 <<ENDIF TRENDS>>
 
+Production formats: each premise declares one. Recently used (shot_architecture, audio_mode) pairs: {{FORMAT_RECENT}}. Fixed by the brief: {{FORMAT_FIXED}}. Prefer a selected premise whose pair is not in the recent list unless the brief fixes it; name the pair in the selection rationale.
+
 Mechanisms allowed: curiosity_gap, recognition, visible_problem, status_contradiction, escalating_ritual, callout, other.
 Scoring (0-10): legibility in first frame (0-3), specificity of the problem (0-3), promise of the bible's rule/payoff (0-2), send-ability to a specific person (0-2). Report the score and a one-sentence rationale per hook.
 <<IF SILENT>>

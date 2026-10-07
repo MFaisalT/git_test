@@ -9,6 +9,7 @@ A dry run produces a checked plan and adapter requests. It never submits a job.
 from __future__ import annotations
 
 from .validators import TOOL_LIMITS
+from .routing import asset_requests, quote_for, route_video_unit
 
 FIELD_MAP = {
     # packet field -> ("native" | "prompt_text" | "manual" | "gap", note)
@@ -36,20 +37,13 @@ FIELD_MAP = {
 }
 
 
-def _clamp_model(duration: float, needs_audio: bool, driving_video: bool) -> str:
-    if driving_video:
-        return "hf_mult_motion_control"
-    if duration <= 15:
-        return "seedance_2_0_mini"  # cheapest adequate (quoted 8 credits/8s/720p on 2026-10-07; quote, not measured cost)
-    return "seedance_2_5"
-
-
 def build_prompt_text(packet: dict, scenes: list[dict], bible: dict | None) -> str:
     """Compose a free-text prompt in the house order; this IS the payload the tool accepts."""
     b = packet["brief"]
     cont = packet["continuity"]
     char = (bible or {}).get("character", {})
-    silent = b.get("format") == "silent_gag"
+    am = (packet.get("production_format") or {}).get("audio_mode")
+    silent = b.get("format") == "silent_gag" or am in ("silent_ambience", "text_over_broll", "music_driven")
     lines = ["TOP PRIORITY (read first):"]
     lines.append("1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.")
     lines.append("2. " + ("NO dialogue anywhere; ambient SFX and foley only." if silent else "Speak ONLY the quoted lines, in English, lips still when no line is spoken."))
@@ -97,19 +91,34 @@ def plan(packet: dict, bible: dict | None = None, quote_credits: dict | None = N
             out_units.append(u)
     plan_units = []
     needs_driving = any(r["kind"] == "driving_footage" for r in packet.get("asset_rights", []))
+    pf = packet.get("production_format") or {}
+    audio_mode = pf.get("audio_mode") or ("silent_ambience" if packet["brief"].get("format") == "silent_gag" else "on_camera_dialogue")
     for i, u in enumerate(out_units, 1):
         dur = round(u[-1]["end_s"] - u[0]["start_s"], 1)
-        model = _clamp_model(dur, True, needs_driving)
+        route = route_video_unit(pf, dur, audio_mode, needs_driving, identity_critical=True, budget_mode=False)
+        model = route["model"]
         lim = TOOL_LIMITS[model]
-        controls = {"duration": max(lim["min_s"], min(lim["max_s"], int(round(dur)))), "aspect_ratio": packet["export"]["aspect_ratio"],
-                    "resolution": "720p", "generate_audio": packet["brief"].get("format") != "silent_gag" or True}
+        controls = {"duration": max(lim["min_s"], min(lim["max_s"], int(round(dur)))), "aspect_ratio": packet["export"]["aspect_ratio"] if packet["export"]["aspect_ratio"] in (lim["aspect"] or [packet["export"]["aspect_ratio"]]) else "9:16",
+                    "resolution": "720p", "generate_audio": bool(route.get("generate_audio", True))}
+        if route.get("mode"):
+            controls["mode"] = route["mode"]
+        if route.get("mode") == "video_extension":
+            controls["extension_mode"] = "forward"
         if model == "hf_mult_motion_control":
             controls = {"resolution": "720p"}
-        medias = [{"value": "<media_id of approved character reference>", "role": "image_references"}]
-        if any(r["kind"] == "location_still" for r in packet.get("asset_rights", [])):
-            medias.append({"value": "<media_id of approved location still>", "role": "image_references"})
+        medias = []
+        if "image_references" in lim["media_roles"]:
+            medias.append({"value": "<media_id of approved character reference (asset char-inspector-v1)>", "role": "image_references"})
+            if any(r["kind"] == "location_still" for r in packet.get("asset_rights", [])):
+                medias.append({"value": "<media_id of approved location still>", "role": "image_references"})
+            if (pf.get("continuity_reuse") or {}).get("voice") == "same" and "audio_references" in lim["media_roles"] and audio_mode not in ("silent_ambience", "text_over_broll", "music_driven"):
+                medias.append({"value": "<media_id of approved voice asset voice-inspector-v1>", "role": "audio_references"})
+        elif "start_image" in lim["media_roles"]:
+            medias.append({"value": "<media_id of approved first-frame still>", "role": "start_image"})
         if model == "hf_mult_motion_control":
             medias.append({"value": "<media_id of OWNED/LICENSED driving footage>", "role": "video_references"})
+        if route.get("mode") == "video_extension":
+            medias.append({"value": "<job_id of the approved previous clip>", "role": "video_references"})
         manual = ["Upload approved reference stills via media_upload (owner action; upload requires approval).",
                   "Burn captions/on-screen text in edit.", "Add licensed music in edit if any.",
                   "Assemble generation units with hard cuts in edit; verify total duration and loop.",
@@ -118,12 +127,18 @@ def plan(packet: dict, bible: dict | None = None, quote_credits: dict | None = N
                 "Lens is prompt language only."]
         if dur > lim["max_s"] or dur < lim["min_s"]:
             gaps.append(f"unit duration {dur}s outside {model} range {lim['min_s']}-{lim['max_s']}s; re-split scenes")
+        if route.get("status") == "gap":
+            gaps.append("Cinema Studio 4.0 native camera/lighting controls need creative-control ids not retrieved in this build; pass as prompt text meanwhile")
+        est = quote_for(model, controls.get("duration", int(round(dur))), "720p")
+        draft_est = quote_for(model, controls.get("duration", int(round(dur))), "480p-draft")
         plan_units.append({
-            "generation_unit": f"U{i}", "scene_ids": [s["scene_id"] for s in u], "model": model,
+            "generation_unit": f"U{i}", "scene_ids": [s["scene_id"] for s in u], "model": model, "routing": {k: route.get(k) for k in ("why", "status", "fallback", "optimisation") if route.get(k)},
             "controls": controls, "prompt_text": build_prompt_text(packet, u, bible), "medias": medias,
             "manual_steps": manual, "gaps": gaps,
-            "estimated_credits": (quote_credits or {}).get(model), "quote_source": "cost-quotes.json 2026-10-07 (8s/720p: mini 8, seedance_2_5 56); not a measured completed-output cost" if quote_credits else "no quote captured for this run",
+            "estimated_credits": est, "estimated_credits_draft": draft_est,
+            "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply",
         })
-    return {"adapter": "higgsfield-mcp/generate_video", "verified_on": "2026-10-07", "units": plan_units,
+    return {"adapter": "higgsfield-mcp/generate_video + generate_image", "verified_on": "2026-10-07", "units": plan_units,
+            "asset_requests": asset_requests(packet, bible or {}, nb2_testing=False),
             "notes": "DRY RUN. No job submitted. prompt_text is free text, the only creative payload the tool accepts; internal JSON is not a native format. Field map: " +
                      "; ".join(f"{k}->{v[0]}" for k, v in FIELD_MAP.items())}

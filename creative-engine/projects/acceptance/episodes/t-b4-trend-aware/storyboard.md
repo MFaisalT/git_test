@@ -76,11 +76,11 @@ Disclosure: AI-generated video.
 - Disclosure: Apply the platform synthetic-media label on upload
 
 ## Tool mapping (dry run)
-- U1 -> seedance_2_0_mini scenes S1, S2; controls {'duration': 8, 'aspect_ratio': '9:16', 'resolution': '720p', 'generate_audio': True}; est. credits 8 (cost-quotes.json 2026-10-07 (8s/720p: mini 8, seedance_2_5 56); not a measured completed-output cost)
+- U1 -> seedance_2_5 scenes S1, S2; controls {'duration': 8, 'aspect_ratio': '9:16', 'resolution': '720p', 'generate_audio': True, 'mode': 'omni_reference'}; est. credits 56 (generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply)
   - gap: No fps/container control; inspect exported file.
   - gap: Lip-sync and exact SFX timing are not controllable; inspect output.
   - gap: Lens is prompt language only.
-- U2 -> seedance_2_0_mini scenes S3, S4; controls {'duration': 10, 'aspect_ratio': '9:16', 'resolution': '720p', 'generate_audio': True}; est. credits 8 (cost-quotes.json 2026-10-07 (8s/720p: mini 8, seedance_2_5 56); not a measured completed-output cost)
+- U2 -> seedance_2_5 scenes S3, S4; controls {'duration': 10, 'aspect_ratio': '9:16', 'resolution': '720p', 'generate_audio': True, 'mode': 'omni_reference'}; est. credits 70 (generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply)
   - gap: No fps/container control; inspect exported file.
   - gap: Lip-sync and exact SFX timing are not controllable; inspect output.
   - gap: Lens is prompt language only.

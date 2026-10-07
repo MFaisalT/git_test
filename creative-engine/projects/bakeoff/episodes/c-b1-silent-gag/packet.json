@@ -446,7 +446,7 @@
     }
   ],
   "tool_mapping": {
-    "adapter": "higgsfield-mcp/generate_video",
+    "adapter": "higgsfield-mcp/generate_video + generate_image",
     "verified_on": "2026-10-07",
     "units": [
       {
@@ -458,16 +458,21 @@
           "S4"
         ],
         "model": "seedance_2_0_mini",
+        "routing": {
+          "why": "<=15 s; identity refs supported; cheapest adequate (15 credits / 15 s / 720p quoted)",
+          "status": "verified_controls",
+          "fallback": "seedance_2_5 omni_reference if identity or physics fail on mini"
+        },
         "controls": {
           "duration": 12,
           "aspect_ratio": "9:16",
           "resolution": "720p",
-          "generate_audio": true
+          "generate_audio": false
         },
         "prompt_text": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. NO dialogue anywhere; ambient SFX and foley only.\n3. Props exist from frame one and never appear, disappear or change design: phone, charger cable, white cable tie on cable, spare cable tie on lanyard, fresh cable tie, wall socket, side table, inspection lamp, clipboard, pen, tape measure, safety-orange tape, small scissors.\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger. Costume: Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun; plain dark trousers and flat shoes.. Register: Stillness and procedure; comedy comes from disproportion, never from mugging.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S1 (0.0-3.0s) ---\nLocation: Living-room side table and wall socket, a modern lived-in living room with a skirting-board socket just above table height.. Environment: A tidy living room with a pale cream wall, a small walnut side table, a single wall socket with a plain white faceplate and no visible text, and soft late-afternoon light.\nAction: The Inspector stands square to the side table holding the phone in her left hand and the charger plug in her right, plug raised beside the wall socket with a clear sliver of air between them. A neat white cable tie is cinched round the middle of the cable, dead centre of frame. She pushes the plug toward the socket, the cable goes taut and stops, the plug stays one centimetre short, and the tied bunch in the middle quivers.\nPerformance: She carries out a formal alignment procedure: eyes locked on the gap, shoulders square, pushing with small precise forward pulses as if testing a load-bearing joint. Micro-expression: Straight dark brows lower a fraction and her mouth tightens one millimetre when the cable stops taut.\nCamera: medium shot, eye level, slightly too formal and centred; lens feel 26mm-equivalent phone main camera; movement locked off, no movement; rig phone propped on a stack of books on the sofa arm, 2 m from the table\nLighting: Soft key from a window camera-left; warm bounce from the cream wall and wood table fills the shadow side of her face; a soft contact shadow sits under the cable where it touches the table edge and under her jacket flaps.\nAudio: ambience quiet room tone with faint distant traffic hum and a low fridge buzz from another room; foley: soft plastic scrape as the plug pushes toward the socket, taut cable creak, tiny rattle of the cable tie; no music\n--- S2 (3.0-6.0s) ---\nLocation: Same living-room side table and wall socket.. Environment: The same room; the wall socket stays visible at the frame edge with the cable end resting a thumb's width short of it; the cream wall glows warm at the edges.\nAction: She lays the phone down, stretches the cable straight along the table edge beside a pocket tape measure, and reads the number with the lamp on her chest lighting the tape. She notes the reading on the clipboard with a short pen stroke. The white cable tie stays centre frame in the middle of the stretched cable. She then gives the clipboard a slow two-finger tap as her verdict.\nPerformance: She runs a measuring procedure with total gravity: tape pinned with her thumb, eyes level with the markings, a tiny nod after each reading as if filing a report. Micro-expression: A slow single blink and a barely perceptible lift of one brow at the measurement.\nCamera: medium close shot, eye level, framing table and her torso; lens feel 26mm-equivalent phone main camera; movement locked off with one tiny settle-wobble at the start; rig same propped phone\nLighting: Window key from camera-left; the chest lamp adds a small bright pool on the tape with a faint orange-warm bounce from the table wood; crisp contact shadow under the cable and tape measure.\nAudio: ambience same quiet room tone and fridge buzz; foley: metallic tape-measure extend and lock click, pen scratch on clipboard, slow double tap on clipboard; no music\n--- S3 (6.0-9.0s) ---\nLocation: Same living-room side table and wall socket.. Environment: The same living room; the orange-tagged cable end and white tie are the two colour accents on the pale table; the socket is just visible at the frame edge.\nAction: She tears a strip of safety-orange tape and wraps it round the cable end as an evidence tag, then crouches to retry the plug from socket height. The cable pulls taut, the tie shakes, and the plug stays short. She stands, slowly runs two fingers along the cable, and her hand stops at the white tie. Her eyes drop to the matching spare tie on her lanyard, then back to the one on the cable.\nPerformance: She commits to a methodical re-test, crouching with the plug at arm's length and checking the gap by eye, then follows the cable with her fingertips like a technician tracing a fault. Micro-expression: Eyes widen a hair, then the face softens into warm disappointment as her glasses slide a little lower on her nose.\nCamera: medium shot, eye level, slightly tighter on hands and cable at the end; lens feel 26mm-equivalent phone main camera; movement locked off with a slow digital push-in of about 5 percent; rig same propped phone\nLighting: Window key from camera-left; the chest lamp throws a small pool onto the cable and tie; warm wood bounce lights her fingers; clear contact shadows from the cable on the table and the tape strip on the cable.\nAudio: ambience same quiet room tone and fridge buzz; foley: sharp tape tear, tape press squeak on cable, knee creak and fabric rustle as she crouches, fingertips sliding along the cable, tiny tie click as her hand meets it; no music\n--- S4 (9.0-12.0s) ---\nLocation: Same living-room side table and wall socket.. Environment: The same living room, neat again, with the orange tape tag on the cable end and the socket plate unmarked.\nAction: She snips the white tie with a small pair of scissors from a flap pocket; the cable relaxes, reaches the socket, and the plug seats with a click while the phone lights. She looks at the loose, slightly messy cable, produces a fresh white cable tie from a flap pocket and cinches it tight round the middle again, pulling the plug a centimetre out of the socket. She unplugs, steps back and returns to the opening pose, plug raised beside the socket, one centimetre short, tie dead centre.\nPerformance: She restores order with absolute focus, squaring the cable into a neat bundle and cinching the tie with a single decisive pull, wholly unaware of what it undoes. Micro-expression: A satisfied exhale through the nose as the tie tightens; neutral composure returns for the final pose.\nCamera: medium shot, eye level, matching the opening frame; lens feel 26mm-equivalent phone main camera; movement locked off, settling back to the opening framing; rig same propped phone\nLighting: Window key from camera-left; a faint cool-white bounce from the lit phone screen on the table; warm wood bounce on her hands; contact shadow under the re-tied bunch on the table edge.\nAudio: ambience same quiet room tone and fridge buzz; foley: scissor snip, satisfying plug-in click, soft phone charging chime tone, zip-tie ratchet cinch, plug scrape out of socket; no music\nON-SCREEN TEXT: none (added in post).",
         "medias": [
           {
-            "value": "<media_id of approved character reference>",
+            "value": "<media_id of approved character reference (asset char-inspector-v1)>",
             "role": "image_references"
           },
           {
@@ -487,8 +492,44 @@
           "Lip-sync and exact SFX timing are not controllable; inspect output.",
           "Lens is prompt language only."
         ],
-        "estimated_credits": 8,
-        "quote_source": "cost-quotes.json 2026-10-07 (8s/720p: mini 8, seedance_2_5 56); not a measured completed-output cost"
+        "estimated_credits": 12,
+        "estimated_credits_draft": null,
+        "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
+      }
+    ],
+    "asset_requests": [
+      {
+        "asset_id": "char-ref",
+        "kind": "character_reference",
+        "model": "nano_banana_pro",
+        "controls": {
+          "resolution": "2k",
+          "aspect_ratio": "16:9"
+        },
+        "why": "split-screen character sheet per Higgsfield character-sheet workflow (photoreal-unretouched preset); 16:9 for split-screen",
+        "status": "verified_controls",
+        "alternatives": [
+          "nano_banana_2_1 (NB 2.1: image+video refs, inpaint - to be tested)",
+          "soul_2 / soul_cast (Higgsfield identity models; different pipeline)"
+        ],
+        "prompt_text": "Split-screen character sheet composition, left side a full-body shot of the character standing upright in a neutral straight standing pose facing the camera with both feet flat on the ground and arms relaxed at the sides, full head-to-toe framing with the whole body and both feet visible, right side a tight close-up chest-up portrait of the same character, identical original female character on both sides, single subject only exactly one person with only the character in frame, pure white seamless studio background, professional character sheet presentation, adult woman 35-45, Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger., mature adult bone structure and facial proportions, not a youthful rounded babyface, naturally muted catchlights, no oversized specular glare in the iris, eye color muted rather than glowing, hair in a tight low bun with a matte finish, visible fine skin texture with natural pores, fine lines, subtle asymmetries and texture irregularities, natural visible makeup with slightly uneven foundation blending, slight natural sheen rather than glossy retouched finish, no digital smoothing, no beauty filter, no AI-airbrushed look, matte-to-natural complexion, average build with balanced proportions, wearing Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun., plain dark trousers, flat black work shoes, no jewellery, no bag, natural anatomy, high-end but unretouched commercial photography style, soft diffused studio lighting without harsh reflections, cinematic realism, clean white background, 4K quality, sharp focus on skin texture detail, single subject only, exactly one person, only the character in frame, no other people, no duplicate figures, no mannequin, no reflections, no props, no furniture, no background objects, empty seamless studio, left panel standing full-body head-to-toe not cropped not sitting, right panel tight close-up not full body, no text, no watermark, no logos, no frame borders, no babyface, no plastic skin, original character that does not resemble any real person or existing copyrighted character",
+        "reuse": "approved once, reused every episode (continuity_reuse.costume=same unless bumped)"
+      },
+      {
+        "asset_id": "loc-living-room-location-still",
+        "kind": "location_still",
+        "model": "nano_banana_pro",
+        "controls": {
+          "resolution": "2k",
+          "aspect_ratio": "9:16"
+        },
+        "why": "empty lived-in location, no people, planned key light; reused across episodes for a consistent world",
+        "status": "verified_controls",
+        "alternatives": [
+          "cinematic_studio_2_5 for dramatic establishing stills"
+        ],
+        "prompt_text": "Authentic candid iPhone photo of an empty Living-room location still, no people, lived-in not staged, casual slightly imperfect framing, eye level, Clean modern phone look, eye-level, slightly too formal framing for the triviality; procedural colour accents (aubergine, safety-orange tape)., soft window daylight from one side already planned as the key light for a later video, mild HDR, true-to-life colors, subtle sensor grain, no retouching, no readable text, no brands, no logos, vertical 9:16 composition with calm upper third for captions",
+        "reuse": "approved once per recurring location; continuity_reuse.location=same reuses it"
       }
     ],
     "notes": "DRY RUN. No job submitted. prompt_text is free text, the only creative payload the tool accepts; internal JSON is not a native format. Field map: scene.action->prompt_text; scene.performance->prompt_text; scene.microexpression->prompt_text; scene.camera.shot->prompt_text; scene.camera.lens->prompt_text; scene.camera.movement->prompt_text; scene.lighting->prompt_text; scene.environment->prompt_text; scene.sound.ambience->native+prompt_text; scene.sound.music->manual; scene.dialogue->prompt_text; scene.captions->manual; scene.transition_out->manual; scene.cuts_inside_clip->prompt_text; continuity.identity_anchors->native+prompt_text; duration->native; aspect_ratio->native; resolution->native; export.fps->gap; export.container->gap; disclosure->manual"
@@ -598,7 +639,12 @@
       "flagged_fields": [],
       "recurring_motifs": [
         {
-          "motif": "prop:safety",
+          "motif": "prop:tape",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:orange",
           "episodes": 3,
           "share": 1.0
         },
@@ -613,6 +659,11 @@
           "share": 1.0
         },
         {
+          "motif": "prop:safety",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
           "motif": "prop:clipboard",
           "episodes": 3,
           "share": 1.0
@@ -623,17 +674,12 @@
           "share": 1.0
         },
         {
-          "motif": "prop:orange",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
-          "motif": "prop:tape",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
           "motif": "prop:phone",
+          "episodes": 2,
+          "share": 0.67
+        },
+        {
+          "motif": "prop:wall",
           "episodes": 2,
           "share": 0.67
         },
@@ -644,11 +690,6 @@
         },
         {
           "motif": "prop:socket",
-          "episodes": 2,
-          "share": 0.67
-        },
-        {
-          "motif": "prop:wall",
           "episodes": 2,
           "share": 0.67
         }
@@ -671,7 +712,7 @@
     }
   ],
   "provenance": {
-    "generated_at": "2026-10-07T23:44:32Z",
+    "generated_at": "2026-10-07T23:50:18Z",
     "provider": "broker",
     "requested_model": "sonnet",
     "observed_model": "not independently observable (Agent tool; model=sonnet requested)",

@@ -47,6 +47,10 @@ Format is a first-class, tracked decision, not a side effect of the brief. `engi
 - **Realisation gates**: single takes have no cuts and one generation unit with the camera move written into every scene; jump-cut needs >=3 cuts; loop ends on "loop"; silent/text-over has no speech; VO/off-camera/on-camera modes need matching lines; music-driven needs a declared licensed cue; "same voice/location" needs the corresponding approved asset declared.
 - Trend entries of type `format` / `edit_move` / `style` extend the menu at run time (cite `trend_refs`).
 
+## Higgsfield production routing
+
+`engine/routing.py` routes every reference asset and video unit to a verified Higgsfield model with a stated reason, status (verified controls / recommended-untested / gap) and a credit estimate from `get_cost` preflights: Nano Banana Pro (NB 2.1 switchable for testing) for character sheets and location stills; Seedance 2.5 `omni_reference` for dialogue, voice-lock and >15 s units with a 480p draft -> 1080p finalize optimisation; Seedance 2.0 Mini for short silent units and drafts; Cinema Studio 4.0 flagged as a gap until its creative-control ids are retrieved; Genjutsu for owned footage. See docs/TOOL-CAPABILITIES.md.
+
 ## Trend radar (fresh research when needed)
 
 The engine keeps a dated, sourced, decaying ledger of trend *observations* (what a bounded, web-searching refresh could verify on a given day — not a live feed of what is viral) (formats, styles, edit moves, hook patterns, words/phrases, topics, sounds, dances/moves, products, memes, platform features) per project in `projects/<project>/trends.jsonl`.
