@@ -63,7 +63,7 @@
       "properties": {"deterministic": {"type": "object"}, "creative": {"type": "object"}, "repetition": {"type": "object"}, "render_inspection": {"type": ["object", "null"]}}},
     "growth_hypotheses": {"type": "array", "items": {"type": "object", "required": ["hypothesis", "metric", "falsifier"], "properties": {"hypothesis": {"type": "string"}, "metric": {"type": "string"}, "falsifier": {"type": "string"}}}},
     "provenance": {"type": "object", "required": ["generated_at", "provider", "requested_model", "observed_model", "demonstrations_used", "stage_log"],
-      "properties": {"generated_at": {"type": "string"}, "provider": {"enum": ["broker", "claude_cli", "fixture", "manual"]}, "requested_model": {"type": "string"}, "observed_model": {"type": "string"}, "effort": {"type": "string"}, "demonstrations_used": {"type": "array", "items": {"type": "string"}}, "stage_log": {"type": "array"}, "repair_passes": {"type": "integer"}, "engine_version": {"type": "string"}}},
+      "properties": {"generated_at": {"type": "string"}, "provider": {"enum": ["broker", "claude_cli", "fixture", "manual"]}, "requested_model": {"type": "string"}, "observed_model": {"type": "string"}, "effort": {"type": "string"}, "demonstrations_used": {"type": "array", "items": {"type": "string"}}, "trends_used": {"type": "array", "items": {"type": "string"}}, "trends_snapshot_age_days": {"type": ["number", "null"]}, "stage_log": {"type": "array"}, "repair_passes": {"type": "integer"}, "engine_version": {"type": "string"}}},
     "negative_constraints": {"type": "array", "items": {"type": "string"}}
   }
 }

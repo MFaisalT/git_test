@@ -16,6 +16,7 @@ from .providers import Completion, PendingResponse, parse_json_object
 from .repetition import compare, fingerprint
 from .render import storyboard_md
 from .store import Store, now_iso, sha256_json
+from .trends import render_for_prompt, select_relevant, staleness_findings
 from .validators import (Report, validate_all, validate_continuity, validate_direction, validate_rights, validate_selection, validate_timing)
 
 QUOTES_2026_10_07 = {"seedance_2_0_mini": 8, "seedance_2_5": 56}  # 8 s / 720p / 9:16 preflight quotes, not measured costs
@@ -87,10 +88,10 @@ class Pipeline:
         Store._write_json(self._state_path(packet_id), st)
 
     # -- one stage with bounded repair
-    def _run_stage(self, stage: str, packet_id: str, brief: dict, bible: dict, context: dict, history_fp: list[dict], st: dict) -> dict:
+    def _run_stage(self, stage: str, packet_id: str, brief: dict, bible: dict, context: dict, history_fp: list[dict], st: dict, trends_text: str = "") -> dict:
         if stage in st["stages"]:
             return st["stages"][stage]
-        prompt, demo_ids = render_stage(stage, brief, bible, context, history_fp, self.demos_k)
+        prompt, demo_ids = render_stage(stage, brief, bible, context, history_fp, self.demos_k, trends_text)
         st["demos"] = sorted(set(st["demos"]) | set(demo_ids))
         attempt = 0
         out: dict | None = None
@@ -127,9 +128,14 @@ class Pipeline:
         st = self._load_state(packet_id)
         history = [p for p in self.store.list_packets(self.project) if p["packet_id"] != packet_id and p["status"] != "rejected"]
         history_fp = [dict(fingerprint(p), packet_id=p["packet_id"]) for p in history]
+        ledger = self.store.read_ledger(self.project, "trends")
+        fresh, stale = select_relevant(brief, ledger)
+        trends_text = render_for_prompt(fresh, stale) if ledger else ""
+        st["trends_used"] = [e["trend_id"] for e in fresh]
+        st["trends_snapshot_age_days"] = (min(__import__("engine.trends", fromlist=["age_days"]).age_days(e) for e in fresh) if fresh else None)
         try:
-            prem = self._run_stage("premises", packet_id, brief, bible, {}, history_fp, st)
-            hooks = self._run_stage("hooks", packet_id, brief, bible, {"premises": prem}, history_fp, st)
+            prem = self._run_stage("premises", packet_id, brief, bible, {}, history_fp, st, trends_text)
+            hooks = self._run_stage("hooks", packet_id, brief, bible, {"premises": prem}, history_fp, st, trends_text)
             ss = self._run_stage("script_storyboard", packet_id, brief, bible, {"premises": prem, "hooks": hooks}, history_fp, st)
         except PendingResponse as e:
             self._save_state(packet_id, st)
@@ -161,7 +167,7 @@ class Pipeline:
             "growth_hypotheses": ss.get("growth_hypotheses", []),
             "provenance": {"generated_at": now_iso(), "provider": provider_name, "requested_model": self.requested_model,
                            "observed_model": next((l.get("observed_model") for l in reversed(st["log"]) if l.get("observed_model")), "not independently observable"),
-                           "effort": self.effort, "demonstrations_used": st["demos"], "stage_log": st["log"],
+                           "effort": self.effort, "demonstrations_used": st["demos"], "trends_used": st.get("trends_used", []), "trends_snapshot_age_days": st.get("trends_snapshot_age_days"), "stage_log": st["log"],
                            "repair_passes": sum(1 for l in st["log"] if l.get("attempt", 0) > 0), "engine_version": ENGINE_VERSION},
             "negative_constraints": list(brief.get("negative_constraints", [])) + list(bible.get("do_not", [])),
         }
@@ -171,6 +177,8 @@ class Pipeline:
 
     def _finalise(self, packet: dict, bible: dict) -> None:
         rep = validate_all(packet, bible)
+        for f in staleness_findings(packet["provenance"].get("trends_used", []), self.store.read_ledger(self.project, "trends")):
+            (rep.error if f["severity"] == "error" else rep.warn)(f["code"], f["message"])
         packet["qa"]["deterministic"] = rep.as_dict()
         if rep.ok and packet["provenance"]["provider"] != "fixture":
             packet["status"] = "planning-ready; render unverified"

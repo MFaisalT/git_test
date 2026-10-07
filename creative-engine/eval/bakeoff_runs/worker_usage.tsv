@@ -22,3 +22,7 @@ judge	B2	judge	opus	85423	44246	3
 judge	B3	judge	opus	83872	46732	3
 P	B1p	premises	sonnet	77495	76478	3
 reviewer	heldout	brief	opus	65206	24790	4
+P	B1p	hooks	sonnet	69957	21912	3
+H	heldout	premises	sonnet	80386	103637	3
+H	heldout	hooks	sonnet	71699	29464	3
+P	B1p	script_storyboard	sonnet	79613	53601	3

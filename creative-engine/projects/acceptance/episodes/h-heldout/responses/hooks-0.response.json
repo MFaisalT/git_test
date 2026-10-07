@@ -1,0 +1,64 @@
+{
+  "hook_variants": [
+    {
+      "id": "H1",
+      "premise_id": "P1",
+      "first_frame": "Locked-off wide, eye-level, blue hour: cool daylight through one frosted door panel, a hallway rail with four empty hooks and a fifth bowed hard under a tall coat heap; the Inspector stands square to it, chest lamp beam pinned on the sagging hook.",
+      "first_line_or_action": "She lifts the clipboard, makes one flat tick, and says: 'No movement.' while the rail gives a one-notch-exaggerated creak.",
+      "mechanism": "visible_problem",
+      "score": 9,
+      "rationale": "One glance shows four empty hooks beside one buckling hook, and her calm 'No movement' over a visibly moving problem sets the stakeout joke and the rule in under a second (legibility 3, specificity 3, promise 2, send-ability 1)."
+    },
+    {
+      "id": "H2",
+      "premise_id": "P1",
+      "first_frame": "Medium-wide on the rail from slightly low: the fifth hook visibly bent under the heap in blue light, the four bare hooks sharp in the foreground, the Inspector soft and still at the edge of frame.",
+      "first_line_or_action": "Her lamp beam sweeps along the four empty hooks one by one, a click on each, then drops onto the heap; she says: 'Four vacant. One overdrawn.'",
+      "mechanism": "status_contradiction",
+      "score": 8,
+      "rationale": "The four-versus-one count is shown by the beam sweep and reads on mute, but the inspector's presence is less immediate in the first frame (legibility 2, specificity 3, promise 1, send-ability 2)."
+    },
+    {
+      "id": "H3",
+      "premise_id": "P1",
+      "first_frame": "The same locked-off wide as the stakeout, the Inspector motionless with lamp on, the heap already knee-high on the fifth hook and the other four bare.",
+      "first_line_or_action": "Hard jump cut: she has not moved, the heap is visibly taller, and she says the same two words, 'No movement.', as the clipboard scratches once.",
+      "mechanism": "escalating_ritual",
+      "score": 8,
+      "rationale": "The repeated identical pose against a growing heap reads on mute and promises the camera-knows-first rule, though the ritual pays off after the first second (legibility 2, specificity 2, promise 2, send-ability 2)."
+    },
+    {
+      "id": "H4",
+      "premise_id": "P2",
+      "first_frame": "Medium shot, the Inspector crouched beside the sagging heap, lamp on a faint smudge on the wall at her own shoulder height, clipboard held with a half-drawn oval visible.",
+      "first_line_or_action": "She traces the smudge height with one slow lamp pass and says: 'Right-handed. Short. Composed.'",
+      "mechanism": "curiosity_gap",
+      "score": 6,
+      "rationale": "The profile-of-a-suspect idea is intriguing and sendable, but the half-drawn oval and smudge are small details that need a beat to read in a wide or medium shot (legibility 1, specificity 2, promise 1, send-ability 2)."
+    },
+    {
+      "id": "H5",
+      "premise_id": "P2",
+      "first_frame": "Medium shot beside the heap: the Inspector holds the clipboard sketch up next to it, the drawn face showing a low bun, straight brows and round glasses, while her own face stays turned toward the heap in soft profile.",
+      "first_line_or_action": "She holds the sketch against the heap for comparison and says one flat word: 'Distinctive.'",
+      "mechanism": "recognition",
+      "score": 7,
+      "rationale": "The sketch-beside-the-face match is a strong, screenshot-able still that reads as 'that is her' on mute, but it spends the cliffhanger in the first frame and needs a legible small drawing (legibility 2, specificity 2, promise 2, send-ability 1)."
+    },
+    {
+      "id": "H6",
+      "premise_id": "P2",
+      "first_frame": "Wide, blue hour, the Inspector facing the four empty hooks like a row of witnesses, the heavily loaded fifth hook beside her, lamp beam level and steady.",
+      "first_line_or_action": "She addresses the empty hooks in a level voice, 'Which of you did this?', then waits, still, for an answer that does not come.",
+      "mechanism": "callout",
+      "score": 5,
+      "rationale": "The deadpan interrogation of hooks is funny and sendable to a flatmate, but the problem is stated rather than shown and the line adds little to the premise's sketch payoff (legibility 2, specificity 1, promise 0, send-ability 2)."
+    }
+  ],
+  "selected": {
+    "premise_id": "P1",
+    "hook_id": "H1",
+    "rationale": "H1 shows the whole problem (four bare hooks, one buckling hook) in a single wide frame and sets the deadpan 'No movement' register that the final low-angle reveal inverts, so it reads on mute and sets up the camera-knows-first rule without any new prop or person. The trade-off against the runner-up (P2 with H5) is that H5 gives the more striking single image, a sketch matching her face, but it gives away the cliffhanger early and relies on a small legible drawing that is harder to stage in the no-fine-handwork wide shot; the clipboard tap stays unused in Part 1 and is saved for the Part 2 verdict."
+  }
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->

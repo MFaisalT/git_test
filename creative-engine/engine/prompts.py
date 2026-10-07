@@ -13,7 +13,7 @@ from .retrieval import render_demo, select_demos
 
 PROMPT_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "prompts")
 
-STAGES = ["premises", "hooks", "script_storyboard", "qa_review"]
+STAGES = ["trend_refresh", "premises", "hooks", "script_storyboard", "qa_review"]
 
 
 def _load(name: str) -> str:
@@ -37,7 +37,7 @@ def _fill(text: str, **kw) -> str:
     return text
 
 
-def render_stage(stage: str, brief: dict, bible: dict, context: dict, history_fingerprints: list[dict], demos_k: int = 2) -> tuple[str, list[str]]:
+def render_stage(stage: str, brief: dict, bible: dict, context: dict, history_fingerprints: list[dict], demos_k: int = 2, trends_text: str = "") -> tuple[str, list[str]]:
     """Return (prompt_text, demo_ids_used). context carries prior stage outputs."""
     tpl = _load(stage)
     silent = brief.get("format") == "silent_gag"
@@ -46,9 +46,10 @@ def render_stage(stage: str, brief: dict, bible: dict, context: dict, history_fi
     tpl = _cond(tpl, "SPOKEN", not silent)
     tpl = _cond(tpl, "COMMERCIAL", commercial)
     tpl = _cond(tpl, "HISTORY", bool(history_fingerprints))
+    tpl = _cond(tpl, "TRENDS", bool(trends_text))
     demos = select_demos(brief, k=demos_k) if stage in ("premises", "script_storyboard") else []
     demo_text = "\n".join(render_demo(d) for d in demos) if demos else "(no demonstrations retrieved)"
-    text = _fill(tpl, BRIEF=brief, BIBLE=bible, CONTEXT=context, HISTORY=history_fingerprints, DEMOS=demo_text,
+    text = _fill(tpl, BRIEF=brief, BIBLE=bible, CONTEXT=context, HISTORY=history_fingerprints, DEMOS=demo_text, TRENDS=trends_text,
                  COMMERCIAL_FACTS=(brief.get("commercial") or {}).get("verified_facts", []),
                  FORBIDDEN=(brief.get("commercial") or {}).get("forbidden_claims", []))
     return text, [d["demo_id"] for d in demos]
@@ -56,3 +57,10 @@ def render_stage(stage: str, brief: dict, bible: dict, context: dict, history_fi
 
 def repair_prompt(stage: str, previous_output: dict, findings: list[dict]) -> str:
     return _fill(_load("repair"), STAGE=stage, PREVIOUS=previous_output, FINDINGS=findings)
+
+
+def render_trend_refresh(project_meta: dict, bible: dict, existing_labels: list[str]) -> str:
+    return _fill(_load("trend_refresh"), NICHE=project_meta.get("niche") or "original short-form character comedy",
+                 PLATFORMS=project_meta.get("platforms") or ["instagram_reels", "tiktok", "youtube_shorts"],
+                 BIBLE_SUMMARY={"logline": bible.get("logline"), "rule": bible.get("character", {}).get("rule"), "do_not": bible.get("do_not")},
+                 EXISTING_LABELS=existing_labels)

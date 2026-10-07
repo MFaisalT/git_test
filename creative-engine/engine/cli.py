@@ -13,6 +13,10 @@ Commands:
   approve <project> <packet_id> --by NAME --credit-cap N [--render] [--spend] [--publish]
   learn <project> <packet_id> --json '{...}'  append dated outcome/lesson
   list <project>
+  trends refresh <project> [--bible ID]      write a dated trend-research request (answered by the Claude workflow)
+  trends ingest  <project> <response.json>   validate and append sourced trend entries (dated, rights-flagged)
+  trends show    <project> [--max-age-days N]
+  trends add     <project> --json '{...}'
 """
 from __future__ import annotations
 
@@ -28,6 +32,8 @@ from .providers import BrokerProvider, ClaudeCliProvider, FixtureProvider, Pendi
 from .render import storyboard_md
 from .repetition import compare
 from .store import Store, now_iso
+from .prompts import render_trend_refresh
+from .trends import DEFAULT_FRESH_DAYS, age_days, parse_refresh_response, select_relevant, validate_entry
 from .validators import validate_all
 
 DEFAULT_ROOT = os.environ.get("CE_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -149,6 +155,40 @@ def cmd_learn(a, store):
     print("recorded")
 
 
+def cmd_trends(a, store):
+    ledger = store.read_ledger(a.project, "trends")
+    if a.action == "refresh":
+        # creates a research request for the Claude workflow (or a human); no automation, no web access from the engine itself
+        d = os.path.join(store.project_dir(a.project), "trends_requests"); os.makedirs(d, exist_ok=True)
+        meta = _load(os.path.join(store.project_dir(a.project), "project.json"))
+        bible = store.load_bible(a.project, a.bible) if a.bible else {}
+        labels = sorted({e["label"] for e in ledger})
+        path = os.path.join(d, f"{now_iso()[:10]}.request.md")
+        Store.write_text(path, render_trend_refresh(meta, bible, labels))
+        print("trend refresh request written:", path)
+        print("Answer it (web-sourced JSON) and run: engine trends ingest", a.project, path.replace(".request.md", ".response.json"))
+    elif a.action == "ingest":
+        entries, errs = parse_refresh_response(_load(a.file))
+        for e in errs:
+            print("rejected:", e)
+        for e in entries:
+            store.append(a.project, "trends", e)
+        store.append(a.project, "evidence", {"type": "trend_refresh", "file": a.file, "accepted": len(entries), "rejected": len(errs)})
+        print(f"ingested {len(entries)} entries, rejected {len(errs)}")
+        sys.exit(0 if entries or not errs else 4)
+    elif a.action == "add":
+        e = json.loads(a.json); v = validate_entry(e)
+        if v: sys.exit("invalid entry: " + "; ".join(v))
+        store.append(a.project, "trends", e); print("added", e["trend_id"])
+    elif a.action == "show":
+        fresh_days = a.max_age_days or DEFAULT_FRESH_DAYS
+        for e in sorted(ledger, key=lambda x: x["captured_at"], reverse=True):
+            age = age_days(e)
+            print(f"{'FRESH' if age <= fresh_days else 'stale'} {age:5.1f}d  {e['trend_id']:16s} {e['type']:16s} {e['rights_status']:16s} {e['label']}")
+        if not ledger:
+            print("(empty ledger) run: engine trends refresh", a.project)
+
+
 def cmd_list(a, store):
     for p in store.list_packets(a.project):
         print(f"{p['packet_id']:50s} {p['status']}")
@@ -174,6 +214,8 @@ def main(argv=None):
     s.add_argument("--render", action="store_true"); s.add_argument("--spend", action="store_true"); s.add_argument("--publish", action="store_true"); s.set_defaults(fn=cmd_approve)
     s = sub.add_parser("learn"); s.add_argument("project"); s.add_argument("packet_id"); s.add_argument("--json", required=True); s.set_defaults(fn=cmd_learn)
     s = sub.add_parser("list"); s.add_argument("project"); s.set_defaults(fn=cmd_list)
+    s = sub.add_parser("trends"); s.add_argument("action", choices=["refresh", "ingest", "add", "show"]); s.add_argument("project")
+    s.add_argument("file", nargs="?"); s.add_argument("--json"); s.add_argument("--bible"); s.add_argument("--max-age-days", type=int); s.set_defaults(fn=cmd_trends)
     a = ap.parse_args(argv)
     a.fn(a, Store(a.root))
 
