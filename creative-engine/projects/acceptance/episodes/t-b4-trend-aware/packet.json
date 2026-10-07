@@ -1,7 +1,7 @@
 {
   "packet_version": "1.0",
   "packet_id": "T-B4_trend_aware",
-  "status": "draft",
+  "status": "planning-ready; render unverified",
   "brief": {
     "brief_id": "B4_trend_aware",
     "title": "Trend-aware 18-second episode: the Inspector opens a case on a single sock that keeps reappearing in the hallway; use the current trend radar to choose format and hook",
@@ -561,8 +561,68 @@
     ]
   },
   "qa": {
-    "deterministic": {},
-    "creative": {},
+    "deterministic": {
+      "ok": true,
+      "error_count": 0,
+      "warning_count": 4,
+      "findings": [
+        {
+          "code": "RIGHTS_UNRESOLVED",
+          "severity": "warning",
+          "message": "unresolved rights: ['Inspector voice'] (acceptable while planning)",
+          "path": ""
+        },
+        {
+          "code": "TREND_RIGHTS",
+          "severity": "warning",
+          "message": "trend T-20261007-02 is do_not_copy; confirm only the mechanism was adapted",
+          "path": ""
+        },
+        {
+          "code": "TREND_RIGHTS",
+          "severity": "warning",
+          "message": "trend T-20261007-03 is do_not_copy; confirm only the mechanism was adapted",
+          "path": ""
+        },
+        {
+          "code": "TREND_RIGHTS",
+          "severity": "warning",
+          "message": "trend T-20261007-04 is do_not_copy; confirm only the mechanism was adapted",
+          "path": ""
+        }
+      ]
+    },
+    "creative": {
+      "scores": {
+        "originality": 4,
+        "hook": 4,
+        "coherence": 3,
+        "identity": 4,
+        "audiovisual": 4,
+        "feasibility": 3,
+        "grounding": 4,
+        "commercial_fit": 3
+      },
+      "evidence": {
+        "originality": "A sock that is both the 'suspect' on the floor and a second clinging sock on her own nape, with the pocket-clue self-incrimination and a bureaucratic register, is a fresh take on the lost-item gag, though the 'she is the culprit' reveal is a familiar comic shape.",
+        "hook": "S1 opens silent on a lone sock under a CASE 11: THE SOCK card with a shoe stopping a hand's width away, so the problem is legible in the first frame with sound off, although the 1.5 s stillness is slightly slow for a Shorts swipe window.",
+        "coherence": "The rule-of-three loop and reveal are clear, but the logic blurs between the floor sock, the hung sock and the clinging second sock (S3 shows the sock on the floor and also on her collar), so the audience must work to see which sock is which.",
+        "identity": "Aubergine four-pocket jacket, chest lamp, lanyard clipboard, bun and round glasses are stated in every scene, with the single two-finger tap and warm-disappointment microexpression honouring the bible rule, though the lamp is barely used on screen.",
+        "audiovisual": "Each scene carries concrete foley (static peel crackle, fabric cling snap, hook rail tick), constant light, ambience and captions with no music, giving a complete and well-timed sound-off and sound-on read.",
+        "feasibility": "Static cling that visibly detaches and re-attaches on cue, plus a 90-degree handheld arc that must keep the sock continuity across the U2 unit, is risky for current generation and will likely need multiple takes or a cheat.",
+        "grounding": "Trend IDs T-20261007-05 and -02 are cited in the rationale and beats and adapted as mechanism only, and the rejected premises are tied back to other radar entries, so the choice traces cleanly to the radar.",
+        "commercial_fit": "Commercial is null, so there is no brand pressure and the disclosure line is present, but the loop and share hooks give only modest audience value, which makes this adequate rather than strong."
+      },
+      "weighted_total": 3.63,
+      "pass_thresholds": {
+        "character_intent": true,
+        "premise_specific_payoff": true,
+        "complete_direction": true,
+        "commercial_fit": true
+      },
+      "summary": "A clean, standalone, trend-grounded sock case with a legible silent open and a strong self-incrimination payoff that keeps the Inspector's rule intact. The main risks are the muddled sock-on-floor versus sock-on-collar logic and the difficulty of generating reliable static-cling behaviour.",
+      "top_fix": "Clarify the sock logic, for example by making the clinging sock the only sock and showing it dropping to the floor each time she turns, so the reveal reads instantly and is easier to generate."
+    },
     "repetition": {
       "threshold": 0.35,
       "fields": {
@@ -610,7 +670,7 @@
     }
   ],
   "provenance": {
-    "generated_at": "2026-10-07T23:30:21Z",
+    "generated_at": "2026-10-07T23:31:18Z",
     "provider": "broker",
     "requested_model": "sonnet",
     "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
@@ -663,6 +723,18 @@
         "provider": "broker",
         "latency_s": 0.0,
         "at": "2026-10-07T23:30:21Z"
+      },
+      {
+        "stage": "qa_review",
+        "attempt": 0,
+        "result": "ok",
+        "errors": 0,
+        "requested_model": "sonnet",
+        "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+        "usage": {},
+        "provider": "broker",
+        "latency_s": 0.0,
+        "at": "2026-10-07T23:31:18Z"
       }
     ],
     "repair_passes": 0,

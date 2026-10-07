@@ -41,7 +41,7 @@ Weakness observed and recorded: the selected hook mechanism was `visible_problem
 
 ## 4. Trend-aware run (project `acceptance`, `T-B4_trend_aware`)
 
-Demonstrates the trend radar end to end: a real refresh (sonnet worker with web search, 7 searches) produced 5 dated entries and 11 declared coverage gaps; `engine trends ingest` accepted 5/5; the premises prompt carried the radar section and the worker cited all five trend ids. Stages after premises/hooks are recorded in this file's companion `projects/acceptance/episodes/t-b4-trend-aware/` as they complete.
+Demonstrates the trend radar end to end: a real refresh (sonnet worker with web search, 7 searches) produced 5 dated entries and 11 declared coverage gaps; `engine trends ingest` accepted 5/5; the premises prompt carried the radar section and the worker cited all five trend ids. Result: `T-B4_trend_aware` is **planning-ready; render unverified** — 4 scenes in two mini units, 0 repairs, creative QA 3.63 with all thresholds passing, repetition check clean (max overlap .13). Provenance records `trends_used` = all five ids with snapshot age 0.98 days; QA surfaces three `TREND_RIGHTS` warnings because the worker marked the adapted formats `do_not_copy` (the engine adapted mechanisms — a specific-frame silent open and an early planted clue — not assets; a reviewer should confirm). The selected premise (a single grey sock filed as a missing-persons case; the sock she keeps "finding" is on her own jacket) cites T-20261007-05 and -02 explicitly in its rationale. Caveat: the ingested trends are aggregator/press grade; the demonstration proves the plumbing and the citation discipline, not that these five entries are what is truly viral today.
 
 ## 5. What this acceptance does and does not establish
 
