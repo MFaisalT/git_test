@@ -1,0 +1,224 @@
+{
+  "premises_considered": [
+    {
+      "logline": "The Inspector seals a lone phone with safety-orange tape and treats a 'seen' with no reply as a negligence case; the voice note on the phone is the sender; the phone turns out to be hers.",
+      "why_not": "SELECTED (see selected_premise)."
+    },
+    {
+      "logline": "The Inspector convenes a formal hearing in the shared kitchen with mugs as witnesses to find who left a friend on read, then discovers her own mug is the only one with a message under it.",
+      "why_not": "Needs several props doing the talking, so the 'seen' idea gets diluted. The culprit reveal becomes a prop gag rather than something the viewer has done themselves."
+    },
+    {
+      "logline": "The Inspector stakes out a phone waiting for a reply, with a stopwatch and thermos, then notices her own half-written reply sitting unsent.",
+      "why_not": "The reveal depends on a visible typing indicator or draft text. That is readable UI, which the brief forbids, and it would not read muted."
+    },
+    {
+      "logline": "The Inspector posts a formal complaint letter to a friend who left her on read, and the letter comes back as 'return to sender' with her own address.",
+      "why_not": "The joke is one step removed from the group-chat feeling. It also needs a postbox location and a paper-reading close-up."
+    }
+  ],
+  "selected_premise": {
+    "logline": "The Inspector seals an abandoned phone as Exhibit A in the case of a message marked seen four hours ago with no reply, plays the sender's voice note, delivers a verdict of 'unforgivable', and then the camera shows the exhibit's case sticker is hers.",
+    "audience_emotion": "Guilty recognition: the 'oh no, that is me, I owe someone a reply' laugh.",
+    "character_desire": "To identify and punish whoever read a message and chose silence, so the world of one-centimetre problems has one fewer.",
+    "obstacle": "The only evidence is a face-out phone, a worried voice note, and her own procedure. She won't look at the back of the exhibit until the verdict is filed.",
+    "escalation": "Tape seals the exhibit, the sender's voice note plays and gets more hopeful, and she moves the case to the hallway to return the exhibit to its owner. Her verdict gets harsher each time ('A person did this' to 'They said nothing' to 'Unforgivable').",
+    "surprise": "She turns the exhibit over to put it back on a coat hook and the sticker on the case is her own aubergine sticker. The camera pushes in on it before she notices.",
+    "payoff": "She goes completely still, her lamp reflecting in the case. She files the outcome in her usual way: 'Inspection suspended. I'll reply tomorrow.' She is exactly the offender she just sentenced.",
+    "why_send_it": "Everyone has one friend who leaves them on read and one message they themselves have not answered. The viewer sends it to the friend (to accuse) or to themselves (to confess), and either way it ends with a wink toward the next case."
+  },
+  "hook_options": [
+    {
+      "first_frame": "Safety-orange tape is being pulled across a propped phone on a side table, sealing it like a crime scene. The phone shows only a blank two-tone chat shape and a small tick glyph, with no readable text. The Inspector's lamp lights it from the left.",
+      "first_line_or_action": "'Seen. Four hours ago. No reply.' (spoken flat at 0.4 s, with the tape sound landing on 'Seen')",
+      "mechanism": "The crime-scene tape reads as 'serious case' even muted. The line opens with the most specific word, 'Seen', and a pre-answered question: whose phone, and who stayed silent.",
+      "score": 9
+    },
+    {
+      "first_frame": "Extreme close-up of the Inspector's round glasses, with the lamp-lit tick glyph of a phone reflected in both lenses.",
+      "first_line_or_action": "She says 'Exhibit A.' and a gloved fingertip lowers into frame onto the screen.",
+      "mechanism": "A strong face-and-prop intro, but the problem ('seen, no reply') is not stated until the second second, so it is less immediate than option 1.",
+      "score": 6
+    },
+    {
+      "first_frame": "Hallway with coat hooks, the Inspector already holding a phone at arm's length with her clipboard tucked under her arm.",
+      "first_line_or_action": "'Whose phone is this?' She sniffs it once.",
+      "mechanism": "Mystery-first, and the question works. But the 'seen, no reply' hook is deferred and the show's routine setup (side table, tape, lamp) is lost.",
+      "score": 5
+    }
+  ],
+  "hook": {
+    "first_frame": "Safety-orange tape is being pulled across a propped phone on a living-room side table, sealing it like a crime scene. The screen shows only a blank chat-bubble shape and a small tick glyph, with no readable text. The Inspector's lamp lights it from the left.",
+    "first_line_or_action": "'Seen. Four hours ago. No reply.' (flat, procedural, starting at 0.4 s with the tape tearing on 'Seen')",
+    "mechanism": "Crime-scene tape signals a serious investigation of a tiny problem even muted. 'Seen' is the most specific word and comes first. The open loop is 'who saw it and why no reply', and it is resolved by the sticker twist."
+  },
+  "script": {
+    "title": "Case Four: The Seen",
+    "synopsis": "The Inspector tapes off an abandoned phone, plays the sender's hopeful voice note, and sentences the silent reader as unforgivable. She carries the exhibit to the hallway to return it, and the camera notices the case sticker is hers before she does.",
+    "beats": [
+      { "beat": "Tape seals a phone. 'Seen. Four hours ago. No reply.'", "function": "hook" },
+      { "beat": "She names it a person's doing, 'A person did this', and leans in with the lamp.", "function": "setup" },
+      { "beat": "The voice note plays from the exhibit phone: a friend, off-camera, hopeful and slightly embarrassed.", "function": "escalation" },
+      { "beat": "'They saw it. They said nothing.' She lifts the exhibit and walks it into the hallway.", "function": "escalation" },
+      { "beat": "Clipboard two-finger tap, then 'Verdict. Unforgivable.' She turns the exhibit over to hang it on a hook.", "function": "turn" },
+      { "beat": "The camera pushes in on the case sticker, her own aubergine sticker, before she looks. She freezes. Lamp flickers once.", "function": "payoff" },
+      { "beat": "'Inspection suspended. I'll reply tomorrow.' She lowers the clipboard.", "function": "button" },
+      { "beat": "Caption in post: 'Next case: the unwashed mug.' (no spoken CTA)", "function": "cta" }
+    ],
+    "dialogue": [
+      { "speaker": "The Inspector", "line": "Seen. Four hours ago. No reply.", "delivery": "Flat, procedural, each sentence its own full stop. No emphasis beyond a small pause after 'Seen'.", "on_camera": true },
+      { "speaker": "The Inspector", "line": "A person did this.", "delivery": "Quieter, almost to herself, as if the case notes need it recorded.", "on_camera": true },
+      { "speaker": "Jo (voice note, off-camera, from the exhibit phone)", "line": "Hey, it's Jo. Did you see it?", "delivery": "Warm, a little tinny from the phone speaker, hopeful but embarrassed to ask.", "on_camera": false },
+      { "speaker": "The Inspector", "line": "They saw it. They said nothing.", "delivery": "Measured, with a very small downward tilt on 'nothing'. Her face shows warm disappointment, not anger.", "on_camera": true },
+      { "speaker": "The Inspector", "line": "Verdict. Unforgivable.", "delivery": "After the slow two-finger tap on the clipboard. The voice is formal and final.", "on_camera": true },
+      { "speaker": "The Inspector", "line": "Inspection suspended. I'll reply tomorrow.", "delivery": "Quiet, almost to herself, eyes still on the sticker. The first line she delivers without procedure.", "on_camera": true }
+    ],
+    "caption_text": "Seen. Four hours ago. No reply. / A person did this. / Jo: Hey, it's Jo. Did you see it? / They saw it. They said nothing. / Verdict. Unforgivable. / Inspection suspended. I'll reply tomorrow. / Next case: the unwashed mug.",
+    "disclosure_line": "n/a (no commercial content; fictional character, no product)"
+  },
+  "scenes": [
+    {
+      "scene_id": "S1",
+      "start_s": 0,
+      "end_s": 6,
+      "location": "Living room side table",
+      "action": "Frame opens on a propped smartphone on the side table with safety-orange tape being drawn across it. The Inspector's gloved hand finishes the seal, tears the tape, and her face leans into frame behind the phone. She presses the tape flat with one finger. The back of the phone case is not visible; the screen faces the camera at a slight angle.",
+      "performance": "Task: seal the exhibit and read it into the record. Obstacle: the phone gives her nothing but a tick glyph. Tactic: look at it, narrow her eyes slightly, and state it flat. After 'No reply' her eyes move from the phone to the lens and back, once, as if checking the camera is also a witness.",
+      "microexpression": "Neutral face, straight brows. On 'A person did this' the left brow lifts about a millimetre and settles, a flicker of warm disappointment.",
+      "dialogue": [
+        "0.4-3.0 s: 'Seen. Four hours ago. No reply.'",
+        "3.6-5.4 s: 'A person did this.'"
+      ],
+      "camera": {
+        "shot": "Medium close-up at eye level, a little too formal for a phone: phone centred, her face in the upper right third.",
+        "lens": "Phone main camera, about 26 mm equivalent",
+        "movement": "Propped phone with a tiny settle-wobble in the first half second, then locked. No cuts.",
+        "rig": "Propped phone against a stack of books out of frame"
+      },
+      "lighting": "Key from the Inspector's chest lamp, camera-left, a hard cool-white circle on the phone and her glasses. Fill is soft window light from camera-right. One colour bounce: aubergine from her jacket onto her chin and the table edge. Real contact shadows: the tape has a thin shadow on the glass, the phone has a soft shadow on the wood.",
+      "environment": "A clean modern living room: oak side table, off-white wall, a plain grey sofa edge, a small dark ceramic coaster and a single closed paperback. No text visible anywhere. The phone screen shows only a blank rounded chat shape and one small tick glyph, no readable text and no real app branding.",
+      "sound": {
+        "ambience": "Quiet room tone with a faint fridge hum from the next room",
+        "foley": [
+          "Tape tearing from the roll, exaggerated one notch",
+          "Tape pressed flat with a fingertip",
+          "Phone gently settling on the books",
+          "Glove creak on the table edge"
+        ],
+        "music": "none",
+        "voice": "The Inspector, measured and bureaucratic, close and dry, no reverb"
+      },
+      "transition_out": "Continuous: a hard match action from her leaning back into S2 on the same framing (same clip, no cut).",
+      "props_from_frame_one": [
+        "Smartphone (Exhibit A) with a case whose back faces away from camera",
+        "Safety-orange tape roll",
+        "Inspection lamp on chest strap",
+        "Clipboard on lanyard",
+        "Closed paperback",
+        "Dark ceramic coaster",
+        "Stack of books propping the phone"
+      ],
+      "cuts_inside_clip": 0
+    },
+    {
+      "scene_id": "S2",
+      "start_s": 6,
+      "end_s": 13,
+      "location": "Living room side table",
+      "action": "A soft notification chime comes from the exhibit and the Inspector holds still as the voice note plays. She tilts her head to listen like an expert witness. When it ends she lifts the phone out of its tape, tucks the clipboard under her arm, and walks out of frame left toward the hallway, passing the camera.",
+      "performance": "Task: hear the evidence in full before reaching a conclusion. Obstacle: the voice is hopeful, which complicates her sentencing. Tactic: she listens with her lamp angled on the speaker grille, then flattens her voice and delivers 'They saw it. They said nothing.' to the phone itself. She pockets nothing. She breathes in once through her nose before walking.",
+      "microexpression": "Eyes track the voice from the grille to the lens. On 'nothing' the corners of her mouth drop slightly, a warm disappointment, and her glasses slip another millimetre down the nose.",
+      "dialogue": [
+        "6.2-9.0 s (off-camera, phone speaker): 'Hey, it's Jo. Did you see it?'",
+        "9.4-11.6 s: 'They saw it. They said nothing.'"
+      ],
+      "camera": {
+        "shot": "Same medium close-up as S1, then a slight slide as the phone leaves the frame",
+        "lens": "Phone main camera, about 26 mm equivalent",
+        "movement": "Propped phone with a small settle-wobble when she lifts the exhibit away; frame tilts slightly as she passes. Placement open.",
+        "rig": "Propped phone against books"
+      },
+      "lighting": "Same as S1: lamp key from camera-left, window fill from camera-right, aubergine bounce from the jacket. The lamp swings a hard bright circle across the wall as she turns, then returns. Contact shadow from her gloved hand falls across the coaster.",
+      "environment": "Same living-room side table. Orange tape is now torn and hanging off the phone's corner. The paperback and coaster have not moved.",
+      "sound": {
+        "ambience": "Same room tone with fridge hum, slightly lower under the voice note",
+        "foley": [
+          "Soft notification chime (generic, not any real app's sound)",
+          "Tinny phone-speaker voice note with a small crackle",
+          "Tape ripping off the phone as she lifts it",
+          "Clipboard lanyard clicking against a pocket flap",
+          "Soft footsteps on a rug then wood"
+        ],
+        "music": "none",
+        "voice": "Jo (off-camera): warm, slightly hopeful, tinny from the speaker. The Inspector: dry, measured, close"
+      },
+      "transition_out": "Hard cut on her footstep to the hallway, to open on the coat hooks already in frame.",
+      "props_from_frame_one": [
+        "Smartphone (Exhibit A)",
+        "Torn orange tape remnant",
+        "Inspection lamp",
+        "Clipboard on lanyard",
+        "Paperback",
+        "Coaster",
+        "Books propping the phone"
+      ],
+      "cuts_inside_clip": 0
+    },
+    {
+      "scene_id": "S3",
+      "start_s": 13,
+      "end_s": 20,
+      "location": "Hallway with coat hooks",
+      "action": "Hallway with a row of coat hooks, three of them empty and one holding a grey scarf. The Inspector walks in with the phone held in front of her. She stops and taps her clipboard twice, slowly, with two fingers (the signature gesture, used once). She delivers the verdict. She turns the phone over to hang it by its lanyard loop on a hook. Over her shoulder the camera slides in and holds on the phone case, where an aubergine sticker sits in the corner. She goes still. Her lamp flickers once. She lowers the clipboard.",
+      "performance": "Task: file the verdict and deposit the exhibit. Obstacle: the exhibit's back is the one part of the evidence she hasn't examined. Tactic: she finishes procedure first, then turns it over. After seeing the sticker she doesn't react outwardly; she keeps looking at it for two full seconds while her breathing slows. The last line is delivered quietly, not to the lens.",
+      "microexpression": "Neutral at the tap. When the sticker appears her eyes flick to it and stay; the brows stay straight while the mouth tightens a hair. On 'tomorrow' a small blink and warm disappointment, aimed at herself.",
+      "dialogue": [
+        "13.9-15.4 s: 'Verdict. Unforgivable.' (after the 13.4 s clipboard tap)",
+        "17.6-19.6 s: 'Inspection suspended. I'll reply tomorrow.'"
+      ],
+      "camera": {
+        "shot": "Medium shot, eye level, formal framing of her and the hooks; at about 16.5 s the framing slides over her right shoulder into a close-up of the phone case and sticker",
+        "lens": "Phone main camera, about 26 mm equivalent",
+        "movement": "Handheld with a gentle bob as she enters; the push-in is the operator drifting forward over her shoulder, not a cut. The camera arrives at the sticker one beat before her eyes do, so the camera notices first.",
+        "rig": "Handheld phone"
+      },
+      "lighting": "Key is the Inspector's chest lamp, upward and camera-left, with a hard cool circle on the case. Fill is soft light from the open living-room doorway behind the camera. One colour bounce: aubergine from the sticker and jacket onto her chin. A contact shadow falls from the hook under the scarf, and a small one under the phone where it hangs.",
+      "environment": "A narrow hallway: plain off-white wall, wooden hook rail with four hooks, a grey scarf on one hook, a small shoe tray at the bottom edge of frame. No readable text. The case sticker is a plain aubergine circle with no text, brand or app logo.",
+      "sound": {
+        "ambience": "Quieter hallway tone, a distant fridge hum and a faint ticking of a radiator",
+        "foley": [
+          "Two slow clipboard taps, exaggerated, hollow plastic",
+          "Phone case scraping lightly on the hook",
+          "Sticker corner peeling slightly with a tiny click",
+          "Lamp flicker buzz, one short electric tick",
+          "Jacket fabric rustle as she lowers the clipboard"
+        ],
+        "music": "none",
+        "voice": "The Inspector, close and dry. The last line is nearly a whisper."
+      },
+      "transition_out": "End on a held frame of her looking at the sticker, with a 0.5 s tail of room tone.",
+      "props_from_frame_one": [
+        "Smartphone (Exhibit A) with the aubergine sticker on the case back",
+        "Clipboard on lanyard",
+        "Inspection lamp",
+        "Hook rail with four hooks",
+        "Grey scarf on one hook",
+        "Shoe tray"
+      ],
+      "cuts_inside_clip": 0
+    }
+  ],
+  "continuity": {
+    "identity_anchors": "Oval face, straight dark brows, small round glasses pushed slightly down the nose, hair in a tight low bun, neutral expression that breaks into warm disappointment rather than anger. Measured, bureaucratic voice, never raised.",
+    "costume": "Aubergine utility jacket with four flap pockets, bright circular inspection lamp on chest strap, tiny clipboard on lanyard, tight low bun, thin utility gloves in S1 and S2 (hands are bare for the clipboard tap in S3).",
+    "props": [
+      "Smartphone (Exhibit A) with aubergine circle sticker on the case back, present from frame one but facing away in S1 and S2",
+      "Safety-orange tape roll and torn tape remnant",
+      "Inspection lamp",
+      "Clipboard on lanyard",
+      "Paperback and coaster (living room)",
+      "Hook rail, grey scarf and shoe tray (hallway)"
+    ],
+    "notes": "The sticker is the same aubergine as her jacket; the camera must reach it before her eyes do. The clipboard gesture happens exactly once, at about 13.4 s. The second voice (Jo) is off-camera only and comes from the exhibit phone's speaker. Two locations only: living room side table, hallway with coat hooks. No app logos, no readable UI, no statistics. Speech totals about 33 words over 20 s, well under 2.5 words per second. Captions are added in post."
+  }
+}

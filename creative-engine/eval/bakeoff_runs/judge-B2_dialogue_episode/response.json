@@ -1,0 +1,50 @@
+{
+  "scores": {
+    "X": {"originality": 4, "hook": 3, "coherence": 3, "identity": 5, "audiovisual": 5, "feasibility": 3, "grounding": 4, "commercial_fit": 3, "weighted_total": 3.73},
+    "Y": {"originality": 4, "hook": 4, "coherence": 4, "identity": 4, "audiovisual": 5, "feasibility": 4, "grounding": 4, "commercial_fit": 3, "weighted_total": 4.03},
+    "Z": {"originality": 2, "hook": 3, "coherence": 2, "identity": 1, "audiovisual": 3, "feasibility": 4, "grounding": 2, "commercial_fit": 3, "weighted_total": 2.52}
+  },
+  "evidence": {
+    "X": {
+      "originality": "Taping off the whole table as findings escalate from delay to dereliction, with the friend herself as the off-camera voice, is a fresh, disproportionate staging of a 'seen'.",
+      "hook": "The half-hidden taped second phone is a good visual plant, but the opening line 'Everyone who leaves a friend on seen is a suspect' is a generic statement rather than a specific case.",
+      "coherence": "The two-phone logic is muddy: it is unclear whose 'seen' the main phone shows versus the second phone, and 'Inconclusive' as the verdict softens the escalation it just built.",
+      "identity": "Uses every bible anchor (aubergine jacket, chest lamp, clipboard, low bun, glasses), keeps the single two-finger tap in S4, and the camera finds the second phone before she does.",
+      "audiovisual": "Every scene specifies shot, lens, rig, lighting with contact shadows, layered foley, captions and continuity props, which is shoot-ready direction.",
+      "feasibility": "One unbroken 20 s generated take with a slider move ending on a glowing phone under tape is ambitious for AI video and fragile in continuity.",
+      "grounding": "Respects one location, off-camera second voice, about 35 words and no statistics, though a 'tall stack of grey bubbles with tick glyphs' edges toward UI imagery.",
+      "commercial_fit": "No product category is mentioned, so it scores the default."
+    },
+    "Y": {
+      "originality": "The exhibit's case sticker turning out to be her own aubergine sticker is a clean, character-specific reveal, though taping a phone as evidence is an expected opening.",
+      "hook": "Tape tearing on 'Seen. Four hours ago. No reply.' at 0.4 s gives a specific, legible open loop that works muted and spoken.",
+      "coherence": "Escalation from 'A person did this' to 'Unforgivable' pays off cleanly into 'I'll reply tomorrow', though the reader's own phone displaying a 'seen' tick is slightly illogical.",
+      "identity": "Core anchors, measured register and camera-notices-first rule are honored, but added gloves and 'taps her clipboard twice' with two-tap foley blur the once-only slow tap.",
+      "audiovisual": "Timed dialogue windows, performance tasks/obstacles, motivated lamp keys, aubergine bounce, per-scene foley and a hallway hard cut give complete direction.",
+      "feasibility": "Two clips with a cut, a simple handheld drift onto a plain sticker and about 33 words are achievable with current generation tools.",
+      "grounding": "Uses two bible locations, an off-camera voice note from the phone speaker, no logos, no stats, and a textless sticker, all within constraints.",
+      "commercial_fit": "No product category is mentioned, so it scores the default."
+    },
+    "Z": {
+      "originality": "Sister-left-on-seen and 'I was drafting' is the most obvious version of the premise, with stock detective props (corkboard, red string, desk bell).",
+      "hook": "'Case file: the Seen.' with a phone held as evidence is clear but generic and lacks a visual disproportion beat.",
+      "coherence": "The payoff has her start replying, which undoes rather than commits the fault, so the bible rule's exposure lands weakly.",
+      "identity": "Replaces the aubergine jacket, chest lamp and clipboard with a charcoal blazer and tie, omits the signature tap, and ends on a direct-to-lens smile that drifts toward mugging.",
+      "audiovisual": "Shots and foley are listed, but there are no voice deliveries, no rig, 50mm lenses against the phone-look language, and thin lighting notes.",
+      "feasibility": "Short separate shots in a study and balcony with simple actions are easy to generate.",
+      "grounding": "Brief constraints are met (one on-screen speaker, two locations, about 46 words), but the bible's silhouette, locations and visual language are largely ignored.",
+      "commercial_fit": "No product category is mentioned, so it scores the default."
+    }
+  },
+  "thresholds": {
+    "X": {"character_intent": true, "premise_specific_payoff": true, "complete_direction": true, "commercial_fit": true},
+    "Y": {"character_intent": true, "premise_specific_payoff": true, "complete_direction": true, "commercial_fit": true},
+    "Z": {"character_intent": false, "premise_specific_payoff": false, "complete_direction": false, "commercial_fit": true}
+  },
+  "ranking": ["Y", "X", "Z"],
+  "anti_template": {
+    "any_two_share_skeleton": false,
+    "evidence": "X and Y both open on orange tape sealing a phone at the side table, which the bible invites, but X reveals through an off-camera friend plus a planted second phone in one take while Y reveals through a voice note and a sticker after a location change; Z uses a different study/balcony structure."
+  },
+  "notes": "Y is the most shootable plan, with a specific hook, a clean camera-first reveal and a follow-on case tease, while X is richly directed but has muddier two-phone logic and a risky single-take generation. Z largely abandons the bible's costume, gesture and register, and its payoff undercuts the culprit rule."
+}

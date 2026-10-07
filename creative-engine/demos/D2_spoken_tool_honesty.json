@@ -1,0 +1,20 @@
+{
+  "demo_id": "D2_spoken_tool_honesty",
+  "format": "spoken_episode",
+  "tags": ["spoken_episode", "tiktok", "organic"],
+  "brief_id": "demo-only-not-an-eval-brief",
+  "input": "An 18-second spoken episode for a different show (a weather presenter who forecasts social awkwardness). The production tool's JSON support is unverified.",
+  "accepted_output": {
+    "dialogue_excerpt": [
+      {"speaker": "Presenter", "line": "Light small talk this morning, clearing by the lift.", "on_camera": true, "delivery": "brisk broadcast cadence, eyes to lens then to the 'map'"},
+      {"speaker": "Colleague", "line": "You're in my lift.", "on_camera": false, "delivery": "flat, close-mic, from behind camera"}
+    ],
+    "tool_mapping_excerpt": {
+      "adapter": "higgsfield-mcp/generate_video",
+      "units": [{"generation_unit": "U1", "model": "seedance_2_5", "controls": {"duration": 18, "aspect_ratio": "9:16", "resolution": "720p", "generate_audio": true}, "prompt_text": "TOP PRIORITY ... (free-text house-order prompt)", "manual_steps": ["burn caption in edit", "platform disclosure if sponsored"], "gaps": ["lip-sync quality not controllable; inspect", "no fps control"]}],
+      "notes": "Internal episode JSON is kept for the engine; the tool receives only prompt_text plus the listed native controls. The JSON is NOT a native tool payload."
+    }
+  },
+  "justification": "Accepted because speech fits the timing (about 2.4 words per second), the second voice is off-camera, and the tool mapping names the free-text prompt as the only creative payload with manual steps and explicit gaps, instead of claiming the internal JSON executes natively.",
+  "rejected": "A version that labelled the internal episode JSON as a 'native Higgsfield JSON payload' was rejected: JSON support is unverified and the model catalogue exposes prompt as a string."
+}

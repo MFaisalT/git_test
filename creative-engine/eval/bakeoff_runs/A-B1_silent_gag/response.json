@@ -1,0 +1,84 @@
+{
+  "selected_premise": {
+    "logline": "A composed inspector investigates a phone charger cable that stops exactly one centimetre short of the socket, fixes it with a solemn table-nudge and a stamp of approval, then commits the identical fault with her own cable.",
+    "payoff": "The moment she stamps 'resolved', her own inspector's torch on a cable that is also one centimetre short drags the table back and yanks the phone out. She ends in the same stare-down pose she began with."
+  },
+  "hook": {
+    "first_frame": "Extreme close-up, low angle: a phone dangling off a side-table edge by a fully taut white cable. The plug tip hovers visibly one centimetre from the wall socket, and a ruler-straight shadow runs across the gap.",
+    "first_line_or_action": "The cable gives a tiny twang and the phone swings a few degrees, as if the cable is straining toward the socket and failing."
+  },
+  "script": {
+    "title": "One Centimetre Short",
+    "synopsis": "The Inspector crouches at a side table where a phone hangs from a taut charger cable that falls a centimetre short of the wall socket. She inspects the gap with grave professionalism: a tiny tape measure, a nod, a clipboard note. She nudges the table a centimetre closer, the plug clicks in, the charging light glows, and she stamps the report with a satisfied thud. She then plugs in her own inspector's torch on its own cable, and that cable is also one centimetre short. The tension drags the table back, the phone's plug pops out, and she is left in the same crouch and stare as the opening frame.",
+    "beats": [
+      {"beat": "Taut cable, plug hovering a centimetre from the socket. Cable twangs. The Inspector's eyes slide into frame, level with the gap.", "function": "hook"},
+      {"beat": "She pulls out a tiny tape measure, measures the gap, gives one grave nod, and writes a single line on her clipboard.", "function": "setup"},
+      {"beat": "She presses two fingers to the table edge and nudges it exactly one centimetre. The plug slides in and clicks, and a small charging glow lights her face.", "function": "escalation"},
+      {"beat": "She stamps the report with a heavy, satisfied thud and holds it up to the lamp, serene.", "function": "turn"},
+      {"beat": "She plugs her own inspector's torch into the second socket slot. Its cable is also one centimetre short, taut, and the table slides back and the phone plug pops out.", "function": "payoff"},
+      {"beat": "She is back in the opening crouch, eyes level with the gap, unblinking. The cable twangs.", "function": "button"}
+    ],
+    "dialogue": [],
+    "caption_text": "Inspection pending.",
+    "disclosure_line": "AI-generated video."
+  },
+  "scenes": [
+    {
+      "scene_id": "S1",
+      "start_s": 0,
+      "end_s": 4,
+      "location": "Living-room side table and wall socket, evening, one fixed corner.",
+      "action": "Phone hangs off the table edge by a taut white cable with its plug hovering one centimetre from the wall socket. The cable twangs. The Inspector slides into frame, crouching, eyes level with the gap. She unrolls a tiny tape measure across the gap, nods once, and writes one line on her clipboard.",
+      "performance": "Deadpan gravity, as if inspecting a bridge. Movements are small, deliberate and unhurried. No glances at camera.",
+      "microexpression": "A slow single blink and a tightening at the jaw as the tape reads one centimetre. A faint eyebrow lift of professional disappointment.",
+      "dialogue": [],
+      "camera": {"shot": "Low-angle macro close-up widening to a medium close-up of the crouching Inspector", "lens": "35mm equivalent with shallow depth of field", "movement": "Locked off, with a very slow push-in of about 5 percent"},
+      "lighting": "Warm tungsten table lamp from camera left, soft cool window spill from the right, a crisp shadow line across the gap.",
+      "environment": "Cream wall, plain two-pin wall socket, wooden side table with a lamp, a small ceramic mug and a stack of two books. No readable text or logos anywhere.",
+      "sound": {"ambience": "Quiet living-room room tone with a faint fridge hum from another room", "foley": ["Cable twang", "Tape measure rasp and snap", "Pen scratch on clipboard"], "music": "none"},
+      "transition_out": "Hard cut on the pen's final tick.",
+      "props_from_frame_one": ["Phone", "White charger cable", "Wall socket", "Side table", "Table lamp", "Tape measure", "Clipboard"],
+      "cuts_inside_clip": 0
+    },
+    {
+      "scene_id": "S2",
+      "start_s": 4,
+      "end_s": 8,
+      "location": "Same side table and wall socket, same camera corner.",
+      "action": "The Inspector presses two fingers to the table edge and nudges the table exactly one centimetre toward the wall. The plug slides in and clicks, and the phone lights with a soft charging glow. She takes a rubber stamp from her pocket and stamps the clipboard report with a thud, then holds it up to the lamp.",
+      "performance": "Quiet triumph held in check. A single measured exhale, shoulders settling, the posture of a job done properly.",
+      "microexpression": "The corner of her mouth moves a fraction of a millimetre, a micro-smile, immediately suppressed.",
+      "dialogue": [],
+      "camera": {"shot": "Medium close-up two-shot of the table edge, her hands and the socket", "lens": "35mm equivalent", "movement": "Locked off, with a tiny rack of focus from the plug to the stamped report"},
+      "lighting": "Same warm tungsten lamp, now with a small cool-green glow from the phone on her cheek.",
+      "environment": "Unchanged, except the table now sits one centimetre closer to the wall and the cable hangs relaxed with a gentle loop.",
+      "sound": {"ambience": "Quiet room tone with fridge hum", "foley": ["Table leg scrape on wooden floor", "Plug click", "Soft phone charge chime", "Heavy rubber stamp thud"], "music": "none"},
+      "transition_out": "Hard cut on the stamp thud's tail.",
+      "props_from_frame_one": ["Phone", "White charger cable", "Rubber stamp", "Clipboard"],
+      "cuts_inside_clip": 0
+    },
+    {
+      "scene_id": "S3",
+      "start_s": 8,
+      "end_s": 12,
+      "location": "Same side table and wall socket, same camera corner.",
+      "action": "She plugs her own inspector's torch into the second socket slot. Its black cable is also one centimetre short and pulls taut. The table slides a centimetre back, the phone's plug pops out of the socket, and the phone swings. She ends crouched exactly as in the opening frame, eyes level with the gap, unblinking, the cable giving a small twang.",
+      "performance": "Total composure that slowly freezes into stillness. She does not react, only stares, treating her own fault as a new case.",
+      "microexpression": "Eyes widen a fraction and then narrow into a flat professional stare; one slow blink.",
+      "dialogue": [],
+      "camera": {"shot": "Medium close-up matching the S1 closing frame, easing to the S1 opening macro low angle", "lens": "35mm equivalent", "movement": "Locked off, with a slow push-in matching the opening push so the last frame approximates the first"},
+      "lighting": "Same warm tungsten lamp with the phone's glow now gone, matching the opening light.",
+      "environment": "Table back at its original distance from the wall, phone dangling off the edge by a taut cable, torch cable also taut. Same objects as the opening frame.",
+      "sound": {"ambience": "Quiet room tone with fridge hum", "foley": ["Torch cable snap taut", "Table leg scrape backward", "Plug pop", "Phone dangle swing", "Cable twang"], "music": "none"},
+      "transition_out": "Seamless loop: the final pose and twang match the first frame of S1.",
+      "props_from_frame_one": ["Phone", "White charger cable", "Black torch cable", "Inspector's torch", "Wall socket", "Side table"],
+      "cuts_inside_clip": 0
+    }
+  ],
+  "continuity": {
+    "identity_anchors": "The Inspector: a composed woman in her 40s, hair pulled into a tight low bun, round tortoiseshell glasses, a neutral unreadable expression, small precise hands.",
+    "costume": "Beige trench-style inspector's coat with a plain unbranded lanyard badge (no readable text), a pen in the breast pocket, slim dark trousers.",
+    "props": ["Phone", "White charger cable", "Black torch cable", "Inspector's torch", "Tape measure", "Clipboard", "Rubber stamp", "Wall socket", "Wooden side table", "Table lamp"],
+    "notes": "No readable brand text, labels or logos on any object. The cable gap is always one centimetre. The table must start and end in its original position so the end pose loops into the first frame. Each clip has zero internal cuts, and only hard cuts join S1 to S2 and S2 to S3. No dialogue anywhere."
+  }
+}

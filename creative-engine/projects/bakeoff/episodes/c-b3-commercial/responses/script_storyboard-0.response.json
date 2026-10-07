@@ -1,0 +1,357 @@
+{
+ "script": {
+  "title": "Cable Incident",
+  "synopsis": "In her hallway the Inspector boxes six cables in an organiser that holds six; the count reads seven, and the seventh is her own lamp lead plugged into the wall behind her.",
+  "beats": [
+   {
+    "beat": "Formal cordon and 'the box holds six'; faint lead visible behind her",
+    "function": "hook"
+   },
+   {
+    "beat": "Six cables boxed, one left on the floor",
+    "function": "setup"
+   },
+   {
+    "beat": "Recount with more ceremony, strap tugs",
+    "function": "escalation"
+   },
+   {
+    "beat": "Wide pull-back reveals taut lead to the wall",
+    "function": "turn"
+   },
+   {
+    "beat": "'Six fit. One is mine.' She unplugs herself",
+    "function": "payoff"
+   },
+   {
+    "beat": "Lid clicks shut on six; disclosure card",
+    "function": "button"
+   }
+  ],
+  "dialogue": [
+   {
+    "speaker": "Inspector",
+    "line": "Cable Incident. Six suspects. The box holds six.",
+    "delivery": "flat, measured",
+    "on_camera": true
+   },
+   {
+    "speaker": "Inspector",
+    "line": "Count: seven.",
+    "delivery": "quiet, level",
+    "on_camera": true
+   },
+   {
+    "speaker": "Inspector",
+    "line": "Recount. Seven.",
+    "delivery": "slower, formal",
+    "on_camera": true
+   },
+   {
+    "speaker": "Inspector",
+    "line": "Six fit. One is mine.",
+    "delivery": "dry, deadpan",
+    "on_camera": true
+   }
+  ],
+  "caption_text": "Paid partnership with fictional-cable-box-co. The Inspector is a fictional character and has not used this product.",
+  "cta": "",
+  "disclosure_line": "Paid partnership with fictional-cable-box-co. The Inspector is a fictional character and has not used this product."
+ },
+ "scenes": [
+  {
+   "scene_id": "S1",
+   "start_s": 0,
+   "end_s": 4,
+   "location": "Hallway with coat hooks",
+   "action": "Locked-off wide. The Inspector stands centre holding the clipboard level. She clicks the chest lamp on, sweeps its beam along the six cables in the tape cordon, then states the case. A thin lead is faintly visible from her chest strap back toward the wall socket, unremarked.",
+   "performance": "Invested task: conducts a formal site briefing, eyes tracking each cable in the beam as if reading a charge sheet.",
+   "microexpression": "Neutral, one slow blink as the beam reaches the sixth cable.",
+   "dialogue": [
+    {
+     "speaker": "Inspector",
+     "line": "Cable Incident. Six suspects. The box holds six.",
+     "delivery": "flat, measured, bureaucratic, each sentence separated by a short pause",
+     "on_camera": true
+    }
+   ],
+   "camera": {
+    "shot": "wide, eye level, slightly formal symmetrical framing",
+    "lens": "24mm-equivalent phone main camera",
+    "movement": "static, locked off",
+    "rig": "phone propped on a hallway shelf at chest height"
+   },
+   "lighting": "Key: soft daylight from a window frame-left at the hallway end; warm bounce off the oak floor; lamp beam adds a cool white highlight on the cables; soft contact shadows under the cables and the box.",
+   "environment": "Narrow modern hallway, pale grey walls, three plain coat hooks with a beige coat, light oak floor, wall socket low on the left wall; orange tape square on the floor around six cables laid in a neat row beside the open box.",
+   "sound": {
+    "ambience": "quiet flat room tone, faint fridge hum from beyond",
+    "foley": [
+     "lamp click",
+     "clipboard plastic tick",
+     "one slow boot step on wood"
+    ],
+    "music": "none",
+    "voice": "Inspector on camera, measured and dry"
+   },
+   "captions": "Paid partnership",
+   "transition_out": "cut",
+   "props_from_frame_one": [
+    "plain unbranded cable-organiser box (no text)",
+    "six loose cables (neutral colours, no logos)",
+    "safety-orange tape cordon",
+    "inspection lamp on chest strap",
+    "tiny clipboard on lanyard",
+    "lamp charging lead (seventh cable) running from chest strap to wall socket",
+    "wall socket with plain faceplate"
+   ],
+   "cuts_inside_clip": 0,
+   "generation_unit": "U1"
+  },
+  {
+   "scene_id": "S2",
+   "start_s": 4,
+   "end_s": 8,
+   "location": "Hallway with coat hooks",
+   "action": "Medium. She picks up each cable in turn, reads it a formal 'right' with a mouthed nod, drops it into the box with a clipboard tick. Cable six lands. A seventh cable end still lies on the floor. She steps back to count and the cordon tape drags a few centimetres with her.",
+   "performance": "Invested task: processes each cable like a suspect, ticking the clipboard, then tallies with a pointing finger.",
+   "microexpression": "Brow lifts a fraction on the count.",
+   "dialogue": [
+    {
+     "speaker": "Inspector",
+     "line": "Count: seven.",
+     "delivery": "quiet, level, a beat of puzzlement underneath",
+     "on_camera": true
+    }
+   ],
+   "camera": {
+    "shot": "medium, eye level",
+    "lens": "35mm-equivalent phone main camera",
+    "movement": "static with a small settle-wobble on the cut",
+    "rig": "phone propped on a hallway shelf at chest height"
+   },
+   "lighting": "Key: window light frame-left; warm oak-floor bounce; lamp spills a cool circle on the box lid; hard small contact shadow of the box on the floor.",
+   "environment": "Narrow modern hallway, pale grey walls, three plain coat hooks with a beige coat, light oak floor, wall socket low on the left wall; orange tape square on the floor around six cables laid in a neat row beside the open box.",
+   "sound": {
+    "ambience": "same room tone",
+    "foley": [
+     "cable drop thuds into plastic box x6",
+     "clipboard ticks",
+     "tape peel creak"
+    ],
+    "music": "none",
+    "voice": "Inspector on camera"
+   },
+   "captions": "",
+   "transition_out": "continuous",
+   "props_from_frame_one": [
+    "plain unbranded cable-organiser box (no text)",
+    "six loose cables (neutral colours, no logos)",
+    "safety-orange tape cordon",
+    "inspection lamp on chest strap",
+    "tiny clipboard on lanyard",
+    "lamp charging lead (seventh cable) running from chest strap to wall socket",
+    "wall socket with plain faceplate"
+   ],
+   "cuts_inside_clip": 1,
+   "generation_unit": "U1"
+  },
+  {
+   "scene_id": "S3",
+   "start_s": 8,
+   "end_s": 11,
+   "location": "Hallway with coat hooks",
+   "action": "Close on her upper body. She repeats the count with more ceremony, pointing at each cable inside the box, then the one on the floor. The lead on her chest strap tugs taut and her lamp tilts slightly as she leans.",
+   "performance": "Invested task: recounts with slower, more official gestures, committed to the procedure and not noticing the pull on her chest.",
+   "microexpression": "Eyes narrow slightly behind the glasses; the lamp bobs.",
+   "dialogue": [
+    {
+     "speaker": "Inspector",
+     "line": "Recount. Seven.",
+     "delivery": "slower, more formal, same volume",
+     "on_camera": true
+    }
+   ],
+   "camera": {
+    "shot": "medium close-up, eye level",
+    "lens": "50mm-equivalent phone telephoto",
+    "movement": "static, slight breathing drift",
+    "rig": "phone propped on a hallway shelf"
+   },
+   "lighting": "Key: window light frame-left; warm floor bounce under the chin; lamp glint on her glasses; soft shadow of the clipboard on the jacket.",
+   "environment": "Narrow modern hallway, pale grey walls, three plain coat hooks with a beige coat, light oak floor, wall socket low on the left wall; orange tape square on the floor around six cables laid in a neat row beside the open box.",
+   "sound": {
+    "ambience": "room tone, slightly tighter",
+    "foley": [
+     "finger tap on box lid",
+     "strap creak",
+     "lamp rattle"
+    ],
+    "music": "none",
+    "voice": "Inspector on camera"
+   },
+   "captions": "",
+   "transition_out": "cut",
+   "props_from_frame_one": [
+    "plain unbranded cable-organiser box (no text)",
+    "six loose cables (neutral colours, no logos)",
+    "safety-orange tape cordon",
+    "inspection lamp on chest strap",
+    "tiny clipboard on lanyard",
+    "lamp charging lead (seventh cable) running from chest strap to wall socket",
+    "wall socket with plain faceplate"
+   ],
+   "cuts_inside_clip": 0,
+   "generation_unit": "U2"
+  },
+  {
+   "scene_id": "S4",
+   "start_s": 11,
+   "end_s": 15,
+   "location": "Hallway with coat hooks",
+   "action": "Camera pulls wide. The lead is visibly taut from her chest strap across the hallway to the wall socket behind her; the cordon and cables have been dragged along it. She looks down, performs her single slow two-finger tap on the clipboard, delivers the verdict, unplugs the lead from the socket, and closes the box lid on six cables.",
+   "performance": "Invested task: issues her verdict with procedural calm, then completes the paperwork of unplugging herself.",
+   "microexpression": "Warm disappointment: a slow exhale and eyes lowered to the lead.",
+   "dialogue": [
+    {
+     "speaker": "Inspector",
+     "line": "Six fit. One is mine.",
+     "delivery": "dry, deadpan, lowered slightly at the end",
+     "on_camera": true
+    }
+   ],
+   "camera": {
+    "shot": "wide, eye level, ending on a held frame",
+    "lens": "24mm-equivalent phone main camera",
+    "movement": "smooth pull-back from medium to wide over 1.5 s, then static",
+    "rig": "phone on a slow slider along the hallway floor rail"
+   },
+   "lighting": "Key: window light frame-left; warm oak bounce; lamp beam cool on the taut lead; thin shadow line of the lead on the floor.",
+   "environment": "Narrow modern hallway, pale grey walls, three plain coat hooks with a beige coat, light oak floor, wall socket low on the left wall; orange tape square on the floor around six cables laid in a neat row beside the open box.",
+   "sound": {
+    "ambience": "room tone",
+    "foley": [
+     "two-finger clipboard tap",
+     "plug pulling from socket",
+     "box lid click"
+    ],
+    "music": "none",
+    "voice": "Inspector on camera"
+   },
+   "captions": "",
+   "transition_out": "end hold, end card with disclosure",
+   "props_from_frame_one": [
+    "plain unbranded cable-organiser box (no text)",
+    "six loose cables (neutral colours, no logos)",
+    "safety-orange tape cordon",
+    "inspection lamp on chest strap",
+    "tiny clipboard on lanyard",
+    "lamp charging lead (seventh cable) running from chest strap to wall socket",
+    "wall socket with plain faceplate"
+   ],
+   "cuts_inside_clip": 1,
+   "generation_unit": "U2"
+  }
+ ],
+ "continuity": {
+  "identity_anchors": "Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger.",
+  "costume": "Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun. (same costume throughout the episode).",
+  "props": [
+   "plain unbranded cable-organiser box (no text)",
+   "six loose cables (neutral colours, no logos)",
+   "safety-orange tape cordon",
+   "inspection lamp on chest strap",
+   "tiny clipboard on lanyard",
+   "lamp charging lead (seventh cable) running from chest strap to wall socket",
+   "wall socket with plain faceplate"
+  ],
+  "notes": "Silhouette, rule and register fixed per bible v1. Signature clipboard tap used once, in S4. The lead from chest strap to wall socket must be faintly visible in S1 and taut in S4. Box and cables carry no text or logos. Only claim: box holds up to six cables."
+ },
+ "asset_rights": [
+  {
+   "asset": "Inspector character reference",
+   "kind": "character_reference",
+   "source": "generated from bible inspector-v1",
+   "rights_status": "owned",
+   "scope": "this episode and series"
+  },
+  {
+   "asset": "Hallway location",
+   "kind": "location_still",
+   "source": "generated",
+   "rights_status": "not_needed",
+   "scope": "this episode"
+  },
+  {
+   "asset": "Generic cable-organiser box",
+   "kind": "product_image",
+   "source": "advertiser-supplied unbranded design",
+   "rights_status": "unresolved",
+   "scope": "confirm advertiser approval before release"
+  },
+  {
+   "asset": "Inspector voice",
+   "kind": "voice",
+   "source": "synthetic voice, no real person's likeness",
+   "rights_status": "unresolved",
+   "scope": "confirm voice licence before release"
+  },
+  {
+   "asset": "Music",
+   "kind": "music",
+   "source": "none",
+   "rights_status": "not_needed",
+   "scope": "no music by default"
+  }
+ ],
+ "export": {
+  "aspect_ratio": "9:16",
+  "resolution": "1080x1920",
+  "fps": 30,
+  "container": "mp4",
+  "max_duration_s": 15,
+  "edit_plan": [
+   "Generate U1 (S1-S2, 8 s, one cut at 4 s) and U2 (S3-S4, 7 s, one cut at 11 s) and join at 8 s",
+   "Burn in 'Paid partnership' caption from 0 s",
+   "Add exaggerated foley; no music",
+   "Hold final frame to 15 s"
+  ],
+  "disclosure_plan": [
+   "Turn on the platform paid-partnership label on Instagram Reels",
+   "Caption line: Paid partnership with fictional-cable-box-co. The Inspector is a fictional character and has not used this product.",
+   "On-screen 'Paid partnership' text from 0 s"
+  ]
+ },
+ "growth_hypotheses": [
+  {
+   "hypothesis": "Planting the lead in frame one rewards rewatches and raises replays and shares",
+   "metric": "replay rate and shares per reach",
+   "falsifier": "Replay rate no higher than the series baseline"
+  },
+  {
+   "hypothesis": "Stating the six-cable limit as the case rule makes the count a legible joke without product claims",
+   "metric": "3-second hold rate",
+   "falsifier": "Hold rate below baseline"
+  }
+ ],
+ "evidence": [
+  {
+   "claim": "The box holds up to six cables",
+   "kind": "fact",
+   "source": "advertiser verified_facts",
+   "confidence": "high"
+  },
+  {
+   "claim": "Total spoken words are 19, under the 25 limit",
+   "kind": "fact",
+   "source": "script dialogue count",
+   "confidence": "high"
+  },
+  {
+   "claim": "Camera-notices-first reveal drives rewatches",
+   "kind": "hypothesis",
+   "source": "bible rule, untested",
+   "confidence": "low"
+  }
+ ]
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->

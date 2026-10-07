@@ -1,0 +1,85 @@
+{
+  "adapter": "higgsfield-mcp/generate_video",
+  "verified_on": "2026-10-07",
+  "units": [
+    {
+      "generation_unit": "U1",
+      "scene_ids": [
+        "S1",
+        "S2"
+      ],
+      "model": "seedance_2_0_mini",
+      "controls": {
+        "duration": 8,
+        "aspect_ratio": "9:16",
+        "resolution": "720p",
+        "generate_audio": true
+      },
+      "prompt_text": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. Speak ONLY the quoted lines, in English, lips still when no line is spoken.\n3. Props exist from frame one and never appear, disappear or change design: grey sock, coat hook rail, clipboard on lanyard, inspection lamp, small plain cardboard box, shoe shelf, case title card overlay.\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger. Silhouette: Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun. Costume: Aubergine utility jacket with four flap pockets, bright circular inspection lamp on chest strap, tiny clipboard on lanyard, hair in tight low bun, small round glasses, dark trousers and plain flat shoes, no readable text or logos.. Register: Stillness and procedure; comedy comes from disproportion, never from mugging.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S1 (0.0-3.0s) ---\nLocation: Hallway with coat hooks, daytime. Environment: Narrow daytime hallway, a wooden rail of five plain coat hooks with unbranded coats, a low shoe shelf beneath, pale wall, oak floor.\nAction: Frame one is a single grey sock lying on the oak floor beside the foot of the coat-hook rail, with a sliver of aubergine jacket hem at the extreme top edge. Held still for 1.5 s, then a shoe and the lower edge of a clipboard enter frame-right as the camera settles.\nPerformance: Silent. The sock holds the frame alone; the arriving shoe stops precisely a hand's width from it, as if respecting a crime-scene marker. Micro-expression: None visible; face out of frame.\nCamera: tight close-up, low angle on the floor; lens feel phone main lens, 26mm equivalent; movement propped phone with one small settle-wobble, then a slow tilt up 10 degrees as the shoe arrives; rig phone propped against the skirting board\nLighting: Key: soft daylight from a window at frame-left end of the hallway; fill: pale wall bounce from the right; one colour bounce: warm oak floorboards lifting the underside of the jacket; contact shadows: soft dark under the sock, under the hook and under her shoe soles. Light must not change across the clip.\nAudio: ambience quiet daytime flat, faint distant fridge hum, muffled street outside; foley: soft fabric brush of jacket hem, single measured shoe step on oak, clipboard corner knock on lanyard clip; no music\n--- S2 (3.0-8.0s) ---\nLocation: Hallway with coat hooks, daytime. Environment: Narrow daytime hallway, a wooden rail of five plain coat hooks with unbranded coats, a low shoe shelf beneath, pale wall, oak floor.\nAction: The camera rises to a medium shot of the Inspector standing over the sock. She reads her clipboard, lifts the sock between two fingers, hangs it on the nearest coat hook, smooths it flat and turns her back to the camera to write. The grey toe of a second sock is faintly visible at the nape of her collar as she turns.\nPerformance: Invested task: log the sock into the register and restore it to its hook with exact, procedural movements; eyes go from clipboard to sock to hook, never to camera. Micro-expression: Brief tightening around the mouth as she checks the sock is aligned.\nCamera: medium shot, eye level; lens feel phone main lens, 26mm equivalent; movement gentle handheld bob with a slow push-in of about 10 cm; rig handheld phone, elbows tucked\nLighting: Key: soft daylight from a window at frame-left end of the hallway; fill: pale wall bounce from the right; one colour bounce: warm oak floorboards lifting the underside of the jacket; contact shadows: soft dark under the sock, under the hook and under her shoe soles. Light must not change across the clip.\nAudio: ambience quiet daytime flat, faint distant fridge hum, muffled street outside; foley: sock lifted with a faint fabric rasp, hook rail wooden tick as sock is hung, pen scratch on clipboard, heel turn on oak; no music\nDialogue (Inspector, on-camera): \"Case eleven. One sock. Missing from its hook.\" - measured, bureaucratic cadence, flat and quiet\nON-SCREEN TEXT: none (added in post).",
+      "medias": [
+        {
+          "value": "<media_id of approved character reference>",
+          "role": "image_references"
+        },
+        {
+          "value": "<media_id of approved location still>",
+          "role": "image_references"
+        }
+      ],
+      "manual_steps": [
+        "Upload approved reference stills via media_upload (owner action; upload requires approval).",
+        "Burn captions/on-screen text in edit.",
+        "Add licensed music in edit if any.",
+        "Assemble generation units with hard cuts in edit; verify total duration and loop.",
+        "Run get_cost:true preflight and record quote before any submit; submit only after render_approved and credit_cap."
+      ],
+      "gaps": [
+        "No fps/container control; inspect exported file.",
+        "Lip-sync and exact SFX timing are not controllable; inspect output.",
+        "Lens is prompt language only."
+      ],
+      "estimated_credits": 8,
+      "quote_source": "cost-quotes.json 2026-10-07 (8s/720p: mini 8, seedance_2_5 56); not a measured completed-output cost"
+    },
+    {
+      "generation_unit": "U2",
+      "scene_ids": [
+        "S3",
+        "S4"
+      ],
+      "model": "seedance_2_0_mini",
+      "controls": {
+        "duration": 10,
+        "aspect_ratio": "9:16",
+        "resolution": "720p",
+        "generate_audio": true
+      },
+      "prompt_text": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. Speak ONLY the quoted lines, in English, lips still when no line is spoken.\n3. Props exist from frame one and never appear, disappear or change design: grey sock, coat hook rail, clipboard on lanyard, inspection lamp, small plain cardboard box, shoe shelf, case title card overlay.\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger. Silhouette: Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun. Costume: Aubergine utility jacket with four flap pockets, bright circular inspection lamp on chest strap, tiny clipboard on lanyard, hair in tight low bun, small round glasses, dark trousers and plain flat shoes, no readable text or logos.. Register: Stillness and procedure; comedy comes from disproportion, never from mugging.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S3 (8.0-13.0s) ---\nLocation: Hallway with coat hooks, daytime. Environment: Narrow daytime hallway, a wooden rail of five plain coat hooks with unbranded coats, a low shoe shelf beneath, pale wall, oak floor.\nAction: The grey sock is back on the floor at her feet. She stares at the empty hook, then at the sock, picks it up, drops it into a small plain cardboard box on the shoe shelf, closes the flap and turns away. As she turns the camera drifts around behind her and the sock is again lying on the floor by her heel; the grey toe of a second sock is visibly clinging to the nape of her aubergine jacket.\nPerformance: Invested task: contain the suspect in the evidence box and secure the lid; she searches the hallway corners for the culprit, eyes sweeping left to right, and never checks herself. Micro-expression: Eyebrows lower one millimetre, jaw set in stern suspicion.\nCamera: medium shot, eye level, drifting to over-the-shoulder rear; lens feel phone main lens, 26mm equivalent; movement slow handheld arc of about 90 degrees from front to behind her; rig handheld phone\nLighting: Key: soft daylight from a window at frame-left end of the hallway; fill: pale wall bounce from the right; one colour bounce: warm oak floorboards lifting the underside of the jacket; contact shadows: soft dark under the sock, under the hook and under her shoe soles. Light must not change across the clip.\nAudio: ambience quiet daytime flat, faint distant fridge hum, muffled street outside; foley: cardboard flap fold, box lid pressed with a dull tap, soft sock plop on oak floor, faint static crackle near her collar; no music\nDialogue (Inspector, on-camera): \"Repeat offender. Repeat.\" - quiet, level, each word clipped\n--- S4 (13.0-18.0s) ---\nLocation: Hallway with coat hooks, daytime. Environment: Narrow daytime hallway, a wooden rail of five plain coat hooks with unbranded coats, a low shoe shelf beneath, pale wall, oak floor.\nAction: With the camera behind her, the Inspector gives one slow two-finger tap on the clipboard, then says her verdict. She reaches back, peels the sock from her collar, hangs it on the hook, steps back one pace and the sock drops free to cling to her jacket again at the nape. Final pose is her standing square to the hook, matching the opening stillness.\nPerformance: Invested task: close the case with formal finality; she squares her shoulders, delivers the verdict to the hook rather than to camera, and files the sock with great ceremony. Micro-expression: Eyes close for one long blink, then warm disappointment settles on her mouth.\nCamera: medium over-the-shoulder rear shot, then a slight push to the nape; lens feel phone main lens, 26mm equivalent; movement handheld settle with a slow 5 cm push-in on the nape; rig handheld phone\nLighting: Key: soft daylight from a window at frame-left end of the hallway; fill: pale wall bounce from the right; one colour bounce: warm oak floorboards lifting the underside of the jacket; contact shadows: soft dark under the sock, under the hook and under her shoe soles. Light must not change across the clip.\nAudio: ambience quiet daytime flat, faint distant fridge hum, muffled street outside; foley: slow two-finger tap on clipboard, static peel crackle of sock leaving fabric, hook rail tick, fabric cling snap as sock returns; no music\nDialogue (Inspector, on-camera): \"The suspect is on my back. The suspect is me.\" - measured, bureaucratic, slightly lower on the last two words\nON-SCREEN TEXT: none (added in post).",
+      "medias": [
+        {
+          "value": "<media_id of approved character reference>",
+          "role": "image_references"
+        },
+        {
+          "value": "<media_id of approved location still>",
+          "role": "image_references"
+        }
+      ],
+      "manual_steps": [
+        "Upload approved reference stills via media_upload (owner action; upload requires approval).",
+        "Burn captions/on-screen text in edit.",
+        "Add licensed music in edit if any.",
+        "Assemble generation units with hard cuts in edit; verify total duration and loop.",
+        "Run get_cost:true preflight and record quote before any submit; submit only after render_approved and credit_cap."
+      ],
+      "gaps": [
+        "No fps/container control; inspect exported file.",
+        "Lip-sync and exact SFX timing are not controllable; inspect output.",
+        "Lens is prompt language only."
+      ],
+      "estimated_credits": 8,
+      "quote_source": "cost-quotes.json 2026-10-07 (8s/720p: mini 8, seedance_2_5 56); not a measured completed-output cost"
+    }
+  ],
+  "notes": "DRY RUN. No job submitted. prompt_text is free text, the only creative payload the tool accepts; internal JSON is not a native format. Field map: scene.action->prompt_text; scene.performance->prompt_text; scene.microexpression->prompt_text; scene.camera.shot->prompt_text; scene.camera.lens->prompt_text; scene.camera.movement->prompt_text; scene.lighting->prompt_text; scene.environment->prompt_text; scene.sound.ambience->native+prompt_text; scene.sound.music->manual; scene.dialogue->prompt_text; scene.captions->manual; scene.transition_out->manual; scene.cuts_inside_clip->prompt_text; continuity.identity_anchors->native+prompt_text; duration->native; aspect_ratio->native; resolution->native; export.fps->gap; export.container->gap; disclosure->manual"
+}

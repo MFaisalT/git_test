@@ -1,0 +1,64 @@
+{
+  "hook_variants": [
+    {
+      "id": "H1",
+      "premise_id": "P1",
+      "first_frame": "Locked eye-level shot at the living room side table: a phone lies face-up, its screen blank except a small generic 'seen' tick glyph (no logo, no readable text), already ringed with a square of safety-orange tape. The Inspector sits behind it, lamp on the phone, clipboard raised.",
+      "first_line_or_action": "She presses the last strip of tape down with one finger, then says: 'Seen. Four hours ago. Case opened.'",
+      "mechanism": "visible_problem",
+      "score": 8,
+      "rationale": "A cordoned phone is legible muted in one second and the spoken 'seen, four hours' names the exact friend-offence, though it does not yet tease the self-reversal."
+    },
+    {
+      "id": "H2",
+      "premise_id": "P1",
+      "first_frame": "Tight on the Inspector's face, brows level, lamp glowing, glasses low; foreground blur of an orange-taped phone. Burned-in subtitle: 'She saw it.'",
+      "first_line_or_action": "Flat, measured: 'She saw my message. She did not reply. This is negligence.'",
+      "mechanism": "callout",
+      "score": 7,
+      "rationale": "The accusation is instantly relatable and quotable, but a face-led frame is less distinctive than a taped object and the specificity rests on the line alone."
+    },
+    {
+      "id": "H3",
+      "premise_id": "P1",
+      "first_frame": "Same locked side-table frame, but a second phone sits half out of shot at the edge of the table, face-down under a few torn strips of orange tape, while the Inspector faces the camera and the taped main phone.",
+      "first_line_or_action": "Two-finger-free, deadpan: 'Everyone who leaves a friend on seen is a suspect.' Her eyes do not move toward the second phone.",
+      "mechanism": "curiosity_gap",
+      "score": 8,
+      "rationale": "The half-hidden taped second phone plants the rule payoff for the camera to find later and rewards a rewatch, at the cost of slightly diluting the one-second read of the main problem."
+    },
+    {
+      "id": "H4",
+      "premise_id": "P4",
+      "first_frame": "Shared kitchen, eye-level: the Inspector stirs a mug with total composure, a second full mug steaming beside it, lamp on her chest. An off-camera voice is signalled only by her slow glance left.",
+      "first_line_or_action": "Off-camera voice: 'You left me on seen.' The Inspector, still stirring: 'That is not a message. That is a draft.'",
+      "mechanism": "status_contradiction",
+      "score": 7,
+      "rationale": "The instant deflection is funny and reads quickly with subtitles, but the stirring-tea frame is not obviously about a messaging problem without sound."
+    },
+    {
+      "id": "H5",
+      "premise_id": "P4",
+      "first_frame": "Kitchen counter: a neat row of five mugs with small safety-orange tape labels in a straight line, the Inspector behind them holding a clipboard, a lamp spot on the row. No phone visible.",
+      "first_line_or_action": "She taps nothing, speaks in her measured cadence: 'Five messages. Zero messages. Allow me to explain.'",
+      "mechanism": "escalating_ritual",
+      "score": 6,
+      "rationale": "The row of labelled mugs is visually striking and promises an escalating ruling ritual, but with no phone the 'seen with no reply' problem is vague for the first second."
+    },
+    {
+      "id": "H6",
+      "premise_id": "P4",
+      "first_frame": "Kitchen, the Inspector facing camera and holding two mugs, one in each hand, as if about to deliver one; her lamp is lit and her expression neutral. A pencil-thin strip of orange tape marks a line on the counter in front of her.",
+      "first_line_or_action": "Off-camera: 'You never replied to anything.' Inspector, evenly: 'Define replied.'",
+      "mechanism": "recognition",
+      "score": 7,
+      "rationale": "'Define replied' is a sharply shareable lawyering line to send to a flatmate, and the two mugs seed the reveal, but the topic anchor is verbal rather than visual."
+    }
+  ],
+  "selected": {
+    "premise_id": "P1",
+    "hook_id": "H3",
+    "rationale": "H3 keeps P1's exact 'seen with no reply' topic, shows a taped-off problem the viewer reads in one second, and quietly plants the second taped phone so the bible's rule (the camera notices before she does) pays off on the reveal and invites a rewatch. The trade-off against the runner-up H1 is a slightly less clean first-second read of the main phone in return for the planted payoff and a more shareable line aimed at 'everyone who leaves a friend on seen'; H1 is the safer fallback if testing shows the second phone clutters the frame."
+  }
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->

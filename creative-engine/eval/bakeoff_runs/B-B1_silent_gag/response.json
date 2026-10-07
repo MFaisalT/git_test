@@ -1,0 +1,216 @@
+{
+  "premises_considered": [
+    {
+      "logline": "The Inspector measures the gap between plug and socket with a tiny ruler, tapes it off as a crime scene, and fixes it by dragging the side table; then her own clipboard lanyard drags it back.",
+      "why_not": "This is the selected premise."
+    },
+    {
+      "logline": "The Inspector catalogues a drawer left open 1 cm, shuts it with ceremony, and the camera shows her pocket flaps all hanging open.",
+      "why_not": "Wrong location (needs kitchen or hallway), and the culprit reveal is a costume detail rather than a causal chain; weak loop."
+    },
+    {
+      "logline": "The Inspector investigates why the charger will not reach; she lengthens it with an extension lead which she then trips on, unplugging everything.",
+      "why_not": "Trip-and-fall is slapstick, breaks the register of stillness and procedure, and the cable length (not the 1 cm) stops being the joke."
+    },
+    {
+      "logline": "The Inspector finds the charger 1 cm short, props the table with a coaster wedge, and the wedge is her own tape-roll that she then needs back.",
+      "why_not": "The cause is a prop swap rather than her habit, and it reads as a puzzle, not a gag a stranger recognises in 1 s."
+    }
+  ],
+  "selected_premise": {
+    "logline": "The charger plug hovers exactly one centimetre short of the wall socket. The Inspector investigates with total gravity, fixes it by nudging the side table, then her own clipboard lanyard snags the table and pulls it back to the exact same gap.",
+    "audience_emotion": "Recognition and pleasure at a tiny, familiar household frustration, followed by the satisfaction of watching the fixer undo her own fix.",
+    "character_desire": "To restore order: get the plug into the socket so the phone can charge.",
+    "obstacle": "A cable one centimetre too short, tautly holding the plug in mid-air, and a heavy side table.",
+    "escalation": "Observe, measure, mark the gap with safety-orange tape, rule it a fault, then physically correct it with a careful 1 cm shove.",
+    "surprise": "The fix works and she is pleased, but her clipboard swings on its lanyard, hooks the table's drawer pull, and drags the table back as she steps away, popping the plug out again.",
+    "payoff": "The frame ends where it began: cable taut, plug floating 1 cm from the socket, orange tape mark still on the floor. The camera noticed; she did not.",
+    "why_send_it": "Everyone has a friend who solves a tiny problem and instantly recreates it with a tiny habit (dragging furniture, leaving a bag strap on something). It is the perfect 'this is you' share, and the loop makes people watch it twice to catch the snag."
+  },
+  "hook_options": [
+    {
+      "first_frame": "Macro on a charger plug hovering 1 cm from a wall socket, cable pulled bar-taut from a phone on a side table, one bright orange tape flag already stuck on the cable.",
+      "first_line_or_action": "A circular inspection lamp beam sweeps in and locks onto the gap.",
+      "mechanism": "Specific visual problem readable muted in 1 s (almost plugged in), plus procedural lamp arrival signals 'investigation' with an open loop: will it reach?",
+      "score": 9
+    },
+    {
+      "first_frame": "Inspector in aubergine jacket, centred and formal, kneeling at the side table with a ruler held against the wall.",
+      "first_line_or_action": "She taps the clipboard slowly with two fingers.",
+      "mechanism": "Character-led; the signature gesture is spent before the problem is visible, which wastes it and delays comprehension.",
+      "score": 6
+    },
+    {
+      "first_frame": "Phone on the side table at the low-battery red screen with a glowing empty-battery glyph, cable pulled tight.",
+      "first_line_or_action": "The plug dangles a hair off the socket and sways gently.",
+      "mechanism": "Stakes first, but a red battery screen is a generic image that reads as a phone ad and risks readable UI.",
+      "score": 6
+    }
+  ],
+  "hook": {
+    "first_frame": "Macro on a charger plug hovering exactly 1 cm from a wall socket, cable bar-taut to a phone on a side table, a small orange tape flag on the cable.",
+    "first_line_or_action": "A circular inspection lamp beam swings in and locks onto the 1 cm gap; a faint electrical-quiet room hum, one tiny sway of the plug.",
+    "mechanism": "The whole problem is visible in the first frame with no explanation; the lamp beam announces the Inspector and creates an open loop (will it reach?)."
+  },
+  "script": {
+    "title": "One Centimetre Short",
+    "synopsis": "A plug floats 1 cm from the socket. The Inspector investigates, marks the gap, and nudges the side table to fix it. Phone charges. She turns to leave, her clipboard lanyard hooks the drawer pull and drags the table back. The plug pops out. Same frame as the opening.",
+    "beats": [
+      {"beat": "Macro: plug hovers 1 cm from socket, cable taut, lamp beam arrives and holds on the gap.", "function": "hook"},
+      {"beat": "Pull out: Inspector, kneeling, takes a tiny ruler to the gap, nods, sticks a strip of orange tape on the floor at the table foot as a position mark.", "function": "setup"},
+      {"beat": "She slowly taps the clipboard with two fingers, writes a single tick, then braces and pushes the table exactly 1 cm to the wall; the plug seats with a heavy click and the phone lights green.", "function": "escalation"},
+      {"beat": "She rises, satisfied; the clipboard on its lanyard swings out behind her and hooks the drawer pull.", "function": "turn"},
+      {"beat": "As she steps away the table slides back 1 cm, the plug pops out and swings; she leaves frame unaware; the camera holds on the gap.", "function": "payoff"},
+      {"beat": "Hold on the floating plug and the orange tape mark, the phone screen dimming; matches frame 0 for a seamless loop.", "function": "button"}
+    ],
+    "dialogue": [],
+    "caption_text": "1 cm. Case closed.",
+    "disclosure_line": ""
+  },
+  "scenes": [
+    {
+      "scene_id": "S1",
+      "start_s": 0,
+      "end_s": 3,
+      "location": "Living room, side table and wall socket (low skirting-board corner)",
+      "action": "Macro on a white charger plug hovering 1 cm from a wall socket, cable pulled bar-taut from a phone on a small wooden side table. A small orange tape flag is stuck on the cable. A circular lamp beam sweeps in from the right and locks on the gap. The plug sways once and settles. Camera slow-pulls back to reveal the Inspector kneeling, lamp on her chest strap, looking at the gap over small round glasses.",
+      "performance": "The Inspector's goal is to confirm the fault exactly; her tactic is stillness and measured observation. She lowers her head until the lamp beam is level with the gap, holds it, and slowly lifts a tiny ruler into frame. Eye-work: eyes go to the plug, to the socket, back to the plug, never mugging.",
+      "microexpression": "Straight dark brows lower a few millimetres in concentration; a slight pursing of the lips; glasses slip a hair down the nose.",
+      "dialogue": [],
+      "camera": {
+        "shot": "Macro on the plug, pulling out to a medium-close two-subject frame, formal and slightly too centred",
+        "lens": "Phone main lens, macro-feel start moving to 26mm equivalent",
+        "movement": "Slow pull-back (about 20 cm of travel) with a gentle propped-phone settle-wobble at the end",
+        "rig": "Propped phone on a floor-level book stack, slight settle on touch"
+      },
+      "lighting": "Key: warm window light from camera-left at about 45 degrees, soft; fill: low ambient room bounce; colour bounce: aubergine from the jacket onto the white skirting and the pale cable; the inspection lamp adds a hard small circle of cool white on the plug and socket; true contact shadow of the plug on the wall plate and of the table foot on the floor.",
+      "environment": "Plain pale-grey living-room wall, white skirting board, wooden side table with one small drawer, grey carpet, a wall socket with a standard flat white plate (no logos), a phone on the table with a blank dark case. Quiet evening.",
+      "sound": {
+        "ambience": "Quiet living-room room tone, faint fridge hum from the next room",
+        "foley": [
+          "Soft tick of the cable tensing",
+          "Tiny plastic sway of the plug",
+          "Click of the inspection lamp switching on",
+          "Fabric rustle of the jacket as she lowers"
+        ],
+        "music": "none",
+        "voice": "none"
+      },
+      "transition_out": "Hard cut to a tighter medium shot (new clip) at the moment she lifts the ruler.",
+      "props_from_frame_one": [
+        "Charger cable and plug (white, no logos)",
+        "Phone on side table (dark case, screen dim)",
+        "Wooden side table with small drawer and round pull",
+        "Wall socket with plain plate",
+        "Orange tape flag on cable",
+        "Strip of orange tape roll in jacket pocket",
+        "Tiny ruler",
+        "Clipboard on lanyard",
+        "Chest-strap inspection lamp"
+      ],
+      "cuts_inside_clip": 0
+    },
+    {
+      "scene_id": "S2",
+      "start_s": 3,
+      "end_s": 8,
+      "location": "Living room, side table and wall socket",
+      "action": "Medium shot, eye-level. The Inspector holds the ruler against the gap, nods once, peels a strip of orange tape from her pocket and presses it on the carpet at the table foot as a position mark. She lifts the clipboard, gives the slow two-finger tap (the one signature gesture), makes one deliberate tick. She then sets both hands on the side table edge, braces, and shoves it exactly 1 cm toward the wall. The plug slides home with a heavy click and the phone lights with a soft green glow.",
+      "performance": "Goal: close the gap precisely. Obstacle: a heavy table and a taut cable. Tactic: measure, mark, then a single controlled shove. She does it with procedural calm; the pleasure at the click shows only in her shoulders dropping a notch and a small exhale.",
+      "microexpression": "Neutral to a faint warm satisfaction at the corner of the mouth as the phone lights; eyes flick to the screen glow and back to the plug.",
+      "dialogue": [],
+      "camera": {
+        "shot": "Medium shot, eye-level, centred and formal with side table and socket in the right third",
+        "lens": "26mm equivalent main lens",
+        "movement": "Gentle handheld bob with a small push-in toward the plug as it seats",
+        "rig": "Handheld phone, light settle-wobble"
+      },
+      "lighting": "Key: warm window light camera-left, soft; fill: low room bounce; colour bounce: aubergine from the jacket on the pale wall and skirting, safety-orange glint from the tape strip on the carpet; green glow from the phone screen lights her chin and the table top; contact shadow of the table foot sliding on the carpet and a shadow under the plug as it seats.",
+      "environment": "Same room and positions as S1. Carpet nap shows a faint trail where the table slides 1 cm.",
+      "sound": {
+        "ambience": "Quiet room tone, faint fridge hum",
+        "foley": [
+          "Sharp rip of the tape strip",
+          "Two soft taps of fingers on clipboard",
+          "Pen tick on paper",
+          "Low drag of table feet on carpet",
+          "Heavy satisfying plug click"
+        ],
+        "music": "none",
+        "voice": "none"
+      },
+      "transition_out": "Hard cut to a wide shot (new clip) on the green phone chime moment.",
+      "props_from_frame_one": [
+        "Charger cable and plug",
+        "Phone on side table",
+        "Wooden side table with small drawer and round pull",
+        "Wall socket with plain plate",
+        "Orange tape flag on cable",
+        "Orange tape roll in pocket",
+        "Tiny ruler",
+        "Clipboard on lanyard with pen on a string",
+        "Chest-strap inspection lamp"
+      ],
+      "cuts_inside_clip": 0
+    },
+    {
+      "scene_id": "S3",
+      "start_s": 8,
+      "end_s": 12,
+      "location": "Living room, side table and wall socket",
+      "action": "Wide, formal and level. The Inspector straightens, hangs the ruler in a pocket, gives a small satisfied nod, and turns to leave. Her clipboard swings out on its lanyard and hooks the drawer pull. As she steps away, the table drags back 1 cm, the plug pops from the socket and swings on the taut cable, the phone glow dies. She exits frame unaware. Camera holds on the plug floating 1 cm from the socket, orange tape mark now visible on the carpet beside the table foot, matching the opening frame.",
+      "performance": "Goal: leave with the job done. She is entirely absorbed in her exit, posture upright and procedural, never glancing back; the camera notices what she does not.",
+      "microexpression": "Calm, faintly pleased lips as she turns; no reaction because she never sees it.",
+      "dialogue": [],
+      "camera": {
+        "shot": "Wide, eye-level, symmetrical and too formal for the triviality; ends on a tightening push-in to the plug and socket",
+        "lens": "24mm equivalent main lens",
+        "movement": "Propped-phone settle-wobble, then a slow push-in on the gap in the last 2 seconds",
+        "rig": "Propped phone on the floor-level book stack, same position as S1"
+      },
+      "lighting": "Key: warm window light camera-left, soft; fill: low room bounce; colour bounce: aubergine jacket on the white skirting as she exits; the phone's green glow cuts out so the table top returns to the neutral warm light; contact shadows sharpen on the plug as it swings and settles.",
+      "environment": "Same room, same props. By the end the table is back exactly 1 cm from the wall, as in the opening frame.",
+      "sound": {
+        "ambience": "Quiet room tone, faint fridge hum",
+        "foley": [
+          "Soft clipboard knock against the drawer pull",
+          "Low drag of table feet on carpet",
+          "Plug pop as it unseats",
+          "Phone power-down chirp (non-musical, no UI)",
+          "Receding footsteps on carpet"
+        ],
+        "music": "none",
+        "voice": "none"
+      },
+      "transition_out": "Loops directly back to the S1 opening frame (plug hovering 1 cm from socket, cable taut, orange flag on cable).",
+      "props_from_frame_one": [
+        "Charger cable and plug",
+        "Phone on side table",
+        "Wooden side table with small drawer and round pull",
+        "Wall socket with plain plate",
+        "Orange tape flag on cable",
+        "Orange tape mark on carpet",
+        "Tiny ruler in pocket",
+        "Clipboard on lanyard",
+        "Chest-strap inspection lamp"
+      ],
+      "cuts_inside_clip": 0
+    }
+  ],
+  "continuity": {
+    "identity_anchors": "Oval face, straight dark brows, small round glasses slightly down the nose, hair in a tight low bun, neutral expression breaking into warm disappointment or faint satisfaction, never mugging.",
+    "costume": "Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun.",
+    "props": [
+      "White charger cable and plug (no logos)",
+      "Phone with a dark blank case",
+      "Wooden side table with one small drawer and round pull",
+      "Wall socket with plain plate",
+      "Orange tape flag on cable",
+      "Orange tape roll in jacket pocket",
+      "Tiny ruler",
+      "Clipboard on lanyard with pen on a string",
+      "Chest-strap inspection lamp"
+    ],
+    "notes": "Silent brief: no dialogue, ambience and foley only. Single location. Zero cuts inside each generated clip; the two cuts between clips are the S1-S2 and S2-S3 boundaries. The signature two-finger clipboard tap is used once, in S2. The lanyard and clipboard are the established causal object: it is on the lanyard from frame one and is the cause of the reset. The last frame (plug floating 1 cm from socket, table back at its start position) approximates the first for a clean loop. No readable brand text or UI in frame; the phone glow is a plain green light, not a screen interface."
+  }
+}

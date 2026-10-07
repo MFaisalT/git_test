@@ -1,0 +1,26 @@
+{
+  "brief_id": "B3_commercial",
+  "title": "15-second sponsored episode: a cable-management box (fictional advertiser) must be the comic mechanism",
+  "project": "bakeoff",
+  "bible_ref": "inspector-v1",
+  "format": "sponsored_episode",
+  "platform": "instagram_reels",
+  "duration_target_s": 15,
+  "language": "English, max 25 spoken words",
+  "objective": "Entertain first; the product resolves the story problem without the character claiming personal experience.",
+  "constraints": [
+    "Product: a plain cable-organiser box (generic design, no brand text in frame).",
+    "Paid-partnership disclosure must appear in the plan (platform tool + spoken or caption line).",
+    "The fictional character must not claim to have used, tested or benefited from the product.",
+    "Advertiser facts available: 'holds up to six cables', nothing else — do not invent features."
+  ],
+  "commercial": {
+    "advertiser": "fictional-cable-box-co",
+    "verified_facts": ["holds up to six cables"],
+    "forbidden_claims": ["durability", "price", "awards", "any user result"]
+  },
+  "negative_constraints": [
+    "No testimonial language.",
+    "No readable brand marks."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "brief_id": "B2_dialogue_episode",
+  "title": "20-second spoken episode: the Inspector investigates a group-chat 'seen' with no reply",
+  "project": "bakeoff",
+  "bible_ref": "inspector-v1",
+  "format": "spoken_episode",
+  "platform": "tiktok",
+  "duration_target_s": 20,
+  "language": "English (subtitle-ready; short lines)",
+  "objective": "Viewer recognises themselves or a specific friend and follows for the next investigation.",
+  "constraints": [
+    "One speaking character on screen; any second voice is off-camera.",
+    "Speech must fit timing at about 2.5 words per second.",
+    "Two locations maximum."
+  ],
+  "commercial": null,
+  "negative_constraints": [
+    "No real app logos or readable UI text.",
+    "Do not invent statistics about messaging behaviour."
+  ]
+}

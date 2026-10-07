@@ -1,0 +1,22 @@
+{
+  "brief_id": "B1_silent_gag",
+  "title": "Silent 12-second gag: the one-centimetre-short charger cable",
+  "project": "bakeoff",
+  "bible_ref": "inspector-v1",
+  "format": "silent_gag",
+  "platform": "instagram_reels",
+  "duration_target_s": 12,
+  "language": "none (visual; optional 1 caption line)",
+  "objective": "Make a stranger send it to the friend whose tiny habits cause group chaos.",
+  "constraints": [
+    "No dialogue. Ambience and foley only.",
+    "Single location: a living-room side table and wall socket.",
+    "One cut maximum inside any single generated clip.",
+    "Loop-friendly ending (last pose approximates first)."
+  ],
+  "commercial": null,
+  "negative_constraints": [
+    "Do not copy any researched creator's look, catchphrase or footage.",
+    "No readable brand text in frame."
+  ]
+}

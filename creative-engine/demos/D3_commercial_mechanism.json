@@ -1,0 +1,15 @@
+{
+  "demo_id": "D3_commercial_mechanism",
+  "format": "sponsored_episode",
+  "tags": ["sponsored_episode", "commercial", "instagram_reels"],
+  "brief_id": "demo-only-not-an-eval-brief",
+  "input": "A 15-second sponsored episode for a different show (a ceremonial fixer who performs rituals to solve tiny problems). Advertiser: a generic desk lamp. Verified fact: 'three brightness levels'. No other claims allowed.",
+  "accepted_output": {
+    "premise": "The fixer stages a sunrise ceremony to light a single lost earring under a desk; the lamp's third brightness level ends the ceremony early, and he is visibly disappointed that the problem was that easy.",
+    "disclosure_line": "Paid partnership. The Fixer is a fictional character and has not used this product.",
+    "script_excerpt": [{"speaker": "Fixer", "line": "Level three. ...Anticlimactic.", "on_camera": true}],
+    "commercial_fit_note": "Product is the comic mechanism (it ends the ritual); only the verified fact is used; the character's disappointment is the joke, not a testimonial."
+  },
+  "justification": "Accepted because the product resolves the story problem, the one verified fact is the only claim, the disclosure is in the plan and spoken/captioned, and the fictional character makes no firsthand-experience claim.",
+  "rejected": "A version with 'I've used this lamp every night for a month' was rejected as a false testimonial by a fictional character."
+}

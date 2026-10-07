@@ -1,0 +1,64 @@
+{
+  "hook_variants": [
+    {
+      "id": "H1",
+      "premise_id": "P1",
+      "first_frame": "Silent tight close shot of one grey sock lying on a hallway floor beside the foot of a coat-hook rail, daytime light; a plain white formal title card across the lower third reads 'CASE 11: THE SOCK' (no brand text); in the extreme top edge of frame a sliver of aubergine jacket hem is visible.",
+      "first_line_or_action": "No spoken setup. Held 1.5 seconds on the sock, then the Inspector's shoe and clipboard enter; her slow two-finger-ready hand lowers to the sock as the card clears. First spoken line at about 2.5s: 'Case eleven. One sock. Missing from its hook.'",
+      "mechanism": "visible_problem",
+      "score": 9,
+      "rationale": "Adapts T-20261007-05 (silent specific-frame micro-fault plus formal case card inside 2 seconds) so the problem reads muted in one second, and the aubergine hem sliver adapts T-20261007-02 to promise the camera-notices-first rule."
+    },
+    {
+      "id": "H2",
+      "premise_id": "P1",
+      "first_frame": "Medium shot, Inspector facing camera in the hallway, a grey sock plainly clinging to the back of her aubergine jacket shoulder is NOT visible; instead the sock is hanging on the coat hook beside her in sharp focus, and a caption card reads 'Repeat offender.'",
+      "first_line_or_action": "She points the inspection lamp at the hooked sock and says: 'Repeat offender. Third time this week.'",
+      "mechanism": "escalating_ritual",
+      "score": 6,
+      "rationale": "The line sets a ritual-escalation expectation and a clear object, but the frame is more staged than a close micro-fault and the 'repeat' framing is weaker muted and less specific than the case-title close shot."
+    },
+    {
+      "id": "H3",
+      "premise_id": "P1",
+      "first_frame": "Over-the-shoulder rear view of the Inspector walking down the hallway toward a lone sock on the floor ahead, the grey toe of a second sock faintly visible at the nape of her jacket collar, a case title card in the corner.",
+      "first_line_or_action": "She stops, lowers the lamp to the floor sock and says flatly, without turning: 'Someone has been here before me.'",
+      "mechanism": "status_contradiction",
+      "score": 8,
+      "rationale": "Adapts T-20261007-02 by planting the nape sock in frame one so viewers spot the culprit first and the line 'someone has been here before me' ironically promises the rule, though the nape detail is small on a phone screen and costs some first-frame legibility."
+    },
+    {
+      "id": "H4",
+      "premise_id": "P2",
+      "first_frame": "Locked mid shot of the Inspector seated on the hallway bench under the coat hooks, one hand raised to clip an invisible mic to her lapel, the clipboard on her knee, a grey sock lying on the floor at her feet.",
+      "first_line_or_action": "She adjusts the imaginary lapel mic with great ceremony, looks into camera and says: 'For the record. The sock was not here yesterday.'",
+      "mechanism": "status_contradiction",
+      "score": 8,
+      "rationale": "Adapts T-20261007-04 staging only (imaginary lapel mic, grave testimony, new wording with no meme phrase), and the muted frame already reads as mock-solemn with the sock visible at her feet, though the seated mid shot is less fresh than a close micro-fault."
+    },
+    {
+      "id": "H5",
+      "premise_id": "P2",
+      "first_frame": "Tight close shot of the Inspector's face with small round glasses slipping down the nose, mouth about to speak, hallway coat hooks soft in the background; a plain card reads 'SWORN STATEMENT'.",
+      "first_line_or_action": "She taps the lapel twice, then says in her measured cadence: 'Statement one. I have never lost a sock.'",
+      "mechanism": "curiosity_gap",
+      "score": 7,
+      "rationale": "A categorical claim ('never lost a sock') invites the viewer to wait for the contradiction and adapts T-20261007-03 formal incident language, but the face-only frame shows no sock so the problem is less legible muted."
+    },
+    {
+      "id": "H6",
+      "premise_id": "P2",
+      "first_frame": "Wide-ish locked shot of the Inspector seated on the bench, one foot in a shoe and one foot visibly bare on the hallway floor, a single grey sock lying on the bench beside her; she is composed and looking at the camera.",
+      "first_line_or_action": "Without moving, she says: 'The witness will state where the sock was last seen.' Her bare foot flexes once.",
+      "mechanism": "recognition",
+      "score": 7,
+      "rationale": "The bare foot plants the confession in frame one in the T-20261007-02 foreshadowing style and rewards rewatch, but giving the twist away this early reduces the reveal's surprise and the bare foot is easily missed on a phone."
+    }
+  ],
+  "selected": {
+    "premise_id": "P1",
+    "hook_id": "H1",
+    "rationale": "H1 is the only variant whose problem (one sock, one formal case card) is legible in the first frame with the sound off, which applies the specific-frame, silent-open mechanism from T-20261007-05, while the hem sliver quietly plants the bible rule via T-20261007-02 so the camera notices before she does. It also stays a standalone episode. The runner-up, P2's H4, has a stronger performance beat and a distinct staging from T-20261007-04, but it reuses the earlier sit-and-address layout, needs her speech to land, and gives a less immediate visual hook, so it trades first-second legibility for character voice."
+  }
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->

@@ -1,0 +1,142 @@
+{
+  "premises_considered": [
+    {"logline": "The Inspector investigates a desk-drawer cable knot and unties it with a box; the box is the tidy ending but she is merely a bystander.", "why_not": "Violates the show rule: she is not exposed as culprit, and the product is a cleanup tool rather than the comic mechanism."},
+    {"logline": "The Inspector reviews 'before and after' of a cable mess and declares the box a success.", "why_not": "Reads as testimonial and implies a user result; forbidden claims and no firsthand endorsement."},
+    {"logline": "The Inspector sweeps six suspect cables into a box that holds up to six; the box's stated limit is the lie detector: a seventh cable will not fit, and it is the one running from her own chest lamp.", "why_not": "Selected."},
+    {"logline": "The Inspector tests how many cables the box can hold by cramming extras in until it bursts.", "why_not": "Invents a durability or stress claim, which is forbidden, and turns the product into the butt of the joke."}
+  ],
+  "selected_premise": {
+    "logline": "The Inspector rounds up six suspect cables behind a side table into a six-cable box, then the lid will not close on a seventh: the charging lead of her own inspection lamp.",
+    "audience_emotion": "Smug anticipation turning into delighted 'of course it's her'.",
+    "character_desire": "To close the Cable Incident cleanly with every offending cable contained.",
+    "obstacle": "The lid will not close; one cable too many remains, and she cannot find its source.",
+    "escalation": "She tags each of six cables with safety-orange tape and counts them in; the lid still rises a centimetre, so she recounts and traces the extra lead with her lamp beam.",
+    "surprise": "The camera drifts down her jacket and follows the lead to her own chest lamp and the wall socket; she is tethered to the scene.",
+    "payoff": "The box holds the six and her own lead is the seventh offender; she names herself, unplugs her lamp and the lid closes.",
+    "why_send_it": "A clean, silent-readable gag: product limit (holds up to six) is the only fact used and it directly causes the reveal. The rule is honoured and no one claims to have used the box."
+  },
+  "hook_options": [
+    {"first_frame": "Extreme close on a knot of six cables, a bright lamp beam sweeping across it, an open empty grey box beside it.", "first_line_or_action": "Inspector, offscreen-low, flatly: 'Cable incident.' Orange tape rips.", "mechanism": "Specific visual puzzle (a knot) plus procedural voice; orange tape tear gives instant sound and colour cue.", "score": 8},
+    {"first_frame": "Inspector in aubergine jacket, formal eye-level, clipboard raised, facing a side table with one tiny knot of cables.", "first_line_or_action": "She taps nothing, just says 'Six suspects.'", "mechanism": "Disproportion: formal framing of a trivial tangle; count creates an open loop.", "score": 7},
+    {"first_frame": "Open empty box on the side table, six loose cable ends hanging over its rim, lamp beam landing on them.", "first_line_or_action": "She lays the first tag on the first cable: orange tape tick.", "mechanism": "Action-first, countdown implied by six ends and an empty box.", "score": 7}
+  ],
+  "hook": {
+    "first_frame": "Tight low-angle on six tangled cables behind a living room side table, an empty open grey cable box beside them, a bright circular lamp beam cutting across the knot.",
+    "first_line_or_action": "'Cable incident. Six suspects.' while a strip of safety-orange tape is torn off with an exaggerated rip.",
+    "mechanism": "Specific noun first (cable), a clear count to track (six), tactile tape sound; readable muted from the knot, beam and open box."
+  },
+  "script": {
+    "title": "Seventh Offender",
+    "synopsis": "The Inspector tags six suspect cables and sorts them into a cable box that holds up to six. The lid will not close. A seventh lead runs down from her own chest lamp to the wall. She names the culprit: herself.",
+    "beats": [
+      {"beat": "Lamp beam finds a knot of six cables; tape rips; she declares an incident and six suspects.", "function": "hook"},
+      {"beat": "She tags each cable with orange tape and counts them into the open box.", "function": "setup"},
+      {"beat": "Six cables are in, contained; she presses the lid but it lifts a centimetre.", "function": "escalation"},
+      {"beat": "She hunts the extra lead with her beam; the camera drifts down her jacket to her own lamp lead plugged into the wall.", "function": "turn"},
+      {"beat": "She unplugs her lamp and the lid clicks shut; she taps her clipboard and names the offender.", "function": "payoff"},
+      {"beat": "A deadpan disclosure after the verdict.", "function": "button"}
+    ],
+    "dialogue": [
+      {"speaker": "Inspector", "line": "Cable incident. Six suspects.", "delivery": "Flat, procedural, no rise at the end.", "on_camera": true},
+      {"speaker": "Inspector", "line": "One. Two. Three. Four. Five. Six.", "delivery": "Evenly spaced, one word per cable placed in the box.", "on_camera": true},
+      {"speaker": "Inspector", "line": "Six contained. One extra. Source unknown.", "delivery": "Level, a half-beat of puzzlement in the last two words.", "on_camera": true},
+      {"speaker": "Inspector", "line": "Source identified.", "delivery": "Quiet, warm disappointment after the gesture.", "on_camera": true},
+      {"speaker": "Inspector", "line": "Paid partnership.", "delivery": "Dry clerical aside, like reading a form field.", "on_camera": true}
+    ],
+    "caption_text": "Cable incident, closed. The box holds up to six cables. Paid partnership with fictional-cable-box-co. #ad",
+    "disclosure_line": "Platform paid-partnership label enabled on the post; spoken line 'Paid partnership.' in S5; caption states 'Paid partnership with fictional-cable-box-co. #ad'."
+  },
+  "scenes": [
+    {
+      "scene_id": "S1",
+      "start_s": 0,
+      "end_s": 3,
+      "location": "living room side table",
+      "action": "Lamp beam sweeps over a knot of six cables behind the side table, next to an open empty grey box. The Inspector steps into frame lower third, clipboard up, and rips a strip of safety-orange tape off a roll.",
+      "performance": "Goal: open the case. Obstacle: the knot. Tactic: officially label it. She reads the knot with level eyes and tears tape without looking at it.",
+      "microexpression": "Straight brows, neutral mouth, round glasses slightly down the nose; a tiny narrowing of the eyes at the knot.",
+      "dialogue": ["Cable incident. Six suspects."],
+      "camera": {"shot": "Low close on knot, rising to medium on the Inspector", "lens": "35mm equivalent phone main lens", "movement": "Propped phone with a settle-wobble, a slow lift as she enters", "rig": "Phone propped on the side table edge"},
+      "lighting": "Key: bright circular chest lamp, hard from camera-right-low; fill: soft window light camera-left; colour bounce: aubergine jacket on her face and warm beige wall; true contact shadows from cables on the table surface.",
+      "environment": "Tidy modern living room, pale wall socket behind the table, small wall-mounted power strip, no readable text.",
+      "sound": {"ambience": "quiet room tone, faint fridge hum from the next room", "foley": ["tape strip ripping loudly", "clipboard strap swing", "chest lamp soft click", "cable rustle as beam touches knot"], "music": "none", "voice": "Inspector, measured, short declaratives"},
+      "transition_out": "Continuous: she crouches toward the knot.",
+      "props_from_frame_one": ["six cables (white, black, grey, flat white, braided black, thin white)", "open empty grey cable-organiser box with lid, no text", "orange tape roll", "clipboard on lanyard", "chest lamp with thin orange lead tucked under jacket hem", "side table", "wall socket and power strip"],
+      "cuts_inside_clip": 0
+    },
+    {
+      "scene_id": "S2",
+      "start_s": 3,
+      "end_s": 7,
+      "location": "living room side table",
+      "action": "She tags each cable with a small orange tape flag and lays it into the box one at a time, counting; the knot loosens as the count rises.",
+      "performance": "Goal: log every suspect. Obstacle: cables slide back toward the knot. Tactic: tag, lift, place, move to the next.",
+      "microexpression": "Eyes track each cable from the knot to the box; brief satisfaction around the fourth.",
+      "dialogue": ["One. Two. Three. Four. Five. Six."],
+      "camera": {"shot": "Medium close over the box, looking down at an angle", "lens": "35mm equivalent", "movement": "Slight handheld bob following her hands", "rig": "Propped phone with settle-wobble, slow push-in"},
+      "lighting": "Key: chest lamp from above-front; fill: window left; aubergine jacket bounce on her wrist; clear contact shadows under each cable and the box.",
+      "environment": "Same table; box in the lower right; cable ends lead up to the power strip.",
+      "sound": {"ambience": "room tone", "foley": ["tape flag press", "cable slide on wood", "dull plastic thunk as each cable goes into the box", "clipboard tap on lanyard"], "music": "none", "voice": "Inspector counts, one word per placement, under 2.8 words per second"},
+      "transition_out": "Continuous: she stands, lamp beam tilting up.",
+      "props_from_frame_one": ["six cables", "open grey box", "orange tape roll", "clipboard", "chest lamp with lead", "side table", "power strip"],
+      "cuts_inside_clip": 0
+    },
+    {
+      "scene_id": "S3",
+      "start_s": 7,
+      "end_s": 10,
+      "location": "living room side table",
+      "action": "She presses the lid down over six cables; it rises a centimetre. She presses again, same result.",
+      "performance": "Goal: close the case. Obstacle: the lid rises. Tactic: pressing with two flat fingers, more slowly each time.",
+      "microexpression": "Brows draw together a millimetre; glasses slip a little lower.",
+      "dialogue": ["Six contained. One extra. Source unknown."],
+      "camera": {"shot": "Medium, eye-level, formal", "lens": "35mm equivalent", "movement": "Settle-wobble, then a slow downward drift toward the base of her jacket", "rig": "Propped phone, no cut"},
+      "lighting": "Key: chest lamp front; window fill; aubergine bounce on the box lid; contact shadow of the lid gap visible.",
+      "environment": "Unchanged table; box now holds six cables and the knot is gone.",
+      "sound": {"ambience": "room tone", "foley": ["lid press", "plastic lid creak as it lifts", "finger tap on lid", "lanyard swing"], "music": "none", "voice": "Inspector, level, a half-beat pause before 'Source unknown'"},
+      "transition_out": "Continuous: she bends to trace the extra cable with her beam.",
+      "props_from_frame_one": ["six cables now in box", "grey box with lid", "orange tape roll", "clipboard", "chest lamp with lead", "side table", "power strip"],
+      "cuts_inside_clip": 0
+    },
+    {
+      "scene_id": "S4",
+      "start_s": 10,
+      "end_s": 13,
+      "location": "living room side table",
+      "action": "She sweeps her beam along the floor to find the extra lead; the camera drifts down her jacket, revealing the orange lead running from her own chest lamp, down her hem to the wall socket. She keeps tracing, unaware, then freezes.",
+      "performance": "Goal: find the seventh cable. Obstacle: it keeps leading back to her. Tactic: follow the beam along the lead. The camera notices first; she notices last.",
+      "microexpression": "Eyes follow the beam down, stop at her own jacket; brows lower in slow dawning; no mugging.",
+      "dialogue": [],
+      "camera": {"shot": "Medium to waist-height tilt-down", "lens": "35mm equivalent", "movement": "Slow tilt-down with handheld bob", "rig": "Phone propped then drifting on a gentle wobble"},
+      "lighting": "Key: chest lamp raking across the lead; window fill; aubergine bounce and warm beige floor bounce; orange lead shows contact shadow on the floorboards.",
+      "environment": "Floor and wall socket visible; her lamp lead is plugged into the same power strip.",
+      "sound": {"ambience": "room tone", "foley": ["slow footsteps", "lead drag on floorboards", "plug tick in the socket", "clipboard swing"], "music": "none", "voice": "none; silent beat"},
+      "transition_out": "Continuous: she lifts her gaze and taps her clipboard.",
+      "props_from_frame_one": ["six cables in box", "grey box", "orange tape roll", "clipboard", "chest lamp with orange lead plugged into power strip", "side table", "power strip"],
+      "cuts_inside_clip": 0
+    },
+    {
+      "scene_id": "S5",
+      "start_s": 13,
+      "end_s": 15,
+      "location": "living room side table",
+      "action": "She performs the signature slow two-finger tap on the clipboard, pulls the plug from her own lamp and the lid clicks shut.",
+      "performance": "Goal: issue a verdict. Obstacle: she is the offender. Tactic: procedure. One slow tap, then she unplugs. The tap is the signature gesture, used only here.",
+      "microexpression": "Warm disappointment: eyes soften, small downward corner of the mouth, no anger.",
+      "dialogue": ["Source identified.", "Paid partnership."],
+      "camera": {"shot": "Medium, eye-level, formal", "lens": "35mm equivalent", "movement": "Settle-wobble to rest", "rig": "Propped phone"},
+      "lighting": "Key: chest lamp front; window fill; aubergine bounce; the plug leaves a soft shadow on the wall.",
+      "environment": "Closed box on the table, tidy; the Inspector standing, plug in her hand.",
+      "sound": {"ambience": "room tone", "foley": ["slow two-finger clipboard tap", "plug pulled from socket", "lid click", "chest lamp dims with soft click"], "music": "none", "voice": "Inspector, quiet, first line then a beat, then the disclosure line as a dry aside"},
+      "transition_out": "End of clip; hold on a closed box and the Inspector's neutral face for the final beat.",
+      "props_from_frame_one": ["grey box (now closed)", "orange tape roll", "clipboard", "chest lamp with lead", "side table", "power strip"],
+      "cuts_inside_clip": 0
+    }
+  ],
+  "continuity": {
+    "identity_anchors": "Oval face, straight dark brows, small round glasses slightly down the nose, hair in a tight low bun, neutral expression that breaks into warm disappointment.",
+    "costume": "Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard.",
+    "props": ["six cables (distinct colours, no brand text)", "generic grey cable-organiser box with lid, no text", "orange tape roll and tape flags", "clipboard on lanyard", "chest lamp with thin orange lead", "side table", "wall socket and power strip"],
+    "notes": "One generated 15 s clip, zero hard cuts. Product facts used: holds up to six cables only. The Inspector never claims to have used or benefited from the product; she only sorts cables she is investigating, and her own lead is the culprit. No durability, price, award or result claims. The box shows no readable marks. Disclosure: platform paid-partnership tool on, spoken line in S5, caption line with #ad. Spoken word count: 4 + 6 + 6 + 2 + 2 = 20, under the 25 cap. Captions added in post. Signature gesture used once, in S5."
+  }
+}

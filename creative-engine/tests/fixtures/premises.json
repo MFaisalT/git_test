@@ -1,0 +1,11 @@
+{
+  "premises": [
+    {"id": "P1", "logline": "FIXTURE: the inspector cordons off a side table because a charger cable is one centimetre short, then plugs her lamp into the wrong socket.", "audience_emotion": "recognition", "character_desire": "restore order", "obstacle": "the cable physics", "escalation": "tape, cones, clipboard", "surprise": "her own lamp cable is shorter", "payoff": "she is the offender; camera sees first", "structure": "procedure then self-own", "why_send_it": "to the friend who leaves cables short", "commercial_fit": "cable accessories", "rejected_because": ""},
+    {"id": "P2", "logline": "FIXTURE alt 2", "audience_emotion": "x", "character_desire": "x", "obstacle": "x", "escalation": "x", "surprise": "x", "payoff": "x", "structure": "x", "why_send_it": "x", "rejected_because": "weaker payoff"},
+    {"id": "P3", "logline": "FIXTURE alt 3", "audience_emotion": "x", "character_desire": "x", "obstacle": "x", "escalation": "x", "surprise": "x", "payoff": "x", "structure": "x", "why_send_it": "x", "rejected_because": "needs dialogue"},
+    {"id": "P4", "logline": "FIXTURE alt 4", "audience_emotion": "x", "character_desire": "x", "obstacle": "x", "escalation": "x", "surprise": "x", "payoff": "x", "structure": "x", "why_send_it": "x", "rejected_because": "two locations"},
+    {"id": "P5", "logline": "FIXTURE alt 5", "audience_emotion": "x", "character_desire": "x", "obstacle": "x", "escalation": "x", "surprise": "x", "payoff": "x", "structure": "x", "why_send_it": "x", "rejected_because": "hand physics risk"}
+  ],
+  "ranking": ["P1", "P2", "P3", "P4", "P5"],
+  "ranking_rationale": "fixture"
+}

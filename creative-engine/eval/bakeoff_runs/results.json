@@ -1,0 +1,410 @@
+{
+  "per_brief": {
+    "B1_silent_gag": {
+      "mapping": {
+        "X": "C",
+        "Y": "B",
+        "Z": "A"
+      },
+      "ranking_by_arch": [
+        "C",
+        "B",
+        "A"
+      ],
+      "anti_template": {
+        "any_two_share_skeleton": true,
+        "evidence": "Y and Z share the same skeleton (measure the gap, nudge the side table exactly 1 cm to fix it, then an object of hers drags the table back and pops the plug out), and only the trigger differs: lanyard snag versus torch cable."
+      },
+      "notes": "X is the only plan whose fault comes from a planted character habit visible in frame one, which fits the bible rule best, though its single 12-second generation unit is risky. Y has the strongest hook but shares a table-drag skeleton with Z, and Z also breaks the bible's fixed silhouette.",
+      "plans": {
+        "C": {
+          "scores": {
+            "originality": 4,
+            "hook": 4,
+            "coherence": 4,
+            "identity": 5,
+            "audiovisual": 5,
+            "feasibility": 3,
+            "grounding": 4,
+            "commercial_fit": 3,
+            "weighted_total": 4.03
+          },
+          "weighted_total_recomputed": 4.03,
+          "thresholds": {
+            "character_intent": true,
+            "premise_specific_payoff": true,
+            "complete_direction": true,
+            "commercial_fit": true
+          },
+          "evidence": {
+            "originality": "The culprit is her own tidy-wrapping habit (a cable tie she put on, matched to the spare on her lanyard), so the payoff is a character trait, not a gadget, and she re-commits it compulsively.",
+            "hook": "Frame one shows the 1 cm gap and plants the guilty tie dead centre, so the problem is visible at once, though a medium locked-off shot reads less punchy than a macro.",
+            "coherence": "Plant (tie in frame one), procedure, discovery, fix and re-offence connect causally, though it is a stretch that one cinched tie eats exactly the missing centimetre and re-tying pulls the seated plug out.",
+            "identity": "Costume, glasses, warm disappointment, the rationed two-finger tap in S2 and the rule (she is the culprit, camera knows from frame one) all match the bible.",
+            "audiovisual": "Every scene gives shot, lens, rig, motivated lighting with contact shadows, ambience, a specific foley list and captions, with no gaps.",
+            "feasibility": "One 12-second continuous generation unit has to carry measuring, taping, crouching, snipping, re-tying and a matched end pose, which is a lot of fine hand action for one AI clip.",
+            "grounding": "It keeps to every brief constraint (no dialogue, single location, zero cuts, loop, no readable text), and the why_send_it is tied to a concrete group-chat behaviour.",
+            "commercial_fit": "No product category is mentioned; cable organisers would fit later without forcing, so it gets the default 3."
+          }
+        },
+        "B": {
+          "scores": {
+            "originality": 4,
+            "hook": 5,
+            "coherence": 3,
+            "identity": 4,
+            "audiovisual": 5,
+            "feasibility": 3,
+            "grounding": 4,
+            "commercial_fit": 3,
+            "weighted_total": 3.93
+          },
+          "weighted_total_recomputed": 3.93,
+          "thresholds": {
+            "character_intent": true,
+            "premise_specific_payoff": true,
+            "complete_direction": true,
+            "commercial_fit": true
+          },
+          "evidence": {
+            "originality": "A clipboard lanyard snagging the drawer pull and dragging the table back is a fresh, physical, bible-tied way for her to undo her own fix.",
+            "hook": "It opens on a macro of the plug hovering 1 cm from the socket with the inspection-lamp beam locking onto the gap, which states the whole problem in one image.",
+            "coherence": "The causal chain is clear, but a plug 'hovering' mid-air on a taut cable, a lanyard dragging a heavy table, and an orange flag already on the cable before she arrives all strain the logic.",
+            "identity": "It fits the bible on costume, the single clipboard tap and 'the camera noticed; she did not', but the S2 handheld bob weakens the too-formal visual language.",
+            "audiovisual": "It gives detailed lens, rig, colour-bounce lighting, contact shadows, and foley per beat, plus a clean description of the loop transition.",
+            "feasibility": "The macro pull-back plus the precise lanyard-hook-drags-table interaction is hard to generate reliably, though the three short clips help.",
+            "grounding": "It respects the silent, single-location, cut and no-text constraints and has a plausible share rationale, but leaves the disclosure line empty.",
+            "commercial_fit": "No product category is mentioned, so it gets the default 3."
+          }
+        },
+        "A": {
+          "scores": {
+            "originality": 3,
+            "hook": 4,
+            "coherence": 2,
+            "identity": 1,
+            "audiovisual": 3,
+            "feasibility": 3,
+            "grounding": 2,
+            "commercial_fit": 3,
+            "weighted_total": 2.72
+          },
+          "weighted_total_recomputed": 2.72,
+          "thresholds": {
+            "character_intent": false,
+            "premise_specific_payoff": true,
+            "complete_direction": false,
+            "commercial_fit": true
+          },
+          "evidence": {
+            "originality": "Committing the same fault with a second short cable is a direct but predictable mirror of the setup.",
+            "hook": "A low-angle macro of a dangling phone on a taut cable with a cable twang is a strong visible-problem opener.",
+            "coherence": "It never explains how plugging a torch into the socket drags the table away from the wall, and the premise block leaves out desire, obstacle and escalation.",
+            "identity": "A beige trench coat, tortoiseshell glasses and no aubergine jacket or chest lamp contradict the fixed bible silhouette, and the signature clipboard tap is missing.",
+            "audiovisual": "Shots, lighting and foley are given, but there is no rig, no voice field, no captions per scene, and the props lists are thin.",
+            "feasibility": "Three locked-off 4-second clips are simple to shoot, but the unclear table-drag mechanics would be hard to stage convincingly.",
+            "grounding": "It meets the brief's format constraints but drifts from the bible costume, and it has no share rationale tied to the objective.",
+            "commercial_fit": "No product category is mentioned, so it gets the default 3."
+          }
+        }
+      }
+    },
+    "B2_dialogue_episode": {
+      "mapping": {
+        "X": "C",
+        "Y": "B",
+        "Z": "A"
+      },
+      "ranking_by_arch": [
+        "B",
+        "C",
+        "A"
+      ],
+      "anti_template": {
+        "any_two_share_skeleton": false,
+        "evidence": "X and Y both open on orange tape sealing a phone at the side table, which the bible invites, but X reveals through an off-camera friend plus a planted second phone in one take while Y reveals through a voice note and a sticker after a location change; Z uses a different study/balcony structure."
+      },
+      "notes": "Y is the most shootable plan, with a specific hook, a clean camera-first reveal and a follow-on case tease, while X is richly directed but has muddier two-phone logic and a risky single-take generation. Z largely abandons the bible's costume, gesture and register, and its payoff undercuts the culprit rule.",
+      "plans": {
+        "C": {
+          "scores": {
+            "originality": 4,
+            "hook": 3,
+            "coherence": 3,
+            "identity": 5,
+            "audiovisual": 5,
+            "feasibility": 3,
+            "grounding": 4,
+            "commercial_fit": 3,
+            "weighted_total": 3.73
+          },
+          "weighted_total_recomputed": 3.73,
+          "thresholds": {
+            "character_intent": true,
+            "premise_specific_payoff": true,
+            "complete_direction": true,
+            "commercial_fit": true
+          },
+          "evidence": {
+            "originality": "Taping off the whole table as findings escalate from delay to dereliction, with the friend herself as the off-camera voice, is a fresh, disproportionate staging of a 'seen'.",
+            "hook": "The half-hidden taped second phone is a good visual plant, but the opening line 'Everyone who leaves a friend on seen is a suspect' is a generic statement rather than a specific case.",
+            "coherence": "The two-phone logic is muddy: it is unclear whose 'seen' the main phone shows versus the second phone, and 'Inconclusive' as the verdict softens the escalation it just built.",
+            "identity": "Uses every bible anchor (aubergine jacket, chest lamp, clipboard, low bun, glasses), keeps the single two-finger tap in S4, and the camera finds the second phone before she does.",
+            "audiovisual": "Every scene specifies shot, lens, rig, lighting with contact shadows, layered foley, captions and continuity props, which is shoot-ready direction.",
+            "feasibility": "One unbroken 20 s generated take with a slider move ending on a glowing phone under tape is ambitious for AI video and fragile in continuity.",
+            "grounding": "Respects one location, off-camera second voice, about 35 words and no statistics, though a 'tall stack of grey bubbles with tick glyphs' edges toward UI imagery.",
+            "commercial_fit": "No product category is mentioned, so it scores the default."
+          }
+        },
+        "B": {
+          "scores": {
+            "originality": 4,
+            "hook": 4,
+            "coherence": 4,
+            "identity": 4,
+            "audiovisual": 5,
+            "feasibility": 4,
+            "grounding": 4,
+            "commercial_fit": 3,
+            "weighted_total": 4.03
+          },
+          "weighted_total_recomputed": 4.03,
+          "thresholds": {
+            "character_intent": true,
+            "premise_specific_payoff": true,
+            "complete_direction": true,
+            "commercial_fit": true
+          },
+          "evidence": {
+            "originality": "The exhibit's case sticker turning out to be her own aubergine sticker is a clean, character-specific reveal, though taping a phone as evidence is an expected opening.",
+            "hook": "Tape tearing on 'Seen. Four hours ago. No reply.' at 0.4 s gives a specific, legible open loop that works muted and spoken.",
+            "coherence": "Escalation from 'A person did this' to 'Unforgivable' pays off cleanly into 'I'll reply tomorrow', though the reader's own phone displaying a 'seen' tick is slightly illogical.",
+            "identity": "Core anchors, measured register and camera-notices-first rule are honored, but added gloves and 'taps her clipboard twice' with two-tap foley blur the once-only slow tap.",
+            "audiovisual": "Timed dialogue windows, performance tasks/obstacles, motivated lamp keys, aubergine bounce, per-scene foley and a hallway hard cut give complete direction.",
+            "feasibility": "Two clips with a cut, a simple handheld drift onto a plain sticker and about 33 words are achievable with current generation tools.",
+            "grounding": "Uses two bible locations, an off-camera voice note from the phone speaker, no logos, no stats, and a textless sticker, all within constraints.",
+            "commercial_fit": "No product category is mentioned, so it scores the default."
+          }
+        },
+        "A": {
+          "scores": {
+            "originality": 2,
+            "hook": 3,
+            "coherence": 2,
+            "identity": 1,
+            "audiovisual": 3,
+            "feasibility": 4,
+            "grounding": 2,
+            "commercial_fit": 3,
+            "weighted_total": 2.52
+          },
+          "weighted_total_recomputed": 2.52,
+          "thresholds": {
+            "character_intent": false,
+            "premise_specific_payoff": false,
+            "complete_direction": false,
+            "commercial_fit": true
+          },
+          "evidence": {
+            "originality": "Sister-left-on-seen and 'I was drafting' is the most obvious version of the premise, with stock detective props (corkboard, red string, desk bell).",
+            "hook": "'Case file: the Seen.' with a phone held as evidence is clear but generic and lacks a visual disproportion beat.",
+            "coherence": "The payoff has her start replying, which undoes rather than commits the fault, so the bible rule's exposure lands weakly.",
+            "identity": "Replaces the aubergine jacket, chest lamp and clipboard with a charcoal blazer and tie, omits the signature tap, and ends on a direct-to-lens smile that drifts toward mugging.",
+            "audiovisual": "Shots and foley are listed, but there are no voice deliveries, no rig, 50mm lenses against the phone-look language, and thin lighting notes.",
+            "feasibility": "Short separate shots in a study and balcony with simple actions are easy to generate.",
+            "grounding": "Brief constraints are met (one on-screen speaker, two locations, about 46 words), but the bible's silhouette, locations and visual language are largely ignored.",
+            "commercial_fit": "No product category is mentioned, so it scores the default."
+          }
+        }
+      }
+    },
+    "B3_commercial": {
+      "mapping": {
+        "X": "B",
+        "Y": "A",
+        "Z": "C"
+      },
+      "ranking_by_arch": [
+        "B",
+        "C",
+        "A"
+      ],
+      "anti_template": {
+        "any_two_share_skeleton": true,
+        "evidence": "X and Z share almost the same skeleton: six cables go into a six-capacity box, a seventh turns out to be her own chest-lamp charging lead plugged into the wall, she does a two-finger tap, unplugs, and the lid closes. Y uses the same 'seventh cable is her own charger' turn but resolves it with a trip."
+      },
+      "notes": "X is the most complete and shootable plan, with full three-part disclosure and the product limit causing the reveal; Z is nearly as strong but omits the platform tool and shares X's skeleton. Y breaks the bible silhouette (bob, trench coat, torch) and leaves the product off to the side of the joke.",
+      "plans": {
+        "B": {
+          "scores": {
+            "originality": 4,
+            "hook": 4,
+            "coherence": 4,
+            "identity": 5,
+            "audiovisual": 5,
+            "feasibility": 4,
+            "grounding": 5,
+            "commercial_fit": 5,
+            "weighted_total": 4.45
+          },
+          "weighted_total_recomputed": 4.45,
+          "thresholds": {
+            "character_intent": true,
+            "premise_specific_payoff": true,
+            "complete_direction": true,
+            "commercial_fit": true
+          },
+          "evidence": {
+            "originality": "Making the box's six-cable limit expose the Inspector's own lamp lead as the 'seventh offender' is a specific, product-driven twist rather than a generic tidy-up gag.",
+            "hook": "A tight low-angle on the knot, lamp beam and open box, with a loud tape rip and 'Cable incident. Six suspects.', gives a concrete noun and count that can be followed with sound off.",
+            "coherence": "The beats build cleanly from count to lid failure to trace to reveal, but the plan never explains why her lamp lead, which is not in the box, stops the lid closing, so the unplug-then-click payoff skips a causal step.",
+            "identity": "Aubergine jacket, chest lamp, clipboard lanyard, low bun, glasses and warm disappointment all match the bible, and the two-finger tap is used once in S5.",
+            "audiovisual": "Every scene sets out goal, obstacle and tactic, the lens and rig, keyed lighting with bounce and contact shadows, layered foley, and props carried from frame one.",
+            "feasibility": "One 15 s take with no cuts and simple tabletop props is shootable, though a single generated take with a tilt-down reveal and a plug pull is demanding to keep consistent.",
+            "grounding": "It uses only the 'holds up to six cables' fact, shows no brand marks, comes to 20 spoken words, and uses a recurring location.",
+            "commercial_fit": "The box's capacity drives the plot and closes the story, the character makes no use claim, and disclosure is complete: platform label, a spoken 'Paid partnership.' and #ad in the caption."
+          }
+        },
+        "A": {
+          "scores": {
+            "originality": 3,
+            "hook": 3,
+            "coherence": 3,
+            "identity": 1,
+            "audiovisual": 3,
+            "feasibility": 3,
+            "grounding": 3,
+            "commercial_fit": 3,
+            "weighted_total": 2.8
+          },
+          "weighted_total_recomputed": 2.8,
+          "thresholds": {
+            "character_intent": false,
+            "premise_specific_payoff": true,
+            "complete_direction": false,
+            "commercial_fit": true
+          },
+          "evidence": {
+            "originality": "A seventh cable from her own pocket tripping her is a familiar slapstick turn, and the box's capacity is not what causes it.",
+            "hook": "An extreme close-up of the knot with a torch and 'Structural failure' is clear, but it looks like generic dark under-furniture footage with no tie to the show.",
+            "coherence": "The seventh cable wrapping her ankle from a coat pocket is physically contrived and has nothing to do with the box, so setup and payoff are only loosely joined.",
+            "identity": "It swaps in a severe bob, trench coat, torch and gloves for the bible silhouette (the bob is on the do-not list) and drops the clipboard-tap signature gesture.",
+            "audiovisual": "Scenes give shot, lens, lighting and foley, but there is no rig, performance direction is thin, and premise fields such as obstacle and escalation are missing.",
+            "feasibility": "A slow stiff fall to the floor with an ankle snag over four cuts is achievable but is hard to generate cleanly and risks reading as mugging.",
+            "grounding": "Product facts and the 15-word count are compliant, but the TV-console location and costume ignore the bible's recurring locations and silhouette.",
+            "commercial_fit": "Disclosure through the platform label and caption is compliant and 'Finding: holds up to six cables' is accurate, but the box only sits beside the joke and is not the comic mechanism."
+          }
+        },
+        "C": {
+          "scores": {
+            "originality": 4,
+            "hook": 4,
+            "coherence": 4,
+            "identity": 5,
+            "audiovisual": 4,
+            "feasibility": 4,
+            "grounding": 5,
+            "commercial_fit": 4,
+            "weighted_total": 4.18
+          },
+          "weighted_total_recomputed": 4.18,
+          "thresholds": {
+            "character_intent": true,
+            "premise_specific_payoff": true,
+            "complete_direction": true,
+            "commercial_fit": false
+          },
+          "evidence": {
+            "originality": "The police line-up framing, with cables 'read their rights' inside an orange-tape cordon in the hallway, gives fresh texture to the seventh-cable-is-hers reveal.",
+            "hook": "The first frame plants her lead visibly to the wall and the opening line states 'The box holds six', a strong setup, though a wide locked-off frame is less arresting than a tight opener.",
+            "coherence": "Count, recount, strap tug, then a pull-wide on the taut lead follows causally, and the lead is planted in frame one so the camera notices before she does.",
+            "identity": "Bible costume and anchors are exact, the hallway is a recurring location, and the single two-finger tap lands on the verdict.",
+            "audiovisual": "Lens, rig, lighting, foley and props are specified per scene and units are grouped for generation, but environment and prop blocks are repeated verbatim with little per-beat variation.",
+            "feasibility": "Two generation units, propped-phone setups and one slider pull-back are realistic, and the dragged cordon is a modest practical gag.",
+            "grounding": "Only the six-cable fact is used, there are no marks, it comes to 17 spoken words, and the caption adds an explicit line that the fictional character has not used the product.",
+            "commercial_fit": "Capacity drives the count gag and the box closes the story, and caption plus on-screen disclosure are present, but the plan never says to enable the platform paid-partnership tool, which the brief requires."
+          }
+        }
+      }
+    }
+  },
+  "mean_by_arch": {
+    "A": 2.68,
+    "B": 4.137,
+    "C": 3.98
+  },
+  "structural": [
+    {
+      "brief": "B1_silent_gag",
+      "arch": "A",
+      "scenes": 3,
+      "errors": 0,
+      "codes": []
+    },
+    {
+      "brief": "B1_silent_gag",
+      "arch": "B",
+      "scenes": 3,
+      "errors": 0,
+      "codes": []
+    },
+    {
+      "brief": "B1_silent_gag",
+      "arch": "C",
+      "scenes": 4,
+      "errors": 0,
+      "codes": []
+    },
+    {
+      "brief": "B2_dialogue_episode",
+      "arch": "A",
+      "scenes": 4,
+      "errors": 10,
+      "codes": [
+        "DIALOGUE_SHAPE"
+      ]
+    },
+    {
+      "brief": "B2_dialogue_episode",
+      "arch": "B",
+      "scenes": 3,
+      "errors": 12,
+      "codes": [
+        "DIALOGUE_SHAPE"
+      ]
+    },
+    {
+      "brief": "B2_dialogue_episode",
+      "arch": "C",
+      "scenes": 5,
+      "errors": 0,
+      "codes": []
+    },
+    {
+      "brief": "B3_commercial",
+      "arch": "A",
+      "scenes": 3,
+      "errors": 7,
+      "codes": [
+        "DIALOGUE_SHAPE",
+        "TOO_MANY_CUTS"
+      ]
+    },
+    {
+      "brief": "B3_commercial",
+      "arch": "B",
+      "scenes": 5,
+      "errors": 10,
+      "codes": [
+        "DIALOGUE_SHAPE"
+      ]
+    },
+    {
+      "brief": "B3_commercial",
+      "arch": "C",
+      "scenes": 4,
+      "errors": 0,
+      "codes": []
+    }
+  ]
+}

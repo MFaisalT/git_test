@@ -1,0 +1,22 @@
+{
+  "brief_id": "B4_trend_aware",
+  "title": "Trend-aware 18-second episode: the Inspector opens a case on a single sock that keeps reappearing in the hallway; use the current trend radar to choose format and hook",
+  "project": "acceptance",
+  "bible_ref": "inspector-v1",
+  "format": "spoken_episode",
+  "platform": "youtube_shorts",
+  "duration_target_s": 18,
+  "language": "English, short lines",
+  "objective": "Demonstrate that fresh trend entries change format/hook choices (cite trend_id) while the identity and rule stay fixed; adapt mechanisms, never copy protected assets.",
+  "constraints": [
+    "Location: hallway with coat hooks, daytime.",
+    "One on-camera speaker; no off-camera voices.",
+    "No cables, chargers, sockets, tape or cones (used in earlier episodes).",
+    "If a serialised/episodic mechanism is adopted from the radar, the episode must still stand alone."
+  ],
+  "commercial": null,
+  "negative_constraints": [
+    "Do not copy any researched creator's look, catchphrase or footage.",
+    "No readable brand text in frame."
+  ]
+}

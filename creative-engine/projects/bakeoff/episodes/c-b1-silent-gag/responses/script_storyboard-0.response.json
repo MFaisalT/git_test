@@ -1,0 +1,149 @@
+{
+  "script": {
+    "title": "One Centimetre Short",
+    "synopsis": "In a single locked-off take, the Inspector measures, tags and condemns a phone charger cable that stops one centimetre short of the wall socket, while a neat white cable tie she wrapped herself sits in plain view mid-cable. She finally runs her fingers along the cable, finds the tie, matches it to the spare on her lanyard, cuts it, and the phone plugs in. Then she compulsively wraps a fresh tie round the loose cable, and the cable is short again as she resumes the opening pose.",
+    "beats": [
+      {"beat": "Frame one: the Inspector holds the plug a visible sliver from the socket with the white cable tie cinched dead centre on the cable; she pushes, the cable goes taut and the tie quivers.", "function": "hook"},
+      {"beat": "She lays the cable along the table, measures it with a tape, and reads the number with grave composure; the tie sits centre frame throughout.", "function": "setup"},
+      {"beat": "She wraps a strip of safety-orange tape round the cable end as an evidence tag, retries from a crouch, and each failed pull tugs the cable and shakes the tie.", "function": "escalation"},
+      {"beat": "She runs two fingers along the cable, stops at the tie, glances at the matching spare on her lanyard, and her face settles into warm disappointment.", "function": "turn"},
+      {"beat": "She cuts the tie, the cable reaches, the plug seats with a satisfied click; then she produces a fresh tie from a flap pocket and cinches it tight again.", "function": "payoff"},
+      {"beat": "She steps back into the opening pose holding the plug one centimetre short of the socket, tie dead centre. Loop.", "function": "button"}
+    ],
+    "dialogue": [],
+    "caption_text": "Case closed. (Again.)",
+    "cta": "Send it to the friend who ties everything up too tight.",
+    "disclosure_line": "AI-generated video; fictional character; no product endorsement."
+  },
+  "scenes": [
+    {
+      "scene_id": "S1",
+      "start_s": 0,
+      "end_s": 3,
+      "location": "Living-room side table and wall socket, a modern lived-in living room with a skirting-board socket just above table height.",
+      "action": "The Inspector stands square to the side table holding the phone in her left hand and the charger plug in her right, plug raised beside the wall socket with a clear sliver of air between them. A neat white cable tie is cinched round the middle of the cable, dead centre of frame. She pushes the plug toward the socket, the cable goes taut and stops, the plug stays one centimetre short, and the tied bunch in the middle quivers.",
+      "performance": "She carries out a formal alignment procedure: eyes locked on the gap, shoulders square, pushing with small precise forward pulses as if testing a load-bearing joint.",
+      "microexpression": "Straight dark brows lower a fraction and her mouth tightens one millimetre when the cable stops taut.",
+      "dialogue": [],
+      "camera": {"shot": "medium shot, eye level, slightly too formal and centred", "lens": "26mm-equivalent phone main camera", "movement": "locked off, no movement", "rig": "phone propped on a stack of books on the sofa arm, 2 m from the table"},
+      "lighting": "Soft key from a window camera-left; warm bounce from the cream wall and wood table fills the shadow side of her face; a soft contact shadow sits under the cable where it touches the table edge and under her jacket flaps.",
+      "environment": "A tidy living room with a pale cream wall, a small walnut side table, a single wall socket with a plain white faceplate and no visible text, and soft late-afternoon light.",
+      "sound": {"ambience": "quiet room tone with faint distant traffic hum and a low fridge buzz from another room", "foley": ["soft plastic scrape as the plug pushes toward the socket", "taut cable creak", "tiny rattle of the cable tie"], "music": "none", "voice": "none"},
+      "captions": "",
+      "transition_out": "continuous",
+      "props_from_frame_one": ["phone", "charger cable", "white cable tie on cable", "wall socket", "side table", "inspection lamp", "clipboard", "spare cable tie on lanyard"],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1"
+    },
+    {
+      "scene_id": "S2",
+      "start_s": 3,
+      "end_s": 6,
+      "location": "Same living-room side table and wall socket.",
+      "action": "She lays the phone down, stretches the cable straight along the table edge beside a pocket tape measure, and reads the number with the lamp on her chest lighting the tape. She notes the reading on the clipboard with a short pen stroke. The white cable tie stays centre frame in the middle of the stretched cable. She then gives the clipboard a slow two-finger tap as her verdict.",
+      "performance": "She runs a measuring procedure with total gravity: tape pinned with her thumb, eyes level with the markings, a tiny nod after each reading as if filing a report.",
+      "microexpression": "A slow single blink and a barely perceptible lift of one brow at the measurement.",
+      "dialogue": [],
+      "camera": {"shot": "medium close shot, eye level, framing table and her torso", "lens": "26mm-equivalent phone main camera", "movement": "locked off with one tiny settle-wobble at the start", "rig": "same propped phone"},
+      "lighting": "Window key from camera-left; the chest lamp adds a small bright pool on the tape with a faint orange-warm bounce from the table wood; crisp contact shadow under the cable and tape measure.",
+      "environment": "The same room; the wall socket stays visible at the frame edge with the cable end resting a thumb's width short of it; the cream wall glows warm at the edges.",
+      "sound": {"ambience": "same quiet room tone and fridge buzz", "foley": ["metallic tape-measure extend and lock click", "pen scratch on clipboard", "slow double tap on clipboard"], "music": "none", "voice": "none"},
+      "captions": "",
+      "transition_out": "continuous",
+      "props_from_frame_one": ["phone", "charger cable", "white cable tie on cable", "wall socket", "side table", "inspection lamp", "clipboard", "tape measure", "pen", "spare cable tie on lanyard"],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1"
+    },
+    {
+      "scene_id": "S3",
+      "start_s": 6,
+      "end_s": 9,
+      "location": "Same living-room side table and wall socket.",
+      "action": "She tears a strip of safety-orange tape and wraps it round the cable end as an evidence tag, then crouches to retry the plug from socket height. The cable pulls taut, the tie shakes, and the plug stays short. She stands, slowly runs two fingers along the cable, and her hand stops at the white tie. Her eyes drop to the matching spare tie on her lanyard, then back to the one on the cable.",
+      "performance": "She commits to a methodical re-test, crouching with the plug at arm's length and checking the gap by eye, then follows the cable with her fingertips like a technician tracing a fault.",
+      "microexpression": "Eyes widen a hair, then the face softens into warm disappointment as her glasses slide a little lower on her nose.",
+      "dialogue": [],
+      "camera": {"shot": "medium shot, eye level, slightly tighter on hands and cable at the end", "lens": "26mm-equivalent phone main camera", "movement": "locked off with a slow digital push-in of about 5 percent", "rig": "same propped phone"},
+      "lighting": "Window key from camera-left; the chest lamp throws a small pool onto the cable and tie; warm wood bounce lights her fingers; clear contact shadows from the cable on the table and the tape strip on the cable.",
+      "environment": "The same living room; the orange-tagged cable end and white tie are the two colour accents on the pale table; the socket is just visible at the frame edge.",
+      "sound": {"ambience": "same quiet room tone and fridge buzz", "foley": ["sharp tape tear", "tape press squeak on cable", "knee creak and fabric rustle as she crouches", "fingertips sliding along the cable", "tiny tie click as her hand meets it"], "music": "none", "voice": "none"},
+      "captions": "",
+      "transition_out": "continuous",
+      "props_from_frame_one": ["charger cable", "white cable tie on cable", "wall socket", "side table", "inspection lamp", "clipboard", "safety-orange tape", "phone", "spare cable tie on lanyard"],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1"
+    },
+    {
+      "scene_id": "S4",
+      "start_s": 9,
+      "end_s": 12,
+      "location": "Same living-room side table and wall socket.",
+      "action": "She snips the white tie with a small pair of scissors from a flap pocket; the cable relaxes, reaches the socket, and the plug seats with a click while the phone lights. She looks at the loose, slightly messy cable, produces a fresh white cable tie from a flap pocket and cinches it tight round the middle again, pulling the plug a centimetre out of the socket. She unplugs, steps back and returns to the opening pose, plug raised beside the socket, one centimetre short, tie dead centre.",
+      "performance": "She restores order with absolute focus, squaring the cable into a neat bundle and cinching the tie with a single decisive pull, wholly unaware of what it undoes.",
+      "microexpression": "A satisfied exhale through the nose as the tie tightens; neutral composure returns for the final pose.",
+      "dialogue": [],
+      "camera": {"shot": "medium shot, eye level, matching the opening frame", "lens": "26mm-equivalent phone main camera", "movement": "locked off, settling back to the opening framing", "rig": "same propped phone"},
+      "lighting": "Window key from camera-left; a faint cool-white bounce from the lit phone screen on the table; warm wood bounce on her hands; contact shadow under the re-tied bunch on the table edge.",
+      "environment": "The same living room, neat again, with the orange tape tag on the cable end and the socket plate unmarked.",
+      "sound": {"ambience": "same quiet room tone and fridge buzz", "foley": ["scissor snip", "satisfying plug-in click", "soft phone charging chime tone", "zip-tie ratchet cinch", "plug scrape out of socket"], "music": "none", "voice": "none"},
+      "captions": "Case closed. (Again.)",
+      "transition_out": "loop",
+      "props_from_frame_one": ["phone", "charger cable", "white cable tie on cable", "wall socket", "side table", "inspection lamp", "clipboard", "small scissors", "fresh cable tie", "spare cable tie on lanyard"],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1"
+    }
+  ],
+  "continuity": {
+    "identity_anchors": "Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger.",
+    "costume": "Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun; plain dark trousers and flat shoes.",
+    "props": [
+      "phone",
+      "charger cable",
+      "white cable tie on cable",
+      "spare cable tie on lanyard",
+      "fresh cable tie",
+      "wall socket",
+      "side table",
+      "inspection lamp",
+      "clipboard",
+      "pen",
+      "tape measure",
+      "safety-orange tape",
+      "small scissors"
+    ],
+    "notes": "The cable tie is cinched at the cable midpoint in every scene until S4 and must stay centre frame and legible; the gap between plug and socket is one centimetre in S1 and again at the end. The two-finger clipboard tap is used once (S2). Unbranded cable, phone and socket; no readable text or app UI. The last pose matches the first pose for the loop."
+  },
+  "asset_rights": [
+    {"asset": "Inspector character reference", "kind": "character_reference", "source": "generated from the bible description", "rights_status": "owned", "scope": "this series, all platforms"},
+    {"asset": "Living-room location still", "kind": "location_still", "source": "generated", "rights_status": "owned", "scope": "this episode"},
+    {"asset": "Foley and ambience", "kind": "other", "source": "generated by the video tool or recorded in edit", "rights_status": "owned", "scope": "this episode"},
+    {"asset": "Optional licensed sting", "kind": "music", "source": "to be chosen in edit", "rights_status": "unresolved", "scope": "optional; use only a platform-cleared track"}
+  ],
+  "export": {
+    "aspect_ratio": "9:16",
+    "resolution": "1080x1920",
+    "fps": 30,
+    "container": "mp4",
+    "max_duration_s": 12,
+    "edit_plan": [
+      "Generate as one 12 s clip (U1) with no cuts and trim to exactly 12.0 s.",
+      "Check the last frame against the first frame for loop continuity and trim if the pose drifts.",
+      "Burn in the caption 'Case closed. (Again.)' for 9 to 12 s in an owned or licensed font.",
+      "Add exaggerated foley in the edit if the generated audio is thin."
+    ],
+    "disclosure_plan": [
+      "Apply the platform AI-generated content label on upload.",
+      "State in the caption or description that the video is AI-generated and fictional."
+    ]
+  },
+  "growth_hypotheses": [
+    {"hypothesis": "A viewer who spots the cable tie in the first second and waits for the Inspector to find it will rewatch to confirm the loop and send it to a friend who ties everything too tight.", "metric": "shares per view and replays per view on Reels", "falsifier": "Shares per view fall below the account baseline, or replays per view are no higher than for non-looping clips."},
+    {"hypothesis": "Showing both the one-centimetre gap and the tie in frame one holds viewers past 3 seconds with the sound off.", "metric": "3-second hold rate on muted autoplay", "falsifier": "3-second hold rate is not above the account median."}
+  ],
+  "evidence": [
+    {"claim": "The silent gag is legible with no words: the problem and the culprit prop are both visible in frame one.", "kind": "inference", "source": "storyboard scenes S1 to S4", "confidence": "medium"},
+    {"claim": "The relapse (re-tying the cable) satisfies the bible rule that the Inspector is the culprit and the camera notices first.", "kind": "fact", "source": "bible inspector-v1 rule and selected premise P1", "confidence": "high"},
+    {"claim": "A single 12 s locked-off clip with no internal cuts should be generatable in one pass, but holding the tie's position and the exact start and end pose is a risk.", "kind": "hypothesis", "source": "no generation test yet", "confidence": "low"}
+  ]
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->

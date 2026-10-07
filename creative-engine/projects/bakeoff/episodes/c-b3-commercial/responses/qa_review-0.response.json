@@ -1,0 +1,18 @@
+{
+  "scores": {"originality": 4, "hook": 4, "coherence": 4, "identity": 4, "audiovisual": 4, "feasibility": 3, "grounding": 5, "commercial_fit": 4},
+  "evidence": {
+    "originality": "The tidy-investigator-is-the-culprit reversal is familiar, but making the product's six-cable limit expose a seventh cable that is her own charging lead tethered to her chest is a fresh, specific mechanism.",
+    "hook": "S1 opens on a symmetrical formal cordon with a flat 'Six suspects. The box holds six.' and a faint planted lead, which reads clearly muted, though the first four seconds are quiet and the real intrigue only lands on the count.",
+    "coherence": "The beats escalate cleanly from setup to count, recount, wide pull-back and verdict, and the lead planted in S1 and taut in S4 pays off with cause and effect, though the seventh 'cable on the floor' and her being tethered to it need the wide shot to make sense.",
+    "identity": "The Inspector's silhouette, flat deadpan register, single two-finger clipboard tap in S4, and warm-disappointment microexpression are held consistently and match the stated anchors.",
+    "audiovisual": "Each scene specifies lens, rig, lighting, foley and room tone with no music, so sound and picture are fully directed, with the plug-pull and lid-click foley giving a tidy button.",
+    "feasibility": "Four scenes over two generation units are modest, but a thin lead staying faintly visible then taut, a cordon dragging with her, and a slider pull-back plus an in-scene unplug and lid close in 4 seconds are risky for generated video continuity.",
+    "grounding": "Only the verified fact 'holds up to six cables' is used, with no invented features, a plain unbranded box, and a no-text prop list.",
+    "commercial_fit": "The six-cable limit is the actual comic engine and the caption states paid partnership and that the character has not used the product, though 'Six fit' sits near an implied capability beat and the disclosure is caption-and-platform only with no spoken line."
+  },
+  "weighted_total": 3.98,
+  "pass_thresholds": {"character_intent": true, "premise_specific_payoff": true, "complete_direction": true, "commercial_fit": true},
+  "summary": "A tightly built, on-brief sponsored episode where the product's single verified fact drives a clean planted-and-revealed gag with consistent character voice and full audiovisual direction. The main risk is execution: keeping a thin tethered lead, dragged cordon and the S4 pull-back plus unplug coherent in generated footage.",
+  "top_fix": "Make the lead more legible in S1-S3, for example a bright contrasting cable colour, so the seventh-cable reveal survives generation and the S4 action can be simplified."
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->

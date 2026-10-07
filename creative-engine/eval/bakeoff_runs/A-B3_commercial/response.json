@@ -1,0 +1,89 @@
+{
+  "selected_premise": {
+    "logline": "The Inspector investigates a knot of six cables behind a TV console as a structural failure, files them in a plain box that holds up to six, then is hobbled by her own seventh cable.",
+    "payoff": "The box visibly takes exactly six cables and the room goes calm. The Inspector's own seventh cable, trailing from her coat pocket, wraps her ankle and brings her down, so she commits the very fault she just condemned. The box's stated capacity is the joke's hinge, not a result claim."
+  },
+  "hook": {
+    "first_frame": "Extreme close-up of a dense black knot of six cables behind a TV console, a torch beam sweeping across it, a gloved finger pointing at the centre of the knot.",
+    "first_line_or_action": "Inspector, deadpan, torch on the knot: \"Six cables. One knot. Structural failure.\""
+  },
+  "script": {
+    "title": "Capacity Finding",
+    "synopsis": "The Inspector condemns a cable knot as a structural failure, sorts the six cables into a plain organiser box, and reads out its capacity. As she turns away satisfied, a seventh cable from her own coat pocket snags her ankle and ties her up.",
+    "beats": [
+      {"beat": "Torch beam finds the six-cable knot behind the console. She declares it a structural failure.", "function": "hook"},
+      {"beat": "She kneels, clipboard on knee, and begins untangling with ceremonial precision. The knot resists.", "function": "setup"},
+      {"beat": "She lifts the plain organiser box onto the floor and feeds the cables in one at a time. Six clean drops, six clean ticks on the clipboard.", "function": "escalation"},
+      {"beat": "Lid closes. The floor is clear. She reads out the capacity as an official finding.", "function": "turn"},
+      {"beat": "She stands and turns to leave. A seventh cable, her own torch charger trailing from her coat pocket, has looped around her ankle.", "function": "payoff"},
+      {"beat": "She topples in slow, composed stillness, still holding the clipboard upright. One flat word from the floor.", "function": "button"},
+      {"beat": "Held end card: the caption and platform partnership label stay on screen. No product claims beyond capacity.", "function": "cta"}
+    ],
+    "dialogue": [
+      {"speaker": "Inspector", "line": "Six cables. One knot. Structural failure.", "on_camera": true},
+      {"speaker": "Inspector", "line": "Finding: holds up to six cables.", "on_camera": true},
+      {"speaker": "Inspector", "line": "Seventh. Noted.", "on_camera": true}
+    ],
+    "caption_text": "Some faults are structural. Some are personal. The box holds up to six cables. #ad #paidpartnership",
+    "disclosure_line": "Paid partnership with fictional-cable-box-co. Enable Instagram's 'Paid partnership' label (branded content tool) before posting; also shown as the first line of the caption: 'Paid partnership with fictional-cable-box-co.'"
+  },
+  "scenes": [
+    {
+      "scene_id": "S1",
+      "start_s": 0,
+      "end_s": 5,
+      "location": "Living room, behind a low TV console, floor level",
+      "action": "Torch beam sweeps over a dense knot of six black and white cables. The Inspector, crouched, points at the knot's centre and delivers her verdict. She sets the clipboard on her knee and starts to pry at the knot.",
+      "performance": "Utterly composed, clipped delivery, treats the knot as a collapsed bridge.",
+      "microexpression": "Single slow blink, jaw set, brow lowered a millimetre in grim confirmation.",
+      "dialogue": ["Six cables. One knot. Structural failure."],
+      "camera": {"shot": "Extreme close-up pushing to medium close-up", "lens": "50mm macro-leaning", "movement": "Slow push-in following the torch beam"},
+      "lighting": "Dark behind-furniture gloom with a hard white torch beam as key and a soft warm window spill from camera right",
+      "environment": "Dusty floor, skirting board, a wall socket, TV console legs; no readable text or logos on any device",
+      "sound": {"ambience": "Quiet room tone, faint fridge hum", "foley": ["torch click", "cable rustle", "clipboard tap"], "music": "none"},
+      "transition_out": "Hard cut on the first cable lifting free",
+      "props_from_frame_one": ["tangled six-cable knot", "torch", "clipboard", "plain unbranded cable-organiser box just out of focus beside her knee", "her own torch charger cable looped unnoticed in coat pocket"],
+      "cuts_inside_clip": 1
+    },
+    {
+      "scene_id": "S2",
+      "start_s": 5,
+      "end_s": 10,
+      "location": "Same floor area, wider angle with the box centre frame",
+      "action": "She lifts the plain organiser box into the light and feeds the cables in one by one, ticking the clipboard each time. Six drops, six ticks. The knot is gone. She closes the lid and taps it once.",
+      "performance": "Ritual precision, the pace of a ceremony, no flicker of warmth.",
+      "microexpression": "Tiny chin-lift of professional satisfaction when the sixth cable drops.",
+      "dialogue": ["Finding: holds up to six cables."],
+      "camera": {"shot": "Medium shot, then insert on the box and lid", "lens": "35mm", "movement": "Locked off, quick insert cut on the lid closing"},
+      "lighting": "Torch now set down as a practical, even warm room light, soft contrast",
+      "environment": "Cleared floor, box in centre with no brand text or marks, TV glow off to one side showing blank screen",
+      "sound": {"ambience": "Room tone, slightly warmer", "foley": ["six soft cable thuds", "pen ticks", "lid click", "knuckle tap on box"], "music": "none"},
+      "transition_out": "Cut on her rising to standing",
+      "props_from_frame_one": ["plain organiser box with lid", "six cables", "clipboard", "pen"],
+      "cuts_inside_clip": 2
+    },
+    {
+      "scene_id": "S3",
+      "start_s": 10,
+      "end_s": 15,
+      "location": "Same room, wide of the cleared floor",
+      "action": "She stands, turns to leave with the clipboard held high. A seventh cable from her coat pocket has looped around her ankle. She tips over slowly and stiffly onto the floor, clipboard still upright. From the floor she says her last line. The box sits tidy beside her. Hold on the end card with caption and partnership label.",
+      "performance": "Stoic collapse, no panic, a flat bureaucratic acceptance of her own fault.",
+      "microexpression": "Eyes drop to her ankle, one eyebrow rises a hair, mouth flat.",
+      "dialogue": ["Seventh. Noted."],
+      "camera": {"shot": "Wide, low angle, then slight tilt down to her on the floor", "lens": "24mm", "movement": "Static, then a slow 5-degree tilt down"},
+      "lighting": "Same warm soft room light, with the torch beam rolling across the floor from where it was dropped",
+      "environment": "Clean floor with the closed unbranded box beside her, TV console above, window light",
+      "sound": {"ambience": "Quiet room tone", "foley": ["cable snag zip", "slow thump of body on rug", "clipboard clack"], "music": "none"},
+      "transition_out": "Hold, then end card fade-out",
+      "props_from_frame_one": ["seventh cable (her torch charger) trailing from coat pocket", "clipboard", "closed organiser box"],
+      "cuts_inside_clip": 1
+    }
+  ],
+  "continuity": {
+    "identity_anchors": "The Inspector: composed woman with a severe, neat bob, level gaze, buttoned trench-style coat with a visible deep right pocket, flat sensible shoes. She is never named on screen and never speaks in the first person.",
+    "costume": "Dark buttoned coat, plain shirt, thin pale gloves (removed after S1), lanyard with a blank unreadable badge.",
+    "props": ["clipboard and pen", "torch", "six cables", "plain generic cable-organiser box with lid, no text or logos", "seventh cable (her torch charger) in her right coat pocket from the first frame"],
+    "notes": "The seventh cable must be visible in her pocket from S1 so the S3 payoff is planted. She never claims to have used, tested or benefited from the box; her only product-related line is a capacity finding, matching the verified fact 'holds up to six cables'. No durability, price, award or user-result claims anywhere. No testimonial language. No readable brand marks on the box, devices or cables. Paid-partnership disclosure is delivered through the platform label plus the caption's first line. Spoken total: 8 + 5 + 2 = 15 words, within the 25-word limit."
+  }
+}

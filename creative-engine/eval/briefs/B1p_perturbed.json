@@ -1,0 +1,23 @@
+{
+  "brief_id": "B1p_perturbed",
+  "title": "Anti-template perturbation of B1: same fault (a cable one centimetre short), but a spoken 20-second night-kitchen episode with an off-camera flatmate and a hard two-prop limit",
+  "project": "acceptance",
+  "bible_ref": "inspector-v1",
+  "format": "spoken_episode",
+  "platform": "tiktok",
+  "duration_target_s": 20,
+  "language": "English, short lines, subtitle-ready",
+  "objective": "Show that changing constraints changes the narrative decisions, scene actions, performance, camera, sound and payoff, not just the setting words.",
+  "constraints": [
+    "Location: shared kitchen at 2 a.m., only the fridge light and the Inspector's chest lamp as sources.",
+    "Exactly two props may move during the episode (declare them); everything else is set dressing.",
+    "A flatmate speaks from off-camera (never seen); the Inspector is the only on-camera speaker.",
+    "The payoff must NOT be a cable tie or a wrapped cable (that was the B1 payoff); the bible rule still applies.",
+    "No cordon tape, no cones, no clipboard tick-counting (used in earlier episodes)."
+  ],
+  "commercial": null,
+  "negative_constraints": [
+    "Do not copy any researched creator's look, catchphrase or footage.",
+    "No readable brand text in frame."
+  ]
+}

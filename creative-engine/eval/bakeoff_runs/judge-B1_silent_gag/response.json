@@ -1,0 +1,50 @@
+{
+  "scores": {
+    "X": {"originality": 4, "hook": 4, "coherence": 4, "identity": 5, "audiovisual": 5, "feasibility": 3, "grounding": 4, "commercial_fit": 3, "weighted_total": 4.03},
+    "Y": {"originality": 4, "hook": 5, "coherence": 3, "identity": 4, "audiovisual": 5, "feasibility": 3, "grounding": 4, "commercial_fit": 3, "weighted_total": 3.93},
+    "Z": {"originality": 3, "hook": 4, "coherence": 2, "identity": 1, "audiovisual": 3, "feasibility": 3, "grounding": 2, "commercial_fit": 3, "weighted_total": 2.72}
+  },
+  "evidence": {
+    "X": {
+      "originality": "The culprit is her own tidy-wrapping habit (a cable tie she put on, matched to the spare on her lanyard), so the payoff is a character trait, not a gadget, and she re-commits it compulsively.",
+      "hook": "Frame one shows the 1 cm gap and plants the guilty tie dead centre, so the problem is visible at once, though a medium locked-off shot reads less punchy than a macro.",
+      "coherence": "Plant (tie in frame one), procedure, discovery, fix and re-offence connect causally, though it is a stretch that one cinched tie eats exactly the missing centimetre and re-tying pulls the seated plug out.",
+      "identity": "Costume, glasses, warm disappointment, the rationed two-finger tap in S2 and the rule (she is the culprit, camera knows from frame one) all match the bible.",
+      "audiovisual": "Every scene gives shot, lens, rig, motivated lighting with contact shadows, ambience, a specific foley list and captions, with no gaps.",
+      "feasibility": "One 12-second continuous generation unit has to carry measuring, taping, crouching, snipping, re-tying and a matched end pose, which is a lot of fine hand action for one AI clip.",
+      "grounding": "It keeps to every brief constraint (no dialogue, single location, zero cuts, loop, no readable text), and the why_send_it is tied to a concrete group-chat behaviour.",
+      "commercial_fit": "No product category is mentioned; cable organisers would fit later without forcing, so it gets the default 3."
+    },
+    "Y": {
+      "originality": "A clipboard lanyard snagging the drawer pull and dragging the table back is a fresh, physical, bible-tied way for her to undo her own fix.",
+      "hook": "It opens on a macro of the plug hovering 1 cm from the socket with the inspection-lamp beam locking onto the gap, which states the whole problem in one image.",
+      "coherence": "The causal chain is clear, but a plug 'hovering' mid-air on a taut cable, a lanyard dragging a heavy table, and an orange flag already on the cable before she arrives all strain the logic.",
+      "identity": "It fits the bible on costume, the single clipboard tap and 'the camera noticed; she did not', but the S2 handheld bob weakens the too-formal visual language.",
+      "audiovisual": "It gives detailed lens, rig, colour-bounce lighting, contact shadows, and foley per beat, plus a clean description of the loop transition.",
+      "feasibility": "The macro pull-back plus the precise lanyard-hook-drags-table interaction is hard to generate reliably, though the three short clips help.",
+      "grounding": "It respects the silent, single-location, cut and no-text constraints and has a plausible share rationale, but leaves the disclosure line empty.",
+      "commercial_fit": "No product category is mentioned, so it gets the default 3."
+    },
+    "Z": {
+      "originality": "Committing the same fault with a second short cable is a direct but predictable mirror of the setup.",
+      "hook": "A low-angle macro of a dangling phone on a taut cable with a cable twang is a strong visible-problem opener.",
+      "coherence": "It never explains how plugging a torch into the socket drags the table away from the wall, and the premise block leaves out desire, obstacle and escalation.",
+      "identity": "A beige trench coat, tortoiseshell glasses and no aubergine jacket or chest lamp contradict the fixed bible silhouette, and the signature clipboard tap is missing.",
+      "audiovisual": "Shots, lighting and foley are given, but there is no rig, no voice field, no captions per scene, and the props lists are thin.",
+      "feasibility": "Three locked-off 4-second clips are simple to shoot, but the unclear table-drag mechanics would be hard to stage convincingly.",
+      "grounding": "It meets the brief's format constraints but drifts from the bible costume, and it has no share rationale tied to the objective.",
+      "commercial_fit": "No product category is mentioned, so it gets the default 3."
+    }
+  },
+  "thresholds": {
+    "X": {"character_intent": true, "premise_specific_payoff": true, "complete_direction": true, "commercial_fit": true},
+    "Y": {"character_intent": true, "premise_specific_payoff": true, "complete_direction": true, "commercial_fit": true},
+    "Z": {"character_intent": false, "premise_specific_payoff": true, "complete_direction": false, "commercial_fit": true}
+  },
+  "ranking": ["X", "Y", "Z"],
+  "anti_template": {
+    "any_two_share_skeleton": true,
+    "evidence": "Y and Z share the same skeleton (measure the gap, nudge the side table exactly 1 cm to fix it, then an object of hers drags the table back and pops the plug out), and only the trigger differs: lanyard snag versus torch cable."
+  },
+  "notes": "X is the only plan whose fault comes from a planted character habit visible in frame one, which fits the bible rule best, though its single 12-second generation unit is risky. Y has the strongest hook but shares a table-drag skeleton with Z, and Z also breaks the bible's fixed silhouette."
+}

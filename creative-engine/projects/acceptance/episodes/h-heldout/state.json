@@ -1,0 +1,595 @@
+{
+  "stages": {
+    "premises": {
+      "premises": [
+        {
+          "id": "P1",
+          "logline": "Stakeout: in blue-hour stillness the Inspector keeps watch over the sagging hook, declares that nothing has moved all morning, and the heap quietly grows between jump cuts; the final low shot from inside the heap shows her laying one more coat on top.",
+          "audience_emotion": "Dry amusement that tips into the pleasure of a trap closing; mild dread because the viewer knows what Part 2 must say.",
+          "character_desire": "To catch the person who keeps overloading one hook, without disturbing the scene.",
+          "obstacle": "Nothing is happening. A stakeout needs a suspect, and the hallway stays empty and silent.",
+          "escalation": "Three locked-off wide beats separated by hard jump cuts and a title-less time lapse of her standing identical. At each cut the heap is a little taller and the hook a little lower; she logs 'No movement' every time and her lamp beam gets steadier and prouder.",
+          "surprise": "Last 4 s: the camera drops to floor level inside the heap, looking out through sleeves, and watches her lean in and lay one more coat on top from her own forearm while her eyes stay on the empty doorway. She does not react.",
+          "payoff": "Part 1 ends unresolved on that shot; the clipboard tap is NOT used in Part 1 and is explicitly saved for the Part 2 verdict. Part 2 outline (same hallway, same single character, same 28-30 s): she resolves to review the evidence from inside the heap angle, finds the camera's low position, counts the coats against her own forearm habit, and reconstructs the jump-cut gaps; she lowers the clipboard, delivers the single slow two-finger tap, says 'The culprit works quickly. The culprit is me.' hangs one coat on each empty hook, and ends by turning, with the last coat over her forearm, to hang it on the original hook. Bible rule delivered: the Inspector is the culprit and the camera knew first.",
+          "structure": "Observational stakeout built on jump-cut time lapse (pass of time as the escalation device), ending on a low reverse-angle reveal; serial cliffhanger with a saved verdict.",
+          "why_send_it": "Send to the friend whose coat has lived on 'the pile' by their own front door for a year: 'this is you, not the guests'. The jump cuts make the gag legible in a muted autoplay feed.",
+          "commercial_fit": "None needed and none attempted; no products, logos or branded clothing. Neutral.",
+          "rejected_because": ""
+        },
+        {
+          "id": "P2",
+          "logline": "Composite sketch: with no witnesses, the Inspector reconstructs the coat-hanger from smudge heights and sleeve creases, draws a suspect sketch on her clipboard, and holds it up to the heap to confirm the likeness.",
+          "audience_emotion": "Delight at a slow-dawning resemblance; the viewer is ahead of her and enjoys it.",
+          "character_desire": "To put a face to the person overloading the hook.",
+          "obstacle": "The only data is physical: the reach height of the hanger, a damp patch, a crease pattern. She has to infer a person from coats.",
+          "escalation": "She measures the hook height with a tape (one orange tape tag), reads the smudge, narrows to 'right-handed, short, composed', then sketches and each added feature, bun, brow, round glasses, is stated flatly as a finding.",
+          "surprise": "Last 4 s: she raises the sketch beside the heap for comparison and the lamp lights it; the drawing is her, oval face, straight brows, glasses sliding down the nose, low bun, with her real profile soft behind it. She says only 'Distinctive' and does not react.",
+          "payoff": "Part 1 ends unresolved on the sketch held beside her face. The two-finger clipboard tap is not used in Part 1; it is saved for the Part 2 verdict. Part 2 outline (same hallway, no new characters): she turns the clipboard over to pair the sketch with the reach-height measurement, discovers the hook is at exactly her shoulder height, and the heap is hung in her right-handed arc; she taps the clipboard once and states 'Likeness confirmed.' She then redraws the sketch with a different bun and re-hangs the first coat on the hook anyway.",
+          "structure": "Deductive-profile structure: evidence to a drawn composite, ending on a visual match between drawing and drawer; the reveal is a held close-up comparison.",
+          "why_send_it": "Send to a flatmate who always insists the mess is 'someone else's': 'I drew the culprit, look who it looks like'. Easily reposted as a still of the sketch beside her face.",
+          "commercial_fit": "None; the sketch is hand-drawn so no brand marks occur.",
+          "rejected_because": "the comparison reveal is strong but depends on a small, legible drawing, so it is fussier to stage in a wide or medium shot than the stakeout."
+        },
+        {
+          "id": "P3",
+          "logline": "Playback: the Inspector reviews overnight hallway footage on her phone to identify who loaded the hook; she pauses on a blurred figure and says 'Unidentified'.",
+          "audience_emotion": "Cosy suspense, the pleasure of being let in on the clue.",
+          "character_desire": "A clean ID of the offender from the record.",
+          "obstacle": "The footage is dim and blue, the figure is a blur, and she refuses to guess.",
+          "escalation": "She advances the footage frame by frame, tagging timestamps on the clipboard; each paused frame sharpens one detail: a bun-shaped silhouette, a bright circular glow at chest height.",
+          "surprise": "Last 4 s: her screen swings into the camera's view over her shoulder: the glowing circle on the screen matches her own chest lamp, and the figure in the footage stacks coats on the hook. She says 'Unidentified' and does not react.",
+          "payoff": "Part 1 ends unresolved. The two-finger tap is not used in Part 1 and is saved for the Part 2 verdict. Part 2 outline (same hallway, same one character): she resumes the footage with timestamps, sees the figure hang a coat and stay to straighten it, pauses on a clear frame and taps the clipboard once; 'Identified.' She locks the phone, then hangs her own spare coat on the loaded hook.",
+          "structure": "Screen-within-screen playback with a delayed ID; dependent on a legible phone screen.",
+          "why_send_it": "For the friend who 'swears they never touch it': proof by footage, a screenshot-able frame.",
+          "commercial_fit": "A phone screen could carry UI marks that must stay generic; avoid.",
+          "rejected_because": "the phone is a small-detail reading problem and its phone-footage mechanic echoes the earlier device-led episodes."
+        },
+        {
+          "id": "P4",
+          "logline": "Tagged out: the Inspector puts safety-orange tape tags on the sagging hook as an exhibit, and as she turns, a focus pull reveals each of the four empty hooks wears her own 'Out of Service' tag.",
+          "audience_emotion": "A clean visual surprise followed by affectionate disappointment.",
+          "character_desire": "To protect the overloaded hook as a scene and to reinstate order.",
+          "obstacle": "She cannot reach a verdict while the evidence, the heap, is still on the hook.",
+          "escalation": "She photographs nothing but tapes a cordon and states hook ratings one by one; each rating is delivered more formally.",
+          "surprise": "Last 4 s: rack focus from her face to the rail behind her: four empty hooks, each with a neat orange tag. She does not react.",
+          "payoff": "Part 1 ends on the rack focus. The two-finger tap is saved for Part 2 and is not used in Part 1. Part 2 outline: she reads the tags, recognises her tape, removes them one at a time, and hangs a coat on each freed hook, but she taps the clipboard once and re-tags hook five.",
+          "structure": "Procedural audit ending on a focus-pull reveal; close to existing tagging gags.",
+          "why_send_it": "For the tidy person who 'protects' a shared space until nobody can use it.",
+          "commercial_fit": "None.",
+          "rejected_because": "orange tape tagging of a fault repeats the earlier episode's tag-the-evidence skeleton."
+        },
+        {
+          "id": "P5",
+          "logline": "Reach: she discovers the four empty hooks sit above head height, measures the rail against herself, and the only hook within her reach is the overloaded one.",
+          "audience_emotion": "Warm recognition; a quiet 'oh' rather than a laugh.",
+          "character_desire": "To explain why one hook carries everything.",
+          "obstacle": "She cannot see a fault in the hook itself and must account for the other four.",
+          "escalation": "She measures each hook's height with a tape; only hook five is within her reach, while she stands on tiptoe at the others.",
+          "surprise": "Last 4 s: wide shot beside the rail shows a column of pencil height marks, each one at her shoulder; she does not react.",
+          "payoff": "Part 1 ends unresolved. The two-finger tap is not used in Part 1 and is saved for Part 2, which resolves with the verdict.",
+          "structure": "Spatial measurement gag resolved by a wide comparison; quiet and static.",
+          "why_send_it": "To the shortest person in the house.",
+          "commercial_fit": "None.",
+          "rejected_because": "the reach logic, once explained, is weaker as a cliffhanger because the viewer has no unresolved question left."
+        }
+      ],
+      "ranking": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "ranking_rationale": "P1 gives the cleanest stand-alone short: a wide, deadpan stakeout, a time-lapse escalation that reads on mute, and a last-4-second reverse angle in which the camera sees the culprit before she does, with the tap honestly saved for a Part 2 verdict that needs no new character or location. P2 has the strongest single image but is harder to stage within the no-fine-handwork limit. P3 and P4 lean on devices or gags the earlier episodes already used, and P5 resolves too quickly to sustain a cliffhanger."
+    },
+    "hooks": {
+      "hook_variants": [
+        {
+          "id": "H1",
+          "premise_id": "P1",
+          "first_frame": "Locked-off wide, eye-level, blue hour: cool daylight through one frosted door panel, a hallway rail with four empty hooks and a fifth bowed hard under a tall coat heap; the Inspector stands square to it, chest lamp beam pinned on the sagging hook.",
+          "first_line_or_action": "She lifts the clipboard, makes one flat tick, and says: 'No movement.' while the rail gives a one-notch-exaggerated creak.",
+          "mechanism": "visible_problem",
+          "score": 9,
+          "rationale": "One glance shows four empty hooks beside one buckling hook, and her calm 'No movement' over a visibly moving problem sets the stakeout joke and the rule in under a second (legibility 3, specificity 3, promise 2, send-ability 1)."
+        },
+        {
+          "id": "H2",
+          "premise_id": "P1",
+          "first_frame": "Medium-wide on the rail from slightly low: the fifth hook visibly bent under the heap in blue light, the four bare hooks sharp in the foreground, the Inspector soft and still at the edge of frame.",
+          "first_line_or_action": "Her lamp beam sweeps along the four empty hooks one by one, a click on each, then drops onto the heap; she says: 'Four vacant. One overdrawn.'",
+          "mechanism": "status_contradiction",
+          "score": 8,
+          "rationale": "The four-versus-one count is shown by the beam sweep and reads on mute, but the inspector's presence is less immediate in the first frame (legibility 2, specificity 3, promise 1, send-ability 2)."
+        },
+        {
+          "id": "H3",
+          "premise_id": "P1",
+          "first_frame": "The same locked-off wide as the stakeout, the Inspector motionless with lamp on, the heap already knee-high on the fifth hook and the other four bare.",
+          "first_line_or_action": "Hard jump cut: she has not moved, the heap is visibly taller, and she says the same two words, 'No movement.', as the clipboard scratches once.",
+          "mechanism": "escalating_ritual",
+          "score": 8,
+          "rationale": "The repeated identical pose against a growing heap reads on mute and promises the camera-knows-first rule, though the ritual pays off after the first second (legibility 2, specificity 2, promise 2, send-ability 2)."
+        },
+        {
+          "id": "H4",
+          "premise_id": "P2",
+          "first_frame": "Medium shot, the Inspector crouched beside the sagging heap, lamp on a faint smudge on the wall at her own shoulder height, clipboard held with a half-drawn oval visible.",
+          "first_line_or_action": "She traces the smudge height with one slow lamp pass and says: 'Right-handed. Short. Composed.'",
+          "mechanism": "curiosity_gap",
+          "score": 6,
+          "rationale": "The profile-of-a-suspect idea is intriguing and sendable, but the half-drawn oval and smudge are small details that need a beat to read in a wide or medium shot (legibility 1, specificity 2, promise 1, send-ability 2)."
+        },
+        {
+          "id": "H5",
+          "premise_id": "P2",
+          "first_frame": "Medium shot beside the heap: the Inspector holds the clipboard sketch up next to it, the drawn face showing a low bun, straight brows and round glasses, while her own face stays turned toward the heap in soft profile.",
+          "first_line_or_action": "She holds the sketch against the heap for comparison and says one flat word: 'Distinctive.'",
+          "mechanism": "recognition",
+          "score": 7,
+          "rationale": "The sketch-beside-the-face match is a strong, screenshot-able still that reads as 'that is her' on mute, but it spends the cliffhanger in the first frame and needs a legible small drawing (legibility 2, specificity 2, promise 2, send-ability 1)."
+        },
+        {
+          "id": "H6",
+          "premise_id": "P2",
+          "first_frame": "Wide, blue hour, the Inspector facing the four empty hooks like a row of witnesses, the heavily loaded fifth hook beside her, lamp beam level and steady.",
+          "first_line_or_action": "She addresses the empty hooks in a level voice, 'Which of you did this?', then waits, still, for an answer that does not come.",
+          "mechanism": "callout",
+          "score": 5,
+          "rationale": "The deadpan interrogation of hooks is funny and sendable to a flatmate, but the problem is stated rather than shown and the line adds little to the premise's sketch payoff (legibility 2, specificity 1, promise 0, send-ability 2)."
+        }
+      ],
+      "selected": {
+        "premise_id": "P1",
+        "hook_id": "H1",
+        "rationale": "H1 shows the whole problem (four bare hooks, one buckling hook) in a single wide frame and sets the deadpan 'No movement' register that the final low-angle reveal inverts, so it reads on mute and sets up the camera-knows-first rule without any new prop or person. The trade-off against the runner-up (P2 with H5) is that H5 gives the more striking single image, a sketch matching her face, but it gives away the cliffhanger early and relies on a small legible drawing that is harder to stage in the no-fine-handwork wide shot; the clipboard tap stays unused in Part 1 and is saved for the Part 2 verdict."
+      }
+    },
+    "script_storyboard": {
+      "script": {
+        "title": "The Case of the Overloaded Hook (Part 1 of 2)",
+        "synopsis": "In blue-hour stillness the Inspector stakes out a sagging coat hook beside four empty ones, logging 'No movement' while jump cuts show the heap growing. In the last 4 s the camera drops inside the heap and sees her lay one more coat on top from her own forearm, eyes on the empty doorway; she does not react. Part 2 outline (same hallway, same single character, 28-30 s): she reviews the evidence from the low heap angle, counts the coats against the coat habit on her own forearm, and reconstructs the jump-cut gaps; the Part 2 verdict is where the signature two-finger clipboard tap is used for the first time, saved there on purpose and not used in Part 1. She says 'The culprit works quickly. The culprit is me.', hangs one coat on each empty hook, and turns with the last coat over her forearm to hang it back on the original hook.",
+        "beats": [
+          {
+            "beat": "Wide of four bare hooks and one buckling hook; 'No movement.'",
+            "function": "hook"
+          },
+          {
+            "beat": "Jump cut: heap chest-high, same line, same pose.",
+            "function": "setup"
+          },
+          {
+            "beat": "Jump cut: heap shoulder-high; she checks the doorway.",
+            "function": "escalation"
+          },
+          {
+            "beat": "Jump cut: heap taller than her; beam steadier and prouder.",
+            "function": "escalation"
+          },
+          {
+            "beat": "Low angle inside the heap: she lays one more coat on top from her own forearm, eyes on the doorway.",
+            "function": "turn"
+          },
+          {
+            "beat": "Freeze on the unreacting Inspector; tap saved for Part 2 verdict, which hangs the coats and exposes her.",
+            "function": "button"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Inspector",
+            "line": "No movement.",
+            "delivery": "flat, measured, tick of pencil under the line",
+            "on_camera": true
+          },
+          {
+            "speaker": "Inspector",
+            "line": "No movement.",
+            "delivery": "identical delivery",
+            "on_camera": true
+          },
+          {
+            "speaker": "Inspector",
+            "line": "Still no movement.",
+            "delivery": "identical, fractionally slower",
+            "on_camera": true
+          },
+          {
+            "speaker": "Inspector",
+            "line": "No movement.",
+            "delivery": "identical, quietly proud",
+            "on_camera": true
+          }
+        ],
+        "caption_text": "Part 1 of 2. Nothing has moved. Nothing at all.",
+        "cta": "Follow for Part 2.",
+        "disclosure_line": "AI-generated video."
+      },
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "start_s": 0,
+          "end_s": 6,
+          "location": "Hallway with coat hooks, early-morning blue hour",
+          "action": "Locked-off wide: the Inspector stands square to the rail, chest lamp pinned on the bowed fifth hook under a waist-high coat heap. She lifts the clipboard, makes one flat pencil tick, and says her line while the rail creaks.",
+          "performance": "Invested task: keep the lamp beam exactly on the sagging hook and log it; eyes fixed on the heap, never the lens, as if the hook might bolt.",
+          "microexpression": "Neutral; one slow blink as the rail creaks.",
+          "dialogue": [
+            {
+              "speaker": "Inspector",
+              "line": "No movement.",
+              "on_camera": true
+            }
+          ],
+          "camera": {
+            "shot": "wide, eye level, locked-off, slightly too formal framing",
+            "lens": "24mm-equivalent phone main camera",
+            "movement": "propped phone with one small settle-wobble in the first half second, then still",
+            "rig": "phone propped on a shoe bench at the far end of the hallway"
+          },
+          "lighting": "Key: cool blue-hour daylight from the frosted door panel on frame-left, soft and low; fill: the Inspector's chest lamp as a bright circular pool on the heap; colour bounce: pale blue-grey from the plaster wall onto the left side of her jacket, aubergine reading nearly black; contact shadows: hard under the heap where it meets the floor and under each empty hook. Light stability: no light changes between scenes, no room or overhead lights on.",
+          "environment": "Narrow hallway, plaster wall painted pale grey, one frosted glass door panel at frame-left, wooden rail with five iron hooks: four bare, the fifth bowed downward under the heap of mixed dark coats. Bare floorboards. The Inspector's grey-green coat hangs over her left forearm, held against her jacket.",
+          "sound": {
+            "ambience": "quiet hallway room tone, faint outdoor birdsong through the door glass",
+            "foley": [
+              "rail creak, exaggerated one notch",
+              "pencil tick on clipboard",
+              "lamp strap fabric rub",
+              "one soft floorboard settle"
+            ],
+            "music": "none",
+            "voice": "Inspector on camera, measured bureaucratic cadence, never raised"
+          },
+          "captions": "",
+          "transition_out": "hard jump cut",
+          "props_from_frame_one": [
+            "coat heap",
+            "coat on forearm"
+          ],
+          "cuts_inside_clip": 0,
+          "generation_unit": "U1"
+        },
+        {
+          "scene_id": "S2",
+          "start_s": 6,
+          "end_s": 12,
+          "location": "Hallway with coat hooks, early-morning blue hour",
+          "action": "Hard jump cut to the identical frame: she has not moved, the heap is now chest-high, the fifth hook bent lower. Lamp beam steadier. She ticks the clipboard again.",
+          "performance": "Invested task: hold identical posture and re-log the hook, treating the larger heap as no change; eyes on the heap, jaw level.",
+          "microexpression": "Brows lift a millimetre, then settle.",
+          "dialogue": [
+            {
+              "speaker": "Inspector",
+              "line": "No movement.",
+              "on_camera": true
+            }
+          ],
+          "camera": {
+            "shot": "wide, eye level, locked-off",
+            "lens": "24mm-equivalent phone main camera",
+            "movement": "propped phone, faint breathing-level drift",
+            "rig": "same shoe-bench prop position"
+          },
+          "lighting": "Key: cool blue-hour daylight from the frosted door panel on frame-left, soft and low; fill: the Inspector's chest lamp as a bright circular pool on the heap; colour bounce: pale blue-grey from the plaster wall onto the left side of her jacket, aubergine reading nearly black; contact shadows: hard under the heap where it meets the floor and under each empty hook. Light stability: no light changes between scenes, no room or overhead lights on. The beam looks steadier and brighter on the heap.",
+          "environment": "Narrow hallway, plaster wall painted pale grey, one frosted glass door panel at frame-left, wooden rail with five iron hooks: four bare, the fifth bowed downward under the taller heap of mixed dark coats. Bare floorboards. The Inspector's grey-green coat hangs over her left forearm, held against her jacket.",
+          "sound": {
+            "ambience": "same room tone, birdsong slightly louder",
+            "foley": [
+              "deeper rail creak",
+              "pencil tick",
+              "a coat sleeve slumps with a soft fabric thud",
+              "lamp strap rub"
+            ],
+            "music": "none",
+            "voice": "Inspector on camera, measured bureaucratic cadence, never raised"
+          },
+          "captions": "",
+          "transition_out": "hard jump cut",
+          "props_from_frame_one": [
+            "coat heap",
+            "coat on forearm"
+          ],
+          "cuts_inside_clip": 0,
+          "generation_unit": "U2"
+        },
+        {
+          "scene_id": "S3",
+          "start_s": 12,
+          "end_s": 18,
+          "location": "Hallway with coat hooks, early-morning blue hour",
+          "action": "Hard jump cut, same frame: heap now shoulder-high, the hook nearly horizontal, two sleeves hanging to the floor. She stands unchanged and ticks again, then glances once at the empty doorway.",
+          "performance": "Invested task: confirm the doorway is clear; one controlled head turn, then back to the heap, as a sentry would.",
+          "microexpression": "Neutral; mouth tightens slightly at the creak.",
+          "dialogue": [
+            {
+              "speaker": "Inspector",
+              "line": "Still no movement.",
+              "on_camera": true
+            }
+          ],
+          "camera": {
+            "shot": "wide, eye level, locked-off",
+            "lens": "24mm-equivalent phone main camera",
+            "movement": "propped phone, one tiny settle-wobble when the rail creaks",
+            "rig": "same shoe-bench prop position"
+          },
+          "lighting": "Key: cool blue-hour daylight from the frosted door panel on frame-left, soft and low; fill: the Inspector's chest lamp as a bright circular pool on the heap; colour bounce: pale blue-grey from the plaster wall onto the left side of her jacket, aubergine reading nearly black; contact shadows: hard under the heap where it meets the floor and under each empty hook. Light stability: no light changes between scenes, no room or overhead lights on.",
+          "environment": "Narrow hallway, plaster wall painted pale grey, one frosted glass door panel at frame-left, wooden rail with five iron hooks: four bare, the fifth bowed downward under the shoulder-high heap of mixed dark coats. Bare floorboards. The Inspector's grey-green coat hangs over her left forearm, held against her jacket.",
+          "sound": {
+            "ambience": "same room tone, a distant door thud outside",
+            "foley": [
+              "long straining rail creak",
+              "pencil tick",
+              "head-turn fabric rustle",
+              "sleeve brushing the floor"
+            ],
+            "music": "none",
+            "voice": "Inspector on camera, measured bureaucratic cadence, never raised"
+          },
+          "captions": "",
+          "transition_out": "hard jump cut",
+          "props_from_frame_one": [
+            "coat heap",
+            "coat on forearm"
+          ],
+          "cuts_inside_clip": 0,
+          "generation_unit": "U3"
+        },
+        {
+          "scene_id": "S4",
+          "start_s": 18,
+          "end_s": 24,
+          "location": "Hallway with coat hooks, early-morning blue hour",
+          "action": "Hard jump cut, same frame: heap now taller than her, the hook hanging at a steep angle, almost unreadable as a hook. She holds the clipboard flat against her chest and watches the empty doorway, lamp beam resting proudly on the top coat.",
+          "performance": "Invested task: guard the doorway and the heap together; eyes alternate slowly between the door and the top coat, beam steady, hands still.",
+          "microexpression": "Neutral; a barely visible lift of the chin.",
+          "dialogue": [
+            {
+              "speaker": "Inspector",
+              "line": "No movement.",
+              "on_camera": true
+            }
+          ],
+          "camera": {
+            "shot": "wide, eye level, locked-off",
+            "lens": "24mm-equivalent phone main camera",
+            "movement": "propped phone, gentle drift with one settle-wobble",
+            "rig": "same shoe-bench prop position"
+          },
+          "lighting": "Key: cool blue-hour daylight from the frosted door panel on frame-left, soft and low; fill: the Inspector's chest lamp as a bright circular pool on the heap; colour bounce: pale blue-grey from the plaster wall onto the left side of her jacket, aubergine reading nearly black; contact shadows: hard under the heap where it meets the floor and under each empty hook. Light stability: no light changes between scenes, no room or overhead lights on.",
+          "environment": "Narrow hallway, plaster wall painted pale grey, one frosted glass door panel at frame-left, wooden rail with five iron hooks: four bare, the fifth bowed downward under the tall heap, taller than her of mixed dark coats. Bare floorboards. The Inspector's grey-green coat hangs over her left forearm, held against her jacket.",
+          "sound": {
+            "ambience": "same room tone",
+            "foley": [
+              "rail groan",
+              "pencil tick",
+              "coat shifting with a soft slump",
+              "one measured step forward"
+            ],
+            "music": "none",
+            "voice": "Inspector on camera, measured bureaucratic cadence, never raised"
+          },
+          "captions": "",
+          "transition_out": "hard cut to a low angle inside the heap",
+          "props_from_frame_one": [
+            "coat heap",
+            "coat on forearm"
+          ],
+          "cuts_inside_clip": 0,
+          "generation_unit": "U4"
+        },
+        {
+          "scene_id": "S5",
+          "start_s": 24,
+          "end_s": 28,
+          "location": "Hallway with coat hooks, early-morning blue hour",
+          "action": "Camera drops to floor level inside the heap, looking out between hanging sleeves at the empty doorway beyond her. Her eyes stay on the doorway as she leans in, lays the grey-green coat from her left forearm on top of the heap, and holds still. Last frame: she does not react.",
+          "performance": "Invested task: keep watch on the doorway, eyes never leaving it, while her forearm unloads one more coat as if it were routine; calm, procedural.",
+          "microexpression": "Neutral; no microexpression, eyes fixed on the doorway.",
+          "dialogue": [],
+          "camera": {
+            "shot": "low reverse angle from inside the heap, sleeves framing her in the foreground",
+            "lens": "24mm-equivalent phone main camera",
+            "movement": "handheld drift settling to still, slow push of a few centimetres toward her",
+            "rig": "phone nested at floor level in the coat pile"
+          },
+          "lighting": "Key: cool blue-hour daylight from the frosted door panel on frame-left, soft and low; fill: the Inspector's chest lamp as a bright circular pool on the heap; colour bounce: pale blue-grey from the plaster wall onto the left side of her jacket, aubergine reading nearly black; contact shadows: hard under the heap where it meets the floor and under each empty hook. Light stability: no light changes between scenes, no room or overhead lights on. Light stability: lamp beam seen through sleeves, no new light source.",
+          "environment": "Narrow hallway, plaster wall painted pale grey, one frosted glass door panel at frame-left, wooden rail with five iron hooks: four bare, the fifth bowed downward under the heap of mixed dark coats. Bare floorboards. The Inspector's grey-green coat hangs over her left forearm, held against her jacket. The camera sits inside the heap; sleeves hang in the foreground.",
+          "sound": {
+            "ambience": "same room tone fading under a sustained rail creak",
+            "foley": [
+              "heavy coat landing with a muffled thud",
+              "rail groan",
+              "lamp strap rub",
+              "sleeve rustle"
+            ],
+            "music": "none",
+            "voice": "none"
+          },
+          "captions": "",
+          "transition_out": "hold on final frame (unresolved)",
+          "props_from_frame_one": [
+            "coat heap",
+            "coat on forearm"
+          ],
+          "cuts_inside_clip": 0,
+          "generation_unit": "U5"
+        }
+      ],
+      "continuity": {
+        "identity_anchors": "Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun. Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger.",
+        "costume": "Aubergine utility jacket with four flap pockets, chest-strap inspection lamp, tiny clipboard on a lanyard, tight low bun, small round glasses. Same costume in every scene; no brand marks.",
+        "props": [
+          "coat heap",
+          "coat on forearm"
+        ],
+        "notes": "Props besides fixed costume: coat heap (1), grey-green coat on her left forearm (2); hook rail is set. Heap height per scene: waist, chest, shoulder, above head, then topped by the forearm coat. Moving props: coat heap grows between cuts; coat on forearm moves onto the heap in S5. Lighting is blue hour only: frosted door panel plus chest lamp, no room lights, no switches. The two-finger clipboard tap is NOT used in Part 1 and is saved for the Part 2 verdict. Speech maximum 3 words in 6 s, well under 2.8 words/s. No off-camera voice. Part 2 introduces no new characters or locations."
+      },
+      "asset_rights": [
+        {
+          "asset": "Inspector character reference",
+          "kind": "character_reference",
+          "source": "generated from bible inspector-v1 description",
+          "rights_status": "unresolved",
+          "scope": "show name and IP uncleared per bible"
+        },
+        {
+          "asset": "Hallway location",
+          "kind": "location_still",
+          "source": "generated, no real place",
+          "rights_status": "not_needed",
+          "scope": "synthetic set"
+        },
+        {
+          "asset": "Inspector voice",
+          "kind": "voice",
+          "source": "synthetic generated voice",
+          "rights_status": "unresolved",
+          "scope": "confirm synthetic voice terms"
+        },
+        {
+          "asset": "Music",
+          "kind": "music",
+          "source": "none used; foley only",
+          "rights_status": "not_needed",
+          "scope": "none"
+        }
+      ],
+      "export": {
+        "aspect_ratio": "9:16",
+        "resolution": "1080x1920",
+        "fps": 30,
+        "container": "mp4",
+        "max_duration_s": 28,
+        "edit_plan": [
+          "Join U1-U5 with hard cuts at 6, 12, 18 and 24 s; hold last frame without fade",
+          "Burn caption in edit",
+          "No music bed; foley only"
+        ],
+        "disclosure_plan": [
+          "Apply platform AI-generated-content label",
+          "Add 'AI-generated video' in description"
+        ]
+      },
+      "growth_hypotheses": [
+        {
+          "hypothesis": "A repeated identical frame with a visibly growing heap keeps muted viewers to the end because the unresolved final shot demands Part 2.",
+          "metric": "Average completion rate and Part 2 click-through",
+          "falsifier": "Completion below 50% or Part 2 views under 20% of Part 1 views"
+        },
+        {
+          "hypothesis": "The self-implicating last shot drives shares to a friend who piles coats.",
+          "metric": "Shares per 1,000 views",
+          "falsifier": "Shares per 1,000 views not above the channel median"
+        }
+      ],
+      "evidence": [
+        {
+          "claim": "Timings tile 0-28 s with five scenes (6+6+6+6+4); the cliffhanger is the last 4 s.",
+          "kind": "fact",
+          "source": "storyboard arithmetic",
+          "confidence": "high"
+        },
+        {
+          "claim": "Speech is at most 3 words per 6 s scene, under 2.8 words/s.",
+          "kind": "fact",
+          "source": "dialogue count",
+          "confidence": "high"
+        },
+        {
+          "claim": "The jump-cut stakeout and low reverse angle read on mute.",
+          "kind": "hypothesis",
+          "source": "selected premise P1/H1 rationale",
+          "confidence": "low"
+        }
+      ]
+    },
+    "qa_review": {
+      "scores": {
+        "originality": 4,
+        "hook": 3,
+        "coherence": 3,
+        "identity": 4,
+        "audiovisual": 4,
+        "feasibility": 3,
+        "grounding": 4,
+        "commercial_fit": 3
+      },
+      "evidence": {
+        "originality": "The deadpan stakeout where 'No movement' is repeated while jump cuts grow the heap, ending on a low shot from inside it, is a fresh inversion of the genre, though the 'detective is the culprit' twist itself is familiar.",
+        "hook": "S1 puts four bare hooks against one buckling hook in a single wide frame with a rail creak, which is clear on mute, but the opening is static with one tick and a flat line, so it offers curiosity rather than a strong 0-2 s grab.",
+        "coherence": "The escalation and the saved clipboard tap are consistent, but the S5 reveal shows her adding only one coat, which does not prove she built the whole heap, and the Part 2 outline is muddled ('counts the coats against the coat habit on her own forearm', then re-hangs a coat on the original hook).",
+        "identity": "Aubergine jacket, chest lamp, lanyard clipboard, low bun and round glasses are repeated verbatim in every scene with a flat deadpan performance, though 'warm disappointment' is stated and never staged.",
+        "audiovisual": "Each scene specifies lighting with blue-hour key, lamp fill and contact shadows, plus layered foley such as the rail creak and sleeve thud, with no music; the S5 sound fade is evocative, but the identical S1-S4 framing leaves the visual variety thin.",
+        "feasibility": "Props, one character and the 5-unit split are within limits, but a bowed iron hook under a heap taller than her, a phone nested in the pile and an exact repeat of the S1-S4 frame will be hard for generation to hold consistently.",
+        "grounding": "The brief constraints are respected (two props, no switches, one on-camera voice, tap saved with the reason stated, cliffhanger in the last 4 s) and the rationale weighs P1 against P2 honestly, though P4 and P5 are weak alternatives.",
+        "commercial_fit": "No commercial brief and no brand marks, so neutral and compliant; the shareable 'this is you' angle and Part 2 click-through hypothesis are sound but the CTA and caption are generic."
+      },
+      "weighted_total": 3.48,
+      "pass_thresholds": {
+        "character_intent": true,
+        "premise_specific_payoff": true,
+        "complete_direction": true,
+        "commercial_fit": true
+      },
+      "summary": "A tidy, constraint-compliant serial cliffhanger whose deadpan jump-cut escalation and inside-the-heap reveal are the real strengths. The weak points are a static, repetitive first half with a modest hook, a reveal that only partly incriminates her, and a vague Part 2 outline.",
+      "top_fix": "Make the S5 reveal incriminating beyond the single coat, for example a clear match between her forearm coat and the bottom layer of the heap, and rewrite the Part 2 outline as three concrete beats."
+    }
+  },
+  "log": [
+    {
+      "stage": "premises",
+      "attempt": 0,
+      "result": "ok",
+      "errors": 0,
+      "requested_model": "sonnet",
+      "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+      "usage": {},
+      "provider": "broker",
+      "latency_s": 0.0,
+      "at": "2026-10-07T23:22:39Z"
+    },
+    {
+      "stage": "hooks",
+      "attempt": 0,
+      "result": "ok",
+      "errors": 0,
+      "requested_model": "sonnet",
+      "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+      "usage": {},
+      "provider": "broker",
+      "latency_s": 0.0,
+      "at": "2026-10-07T23:23:32Z"
+    },
+    {
+      "stage": "script_storyboard",
+      "attempt": 0,
+      "result": "ok",
+      "errors": 0,
+      "requested_model": "sonnet",
+      "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+      "usage": {},
+      "provider": "broker",
+      "latency_s": 0.0,
+      "at": "2026-10-07T23:24:41Z"
+    },
+    {
+      "stage": "qa_review",
+      "attempt": 0,
+      "result": "ok",
+      "errors": 0,
+      "requested_model": "sonnet",
+      "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+      "usage": {},
+      "provider": "broker",
+      "latency_s": 0.0,
+      "at": "2026-10-07T23:25:48Z"
+    }
+  ],
+  "demos": [
+    "D1_silent_gag",
+    "D2_spoken_tool_honesty"
+  ],
+  "trends_used": [],
+  "trends_snapshot_age_days": null
+}

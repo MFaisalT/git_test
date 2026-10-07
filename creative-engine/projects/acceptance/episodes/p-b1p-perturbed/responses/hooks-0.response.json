@@ -1,0 +1,64 @@
+{
+  "hook_variants": [
+    {
+      "id": "H1",
+      "premise_id": "P2",
+      "first_frame": "Locked-off, eye-level shot into an open fridge at 2 a.m.: the Inspector in the aubergine jacket is a dark silhouette behind the door, her chest lamp a hard white disc on the middle shelf, where a phone sits between a butter dish and a jar, its charge lead stretched taut to a wall socket.",
+      "first_line_or_action": "The fridge door drifts shut by a hand's width; the plug eases out of the socket and a single beep sounds. She says, flat and whispered, 'Finding one: the door is lying.'",
+      "mechanism": "visible_problem",
+      "score": 8,
+      "rationale": "A phone inside a fridge on a taut lead is legible in one frame with sound off and the beep gives a ready-made ticking clock, but the promise of her own guilt is only implied."
+    },
+    {
+      "id": "H2",
+      "premise_id": "P2",
+      "first_frame": "Extreme close-up of a wall socket in the fridge's pale glow: a plug sits one centimetre proud of the socket face, the Inspector's lamp beam narrowing onto the gap like a spotlight.",
+      "first_line_or_action": "Her two fingers push the plug home; the door swings gently shut, the fridge goes dark except for the lamp, and the plug eases back out by the same centimetre as the beep starts.",
+      "mechanism": "escalating_ritual",
+      "score": 7,
+      "rationale": "The one-centimetre gap is the most specific problem and the push-and-slip loop reads muted, but the extreme close-up hides the fridge, so the strange part (phone in the fridge) is withheld past the first second."
+    },
+    {
+      "id": "H3",
+      "premise_id": "P2",
+      "first_frame": "Wide, formal, slightly-too-centred frame of the Inspector facing the open fridge like a witness stand, lamp on her chest, a milk carton held at arm's length in one hand, the fridge interior glowing behind a phone on the shelf.",
+      "first_line_or_action": "She addresses the fridge in a measured whisper: 'You will remain open for the duration.' The door begins to close. Cut on the first beep.",
+      "mechanism": "status_contradiction",
+      "score": 7,
+      "rationale": "Formal address of an appliance is the show's disproportion in one image and the carton foreshadows the wedge, though the problem is stated by line rather than seen in the frame."
+    },
+    {
+      "id": "H4",
+      "premise_id": "P1",
+      "first_frame": "Chest-lamp beam cuts across a dark counter and lands on a phone lying with its charger lead pulled bar-straight, the plug hovering one visible centimetre from the socket, a kettle standing to one side in shadow.",
+      "first_line_or_action": "She lays a spread hand over the gap and whispers, 'One centimetre. Somebody did this.' From off-camera a sleepy voice says, 'Who?'",
+      "mechanism": "curiosity_gap",
+      "score": 7,
+      "rationale": "The short cable is instantly legible and the off-camera 'Who?' sets up a whodunit, but a straight lead on a counter is a quieter image than the fridge and the kettle culprit is not yet signposted."
+    },
+    {
+      "id": "H5",
+      "premise_id": "P1",
+      "first_frame": "Tight on the base of the kettle in the lamp beam, a charger lead visibly pinned flat beneath its foot, while the Inspector's gloved-looking hand points a pen-sized beam at the empty socket past it.",
+      "first_line_or_action": "She delivers in a bureaucratic murmur, 'The kettle is cleared.' A sleepy voice from the dark: 'Is that my kettle on your cable?'",
+      "mechanism": "callout",
+      "score": 8,
+      "rationale": "Showing the cable under the kettle in frame one lets viewers spot the culprit before her, which is the bible's rule, and the flatmate line is a perfect send-to-your-housemate callout, but it spends the reveal that the payoff needs."
+    },
+    {
+      "id": "H6",
+      "premise_id": "P1",
+      "first_frame": "Mid shot of the Inspector holding her phone up at arm's length, dim screen showing a nearly empty battery shape, lamp on, her free hand measuring the lead against the counter edge with a spread hand-span.",
+      "first_line_or_action": "She taps two fingers on her clipboard before any evidence and announces, 'This is a cable matter.' The fridge hum cuts out on the word 'matter'.",
+      "mechanism": "recognition",
+      "score": 6,
+      "rationale": "The near-dead phone and hand-span measuring are instantly relatable, but spending the rationed clipboard tap in the hook breaks the character's gesture rule and gives no visible culprit."
+    }
+  ],
+  "selected": {
+    "premise_id": "P2",
+    "hook_id": "H1",
+    "rationale": "H1 pairs the strongest silent image (a phone sitting in an open fridge on a taut lead, lit only by the two permitted sources) with a sound hook that the first beep makes unmistakable, and it builds directly into the ticking-clock structure and the fridge-phone culprit reveal. The runner-up, P1 H5, scores equally for first-frame culprit-spotting and send-ability, but P1 keeps B1's 'something she placed ate the centimetre' skeleton, so P2 better serves the brief's goal of changing narrative decisions rather than only the setting."
+  }
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->
