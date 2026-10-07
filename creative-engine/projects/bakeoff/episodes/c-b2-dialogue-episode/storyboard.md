@@ -5,6 +5,9 @@
 **Format / platform / target:** spoken_episode / tiktok / 20 s  
 **Bible:** inspector-v1 v1  
 
+## Production format
+(not declared; pre-format packet)
+
 ## Premise
 At the living room side table, the Inspector cordons off a friend's 'seen' with safety-orange tape and builds a negligence case, then a gentle off-camera question reveals her own phone holds a stack of seen-and-unanswered messages from that same friend.
 

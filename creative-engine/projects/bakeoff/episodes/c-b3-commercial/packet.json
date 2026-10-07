@@ -725,17 +725,7 @@
       "flagged_fields": [],
       "recurring_motifs": [
         {
-          "motif": "prop:clipboard",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
-          "motif": "prop:orange",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
-          "motif": "prop:lamp",
+          "motif": "prop:safety",
           "episodes": 3,
           "share": 1.0
         },
@@ -745,7 +735,17 @@
           "share": 1.0
         },
         {
-          "motif": "prop:safety",
+          "motif": "prop:inspection",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:lamp",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:clipboard",
           "episodes": 3,
           "share": 1.0
         },
@@ -755,12 +755,12 @@
           "share": 1.0
         },
         {
-          "motif": "prop:inspection",
+          "motif": "prop:orange",
           "episodes": 3,
           "share": 1.0
         },
         {
-          "motif": "prop:phone",
+          "motif": "prop:cable",
           "episodes": 2,
           "share": 0.67
         },
@@ -775,7 +775,7 @@
           "share": 0.67
         },
         {
-          "motif": "prop:cable",
+          "motif": "prop:phone",
           "episodes": 2,
           "share": 0.67
         }
@@ -798,7 +798,7 @@
     }
   ],
   "provenance": {
-    "generated_at": "2026-10-07T23:40:34Z",
+    "generated_at": "2026-10-07T23:44:33Z",
     "provider": "broker",
     "requested_model": "sonnet",
     "observed_model": "not independently observable (Agent tool; model=sonnet requested)",

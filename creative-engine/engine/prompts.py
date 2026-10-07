@@ -37,7 +37,7 @@ def _fill(text: str, **kw) -> str:
     return text
 
 
-def render_stage(stage: str, brief: dict, bible: dict, context: dict, history_fingerprints: list[dict], demos_k: int = 2, trends_text: str = "") -> tuple[str, list[str]]:
+def render_stage(stage: str, brief: dict, bible: dict, context: dict, history_fingerprints: list[dict], demos_k: int = 2, trends_text: str = "", formats: dict | None = None) -> tuple[str, list[str]]:
     """Return (prompt_text, demo_ids_used). context carries prior stage outputs."""
     tpl = _load(stage)
     silent = brief.get("format") == "silent_gag"
@@ -49,7 +49,9 @@ def render_stage(stage: str, brief: dict, bible: dict, context: dict, history_fi
     tpl = _cond(tpl, "TRENDS", bool(trends_text))
     demos = select_demos(brief, k=demos_k) if stage in ("premises", "script_storyboard") else []
     demo_text = "\n".join(render_demo(d) for d in demos) if demos else "(no demonstrations retrieved)"
+    formats = formats or {}
     text = _fill(tpl, BRIEF=brief, BIBLE=bible, CONTEXT=context, HISTORY=history_fingerprints, DEMOS=demo_text, TRENDS=trends_text,
+                 FORMAT_CATALOGUE=formats.get("catalogue", ""), FORMAT_FIXED=formats.get("fixed", {}), FORMAT_RECENT=formats.get("recent", []), FORMAT_SELECTED=formats.get("selected", {}),
                  COMMERCIAL_FACTS=(brief.get("commercial") or {}).get("verified_facts", []),
                  FORBIDDEN=(brief.get("commercial") or {}).get("forbidden_claims", []))
     return text, [d["demo_id"] for d in demos]

@@ -16,6 +16,7 @@ A working local creative engine exists, is tested, and has repeatedly turned new
 | Three deliverable packets (silent gag, spoken episode, sponsored episode) | **Planning-ready; render unverified** — `projects/bakeoff/episodes/c-b1-silent-gag`, `c-b2-dialogue-episode`, `c-b3-commercial` |
 | Anti-template perturbation packet | **Planning-ready; render unverified** — `projects/acceptance/episodes/p-b1p-perturbed` (1 bounded repair) |
 | Held-out acceptance packet | **Planning-ready; render unverified** — `projects/acceptance/episodes/h-heldout` (0 creative repairs; two engine gate bugs found and fixed) |
+| Production-format variety (shot architecture / audio mode / voice-location reuse as a tracked, diversified, validated decision) | **Implemented and tested** (`engine/formats.py`, 8 tests); demonstrated on `F-B5_format_open` (see ACCEPTANCE-RESULTS §7) |
 | Trend-aware packet | **Planning-ready; render unverified** — `projects/acceptance/episodes/t-b4-trend-aware` (0 repairs; cites 5 dated trend ids; rights warnings surfaced) |
 | Higgsfield adapter | **Dry-run only**; no job submitted, no media uploaded; controls verified read-only via MCP catalogue |
 | Rendered media | **None.** Requires owner approval, uploaded references, `get_cost` preflight, credit cap, then post-render inspection |

@@ -17,6 +17,7 @@ from .repetition import compare, fingerprint
 from .render import storyboard_md
 from .store import Store, now_iso, sha256_json
 from .trends import render_for_prompt, select_relevant, staleness_findings
+from .formats import catalogue_text, diversity_findings, realisation_findings, recent_formats
 from .validators import (Report, validate_all, validate_continuity, validate_direction, validate_rights, validate_selection, validate_timing)
 
 QUOTES_2026_10_07 = {"seedance_2_0_mini": 8, "seedance_2_5": 56}  # 8 s / 720p / 9:16 preflight quotes, not measured costs
@@ -26,7 +27,7 @@ class StageFailure(Exception):
     pass
 
 
-def _stage_check(stage: str, out: dict, brief: dict, bible: dict | None = None) -> Report:
+def _stage_check(stage: str, out: dict, brief: dict, bible: dict | None = None, context: dict | None = None) -> Report:
     rep = Report()
     if stage == "premises":
         ps = out.get("premises", [])
@@ -39,6 +40,21 @@ def _stage_check(stage: str, out: dict, brief: dict, bible: dict | None = None) 
         ids = [p.get("id") for p in ps]
         if len(set(ids)) != len(ids):
             rep.error("PREMISE_DUP_ID", "duplicate premise ids")
+        fixed = brief.get("production_format") or {}
+        archs, modes = set(), set()
+        for p in ps:
+            pf = p.get("production_format") or {}
+            for k in ("shot_architecture", "audio_mode", "continuity_reuse", "rationale"):
+                if not pf.get(k):
+                    rep.error("PREMISE_FORMAT", f"{p.get('id')} production_format.{k} missing")
+            for k in ("shot_architecture", "audio_mode"):
+                if fixed.get(k) and pf.get(k) and pf[k] != fixed[k]:
+                    rep.error("PREMISE_FORMAT_FIXED", f"{p.get('id')} ignores brief-fixed {k}={fixed[k]}")
+            archs.add(pf.get("shot_architecture")); modes.add(pf.get("audio_mode"))
+        if not fixed.get("shot_architecture") and len(archs - {None}) < 3:
+            rep.error("PREMISE_FORMAT_VARIETY", f"premises use only {len(archs - {None})} shot architectures; need >=3 when open")
+        if not fixed.get("audio_mode") and len(modes - {None}) < 2:
+            rep.error("PREMISE_FORMAT_VARIETY", f"premises use only {len(modes - {None})} audio modes; need >=2 when open")
         if not out.get("ranking"):
             rep.error("PREMISE_RANKING", "ranking missing")
     elif stage == "hooks":
@@ -57,6 +73,16 @@ def _stage_check(stage: str, out: dict, brief: dict, bible: dict | None = None) 
                  "asset_rights": out.get("asset_rights", []), "export": out.get("export", {}), "tool_mapping": {"units": []}, "status": "draft",
                  "premises": [], "hook_variants": [], "selected": {}}
         validate_timing(shell, rep); validate_direction(shell, rep); validate_rights(shell, rep); validate_continuity(shell, bible, rep)
+        from .formats import realisation_findings as _rf
+        from .adapters import plan as _plan
+        pf = (context or {}).get("production_format") or {}
+        if pf.get("shot_architecture"):
+            try:
+                shell["tool_mapping"] = _plan(dict(shell, export=out.get("export", {"aspect_ratio": "9:16"}), continuity=out.get("continuity", {})), bible)
+            except Exception:
+                shell["tool_mapping"] = {"units": []}
+            for f in _rf(pf, shell):
+                (rep.error if f["severity"] == "error" else rep.warn)(f["code"], f["message"])
         funcs = [b.get("function") for b in (out.get("script") or {}).get("beats", [])]
         need = "turn" if brief.get("format") == "serial_cliffhanger" else "payoff"
         if "hook" not in funcs or need not in funcs:
@@ -92,10 +118,10 @@ class Pipeline:
         Store._write_json(self._state_path(packet_id), st)
 
     # -- one stage with bounded repair
-    def _run_stage(self, stage: str, packet_id: str, brief: dict, bible: dict, context: dict, history_fp: list[dict], st: dict, trends_text: str = "") -> dict:
+    def _run_stage(self, stage: str, packet_id: str, brief: dict, bible: dict, context: dict, history_fp: list[dict], st: dict, trends_text: str = "", formats: dict | None = None) -> dict:
         if stage in st["stages"]:
             return st["stages"][stage]
-        prompt, demo_ids = render_stage(stage, brief, bible, context, history_fp, self.demos_k, trends_text)
+        prompt, demo_ids = render_stage(stage, brief, bible, context, history_fp, self.demos_k, trends_text, formats)
         st["demos"] = sorted(set(st["demos"]) | set(demo_ids))
         attempt = 0
         out: dict | None = None
@@ -111,7 +137,7 @@ class Pipeline:
                 st["log"].append({"stage": stage, "attempt": attempt, "result": "parse_error", "at": now_iso()})
                 attempt += 1
                 continue
-            rep = _stage_check(stage, out, brief, bible)
+            rep = _stage_check(stage, out, brief, bible, context)
             st["log"].append({"stage": stage, "attempt": attempt, "result": "ok" if rep.ok else "invalid", "errors": len(rep.errors),
                               "requested_model": comp.requested_model, "observed_model": comp.observed_model, "usage": comp.usage,
                               "provider": comp.provider, "latency_s": round(time.time() - t0, 2), "at": now_iso()})
@@ -144,10 +170,14 @@ class Pipeline:
         else:
             fresh = [e for e in ledger if e["trend_id"] in st["trends_used"]]
             trends_text = render_for_prompt(fresh, []) if fresh else ""
+        trend_formats = [e for e in fresh if e.get("type") in ("format", "edit_move", "style")]
+        formats = {"catalogue": catalogue_text(trend_formats), "fixed": brief.get("production_format") or {}, "recent": recent_formats(history)}
         try:
-            prem = self._run_stage("premises", packet_id, brief, bible, {}, history_fp, st, trends_text)
-            hooks = self._run_stage("hooks", packet_id, brief, bible, {"premises": prem}, history_fp, st, trends_text)
-            ss = self._run_stage("script_storyboard", packet_id, brief, bible, {"premises": prem, "hooks": hooks}, history_fp, st)
+            prem = self._run_stage("premises", packet_id, brief, bible, {}, history_fp, st, trends_text, formats)
+            hooks = self._run_stage("hooks", packet_id, brief, bible, {"premises": prem}, history_fp, st, trends_text, formats)
+            sel_prem = next((x for x in prem["premises"] if x["id"] == hooks["selected"]["premise_id"]), {})
+            formats["selected"] = sel_prem.get("production_format") or formats["fixed"] or {"note": "no format declared; realise the brief literally"}
+            ss = self._run_stage("script_storyboard", packet_id, brief, bible, {"premises": prem, "hooks": hooks, "production_format": formats["selected"]}, history_fp, st, "", formats)
         except PendingResponse as e:
             self._save_state(packet_id, st)
             raise
@@ -182,12 +212,21 @@ class Pipeline:
                            "repair_passes": sum(1 for l in st["log"] if l.get("attempt", 0) > 0), "engine_version": ENGINE_VERSION},
             "negative_constraints": list(brief.get("negative_constraints", [])) + list(bible.get("do_not", [])),
         }
+        sel_prem = next((x for x in prem["premises"] if x["id"] == hooks["selected"]["premise_id"]), {})
+        pf = dict(sel_prem.get("production_format") or {})
+        if pf:
+            pf.setdefault("chosen_by", "brief" if (brief.get("production_format") or {}).get("shot_architecture") else "engine")
+            packet["production_format"] = pf
         packet["tool_mapping"] = adapter_plan(packet, bible, QUOTES_2026_10_07)
         packet["qa"]["repetition"] = compare(packet, history)
         return packet
 
     def _finalise(self, packet: dict, bible: dict) -> None:
         rep = validate_all(packet, bible)
+        if packet.get("production_format"):
+            hist = [p for p in self.store.list_packets(self.project) if p["packet_id"] != packet["packet_id"] and p["status"] != "rejected"]
+            for f in diversity_findings(packet["production_format"], hist, packet["brief"].get("production_format") or {}) + realisation_findings(packet["production_format"], packet):
+                (rep.error if f["severity"] == "error" else rep.warn)(f["code"], f["message"])
         for f in staleness_findings(packet["provenance"].get("trends_used", []), self.store.read_ledger(self.project, "trends")):
             (rep.error if f["severity"] == "error" else rep.warn)(f["code"], f["message"])
         packet["qa"]["deterministic"] = rep.as_dict()

@@ -5,6 +5,9 @@
 **Format / platform / target:** silent_gag / instagram_reels / 12 s  
 **Bible:** inspector-v1 v1  
 
+## Production format
+(not declared; pre-format packet)
+
 ## Premise
 The Inspector measures, tags and condemns a charger cable that falls exactly one centimetre short, while a neat cable tie she wrapped round its middle sits in plain sight the whole time.
 

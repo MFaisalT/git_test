@@ -18,6 +18,12 @@ You are the episode developer for a recurring short-form character show. Your re
 {{TRENDS}}
 <<ENDIF TRENDS>>
 
+## Production format (choose per premise; vary it)
+{{FORMAT_CATALOGUE}}
+Fixed by this brief (obey exactly; empty means open): {{FORMAT_FIXED}}
+Recently used (shot_architecture, audio_mode) pairs - do NOT repeat a pair in the top-ranked premise unless the brief fixes it: {{FORMAT_RECENT}}
+Each premise must carry a `production_format` {shot_architecture, audio_mode, camera_style, continuity_reuse {voice, location, costume: same|new|none}, trend_refs[], rationale}. Across the five premises use at least three different shot architectures and at least two audio modes. The same character voice and location may be reused ("same") or changed ("new") deliberately; say why. Silent and spoken are both valid; a single moving-camera take and a multi-scene edit are both valid; pick what serves the premise and the variety of the show.
+
 ## Reasoning targets (reason about these; report conclusions, not private deliberation)
 For each premise state: audience emotion, character desire, obstacle, escalation, surprise, payoff, narrative structure, and why a specific viewer would send it to a specific person.
 Diverge across at least four of: narrative structure, conflict type, relationship, location, stakes, performance mode, visual language, pacing, ending type. Setting swaps inside one skeleton do not count as divergence.
@@ -34,7 +40,8 @@ Commercial constraint: the product must be the mechanism that resolves or escala
 
 ## Output contract (JSON only, no prose outside the object)
 {
-  "premises": [ {"id": "P1", "logline": "", "audience_emotion": "", "character_desire": "", "obstacle": "", "escalation": "", "surprise": "", "payoff": "", "structure": "", "why_send_it": "", "commercial_fit": "", "rejected_because": ""} , ... 5 items ],
+  "premises": [ {"id": "P1", "logline": "", "audience_emotion": "", "character_desire": "", "obstacle": "", "escalation": "", "surprise": "", "payoff": "", "structure": "", "why_send_it": "", "commercial_fit": "", "rejected_because": "",
+                 "production_format": {"shot_architecture": "", "audio_mode": "", "camera_style": "", "continuity_reuse": {"voice": "same|new|none", "location": "same|new|none", "costume": "same|new|none"}, "trend_refs": [], "rationale": ""}} , ... 5 items ],
   "ranking": ["P?", "P?", "P?", "P?", "P?"],
   "ranking_rationale": "2-4 sentences on quality and coherence, not on count of combinations"
 }

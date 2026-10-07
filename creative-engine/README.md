@@ -38,6 +38,15 @@ python3 -m engine learn    <project> EP01 --json '{"shares_7d": 0, "lesson": "..
 | `claude_cli` | `claude -p --output-format json --model <m>`; records `modelUsage` as the served-model evidence | Implemented, **not exercised live** (non-interactive Fable may bill usage credits) |
 | `fixture` | Replays `tests/fixtures/*.json` | Plumbing tests only; packets can never leave `draft` |
 
+## Production-format variety (single take vs multi-scene, silent vs spoken, same or new voice/location)
+
+Format is a first-class, tracked decision, not a side effect of the brief. `engine/formats.py` holds the catalogue: shot architectures (`single_take_static`, `single_take_moving_camera`, `multi_scene_cut`, `jump_cut_timelapse`, `pov_handheld`, `interview_offcamera`, `montage`, `loop`, `continuation_from_last_frame`, `split_or_insert`, `motion_transfer_owned_footage`, `other`), audio modes (`silent_ambience`, `voiceover_narration`, `on_camera_dialogue`, `off_camera_dialogue`, `text_over_broll`, `music_driven`) and continuity reuse (`voice`/`location`/`costume` = same | new | none, resolved against the bible's `approved_assets`).
+
+- A brief may **fix** any field (`"production_format": {"shot_architecture": "jump_cut_timelapse"}`) or leave it **open** (`{}`); open fields are chosen by the engine per premise with a stated rationale, and the five premises must span >=3 architectures and >=2 audio modes.
+- **Diversity rule**: the top-ranked premise must not repeat a (shot_architecture, audio_mode) pair used in the last 4 episodes unless the brief fixes it (`FORMAT_REPEATS_RECENT`); the recurring-motif report also tracks format pairs.
+- **Realisation gates**: single takes have no cuts and one generation unit with the camera move written into every scene; jump-cut needs >=3 cuts; loop ends on "loop"; silent/text-over has no speech; VO/off-camera/on-camera modes need matching lines; music-driven needs a declared licensed cue; "same voice/location" needs the corresponding approved asset declared.
+- Trend entries of type `format` / `edit_move` / `style` extend the menu at run time (cite `trend_refs`).
+
 ## Trend radar (fresh research when needed)
 
 The engine keeps a dated, sourced, decaying ledger of trend *observations* (what a bounded, web-searching refresh could verify on a given day — not a live feed of what is viral) (formats, styles, edit moves, hook patterns, words/phrases, topics, sounds, dances/moves, products, memes, platform features) per project in `projects/<project>/trends.jsonl`.
@@ -49,7 +58,7 @@ The engine keeps a dated, sourced, decaying ledger of trend *observations* (what
 
 ## Flow (modular, versioned)
 
-brief + constraints → trend radar + research check (dated evidence carried in the packet) → 5 divergent premises → 6 scored hook variants → selected idea + script → complete timed storyboard → verified tool adapter (dry run) → edit/export plan → deterministic QA + creative QA + repetition check → learning loop (`engine learn`).
+brief + constraints → trend radar + research check (dated evidence carried in the packet) → 5 divergent premises, each with its own production format → 6 scored hook variants → selected idea + script → complete timed storyboard → verified tool adapter (dry run) → edit/export plan → deterministic QA + creative QA + repetition check → learning loop (`engine learn`).
 
 Each LLM stage has a typed contract, a stage validator and at most two repair passes. Missing evidence, rights or approvals are never invented; the run fails with diagnostics instead.
 

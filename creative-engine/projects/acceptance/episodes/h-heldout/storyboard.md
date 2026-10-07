@@ -5,6 +5,9 @@
 **Format / platform / target:** serial_cliffhanger / multi / 28 s  
 **Bible:** inspector-v1 v1  
 
+## Production format
+(not declared; pre-format packet)
+
 ## Premise
 Stakeout: in blue-hour stillness the Inspector keeps watch over the sagging hook, declares that nothing has moved all morning, and the heap quietly grows between jump cuts; the final low shot from inside the heap shows her laying one more coat on top.
 

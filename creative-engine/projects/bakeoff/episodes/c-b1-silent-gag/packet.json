@@ -598,32 +598,7 @@
       "flagged_fields": [],
       "recurring_motifs": [
         {
-          "motif": "prop:clipboard",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
-          "motif": "prop:tape",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
-          "motif": "prop:orange",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
-          "motif": "prop:lamp",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
           "motif": "prop:safety",
-          "episodes": 3,
-          "share": 1.0
-        },
-        {
-          "motif": "prop:lanyard",
           "episodes": 3,
           "share": 1.0
         },
@@ -633,7 +608,37 @@
           "share": 1.0
         },
         {
+          "motif": "prop:lanyard",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:clipboard",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:lamp",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:orange",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:tape",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
           "motif": "prop:phone",
+          "episodes": 2,
+          "share": 0.67
+        },
+        {
+          "motif": "prop:cable",
           "episodes": 2,
           "share": 0.67
         },
@@ -644,11 +649,6 @@
         },
         {
           "motif": "prop:wall",
-          "episodes": 2,
-          "share": 0.67
-        },
-        {
-          "motif": "prop:cable",
           "episodes": 2,
           "share": 0.67
         }
@@ -671,7 +671,7 @@
     }
   ],
   "provenance": {
-    "generated_at": "2026-10-07T23:40:34Z",
+    "generated_at": "2026-10-07T23:44:32Z",
     "provider": "broker",
     "requested_model": "sonnet",
     "observed_model": "not independently observable (Agent tool; model=sonnet requested)",

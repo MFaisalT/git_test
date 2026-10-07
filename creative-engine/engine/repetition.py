@@ -59,6 +59,9 @@ def recurring_motifs(new: dict, history: list[dict], last_n: int = 6, min_share:
     def toks(p):
         hook = next((h for h in p.get("hook_variants", []) if h["id"] == p.get("selected", {}).get("hook_id")), {})
         t = {f"mechanism:{hook.get('mechanism', '')}"}
+        pf = p.get("production_format") or {}
+        if pf.get("shot_architecture"):
+            t.add(f"format:{pf.get('shot_architecture')}+{pf.get('audio_mode')}")
         for pr in p.get("continuity", {}).get("props", []):
             t |= {f"prop:{w}" for w in _norm(re.sub(r"\(.*?\)", " ", pr)) if len(w) > 3}
         if any(not d.get("on_camera", True) for s in p.get("scenes", []) for d in (s.get("dialogue") or []) if isinstance(d, dict)):

@@ -1,0 +1,22 @@
+{
+  "brief_id": "B5_format_open",
+  "title": "Format left fully open: the Inspector investigates a kitchen timer that keeps ringing with nothing in the oven",
+  "project": "acceptance",
+  "bible_ref": "inspector-v1",
+  "format": "other",
+  "platform": "instagram_reels",
+  "duration_target_s": 16,
+  "language": "English or none - the engine decides with the audio mode",
+  "objective": "Demonstrate production-format choice: the engine must pick shot architecture, audio mode and continuity reuse (same voice/location or new) that differ from the recent episodes and justify them.",
+  "constraints": [
+    "Location: the bible's shared kitchen, daytime.",
+    "No cables, sockets, tape, cones, socks, coat hooks or fridge alarms (used in earlier episodes).",
+    "Anything else (single take vs multi-scene, silent vs spoken, camera style) is the engine's call."
+  ],
+  "production_format": {},
+  "commercial": null,
+  "negative_constraints": [
+    "Do not copy any researched creator's look, catchphrase or footage.",
+    "No readable brand text in frame."
+  ]
+}

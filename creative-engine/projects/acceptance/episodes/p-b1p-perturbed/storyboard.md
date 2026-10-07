@@ -5,6 +5,9 @@
 **Format / platform / target:** spoken_episode / tiktok / 20 s  
 **Bible:** inspector-v1 v1  
 
+## Production format
+(not declared; pre-format packet)
+
 ## Premise
 To read the dark kitchen she must keep the fridge door open, but her phone is on the middle shelf charging on a lead that only reaches the socket when the door is fully swung; each time the door drifts shut the plug eases out one centimetre and the fridge begins to beep.
 

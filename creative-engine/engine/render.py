@@ -10,6 +10,7 @@ def storyboard_md(packet: dict) -> str:
     L = [f"# {sc['title']}", "", f"**Status:** {packet['status']}  ", f"**Brief:** {b['brief_id']} - {b['title']}  ",
          f"**Format / platform / target:** {b['format']} / {b['platform']} / {b['duration_target_s']} s  ",
          f"**Bible:** {packet['bible_version']['bible_id']} v{packet['bible_version']['version']}  ", "",
+         "## Production format", (f"{packet['production_format'].get('shot_architecture')} / {packet['production_format'].get('audio_mode')} / camera: {packet['production_format'].get('camera_style', '')} / reuse: {packet['production_format'].get('continuity_reuse')} / chosen by {packet['production_format'].get('chosen_by', '?')} - {packet['production_format'].get('rationale', '')}" if packet.get("production_format") else "(not declared; pre-format packet)"), "",
          "## Premise", prem.get("logline", ""), "",
          f"- Audience emotion: {prem.get('audience_emotion')}", f"- Character desire: {prem.get('character_desire')}",
          f"- Obstacle: {prem.get('obstacle')}", f"- Escalation: {prem.get('escalation')}", f"- Surprise: {prem.get('surprise')}",

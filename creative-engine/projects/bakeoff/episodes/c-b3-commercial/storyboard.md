@@ -5,6 +5,9 @@
 **Format / platform / target:** sponsored_episode / instagram_reels / 15 s  
 **Bible:** inspector-v1 v1  
 
+## Production format
+(not declared; pre-format packet)
+
 ## Premise
 In the hallway, the Inspector lays out a six-cable tangle as a police line-up and boxes the suspects in a plain organiser; the count comes out at seven, and the seventh cable runs straight into her own chest lamp.
 

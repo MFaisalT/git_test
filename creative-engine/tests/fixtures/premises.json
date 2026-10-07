@@ -1,11 +1,138 @@
 {
   "premises": [
-    {"id": "P1", "logline": "FIXTURE: the inspector cordons off a side table because a charger cable is one centimetre short, then plugs her lamp into the wrong socket.", "audience_emotion": "recognition", "character_desire": "restore order", "obstacle": "the cable physics", "escalation": "tape, cones, clipboard", "surprise": "her own lamp cable is shorter", "payoff": "she is the offender; camera sees first", "structure": "procedure then self-own", "why_send_it": "to the friend who leaves cables short", "commercial_fit": "cable accessories", "rejected_because": ""},
-    {"id": "P2", "logline": "FIXTURE alt 2", "audience_emotion": "x", "character_desire": "x", "obstacle": "x", "escalation": "x", "surprise": "x", "payoff": "x", "structure": "x", "why_send_it": "x", "rejected_because": "weaker payoff"},
-    {"id": "P3", "logline": "FIXTURE alt 3", "audience_emotion": "x", "character_desire": "x", "obstacle": "x", "escalation": "x", "surprise": "x", "payoff": "x", "structure": "x", "why_send_it": "x", "rejected_because": "needs dialogue"},
-    {"id": "P4", "logline": "FIXTURE alt 4", "audience_emotion": "x", "character_desire": "x", "obstacle": "x", "escalation": "x", "surprise": "x", "payoff": "x", "structure": "x", "why_send_it": "x", "rejected_because": "two locations"},
-    {"id": "P5", "logline": "FIXTURE alt 5", "audience_emotion": "x", "character_desire": "x", "obstacle": "x", "escalation": "x", "surprise": "x", "payoff": "x", "structure": "x", "why_send_it": "x", "rejected_because": "hand physics risk"}
+    {
+      "id": "P1",
+      "logline": "FIXTURE: the inspector cordons off a side table because a charger cable is one centimetre short, then plugs her lamp into the wrong socket.",
+      "audience_emotion": "recognition",
+      "character_desire": "restore order",
+      "obstacle": "the cable physics",
+      "escalation": "tape, cones, clipboard",
+      "surprise": "her own lamp cable is shorter",
+      "payoff": "she is the offender; camera sees first",
+      "structure": "procedure then self-own",
+      "why_send_it": "to the friend who leaves cables short",
+      "commercial_fit": "cable accessories",
+      "rejected_because": "",
+      "production_format": {
+        "shot_architecture": "single_take_static",
+        "audio_mode": "silent_ambience",
+        "camera_style": "propped phone, eye level",
+        "continuity_reuse": {
+          "voice": "none",
+          "location": "same",
+          "costume": "same"
+        },
+        "trend_refs": [],
+        "rationale": "fixture"
+      }
+    },
+    {
+      "id": "P2",
+      "logline": "FIXTURE alt 2",
+      "audience_emotion": "x",
+      "character_desire": "x",
+      "obstacle": "x",
+      "escalation": "x",
+      "surprise": "x",
+      "payoff": "x",
+      "structure": "x",
+      "why_send_it": "x",
+      "rejected_because": "weaker payoff",
+      "production_format": {
+        "shot_architecture": "single_take_moving_camera",
+        "audio_mode": "voiceover_narration",
+        "camera_style": "propped phone, eye level",
+        "continuity_reuse": {
+          "voice": "same",
+          "location": "same",
+          "costume": "same"
+        },
+        "trend_refs": [],
+        "rationale": "fixture"
+      }
+    },
+    {
+      "id": "P3",
+      "logline": "FIXTURE alt 3",
+      "audience_emotion": "x",
+      "character_desire": "x",
+      "obstacle": "x",
+      "escalation": "x",
+      "surprise": "x",
+      "payoff": "x",
+      "structure": "x",
+      "why_send_it": "x",
+      "rejected_because": "needs dialogue",
+      "production_format": {
+        "shot_architecture": "multi_scene_cut",
+        "audio_mode": "on_camera_dialogue",
+        "camera_style": "propped phone, eye level",
+        "continuity_reuse": {
+          "voice": "same",
+          "location": "same",
+          "costume": "same"
+        },
+        "trend_refs": [],
+        "rationale": "fixture"
+      }
+    },
+    {
+      "id": "P4",
+      "logline": "FIXTURE alt 4",
+      "audience_emotion": "x",
+      "character_desire": "x",
+      "obstacle": "x",
+      "escalation": "x",
+      "surprise": "x",
+      "payoff": "x",
+      "structure": "x",
+      "why_send_it": "x",
+      "rejected_because": "two locations",
+      "production_format": {
+        "shot_architecture": "jump_cut_timelapse",
+        "audio_mode": "silent_ambience",
+        "camera_style": "propped phone, eye level",
+        "continuity_reuse": {
+          "voice": "none",
+          "location": "same",
+          "costume": "same"
+        },
+        "trend_refs": [],
+        "rationale": "fixture"
+      }
+    },
+    {
+      "id": "P5",
+      "logline": "FIXTURE alt 5",
+      "audience_emotion": "x",
+      "character_desire": "x",
+      "obstacle": "x",
+      "escalation": "x",
+      "surprise": "x",
+      "payoff": "x",
+      "structure": "x",
+      "why_send_it": "x",
+      "rejected_because": "hand physics risk",
+      "production_format": {
+        "shot_architecture": "pov_handheld",
+        "audio_mode": "off_camera_dialogue",
+        "camera_style": "propped phone, eye level",
+        "continuity_reuse": {
+          "voice": "same",
+          "location": "same",
+          "costume": "same"
+        },
+        "trend_refs": [],
+        "rationale": "fixture"
+      }
+    }
   ],
-  "ranking": ["P1", "P2", "P3", "P4", "P5"],
+  "ranking": [
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5"
+  ],
   "ranking_rationale": "fixture"
 }

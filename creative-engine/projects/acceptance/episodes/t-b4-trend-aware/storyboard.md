@@ -5,6 +5,9 @@
 **Format / platform / target:** spoken_episode / youtube_shorts / 18 s  
 **Bible:** inspector-v1 v1  
 
+## Production format
+(not declared; pre-format packet)
+
 ## Premise
 Cold open on a single grey sock lying on the hallway floor under a formal case title card; the Inspector files a flat missing-persons-style report on it, and the sock she keeps 'finding' is the one clinging to the back of her own jacket.
 

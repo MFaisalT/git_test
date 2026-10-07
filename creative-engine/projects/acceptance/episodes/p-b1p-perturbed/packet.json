@@ -681,17 +681,7 @@
           "share": 0.67
         },
         {
-          "motif": "prop:inspection",
-          "episodes": 4,
-          "share": 0.67
-        },
-        {
           "motif": "mechanism:visible_problem",
-          "episodes": 4,
-          "share": 0.67
-        },
-        {
-          "motif": "prop:lamp",
           "episodes": 4,
           "share": 0.67
         },
@@ -701,12 +691,17 @@
           "share": 0.67
         },
         {
-          "motif": "prop:safety",
-          "episodes": 3,
-          "share": 0.5
+          "motif": "prop:inspection",
+          "episodes": 4,
+          "share": 0.67
         },
         {
-          "motif": "prop:orange",
+          "motif": "prop:lamp",
+          "episodes": 4,
+          "share": 0.67
+        },
+        {
+          "motif": "prop:safety",
           "episodes": 3,
           "share": 0.5
         },
@@ -717,6 +712,11 @@
         },
         {
           "motif": "prop:phone",
+          "episodes": 3,
+          "share": 0.5
+        },
+        {
+          "motif": "prop:orange",
           "episodes": 3,
           "share": 0.5
         },
@@ -744,7 +744,7 @@
     }
   ],
   "provenance": {
-    "generated_at": "2026-10-07T23:40:34Z",
+    "generated_at": "2026-10-07T23:44:32Z",
     "provider": "broker",
     "requested_model": "sonnet",
     "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
