@@ -1,0 +1,18 @@
+{
+  "scores": {"originality": 4, "hook": 3, "coherence": 3, "identity": 4, "audiovisual": 4, "feasibility": 3, "grounding": 4, "commercial_fit": 3},
+  "evidence": {
+    "originality": "The deadpan stakeout where 'No movement' is repeated while jump cuts grow the heap, ending on a low shot from inside it, is a fresh inversion of the genre, though the 'detective is the culprit' twist itself is familiar.",
+    "hook": "S1 puts four bare hooks against one buckling hook in a single wide frame with a rail creak, which is clear on mute, but the opening is static with one tick and a flat line, so it offers curiosity rather than a strong 0-2 s grab.",
+    "coherence": "The escalation and the saved clipboard tap are consistent, but the S5 reveal shows her adding only one coat, which does not prove she built the whole heap, and the Part 2 outline is muddled ('counts the coats against the coat habit on her own forearm', then re-hangs a coat on the original hook).",
+    "identity": "Aubergine jacket, chest lamp, lanyard clipboard, low bun and round glasses are repeated verbatim in every scene with a flat deadpan performance, though 'warm disappointment' is stated and never staged.",
+    "audiovisual": "Each scene specifies lighting with blue-hour key, lamp fill and contact shadows, plus layered foley such as the rail creak and sleeve thud, with no music; the S5 sound fade is evocative, but the identical S1-S4 framing leaves the visual variety thin.",
+    "feasibility": "Props, one character and the 5-unit split are within limits, but a bowed iron hook under a heap taller than her, a phone nested in the pile and an exact repeat of the S1-S4 frame will be hard for generation to hold consistently.",
+    "grounding": "The brief constraints are respected (two props, no switches, one on-camera voice, tap saved with the reason stated, cliffhanger in the last 4 s) and the rationale weighs P1 against P2 honestly, though P4 and P5 are weak alternatives.",
+    "commercial_fit": "No commercial brief and no brand marks, so neutral and compliant; the shareable 'this is you' angle and Part 2 click-through hypothesis are sound but the CTA and caption are generic."
+  },
+  "weighted_total": 3.48,
+  "pass_thresholds": {"character_intent": true, "premise_specific_payoff": true, "complete_direction": true, "commercial_fit": true},
+  "summary": "A tidy, constraint-compliant serial cliffhanger whose deadpan jump-cut escalation and inside-the-heap reveal are the real strengths. The weak points are a static, repetitive first half with a modest hook, a reveal that only partly incriminates her, and a vague Part 2 outline.",
+  "top_fix": "Make the S5 reveal incriminating beyond the single coat, for example a clear match between her forearm coat and the bottom layer of the heap, and rewrite the Part 2 outline as three concrete beats."
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->

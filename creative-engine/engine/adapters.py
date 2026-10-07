@@ -84,14 +84,14 @@ def plan(packet: dict, bible: dict | None = None, quote_credits: dict | None = N
             units.append(list(cur)); cur.clear()
     for s in scenes:
         cur.append(s)
-        if s.get("transition_out", "").lower().startswith("cut") or s.get("transition_out", "").lower() in ("hard cut", "cut to", "cut"):
-            flush()
+        if "cut" in str(s.get("transition_out", "")).lower():
+            flush()  # any cut between scenes ends a generation unit; one hard cut inside a clip must be declared via cuts_inside_clip
     flush()
-    # merge tiny trailing units into previous when under min duration
+    # merge a too-short unit into its predecessor only if that keeps the predecessor at <=1 internal cut
     out_units = []
     for u in units:
         dur = u[-1]["end_s"] - u[0]["start_s"]
-        if out_units and dur < 4:
+        if out_units and dur < 4 and sum(1 for sc in out_units[-1][:-1] if "cut" in str(sc.get("transition_out", "")).lower()) == 0:
             out_units[-1].extend(u)
         else:
             out_units.append(u)

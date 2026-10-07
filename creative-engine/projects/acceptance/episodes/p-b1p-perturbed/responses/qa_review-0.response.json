@@ -1,0 +1,18 @@
+{
+  "scores": {"originality": 4, "hook": 4, "coherence": 3, "identity": 4, "audiovisual": 4, "feasibility": 3, "grounding": 3, "commercial_fit": 3},
+  "evidence": {
+    "originality": "A phone chilling in an open fridge with a door-alarm countdown and a 'the door is lying' accusation is a genuinely different engine from B1's wrapped-cable skeleton, though 'she is secretly the culprit' is still the house formula.",
+    "hook": "Frame one pairs an odd, instantly readable image (phone on a taut lead inside the fridge) with the first beep and a deadpan accusation of the door, which stops the scroll, but the silhouette-behind-the-door staging slightly delays seeing her face.",
+    "coherence": "The beep-to-reveal-to-'Under review' chain mostly holds, but the one-centimetre cable fault is quietly dropped, the 'to cool the overheating' motive never reaches screen, and the rig switches from a propped phone (S1) to an operator-held handheld while the flatmate is also behind the camera.",
+    "identity": "Aubergine jacket, round glasses, chest lamp, bun, flat bureaucratic whisper and the single two-finger clipboard tap are restated consistently and the 'warm disappointment' break fits the established persona.",
+    "audiovisual": "Sound is carefully built (compressor hum, beep accelerating to a continuous alarm, slipper shuffle, plug click) and the two-source lighting is specified per scene, with the unresolved alarm over the held frame as a strong ending, though 'Wedged.' is a weak line.",
+    "feasibility": "Five scenes in one 20-second generation unit with fine beats (beam sliding onto the phone, plug easing out by a centimetre, glasses slipping a notch, carton wedging the door) are hard for current video models to hit reliably, and the physical logic of a wedged door seating the plug is fragile.",
+    "grounding": "The two-prop limit, off-camera flatmate, two-source lighting and banned B1 devices are respected and declared in continuity, but the clipboard tap remains in the bible-driven ending and the 'door alarm' physics is plausible rather than anchored in any stated reference.",
+    "commercial_fit": "The brief has no commercial, and the unbranded carton and jar, a send-to-a-friend CTA and the AI disclosure line are in order, but there is no product or platform-specific lever beyond a generic share prompt."
+  },
+  "weighted_total": 3.55,
+  "pass_thresholds": {"character_intent": true, "premise_specific_payoff": true, "complete_direction": true, "commercial_fit": true},
+  "summary": "A distinctive fridge-alarm ticking-clock episode with a strong first image, a consistent Inspector and well-layered sound design, whose payoff and ending land. It is weakened by a dropped cable-fault thread, an unexplained culprit motive, a rig contradiction and several micro-beats that will be hard to generate in one continuous unit.",
+  "top_fix": "Make the culprit motive visible and fix the rig contradiction: add a one-beat visual or spoken cue (e.g. a post-it or her whisper 'overheating') so the phone-in-fridge reveal is earned, and state a single consistent camera setup with the flatmate's position."
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->

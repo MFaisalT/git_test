@@ -1,0 +1,77 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "logline": "Cold open on a single grey sock lying on the hallway floor under a formal case title card; the Inspector files a flat missing-persons-style report on it, and the sock she keeps 'finding' is the one clinging to the back of her own jacket.",
+      "audience_emotion": "Amused recognition and a small rush of superiority, because the viewer spots the culprit before she does.",
+      "character_desire": "To close Case 11 and return the sock to a lost-property hook so the hallway is in order.",
+      "obstacle": "Every time she places the sock on its hook and steps away, it is back on the floor; she assumes interference.",
+      "escalation": "Three placements in 18 seconds: floor, then hook, then boxed on the shoe shelf. Each time she turns away and the sock is back, her verdicts get more formal ('Repeat offender. Repeat.'). Each turn of her back shows a little more of the sock's grey toe at the nape of her jacket.",
+      "surprise": "The camera drifts behind her on the third turn and the sock is statically clinging to the back of the aubergine jacket, riding with her. She places it, turns, and the clinging sock drops again.",
+      "payoff": "Single slow two-finger clipboard tap, then 'The suspect is on my back. The suspect is me.' She peels it off, hangs it on the hook, and as she steps back it clings to her jacket again. The rule lands: she is the culprit and the camera knew first.",
+      "structure": "Cold open on object, then a rule-of-three loop that ends on a visual reveal, finishing on a repeat of the opening pose; the sock reappears at the end.",
+      "why_send_it": "You send this to the flatmate whose laundry is always somewhere it should not be: 'it's following you, not me.' The 2-second title-card hook is built for a quick share.",
+      "commercial_fit": "None (commercial null). Trend use: T-20261007-05 adapted as a silent close shot of the micro-fault with a formal case title card in the first 2 seconds and no spoken setup; T-20261007-02 adapted as the Inspector's own fault hinted in the back of frame before she notices. Both adapt mechanism only; no creator look, line or footage.",
+      "rejected_because": ""
+    },
+    {
+      "id": "P2",
+      "logline": "Seated on the hallway bench beneath the coat hooks, the Inspector adjusts an imaginary evidence lapel mic and gives grave testimony about the sock that keeps reappearing, until her own statement convicts her.",
+      "audience_emotion": "Dry delight at over-seriousness collapsing into a small, human confession.",
+      "character_desire": "To have her sworn account of the sock accepted as the official record.",
+      "obstacle": "Her own testimony keeps contradicting itself: each fact she states about where the sock was last seen turns out to be a place she was standing.",
+      "escalation": "Statement 1: the sock was on the floor by the hooks. Statement 2: it was on the bench beside her. Statement 3: it was warm. Each fact narrows toward her; she pauses a beat longer each time but delivers each line with more certainty.",
+      "surprise": "On 'last seen with its pair,' she glances down and finds the matching sock on her own left foot, with the other foot bare in a shoe. She has been wearing one sock for days and re-finding the other.",
+      "payoff": "Slow two-finger clipboard tap, then 'Withdrawn. The witness is also the suspect.' She unclips the imaginary mic with great ceremony and slides her bare foot back into the shoe. Rule delivered: she is the culprit and the camera, tilting to her feet a half second early, noticed first.",
+      "structure": "Direct-address testimony monologue with a slow confession reversal; one locked mid shot, with a single late tilt-down as the reveal.",
+      "why_send_it": "You send this to the colleague who tells long, solemn stories about trivial things: 'this is you giving evidence about the stapler.' It works as a self-aware, low-stakes share.",
+      "commercial_fit": "None (commercial null). Trend use: T-20261007-04 adapted only as the imaginary lapel-mic and 'sworn testimony' staging with new wording (no meme phrase, no documentary title); T-20261007-03 adapted as formal incident language applied to a trivial act. Rights do_not_copy honoured: mechanism only.",
+      "rejected_because": "Strongest as a monologue, but it relies on a single speaking beat and reuses the sit-and-address layout of the earlier side-table episode, so the visual language is less fresh than P1."
+    },
+    {
+      "id": "P3",
+      "logline": "Case file number 4, stand-alone: the Inspector reviews three numbered sightings of one sock on three different coat hooks, each announced by a day card, and concludes the sightings are all hers.",
+      "audience_emotion": "Comfortable ritual and anticipation: viewers settle into the pattern, then enjoy its snap.",
+      "character_desire": "To establish a clean, numbered chain of evidence for the case file.",
+      "obstacle": "The chain refuses to hold: sighting 1 and sighting 3 are the same hook, and the sock never travels on its own.",
+      "escalation": "Sighting 1: sock on the far left hook. Sighting 2: on the middle hook. Sighting 3: on the near hook. Her walk to each hook is the same count of steps, and her verdicts compress: 'Sighting one. Sighting two. Sighting three.' The routine speeds up.",
+      "surprise": "Sighting 3 shows her hanging her own bag on a hook. She hangs the sock with it, because it was in her pocket flap; the three 'sightings' are her three trips through the hallway that morning, replayed side by side.",
+      "payoff": "She stops, taps the clipboard once, and says 'All three sightings are mine.' She closes the case, hangs the sock on the end hook, and walks off; the final card reads 'Next case', yet the episode is complete. Rule delivered: she is the culprit and the camera showed her carrying it in shot one.",
+      "structure": "Numbered case-file series entry with a rule-of-three, then a pattern-break, and a soft series tag at the end; the episode stands alone.",
+      "why_send_it": "You send this to the friend who loves a recurring bit and would want to follow the Inspector's case files; 'case 4' makes it easy to say 'start from case 1'.",
+      "commercial_fit": "None (commercial null). Trend use: T-20261007-01 adapted by packaging as a numbered case in an episodic container; the episode must stand alone without prior cases, so the numbering is a tag, not a dependency. Free to adapt; no protected assets.",
+      "rejected_because": "Series packaging adds value only if the platform feature and numbering are used; as a premise it repeats the rule-of-three loop shape of P1 with less visual surprise."
+    },
+    {
+      "id": "P4",
+      "logline": "In a slow walking-and-reading shot down the hallway, the Inspector delivers a formal incident bulletin on the sock ('last seen near the hooks, lightly worn'), and the description of the culprit's pocket flap matches her own jacket.",
+      "audience_emotion": "Mock-solemn tension building into a pleased, knowing laugh at the self-incrimination.",
+      "character_desire": "To issue an accurate public bulletin so the sock can be recovered.",
+      "obstacle": "Each detail in the bulletin is a physical description of something on her: a flap pocket, a slight lean, a bun.",
+      "escalation": "The walk takes her past three hooks. Each step, a crisper detail: 'Four-pocket outerwear. Low profile. Glasses.' The camera follows at a measured pace, noticing her reflection in the glass door panel.",
+      "surprise": "The final detail is 'identifying mark: a sock in the left pocket flap', and the sock's toe is visible, poking out, in the last wide frame.",
+      "payoff": "Two-finger clipboard tap, then 'Bulletin withdrawn. The suspect is the issuer.' She tucks the toe back in, resumes the walk, and the sock slides out again behind her. Rule delivered: she is the culprit and the camera noticed first.",
+      "structure": "Moving tracking walk and read, with a descriptive list that builds to a self-match; one continuous shot.",
+      "why_send_it": "You send this to the sibling who narrates everyone's habits in a police-report voice, as a gentle tease.",
+      "commercial_fit": "None (commercial null). Trend use: T-20261007-03 adapted as formal incident language applied to a trivial act, in the Inspector's own composed voice, without any running, call-out wording or creator identity. Rights do_not_copy honoured: mechanism only.",
+      "rejected_because": "The self-match reveal is the same pocket-clue idea as P1 delivered with less contrast, and a continuous tracking shot is harder to hold cleanly in 18 seconds."
+    },
+    {
+      "id": "P5",
+      "logline": "A quiet sting: the Inspector sets down a decoy sock on a coat hook, retreats out of frame, and the camera holds on the decoy alone for a long stillness while the sound of a patient observer fills the hallway.",
+      "audience_emotion": "Suspense turned absurd: the viewer waits with her, and the wait becomes the joke.",
+      "character_desire": "To catch the sock in the act of moving without being seen.",
+      "obstacle": "Surveillance requires leaving the scene, but she is the only person who ever enters it.",
+      "escalation": "The stillness stretches: a faint clipboard click from off-frame, a shoe shuffle, a held breath. The sock does not move. She re-enters twice to check, each time adjusting it slightly, which is the movement she is trying to catch.",
+      "surprise": "On her final check, she sets her real sock beside the decoy: the second sock comes out of her jacket as she reaches for the hook. She has introduced the extra sock herself.",
+      "payoff": "She taps the clipboard slowly once and says 'Two socks. One scene. Both mine.' Rule delivered: she is the culprit and the unattended camera was watching all along.",
+      "structure": "Observer stillness with a deferred reveal: long held frame, short re-entries, then a quick hand-over of the second sock; ends on an open-loop final held frame.",
+      "why_send_it": "You send this to the friend who can never leave things alone to 'see what happens'; the held frame is the whole mood.",
+      "commercial_fit": "None (commercial null). No radar entry is used for the main device; T-20261007-02 is used only lightly (the extra sock visible in her pocket flap in frame one). Free to adapt; no copied assets.",
+      "rejected_because": "The suspense mood is nice, but it echoes the earlier stakeout episode's held-frame stillness and the extra-sock reveal is the weakest of the five."
+    }
+  ],
+  "ranking": ["P1", "P2", "P3", "P4", "P5"],
+  "ranking_rationale": "P1 is strongest: it has an immediate visual hook that works in the first two seconds without speech, a clean escalation, and a camera-first reveal that carries the bible rule in a single legible image. P2 follows for its distinct performance mode (direct testimony) and clear confession reversal, while P3 and P4 are coherent but lean on repeating the rule-of-three or pocket-clue ideas. P5 is last because its stillness echoes an earlier episode and its reveal is the least surprising. All five end with the Inspector as culprit, and the trend entries used are cited only as adapted mechanisms."
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->

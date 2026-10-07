@@ -160,3 +160,27 @@ class TestSelection(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestFormatAwareAndUnits(unittest.TestCase):
+    def test_cliffhanger_needs_turn_not_payoff(self):
+        p = valid_packet(); p["brief"]["format"] = "serial_cliffhanger"
+        p["script"]["beats"] = [{"beat": "a", "function": "hook"}, {"beat": "b", "function": "escalation"}, {"beat": "c", "function": "turn"}]
+        from engine.validators import validate_selection
+        self.assertNotIn("SCRIPT_BEATS", codes(validate_selection(p)))
+        p["script"]["beats"][2]["function"] = "button"
+        self.assertIn("SCRIPT_BEATS", codes(validate_selection(p)))
+
+    def test_unit_with_two_cuts_rejected(self):
+        p = valid_packet(); p["scenes"][0]["transition_out"] = "hard jump cut"; p["scenes"][1]["transition_out"] = "hard jump cut"
+        p["tool_mapping"]["units"] = [{"generation_unit": "U1", "scene_ids": ["S1", "S2", "S3"], "model": "seedance_2_0_mini", "controls": {"duration": 12}, "prompt_text": "x", "manual_steps": [], "gaps": []}]
+        self.assertIn("TOOL_UNIT_CUTS", codes(validate_tool_mapping(p)))
+
+    def test_adapter_splits_on_jump_cuts(self):
+        from engine.adapters import plan
+        p = valid_packet(); p["scenes"][0]["transition_out"] = "hard jump cut"; p["scenes"][1]["transition_out"] = "hard jump cut"
+        for s in p["scenes"]:
+            s["end_s"] = s["start_s"] + 4  # make each scene 4 s so no merge is forced
+        p["scenes"][1]["start_s"] = 4; p["scenes"][1]["end_s"] = 8; p["scenes"][2]["start_s"] = 8; p["scenes"][2]["end_s"] = 12
+        units = plan(p, bible())["units"]
+        self.assertEqual(len(units), 3)

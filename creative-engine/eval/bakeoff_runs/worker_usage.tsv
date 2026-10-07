@@ -26,3 +26,9 @@ P	B1p	hooks	sonnet	69957	21912	3
 H	heldout	premises	sonnet	80386	103637	3
 H	heldout	hooks	sonnet	71699	29464	3
 P	B1p	script_storyboard	sonnet	79613	53601	3
+P	B1p	script_storyboard-repair	sonnet	72263	9104	3
+trends	acceptance	refresh	sonnet	77139	48521	13
+H	heldout	script_storyboard	sonnet	79110	45667	3
+P	B1p	qa_review	sonnet	76031	20598	3
+H	heldout	qa_review	sonnet	76109	18862	3
+T	B4	premises	sonnet	79006	60972	3

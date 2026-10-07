@@ -57,6 +57,10 @@ def _stage_check(stage: str, out: dict, brief: dict, bible: dict | None = None) 
                  "asset_rights": out.get("asset_rights", []), "export": out.get("export", {}), "tool_mapping": {"units": []}, "status": "draft",
                  "premises": [], "hook_variants": [], "selected": {}}
         validate_timing(shell, rep); validate_direction(shell, rep); validate_rights(shell, rep); validate_continuity(shell, bible, rep)
+        funcs = [b.get("function") for b in (out.get("script") or {}).get("beats", [])]
+        need = "turn" if brief.get("format") == "serial_cliffhanger" else "payoff"
+        if "hook" not in funcs or need not in funcs:
+            rep.error("SCRIPT_BEATS", f"script beats need 'hook' and '{need}' for format {brief.get('format')}")
         rep.findings = [f for f in rep.findings if f.code not in ("TOOL_UNMAPPED_SCENES",)]
         for k in ("identity_anchors", "costume", "props", "notes"):
             if k not in (out.get("continuity") or {}):
@@ -131,8 +135,10 @@ class Pipeline:
         ledger = self.store.read_ledger(self.project, "trends")
         fresh, stale = select_relevant(brief, ledger)
         trends_text = render_for_prompt(fresh, stale) if ledger else ""
-        st["trends_used"] = [e["trend_id"] for e in fresh]
-        st["trends_snapshot_age_days"] = (min(__import__("engine.trends", fromlist=["age_days"]).age_days(e) for e in fresh) if fresh else None)
+        if "premises" not in st["stages"]:  # record only what the generating stage actually saw; never retrofit on resume
+            st["trends_used"] = [e["trend_id"] for e in fresh]
+            st["trends_snapshot_age_days"] = (min(__import__("engine.trends", fromlist=["age_days"]).age_days(e) for e in fresh) if fresh else None)
+        st.setdefault("trends_used", []); st.setdefault("trends_snapshot_age_days", None)
         try:
             prem = self._run_stage("premises", packet_id, brief, bible, {}, history_fp, st, trends_text)
             hooks = self._run_stage("hooks", packet_id, brief, bible, {"premises": prem}, history_fp, st, trends_text)

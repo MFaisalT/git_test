@@ -1,2 +1,3 @@
 fix: prop matching = word-subset ignoring parentheticals; stage check now includes continuity (2026-10-07, after B2 false positive)
 tuning 2 (post bake-off, pre-freeze): craft-rules block added to script_storyboard.md; COMMERCIAL_NO_PLATFORM_TOOL warning added. FREEZE after this commit; held-out brief authored independently after freeze.
+post-freeze bug fixes exposed by held-out test (no prompt changes): SCRIPT_BEATS format-aware (serial_cliffhanger needs 'turn', not 'payoff') + moved into stage check; adapter splits units on any 'cut' transition; TOOL_UNIT_CUTS gate added. Held-out creative output left unchanged; re-finalised with the fixed gates.

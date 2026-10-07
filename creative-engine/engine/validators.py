@@ -281,6 +281,10 @@ def validate_tool_mapping(packet: dict, rep: Report | None = None) -> Report:
             rep.error("TOOL_EMPTY_PROMPT", "prompt_text is empty", p)
         if "json" in u.get("prompt_text", "").lower()[:40]:
             rep.warn("TOOL_JSON_IN_PROMPT", "prompt_text appears to embed JSON; Higgsfield prompt is free text, not a native JSON payload", p)
+        unit_scenes = [scene_by_id[sid] for sid in u.get("scene_ids", []) if sid in scene_by_id]
+        internal_cuts = sum(1 for sc in unit_scenes[:-1] if "cut" in str(sc.get("transition_out", "")).lower()) + sum(int(sc.get("cuts_inside_clip", 0) or 0) for sc in unit_scenes)
+        if internal_cuts > 1:
+            rep.error("TOOL_UNIT_CUTS", f"generation unit contains {internal_cuts} cuts; verified tools handle at most one hard cut per clip - split into more units", p)
         for sid in u.get("scene_ids", []):
             if sid not in scene_ids:
                 rep.error("TOOL_UNKNOWN_SCENE", f"scene {sid} not in packet", p)
@@ -367,9 +371,12 @@ def validate_selection(packet: dict, rep: Report | None = None) -> Report:
         if h["premise_id"] not in pids:
             rep.error("HOOK_ORPHAN", f"hook {h['id']} references unknown premise {h['premise_id']}")
     funcs = [b["function"] for b in packet.get("script", {}).get("beats", [])]
-    for need in ("hook", "payoff"):
+    needs = ["hook"] + (["turn"] if packet.get("brief", {}).get("format") == "serial_cliffhanger" else ["payoff"])
+    for need in needs:
         if need not in funcs:
-            rep.error("SCRIPT_BEATS", f"script beats lack a '{need}' beat")
+            rep.error("SCRIPT_BEATS", f"script beats lack a '{need}' beat (format {packet.get('brief', {}).get('format')})")
+    if packet.get("brief", {}).get("format") == "serial_cliffhanger" and "payoff" in funcs:
+        rep.warn("CLIFFHANGER_RESOLVED", "serial_cliffhanger script contains a payoff beat; confirm the episode really ends unresolved")
     return rep
 
 
