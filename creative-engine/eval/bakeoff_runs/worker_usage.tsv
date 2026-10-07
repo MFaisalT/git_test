@@ -1,0 +1,13 @@
+arch	brief	stage	requested_model	subagent_tokens	duration_ms	tool_uses
+C	B1	premises	sonnet	73089	69920	3
+C	B2	premises	sonnet	70291	44450	3
+C	B3	premises	sonnet	71746	56775	3
+C	B1	hooks	sonnet	70392	26032	3
+C	B2	hooks	sonnet	69314	19204	3
+C	B3	hooks	sonnet	69698	18928	3
+C	B1	script_storyboard	sonnet	77740	43330	3
+C	B2	script_storyboard	sonnet	79882	61267	3
+C	B3	script_storyboard	sonnet	77012	37622	3
+C	B1	qa_review	sonnet	73367	17586	3
+C	B2	qa_review	sonnet	74392	15681	3
+C	B3	qa_review	sonnet	73676	16648	3

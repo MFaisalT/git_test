@@ -1,0 +1,8 @@
+{
+  "hook_variants": [
+    {"id": "H1", "premise_id": "P1", "first_frame": "FIXTURE: taped-off side table, cable dangling one centimetre from the socket", "first_line_or_action": "inspector lamp beam lands on the gap", "mechanism": "visible_problem", "score": 8, "rationale": "fixture"},
+    {"id": "H2", "premise_id": "P1", "first_frame": "fixture", "first_line_or_action": "fixture", "mechanism": "recognition", "score": 6, "rationale": "fixture"},
+    {"id": "H3", "premise_id": "P2", "first_frame": "fixture", "first_line_or_action": "fixture", "mechanism": "curiosity_gap", "score": 5, "rationale": "fixture"}
+  ],
+  "selected": {"premise_id": "P1", "hook_id": "H1", "rationale": "fixture selection"}
+}

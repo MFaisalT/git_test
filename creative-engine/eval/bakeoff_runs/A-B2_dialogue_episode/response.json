@@ -1,0 +1,108 @@
+{
+  "selected_premise": {
+    "logline": "The Inspector treats a friend's 'seen' with no reply as a failure of public infrastructure, until an off-camera voice reminds her she has left her own sister on seen since Tuesday.",
+    "payoff": "She pronounces the case closed, then quietly starts typing a reply to her sister, committing the very fault she just prosecuted."
+  },
+  "hook": {
+    "first_frame": "Tight on the Inspector's composed face under a desk lamp, a phone held up like evidence, its screen a blank glow with no readable text.",
+    "first_line_or_action": "Case file: the Seen."
+  },
+  "script": {
+    "title": "The Seen",
+    "synopsis": "In a tidy study, the Inspector formally investigates a message that was delivered, read, and never answered. She declares it negligence. An off-camera voice points out her own unanswered message from her sister. She deflects, closes the case, and is caught drafting a reply.",
+    "beats": [
+      {"beat": "Inspector opens the case file on a 'seen' with no reply, phone held as evidence.", "function": "hook"},
+      {"beat": "She lays out the timeline and calls it a failure of infrastructure.", "function": "setup"},
+      {"beat": "Her certainty grows as she sets the evidence tag and marks the offender negligent.", "function": "escalation"},
+      {"beat": "Off-camera voice: her sister messaged Tuesday and she has seen it.", "function": "turn"},
+      {"beat": "She deflects: 'different, I was drafting', then stamps the case closed.", "function": "payoff"},
+      {"beat": "She slips out to the balcony and starts typing, guilty and composed.", "function": "button"},
+      {"beat": "Direct line to the viewer: who has been leaving you on seen? Follow for the next case.", "function": "cta"}
+    ],
+    "dialogue": [
+      {"speaker": "Inspector", "line": "Case file: the Seen. Delivered at noon. Read at twelve-oh-one. No reply.", "on_camera": true},
+      {"speaker": "Inspector", "line": "Read in a minute. Ignored all day. This is a failure of infrastructure.", "on_camera": true},
+      {"speaker": "Off-camera voice", "line": "Inspector. Your sister messaged. Tuesday. You've seen it.", "on_camera": false},
+      {"speaker": "Inspector", "line": "That is different. I was drafting.", "on_camera": true},
+      {"speaker": "Inspector", "line": "Case closed. Who's been leaving you on seen? Follow.", "on_camera": true}
+    ],
+    "caption_text": "Case file: the Seen. Who's leaving YOU on seen?",
+    "disclosure_line": "AI-generated characters and voices. Fictional scenario."
+  },
+  "scenes": [
+    {
+      "scene_id": "S1",
+      "start_s": 0,
+      "end_s": 5,
+      "location": "The Inspector's study: a neat wooden desk with a green banker's lamp, a corkboard behind her",
+      "action": "She holds the phone up level with her eyes like an exhibit, then lays it flat on a labelled evidence card and taps a pen beside it, reciting the timeline.",
+      "performance": "Calm, clipped, officially grave; every word delivered like a charge sheet.",
+      "microexpression": "One eyebrow lifts at 'No reply'; a tiny tightening of the jaw.",
+      "dialogue": ["Case file: the Seen. Delivered at noon. Read at twelve-oh-one. No reply."],
+      "camera": {"shot": "Medium close-up, centered, phone in foreground", "lens": "50mm", "movement": "Slow push-in of a few centimetres"},
+      "lighting": "Warm key from the banker's lamp, cool soft fill from a window, gentle shadow on the corkboard",
+      "environment": "Corkboard with unreadable index cards and red string, a mug of pens, a brass desk bell; phone screen shows only abstract blank glow, no logos or text",
+      "sound": {"ambience": "quiet room tone, faint clock tick", "foley": ["pen tap on card", "phone set down on wood"], "music": "none"},
+      "transition_out": "Hard cut on the pen tap to a slightly tighter angle",
+      "props_from_frame_one": ["phone", "evidence card", "pen", "banker's lamp", "corkboard", "brass desk bell"],
+      "cuts_inside_clip": 1
+    },
+    {
+      "scene_id": "S2",
+      "start_s": 5,
+      "end_s": 10,
+      "location": "The Inspector's study, same desk",
+      "action": "She pins a paper tag marked with a simple clock icon to the corkboard, then turns back to camera and rings the desk bell once for emphasis.",
+      "performance": "Rising righteous certainty, still composed, a touch theatrical on 'infrastructure'.",
+      "microexpression": "Nostrils flare slightly with indignation; eyes narrow, then a satisfied small nod.",
+      "dialogue": ["Read in a minute. Ignored all day. This is a failure of infrastructure."],
+      "camera": {"shot": "Close-up, slightly lower angle for authority", "lens": "50mm", "movement": "Static, with a tiny handheld settle on the bell ring"},
+      "lighting": "Same warm lamp key, slightly more contrast on her face",
+      "environment": "Same study; the tagged corkboard now visible over her shoulder",
+      "sound": {"ambience": "room tone, clock tick", "foley": ["pin pressed into cork", "single bell ring"], "music": "none"},
+      "transition_out": "Cut on the lingering bell ring to the off-camera interruption",
+      "props_from_frame_one": ["paper tag", "pin", "brass desk bell", "phone"],
+      "cuts_inside_clip": 1
+    },
+    {
+      "scene_id": "S3",
+      "start_s": 10,
+      "end_s": 15,
+      "location": "The Inspector's study, same desk",
+      "action": "An off-camera voice speaks; the Inspector freezes mid-gesture, glances down at her own phone lighting up beside the case file, then recovers and straightens her papers.",
+      "performance": "Sudden stillness, then stiff dignified deflection; speaks too quickly on 'drafting'.",
+      "microexpression": "Eyes flick sideways and down; a swallow; mouth presses thin before the excuse.",
+      "dialogue": ["Off-camera voice: Inspector. Your sister messaged. Tuesday. You've seen it.", "Inspector: That is different. I was drafting."],
+      "camera": {"shot": "Medium close-up, eye level", "lens": "50mm", "movement": "Slow creeping push-in as she freezes"},
+      "lighting": "Phone glow adds a cool pool under her chin against the warm lamp",
+      "environment": "Same study; a second small tag labelled with a heart icon is visible, curling off the corkboard edge",
+      "sound": {"ambience": "room tone, clock tick, pause in sound as she freezes", "foley": ["phone buzz", "papers squared against desk"], "music": "none"},
+      "transition_out": "Match cut on her turning away from desk toward the balcony door",
+      "props_from_frame_one": ["phone", "case file", "heart-icon tag"],
+      "cuts_inside_clip": 0
+    },
+    {
+      "scene_id": "S4",
+      "start_s": 15,
+      "end_s": 20,
+      "location": "Small balcony outside the study, dusk light, city rooftops blurred behind",
+      "action": "She steps out, stamps 'CLOSED' on the case card held in one hand, then lifts the phone and begins typing a reply with one finger, glancing at the lens as she speaks.",
+      "performance": "Dry composure cracking into a faint guilty smile; the call to action is delivered straight to viewer.",
+      "microexpression": "A tiny sheepish lip twitch while typing; eyes meet the lens with conspiratorial calm.",
+      "dialogue": ["Case closed. Who's been leaving you on seen? Follow."],
+      "camera": {"shot": "Medium shot to close-up, eye level, through the open balcony door frame", "lens": "35mm", "movement": "Gentle slow push-in, holding on her face at the final word"},
+      "lighting": "Soft golden-blue dusk key, practical warm glow from the study behind her",
+      "environment": "Balcony railing, a potted plant, blurred skyline with no readable signage",
+      "sound": {"ambience": "soft city air, distant traffic hush", "foley": ["rubber stamp thud", "light tapping on phone glass"], "music": "none"},
+      "transition_out": "End on held final frame",
+      "props_from_frame_one": ["phone", "case card", "rubber stamp"],
+      "cuts_inside_clip": 0
+    }
+  ],
+  "continuity": {
+    "identity_anchors": "Woman in her late 30s, dark hair pulled into a tight low bun, sharp composed expression, small round tortoiseshell glasses, same face and voice throughout.",
+    "costume": "Charcoal tailored blazer over a cream blouse, thin dark tie loosened by one notch from S3 onward, small brass lapel pin.",
+    "props": ["phone with blank abstract screen", "evidence card", "brass desk bell", "paper tags", "rubber stamp", "banker's lamp"],
+    "notes": "Only the Inspector appears on camera; the second voice is off-camera and unseen. Two locations only: study and balcony. No real app logos or readable UI text; phone screens show only abstract glow. No statistics about messaging behaviour are stated. Speech totals roughly 47 words across 20 seconds, around 2.4 words per second."
+  }
+}

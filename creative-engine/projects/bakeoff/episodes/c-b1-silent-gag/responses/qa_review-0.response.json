@@ -1,0 +1,18 @@
+{
+  "scores": {"originality": 4, "hook": 4, "coherence": 4, "identity": 4, "audiovisual": 4, "feasibility": 3, "grounding": 4, "commercial_fit": 4},
+  "evidence": {
+    "originality": "The self-inflicted cause being a tidy-wrapping habit, with the culprit hidden in plain sight and a compulsive re-tie relapse, is a specific, fresh twist on the familiar 'too short cable' joke.",
+    "hook": "Frame one shows both the one-centimetre gap and the cinched tie, so a muted viewer is ahead of the character from second 0, though the tie is a small prop that may read weakly on a phone screen.",
+    "coherence": "Cause, reveal, fix and relapse chain cleanly into the loop and the tie stays centre frame throughout, with only minor friction in S4 where she plugs in, re-ties and then must unplug to restore the gap.",
+    "identity": "Anchors (glasses, straight brows, aubergine jacket, chest lamp, lanyard) recur in every scene and the neutral-to-warm-disappointment microexpression is the actual turn of the gag.",
+    "audiovisual": "Every scene specifies lens, rig, lighting, ambience and named foley with no dialogue, and the sound design (tie rattle, tape tear, click) carries the gag well, though S4 adds a 'charging chime' that sits slightly outside the foley-only brief.",
+    "feasibility": "Twelve seconds in one uncut clip packs tape-measuring, taping, crouching, finger-tracing, cutting, plugging, re-tying and returning to the exact opening pose, which is very dense for a generator and risks hand, cable and tie-legibility drift.",
+    "grounding": "It respects single location, zero dialogue, no cuts inside clips, unbranded props and a loop ending, and the physical logic of a tie bunching cable to cost a centimetre is plausible enough.",
+    "commercial_fit": "With no commercial brief it correctly stays brand-free, has a clear send-to-a-friend share motive and a disclosure line, and the caption 'Case closed. (Again.)' suits Reels."
+  },
+  "weighted_total": 3.90,
+  "pass_thresholds": {"character_intent": true, "premise_specific_payoff": true, "complete_direction": true, "commercial_fit": true},
+  "summary": "A tidy, well-constructed loop gag whose fair-play reveal, character-driven payoff and complete audiovisual direction make it genuinely shareable. The main risk is execution: too many fine-motor beats and a small key prop in 12 uncut seconds.",
+  "top_fix": "Cut or merge beats to reduce fine-motor load in the single clip (for example drop the tape measure or the orange tag) and make the white tie larger or higher-contrast so it reads at phone size."
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->

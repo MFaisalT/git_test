@@ -1,0 +1,18 @@
+{
+  "scores": {"originality": 4, "hook": 4, "coherence": 3, "identity": 4, "audiovisual": 4, "feasibility": 3, "grounding": 4, "commercial_fit": 4},
+  "evidence": {
+    "originality": "Cordoning off a 'seen' with crime-scene tape and escalating delay to negligence to dereliction in an ever-calmer voice, then reversing onto her own taped phone, is a fresh, specific take rather than a generic texting joke.",
+    "hook": "The first line names the viewer's exact guilt ('Everyone who leaves a friend on seen is a suspect') over an instantly legible taped-phone image, though the planted second phone is half out of frame and the opening line is a flat statement, not a question or a surprise.",
+    "coherence": "The escalation, the friend's Saturday question and the 'Inconclusive' verdict lead cleanly to the reveal, but the second phone goes from face-down in S4 to face-up and glowing in S5, and the friend's closing 'my sixth one' is ambiguous about whose messages are unanswered.",
+    "identity": "The glasses, aubergine jacket, chest lamp, lanyard clipboard, deadpan flat delivery and the single two-finger tap are held consistently across all five scenes, and the warm-disappointment break fits the bible's tone.",
+    "audiovisual": "Each scene specifies lighting, foley (tape peel, clipboard knock), room tone, voice placement and captions, and the camera slide to the second phone makes the payoff a visual beat, though there is no music or sonic sting at the button.",
+    "feasibility": "A single continuous 20 s unit with an in-shot hand-pushed slider move, a prop that flips state mid-take, a near-silent mid-air tape hold and a precise 40 cm slide are risky for current video generation and will likely need takes or a fallback.",
+    "grounding": "There are no invented statistics, no real app logos or readable UI (blank grey bubbles and a generic tick glyph), two locations at most (one used), and one on-camera speaker with the second voice off-camera, all within the brief's constraints.",
+    "commercial_fit": "The brief has no commercial and the packet correctly adds none, and the share-driven CTA ('send this to the friend you left on seen') and follow prompt match the stated objective and platform."
+  },
+  "weighted_total": 3.75,
+  "pass_thresholds": {"character_intent": true, "premise_specific_payoff": true, "complete_direction": true, "commercial_fit": true},
+  "summary": "A distinctive, shareable premise with a strong accusation-to-confession reversal, consistent character identity and thorough audiovisual direction. It is weakened by a prop-state inconsistency between S4 and S5, a slightly ambiguous button line, and a continuous-take slider move that carries generation risk.",
+  "top_fix": "Make the second phone's state consistent (face-down or face-up in both S4 and S5) and sharpen the final line so it clearly means 'you have left me unanswered six times', or else split the S4 slide into a separate generation unit to reduce take risk."
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->

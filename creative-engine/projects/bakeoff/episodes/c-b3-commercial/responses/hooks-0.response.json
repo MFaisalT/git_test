@@ -1,0 +1,64 @@
+{
+  "hook_variants": [
+    {
+      "id": "H1",
+      "premise_id": "P1",
+      "first_frame": "Eye-level, formal framing of a hallway floor: six cables fanned out in a neat police line-up under orange tape, a plain unbranded organiser box open beside them, the Inspector's aubergine-jacketed shins and lamp strap just in frame.",
+      "first_line_or_action": "She clicks the lamp on, sweeps it down the row of cables one by one, and says flatly: 'Suspects: six.'",
+      "mechanism": "visible_problem",
+      "score": 8,
+      "rationale": "The cordoned cable line-up reads muted in one second as a absurdly formal tidy-up, and the 'six' sets up the count that will not reconcile, though the problem is implied rather than yet visible."
+    },
+    {
+      "id": "H2",
+      "premise_id": "P1",
+      "first_frame": "Tight on the Inspector's gloved fingers dropping the sixth cable into the open box, lid hovering; a seventh cable end is visibly lying on the floor beside it, trailing off-frame behind her.",
+      "first_line_or_action": "She counts aloud with a slow finger-point: 'Count: seven.' Her brow lifts a fraction.",
+      "mechanism": "curiosity_gap",
+      "score": 8,
+      "rationale": "Opening on the mismatch (a full box and one cable left over, its source off-frame) gives a precise, specific problem and a question the viewer wants answered, but spends the line that carries the count on frame one."
+    },
+    {
+      "id": "H3",
+      "premise_id": "P1",
+      "first_frame": "Wide locked-off hallway shot, Inspector centre with clipboard, orange tape cordoning a pile of tangled cables; a thin cable is faintly visible running from her chest strap behind her toward the wall socket, unremarked.",
+      "first_line_or_action": "She taps nothing yet, raises the clipboard and states: 'Cable Incident. Six suspects. The box holds six.'",
+      "mechanism": "status_contradiction",
+      "score": 9,
+      "rationale": "The composed official in a crime-scene cordon over a trivial tangle is legible instantly, the plain 'box holds six' line states the only verified fact as the rule of the case, and the half-hidden lead plants the camera-knows-first promise for re-watchers."
+    },
+    {
+      "id": "H4",
+      "premise_id": "P5",
+      "first_frame": "Overhead flat-lay of a side table: a knot of six cables outlined in safety-orange tape like a chalk body outline, the unbranded box standing empty at the edge, the Inspector's hands poised above with a tiny clipboard.",
+      "first_line_or_action": "Her two hands lower and trace the tape outline in slow motion while she murmurs: 'Reconstruction. Step one.'",
+      "mechanism": "escalating_ritual",
+      "score": 7,
+      "rationale": "The taped outline around a cable knot is a striking and specific image that works muted, but the problem (what exactly went wrong) is less obvious in frame one than in the line-up premise."
+    },
+    {
+      "id": "H5",
+      "premise_id": "P5",
+      "first_frame": "Overhead flat-lay, side table, the Inspector's sleeve mid-sweep across a pile of loose papers, with six cables lying in a tangle beside the open box, arm blur slightly cut off at frame edge.",
+      "first_line_or_action": "Papers fly aside; she pauses, then says without looking down: 'Someone has made a mess.'",
+      "mechanism": "recognition",
+      "score": 7,
+      "rationale": "A sweeping arm that creates the mess is instantly recognisable and plants the sleeve gesture that the payoff echoes, yet the opening line over-tells the irony and the product is barely present."
+    },
+    {
+      "id": "H6",
+      "premise_id": "P5",
+      "first_frame": "Overhead flat-lay: six numbered orange-tape flags planted on a side table beside one big cable knot, the plain box at the corner, and a lone hand-shaped tape outline where no hand has been placed yet.",
+      "first_line_or_action": "She lowers her own hand into the empty tape outline and says: 'Suspect's position.'",
+      "mechanism": "callout",
+      "score": 7,
+      "rationale": "Placing her own hand into the suspect outline is a clean visual joke that foreshadows the rule, though the six-cable limit is not yet doing any work and the setup takes longer than one second to parse."
+    }
+  ],
+  "selected": {
+    "premise_id": "P1",
+    "hook_id": "H3",
+    "rationale": "H3 gives the clearest muted read (formal cordoned cable line-up in the hallway), states the single verified fact only as the case's rule, and quietly plants the lead from her chest strap to the wall so the camera notices before she does, which delivers the bible rule on rewatch. The runner-up H2 has a sharper puzzle but reveals the seventh cable too early and removes the escalating count, while P5's best hook (H4) is more stylish but leaves the box as backdrop rather than the engine of the joke."
+  }
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->

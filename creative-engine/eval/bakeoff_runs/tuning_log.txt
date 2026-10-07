@@ -1,0 +1,1 @@
+fix: prop matching = word-subset ignoring parentheticals; stage check now includes continuity (2026-10-07, after B2 false positive)

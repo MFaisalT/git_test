@@ -1,0 +1,782 @@
+{
+  "packet_version": "1.0",
+  "packet_id": "C-B2_dialogue_episode",
+  "status": "planning-ready; render unverified",
+  "brief": {
+    "brief_id": "B2_dialogue_episode",
+    "title": "20-second spoken episode: the Inspector investigates a group-chat 'seen' with no reply",
+    "project": "bakeoff",
+    "bible_ref": "inspector-v1",
+    "format": "spoken_episode",
+    "platform": "tiktok",
+    "duration_target_s": 20,
+    "language": "English (subtitle-ready; short lines)",
+    "objective": "Viewer recognises themselves or a specific friend and follows for the next investigation.",
+    "constraints": [
+      "One speaking character on screen; any second voice is off-camera.",
+      "Speech must fit timing at about 2.5 words per second.",
+      "Two locations maximum."
+    ],
+    "commercial": null,
+    "negative_constraints": [
+      "No real app logos or readable UI text.",
+      "Do not invent statistics about messaging behaviour."
+    ]
+  },
+  "bible_version": {
+    "bible_id": "inspector-v1",
+    "version": 1,
+    "sha256": "ab7f8a41ece6c54d31902e3b4100fef1dd5fb75ac92596162bc9b4572ac359a3"
+  },
+  "evidence": [
+    {
+      "claim": "Speech totals about 34 words in 20 s, under 2.8 words/s in every scene.",
+      "kind": "fact",
+      "source": "word count of the dialogue",
+      "confidence": "high"
+    },
+    {
+      "claim": "The reversal in which the camera finds the Inspector's own fault fits the bible rule.",
+      "kind": "inference",
+      "source": "bible rule and selected premise P1",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Viewers will recognise themselves in the 'seen' situation.",
+      "kind": "hypothesis",
+      "source": "none tested",
+      "confidence": "low"
+    }
+  ],
+  "premises": [
+    {
+      "id": "P1",
+      "logline": "At the living room side table, the Inspector cordons off a friend's 'seen' with safety-orange tape and builds a negligence case, then a gentle off-camera question reveals her own phone holds a stack of seen-and-unanswered messages from that same friend.",
+      "audience_emotion": "Guilty recognition with affection: everyone has been the one who saw it and meant to reply later.",
+      "character_desire": "A formal finding of fault against the friend who has not replied, so the world is orderly again.",
+      "obstacle": "The evidence is a single tick of silence; she needs it to amount to wrongdoing, and a second voice keeps asking neutral questions.",
+      "escalation": "Findings climb from 'delay' to 'negligence' to 'dereliction', each stated in a calmer voice. She tapes off the phone, then the thread, then the whole table, while the off-camera voice asks one mild question.",
+      "surprise": "The off-camera voice is the friend herself, asking only, 'Did you get my message about Saturday?' The Inspector's verdict is 'Inconclusive', and the camera slides to her own second phone, glowing under strips of her own tape.",
+      "payoff": "Rule delivered: she is exposed as the next offender. The two-finger clipboard tap lands on 'Inconclusive' as the camera finds her stack of identical, ignored threads.",
+      "structure": "Procedural accusation in a single locked frame, with a two-voice cross-examination, building to a reversal reveal on the camera move. Roughly 45 words of speech in 20 seconds.",
+      "why_send_it": "Send to the friend you keep leaving on 'seen' (or who keeps leaving you) with 'this is us'. It lets the sender accuse and confess in one forward.",
+      "commercial_fit": "None required; the brief has no commercial. Fully brand-safe: no real app, no readable UI, no endorsement.",
+      "rejected_because": ""
+    },
+    {
+      "id": "P2",
+      "logline": "In the hallway by the coat hooks, the Inspector narrates the forensic timeline of her own reply as she drafts, deletes and redrafts it aloud, never sending it, while the off-camera flatmate's patient 'Any news?' arrives for the third time.",
+      "audience_emotion": "Cringe-laugh at the overthinking reply spiral; self-recognition in the anxious drafter rather than the ignorer.",
+      "character_desire": "To produce one reply of perfect proportion: warm but not overeager, brief but not curt.",
+      "obstacle": "Each candidate reply has a measurable flaw: too many exclamation marks, too few, an emoji with ambiguous intent.",
+      "escalation": "Drafts get shorter and more bureaucratic ('Acknowledged.') while the delay grows from hours to days, marked by moving the hooks' coats one by one to a new hook as 'time passing'.",
+      "surprise": "The finished, perfect reply is simply 'ok', and she reads it aloud and approves it, but then sets the phone face-down in a coat pocket on the hook, 'for review'.",
+      "payoff": "She is the culprit of her own investigation: the final shot is the pocketed phone buzzing against the hook as the lamp dims.",
+      "structure": "Monologue-driven escalating montage in one hallway, rapid cut rhythm of draft, delete and verdict, with a hard-cut button.",
+      "why_send_it": "Send to the friend who writes and rewrites replies, with 'you at 2am'. Self-directed rather than accusatory.",
+      "commercial_fit": "None; no commercial in brief.",
+      "rejected_because": "Mostly a single-note spiral with a weaker reversal; the culprit reveal is implied rather than caught by the camera."
+    },
+    {
+      "id": "P3",
+      "logline": "The Inspector opens with the verdict already delivered ('The culprit saw it, and did not reply'), then rewinds through three exhibits that each point to a different suspect, until the final exhibit is a mirror-framed shot of herself.",
+      "audience_emotion": "Smug satisfaction turning to sheepish recognition: the accuser's lamp swings round.",
+      "character_desire": "To close the case in under twenty seconds with a clean conviction.",
+      "obstacle": "Her own chain of evidence keeps looping back through places she has been.",
+      "escalation": "Exhibit A (the quiet group thread), Exhibit B (a three-dot indicator that vanished), Exhibit C (a 'thumbs up' she insists is not a reply) each narrow the suspect pool until only one remains.",
+      "surprise": "Exhibit C is her own thumbs-up, deployed as a pretend reply last week; her lamp reflects in the glossy phone screen.",
+      "payoff": "Verdict stands, read in the same measured voice, but the culprit is her; the reflected lamp in the dark screen shows her face. Tap lands before she notices.",
+      "structure": "Reverse-chronological: verdict first, then evidence, then reflexive reveal. Hard pacing with three short exhibit beats.",
+      "why_send_it": "Send to the group chat itself, with 'Exhibit C: the thumbs up'. It names a shared, specific cheat.",
+      "commercial_fit": "None; no commercial in brief.",
+      "rejected_because": "Strong concept but needs a mirror/reflection set-up and three exhibits inside 20 seconds, crowding the speech budget."
+    },
+    {
+      "id": "P4",
+      "logline": "In the shared kitchen, a flatmate off-camera lists the Inspector's unanswered messages while she, stirring tea with total composure, issues formal 'rulings' that reclassify each one as 'not a message'.",
+      "audience_emotion": "Defensive-comic fondness: the pleasure of watching someone lawyer their way out of a small neglect.",
+      "character_desire": "To be found not guilty without ever admitting a single message existed.",
+      "obstacle": "The flatmate's evidence is dated and specific, and the voice never rises.",
+      "escalation": "Rulings go from 'a draft, not a message' to 'a meme, not a message' to 'a voice note is a weather event, not a message', each ruling sharper than the last.",
+      "surprise": "The flatmate stops listing and calmly says, 'I was only asking if you wanted tea.' The Inspector has been holding two mugs for the whole scene.",
+      "payoff": "She is the next offender: the mug she poured for the flatmate three messages ago is cold on the counter, caught in a slow push-in.",
+      "structure": "Two-hander dialogue (one on camera) in the kitchen with a deflating anticlimax; call-and-response rhythm.",
+      "why_send_it": "Send to the sibling or flatmate who never answers anything, with 'rulings'. Banter-forward, replies expected.",
+      "commercial_fit": "None; no commercial in brief.",
+      "rejected_because": "The dialogue is the funniest on paper but the reveal (tea) drifts from the 'seen' topic the brief names."
+    },
+    {
+      "id": "P5",
+      "logline": "The Inspector holds a vigil over a friend's silent thread at the side table, lamp trained on the phone, and quietly narrates the long wait as an unsolved disappearance until her own phone gives a small ping, and she flips it face-down.",
+      "audience_emotion": "Soft wistful humour: waiting is relatable and the ending is unresolved enough to prompt a reply from the viewer.",
+      "character_desire": "A reply, any reply, so the file can be closed.",
+      "obstacle": "The phone does nothing; she cannot act without breaking procedure.",
+      "escalation": "Lamp gets brighter, narration slower, a pencil is placed beside the phone as a 'marker'; time passes through a changing shadow.",
+      "surprise": "Her own phone pings with a message from someone she left unanswered, and her professional calm cracks into a single warm, disappointed sigh.",
+      "payoff": "Open ending: she turns the pinging phone face-down 'pending review', and the camera lingers on the dark, quiet table.",
+      "structure": "Slow-burn vigil, long takes, minimal speech (about 25 words), ending on an open loop rather than a verdict.",
+      "why_send_it": "Send to someone you are waiting on, as a wordless nudge. Low-key and kind.",
+      "commercial_fit": "None; no commercial in brief.",
+      "rejected_because": "Too quiet for a TikTok hook, and the culprit rule is only a glance rather than a clear exposure."
+    }
+  ],
+  "hook_variants": [
+    {
+      "id": "H1",
+      "premise_id": "P1",
+      "first_frame": "Locked eye-level shot at the living room side table: a phone lies face-up, its screen blank except a small generic 'seen' tick glyph (no logo, no readable text), already ringed with a square of safety-orange tape. The Inspector sits behind it, lamp on the phone, clipboard raised.",
+      "first_line_or_action": "She presses the last strip of tape down with one finger, then says: 'Seen. Four hours ago. Case opened.'",
+      "mechanism": "visible_problem",
+      "score": 8,
+      "rationale": "A cordoned phone is legible muted in one second and the spoken 'seen, four hours' names the exact friend-offence, though it does not yet tease the self-reversal."
+    },
+    {
+      "id": "H2",
+      "premise_id": "P1",
+      "first_frame": "Tight on the Inspector's face, brows level, lamp glowing, glasses low; foreground blur of an orange-taped phone. Burned-in subtitle: 'She saw it.'",
+      "first_line_or_action": "Flat, measured: 'She saw my message. She did not reply. This is negligence.'",
+      "mechanism": "callout",
+      "score": 7,
+      "rationale": "The accusation is instantly relatable and quotable, but a face-led frame is less distinctive than a taped object and the specificity rests on the line alone."
+    },
+    {
+      "id": "H3",
+      "premise_id": "P1",
+      "first_frame": "Same locked side-table frame, but a second phone sits half out of shot at the edge of the table, face-down under a few torn strips of orange tape, while the Inspector faces the camera and the taped main phone.",
+      "first_line_or_action": "Two-finger-free, deadpan: 'Everyone who leaves a friend on seen is a suspect.' Her eyes do not move toward the second phone.",
+      "mechanism": "curiosity_gap",
+      "score": 8,
+      "rationale": "The half-hidden taped second phone plants the rule payoff for the camera to find later and rewards a rewatch, at the cost of slightly diluting the one-second read of the main problem."
+    },
+    {
+      "id": "H4",
+      "premise_id": "P4",
+      "first_frame": "Shared kitchen, eye-level: the Inspector stirs a mug with total composure, a second full mug steaming beside it, lamp on her chest. An off-camera voice is signalled only by her slow glance left.",
+      "first_line_or_action": "Off-camera voice: 'You left me on seen.' The Inspector, still stirring: 'That is not a message. That is a draft.'",
+      "mechanism": "status_contradiction",
+      "score": 7,
+      "rationale": "The instant deflection is funny and reads quickly with subtitles, but the stirring-tea frame is not obviously about a messaging problem without sound."
+    },
+    {
+      "id": "H5",
+      "premise_id": "P4",
+      "first_frame": "Kitchen counter: a neat row of five mugs with small safety-orange tape labels in a straight line, the Inspector behind them holding a clipboard, a lamp spot on the row. No phone visible.",
+      "first_line_or_action": "She taps nothing, speaks in her measured cadence: 'Five messages. Zero messages. Allow me to explain.'",
+      "mechanism": "escalating_ritual",
+      "score": 6,
+      "rationale": "The row of labelled mugs is visually striking and promises an escalating ruling ritual, but with no phone the 'seen with no reply' problem is vague for the first second."
+    },
+    {
+      "id": "H6",
+      "premise_id": "P4",
+      "first_frame": "Kitchen, the Inspector facing camera and holding two mugs, one in each hand, as if about to deliver one; her lamp is lit and her expression neutral. A pencil-thin strip of orange tape marks a line on the counter in front of her.",
+      "first_line_or_action": "Off-camera: 'You never replied to anything.' Inspector, evenly: 'Define replied.'",
+      "mechanism": "recognition",
+      "score": 7,
+      "rationale": "'Define replied' is a sharply shareable lawyering line to send to a flatmate, and the two mugs seed the reveal, but the topic anchor is verbal rather than visual."
+    }
+  ],
+  "selected": {
+    "premise_id": "P1",
+    "hook_id": "H3",
+    "rationale": "H3 keeps P1's exact 'seen with no reply' topic, shows a taped-off problem the viewer reads in one second, and quietly plants the second taped phone so the bible's rule (the camera notices before she does) pays off on the reveal and invites a rewatch. The trade-off against the runner-up H1 is a slightly less clean first-second read of the main phone in return for the planted payoff and a more shareable line aimed at 'everyone who leaves a friend on seen'; H1 is the safer fallback if testing shows the second phone clutters the frame."
+  },
+  "script": {
+    "title": "Seen",
+    "synopsis": "At the side table the Inspector tapes off a friend's 'seen' and escalates it from delay to dereliction; the friend's gentle off-camera question stops her, her verdict is 'Inconclusive', and the camera slides to her own second phone under her own tape, with a stack of ignored threads. The friend notes it is her sixth.",
+    "beats": [
+      {
+        "beat": "Locked frame: taped phone, half-hidden taped second phone, accusation to everyone who leaves a friend on seen",
+        "function": "hook"
+      },
+      {
+        "beat": "Four hours becomes delay becomes negligence",
+        "function": "setup"
+      },
+      {
+        "beat": "Dereliction, taping the whole table edge",
+        "function": "escalation"
+      },
+      {
+        "beat": "Off-camera friend asks about Saturday; verdict 'Inconclusive' with the clipboard tap",
+        "function": "turn"
+      },
+      {
+        "beat": "Camera finds her own taped second phone with a stack of ignored threads",
+        "function": "payoff"
+      },
+      {
+        "beat": "Friend: 'That's my sixth one, you know.' Inspector exhales",
+        "function": "button"
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "Inspector",
+        "line": "Everyone who leaves a friend on seen is a suspect.",
+        "delivery": "measured bureaucratic cadence, flat, no emphasis",
+        "on_camera": true
+      },
+      {
+        "speaker": "Inspector",
+        "line": "Seen. Four hours. That is delay. Delay is negligence.",
+        "delivery": "each sentence a notch calmer and quieter",
+        "on_camera": true
+      },
+      {
+        "speaker": "Inspector",
+        "line": "Delay. Negligence. Dereliction.",
+        "delivery": "each word quieter and calmer than the last",
+        "on_camera": true
+      },
+      {
+        "speaker": "Friend",
+        "line": "Did you get my message about Saturday?",
+        "delivery": "gentle, neutral, close-mic, from behind camera",
+        "on_camera": false
+      },
+      {
+        "speaker": "Inspector",
+        "line": "Inconclusive.",
+        "delivery": "serene, final, as if a verdict of guilt",
+        "on_camera": true
+      },
+      {
+        "speaker": "Friend",
+        "line": "That's my sixth one, you know.",
+        "delivery": "gentle, amused, close-mic, from behind camera",
+        "on_camera": false
+      }
+    ],
+    "caption_text": "Everyone who leaves a friend on 'seen' is a suspect.",
+    "cta": "Send this to the friend you left on seen. Follow for the next investigation.",
+    "disclosure_line": "Made with AI-generated video and voice."
+  },
+  "scenes": [
+    {
+      "scene_id": "S1",
+      "start_s": 0,
+      "end_s": 4.5,
+      "location": "Living room side table",
+      "action": "The Inspector sits behind a small wooden side table and presses the final strip of safety-orange tape down around a face-up phone with one finger, her lamp trained on it. At the table's right edge a second phone lies half out of frame, face-down under a few torn orange strips. She raises the clipboard and speaks to the lens.",
+      "performance": "She is completing a cordon with careful procedure: smoothing the tape corner flat with her fingertip, then lifting the clipboard to chest height before delivering the line deadpan, eyes on the lens and never glancing at the second phone.",
+      "microexpression": "Brows stay level; one small tightening at the corner of the mouth as she says 'suspect'.",
+      "dialogue": [
+        {
+          "speaker": "Inspector",
+          "line": "Everyone who leaves a friend on seen is a suspect.",
+          "delivery": "measured bureaucratic cadence, flat, no emphasis",
+          "on_camera": true
+        }
+      ],
+      "camera": {
+        "shot": "medium shot, eye level, slightly too formal symmetrical framing",
+        "lens": "26mm-equivalent phone main camera",
+        "movement": "locked off with one barely perceptible settle",
+        "rig": "phone propped on a stack of books on a shelf opposite the table"
+      },
+      "lighting": "Key from a window camera-left, soft and neutral; her chest lamp adds a small bright pool on the main phone; warm bounce off the pale wooden table onto her chin and jacket; hard contact shadows under the phones and tape strips.",
+      "environment": "Tidy modern living room, off-white wall behind her, a plain grey sofa edge at left, wooden side table with nothing on it except the two phones and the tape roll.",
+      "sound": {
+        "ambience": "quiet room tone with faint distant street hum",
+        "foley": [
+          "tape peel and press, exaggerated one notch",
+          "soft clipboard lift knock",
+          "jacket fabric rustle"
+        ],
+        "music": "none",
+        "voice": "Inspector, close and dry, calm and measured"
+      },
+      "captions": "Everyone who leaves a friend on 'seen' is a suspect.",
+      "transition_out": "continuous",
+      "props_from_frame_one": [
+        "main phone",
+        "second phone",
+        "torn orange strips",
+        "tape roll",
+        "inspection lamp",
+        "clipboard"
+      ],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1"
+    },
+    {
+      "scene_id": "S2",
+      "start_s": 4.5,
+      "end_s": 9,
+      "location": "Living room side table",
+      "action": "She tears another strip of tape with her fingertips and tapes the phone's edge to the table, then leans a fraction forward, lamp beam tightening on the tick glyph as she states her findings.",
+      "performance": "She is annotating the case as she tapes: eyes drop to the clipboard, a finger traces a line down the page, then back up to the phone for each finding.",
+      "microexpression": "A slow, single blink on 'negligence'.",
+      "dialogue": [
+        {
+          "speaker": "Inspector",
+          "line": "Seen. Four hours. That is delay. Delay is negligence.",
+          "delivery": "each sentence a notch calmer and quieter",
+          "on_camera": true
+        }
+      ],
+      "camera": {
+        "shot": "medium shot, eye level",
+        "lens": "26mm-equivalent phone main camera",
+        "movement": "locked off, with a very slow 3 percent push-in",
+        "rig": "same propped phone on books"
+      },
+      "lighting": "Same window key camera-left; lamp pool slightly tighter and brighter on the phone; warm wooden bounce under her jaw; crisp contact shadow of the tape strip on the table.",
+      "environment": "Same living room; the cordon now has two layers of orange tape and a loose strip hangs from the table edge.",
+      "sound": {
+        "ambience": "same quiet room tone",
+        "foley": [
+          "tape tear",
+          "tape press squeak",
+          "fingertip drag on clipboard paper"
+        ],
+        "music": "none",
+        "voice": "Inspector, lower and calmer than in S1"
+      },
+      "captions": "Seen. Four hours. That is delay. Delay is negligence.",
+      "transition_out": "continuous",
+      "props_from_frame_one": [
+        "main phone",
+        "second phone",
+        "torn orange strips",
+        "tape roll",
+        "inspection lamp",
+        "clipboard"
+      ],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1"
+    },
+    {
+      "scene_id": "S3",
+      "start_s": 9,
+      "end_s": 14,
+      "location": "Living room side table",
+      "action": "She tapes a long strip across the whole table edge as if cordoning the entire surface, then states the final finding. An off-camera voice asks one mild question. She pauses with the tape held mid-air.",
+      "performance": "She is laying a straight cordon line along the table edge with ruler-straight attention, stating each finding to the tape, not the lens; at the off-camera question she freezes, tape strip held mid-air, and listens.",
+      "microexpression": "Eyebrows lift one millimetre at the question; eyes flick to the lens and back down.",
+      "dialogue": [
+        {
+          "speaker": "Inspector",
+          "line": "Delay. Negligence. Dereliction.",
+          "delivery": "each word quieter and calmer than the last",
+          "on_camera": true
+        },
+        {
+          "speaker": "Friend",
+          "line": "Did you get my message about Saturday?",
+          "delivery": "gentle, neutral, close-mic, from behind camera",
+          "on_camera": false
+        }
+      ],
+      "camera": {
+        "shot": "medium shot, eye level",
+        "lens": "26mm-equivalent phone main camera",
+        "movement": "locked off",
+        "rig": "same propped phone on books"
+      },
+      "lighting": "Same window key camera-left; lamp pool steady on the phone; warm wooden bounce; thin contact shadow under the long tape strip.",
+      "environment": "Same living room; the table edge now carries a full orange tape line and the second phone remains half out of frame at the right edge.",
+      "sound": {
+        "ambience": "same quiet room tone, slightly more hush when the off-camera voice speaks",
+        "foley": [
+          "long tape peel",
+          "tape tension twang",
+          "small intake of breath"
+        ],
+        "music": "none",
+        "voice": "Inspector on camera, dry and close; off-camera friend, gentle, slightly distant and warm"
+      },
+      "captions": "Dereliction. / 'Did you get my message about Saturday?'",
+      "transition_out": "continuous",
+      "props_from_frame_one": [
+        "main phone",
+        "second phone",
+        "torn orange strips",
+        "tape roll",
+        "inspection lamp",
+        "clipboard"
+      ],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1"
+    },
+    {
+      "scene_id": "S4",
+      "start_s": 14,
+      "end_s": 17.5,
+      "location": "Living room side table",
+      "action": "She lowers the tape, raises the clipboard and delivers the verdict with the single slow two-finger tap on the clipboard. As she speaks, the camera begins a slow lateral slide right, leaving her face and moving along the table edge toward the second phone.",
+      "performance": "She is issuing a formal finding: two fingers tap the clipboard slowly once, then rest, while her gaze stays fixed on the first phone and she does not notice the camera leaving her.",
+      "microexpression": "Composed stillness; a faint flicker of doubt in the jaw only as the tap lands.",
+      "dialogue": [
+        {
+          "speaker": "Inspector",
+          "line": "Inconclusive.",
+          "delivery": "serene, final, as if a verdict of guilt",
+          "on_camera": true
+        }
+      ],
+      "camera": {
+        "shot": "medium shot sliding to a close-up of the table edge",
+        "lens": "26mm-equivalent phone main camera",
+        "movement": "slow lateral slide right of about 40 cm, ending on the second phone",
+        "rig": "phone on a small hand-pushed slider on the shelf"
+      },
+      "lighting": "Same window key camera-left; her lamp spill falls across the table edge and brightens the second phone as the camera slides; warm wooden bounce; crisp contact shadows under the tape strips.",
+      "environment": "Same living room; the second phone comes into frame, face-down under strips of the same orange tape.",
+      "sound": {
+        "ambience": "same quiet room tone",
+        "foley": [
+          "slow two-finger clipboard tap, one notch louder",
+          "soft slider glide hum"
+        ],
+        "music": "none",
+        "voice": "Inspector, close and unhurried"
+      },
+      "captions": "Inconclusive.",
+      "transition_out": "continuous",
+      "props_from_frame_one": [
+        "main phone",
+        "second phone",
+        "torn orange strips",
+        "tape roll",
+        "inspection lamp",
+        "clipboard"
+      ],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1"
+    },
+    {
+      "scene_id": "S5",
+      "start_s": 17.5,
+      "end_s": 20,
+      "location": "Living room side table",
+      "action": "The camera settles close on the second phone: its edge-lit screen glows through torn orange tape, showing a tall stack of identical grey message bubbles, all marked with the same generic tick glyph, no readable text. The Inspector's lamp swings into frame beside it and she exhales once, warmly disappointed, still not looking at the camera.",
+      "performance": "She is squaring the clipboard against her chest to file the case, eyes on the page, as the off-camera friend speaks.",
+      "microexpression": "Warm disappointment: brows lift and fall, mouth softens, a single slow exhale.",
+      "dialogue": [
+        {
+          "speaker": "Friend",
+          "line": "That's my sixth one, you know.",
+          "delivery": "gentle, amused, close-mic, from behind camera",
+          "on_camera": false
+        }
+      ],
+      "camera": {
+        "shot": "close-up on the second phone with the Inspector's jacket and lamp soft at the edge",
+        "lens": "26mm-equivalent phone main camera",
+        "movement": "settles to a locked frame, final slow breath-like drift",
+        "rig": "phone on the same small slider, lock at end"
+      },
+      "lighting": "Second phone screen is the key at close range, cool and soft; her lamp as warm rim from frame-right; orange tape bounce colours the table; hard contact shadows under the tape.",
+      "environment": "Same living room; the second phone is face-up under strips of orange tape, wrapped like evidence, its generic grey bubbles illegible.",
+      "sound": {
+        "ambience": "same quiet room tone",
+        "foley": [
+          "soft phone glow buzz",
+          "clipboard tap to chest",
+          "single warm exhale"
+        ],
+        "music": "none",
+        "voice": "Off-camera friend, gentle and amused; Inspector silent except for a soft exhale"
+      },
+      "captions": "That's my sixth one, you know.",
+      "transition_out": "hard cut to end",
+      "props_from_frame_one": [
+        "main phone",
+        "second phone",
+        "torn orange strips",
+        "tape roll",
+        "inspection lamp",
+        "clipboard"
+      ],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1"
+    }
+  ],
+  "continuity": {
+    "identity_anchors": "Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger. Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun.",
+    "costume": "Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun; plain dark trousers; small round glasses worn throughout.",
+    "props": [
+      "main phone (face-up, generic tick glyph, no readable text)",
+      "second phone (face-down at table edge under torn orange strips)",
+      "safety-orange tape roll",
+      "torn safety-orange tape strips",
+      "inspection lamp",
+      "clipboard on lanyard"
+    ],
+    "notes": "Single location (living room side table), one continuous 20 s take, no cuts. Both phones stay in frame positions: main phone centre-table face-up, second phone at right edge face-down until S4. Tape quantity increases scene by scene. Signature clipboard tap occurs once, in S4 only. No readable text or app logos; the tick glyph is generic and the message bubbles are blank grey bars. Off-camera friend voice is never shown."
+  },
+  "asset_rights": [
+    {
+      "asset": "Inspector character reference",
+      "kind": "character_reference",
+      "source": "generated from the bible description",
+      "rights_status": "unresolved",
+      "scope": "show title and name uncleared (working title); generated look only"
+    },
+    {
+      "asset": "Living room side table location",
+      "kind": "location_still",
+      "source": "AI-generated set",
+      "rights_status": "not_needed",
+      "scope": "episode only"
+    },
+    {
+      "asset": "Inspector and friend voices",
+      "kind": "voice",
+      "source": "tool-generated voices",
+      "rights_status": "unresolved",
+      "scope": "check tool terms before posting"
+    },
+    {
+      "asset": "Music",
+      "kind": "music",
+      "source": "none in generation; optional sting added in edit",
+      "rights_status": "not_needed",
+      "scope": "none unless licensed sting added"
+    },
+    {
+      "asset": "Burned-in captions font",
+      "kind": "font",
+      "source": "platform default or open-licence font",
+      "rights_status": "unresolved",
+      "scope": "select an open-licence font in edit"
+    }
+  ],
+  "tool_mapping": {
+    "adapter": "higgsfield-mcp/generate_video",
+    "verified_on": "2026-10-07",
+    "units": [
+      {
+        "generation_unit": "U1",
+        "scene_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5"
+        ],
+        "model": "seedance_2_5",
+        "controls": {
+          "duration": 20,
+          "aspect_ratio": "9:16",
+          "resolution": "720p",
+          "generate_audio": true
+        },
+        "prompt_text": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. Speak ONLY the quoted lines, in English, lips still when no line is spoken.\n3. Props exist from frame one and never appear, disappear or change design: main phone (face-up, generic tick glyph, no readable text), second phone (face-down at table edge under torn orange strips), safety-orange tape roll, torn safety-orange tape strips, inspection lamp, clipboard on lanyard.\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger. Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun. Costume: Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun; plain dark trousers; small round glasses worn throughout.. Register: Stillness and procedure; comedy comes from disproportion, never from mugging.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S1 (0.0-4.5s) ---\nLocation: Living room side table. Environment: Tidy modern living room, off-white wall behind her, a plain grey sofa edge at left, wooden side table with nothing on it except the two phones and the tape roll.\nAction: The Inspector sits behind a small wooden side table and presses the final strip of safety-orange tape down around a face-up phone with one finger, her lamp trained on it. At the table's right edge a second phone lies half out of frame, face-down under a few torn orange strips. She raises the clipboard and speaks to the lens.\nPerformance: She is completing a cordon with careful procedure: smoothing the tape corner flat with her fingertip, then lifting the clipboard to chest height before delivering the line deadpan, eyes on the lens and never glancing at the second phone. Micro-expression: Brows stay level; one small tightening at the corner of the mouth as she says 'suspect'.\nCamera: medium shot, eye level, slightly too formal symmetrical framing; lens feel 26mm-equivalent phone main camera; movement locked off with one barely perceptible settle; rig phone propped on a stack of books on a shelf opposite the table\nLighting: Key from a window camera-left, soft and neutral; her chest lamp adds a small bright pool on the main phone; warm bounce off the pale wooden table onto her chin and jacket; hard contact shadows under the phones and tape strips.\nAudio: ambience quiet room tone with faint distant street hum; foley: tape peel and press, exaggerated one notch, soft clipboard lift knock, jacket fabric rustle; no music\nDialogue (Inspector, on-camera): \"Everyone who leaves a friend on seen is a suspect.\" - measured bureaucratic cadence, flat, no emphasis\n--- S2 (4.5-9.0s) ---\nLocation: Living room side table. Environment: Same living room; the cordon now has two layers of orange tape and a loose strip hangs from the table edge.\nAction: She tears another strip of tape with her fingertips and tapes the phone's edge to the table, then leans a fraction forward, lamp beam tightening on the tick glyph as she states her findings.\nPerformance: She is annotating the case as she tapes: eyes drop to the clipboard, a finger traces a line down the page, then back up to the phone for each finding. Micro-expression: A slow, single blink on 'negligence'.\nCamera: medium shot, eye level; lens feel 26mm-equivalent phone main camera; movement locked off, with a very slow 3 percent push-in; rig same propped phone on books\nLighting: Same window key camera-left; lamp pool slightly tighter and brighter on the phone; warm wooden bounce under her jaw; crisp contact shadow of the tape strip on the table.\nAudio: ambience same quiet room tone; foley: tape tear, tape press squeak, fingertip drag on clipboard paper; no music\nDialogue (Inspector, on-camera): \"Seen. Four hours. That is delay. Delay is negligence.\" - each sentence a notch calmer and quieter\n--- S3 (9.0-14.0s) ---\nLocation: Living room side table. Environment: Same living room; the table edge now carries a full orange tape line and the second phone remains half out of frame at the right edge.\nAction: She tapes a long strip across the whole table edge as if cordoning the entire surface, then states the final finding. An off-camera voice asks one mild question. She pauses with the tape held mid-air.\nPerformance: She is laying a straight cordon line along the table edge with ruler-straight attention, stating each finding to the tape, not the lens; at the off-camera question she freezes, tape strip held mid-air, and listens. Micro-expression: Eyebrows lift one millimetre at the question; eyes flick to the lens and back down.\nCamera: medium shot, eye level; lens feel 26mm-equivalent phone main camera; movement locked off; rig same propped phone on books\nLighting: Same window key camera-left; lamp pool steady on the phone; warm wooden bounce; thin contact shadow under the long tape strip.\nAudio: ambience same quiet room tone, slightly more hush when the off-camera voice speaks; foley: long tape peel, tape tension twang, small intake of breath; no music\nDialogue (Inspector, on-camera): \"Delay. Negligence. Dereliction.\" - each word quieter and calmer than the last\nDialogue (Friend, off-camera): \"Did you get my message about Saturday?\" - gentle, neutral, close-mic, from behind camera\n--- S4 (14.0-17.5s) ---\nLocation: Living room side table. Environment: Same living room; the second phone comes into frame, face-down under strips of the same orange tape.\nAction: She lowers the tape, raises the clipboard and delivers the verdict with the single slow two-finger tap on the clipboard. As she speaks, the camera begins a slow lateral slide right, leaving her face and moving along the table edge toward the second phone.\nPerformance: She is issuing a formal finding: two fingers tap the clipboard slowly once, then rest, while her gaze stays fixed on the first phone and she does not notice the camera leaving her. Micro-expression: Composed stillness; a faint flicker of doubt in the jaw only as the tap lands.\nCamera: medium shot sliding to a close-up of the table edge; lens feel 26mm-equivalent phone main camera; movement slow lateral slide right of about 40 cm, ending on the second phone; rig phone on a small hand-pushed slider on the shelf\nLighting: Same window key camera-left; her lamp spill falls across the table edge and brightens the second phone as the camera slides; warm wooden bounce; crisp contact shadows under the tape strips.\nAudio: ambience same quiet room tone; foley: slow two-finger clipboard tap, one notch louder, soft slider glide hum; no music\nDialogue (Inspector, on-camera): \"Inconclusive.\" - serene, final, as if a verdict of guilt\n--- S5 (17.5-20.0s) ---\nLocation: Living room side table. Environment: Same living room; the second phone is face-up under strips of orange tape, wrapped like evidence, its generic grey bubbles illegible.\nAction: The camera settles close on the second phone: its edge-lit screen glows through torn orange tape, showing a tall stack of identical grey message bubbles, all marked with the same generic tick glyph, no readable text. The Inspector's lamp swings into frame beside it and she exhales once, warmly disappointed, still not looking at the camera.\nPerformance: She is squaring the clipboard against her chest to file the case, eyes on the page, as the off-camera friend speaks. Micro-expression: Warm disappointment: brows lift and fall, mouth softens, a single slow exhale.\nCamera: close-up on the second phone with the Inspector's jacket and lamp soft at the edge; lens feel 26mm-equivalent phone main camera; movement settles to a locked frame, final slow breath-like drift; rig phone on the same small slider, lock at end\nLighting: Second phone screen is the key at close range, cool and soft; her lamp as warm rim from frame-right; orange tape bounce colours the table; hard contact shadows under the tape.\nAudio: ambience same quiet room tone; foley: soft phone glow buzz, clipboard tap to chest, single warm exhale; no music\nDialogue (Friend, off-camera): \"That's my sixth one, you know.\" - gentle, amused, close-mic, from behind camera\nON-SCREEN TEXT: none (added in post).",
+        "medias": [
+          {
+            "value": "<media_id of approved character reference>",
+            "role": "image_references"
+          },
+          {
+            "value": "<media_id of approved location still>",
+            "role": "image_references"
+          }
+        ],
+        "manual_steps": [
+          "Upload approved reference stills via media_upload (owner action; upload requires approval).",
+          "Burn captions/on-screen text in edit.",
+          "Add licensed music in edit if any.",
+          "Assemble generation units with hard cuts in edit; verify total duration and loop.",
+          "Run get_cost:true preflight and record quote before any submit; submit only after render_approved and credit_cap."
+        ],
+        "gaps": [
+          "No fps/container control; inspect exported file.",
+          "Lip-sync and exact SFX timing are not controllable; inspect output.",
+          "Lens is prompt language only."
+        ],
+        "estimated_credits": 56,
+        "quote_source": "cost-quotes.json 2026-10-07 (8s/720p: mini 8, seedance_2_5 56); not a measured completed-output cost"
+      }
+    ],
+    "notes": "DRY RUN. No job submitted. prompt_text is free text, the only creative payload the tool accepts; internal JSON is not a native format. Field map: scene.action->prompt_text; scene.performance->prompt_text; scene.microexpression->prompt_text; scene.camera.shot->prompt_text; scene.camera.lens->prompt_text; scene.camera.movement->prompt_text; scene.lighting->prompt_text; scene.environment->prompt_text; scene.sound.ambience->native+prompt_text; scene.sound.music->manual; scene.dialogue->prompt_text; scene.captions->manual; scene.transition_out->manual; scene.cuts_inside_clip->prompt_text; continuity.identity_anchors->native+prompt_text; duration->native; aspect_ratio->native; resolution->native; export.fps->gap; export.container->gap; disclosure->manual"
+  },
+  "approval": {
+    "render_approved": false,
+    "spend_approved": false,
+    "publish_approved": false,
+    "approved_by": "",
+    "approved_at": "",
+    "credit_cap": null
+  },
+  "export": {
+    "aspect_ratio": "9:16",
+    "resolution": "1080x1920",
+    "fps": 30,
+    "container": "mp4",
+    "max_duration_s": 20,
+    "edit_plan": [
+      "Generate U1 as one 20 s clip with native audio, inspect lip-sync and speech timing",
+      "Burn in subtitles from scene captions",
+      "Trim to exactly 20 s",
+      "Optional licensed sting in edit only"
+    ],
+    "disclosure_plan": [
+      "Apply the platform AI-generated content label",
+      "Add the disclosure line in the caption"
+    ]
+  },
+  "qa": {
+    "deterministic": {
+      "ok": true,
+      "error_count": 0,
+      "warning_count": 1,
+      "findings": [
+        {
+          "code": "RIGHTS_UNRESOLVED",
+          "severity": "warning",
+          "message": "unresolved rights: ['Inspector character reference', 'Inspector and friend voices', 'Burned-in captions font'] (acceptable while planning)",
+          "path": ""
+        }
+      ]
+    },
+    "creative": {
+      "scores": {
+        "originality": 4,
+        "hook": 4,
+        "coherence": 3,
+        "identity": 4,
+        "audiovisual": 4,
+        "feasibility": 3,
+        "grounding": 4,
+        "commercial_fit": 4
+      },
+      "evidence": {
+        "originality": "Cordoning off a 'seen' with crime-scene tape and escalating delay to negligence to dereliction in an ever-calmer voice, then reversing onto her own taped phone, is a fresh, specific take rather than a generic texting joke.",
+        "hook": "The first line names the viewer's exact guilt ('Everyone who leaves a friend on seen is a suspect') over an instantly legible taped-phone image, though the planted second phone is half out of frame and the opening line is a flat statement, not a question or a surprise.",
+        "coherence": "The escalation, the friend's Saturday question and the 'Inconclusive' verdict lead cleanly to the reveal, but the second phone goes from face-down in S4 to face-up and glowing in S5, and the friend's closing 'my sixth one' is ambiguous about whose messages are unanswered.",
+        "identity": "The glasses, aubergine jacket, chest lamp, lanyard clipboard, deadpan flat delivery and the single two-finger tap are held consistently across all five scenes, and the warm-disappointment break fits the bible's tone.",
+        "audiovisual": "Each scene specifies lighting, foley (tape peel, clipboard knock), room tone, voice placement and captions, and the camera slide to the second phone makes the payoff a visual beat, though there is no music or sonic sting at the button.",
+        "feasibility": "A single continuous 20 s unit with an in-shot hand-pushed slider move, a prop that flips state mid-take, a near-silent mid-air tape hold and a precise 40 cm slide are risky for current video generation and will likely need takes or a fallback.",
+        "grounding": "There are no invented statistics, no real app logos or readable UI (blank grey bubbles and a generic tick glyph), two locations at most (one used), and one on-camera speaker with the second voice off-camera, all within the brief's constraints.",
+        "commercial_fit": "The brief has no commercial and the packet correctly adds none, and the share-driven CTA ('send this to the friend you left on seen') and follow prompt match the stated objective and platform."
+      },
+      "weighted_total": 3.75,
+      "pass_thresholds": {
+        "character_intent": true,
+        "premise_specific_payoff": true,
+        "complete_direction": true,
+        "commercial_fit": true
+      },
+      "summary": "A distinctive, shareable premise with a strong accusation-to-confession reversal, consistent character identity and thorough audiovisual direction. It is weakened by a prop-state inconsistency between S4 and S5, a slightly ambiguous button line, and a continuous-take slider move that carries generation risk.",
+      "top_fix": "Make the second phone's state consistent (face-down or face-up in both S4 and S5) and sharpen the final line so it clearly means 'you have left me unanswered six times', or else split the S4 slide into a separate generation unit to reduce take risk."
+    },
+    "repetition": {
+      "threshold": 0.35,
+      "fields": {
+        "hook": {
+          "max_similarity": 0.051,
+          "closest_packet": "C-B3_commercial"
+        },
+        "premise": {
+          "max_similarity": 0.022,
+          "closest_packet": "C-B3_commercial"
+        },
+        "payoff": {
+          "max_similarity": 0.106,
+          "closest_packet": "C-B3_commercial"
+        },
+        "surprise": {
+          "max_similarity": 0.011,
+          "closest_packet": "C-B3_commercial"
+        },
+        "shots": {
+          "max_similarity": 0.107,
+          "closest_packet": "C-B3_commercial"
+        },
+        "pitch": {
+          "max_similarity": 0.0,
+          "closest_packet": null
+        }
+      },
+      "flagged_fields": [],
+      "verdict": "no-lexical-repetition-detected",
+      "note": "Lexical similarity only; a reviewer must judge whether flagged overlap is identity (allowed) or a repeated joke/plot (not)."
+    },
+    "render_inspection": null
+  },
+  "growth_hypotheses": [
+    {
+      "hypothesis": "The half-hidden taped second phone in frame one rewards rewatches and increases completion.",
+      "metric": "average watch time and rewatch rate",
+      "falsifier": "No lift in completion against a version without the planted second phone."
+    },
+    {
+      "hypothesis": "'Send to the friend you left on seen' prompts shares and comments naming a friend.",
+      "metric": "shares per view and comments tagging friends",
+      "falsifier": "Shares per view fall below the account's median."
+    }
+  ],
+  "provenance": {
+    "generated_at": "2026-10-07T23:13:50Z",
+    "provider": "broker",
+    "requested_model": "sonnet",
+    "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+    "effort": "medium",
+    "demonstrations_used": [
+      "D1_silent_gag",
+      "D2_spoken_tool_honesty"
+    ],
+    "stage_log": [
+      {
+        "stage": "premises",
+        "attempt": 0,
+        "result": "ok",
+        "errors": 0,
+        "requested_model": "sonnet",
+        "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+        "usage": {},
+        "provider": "broker",
+        "latency_s": 0.0,
+        "at": "2026-10-07T23:08:29Z"
+      },
+      {
+        "stage": "hooks",
+        "attempt": 0,
+        "result": "ok",
+        "errors": 0,
+        "requested_model": "sonnet",
+        "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+        "usage": {},
+        "provider": "broker",
+        "latency_s": 0.0,
+        "at": "2026-10-07T23:09:54Z"
+      },
+      {
+        "stage": "script_storyboard",
+        "attempt": 0,
+        "result": "ok",
+        "errors": 0,
+        "requested_model": "sonnet",
+        "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+        "usage": {},
+        "provider": "broker",
+        "latency_s": 0.0,
+        "at": "2026-10-07T23:11:30Z"
+      },
+      {
+        "stage": "qa_review",
+        "attempt": 0,
+        "result": "ok",
+        "errors": 0,
+        "requested_model": "sonnet",
+        "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+        "usage": {},
+        "provider": "broker",
+        "latency_s": 0.0,
+        "at": "2026-10-07T23:12:46Z"
+      }
+    ],
+    "repair_passes": 0,
+    "engine_version": "0.1.0"
+  },
+  "negative_constraints": [
+    "No real app logos or readable UI text.",
+    "Do not invent statistics about messaging behaviour.",
+    "No bob/moustache/white-tunic combination or any researched creator's identity.",
+    "No deprivation/luxury contrast as the joke.",
+    "No firsthand product endorsements."
+  ]
+}

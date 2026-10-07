@@ -1,0 +1,64 @@
+{
+  "hook_variants": [
+    {
+      "id": "H1",
+      "premise_id": "P1",
+      "first_frame": "Eye-level, locked-off, slightly too formal: the Inspector in aubergine jacket stands square to the side table, phone in one hand, charger plug in the other, held up beside the wall socket with a clearly visible sliver of air between plug and socket. A neat white cable tie is cinched round the middle of the cable, dead centre of frame.",
+      "first_line_or_action": "She pushes the plug toward the socket, the cable goes taut and stops, and the plug stays one centimetre short; the tied bunch in the middle of the cable quivers.",
+      "mechanism": "visible_problem",
+      "score": 9,
+      "rationale": "The gap and the cable tie are both readable muted in one second (the viewer holds the answer before she does), though send-ability to a specific friend only lands after the loop."
+    },
+    {
+      "id": "H2",
+      "premise_id": "P1",
+      "first_frame": "Slightly raised eye-level on the side table: the cable laid straight along the table edge beside a tape measure, the white cable tie bunching its middle, the plug end resting a thumb's width from the socket-side edge, the Inspector's lamp-lit hands poised over it.",
+      "first_line_or_action": "She presses a strip of safety-orange tape onto the cable end with an exaggerated foley click, tagging it as evidence.",
+      "mechanism": "escalating_ritual",
+      "score": 8,
+      "rationale": "The orange tag ritual is instantly on-brand and the tie is in frame, but the gap to the socket is less obvious in frame one than in H1."
+    },
+    {
+      "id": "H3",
+      "premise_id": "P1",
+      "first_frame": "Tight-ish two-shot of plug and socket with the Inspector's face behind them, glasses slipped down her nose, composed; the plug hovers a visible centimetre from the socket and the cable tie sits in the soft-focus middle of the lead.",
+      "first_line_or_action": "She very slowly edges the plug forward, then lets it spring back and holds still, her expression flat as she regards the gap.",
+      "mechanism": "curiosity_gap",
+      "score": 7,
+      "rationale": "Her deadpan face sells the disproportion and the rule, but the tighter framing pushes the tie toward the edge of legibility and the action reads as less specific."
+    },
+    {
+      "id": "H4",
+      "premise_id": "P5",
+      "first_frame": "Eye-level on the side table: the Inspector looks down at an open drawer packed with identical coiled cables, each wearing a small safety-orange tag; one cable lies stretched toward the wall socket, a visible centimetre short.",
+      "first_line_or_action": "She lifts a tagged cable out of the drawer, holds it up to the socket, finds it short, and tags it with a fresh strip of orange tape.",
+      "mechanism": "recognition",
+      "score": 8,
+      "rationale": "The full drawer is instantly funny and sendable to the friend with the dead-charger drawer, but showing it up front spends the reveal and weakens the camera-notices-first rule."
+    },
+    {
+      "id": "H5",
+      "premise_id": "P5",
+      "first_frame": "Top-of-table eye-level view: five identical orange-tagged cables laid in a perfectly straight row, every plug ending the same sliver short of the socket edge; the Inspector stands at the end of the row holding a sixth cable.",
+      "first_line_or_action": "She sets the sixth cable down at the end of the row with a precise click and squares it to the others with two fingertips.",
+      "mechanism": "escalating_ritual",
+      "score": 8,
+      "rationale": "The repeated row makes the pattern and the shortfall readable at once and invites the 'we need to talk about the drawer' send, but the culprit twist is only implied rather than promised."
+    },
+    {
+      "id": "H6",
+      "premise_id": "P5",
+      "first_frame": "Static frame of the closed side-table drawer with the Inspector standing before it, clipboard held across her chest, a single cable lying short of the socket on the tabletop and an orange tag fluttering on it.",
+      "first_line_or_action": "She slides the drawer open a few centimetres, and orange tags spill into view along its edge.",
+      "mechanism": "curiosity_gap",
+      "score": 6,
+      "rationale": "It builds a good withheld-reveal, but the first frame carries little by itself and the problem is not clear until a second or two in."
+    }
+  ],
+  "selected": {
+    "premise_id": "P1",
+    "hook_id": "H1",
+    "rationale": "H1 puts both the one-centimetre gap and the cable tie in frame one, so the muted viewer is already ahead of the Inspector, which is the bible rule in its purest form and sets up the relapse loop. The trade-off against the runner-up (P5/H5) is that the drawer hook is the more instantly sendable to a specific friend, but its payoff lands later and its camera-notices-first beat is weaker, so P1/H1 is the stronger fit for a 12-second silent loop."
+  }
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->

@@ -1,0 +1,412 @@
+<!-- requested_model: sonnet; effort: medium; tag: qa_review-0 -->
+
+# Stage 4 - Creative QA (subjective; kept separate from deterministic gates)
+
+Your responsibility: review the packet below against the predeclared rubric and report scores with one sentence of evidence each. You are not rewriting it. Deterministic validation has already run; do not re-check timing arithmetic.
+
+## Rubric (weights): originality .15, hook .15, coherence .15, identity .10, audiovisual completeness .15, feasibility .10, grounding .08, commercial fit .12. Anchors: 1 fail, 3 adequate, 5 excellent.
+
+## Packet
+{
+  "packet": {
+    "brief": {
+      "brief_id": "B3_commercial",
+      "title": "15-second sponsored episode: a cable-management box (fictional advertiser) must be the comic mechanism",
+      "project": "bakeoff",
+      "bible_ref": "inspector-v1",
+      "format": "sponsored_episode",
+      "platform": "instagram_reels",
+      "duration_target_s": 15,
+      "language": "English, max 25 spoken words",
+      "objective": "Entertain first; the product resolves the story problem without the character claiming personal experience.",
+      "constraints": [
+        "Product: a plain cable-organiser box (generic design, no brand text in frame).",
+        "Paid-partnership disclosure must appear in the plan (platform tool + spoken or caption line).",
+        "The fictional character must not claim to have used, tested or benefited from the product.",
+        "Advertiser facts available: 'holds up to six cables', nothing else — do not invent features."
+      ],
+      "commercial": {
+        "advertiser": "fictional-cable-box-co",
+        "verified_facts": [
+          "holds up to six cables"
+        ],
+        "forbidden_claims": [
+          "durability",
+          "price",
+          "awards",
+          "any user result"
+        ]
+      },
+      "negative_constraints": [
+        "No testimonial language.",
+        "No readable brand marks."
+      ]
+    },
+    "selected": {
+      "premise_id": "P1",
+      "hook_id": "H3",
+      "rationale": "H3 gives the clearest muted read (formal cordoned cable line-up in the hallway), states the single verified fact only as the case's rule, and quietly plants the lead from her chest strap to the wall so the camera notices before she does, which delivers the bible rule on rewatch. The runner-up H2 has a sharper puzzle but reveals the seventh cable too early and removes the escalating count, while P5's best hook (H4) is more stylish but leaves the box as backdrop rather than the engine of the joke."
+    },
+    "premises": [
+      {
+        "id": "P1",
+        "logline": "In the hallway, the Inspector lays out a six-cable tangle as a police line-up and boxes the suspects in a plain organiser; the count comes out at seven, and the seventh cable runs straight into her own chest lamp.",
+        "audience_emotion": "Dry, escalating anticipation, then the pleasure of seeing it coming a beat before she does.",
+        "character_desire": "To close the Cable Incident cleanly with every suspect accounted for and filed.",
+        "obstacle": "Her tally never reconciles: the box takes up to six and a seventh cable will not go in, however formally she re-counts.",
+        "escalation": "Orange tape cordons the floor. Each cable is read its 'rights' and dropped in with a clipboard tick. Cable six lands. The seventh will not go in and she re-counts with more ceremony each time, while the lamp strap tugs at her chest.",
+        "surprise": "The unaccounted seventh cable is her own lamp's charging lead, plugged into the wall socket behind her. She has been dragging the tangle across the hallway every time she steps back.",
+        "payoff": "Camera pulls wide on the lead taut from her chest to the wall. Two-finger clipboard tap (the one allowed per episode). 'Six fit. One is mine.' She unplugs herself; the box closes with six inside. Bible rule delivered: the Inspector is the culprit and the camera saw it first.",
+        "structure": "Procedural line-up and count that does not reconcile; cause-and-effect reveal via a wide pull-back; single static hallway setup.",
+        "why_send_it": "Send it to the flatmate who 'organises' the hallway and still trips on their own charger: it is the tidy-person-is-the-mess joke in 15 seconds.",
+        "commercial_fit": "The box's single verified fact (holds up to six cables) is the comic mechanism: the six-cable limit is what makes the seventh visible. No durability, price, award or result claims; the Inspector never says she used, tested or benefited from the box and only counts cables into it. Disclosure plan: platform paid-partnership label turned on, plus caption line 'Paid partnership with fictional-cable-box-co. The Inspector is a fictional character and has not used this product.' Spoken words (about 17): 'Suspects: six. The box holds six. Count: seven.' / 'Six fit. One is mine.' No brand text visible on box.",
+        "rejected_because": ""
+      },
+      {
+        "id": "P2",
+        "logline": "On the living room side table the Inspector finds the six cables already boxed and tidy, hunts for the fault for ten silent seconds, and cannot bear its absence.",
+        "audience_emotion": "Uneasy, gently absurd tension: an investigator with nothing to investigate.",
+        "character_desire": "To find the fault, because an inspection that finds nothing is an offence in itself.",
+        "obstacle": "Everything is in order: six cables in, lid closed, nothing to cite.",
+        "escalation": "Lamp passes over the box, tape measure, clipboard ticks, glasses nudged down; her silence stretches while the unbroken order becomes the problem.",
+        "surprise": "She quietly takes her own phone charger from a flap pocket and plugs it in, creating the first fault in the scene.",
+        "payoff": "A single trailing cable now hangs over the table edge. She nods in satisfaction and starts to write the citation; the camera holds on the cable. She is the culprit again, and the final pose matches the opening pose for a loop.",
+        "structure": "Inverted structure: begins in the resolved state, then she creates the fault; near-silent single locked-off take that loops.",
+        "why_send_it": "Send it to a partner who rearranges a perfectly good shelf the moment you finish arranging it.",
+        "commercial_fit": "The box is the cause of the problem disappearing, and its six-cable capacity is shown as full order that she cannot tolerate. Only the verified fact appears; no claim of results, durability or price, and no first-person use claims. Disclosure plan: platform paid-partnership tool plus on-screen end caption and a spoken closing line 'Paid partnership. Fictional character.' Spoken words about 6 plus caption.",
+        "rejected_because": "the product is more backdrop than mechanism, so it ranks below the premises where the six-cable limit drives the joke"
+      },
+      {
+        "id": "P3",
+        "logline": "In the shared kitchen the Inspector convenes a one-minute hearing with a housemate (voice and hand only) to decide whose cables clog the counter; her verdict names the housemate, until a name tag on the evidence says otherwise.",
+        "audience_emotion": "Bickering domestic warmth, escalating to schadenfreude.",
+        "character_desire": "A ruling that assigns blame to someone else.",
+        "obstacle": "The housemate refuses to confess and keeps pointing at the cable tags.",
+        "escalation": "Rapid back-and-forth: accusation, denial, evidence slid across the counter, each cable dropped into the box as it is ruled on, up to six.",
+        "surprise": "The last cable's orange-tape tag is in her own handwriting with her own clipboard initials.",
+        "payoff": "She stares at the tag. The housemate's hand slides the box lid shut. Deadpan: 'Case dismissed. Against me.' Rule delivered: she is the offender.",
+        "structure": "Two-hander courtroom cross-examination, dialogue-led, ending on a verdict reversal.",
+        "why_send_it": "Send it to a housemate you have a running 'whose cable is this' dispute with.",
+        "commercial_fit": "The box's six slots are the court's evidence limit, and the verified six-cable fact is the only claim. No testimonials, results or invented features; the housemate is a hand and voice only. Disclosure plan: platform paid-partnership tool and caption line stating the character is fictional and has not used the product. Spoken words about 22.",
+        "rejected_because": "dialogue-heavy and the closest to a standard accusation-reversal that the other premises make fresher"
+      },
+      {
+        "id": "P4",
+        "logline": "At the hallway coat hooks the Inspector runs a fire drill for cables, with a stopwatch and a muster-point box, and the roll call comes up one short.",
+        "audience_emotion": "Brisk, playful momentum.",
+        "character_desire": "A perfect evacuation: six out, six in, on time.",
+        "obstacle": "Only five cables reach the muster box and the clock keeps running.",
+        "escalation": "Fast cuts: whistle, cables hurried off the hooks, stopwatch, a roll call called louder in tone yet never in volume, a second sweep of the hallway.",
+        "surprise": "The missing sixth cable has been in her own flap pocket all along, its plug poking out.",
+        "payoff": "Camera holds on the plug. She looks down, taps the clipboard once, and posts the sixth cable in. 'Drill complete. Late. Me.' She is the fault.",
+        "structure": "Montage-style timed drill with countdown and roll call; fast cutting in contrast to the still premises.",
+        "why_send_it": "Send it to the colleague who runs 'efficiency drills' and is always the last one out.",
+        "commercial_fit": "The box is the muster point, and its six-cable capacity defines the roll call. No other product claim; she does not claim any use. Disclosure plan: platform paid-partnership label and caption disclosure that the character is fictional. Spoken words about 14.",
+        "rejected_because": "the pocket reveal is a smaller surprise and the fast-cut style strains the show's stillness register"
+      },
+      {
+        "id": "P5",
+        "logline": "At the side table the Inspector reconstructs the 'tangle incident' in mime with tape outlines, and her own reconstruction proves she caused it.",
+        "audience_emotion": "Quiet delight at ritual overcommitment, then recognition.",
+        "character_desire": "A faithful reconstruction of how six cables became one knot.",
+        "obstacle": "The reconstruction only makes sense if one actor's movement is added to it, and that actor is the investigator.",
+        "escalation": "Overhead flat-lay: she chalks (tapes) the knot, walks her hands through the 'suspect's movements' in slow motion, narrating each step in flat procedure, each repeating a gesture that exactly matches her own reach.",
+        "surprise": "The mime's final gesture, a hand sweeping a sleeve across the table, exactly matches the one she makes to sweep her papers aside in the opening frame.",
+        "payoff": "She freezes mid-sweep; the six cables go into the box one by one with her clipboard tick; 'Culprit identified.' She does not look up. Rule delivered: she is the culprit and the camera knew first.",
+        "structure": "Reconstruction and reveal using a flashback-in-place; overhead flat-lay ASMR visual language.",
+        "why_send_it": "Send it to a true-crime-obsessed friend who re-enacts how everyone else broke something.",
+        "commercial_fit": "The box is where the evidence ends up and the six-cable capacity is the only claim; no results or testing claims by the character. Disclosure plan: platform paid-partnership tool plus caption line 'Paid partnership. Fictional character, has not used this product.' Spoken words about 12.",
+        "rejected_because": "the overhead reconstruction is stylish but the product is the tidy-up at the end, not the engine of the joke"
+      }
+    ],
+    "script": {
+      "title": "Cable Incident",
+      "synopsis": "In her hallway the Inspector boxes six cables in an organiser that holds six; the count reads seven, and the seventh is her own lamp lead plugged into the wall behind her.",
+      "beats": [
+        {
+          "beat": "Formal cordon and 'the box holds six'; faint lead visible behind her",
+          "function": "hook"
+        },
+        {
+          "beat": "Six cables boxed, one left on the floor",
+          "function": "setup"
+        },
+        {
+          "beat": "Recount with more ceremony, strap tugs",
+          "function": "escalation"
+        },
+        {
+          "beat": "Wide pull-back reveals taut lead to the wall",
+          "function": "turn"
+        },
+        {
+          "beat": "'Six fit. One is mine.' She unplugs herself",
+          "function": "payoff"
+        },
+        {
+          "beat": "Lid clicks shut on six; disclosure card",
+          "function": "button"
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "Inspector",
+          "line": "Cable Incident. Six suspects. The box holds six.",
+          "delivery": "flat, measured",
+          "on_camera": true
+        },
+        {
+          "speaker": "Inspector",
+          "line": "Count: seven.",
+          "delivery": "quiet, level",
+          "on_camera": true
+        },
+        {
+          "speaker": "Inspector",
+          "line": "Recount. Seven.",
+          "delivery": "slower, formal",
+          "on_camera": true
+        },
+        {
+          "speaker": "Inspector",
+          "line": "Six fit. One is mine.",
+          "delivery": "dry, deadpan",
+          "on_camera": true
+        }
+      ],
+      "caption_text": "Paid partnership with fictional-cable-box-co. The Inspector is a fictional character and has not used this product.",
+      "cta": "",
+      "disclosure_line": "Paid partnership with fictional-cable-box-co. The Inspector is a fictional character and has not used this product."
+    },
+    "scenes": [
+      {
+        "scene_id": "S1",
+        "start_s": 0,
+        "end_s": 4,
+        "location": "Hallway with coat hooks",
+        "action": "Locked-off wide. The Inspector stands centre holding the clipboard level. She clicks the chest lamp on, sweeps its beam along the six cables in the tape cordon, then states the case. A thin lead is faintly visible from her chest strap back toward the wall socket, unremarked.",
+        "performance": "Invested task: conducts a formal site briefing, eyes tracking each cable in the beam as if reading a charge sheet.",
+        "microexpression": "Neutral, one slow blink as the beam reaches the sixth cable.",
+        "dialogue": [
+          {
+            "speaker": "Inspector",
+            "line": "Cable Incident. Six suspects. The box holds six.",
+            "delivery": "flat, measured, bureaucratic, each sentence separated by a short pause",
+            "on_camera": true
+          }
+        ],
+        "camera": {
+          "shot": "wide, eye level, slightly formal symmetrical framing",
+          "lens": "24mm-equivalent phone main camera",
+          "movement": "static, locked off",
+          "rig": "phone propped on a hallway shelf at chest height"
+        },
+        "lighting": "Key: soft daylight from a window frame-left at the hallway end; warm bounce off the oak floor; lamp beam adds a cool white highlight on the cables; soft contact shadows under the cables and the box.",
+        "environment": "Narrow modern hallway, pale grey walls, three plain coat hooks with a beige coat, light oak floor, wall socket low on the left wall; orange tape square on the floor around six cables laid in a neat row beside the open box.",
+        "sound": {
+          "ambience": "quiet flat room tone, faint fridge hum from beyond",
+          "foley": [
+            "lamp click",
+            "clipboard plastic tick",
+            "one slow boot step on wood"
+          ],
+          "music": "none",
+          "voice": "Inspector on camera, measured and dry"
+        },
+        "captions": "Paid partnership",
+        "transition_out": "cut",
+        "props_from_frame_one": [
+          "plain unbranded cable-organiser box (no text)",
+          "six loose cables (neutral colours, no logos)",
+          "safety-orange tape cordon",
+          "inspection lamp on chest strap",
+          "tiny clipboard on lanyard",
+          "lamp charging lead (seventh cable) running from chest strap to wall socket",
+          "wall socket with plain faceplate"
+        ],
+        "cuts_inside_clip": 0,
+        "generation_unit": "U1"
+      },
+      {
+        "scene_id": "S2",
+        "start_s": 4,
+        "end_s": 8,
+        "location": "Hallway with coat hooks",
+        "action": "Medium. She picks up each cable in turn, reads it a formal 'right' with a mouthed nod, drops it into the box with a clipboard tick. Cable six lands. A seventh cable end still lies on the floor. She steps back to count and the cordon tape drags a few centimetres with her.",
+        "performance": "Invested task: processes each cable like a suspect, ticking the clipboard, then tallies with a pointing finger.",
+        "microexpression": "Brow lifts a fraction on the count.",
+        "dialogue": [
+          {
+            "speaker": "Inspector",
+            "line": "Count: seven.",
+            "delivery": "quiet, level, a beat of puzzlement underneath",
+            "on_camera": true
+          }
+        ],
+        "camera": {
+          "shot": "medium, eye level",
+          "lens": "35mm-equivalent phone main camera",
+          "movement": "static with a small settle-wobble on the cut",
+          "rig": "phone propped on a hallway shelf at chest height"
+        },
+        "lighting": "Key: window light frame-left; warm oak-floor bounce; lamp spills a cool circle on the box lid; hard small contact shadow of the box on the floor.",
+        "environment": "Narrow modern hallway, pale grey walls, three plain coat hooks with a beige coat, light oak floor, wall socket low on the left wall; orange tape square on the floor around six cables laid in a neat row beside the open box.",
+        "sound": {
+          "ambience": "same room tone",
+          "foley": [
+            "cable drop thuds into plastic box x6",
+            "clipboard ticks",
+            "tape peel creak"
+          ],
+          "music": "none",
+          "voice": "Inspector on camera"
+        },
+        "captions": "",
+        "transition_out": "continuous",
+        "props_from_frame_one": [
+          "plain unbranded cable-organiser box (no text)",
+          "six loose cables (neutral colours, no logos)",
+          "safety-orange tape cordon",
+          "inspection lamp on chest strap",
+          "tiny clipboard on lanyard",
+          "lamp charging lead (seventh cable) running from chest strap to wall socket",
+          "wall socket with plain faceplate"
+        ],
+        "cuts_inside_clip": 1,
+        "generation_unit": "U1"
+      },
+      {
+        "scene_id": "S3",
+        "start_s": 8,
+        "end_s": 11,
+        "location": "Hallway with coat hooks",
+        "action": "Close on her upper body. She repeats the count with more ceremony, pointing at each cable inside the box, then the one on the floor. The lead on her chest strap tugs taut and her lamp tilts slightly as she leans.",
+        "performance": "Invested task: recounts with slower, more official gestures, committed to the procedure and not noticing the pull on her chest.",
+        "microexpression": "Eyes narrow slightly behind the glasses; the lamp bobs.",
+        "dialogue": [
+          {
+            "speaker": "Inspector",
+            "line": "Recount. Seven.",
+            "delivery": "slower, more formal, same volume",
+            "on_camera": true
+          }
+        ],
+        "camera": {
+          "shot": "medium close-up, eye level",
+          "lens": "50mm-equivalent phone telephoto",
+          "movement": "static, slight breathing drift",
+          "rig": "phone propped on a hallway shelf"
+        },
+        "lighting": "Key: window light frame-left; warm floor bounce under the chin; lamp glint on her glasses; soft shadow of the clipboard on the jacket.",
+        "environment": "Narrow modern hallway, pale grey walls, three plain coat hooks with a beige coat, light oak floor, wall socket low on the left wall; orange tape square on the floor around six cables laid in a neat row beside the open box.",
+        "sound": {
+          "ambience": "room tone, slightly tighter",
+          "foley": [
+            "finger tap on box lid",
+            "strap creak",
+            "lamp rattle"
+          ],
+          "music": "none",
+          "voice": "Inspector on camera"
+        },
+        "captions": "",
+        "transition_out": "cut",
+        "props_from_frame_one": [
+          "plain unbranded cable-organiser box (no text)",
+          "six loose cables (neutral colours, no logos)",
+          "safety-orange tape cordon",
+          "inspection lamp on chest strap",
+          "tiny clipboard on lanyard",
+          "lamp charging lead (seventh cable) running from chest strap to wall socket",
+          "wall socket with plain faceplate"
+        ],
+        "cuts_inside_clip": 0,
+        "generation_unit": "U2"
+      },
+      {
+        "scene_id": "S4",
+        "start_s": 11,
+        "end_s": 15,
+        "location": "Hallway with coat hooks",
+        "action": "Camera pulls wide. The lead is visibly taut from her chest strap across the hallway to the wall socket behind her; the cordon and cables have been dragged along it. She looks down, performs her single slow two-finger tap on the clipboard, delivers the verdict, unplugs the lead from the socket, and closes the box lid on six cables.",
+        "performance": "Invested task: issues her verdict with procedural calm, then completes the paperwork of unplugging herself.",
+        "microexpression": "Warm disappointment: a slow exhale and eyes lowered to the lead.",
+        "dialogue": [
+          {
+            "speaker": "Inspector",
+            "line": "Six fit. One is mine.",
+            "delivery": "dry, deadpan, lowered slightly at the end",
+            "on_camera": true
+          }
+        ],
+        "camera": {
+          "shot": "wide, eye level, ending on a held frame",
+          "lens": "24mm-equivalent phone main camera",
+          "movement": "smooth pull-back from medium to wide over 1.5 s, then static",
+          "rig": "phone on a slow slider along the hallway floor rail"
+        },
+        "lighting": "Key: window light frame-left; warm oak bounce; lamp beam cool on the taut lead; thin shadow line of the lead on the floor.",
+        "environment": "Narrow modern hallway, pale grey walls, three plain coat hooks with a beige coat, light oak floor, wall socket low on the left wall; orange tape square on the floor around six cables laid in a neat row beside the open box.",
+        "sound": {
+          "ambience": "room tone",
+          "foley": [
+            "two-finger clipboard tap",
+            "plug pulling from socket",
+            "box lid click"
+          ],
+          "music": "none",
+          "voice": "Inspector on camera"
+        },
+        "captions": "",
+        "transition_out": "end hold, end card with disclosure",
+        "props_from_frame_one": [
+          "plain unbranded cable-organiser box (no text)",
+          "six loose cables (neutral colours, no logos)",
+          "safety-orange tape cordon",
+          "inspection lamp on chest strap",
+          "tiny clipboard on lanyard",
+          "lamp charging lead (seventh cable) running from chest strap to wall socket",
+          "wall socket with plain faceplate"
+        ],
+        "cuts_inside_clip": 1,
+        "generation_unit": "U2"
+      }
+    ],
+    "continuity": {
+      "identity_anchors": "Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger.",
+      "costume": "Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun. (same costume throughout the episode).",
+      "props": [
+        "plain unbranded cable-organiser box (no text)",
+        "six loose cables (neutral colours, no logos)",
+        "safety-orange tape cordon",
+        "inspection lamp on chest strap",
+        "tiny clipboard on lanyard",
+        "lamp charging lead (seventh cable) running from chest strap to wall socket",
+        "wall socket with plain faceplate"
+      ],
+      "notes": "Silhouette, rule and register fixed per bible v1. Signature clipboard tap used once, in S4. The lead from chest strap to wall socket must be faintly visible in S1 and taut in S4. Box and cables carry no text or logos. Only claim: box holds up to six cables."
+    },
+    "growth_hypotheses": [
+      {
+        "hypothesis": "Planting the lead in frame one rewards rewatches and raises replays and shares",
+        "metric": "replay rate and shares per reach",
+        "falsifier": "Replay rate no higher than the series baseline"
+      },
+      {
+        "hypothesis": "Stating the six-cable limit as the case rule makes the count a legible joke without product claims",
+        "metric": "3-second hold rate",
+        "falsifier": "Hold rate below baseline"
+      }
+    ]
+  }
+}
+
+## Output contract (JSON only)
+{
+  "scores": {"originality": 0, "hook": 0, "coherence": 0, "identity": 0, "audiovisual": 0, "feasibility": 0, "grounding": 0, "commercial_fit": 0},
+  "evidence": {"originality": "", "hook": "", "coherence": "", "identity": "", "audiovisual": "", "feasibility": "", "grounding": "", "commercial_fit": ""},
+  "weighted_total": 0.0,
+  "pass_thresholds": {"character_intent": true, "premise_specific_payoff": true, "complete_direction": true, "commercial_fit": true},
+  "summary": "two sentences",
+  "top_fix": "the single most valuable change, or 'none'"
+}
