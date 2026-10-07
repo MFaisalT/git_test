@@ -39,7 +39,7 @@ def valid_packet():
         "approval": {"render_approved": False, "spend_approved": False, "publish_approved": False, "approved_by": "", "approved_at": "", "credit_cap": None},
         "export": ss["export"], "qa": {"deterministic": {}, "creative": {}, "repetition": {}, "render_inspection": None},
         "growth_hypotheses": ss["growth_hypotheses"],
-        "provenance": {"generated_at": "2026-10-07T00:00:00Z", "provider": "manual", "requested_model": "n/a", "observed_model": "n/a", "demonstrations_used": [], "stage_log": [], "repair_passes": 0, "engine_version": "test"},
+        "provenance": {"generated_at": "2026-10-07T00:00:00Z", "provider": "broker", "requested_model": "test", "observed_model": "n/a", "demonstrations_used": [], "stage_log": [{"stage": st, "attempt": 0, "result": "ok", "provider": "broker"} for st in ("premises", "hooks", "script_storyboard", "qa_review")], "repair_passes": 0, "engine_version": "test"},
         "negative_constraints": b["negative_constraints"],
     }
     packet["tool_mapping"] = plan(packet, bb, QUOTES_2026_10_07)

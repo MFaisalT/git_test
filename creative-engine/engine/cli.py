@@ -132,17 +132,30 @@ def cmd_history(a, store):
 
 def cmd_approve(a, store):
     p = store.load_packet(a.project, a.packet_id)
-    if p["status"] == "draft":
-        sys.exit("refusing: packet is 'draft' (fails deterministic gates or fixture-generated); fix first")
+    allowed_from = {"planning-ready; render unverified", "approved-for-render", "rendered-unverified", "rendered-verified"}
+    if p["status"] not in allowed_from:
+        sys.exit(f"refusing: packet status is '{p['status']}'; only {sorted(allowed_from)} can be approved")
+    if a.credit_cap is None or a.credit_cap <= 0:
+        sys.exit("refusing: --credit-cap must be a positive number of credits")
     unresolved = [r["asset"] for r in p["asset_rights"] if r["rights_status"] == "unresolved"]
-    if a.render and unresolved:
-        sys.exit(f"refusing render approval: unresolved rights {unresolved}")
+    if (a.render or a.spend or a.publish) and unresolved:
+        sys.exit(f"refusing approval: unresolved rights {unresolved}")
+    if a.publish and p["status"] != "rendered-verified":
+        sys.exit("refusing publish approval: the export must be rendered and inspected first (status rendered-verified)")
+    if p["provenance"].get("provider") == "fixture":
+        sys.exit("refusing: fixture-generated packet")
     ap = p["approval"]
     ap.update({"approved_by": a.by, "approved_at": now_iso(), "credit_cap": a.credit_cap})
-    if a.render: ap["render_approved"] = True; p["status"] = "approved-for-render"
+    if a.render and p["status"] == "planning-ready; render unverified": ap["render_approved"] = True; p["status"] = "approved-for-render"
+    elif a.render: ap["render_approved"] = True
     if a.spend: ap["spend_approved"] = True
     if a.publish: ap["publish_approved"] = True
-    rep = validate_all(p)
+    bible = None
+    try:
+        bible = store.load_bible(a.project, p["bible_version"]["bible_id"], p["bible_version"]["version"])
+    except FileNotFoundError:
+        pass
+    rep = validate_all(p, bible)
     if not rep.ok:
         sys.exit("approval would violate gates: " + json.dumps([f.as_dict() for f in rep.errors]))
     store.save_packet(a.project, p)
@@ -168,7 +181,7 @@ def cmd_trends(a, store):
         print("trend refresh request written:", path)
         print("Answer it (web-sourced JSON) and run: engine trends ingest", a.project, path.replace(".request.md", ".response.json"))
     elif a.action == "ingest":
-        entries, errs = parse_refresh_response(_load(a.file))
+        entries, errs = parse_refresh_response(_load(a.file), {e["trend_id"] for e in ledger})
         for e in errs:
             print("rejected:", e)
         for e in entries:

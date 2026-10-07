@@ -46,3 +46,35 @@ Demonstrates the trend radar end to end: a real refresh (sonnet worker with web 
 ## 5. What this acceptance does and does not establish
 
 Establishes: the engine turns new briefs — including one it had never seen — into complete, gate-passing, planning-ready packets with inspectable alternatives, provenance and tool mappings, and changes its creative decisions when constraints change. Does not establish: audience response, virality, profit, render quality, lip-sync, or identity stability in generated video; those require owner-approved rendering and the pilot measurements in docs/LAUNCH-EXPERIMENT.md.
+
+
+## 6. Independent review and repairs (2026-10-07)
+
+Reviewer: a separate opus worker that did not build the engine; instructions in `eval/heldout/INDEPENDENT-REVIEW-INSTRUCTIONS.md`; report verbatim in `eval/heldout/independent-review.json`; adversarial packets in `eval/heldout/adversarial/`.
+
+**Verdict: accept-with-fixes** — 0 fatal, 13 material, 9 minor. Status labels and tool mapping held up (nothing claims rendered/published/viral/profitable; `prompt_text` honestly the only payload). Of 15 adversarial probes only 4 were caught before repairs.
+
+Substantiated and repaired (engine code; tests added in `tests/test_review_fixes.py`; all six packets re-finalised and still pass):
+
+| Finding | Repair |
+|---|---|
+| `rejected` packet could be approved; publish/spend skipped rights; negative cap accepted | approval only from planning-ready; publish requires rendered-verified; spend/render refuse unresolved rights; `credit_cap` must be > 0 (CLI + validator) |
+| NaN timings passed | `TIMING_NOT_FINITE` / `TIMING_NOT_NUMERIC` |
+| 80 words of dialogue in a 15 s script passed (only per-scene rate was checked) | `SPEECH_SCRIPT_TOO_LONG` on script-level words / duration |
+| Speech written into action text of a silent gag passed | `SILENT_SPEECH_IN_ACTION` (speech verb + quoted span, double or single quotes) |
+| Paraphrased testimonial ("Mine's been spotless for months") and testimonial in hook variants passed | regex pattern set over audience-facing text (script, scenes, hooks, premises) |
+| Forbidden claims reworded ("built to last") passed | synonym table per topic; negation-aware sentence scan so "no claims about durability" is not a hit |
+| Fixture packet relabelled `manual` became planning-ready | non-draft status now requires `provider ∈ {broker, claude_cli}` and ≥3 successful live stages in `stage_log` |
+| Trend provenance false on `P-B1p_perturbed` (ingest happened between request and response) | `trends_used` persisted at first render of the premises request; P-B1p corrected to `[]` |
+| Trend validation weak (`httpnotaurl`, `localhost`, future dates, duplicates, hostile text accepted) | URL parse with real host; future-date, duplicate-id, length and instruction-injection rejection |
+| Freshness ignored `decay_horizon_days` and trend origin | per-entry horizon (capped at 14 d) measured from `origin_date` when given |
+| `do_not_copy` still injected; `license_required` unpenalised; docs said "blocked" | `do_not_copy` excluded from prompts; `license_required` down-ranked; sound/dance `free_to_adapt` only with platform-official source; README reworded |
+| Entry T-20261007-01 rested on a blocked source seen only in search | downgraded to `aggregator` / `access_level=index_only` in the ledger |
+| Niche: N1 ranked first on sunk cost; N1/N2 not divergent | docs/NICHE-DECISION.md revised: N3 is the stronger business bet; N1 kept as learning engine for a stated reason; overlap acknowledged |
+| Evidence: lab sources not on disk; Caine absent | docs/EVIDENCE-LEDGER.md §7 lists every cited Drive file id; Caine/Benjamin explicitly unresolved and uncounted |
+
+Adversarial rerun after repairs: **10/10 saved probes caught** (A1, A1b, A2, A2b, A2c, A3, A4, A5, A6, A7). Approval-flow probes (rejected→approved; publish/spend with unresolved rights and cap −1) are covered by `tests/test_review_fixes.py::TestApprovalGates`.
+
+**Creative diversity finding — accepted, not fully repaired.** The reviewer judged the three bake-off packets share a production template beyond identity: orange evidence tape, cable/socket faults, the chest lamp as the reveal device, an off-camera voice that exposes her, window-left key light. Two of those (cable/socket; tape as the Inspector's procedure) were induced by the briefs and bible; lamp-as-reveal and off-camera-exposure recur by model habit. Repairs: (a) the repetition check now carries a `devices` fingerprint (hook mechanism, props, lighting language, off-camera-voice use, surprise device) and a **recurring-motif report** — for `C-B3` it now lists `prop:tape`, `prop:lamp`, `prop:orange`, `prop:clipboard` at 3/3 and `prop:cable`, `prop:socket`, `prop:phone` at 2/3; (b) the lexical similarity itself stays below threshold (max .14), so **the trio is not automatically flagged; the reviewer's semantic judgement stands and is recorded here**. Honest consequence: the "three genuinely different packets" claim rests on the perturbation, held-out and trend-aware packets (all with different structures, devices and payoffs) more than on the bake-off trio; the bake-off trio is better described as three *formats* of one production template. A semantic (embedding-based) device check is the natural next step; it was not built to keep the post-freeze changes to gates and reporting.
+
+Minor findings not acted on (recorded): affiliate economics assumption wording; internal-consistency slips in packets; dead adapter logic branch; fixture gate still partly self-declared (mitigated by the provenance rule, not eliminated).

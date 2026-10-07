@@ -26,6 +26,10 @@ Scope: a bounded refresh on top of the lab's 7 Oct research run (growth-report.m
 | N7 | Archibald Brown / Derek Mercer | search 2026-10-07 | — | Zero coverage beyond Dexerto's 25 Sep snapshot (lab E24) | — | Account ages unknown; remain comparators, not failures |
 | N8 | Higgsfield structured-prompt support | https://docs.higgsfield.ai/how-to/sdk ; third-party Seedance guides (kapwing, wavespeed, atlascloud) | 2026 | SDK takes string `prompt` in a flat arguments dict; no official JSON prompt spec; third-party guides disagree on prompt layout | high (negative) | ByteDance-side spec not checked |
 
+### Unresolved leads (not counted)
+- **Caine**: no unique account identified in the lab's research or in today's searches; remains a name-only lead and is **not** counted or verified.
+- **Benjamin** (Benjamin Stachio per one aggregator listing, sprites.ai): handle, age and counts unresolved; excluded from numerical comparison.
+
 ## 3. Account identity and timeline resolution (Abu vs Jean)
 
 - Abu Shalab and Jean Phil are **distinct personas and accounts** (different handles, looks, launch narratives, tokens $ABU vs $JEANPHIL). Nothing today merges them; N3 adds that Jean's account is likely older than its character, Abu's account age remains unknown.
@@ -63,3 +67,25 @@ Nothing above is causal. Median post performance at equal account age could not 
 ## 6. Coverage gaps (explicit)
 
 No archived snapshots retrieved; no Instagram/TikTok playback; no private analytics; no creator statements on spend; Arabic/Portuguese/German sources only via English summaries today; comment sampling not repeated. Research-refresh cadence recommended in LAUNCH-EXPERIMENT.md (no automation created).
+
+
+## 7. Source files cited by name (where they live)
+
+The lab's research files are **not vendored into this repository** (they are the owner's Drive files; copying them is an upload decision). They were read in this session through the Google Drive connector; exact ids so any claim can be checked:
+
+| File | Drive file id | Role |
+|---|---|---|
+| growth-report.md | 19fIEPjrsJzHCgtWtu-PA5fCsgZKHPAA_ | growth timelines, qualification rule |
+| growth-evidence.csv | 152gwPc5TnAqxt0xCNNLsVOXWm5kBCn3S | 35-row ledger E01–E35 |
+| research-report.md | 1utEB0xPRj60uLqtW15WdXo7flpHDhx2D | integrated synthesis |
+| independent-audit.md | 1cj6abYyBVPBLReN2MEn9tLAFwx5YV_9w | separate reviewer's audit |
+| comedy-report.md | 1XPVtVO4TOtQ19ghxah66fjL8wA8js3EZ | clip inspection, concept hypotheses |
+| audience-report.md | 1epJ7XrYEd0JFHOvkOJYMVxxEcvfnL1ZJ | 51-comment sample |
+| commercial-report.md | 1cbXDaTq27Xnd7n25YjZI3Tw2IKS1EL8d | platform rules, rights, fees |
+| method-and-pilot.md | 1ei4sEQeiMeAi8XkrwrlN_Gz4AOHiDJVk | 16-post pilot design |
+| setup-capabilities.json | 1B79d4mrkFJkO9OODzpsl1jGXwIeCGZNy | Genjutsu metadata |
+| tool-evidence.json | 1xmCzSHULVDkfFlIoLugAmAbbbrxSXHui | balance + model catalogue captures |
+| cost-quotes.json | 1Y3VIftsmAZjCsu3HwgLM-BLXo3utub8z | 8-credit / 56-credit quotes (quoted in engine/adapters.py) |
+| AGENTS.md / PROJECT-BRIEF.md / PROJECT-STATUS.md / NEXT-STEPS.md / PRODUCTION-PROVENANCE.md / RESEARCH-INDEX.md | 1ay8Ntb5ewabxD8i3QRwEaW0q6S7hDhrD / 1x3oourwfi16kVGXMX8nKOnzMgFhbXee3 / 1cWgyX6fj7gagSCWFGrKQKcustDy7khE4 / 1F0pD43xeMihu7Z1Ho-lBcjDKgJPtnTSV / 1VJ-UUsP-CoVd0WfN_ptanhIwkJw6jzIx / 1OW7BCRtBr2wJbjXK9Dk2OS1_GL6lmgSX | governance |
+
+Platform-rule figures (TikTok 10K/100K/>1 min; YouTube 1,000/4,000 h or 10M Shorts; Feb-2027 change; X 500/500K) are reproduced from commercial-report.md's 2026-10-07 captures because the official pages are egress-blocked from this container; they are dated secondary reproductions here, not fresh primary reads.

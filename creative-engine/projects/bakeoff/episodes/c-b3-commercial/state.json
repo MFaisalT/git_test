@@ -586,5 +586,7 @@
   "demos": [
     "D1_silent_gag",
     "D3_commercial_mechanism"
-  ]
+  ],
+  "trends_used": [],
+  "trends_snapshot_age_days": null
 }

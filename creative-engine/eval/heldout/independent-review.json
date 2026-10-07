@@ -1,0 +1,273 @@
+{
+  "findings": [
+    {
+      "area": "niche",
+      "severity": "material",
+      "claim": "N1 and N2 are not genuinely divergent; N3 resells N1's output.",
+      "evidence": "docs/NICHE-DECISION.md:7 N2 = 'small-space organisation tips told through a character'; :54 fallback 'pivot the same character into a utility format (organisation/household tips with the Inspector framing)'. The Inspector bible is already 'trivial household faults'. N3 (:7,:52) sells 'planning-ready character-driven spots' from the same engine. So all three share the character and two share the household domain.",
+      "required_fix": "Replace N2 with a niche that differs in audience, topic and production method (or state plainly that the comparison covers three monetisation wrappers around one character, not three niches)."
+    },
+    {
+      "area": "niche",
+      "severity": "material",
+      "claim": "The N1-primary recommendation rests on sunk cost, not on the cited evidence.",
+      "evidence": "NICHE-DECISION.md:52 justifies N1 because 'it is what the lab was set up for and what the engine is tuned to'. The same document says N1 has 'zero verified cold-start case' (:10, :27 'zero (most likely)'), while N3 demand is 'real and measurable' (:10) with 'Weeks' to first revenue (:18). Read on its own terms, the evidence points to N3 as primary.",
+      "required_fix": "Either make N3 primary or give an evidence-based reason for ranking N1 first. Label the 'lab was set up for it' rationale as an owner preference."
+    },
+    {
+      "area": "niche",
+      "severity": "minor",
+      "claim": "The affiliate economics hide an assumption.",
+      "evidence": "NICHE-DECISION.md:32 '...commissions 3-10% -> at 50K monthly reach that is roughly tens of dollars' gives no average order value. Without it the stated rates produce anything from about $1 to hundreds. 'sponsorships need 10K+ engaged followers' has no source.",
+      "required_fix": "State the AOV assumption and show the arithmetic. Source the 10K sponsorship threshold or mark it as an assumption."
+    },
+    {
+      "area": "niche",
+      "severity": "minor",
+      "claim": "Specific platform-rule figures rest on a source that is not in the repo.",
+      "evidence": "NICHE-DECISION.md:45 'from 1 Feb 2027 new entrants need 8,000 hours or 20M Shorts views' and :44-47 cite 'commercial-report.md' captures (:43). No commercial-report.md exists anywhere on disk.",
+      "required_fix": "Include the captures (URL plus capture date plus quoted text) or mark these figures as unverified secondary claims."
+    },
+    {
+      "area": "evidence",
+      "severity": "material",
+      "claim": "None of the lab sources the docs cite by name exist, so no promoted claim can be checked.",
+      "evidence": "Searched the filesystem for research-report.md, comedy-report.md, audience-report.md, independent-audit.md, commercial-report.md, method-and-pilot.md, growth-report.md, growth-evidence.csv (E01-E35), PROJECT-STATUS.md, PRODUCTION-PROVENANCE and cost-quotes.json: no matches. They are cited in EVIDENCE-LEDGER.md:3, :57; NICHE-DECISION.md:9-16; TOOL-CAPABILITIES.md:38; adapters.py:168 quote_source 'cost-quotes.json'.",
+      "required_fix": "Vendor the cited lab files (or exact excerpts with hashes) into the repo, or downgrade every claim that depends on them to 'unverifiable here'."
+    },
+    {
+      "area": "evidence",
+      "severity": "minor",
+      "claim": "Caine is missing entirely. Benjamin appears only as a name.",
+      "evidence": "grep -i caine across the repo finds only the review instructions. Benjamin appears once, EVIDENCE-LEDGER.md:11 'Benjamin (unresolved)', with no row or reason. The verdict is correct (unverified) but undocumented. Abu Shalab and Jean Phil are correctly kept distinct (:31). Access levels are honest: ':3 No video was watched with audio in this refresh', ':46 \"watched full videos with audio\" is not claimed'.",
+      "required_fix": "Add explicit ledger rows for Caine and Benjamin, each with status 'unverified' and the reason."
+    },
+    {
+      "area": "evidence",
+      "severity": "minor",
+      "claim": "Precise numbers are taken from sources the build could not read.",
+      "evidence": "EVIDENCE-LEDGER.md:32 '479,584 described 3 Oct (403-blocked blog)'. :40 'frames' access attributed to a 'lab specialist' with no artefact in the repo.",
+      "required_fix": "Mark these as second-hand (access 'index'/'none' for this build) and give the original capture location."
+    },
+    {
+      "area": "diversity",
+      "severity": "material",
+      "claim": "The bake-off packets share a production template beyond the character's identity. The perturbation and held-out packets diverge only because their briefs banned the template items.",
+      "evidence": "Motif counts in storyboard.md (B1/B2/B3/P/H): 'orange tape' 4/8/3/0/2(rejected alt); cable 73/0/45/9/0; socket 23/0/9/24/0; window key camera-left 4/4/4/0/0; 'room tone' 4/5/4/0/5; fridge hum in B1 and B3. All three bake-offs use a locked-off, eye-level, 'slightly too formal' 24-26mm medium/wide frame. The b1p brief explicitly bans 'cordon tape, cones, clipboard tick-counting' and the cable-tie payoff. The heldout brief bans cables/chargers/sockets/side table/kitchen. The held-out generator rejected its own P4 because it 'repeats the earlier episode's tag-the-evidence skeleton' (h-heldout/storyboard.md:28). IDENTITY (allowed): aubergine jacket, chest lamp, clipboard on lanyard, single two-finger tap, warm-disappointment exhale, culprit-is-herself rule. TEMPLATE (not allowed): safety-orange evidence tape (B1, B2, B3), cable/charger/socket fault (B1, B3; P was mandated by its brief), chest-lamp beam as the reveal device (B2 S4, B3 S4, P S3), an off-camera friend's mild question that exposes her (B2 S3/S5, P S3/S4), window-left key light plus room-tone bed (B1-B3). Narrative structures do differ (loop; escalating findings plus camera slide; count reconciliation plus pull-back; ticking-alarm escalation; jump-cut stakeout), so this is a partial template, not a single skeleton.",
+      "required_fix": "Feed the template motifs (orange tape, cable/socket faults, lamp-beam reveal, off-camera exposing question, window-left key) into the repetition check as banned-by-default for new episodes. Re-run an unconstrained brief to show divergence without explicit bans."
+    },
+    {
+      "area": "diversity",
+      "severity": "minor",
+      "claim": "The packets contain internal-consistency slips.",
+      "evidence": "bakeoff c-b1 storyboard: P2 rejection cites 'the lamp's movement', but P2 (a human bridge holding a plug) has no lamp. 'Props from frame one' lists 'fresh cable tie' and 'small scissors', which are produced from a pocket later. p-b1p S5 foley says 'two slow finger taps on clipboard' while the performance and bible require a single tap.",
+      "required_fix": "Add a QA check that the prop list matches props visible at t=0, and that the tap count is consistent across the action and foley fields."
+    },
+    {
+      "area": "tools",
+      "severity": "minor",
+      "claim": "The adapter has dead logic and one unverified prompt convention. Otherwise the mapping is honest.",
+      "evidence": "adapters.py:148 '\"generate_audio\": packet[\"brief\"].get(\"format\") != \"silent_gag\" or True' is always True. adapters.py:97,102 use '@image1/@image2' reference tokens in prompt_text, but TOOL-CAPABILITIES.md does not verify that Higgsfield prompts resolve such tokens. On the positive side, prompt_text is stated as the only creative payload (adapters.py:4-6; TOOL-CAPABILITIES.md:18 'Verified negative'), and manual steps and gaps are explicit (adapters.py:156-163; TOOL-CAPABILITIES.md:22-34).",
+      "required_fix": "Simplify generate_audio to True with a comment, and mark @imageN referencing as unverified (or verify it)."
+    },
+    {
+      "area": "implementation",
+      "severity": "material",
+      "claim": "Approval lets a 'rejected' packet become approved-for-render.",
+      "evidence": "cli.py:135 refuses only status=='draft'. Reproduced on a scratch copy: c-b2 set to 'rejected' with rights resolved -> 'approval recorded; status=approved-for-render', exit 0.",
+      "required_fix": "Allow approval only from 'planning-ready; render unverified', or whitelist the allowed source statuses."
+    },
+    {
+      "area": "implementation",
+      "severity": "material",
+      "claim": "Spend and publish approval bypass the rights gate and accept a negative credit cap.",
+      "evidence": "cli.py:137-147 checks unresolved rights only when --render is given. validators.py:312-317 blocks unresolved rights only at render statuses. Reproduced: 'approve bakeoff c-b3-commercial --credit-cap -1 --publish --spend' -> exit 0, approval {spend_approved: True, publish_approved: True, credit_cap: -1.0} with 2 unresolved rights. The validator also accepts approved-for-render with credit_cap=-5 (adversarial A6).",
+      "required_fix": "Refuse publish/spend while any rights are unresolved or the packet is unrendered. Require credit_cap > 0. Add tests for both."
+    },
+    {
+      "area": "implementation",
+      "severity": "material",
+      "claim": "NaN timings pass every timing gate.",
+      "evidence": "validators.py:157-167 relies on comparisons that are all False for NaN. Python json.load accepts NaN. Adversarial A2b (S2.end_s = S3.start_s = NaN) -> ok=True, with only RIGHTS_UNRESOLVED.",
+      "required_fix": "Reject non-finite numbers (math.isfinite) in schema and timing validation."
+    },
+    {
+      "area": "implementation",
+      "severity": "material",
+      "claim": "The commercial testimonial and forbidden-claim gates are shallow substring lists.",
+      "evidence": "validators.py:321 matches 7 fixed phrases, and only in script+scenes. A1 \"Six fit. Mine's been spotless for months.\" plus the caption 'since I started using this box...' -> PASS. A1b 'I use this box every day and it changed my life' in hook_variants -> PASS (hook_variants not scanned). A3 'Built to last for years. Customers report a tidier hallway' -> PASS even though 'durability' and 'any user result' are forbidden_claims (validators.py:330-332, exact substring).",
+      "required_fix": "Scan every creative field (hooks, premises, captions, export text). Widen the first-person-experience patterns (I/me/my + use/using/since/been). Treat forbidden_claims as topics with synonym lists or an LLM-assisted QA flag that blocks planning-ready."
+    },
+    {
+      "area": "implementation",
+      "severity": "minor",
+      "claim": "The silent-gag check ignores speech written into action text. Speech-rate checks ignore script-level dialogue.",
+      "evidence": "A4: B1 action plus \"She says aloud, clearly: 'This cable is guilty.'\" -> PASS (validators.py:182-186 checks dialogue arrays only). A7: 80 words appended to script.dialogue in a 15 s packet -> PASS (the speech-rate check is per scene only, validators.py:169-174).",
+      "required_fix": "Flag quoted speech or speech verbs in silent formats. Check total script dialogue words against duration."
+    },
+    {
+      "area": "implementation",
+      "severity": "minor",
+      "claim": "The fixture gate depends on a self-declared field, and approval skips bible checks.",
+      "evidence": "validators.py:352 checks provenance.provider=='fixture' only. A5 relabels it 'manual' with status planning-ready -> PASS. cli.py:145 calls validate_all(p) without a bible, so CONTINUITY_ANCHORS and BIBLE_DO_NOT are skipped at approval. The genuine path works: a fixture run ends '[draft]', approve refuses it, and drafts are refused.",
+      "required_fix": "At approval, require stage_log entries with non-fixture providers and response files on disk. Pass the stored bible into validate_all at approval."
+    },
+    {
+      "area": "implementation",
+      "severity": "material",
+      "claim": "Trend provenance is false in a committed packet, and the fix still mis-records in the broker flow.",
+      "evidence": "projects/acceptance/episodes/p-b1p-perturbed/packet.json lists provenance.trends_used = [T-20261007-05,-02,-03,-01,-04] and emits 3 TREND_RIGHTS warnings. None of its 5 request files contains any trend text (grep 'T-20261007' = 0). Its premises stage ran 23:19:54Z, before trends were ingested (evidence.jsonl 23:24:26Z). Commit 8784337 says 'truthful trend provenance' but did not correct this packet. The new guard (pipeline.py:362 'if \"premises\" not in st[\"stages\"]') still records current trends when a broker request was written before an ingest and answered after it, because BrokerProvider never rewrites an existing request file (providers/__init__.py:56).",
+      "required_fix": "Record trends_used from the trend IDs actually embedded in the stored request file (or a hash of trends_text saved when the request is written). Regenerate p-b1p provenance. Add a test for the pending-then-ingest case."
+    },
+    {
+      "area": "implementation",
+      "severity": "material",
+      "claim": "The trend freshness model ignores the decay horizon and measures capture date rather than trend date.",
+      "evidence": "trends.py:4 says every entry has a 'decay horizon', but REQUIRED (:23) omits decay_horizon_days, and select_relevant (:79-80) uses a fixed 14 days. T-20261007-04 (decay 10 d) stays 'fresh' for 14 days. T-20261007-01 (decay 60 d) goes stale at 14. T-20261007-02 is a 2024 trend (statepress.com/article/2024/11/...) but is injected as '0d old' fresh, because age = capture date.",
+      "required_fix": "Make decay_horizon_days required and use it per entry. Add an observed_since/trend_date field and base freshness on it."
+    },
+    {
+      "area": "implementation",
+      "severity": "material",
+      "claim": "Trend-entry validation is weak, and the README overstates it.",
+      "evidence": "Ingest on a scratch root accepted all 3 hostile entries ('ingested 3 entries, rejected 0'): captured_at 2027-06-01 (shown 'FRESH -236.0d', with the maximum recency bonus); source 'httpnotaurl' and 'http://localhost/fake' (trends.py:39 startswith('http')); a duplicate trend_id X1; a type 'sound' marked free_to_adapt with how_to_adapt 'copy the trending sound exactly'; evidence_class platform_official with no official domain. README.md:45 'validates every entry (URL sources...)' and :47 'trending sounds... default to license_required / do_not_copy' are enforced only in the prompt, not in code.",
+      "required_fix": "Reject future dates, require a proper URL parse (scheme, host, not localhost), reject duplicate IDs, force sound/dance_or_move/creator identity to license_required/do_not_copy unless the source is platform_official on an allow-listed domain, and check evidence_class against the source domain."
+    },
+    {
+      "area": "implementation",
+      "severity": "material",
+      "claim": "The trend rights rule says 'blocked' but only reweights entries.",
+      "evidence": "trends.py:7-8 says copying 'is blocked by rights_status'. In code, do_not_copy entries still go into prompts with a -2 score (:74-75), license_required is not penalised, and staleness_findings only emits warnings (:107-108). The 3 do_not_copy entries were injected into the t-b4 premises/hooks requests (grep shows 5/10 trend IDs).",
+      "required_fix": "Either exclude do_not_copy/license_required from injection (or inject only a mechanism abstraction), or reword the docs to say 'deprioritised and warned'."
+    },
+    {
+      "area": "implementation",
+      "severity": "material",
+      "claim": "One trend entry rests on a source that was only seen in search snippets, and the ledger cannot record that.",
+      "evidence": "trends_requests/2026-10-07.response.json coverage_gaps: 'xenospectrum.com fetches were egress-blocked, so those pages were seen only in search results'. T-20261007-01's only source is https://xenospectrum.com/en/youtube-made-on-2026-new-features/, yet it is ingested as evidence_class 'press', rights free_to_adapt, with a precise claim ('Announced at Made On YouTube on 2026-09-23 and rolling out globally'). The trend schema has no access-level field, so the snippet-only status is lost on ingest. Remaining sources (gelato.com/da and /ja blog locales, statepress.com 2024/11, tribune.com.pk/story/2618464, viral.app) are well-formed, real-looking URLs, but this review could not confirm they resolve (no browsing permitted). None is platform-official.",
+      "required_fix": "Add access_level (index/text/full) to trend entries and require at least one fetched source per entry, or downgrade to 'inference'. Re-verify T-01 against an official YouTube source."
+    },
+    {
+      "area": "labels",
+      "severity": "minor",
+      "claim": "The README overstates what the trend ledger is.",
+      "evidence": "README.md:43 'ledger of what is currently viral', but the 5 entries are 3 aggregator, 2 press, 0 platform_official, one is a 2024 trend, and one admits 'current-week peak status is unconfirmed' (T-04). Status labels are otherwise honest: all 8 packets read 'planning-ready; render unverified' (packet.json status and storyboard footer). No document claims rendered, published, verified-viral or profitable output.",
+      "required_fix": "Reword to 'dated, sourced trend observations (recency and peak unverified)'."
+    }
+  ],
+  "tests": {
+    "command": "python3 -m unittest discover -s . -p \"test_*.py\" (from creative-engine/)",
+    "ran": 60,
+    "failures": 0,
+    "errors": 0
+  },
+  "adversarial": [
+    {
+      "description": "A1 commercial: paraphrased first-hand testimonial in dialogue (\"Mine's been spotless for months\") and caption ('since I started using this box')",
+      "caught": false,
+      "codes": [
+        "RIGHTS_UNRESOLVED"
+      ]
+    },
+    {
+      "description": "A1b commercial: 'I use this box every day and it changed my life' placed in hook_variants",
+      "caught": false,
+      "codes": [
+        "RIGHTS_UNRESOLVED"
+      ]
+    },
+    {
+      "description": "A2 overlapping timings (S2 start 3.0 vs S1 end 4.0)",
+      "caught": true,
+      "codes": [
+        "TIMING_OVERLAP"
+      ]
+    },
+    {
+      "description": "A2b NaN end_s/start_s (Python json accepts NaN)",
+      "caught": false,
+      "codes": [
+        "RIGHTS_UNRESOLVED"
+      ]
+    },
+    {
+      "description": "A2c duplicate scene interval under a new id, added to the unit",
+      "caught": true,
+      "codes": [
+        "TIMING_OVERLAP",
+        "TOOL_UNIT_CUTS"
+      ]
+    },
+    {
+      "description": "A3 forbidden claims paraphrased ('Built to last for years' = durability; 'Customers report...' = user result)",
+      "caught": false,
+      "codes": [
+        "RIGHTS_UNRESOLVED"
+      ]
+    },
+    {
+      "description": "A4 silent_gag with quoted speech in scene action",
+      "caught": false,
+      "codes": [
+        "RIGHTS_UNRESOLVED"
+      ]
+    },
+    {
+      "description": "A5 fixture packet relabelled provider=manual, status planning-ready",
+      "caught": false,
+      "codes": [
+        "RIGHTS_UNRESOLVED"
+      ]
+    },
+    {
+      "description": "A6 approved-for-render with credit_cap=-5",
+      "caught": false,
+      "codes": []
+    },
+    {
+      "description": "A7 80-word line only in script.dialogue of a 15 s packet",
+      "caught": false,
+      "codes": [
+        "RIGHTS_UNRESOLVED"
+      ]
+    },
+    {
+      "description": "CLI: approve --render on a draft packet",
+      "caught": true,
+      "codes": [
+        "refusing: packet is 'draft'"
+      ]
+    },
+    {
+      "description": "CLI: approve --render on a 'rejected' packet with resolved rights",
+      "caught": false,
+      "codes": [
+        "status=approved-for-render"
+      ]
+    },
+    {
+      "description": "CLI: approve --publish --spend --credit-cap -1 with 2 unresolved rights",
+      "caught": false,
+      "codes": [
+        "approval recorded"
+      ]
+    },
+    {
+      "description": "CLI: fixture-provider run then approve",
+      "caught": true,
+      "codes": [
+        "[draft]",
+        "refusing: packet is 'draft'"
+      ]
+    },
+    {
+      "description": "CLI: trends ingest of future-dated, non-URL/localhost-source, duplicate-id, 'copy the sound exactly' free_to_adapt entries",
+      "caught": false,
+      "codes": [
+        "ingested 3 entries, rejected 0"
+      ]
+    }
+  ],
+  "overall": "accept-with-fixes",
+  "summary": "60/60 tests pass. All 8 committed packets validate with the current code (RIGHTS_UNRESOLVED warnings only) and are honestly labelled 'planning-ready; render unverified'. The tool mapping is honest: prompt_text is the only payload and gaps are explicit. The fixture-draft and draft-refusal gates work. Main problems: (1) the committed p-b1p packet claims 5 trends it never saw, and the 'truthful provenance' fix still fails in the broker pending-then-ingest flow; (2) approval accepts rejected packets, and publish/spend approval bypasses unresolved rights and accepts negative caps; (3) the commercial testimonial and forbidden-claim gates are trivially paraphrasable, and NaN timings pass; (4) the trend radar ignores decay horizons, measures capture date rather than trend date, accepts future dates and non-URLs, and 'blocks' rights only in prose; one entry rests on a snippet-only source logged as 'press'; (5) every cited lab source is absent from the repo; (6) the niches overlap and the primary pick rests on sunk cost; (7) the bake-off packets share a template (orange tape, cable/socket faults, lamp-beam reveal, off-camera exposing question, window-left key) beyond the character's identity. No fatal findings, because no status overclaims and no render or publish was performed."
+}

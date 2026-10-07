@@ -716,11 +716,72 @@
         "pitch": {
           "max_similarity": 0.0,
           "closest_packet": null
+        },
+        "devices": {
+          "max_similarity": 0.115,
+          "closest_packet": "C-B2_dialogue_episode"
         }
       },
       "flagged_fields": [],
+      "recurring_motifs": [
+        {
+          "motif": "prop:clipboard",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:orange",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:lamp",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:lanyard",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:safety",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:tape",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:inspection",
+          "episodes": 3,
+          "share": 1.0
+        },
+        {
+          "motif": "prop:phone",
+          "episodes": 2,
+          "share": 0.67
+        },
+        {
+          "motif": "prop:wall",
+          "episodes": 2,
+          "share": 0.67
+        },
+        {
+          "motif": "prop:socket",
+          "episodes": 2,
+          "share": 0.67
+        },
+        {
+          "motif": "prop:cable",
+          "episodes": 2,
+          "share": 0.67
+        }
+      ],
       "verdict": "no-lexical-repetition-detected",
-      "note": "Lexical similarity only; a reviewer must judge whether flagged overlap is identity (allowed) or a repeated joke/plot (not)."
+      "note": "Lexical similarity only; a reviewer must judge whether flagged overlap is identity (allowed) or a repeated joke/plot/device (not). 'devices' covers hook mechanism, props, lighting language, off-camera-voice use and the surprise device."
     },
     "render_inspection": null
   },
@@ -737,7 +798,7 @@
     }
   ],
   "provenance": {
-    "generated_at": "2026-10-07T23:12:47Z",
+    "generated_at": "2026-10-07T23:40:34Z",
     "provider": "broker",
     "requested_model": "sonnet",
     "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
@@ -746,6 +807,8 @@
       "D1_silent_gag",
       "D3_commercial_mechanism"
     ],
+    "trends_used": [],
+    "trends_snapshot_age_days": null,
     "stage_log": [
       {
         "stage": "premises",

@@ -134,11 +134,16 @@ class Pipeline:
         history_fp = [dict(fingerprint(p), packet_id=p["packet_id"]) for p in history]
         ledger = self.store.read_ledger(self.project, "trends")
         fresh, stale = select_relevant(brief, ledger)
-        trends_text = render_for_prompt(fresh, stale) if ledger else ""
-        if "premises" not in st["stages"]:  # record only what the generating stage actually saw; never retrofit on resume
+        trends_text = render_for_prompt(fresh, stale) if fresh or stale else ""
+        # Record the trend ids at the moment the premises request is FIRST rendered and persist immediately.
+        # A later ingest must never be retrofitted onto a request that was written before it.
+        if "trends_used" not in st:
             st["trends_used"] = [e["trend_id"] for e in fresh]
             st["trends_snapshot_age_days"] = (min(__import__("engine.trends", fromlist=["age_days"]).age_days(e) for e in fresh) if fresh else None)
-        st.setdefault("trends_used", []); st.setdefault("trends_snapshot_age_days", None)
+            self._save_state(packet_id, st)
+        else:
+            fresh = [e for e in ledger if e["trend_id"] in st["trends_used"]]
+            trends_text = render_for_prompt(fresh, []) if fresh else ""
         try:
             prem = self._run_stage("premises", packet_id, brief, bible, {}, history_fp, st, trends_text)
             hooks = self._run_stage("hooks", packet_id, brief, bible, {"premises": prem}, history_fp, st, trends_text)

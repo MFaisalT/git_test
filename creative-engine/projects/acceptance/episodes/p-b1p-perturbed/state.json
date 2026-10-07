@@ -645,12 +645,6 @@
     "D1_silent_gag",
     "D2_spoken_tool_honesty"
   ],
-  "trends_used": [
-    "T-20261007-05",
-    "T-20261007-02",
-    "T-20261007-03",
-    "T-20261007-01",
-    "T-20261007-04"
-  ],
-  "trends_snapshot_age_days": 0.9761082867939814
+  "trends_used": [],
+  "trends_snapshot_age_days": null
 }

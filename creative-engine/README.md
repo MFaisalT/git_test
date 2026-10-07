@@ -40,12 +40,12 @@ python3 -m engine learn    <project> EP01 --json '{"shares_7d": 0, "lesson": "..
 
 ## Trend radar (fresh research when needed)
 
-The engine keeps a dated, sourced, decaying ledger of what is currently viral (formats, styles, edit moves, hook patterns, words/phrases, topics, sounds, dances/moves, products, memes, platform features) per project in `projects/<project>/trends.jsonl`.
+The engine keeps a dated, sourced, decaying ledger of trend *observations* (what a bounded, web-searching refresh could verify on a given day — not a live feed of what is viral) (formats, styles, edit moves, hook patterns, words/phrases, topics, sounds, dances/moves, products, memes, platform features) per project in `projects/<project>/trends.jsonl`.
 
 - `engine trends refresh <project> --bible <id>` writes a bounded research request (`trends_requests/<date>.request.md`). A Claude session with web search (or a human) answers it; `engine trends ingest` validates every entry (URL sources, capture date, evidence class, rights status) and appends it. No scheduler is created; recommended cadence is in docs/LAUNCH-EXPERIMENT.md.
 - At run time the premises and hooks stages receive a small relevant selection (k<=6, fresh <=14 days, scored by platform/format/rights/recency) plus a short "stale" list for reference. Nothing older is silently used.
-- Rights rule: trending sounds, choreography and other creators' identities default to `license_required` / `do_not_copy`; the engine adapts the mechanism, never the asset. Packets record `provenance.trends_used` and snapshot age; QA warns on `TREND_STALE` (>21 days) and `TREND_RIGHTS`.
-- Limits: the engine itself has no web access; freshness depends on when a refresh was last ingested, which is visible in `engine trends show`.
+- Rights rule: `do_not_copy` entries are excluded from prompts entirely; `license_required` entries are down-ranked and injected only as mechanisms; sound/dance entries can be `free_to_adapt` only with a platform-official source. Validation rejects bad URLs, future dates, duplicate ids, over-long or instruction-like text. Packets record `provenance.trends_used` and snapshot age; QA warns on `TREND_STALE` (>21 days) and `TREND_RIGHTS`.
+- Freshness: per-entry `decay_horizon_days` (capped by the 14-day window) measured from `origin_date` when known, else from capture. Limits: the engine itself has no web access; a refresh is only as good as the worker's sources (the one real refresh so far is aggregator/press grade with 11 declared gaps).
 
 ## Flow (modular, versioned)
 

@@ -29,7 +29,8 @@ class TestRepetition(unittest.TestCase):
             pr["logline"] = "a curator unveils a forgotten voice note as an artefact"; pr["payoff"] = "her microphone was live"; pr["surprise"] = "the exhibit is her own complaint"
         q["hook_variants"][0].update({"first_frame": "velvet rope around a phone", "first_line_or_action": "white glove lifts the phone"})
         for s in q["scenes"]:
-            s["action"] = "glove lifts phone from plinth"; s["camera"]["shot"] = "close up"; s["camera"]["movement"] = "slow dolly"
+            s["action"] = "glove lifts phone from plinth"; s["camera"]["shot"] = "close up"; s["camera"]["movement"] = "slow dolly"; s["lighting"] = "museum spot from above, cool fill, contact shadow on plinth"
+        q["continuity"]["props"] = ["velvet rope", "plinth", "white glove", "phone"]; q["hook_variants"][0]["mechanism"] = "curiosity_gap"
         r = compare(p, [q])
         self.assertEqual(r["flagged_fields"], [])
 

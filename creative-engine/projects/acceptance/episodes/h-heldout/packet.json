@@ -773,29 +773,85 @@
           "closest_packet": "P-B1p_perturbed"
         },
         "premise": {
-          "max_similarity": 0.02,
-          "closest_packet": "C-B1_silent_gag"
+          "max_similarity": 0.028,
+          "closest_packet": "T-B4_trend_aware"
         },
         "payoff": {
-          "max_similarity": 0.098,
-          "closest_packet": "C-B3_commercial"
+          "max_similarity": 0.122,
+          "closest_packet": "T-B4_trend_aware"
         },
         "surprise": {
-          "max_similarity": 0.021,
-          "closest_packet": "P-B1p_perturbed"
+          "max_similarity": 0.024,
+          "closest_packet": "T-B4_trend_aware"
         },
         "shots": {
-          "max_similarity": 0.097,
-          "closest_packet": "P-B1p_perturbed"
+          "max_similarity": 0.1,
+          "closest_packet": "T-B4_trend_aware"
         },
         "pitch": {
           "max_similarity": 0.0,
           "closest_packet": null
+        },
+        "devices": {
+          "max_similarity": 0.105,
+          "closest_packet": "P-B1p_perturbed"
         }
       },
       "flagged_fields": [],
+      "recurring_motifs": [
+        {
+          "motif": "prop:clipboard",
+          "episodes": 4,
+          "share": 0.67
+        },
+        {
+          "motif": "prop:lamp",
+          "episodes": 4,
+          "share": 0.67
+        },
+        {
+          "motif": "prop:inspection",
+          "episodes": 4,
+          "share": 0.67
+        },
+        {
+          "motif": "prop:lanyard",
+          "episodes": 4,
+          "share": 0.67
+        },
+        {
+          "motif": "mechanism:visible_problem",
+          "episodes": 4,
+          "share": 0.67
+        },
+        {
+          "motif": "prop:phone",
+          "episodes": 3,
+          "share": 0.5
+        },
+        {
+          "motif": "prop:orange",
+          "episodes": 3,
+          "share": 0.5
+        },
+        {
+          "motif": "prop:tape",
+          "episodes": 3,
+          "share": 0.5
+        },
+        {
+          "motif": "prop:safety",
+          "episodes": 3,
+          "share": 0.5
+        },
+        {
+          "motif": "prop:plain",
+          "episodes": 3,
+          "share": 0.5
+        }
+      ],
       "verdict": "no-lexical-repetition-detected",
-      "note": "Lexical similarity only; a reviewer must judge whether flagged overlap is identity (allowed) or a repeated joke/plot (not)."
+      "note": "Lexical similarity only; a reviewer must judge whether flagged overlap is identity (allowed) or a repeated joke/plot/device (not). 'devices' covers hook mechanism, props, lighting language, off-camera-voice use and the surprise device."
     },
     "render_inspection": null
   },
@@ -812,7 +868,7 @@
     }
   ],
   "provenance": {
-    "generated_at": "2026-10-07T23:27:22Z",
+    "generated_at": "2026-10-07T23:40:34Z",
     "provider": "broker",
     "requested_model": "sonnet",
     "observed_model": "not independently observable (Agent tool; model=sonnet requested)",

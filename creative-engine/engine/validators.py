@@ -8,6 +8,7 @@ rights gates are respected.
 from __future__ import annotations
 
 import json
+import math
 import os
 import re
 from dataclasses import dataclass, field
@@ -26,6 +27,19 @@ TOOL_LIMITS = {
                                "requires_driving_video": True},
 }
 SUPPORTED_CONTROLS = {"model", "prompt", "duration", "aspect_ratio", "resolution", "generate_audio", "medias", "mode", "sound", "bitrate_mode", "genre"}
+FIRSTHAND_PATTERNS = [
+    r"\bi(?:'ve| have)? (?:use|used|tested|tried|bought|own|owned|recommend|swear by|love|rely on)\b",
+    r"\b(?:mine|my \w+)(?:'s| has| have| is)? been (?:\w+ ){0,3}(?:for|since)\b",
+    r"\b(?:worked|works) for me\b", r"\bchanged my life\b", r"\bi(?:'m| am) (?:never|always) going back\b",
+    r"\b(?:since i (?:got|started|bought))\b", r"\bgame[- ]changer for me\b", r"\bi noticed\b.{0,40}\b(?:after|since)\b",
+]
+FORBIDDEN_SYNONYMS = {
+    "durability": ["built to last", "sturdy", "lasts", "lasting", "durable", "indestructible", "unbreakable", "tough"],
+    "price": ["cheap", "affordable", "bargain", "costs", "cost", "dollars", "euros", "£", "$", "value for money"],
+    "awards": ["award", "winning", "best-selling", "bestselling", "#1", "top rated", "top-rated"],
+    "any user result": ["results", "transformed", "fixed my", "solved my", "customers say", "reviews say", "people love"],
+    "health": ["cures", "heals", "clinically", "doctor"],
+}
 SPEECH_WPS_MAX = 3.3   # ~200 wpm brisk ceiling
 SPEECH_WPS_MIN = 1.6   # below this, dialogue leaves dead air that must be deliberate
 TIMING_TOLERANCE_S = 0.05
@@ -154,8 +168,13 @@ def validate_timing(packet: dict, rep: Report | None = None) -> Report:
     total = 0.0
     prev_end = None
     for s in scenes:
-        st, en = float(s["start_s"]), float(s["end_s"])
         p = f"/scenes/{s.get('scene_id')}"
+        try:
+            st, en = float(s["start_s"]), float(s["end_s"])
+        except (TypeError, ValueError):
+            rep.error("TIMING_NOT_NUMERIC", "start_s/end_s not numeric", p); continue
+        if not (math.isfinite(st) and math.isfinite(en)):
+            rep.error("TIMING_NOT_FINITE", f"non-finite timing {st!r}/{en!r}", p); continue
         if en <= st:
             rep.error("TIMING_NONPOSITIVE", f"end_s {en} <= start_s {st}", p)
         if prev_end is not None:
@@ -178,8 +197,15 @@ def validate_timing(packet: dict, rep: Report | None = None) -> Report:
         rep.error("TIMING_LATE_START", f"first scene starts at {scenes[0]['start_s']}s, not 0")
     if abs(total - target) > max(1.0, 0.1 * target):
         rep.error("TIMING_TOTAL", f"scenes total {total:.1f}s vs brief target {target}s (tolerance max(1s,10%))")
+    script_words = sum(_word_count(str(d.get("line", ""))) for d in (packet.get("script", {}).get("dialogue") or []) if isinstance(d, dict))
+    if script_words and target and script_words / target > SPEECH_WPS_MAX:
+        rep.error("SPEECH_SCRIPT_TOO_LONG", f"script dialogue is {script_words} words for {target}s = {script_words / target:.1f} w/s (> {SPEECH_WPS_MAX})")
     fmt = packet["brief"].get("format")
     if fmt == "silent_gag":
+        speech_rx = re.compile(r"(says?|said|whispers?|mutters?|shouts?|announces?|asks?|replies|repl(?:y|ies)|tells?|declares?|reads? aloud|aloud|mouths?|speaks?|voice)\b[^\"\u201c']{0,30}[\"\u201c'][^\"\u201d']{3,}[\"\u201d']|[\"\u201c](?:[^\"\u201d]+\s){3,}[^\"\u201d]*[.!?][\"\u201d]", re.I)
+        for s in scenes:
+            if speech_rx.search(str(s.get("action", "")) + " " + str(s.get("performance", ""))):
+                rep.error("SILENT_SPEECH_IN_ACTION", "silent_gag scene text contains spoken lines written into action/performance", f"/scenes/{s.get('scene_id')}")
         spoken = [d for s in scenes for d in _dialogue(s, rep, "") if str(d.get("line", "")).strip()]
         spoken += [d for d in (packet.get("script", {}).get("dialogue") or []) if isinstance(d, dict) and str(d.get("line", "")).strip()]
         if spoken:
@@ -297,6 +323,23 @@ def validate_tool_mapping(packet: dict, rep: Report | None = None) -> Report:
 
 # --- 6. Rights and approval ---------------------------------------------------
 
+def _creative_text(packet: dict) -> str:
+    """Only text that would reach the audience or steer the generation: script, scene direction, hooks, premises, captions."""
+    parts = []
+    sc = packet.get("script", {}) or {}
+    parts += [sc.get("title", ""), sc.get("synopsis", ""), sc.get("caption_text", ""), sc.get("cta", "")]
+    parts += [b.get("beat", "") for b in sc.get("beats", []) or []]
+    parts += [d.get("line", "") for d in sc.get("dialogue", []) or [] if isinstance(d, dict)]
+    for s in packet.get("scenes", []) or []:
+        parts += [s.get("action", ""), s.get("performance", ""), s.get("captions", "")]
+        parts += [d.get("line", "") for d in s.get("dialogue", []) or [] if isinstance(d, dict)]
+    for h in packet.get("hook_variants", []) or []:
+        parts += [h.get("first_frame", ""), h.get("first_line_or_action", "")]
+    for pr in packet.get("premises", []) or []:
+        parts += [pr.get("logline", ""), pr.get("payoff", ""), pr.get("surprise", "")]
+    return " ".join(str(x) for x in parts)
+
+
 def validate_rights(packet: dict, rep: Report | None = None) -> Report:
     rep = rep or Report()
     rights = packet.get("asset_rights", [])
@@ -317,19 +360,25 @@ def validate_rights(packet: dict, rep: Report | None = None) -> Report:
         rep.warn("RIGHTS_UNRESOLVED", f"unresolved rights: {unresolved} (acceptable while planning)")
     com = packet.get("brief", {}).get("commercial")
     if com:
-        blob = (json.dumps(packet.get("script", {})) + json.dumps(packet.get("scenes", []))).lower()
-        for phrase in ("i use", "i've used", "i tested", "changed my life", "it worked for me", "i love this", "i tried"):
-            if phrase in blob:
-                rep.error("COMMERCIAL_FIRSTHAND_CLAIM", f"fictional character implies firsthand experience: '{phrase}'")
+        blob = _creative_text(packet).lower()
+        for rx in FIRSTHAND_PATTERNS:
+            m = re.search(rx, blob)
+            if m:
+                rep.error("COMMERCIAL_FIRSTHAND_CLAIM", f"fictional character implies firsthand experience: '{m.group(0)}'")
+                break
         if not packet.get("script", {}).get("disclosure_line") and not packet.get("export", {}).get("disclosure_plan"):
             rep.error("COMMERCIAL_NO_DISCLOSURE", "commercial brief without disclosure_line or disclosure_plan")
         plan_blob = " ".join(packet.get("export", {}).get("disclosure_plan", []) or []).lower()
         if not any(k in plan_blob for k in ("paid partnership", "branded content", "platform tool", "partnership label", "paid-partnership")):
             rep.warn("COMMERCIAL_NO_PLATFORM_TOOL", "disclosure_plan does not name the platform paid-partnership/branded-content tool")
         allowed = [f.lower() for f in com.get("verified_facts", [])]
+        sentences = [x for x in re.split(r"(?<=[.!?;])\s+|\n", blob) if x and not re.search(r"\b(no|not|never|without|forbidden|avoid|don't|do not|cannot|must not|none)\b", x)]
+        positive = " ".join(sentences)
         for forb in com.get("forbidden_claims", []):
-            if forb.lower() in blob:
-                rep.error("COMMERCIAL_FORBIDDEN_CLAIM", f"forbidden claim topic '{forb}' appears in script/scenes")
+            terms = [forb.lower()] + FORBIDDEN_SYNONYMS.get(forb.lower(), [])
+            hit = next((t for t in terms if re.search(r"\b" + re.escape(t) + r"\b", positive)), None)
+            if hit:
+                rep.error("COMMERCIAL_FORBIDDEN_CLAIM", f"forbidden claim topic '{forb}' appears via '{hit}' in creative text")
     return rep
 
 
@@ -342,8 +391,13 @@ def validate_approval(packet: dict, rep: Report | None = None) -> Report:
             rep.error("APPROVAL_RENDER", f"status {status} requires approval.render_approved=true")
         if not ap.get("approved_by"):
             rep.error("APPROVAL_WHO", "approved_by missing")
-        if ap.get("credit_cap") is None:
-            rep.error("APPROVAL_CAP", "credit_cap must be set before render")
+        cap = ap.get("credit_cap")
+        if cap is None or not isinstance(cap, (int, float)) or not math.isfinite(float(cap)) or float(cap) <= 0:
+            rep.error("APPROVAL_CAP", "credit_cap must be a positive finite number before render")
+    if ap.get("publish_approved") and status not in ("rendered-verified",):
+        rep.error("APPROVAL_PUBLISH_ORDER", "publish_approved requires status rendered-verified (inspect the actual export first)")
+    if (ap.get("spend_approved") or ap.get("render_approved")) and any(r.get("rights_status") == "unresolved" for r in packet.get("asset_rights", [])):
+        rep.error("APPROVAL_RIGHTS", "spend/render approval while asset rights are unresolved")
     if status == "rendered-verified":
         ri = packet.get("qa", {}).get("render_inspection")
         if not ri or not all(ri.get(k) for k in ("identity", "continuity", "timing", "audio", "artifacts", "readability", "music_rights", "tech_specs", "disclosure")):
@@ -351,6 +405,11 @@ def validate_approval(packet: dict, rep: Report | None = None) -> Report:
     prov = packet.get("provenance", {})
     if prov.get("provider") == "fixture" and status != "draft":
         rep.error("FIXTURE_NOT_PLANNING_READY", "fixture-generated packets may only be 'draft'; they are plumbing tests, not creative output")
+    if status != "draft":
+        log = prov.get("stage_log") or []
+        live = [l for l in log if isinstance(l, dict) and l.get("provider") in ("broker", "claude_cli") and l.get("result") == "ok"]
+        if prov.get("provider") not in ("broker", "claude_cli") or len(live) < 3:
+            rep.error("ENGINE_PROVENANCE_REQUIRED", "non-draft status requires provider broker/claude_cli and a stage_log with >=3 successful live stages (a relabelled fixture or hand-written packet stays draft)")
     return rep
 
 

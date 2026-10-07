@@ -93,7 +93,7 @@ Disclosure: AI-generated characters and scenes.
 - Phone in the fridge visible in frame one stops the scroll. - metric: Three-second hold rate - falsifier: Three-second hold rate below the account median
 
 ## QA
-- Deterministic: PASS (0 errors, 4 warnings)
+- Deterministic: PASS (0 errors, 1 warnings)
 - Repetition check: no-lexical-repetition-detected flagged=[]
 - Creative review: A distinctive fridge-alarm ticking-clock episode with a strong first image, a consistent Inspector and well-layered sound design, whose payoff and ending land. It is weakened by a dropped cable-fault thread, an unexplained culprit motive, a rig contradiction and several micro-beats that will be hard to generate in one continuous unit.
 

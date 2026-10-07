@@ -8,15 +8,15 @@ A working local creative engine exists, is tested, and has repeatedly turned new
 
 | Item | Status |
 |---|---|
-| Engine code (schema, validators, pipeline, adapters, prompts, retrieval, repetition, trend radar, store, CLI) | **Implemented**; 60 unit/contract tests pass (`python3 -m unittest discover -s . -p "test_*.py"`) |
+| Engine code (schema, validators, pipeline, adapters, prompts, retrieval, repetition, trend radar, store, CLI) | **Implemented**; 78 unit/contract tests pass (`python3 -m unittest discover -s . -p "test_*.py"`) |
 | Deterministic gates (schema, timing gaps/overlaps/total, speech rate, missing camera/audio, continuity/props, unsupported tool controls, unit cut limits, rights, approval order, fixture quarantine, format-aware beats) | **Implemented and actually tested** with positive and negative cases; also exercised on 9 bake-off outputs and 5 real packets |
-| Broker provider (live Claude path via Agent-tool workers inside this authorised session) | **Actually used**: 28 worker calls for generation/QA (+3 blind judges, 1 held-out author, 1 trend refresh, 1 independent reviewer) |
+| Broker provider (live Claude path via Agent-tool workers inside this authorised session) | **Actually used**: 31 worker calls for generation/QA (incl. 1 repair and the trend-aware run) (+3 blind judges, 1 held-out author, 1 trend refresh, 1 independent reviewer) |
 | `claude_cli` provider (`claude -p --output-format json`) | **Implemented, not exercised live** (non-interactive Fable may bill usage credits; see docs/MODEL-EVIDENCE.md) |
 | Fixture provider | **Mock-tested only**; packets it produces are quarantined at `draft` by a validator |
 | Three deliverable packets (silent gag, spoken episode, sponsored episode) | **Planning-ready; render unverified** — `projects/bakeoff/episodes/c-b1-silent-gag`, `c-b2-dialogue-episode`, `c-b3-commercial` |
 | Anti-template perturbation packet | **Planning-ready; render unverified** — `projects/acceptance/episodes/p-b1p-perturbed` (1 bounded repair) |
 | Held-out acceptance packet | **Planning-ready; render unverified** — `projects/acceptance/episodes/h-heldout` (0 creative repairs; two engine gate bugs found and fixed) |
-| Trend-aware packet | see §6 |
+| Trend-aware packet | **Planning-ready; render unverified** — `projects/acceptance/episodes/t-b4-trend-aware` (0 repairs; cites 5 dated trend ids; rights warnings surfaced) |
 | Higgsfield adapter | **Dry-run only**; no job submitted, no media uploaded; controls verified read-only via MCP catalogue |
 | Rendered media | **None.** Requires owner approval, uploaded references, `get_cost` preflight, credit cap, then post-render inspection |
 | Drive copy into the lab folder | **Not done** (upload needs approval); everything is in the git branch |
@@ -62,7 +62,7 @@ See `eval/heldout/ACCEPTANCE-RESULTS.md` §1–§4 for the three deliverables, t
 
 ## 7. Tests: commands, counts, failures
 
-`python3 -m unittest discover -s . -p "test_*.py"` → **60 tests, 0 failures, 0 errors** (validators 29 incl. 3 added post-freeze; engine/pipeline 25; trends 6). Negative tests cover schema errors, gaps/overlaps/total, speech too fast, silent-with-dialogue, >1 cut, missing camera/audio, multi-speaker shot, undeclared prop, anchor drift, bible do-not token, unsupported control, unknown model, duration out of range, unmapped scene, motion transfer without driving video, music undeclared, driving-footage rights, unresolved rights at render, firsthand claim, missing disclosure, forbidden claim, render status without approval, rendered-verified without inspection, fixture quarantine, hook/premise mismatch, missing payoff/turn beat, unit with two cuts, trend staleness/rights/unknown. Independent reviewer's adversarial results: `eval/heldout/independent-review.json`.
+`python3 -m unittest discover -s . -p "test_*.py"` → **78 tests, 0 failures, 0 errors** (validators 29; engine/pipeline 25; trends 6; review-driven regressions 18). Negative tests cover schema errors, gaps/overlaps/total, speech too fast, silent-with-dialogue, >1 cut, missing camera/audio, multi-speaker shot, undeclared prop, anchor drift, bible do-not token, unsupported control, unknown model, duration out of range, unmapped scene, motion transfer without driving video, music undeclared, driving-footage rights, unresolved rights at render, firsthand claim, missing disclosure, forbidden claim, render status without approval, rendered-verified without inspection, fixture quarantine, hook/premise mismatch, missing payoff/turn beat, unit with two cuts, trend staleness/rights/unknown. Independent reviewer's adversarial results: `eval/heldout/independent-review.json`.
 
 ## 8. Evidence limitations (honest)
 
@@ -75,13 +75,13 @@ See `eval/heldout/ACCEPTANCE-RESULTS.md` §1–§4 for the three deliverables, t
 
 ## 9. Independent review
 
-Recorded verbatim in `eval/heldout/independent-review.json`; repairs made in response are listed at the end of `eval/bakeoff_runs/tuning_log.txt` and summarised in §10.
+Opus reviewer, separate from the builder: **accept-with-fixes** (0 fatal, 13 material, 9 minor; 15 adversarial probes, 4 caught before repairs, 10/10 saved probes caught after). Verbatim report: `eval/heldout/independent-review.json`. Repairs and the one accepted-but-not-fully-repaired finding (bake-off trio shares a production template; now surfaced by a recurring-motif report rather than blocked) are itemised in `eval/heldout/ACCEPTANCE-RESULTS.md` §6. The niche recommendation was revised on the reviewer's evidence point: **N3 (productized service) is the stronger business bet; N1 is kept as the learning engine for a stated reason, not sunk cost.**
 
 ## 10. Next owner decisions (nothing below has been done)
 
 1. **Region / entity / audience language** — needed to resolve payouts and disclosure rules.
 2. **Copy `creative-engine/` into the lab folder on Drive** (an upload; needs your approval) and register it in RESEARCH-INDEX.md / PROJECT-FILE-CATALOG.csv.
 3. **Render approval for one packet** (suggest `C-B1_silent_gag`, 12 s, one mini unit, quoted 8 credits/attempt): approve a credit cap, upload an approved character reference still, run `get_cost` preflight, then one generation; inspect the output against `qa.render_inspection` before any further spend.
-4. **Niche path** — primary N1 character page with N3 service wrapper, fallback N2 (`docs/NICHE-DECISION.md`); say yes/no or redirect.
+4. **Niche path** — revised: N3 productized service as the business bet, N1 character pilot as the learning engine, N2 fallback (`docs/NICHE-DECISION.md`); say yes/no or redirect.
 5. **Trend refresh cadence** — recommended every two weeks during the pilot plus event triggers; no automation created.
 6. **GitHub**: pushes work now; if you want a PR, say so.
