@@ -133,6 +133,17 @@ def _word_count(text: str) -> int:
     return len([w for w in re.split(r"\s+", text.strip()) if w])
 
 
+def _dialogue(s: dict, rep: Report, path: str) -> list[dict]:
+    """Return dialogue entries that are dicts; record malformed entries instead of crashing."""
+    out = []
+    for d in s.get("dialogue", []) or []:
+        if isinstance(d, dict):
+            out.append(d)
+        else:
+            rep.error("DIALOGUE_SHAPE", f"dialogue entry is {type(d).__name__}, expected object with speaker/line", path)
+    return out
+
+
 def validate_timing(packet: dict, rep: Report | None = None) -> Report:
     rep = rep or Report()
     scenes = sorted(packet.get("scenes", []), key=lambda s: s.get("start_s", 0))
@@ -155,7 +166,7 @@ def validate_timing(packet: dict, rep: Report | None = None) -> Report:
         prev_end = en
         total = max(total, en)
         # speech feasibility
-        words = sum(_word_count(d.get("line", "")) for d in s.get("dialogue", []) or [])
+        words = sum(_word_count(d.get("line", "")) for d in _dialogue(s, rep, p))
         dur = max(en - st, 1e-6)
         if words:
             wps = words / dur
@@ -169,8 +180,8 @@ def validate_timing(packet: dict, rep: Report | None = None) -> Report:
         rep.error("TIMING_TOTAL", f"scenes total {total:.1f}s vs brief target {target}s (tolerance max(1s,10%))")
     fmt = packet["brief"].get("format")
     if fmt == "silent_gag":
-        spoken = [d for s in scenes for d in (s.get("dialogue") or []) if d.get("line", "").strip()]
-        spoken += [d for d in (packet.get("script", {}).get("dialogue") or []) if d.get("line", "").strip()]
+        spoken = [d for s in scenes for d in _dialogue(s, rep, "") if str(d.get("line", "")).strip()]
+        spoken += [d for d in (packet.get("script", {}).get("dialogue") or []) if isinstance(d, dict) and str(d.get("line", "")).strip()]
         if spoken:
             rep.error("SILENT_HAS_DIALOGUE", f"silent_gag brief contains {len(spoken)} dialogue line(s)")
     return rep
@@ -197,7 +208,7 @@ def validate_direction(packet: dict, rep: Report | None = None) -> Report:
         for k in ("action", "performance", "microexpression", "lighting", "environment"):
             if str(s.get(k, "")).strip().lower() in VAGUE or len(str(s.get(k, ""))) < 12:
                 rep.error("MISSING_DIRECTION", f"{k} missing or too thin", p)
-        on_cam_speakers = {d.get("speaker") for d in (s.get("dialogue") or []) if d.get("on_camera", True)}
+        on_cam_speakers = {d.get("speaker") for d in _dialogue(s, rep, p) if d.get("on_camera", True)}
         if len(on_cam_speakers) > 1:
             rep.error("MULTI_SPEAKER_SHOT", f"{len(on_cam_speakers)} on-camera speakers in one scene; verified tools handle one reliably", p)
     return rep

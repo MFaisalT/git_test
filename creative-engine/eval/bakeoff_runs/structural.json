@@ -1,0 +1,74 @@
+[
+  {
+    "brief": "B1_silent_gag",
+    "arch": "A",
+    "scenes": 3,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "brief": "B1_silent_gag",
+    "arch": "B",
+    "scenes": 3,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "brief": "B1_silent_gag",
+    "arch": "C",
+    "scenes": 4,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "brief": "B2_dialogue_episode",
+    "arch": "A",
+    "scenes": 4,
+    "errors": 10,
+    "codes": [
+      "DIALOGUE_SHAPE"
+    ]
+  },
+  {
+    "brief": "B2_dialogue_episode",
+    "arch": "B",
+    "scenes": 3,
+    "errors": 12,
+    "codes": [
+      "DIALOGUE_SHAPE"
+    ]
+  },
+  {
+    "brief": "B2_dialogue_episode",
+    "arch": "C",
+    "scenes": 5,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "brief": "B3_commercial",
+    "arch": "A",
+    "scenes": 3,
+    "errors": 7,
+    "codes": [
+      "DIALOGUE_SHAPE",
+      "TOO_MANY_CUTS"
+    ]
+  },
+  {
+    "brief": "B3_commercial",
+    "arch": "B",
+    "scenes": 5,
+    "errors": 10,
+    "codes": [
+      "DIALOGUE_SHAPE"
+    ]
+  },
+  {
+    "brief": "B3_commercial",
+    "arch": "C",
+    "scenes": 4,
+    "errors": 0,
+    "codes": []
+  }
+]
