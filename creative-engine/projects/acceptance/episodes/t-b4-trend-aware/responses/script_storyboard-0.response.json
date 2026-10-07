@@ -1,0 +1,320 @@
+{
+ "script": {
+  "title": "Case 11: The Sock",
+  "synopsis": "The Inspector opens a formal case on a single grey sock that keeps reappearing in the hallway, moves it three times, and discovers it is clinging to her own jacket.",
+  "beats": [
+   {
+    "beat": "Silent close on the sock under a formal case card, hem sliver at top edge (adapts T-20261007-05 and T-20261007-02).",
+    "function": "hook"
+   },
+   {
+    "beat": "She files the sock on its hook and states the case.",
+    "function": "setup"
+   },
+   {
+    "beat": "Sock is back; she boxes it on the shoe shelf and calls it a repeat offender.",
+    "function": "escalation"
+   },
+   {
+    "beat": "Camera drifts behind her and shows the sock clinging to her collar.",
+    "function": "turn"
+   },
+   {
+    "beat": "Two-finger tap, verdict 'The suspect is me', she re-hangs it and it clings again.",
+    "function": "payoff"
+   },
+   {
+    "beat": "Final pose matches the opening stillness, ready to loop.",
+    "function": "button"
+   }
+  ],
+  "dialogue": [
+   {
+    "speaker": "Inspector",
+    "line": "Case eleven. One sock. Missing from its hook.",
+    "delivery": "measured, bureaucratic cadence",
+    "on_camera": true
+   },
+   {
+    "speaker": "Inspector",
+    "line": "Repeat offender. Repeat.",
+    "delivery": "quiet, level",
+    "on_camera": true
+   },
+   {
+    "speaker": "Inspector",
+    "line": "The suspect is on my back. The suspect is me.",
+    "delivery": "measured, slightly lower on last two words",
+    "on_camera": true
+   }
+  ],
+  "caption_text": "Burned-in captions of each line; title card CASE 11: THE SOCK for the first 2.5 s.",
+  "cta": "",
+  "disclosure_line": "AI-generated video."
+ },
+ "scenes": [
+  {
+   "scene_id": "S1",
+   "start_s": 0,
+   "end_s": 3,
+   "location": "Hallway with coat hooks, daytime",
+   "action": "Frame one is a single grey sock lying on the oak floor beside the foot of the coat-hook rail, with a sliver of aubergine jacket hem at the extreme top edge. Held still for 1.5 s, then a shoe and the lower edge of a clipboard enter frame-right as the camera settles.",
+   "performance": "Silent. The sock holds the frame alone; the arriving shoe stops precisely a hand's width from it, as if respecting a crime-scene marker.",
+   "microexpression": "None visible; face out of frame.",
+   "dialogue": [],
+   "camera": {
+    "shot": "tight close-up, low angle on the floor",
+    "lens": "phone main lens, 26mm equivalent",
+    "movement": "propped phone with one small settle-wobble, then a slow tilt up 10 degrees as the shoe arrives",
+    "rig": "phone propped against the skirting board"
+   },
+   "lighting": "Key: soft daylight from a window at frame-left end of the hallway; fill: pale wall bounce from the right; one colour bounce: warm oak floorboards lifting the underside of the jacket; contact shadows: soft dark under the sock, under the hook and under her shoe soles. Light must not change across the clip.",
+   "environment": "Narrow daytime hallway, a wooden rail of five plain coat hooks with unbranded coats, a low shoe shelf beneath, pale wall, oak floor.",
+   "sound": {
+    "ambience": "quiet daytime flat, faint distant fridge hum, muffled street outside",
+    "foley": [
+     "soft fabric brush of jacket hem",
+     "single measured shoe step on oak",
+     "clipboard corner knock on lanyard clip"
+    ],
+    "music": "none",
+    "voice": "none"
+   },
+   "captions": "Plain white title card, lower third, reading CASE 11: THE SOCK, clearing at 2.5 s",
+   "transition_out": "continuous",
+   "props_from_frame_one": [
+    "grey sock",
+    "case title card overlay",
+    "clipboard on lanyard"
+   ],
+   "cuts_inside_clip": 0,
+   "generation_unit": "U1"
+  },
+  {
+   "scene_id": "S2",
+   "start_s": 3,
+   "end_s": 8,
+   "location": "Hallway with coat hooks, daytime",
+   "action": "The camera rises to a medium shot of the Inspector standing over the sock. She reads her clipboard, lifts the sock between two fingers, hangs it on the nearest coat hook, smooths it flat and turns her back to the camera to write. The grey toe of a second sock is faintly visible at the nape of her collar as she turns.",
+   "performance": "Invested task: log the sock into the register and restore it to its hook with exact, procedural movements; eyes go from clipboard to sock to hook, never to camera.",
+   "microexpression": "Brief tightening around the mouth as she checks the sock is aligned.",
+   "dialogue": [
+    {
+     "speaker": "Inspector",
+     "line": "Case eleven. One sock. Missing from its hook.",
+     "delivery": "measured, bureaucratic cadence, flat and quiet"
+    }
+   ],
+   "camera": {
+    "shot": "medium shot, eye level",
+    "lens": "phone main lens, 26mm equivalent",
+    "movement": "gentle handheld bob with a slow push-in of about 10 cm",
+    "rig": "handheld phone, elbows tucked"
+   },
+   "lighting": "Key: soft daylight from a window at frame-left end of the hallway; fill: pale wall bounce from the right; one colour bounce: warm oak floorboards lifting the underside of the jacket; contact shadows: soft dark under the sock, under the hook and under her shoe soles. Light must not change across the clip.",
+   "environment": "Narrow daytime hallway, a wooden rail of five plain coat hooks with unbranded coats, a low shoe shelf beneath, pale wall, oak floor.",
+   "sound": {
+    "ambience": "quiet daytime flat, faint distant fridge hum, muffled street outside",
+    "foley": [
+     "sock lifted with a faint fabric rasp",
+     "hook rail wooden tick as sock is hung",
+     "pen scratch on clipboard",
+     "heel turn on oak"
+    ],
+    "music": "none",
+    "voice": "Inspector, on camera, 8 words over about 3.5 s"
+   },
+   "captions": "Case eleven. One sock. Missing from its hook.",
+   "transition_out": "hard cut to the same hallway a moment later, sock back on the floor",
+   "props_from_frame_one": [
+    "grey sock",
+    "coat hook rail",
+    "clipboard on lanyard",
+    "inspection lamp"
+   ],
+   "cuts_inside_clip": 0,
+   "generation_unit": "U1"
+  },
+  {
+   "scene_id": "S3",
+   "start_s": 8,
+   "end_s": 13,
+   "location": "Hallway with coat hooks, daytime",
+   "action": "The grey sock is back on the floor at her feet. She stares at the empty hook, then at the sock, picks it up, drops it into a small plain cardboard box on the shoe shelf, closes the flap and turns away. As she turns the camera drifts around behind her and the sock is again lying on the floor by her heel; the grey toe of a second sock is visibly clinging to the nape of her aubergine jacket.",
+   "performance": "Invested task: contain the suspect in the evidence box and secure the lid; she searches the hallway corners for the culprit, eyes sweeping left to right, and never checks herself.",
+   "microexpression": "Eyebrows lower one millimetre, jaw set in stern suspicion.",
+   "dialogue": [
+    {
+     "speaker": "Inspector",
+     "line": "Repeat offender. Repeat.",
+     "delivery": "quiet, level, each word clipped"
+    }
+   ],
+   "camera": {
+    "shot": "medium shot, eye level, drifting to over-the-shoulder rear",
+    "lens": "phone main lens, 26mm equivalent",
+    "movement": "slow handheld arc of about 90 degrees from front to behind her",
+    "rig": "handheld phone"
+   },
+   "lighting": "Key: soft daylight from a window at frame-left end of the hallway; fill: pale wall bounce from the right; one colour bounce: warm oak floorboards lifting the underside of the jacket; contact shadows: soft dark under the sock, under the hook and under her shoe soles. Light must not change across the clip.",
+   "environment": "Narrow daytime hallway, a wooden rail of five plain coat hooks with unbranded coats, a low shoe shelf beneath, pale wall, oak floor.",
+   "sound": {
+    "ambience": "quiet daytime flat, faint distant fridge hum, muffled street outside",
+    "foley": [
+     "cardboard flap fold",
+     "box lid pressed with a dull tap",
+     "soft sock plop on oak floor",
+     "faint static crackle near her collar"
+    ],
+    "music": "none",
+    "voice": "Inspector, on camera, 4 words"
+   },
+   "captions": "Repeat offender. Repeat.",
+   "transition_out": "continuous",
+   "props_from_frame_one": [
+    "grey sock",
+    "small plain cardboard box",
+    "shoe shelf",
+    "clipboard on lanyard"
+   ],
+   "cuts_inside_clip": 0,
+   "generation_unit": "U2"
+  },
+  {
+   "scene_id": "S4",
+   "start_s": 13,
+   "end_s": 18,
+   "location": "Hallway with coat hooks, daytime",
+   "action": "With the camera behind her, the Inspector gives one slow two-finger tap on the clipboard, then says her verdict. She reaches back, peels the sock from her collar, hangs it on the hook, steps back one pace and the sock drops free to cling to her jacket again at the nape. Final pose is her standing square to the hook, matching the opening stillness.",
+   "performance": "Invested task: close the case with formal finality; she squares her shoulders, delivers the verdict to the hook rather than to camera, and files the sock with great ceremony.",
+   "microexpression": "Eyes close for one long blink, then warm disappointment settles on her mouth.",
+   "dialogue": [
+    {
+     "speaker": "Inspector",
+     "line": "The suspect is on my back. The suspect is me.",
+     "delivery": "measured, bureaucratic, slightly lower on the last two words"
+    }
+   ],
+   "camera": {
+    "shot": "medium over-the-shoulder rear shot, then a slight push to the nape",
+    "lens": "phone main lens, 26mm equivalent",
+    "movement": "handheld settle with a slow 5 cm push-in on the nape",
+    "rig": "handheld phone"
+   },
+   "lighting": "Key: soft daylight from a window at frame-left end of the hallway; fill: pale wall bounce from the right; one colour bounce: warm oak floorboards lifting the underside of the jacket; contact shadows: soft dark under the sock, under the hook and under her shoe soles. Light must not change across the clip.",
+   "environment": "Narrow daytime hallway, a wooden rail of five plain coat hooks with unbranded coats, a low shoe shelf beneath, pale wall, oak floor.",
+   "sound": {
+    "ambience": "quiet daytime flat, faint distant fridge hum, muffled street outside",
+    "foley": [
+     "slow two-finger tap on clipboard",
+     "static peel crackle of sock leaving fabric",
+     "hook rail tick",
+     "fabric cling snap as sock returns"
+    ],
+    "music": "none",
+    "voice": "Inspector, on camera, 10 words over about 4 s"
+   },
+   "captions": "The suspect is on my back. The suspect is me.",
+   "transition_out": "end on held final frame, loop to the opening sock",
+   "props_from_frame_one": [
+    "grey sock",
+    "clipboard on lanyard",
+    "coat hook rail"
+   ],
+   "cuts_inside_clip": 0,
+   "generation_unit": "U2"
+  }
+ ],
+ "continuity": {
+  "identity_anchors": "Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger. Silhouette: Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun.",
+  "costume": "Aubergine utility jacket with four flap pockets, bright circular inspection lamp on chest strap, tiny clipboard on lanyard, hair in tight low bun, small round glasses, dark trousers and plain flat shoes, no readable text or logos.",
+  "props": [
+   "grey sock",
+   "coat hook rail",
+   "clipboard on lanyard",
+   "inspection lamp",
+   "small plain cardboard box",
+   "shoe shelf",
+   "case title card overlay"
+  ],
+  "notes": "Moving props: grey sock (floor, hook, box, collar, hook), small plain cardboard box. The grey toe sliver of a second sock at her nape is visible from S2 onward. No cables, chargers, sockets, tape or cones. Single speaker, no off-camera voices. Signature two-finger clipboard tap occurs once, in S4. Light stays constant."
+ },
+ "asset_rights": [
+  {
+   "asset": "Inspector character appearance",
+   "kind": "character_reference",
+   "source": "Generated from bible inspector-v1 text",
+   "rights_status": "owned",
+   "scope": "this episode"
+  },
+  {
+   "asset": "Hallway location",
+   "kind": "location_still",
+   "source": "Generated by tool",
+   "rights_status": "not_needed",
+   "scope": "this episode"
+  },
+  {
+   "asset": "Inspector voice",
+   "kind": "voice",
+   "source": "Generated by tool",
+   "rights_status": "unresolved",
+   "scope": "confirm tool voice terms before publishing"
+  },
+  {
+   "asset": "Case title card font",
+   "kind": "font",
+   "source": "Generic system sans-serif",
+   "rights_status": "not_needed",
+   "scope": "caption only"
+  }
+ ],
+ "export": {
+  "aspect_ratio": "9:16",
+  "resolution": "1080x1920",
+  "fps": 30,
+  "container": "mp4",
+  "max_duration_s": 18,
+  "edit_plan": [
+   "Join U1 (0-8 s) and U2 (8-18 s) with a hard cut at 8 s",
+   "Burn in the CASE 11 title card for 0-2.5 s and line captions",
+   "Optional licensed sting only in edit; none by default"
+  ],
+  "disclosure_plan": [
+   "Apply the platform synthetic-media label on upload"
+  ]
+ },
+ "growth_hypotheses": [
+  {
+   "hypothesis": "A silent specific-frame open with a formal case card (T-20261007-05) holds more viewers through second 3 than a spoken open.",
+   "metric": "Swipe-away rate at 3 s",
+   "falsifier": "Swipe-away at 3 s is no lower than the platform baseline over 5 episodes"
+  },
+  {
+   "hypothesis": "The looping final pose that matches frame one raises replays.",
+   "metric": "Average view percentage above 100%",
+   "falsifier": "Average view percentage stays at or below 100%"
+  }
+ ],
+ "evidence": [
+  {
+   "claim": "Hook and format adapt mechanisms from trend entries T-20261007-05 and T-20261007-02.",
+   "kind": "fact",
+   "source": "selected premise and hook rationale in request",
+   "confidence": "medium"
+  },
+  {
+   "claim": "Speech rates are about 1.6, 0.8 and 2.5 words per second, under the 2.8 limit.",
+   "kind": "fact",
+   "source": "line word counts against scene durations",
+   "confidence": "high"
+  },
+  {
+   "claim": "The episode stands alone; the case number is a tag, not a dependency.",
+   "kind": "inference",
+   "source": "script",
+   "confidence": "high"
+  }
+ ]
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->
