@@ -1,0 +1,39 @@
+{
+  "job_id": "77ecb61d-da10-4d4c-87c5-534891a30fc1",
+  "model": "cinematic_studio_video_4_0",
+  "generation_unit": "U2",
+  "scene_ids": [
+    "S3"
+  ],
+  "purpose": "shown interaction test: pointer pushed 2->1 between NB Pro start/end keyframes (owner-approved board)",
+  "controls": {
+    "mode": "omni_reference",
+    "duration": 4,
+    "resolution": "480p",
+    "aspect_ratio": "9:16",
+    "generate_audio": true
+  },
+  "medias": [
+    {
+      "value": "cb1f3458-a537-48af-950d-c42de75a4b28",
+      "role": "image_references"
+    },
+    {
+      "value": "3a640e87-c426-48ff-bb01-b679ce36b0ed",
+      "role": "image_references"
+    },
+    {
+      "value": "e38bd7f1-3fca-4d58-8f64-03ad49a46a3d",
+      "role": "start_image"
+    },
+    {
+      "value": "7a0020db-9398-4a5f-9320-12e2772e4cc2",
+      "role": "end_image"
+    }
+  ],
+  "quoted_credits": 12,
+  "charged_credits": null,
+  "submitted_at": "2026-10-08",
+  "bible_version": 4,
+  "prompt_source": "tool_mapping.U2.prompt_text"
+}

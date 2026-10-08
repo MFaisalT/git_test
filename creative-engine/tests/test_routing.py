@@ -249,3 +249,13 @@ class TestShownInteraction(unittest.TestCase):
                         "reference_asset": {"job_id": "j1"}}]}
         self.assertEqual(bible_prop_text("large wooden scoring paddle with a 0-10 dial", b), "oak paddle with a 0-10 semicircular gauge and one pointer (exactly as @image2)")
         self.assertEqual(bible_prop_text("white chair", b), "white chair")
+
+
+class TestUnitRelativeTimes(unittest.TestCase):
+    def test_second_unit_prompt_times_start_at_zero(self):
+        p = TestShownInteraction()._packet()
+        last = p["scenes"][-1]
+        u = plan(p, bible())["units"][-1]
+        dur = float(last["end_s"]) - float(last["start_s"])
+        if float(last["start_s"]) > 0:
+            self.assertIn(f"0-{dur:.0f}s:" if dur.is_integer() else f"0-{dur:.1f}s:", u["prompt_text"])

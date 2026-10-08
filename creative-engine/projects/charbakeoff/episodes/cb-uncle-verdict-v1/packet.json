@@ -29,8 +29,8 @@
   },
   "bible_version": {
     "bible_id": "uncle-verdict-v1",
-    "version": 3,
-    "sha256": "08056eab672e893a67b712ccfeee52abf3d57bab6eeeeedcc3373044fed3029a"
+    "version": 4,
+    "sha256": "7b41319035bc74c1d20123941b8a0d35bb5b84241e4942867e09e1959c50a0f4"
   },
   "evidence": [
     {
@@ -448,9 +448,9 @@
         "motion": "the fingertip pushes the pointer tip slowly to the left; the pointer pivots on the brass pin",
         "support_hand": "Left hand holds the paddle handle still at chest height, board square to the lens",
         "keyframes": {
-          "start": "70f2656d-22ca-422a-9bde-0d87667de225",
-          "end": "7ec903a7-e304-43af-af3c-f7d9896e7c82",
-          "status": "generated_pending_owner_approval"
+          "start": "e38bd7f1-3fca-4d58-8f64-03ad49a46a3d",
+          "end": "7a0020db-9398-4a5f-9320-12e2772e4cc2",
+          "status": "owner_approved"
         }
       }
     }
@@ -532,10 +532,10 @@
             "role": "image_references"
           },
           {
-            "value": "4c094812-ad7e-44df-a34a-48287565877c",
+            "value": "3a640e87-c426-48ff-bb01-b679ce36b0ed",
             "role": "image_references",
             "prop": "scoring-paddle",
-            "status": "generated_pending_owner_approval"
+            "status": "owner_approved"
           },
           {
             "value": "<media_id of approved location still>",
@@ -582,7 +582,7 @@
           "generate_audio": true,
           "mode": "omni_reference"
         },
-        "prompt_text": "Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip; no rings, watches, microphones or accessories that are not in the reference.\nSetting: outside a corner shop on a pavement (generic, unrecognisable). Passers-by, if any, are soft blurred shapes who never react.\nCamera: starts medium close-up, centred, seated eye level, 9:16, paddle and face both in frame; propped phone, locked. No cuts.\nProps (exact design, exactly one of each, nothing else added): white folding plastic garden chair; one hand-held wooden scoring paddle: a light oak rounded-rectangle board on a straight round wooden handle; on its face a white semicircular gauge, arc on top, with eleven large bold black numerals 0 1 2 3 4 5 6 7 8 9 10 evenly spaced left to right along the arc and no other marks or text; one thick black pointer arm pivoting on a brass pin at the centre of the gauge's flat bottom edge (exactly as @image2); closed plain umbrella (no logo) across his knees; passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure); rain (top edge, then falling); grey corner-shop wall with blank unreadable shutter.\nHands: at most two hands act; each named hand does one thing; the other hand rests where stated; every object is either held or resting on a surface; one interaction per shot; the only state change is the one movement described, shown slowly from the start frame to the end frame.\nPhysics: each held object stays in a named hand or rests on a surface; nothing floats or vanishes; mouth closed on anything in it; feet grounded except described steps; everything else holds still.\n8-12s: Left hand holds the paddle up at chest height, board square to the lens; right index fingertip on the pointer tip; body still on the chair; rain falling. The one movement: right index fingertip rests on the pointer tip; the fingertip pushes the pointer tip slowly to the left; the pointer pivots on the brass pin; the pointer goes from pointing at 2 to pointing at 1 in one slow continuous move and stops. Left hand holds the paddle handle still at chest height, board square to the lens. Nothing else on the scoring paddle moves or changes; the clip starts on the start frame and ends on the end frame. Uncle Verdict says once: \"Final.\".\nSound: only the quoted lines are spoken, each exactly once, then silence; steady rain on pavement, distant traffic; no music.\nNo readable text, logos or signage except a product's own label. Natural skin, no blur on the face. No third arm, no extra hands, no duplicated limbs, no extra fingers, no deformed hands; objects never merge with hands; exactly one of each prop; no mirrors or reflections; no slow motion.",
+        "prompt_text": "Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip; no rings, watches, microphones or accessories that are not in the reference.\nSetting: outside a corner shop on a pavement (generic, unrecognisable). Passers-by, if any, are soft blurred shapes who never react.\nCamera: starts medium close-up, centred, seated eye level, 9:16, paddle and face both in frame; propped phone, locked. No cuts.\nProps (exact design, exactly one of each, nothing else added): white folding plastic garden chair; one hand-held wooden scoring paddle: a light oak rounded-rectangle board on a straight round wooden handle; on its face a white semicircular gauge, arc on top, with eleven large bold black numerals 0 1 2 3 4 5 6 7 8 9 10 evenly spaced left to right along the arc and no other marks or text; one thick black pointer arm pivoting on a brass pin at the centre of the gauge's flat bottom edge (exactly as @image2); closed plain umbrella (no logo) across his knees; passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure); rain (top edge, then falling); grey corner-shop wall with blank unreadable shutter.\nHands: at most two hands act; each named hand does one thing; the other hand rests where stated; every object is either held or resting on a surface; one interaction per shot; the only state change is the one movement described, shown slowly from the start frame to the end frame.\nPhysics: each held object stays in a named hand or rests on a surface; nothing floats or vanishes; mouth closed on anything in it; feet grounded except described steps; everything else holds still.\n0-4s: Left hand holds the paddle up at chest height, board square to the lens; right index fingertip on the pointer tip; body still on the chair; rain falling. The one movement: right index fingertip rests on the pointer tip; the fingertip pushes the pointer tip slowly to the left; the pointer pivots on the brass pin; the pointer goes from pointing at 2 to pointing at 1 in one slow continuous move and stops. Left hand holds the paddle handle still at chest height, board square to the lens. Nothing else on the scoring paddle moves or changes; the clip starts on the start frame and ends on the end frame. Uncle Verdict says once: \"Final.\".\nSound: only the quoted lines are spoken, each exactly once, then silence; steady rain on pavement, distant traffic; no music.\nNo readable text, logos or signage except a product's own label. Natural skin, no blur on the face. No third arm, no extra hands, no duplicated limbs, no extra fingers, no deformed hands; objects never merge with hands; exactly one of each prop; no mirrors or reflections; no slow motion.",
         "prompt_style": "compact_physics_first",
         "prompt_budget": {
           "audio_mode": "on_camera_dialogue",
@@ -599,10 +599,10 @@
             "role": "image_references"
           },
           {
-            "value": "4c094812-ad7e-44df-a34a-48287565877c",
+            "value": "3a640e87-c426-48ff-bb01-b679ce36b0ed",
             "role": "image_references",
             "prop": "scoring-paddle",
-            "status": "generated_pending_owner_approval"
+            "status": "owner_approved"
           },
           {
             "value": "<media_id of approved location still>",
@@ -613,16 +613,16 @@
             "role": "audio_references"
           },
           {
-            "value": "70f2656d-22ca-422a-9bde-0d87667de225",
+            "value": "e38bd7f1-3fca-4d58-8f64-03ad49a46a3d",
             "role": "start_image"
           },
           {
-            "value": "7ec903a7-e304-43af-af3c-f7d9896e7c82",
+            "value": "7a0020db-9398-4a5f-9320-12e2772e4cc2",
             "role": "end_image"
           }
         ],
         "manual_steps": [
-          "Keyframe board first: generate the start frame and the end frame (gpt_image_2_5 with the character and prop references; the end frame edits the start frame so only the moving part and the acting finger change); the owner inspects both before any video is submitted.",
+          "Keyframe board first: generate the start frame and the end frame (route_image_asset('keyframe'): nano_banana_pro with the character and prop references; the end frame edits the start frame so only the moving part and the acting finger change); the owner inspects both before any video is submitted.",
           "Upload approved reference stills via media_upload (owner action; upload requires approval).",
           "Burn captions/on-screen text in edit.",
           "Add licensed music in edit if any.",
