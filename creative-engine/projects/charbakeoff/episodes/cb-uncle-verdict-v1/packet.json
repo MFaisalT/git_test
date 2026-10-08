@@ -735,12 +735,12 @@
       "flagged_fields": [],
       "recurring_motifs": [
         {
-          "motif": "prop:white",
+          "motif": "prop:small",
           "episodes": 2,
           "share": 0.67
         },
         {
-          "motif": "prop:small",
+          "motif": "prop:white",
           "episodes": 2,
           "share": 0.67
         }
@@ -763,7 +763,7 @@
     }
   ],
   "provenance": {
-    "generated_at": "2026-10-08T07:09:57Z",
+    "generated_at": "2026-10-08T07:11:08Z",
     "provider": "broker",
     "requested_model": "sonnet",
     "observed_model": "not independently observable (Agent tool; model=sonnet requested)",

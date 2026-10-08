@@ -36,7 +36,7 @@ class TestRouting(unittest.TestCase):
         p = valid_packet(); p["production_format"] = {"shot_architecture": "single_take_static", "audio_mode": "silent_ambience", "continuity_reuse": {"voice": "none", "location": "same", "costume": "same"}, "rationale": "t"}
         tm = plan(p, bible())
         u = tm["units"][0]
-        self.assertEqual(u["model"], "seedance_2_0_mini"); self.assertFalse(u["controls"]["generate_audio"]); self.assertIn("why", u["routing"])
+        self.assertEqual(u["model"], "seedance_2_5"); self.assertFalse(u["controls"]["generate_audio"]); self.assertIn("why", u["routing"])  # handled props -> 2.5; silent keeps audio off
         kinds = {a["kind"] for a in tm["asset_requests"]}
         self.assertEqual(kinds, {"character_reference", "location_still"})
         self.assertTrue(all(a["model"] == "nano_banana_pro" for a in tm["asset_requests"]))

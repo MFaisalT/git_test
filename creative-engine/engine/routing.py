@@ -69,7 +69,7 @@ def route_video_unit(pf: dict, duration: float, audio_mode: str, has_driving_foo
         return {"model": "seedance_2_0_mini", "mode": None, "generate_audio": not silent, "why": "<=15 s; identity refs supported; cheapest adequate (15 credits / 15 s / 720p quoted)", "status": "verified_controls",
                 "fallback": "seedance_2_5 omni_reference if identity or physics fail on mini"}
     if identity_critical:
-        return {"model": "seedance_2_5", "mode": "omni_reference", "generate_audio": True, "why": "dialogue + identity lock: Seedance 2.5 omni_reference carries image + audio references (voice lock) with native audio", "status": "verified_controls",
+        return {"model": "seedance_2_5", "mode": "omni_reference", "generate_audio": not silent, "why": ("hands-free rule: handled props need Seedance 2.5 (Mini forked prop states in owner inspection 2026-10-08); identity refs kept" if silent else "dialogue + identity lock: Seedance 2.5 omni_reference carries image + audio references (voice lock) with native audio"), "status": "verified_controls",
                 "fallback": "seedance_2_0_mini for drafts; cinematic_studio_video_4_0 for premium look", "optimisation": "480p draft -> finalize"}
     return {"model": "cinematic_studio_3_0", "mode": None, "generate_audio": not silent, "why": "premium cinematic look where the character is not in frame (inserts, establishing shots)", "status": "recommended_untested", "fallback": "seedance_2_5"}
 

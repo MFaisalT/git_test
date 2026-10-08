@@ -10,25 +10,27 @@
         "S3",
         "S4"
       ],
-      "model": "seedance_2_0_mini",
+      "model": "seedance_2_5",
       "routing": {
-        "why": "<=15 s; identity refs supported; cheapest adequate (15 credits / 15 s / 720p quoted)",
+        "why": "dialogue + identity lock: Seedance 2.5 omni_reference carries image + audio references (voice lock) with native audio",
         "status": "verified_controls",
-        "fallback": "seedance_2_5 omni_reference if identity or physics fail on mini"
+        "fallback": "seedance_2_0_mini for drafts; cinematic_studio_video_4_0 for premium look",
+        "optimisation": "480p draft -> finalize"
       },
       "controls": {
         "duration": 12,
         "aspect_ratio": "9:16",
         "resolution": "720p",
-        "generate_audio": true
+        "generate_audio": true,
+        "mode": "omni_reference"
       },
-      "prompt_text": "Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip.\nSetting: Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her. Passers-by, if any, are soft blurred shapes who never react.\nCamera: starts wide, slightly low angle, full body head to trainers; slow handheld push-in begins, gentle bob, camera noticing her before she notices it. No cuts.\nPhysics: each held object stays in a named hand or rests on a surface; nothing floats or vanishes; mouth closed on anything in it; feet grounded except described steps; everything else holds still.\nHands: at most two hands act; each named hand does one thing; the other hand rests where stated; every object is either held or resting on a surface; one interaction per shot; state changes happen across the hard cuts, never mid-shot.\n0-3s: Both arms raised, hands open as a conductor, slam down on THREE and rise on TWO; red standing figure glows on the signal behind her; whistle hangs on its cord; feet planted. Captain Tempo says: \"THREE!\". Captain Tempo says: \"TWO!\".\n3-6s: Right hand lifts the whistle to sealed lips and blows once, then drops it on its cord and shouts ONE; left arm hangs; feet planted; signal still. Camera: continuing slow low-angle handheld push-in. Captain Tempo says: \"ONE!\".\n6-9s: Both fists thrust skyward after two trainer stomps and a hip swing; whistle swings on its cord; signal flips on its own timer; camera and crowd hold steady. Camera: low-angle handheld push-in slows to a settle as she peaks. Captain Tempo says: \"GO!\".\n9-12s: Both fists held up in the frozen pose, whistle hanging on its cord, grin steady; a commuter walks past; feet planted; signal and camera hold still. Camera: camera settles into a final held framing with a small handheld breathe.\nSound: only the quoted lines are spoken; real junction traffic, footsteps and crowd murmur, idling engines; no music.\nNo readable text, logos or signage except a product's own label. Natural skin, no blur on the face. No third arm, no extra hands, no duplicated limbs, no extra fingers, no deformed hands; objects never merge with hands; exactly one of each prop; no mirrors or reflections; no slow motion.",
+      "prompt_text": "Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip; no rings, watches, microphones or accessories that are not in the reference.\nSetting: Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her. Passers-by, if any, are soft blurred shapes who never react.\nCamera: starts wide, slightly low angle, full body head to trainers; slow handheld push-in begins, gentle bob, camera noticing her before she notices it. No cuts.\nProps (exact design, exactly one of each, nothing else added): referee whistle on red cord; small handheld metronome clipped to waistband; white sweatband; pedestrian signal head showing red standing figure then green walking figure (pictograms only, no text); blurred generic pedestrians (extras).\nHands: at most two hands act; each named hand does one thing; the other hand rests where stated; every object is either held or resting on a surface; one interaction per shot; state changes happen across the hard cuts, never mid-shot.\nPhysics: each held object stays in a named hand or rests on a surface; nothing floats or vanishes; mouth closed on anything in it; feet grounded except described steps; everything else holds still.\n0-3s: Both arms raised, hands open as a conductor, slam down on THREE and rise on TWO; red standing figure glows on the signal behind her; whistle hangs on its cord; feet planted. Captain Tempo says once: \"THREE!\". Captain Tempo says once: \"TWO!\".\n3-6s: Right hand lifts the whistle to sealed lips and blows once, then drops it on its cord and shouts ONE; left arm hangs; feet planted; signal still. Camera: continuing slow low-angle handheld push-in. Captain Tempo says once: \"ONE!\".\n6-9s: Both fists thrust skyward after two trainer stomps and a hip swing; whistle swings on its cord; signal flips on its own timer; camera and crowd hold steady. Camera: low-angle handheld push-in slows to a settle as she peaks. Captain Tempo says once: \"GO!\".\n9-12s: Both fists held up in the frozen pose, whistle hanging on its cord, grin steady; a commuter walks past; feet planted; signal and camera hold still. Camera: camera settles into a final held framing with a small handheld breathe.\nSound: only the quoted lines are spoken, each exactly once, then silence; real junction traffic, footsteps and crowd murmur, idling engines; no music.\nNo readable text, logos or signage except a product's own label. Natural skin, no blur on the face. No third arm, no extra hands, no duplicated limbs, no extra fingers, no deformed hands; objects never merge with hands; exactly one of each prop; no mirrors or reflections; no slow motion.",
       "prompt_style": "compact_physics_first",
       "prompt_budget": {
         "audio_mode": "on_camera_dialogue",
         "word_budget": 260,
-        "words": 307,
-        "words_total_incl_safety_lines": 380,
+        "words": 370,
+        "words_total_incl_safety_lines": 443,
         "shrink_level": 4,
         "over_budget": true
       },
@@ -59,8 +61,8 @@
         "Lip-sync and exact SFX timing are not controllable; inspect output.",
         "Lens is prompt language only."
       ],
-      "estimated_credits": 12,
-      "estimated_credits_draft": null,
+      "estimated_credits": 84,
+      "estimated_credits_draft": 36,
       "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
     }
   ],
