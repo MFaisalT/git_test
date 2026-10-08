@@ -1,0 +1,22 @@
+{
+  "kind": "model_comparison",
+  "purpose": "owner 2026-10-08: re-render Mini and 2.5 draft on the identical current prompt so all five models are compared fairly",
+  "packet_id": "CB-uncle-verdict-v1",
+  "job_id": "fab09815-da4b-4b40-be21-90c6c75c88c6",
+  "model_requested": "seedance_2_0_mini",
+  "setting": "720p",
+  "duration": 12,
+  "medias": [
+    {
+      "role": "image_references",
+      "job_id": "cb1f3458-a537-48af-950d-c42de75a4b28"
+    }
+  ],
+  "cost": {
+    "quoted_credits": 12,
+    "charged_credits": null
+  },
+  "render_inspection": {
+    "status": "pending_owner"
+  }
+}
