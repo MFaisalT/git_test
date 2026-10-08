@@ -36,7 +36,7 @@ Engine changes the bake-off forced (all tested, 97 tests): bible-driven characte
 | Captain Tempo sheet (Nano Banana Pro 2k) | 2 |
 | Uncle Verdict sheet | 2 |
 | Inspector sheet | 0 (reused variant 0) |
-| Three Mini test renders, 12 s, 720p, with audio | 3 x 12 (quoted; ledger check after completion) |
+| Three Mini test renders, 12 s, 720p, with audio | 3 x 12 = 36 (measured in the ledger, equal to the quote) |
 
 Render job ids: A `1b95e045-cd7c-4f1e-adf3-04aea5c85203`, B `f8a1f505-369d-47a2-8bc7-8a151f5f5a98`, C `3777de49-7e13-4bbf-9b5b-ea71b63dd8f5`. Records: `projects/charbakeoff/episodes/cb-*/renders/`.
 

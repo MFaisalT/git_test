@@ -4,7 +4,7 @@
   "packet_id": "CB-uncle-verdict-v1",
   "unit": "U1",
   "job_id": "3777de49-7e13-4bbf-9b5b-ea71b63dd8f5",
-  "submitted_at": "2026-10-08T06:1xZ",
+  "submitted_at": "2026-10-08T06:04Z",
   "model_requested": "seedance_2_0_mini",
   "params": {
     "duration": 12,
@@ -22,8 +22,10 @@
   ],
   "cost": {
     "quoted_credits": 12,
-    "charged_credits": null,
-    "note": "fill from transactions ledger after completion"
+    "charged_credits": 12,
+    "ledger_display_name": "Seedance 2.0 Mini",
+    "ledger_at": "2026-10-08T06:04:04Z..06:04:09Z",
+    "note": "measured = quoted; one take each"
   },
   "approval_path": "owner approval in chat for the bake-off; not via `engine approve` because the character reference and voice assets are unresolved pending owner approval; packet stays planning-ready; render unverified",
   "render_inspection": {
@@ -39,5 +41,8 @@
       "artefacts (hands, props, physics)",
       "energy and presence versus the other two characters"
     ]
-  }
+  },
+  "completed_at": "2026-10-08T06:1xZ (observed via jobs_wait)",
+  "model_reported_by_job": "seedance_2_0_mini",
+  "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KCsjWbw5Tvz4VquofelfxznaIJ/hf_20261008_060409_3777de49-7e13-4bbf-9b5b-ea71b63dd8f5.mp4"
 }
