@@ -2,7 +2,7 @@
 
 A local, reusable short-form creative engine: a new brief goes in; a distinctive, coherent, **planning-ready episode packet** comes out (full script, timed audiovisual storyboard, tool mapping, rights/approval checklist, growth hypotheses). Rendered media is a separate, owner-approved step and is never claimed by this engine.
 
-Intended home: `AI influencer/Viral Character Research/creative-engine/` (new subfolder; nothing in the lab is modified). Built in `MFaisalT/git_test` on branch `claude/routing-mode-code-7atd07` because the lab's Windows path is not reachable from the cloud container; copying to Drive is an upload and waits for owner approval.
+Intended home: `AI influencer/Viral Character Research/creative-engine/` (new subfolder; nothing in the lab is modified). Built in `MFaisalT/git_test` on branch `claude/routing-mode-code-7atd07` because the lab's Windows path is not reachable from the cloud container; a human-readable mirror was uploaded to Drive on 2026-10-08 with owner approval (folder `creative-engine/` in the lab); the git branch is the source of truth.
 
 ## Setup
 

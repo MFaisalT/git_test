@@ -1,8 +1,8 @@
-# Final report: reusable short-form creative engine (2026-10-07 UTC)
+# Final report: reusable short-form creative engine (2026-10-07 UTC; updated 2026-10-08 after the owner's first decisions)
 
 ## 1. Outcome in one paragraph
 
-A working local creative engine exists, is tested, and has repeatedly turned new briefs — including one authored by an independent reviewer and never seen by the generator or demonstrations — into complete, gate-passing, **planning-ready episode packets** (scripts, timed audiovisual storyboards, verified tool mappings, rights/approval checklists, growth hypotheses) through the real Claude workflow. Nothing has been rendered, published or spent; every packet carries the label **"planning-ready; render unverified."** Research informed the product; it does not claim virality or profit.
+A working local creative engine exists, is tested, and has repeatedly turned new briefs — including one authored by an independent reviewer and never seen by the generator or demonstrations — into complete, gate-passing, **planning-ready episode packets** (scripts, timed audiovisual storyboards, verified tool mappings, rights/approval checklists, growth hypotheses) through the real Claude workflow. Nothing has been published. On 2026-10-08, with owner approval, 20 credits were spent on four reference stills and one 12 s test render (section 11); every packet still carries the label **"planning-ready; render unverified"** because the render has not yet been inspected by the owner and the reference assets are not yet approved into the registry. Research informed the product; it does not claim virality or profit.
 
 ## 2. Status matrix (what is implemented, actually tested, mock-tested, planning-ready, rendered)
 
@@ -17,11 +17,11 @@ A working local creative engine exists, is tested, and has repeatedly turned new
 | Anti-template perturbation packet | **Planning-ready; render unverified** — `projects/acceptance/episodes/p-b1p-perturbed` (1 bounded repair) |
 | Held-out acceptance packet | **Planning-ready; render unverified** — `projects/acceptance/episodes/h-heldout` (0 creative repairs; two engine gate bugs found and fixed) |
 | Production-format variety (shot architecture / audio mode / voice-location reuse as a tracked, diversified, validated decision) | **Implemented and tested** (`engine/formats.py`, 8 tests); **demonstrated live** on `F-B5_format_open`: engine chose single_take_moving_camera + silent, 0 gate errors, QA 3.78 (ACCEPTANCE-RESULTS §7) |
-| Higgsfield production routing (Nano Banana Pro / NB 2.1 / Seedance 2.5 & Mini / Cinema Studio 4.0 & 3.0 / Genjutsu) with get_cost preflights | **Implemented and tested** (`engine/routing.py`, 9 tests); catalogue verified read-only; nothing generated; Cinema Studio 4.0 control ids = gap |
+| Higgsfield production routing (Nano Banana Pro / NB 2.1 / Seedance 2.5 & Mini / Cinema Studio 4.0 & 3.0 / Genjutsu) with get_cost preflights | **Implemented and tested** (`engine/routing.py`, 9 tests); catalogue verified read-only; first paid generations done 2026-10-08 (section 11); Cinema Studio 4.0 control ids = gap (two retrieval attempts) |
 | Trend-aware packet | **Planning-ready; render unverified** — `projects/acceptance/episodes/t-b4-trend-aware` (0 repairs; cites 5 dated trend ids; rights warnings surfaced) |
 | Higgsfield adapter | **Dry-run only**; no job submitted, no media uploaded; controls verified read-only via MCP catalogue; per-unit routing + image asset requests with credit estimates |
-| Rendered media | **None.** Requires owner approval, uploaded references, `get_cost` preflight, credit cap, then post-render inspection |
-| Drive copy into the lab folder | **Not done** (upload needs approval); everything is in the git branch |
+| Rendered media | **One owner-approved test render** (C-B1 U1, Seedance 2.0 Mini, 12 s, 720p, silent; job `0455d48d`; charged 12 credits = quote) + 4 reference stills (8 credits). **Inspection pending owner**; the session cannot view pixels. Record: `projects/bakeoff/episodes/c-b1-silent-gag/renders/` |
+| Drive copy into the lab folder | **Done 2026-10-08** as a human-readable mirror (folder `creative-engine/` id `1s9H5G2_kvZcu0M01h01RKg8cETm-DXAA`: MANIFEST, README, FINAL-REPORT, NICHE-DECISION, TOOL-CAPABILITIES, RESOLUTION-POLICY, ACCEPTANCE-RESULTS, `storyboards/` x7). Git branch remains the source of truth; lab index files not modified |
 
 ## 3. Exact saved paths (repo `MFaisalT/git_test`, branch `claude/routing-mode-code-7atd07`, folder `creative-engine/`)
 
@@ -73,13 +73,13 @@ See `eval/heldout/ACCEPTANCE-RESULTS.md` §1–§4 for the three deliverables, t
 - Judge scores are one opus reading per brief; n=3 briefs. The B/C convergence on B3 shows same-model same-brief runs can agree on an idea.
 - Trend radar entries from the one real refresh are aggregator/press grade with 11 declared gaps; sounds/dances could not be verified.
 - Owner region unknown → native payouts remain $0 and disclosure law unresolved (`docs/NICHE-DECISION.md`).
-- Credits quotes (8 / 56 credits per 8 s) are quotes, not measured costs; retake rates untested.
+- Credit quotes are preflights; the one measured render (12 credits for Mini 12 s 720p) matched its quote exactly, which is one data point. Seedance 2.5 and Cinema Studio costs remain quotes (112-192 credits per 16 s); retake rates untested.
 
 ## 9. Independent review
 
 Opus reviewer, separate from the builder: **accept-with-fixes** (0 fatal, 13 material, 9 minor; 15 adversarial probes, 4 caught before repairs, 10/10 saved probes caught after). Verbatim report: `eval/heldout/independent-review.json`. Repairs and the one accepted-but-not-fully-repaired finding (bake-off trio shares a production template; now surfaced by a recurring-motif report rather than blocked) are itemised in `eval/heldout/ACCEPTANCE-RESULTS.md` §6. The niche recommendation was revised on the reviewer's evidence point: **N3 (productized service) is the stronger business bet; N1 is kept as the learning engine for a stated reason, not sunk cost.**
 
-## 10. Next owner decisions (nothing below has been done)
+## 10. Owner decisions as of 2026-10-07 (superseded by section 11)
 
 1. **Region / entity / audience language** — needed to resolve payouts and disclosure rules.
 2. **Copy `creative-engine/` into the lab folder on Drive** (an upload; needs your approval) and register it in RESEARCH-INDEX.md / PROJECT-FILE-CATALOG.csv.
@@ -88,3 +88,21 @@ Opus reviewer, separate from the builder: **accept-with-fixes** (0 fatal, 13 mat
 4. **Niche path** — revised: N3 productized service as the business bet, N1 character pilot as the learning engine, N2 fallback (`docs/NICHE-DECISION.md`); say yes/no or redirect.
 5. **Trend refresh cadence** — recommended every two weeks during the pilot plus event triggers; no automation created.
 6. **GitHub**: pushes work now; if you want a PR, say so.
+
+## 11. 2026-10-08: owner decisions executed
+
+Owner decisions received: (1) global audience default, niche/character determines audience by logic; (2) Drive copy approved; (3) first renders approved with no cap, to measure a real render cost; (4) Cinema Studio 4.0 control-id retrieval approved; (5) niche path N3/N1/N2 accepted, explanation of the N's requested.
+
+| Action | Result |
+|---|---|
+| Audience policy | Recorded in both `project.json` files and bible `inspector-v1` v3 (`audience`: global default, visual-first, English captions) |
+| Reference stills (Nano Banana Pro, 2k) | 2 character-sheet variants (jobs `6dd8c02f` variant 0, `ee6ec308` variant 1), living-room still (`baf3b039`), kitchen still (`cfdcc98d`); **8 credits charged**; registry status `generated_pending_owner_approval`. Jobs report serving model `nano_banana_2` while the ledger says "Nano Banana Pro": logged, unresolved |
+| First render | C-B1 U1 as planned by the adapter: Seedance 2.0 Mini, 12 s, 9:16, 720p, silent, refs variant 0 + living-room still. **12 credits charged = quote.** Pixels not viewable from this container; owner inspects via the Higgsfield widget / result URL |
+| Real cost picture | Measured: 2 credits per 2k still; 12 credits per 12 s Mini 720p silent clip. Quoted, unmeasured: Seedance 2.5 16 s = 48 (480p draft) / 112 (720p) / 192 (1080p); Cinema Studio 4.0 16 s = 112; owner's own CS 4.0 ledger 2026-10-06 shows 112-154 per job. A 16-post pilot at one Mini take per post is ~200 credits; at Seedance 2.5 1080p with one retake it is ~6,000 |
+| Resolution question | Answered in `docs/RESOLUTION-POLICY.md`: platforms want a 1080x1920 H.264 upload with HD on; Seedance/Veo-class tools are native 720p/1080p; creators describe generate-then-upscale; **no account's source resolution is observable from its posts**, so "what the top accounts render at" is inference. Policy: drafts 480p/720p, masters 1080p (finalize or one upscale), export 1080x1920 |
+| Cinema Studio 4.0 ids | Two read-only attempts (`models_explore`, `apps_search`, `get_preset_instructions`): no MCP surface lists the camera/lens/light/pacing ids. Remains **gap**; owner can copy ids from the web UI, otherwise lens/lighting stay prompt text |
+| Drive mirror | Folder `1s9H5G2_kvZcu0M01h01RKg8cETm-DXAA` (14 files). `RESEARCH-INDEX.md` / `PROJECT-FILE-CATALOG.csv` untouched; a one-line registration is proposed, not applied |
+
+Balance: 981.16 -> 961.16 credits across the session (20 spent, all owner-approved).
+
+Open for the owner: pick character variant 0 or 1 (or regenerate); judge the test render against the checklist in `renders/0455d48d...json`; say whether to run the NB 2.1 comparison (2 credits) and a Seedance 2.5 render of F-B5 (48 draft / 192 at 1080p); country/entity for payouts and disclosure.

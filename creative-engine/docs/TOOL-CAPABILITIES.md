@@ -83,3 +83,10 @@ Catalogue re-read via `models_explore` (get/search/recommend) and credit preflig
 - **Cinema Studio**: 4.0 is the only model with native lens/lighting/pacing controls - exactly the fields the packet carries - but it needs control ids we have not retrieved, so it is marked **gap** and the adapter keeps lens/lighting as prompt text until a read-only listing of those ids is obtained. 3.0 lacks identity references, so it is only recommended for shots where the character is not in frame. Neither has been generated or inspected here.
 - **NB 2 (nano_banana_2_1)**: exposed, same 2-credit quote, adds video references and inpainting; set `nb2_testing=True` in `asset_requests` to route reference stills to it for the owner's comparison test. Untested.
 - Quotes are preflights, not measured completed-output costs; retake multipliers (2-4x) are untested assumptions. "Status" per unit distinguishes verified controls, recommended-untested and gap.
+
+### 2026-10-08 addendum: first measured costs and the Cinema Studio 4.0 gap
+
+- Owner-approved generations: `nano_banana_pro` 2k stills x4 = 8 credits (2 each, as quoted); `seedance_2_0_mini` 12 s / 720p / 9:16 / silent with two image refs (job ids used directly as `medias` values, which works) = 12 credits, as quoted. Jobs for the stills report `model: nano_banana_2` while the ledger display name is "Nano Banana Pro"; the discrepancy is logged, not resolved.
+- Video submit behaviour: the first `generate_video` call was intercepted by a preset recommendation ("IN THE DARK"); resubmitting with `declined_preset_id` runs the literal prompt. The adapter notes this as a manual step.
+- Cinema Studio 4.0 (`cinematic_studio_video_4_0`): `get_preset_instructions` has no cinema-studio entry and `models_explore` search returns only `cinematic_studio_video_v2` (genre / speedramp enums). The 4.0 control ids are not exposed through MCP; **gap confirmed**.
+- Resolution policy for masters and exports: `docs/RESOLUTION-POLICY.md`.

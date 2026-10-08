@@ -1,0 +1,25 @@
+{
+  "kind": "render_test",
+  "purpose": "owner-approved first render to measure a real completed-output cost (owner: 'no cap as we want to assess how much a normal render would cost', 2026-10-08)",
+  "packet_id": "C-B1_silent_gag",
+  "unit": "U1",
+  "job_id": "0455d48d-30d9-4f00-b53c-7912540529cf",
+  "submitted_at": "2026-10-08T00:23:48Z",
+  "completed_at": "2026-10-08T00:29Z (observed via jobs_wait; exact server time not exposed)",
+  "model_requested": "seedance_2_0_mini",
+  "model_reported_by_job": "seedance_2_0_mini",
+  "params": {"duration": 12, "aspect_ratio": "9:16", "resolution": "720p", "width": 720, "height": 1280, "generate_audio": false, "genre": "auto", "prompt_language": "en"},
+  "prompt_source": "adapter prompt_text for U1, submitted literally (preset recommendation 'IN THE DARK' declined via declined_preset_id)",
+  "medias": [
+    {"role": "image", "job_id": "6dd8c02f-06db-4e61-a160-b2d7ebedecd0", "asset": "character_reference candidate variant 0 (nano_banana_pro request; job reported nano_banana_2)"},
+    {"role": "image", "job_id": "baf3b039-fce5-4ec6-81fa-9275dfeacfc5", "asset": "loc-living-room-01 still"}
+  ],
+  "cost": {"quoted_credits": 12, "charged_credits": 12, "ledger_display_name": "Seedance 2.0 Mini", "ledger_at": "2026-10-08T00:23:48Z", "balance_before": 969.16, "balance_after": 961.16, "note": "measured = quoted; one take, no retake; this is one data point, not a retake-rate estimate"},
+  "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KCsjWbw5Tvz4VquofelfxznaIJ/hf_20261008_002348_0455d48d-30d9-4f00-b53c-7912540529cf.mp4",
+  "approval_path": "owner approval given in chat; NOT recorded via `engine approve` because the packet's character_reference rights are still 'unresolved' pending the owner's pick between the two generated candidates; the approve gate would correctly refuse. Packet status therefore stays 'planning-ready; render unverified'.",
+  "render_inspection": {
+    "status": "pending_owner",
+    "by": "owner (the orchestrating session cannot view pixels: CloudFront media URLs are egress-blocked from the container)",
+    "checklist": ["identity match to reference", "props present from frame one, no appearing/vanishing", "no speech", "cable tie legible centre frame", "last frame matches first (loop)", "artefacts (hands, cable physics)", "720p source noted: needs one upscale pass to 1080x1920 for the master per RESOLUTION-POLICY"]
+  }
+}
