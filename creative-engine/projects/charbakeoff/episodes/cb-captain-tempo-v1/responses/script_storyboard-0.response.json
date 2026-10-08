@@ -45,14 +45,15 @@
       },
       {
         "speaker": "Captain Tempo",
-        "line": "AND!",
+        "line": "GO!",
         "delivery": "explosive, held",
         "on_camera": true
       }
     ],
     "caption_text": "She counted. The light changed. Obviously she did that.",
     "cta": "",
-    "disclosure_line": "AI-generated character and footage; original character."
+    "disclosure_line": "AI-generated character and footage; original character.",
+    "caption": "She thinks she controls the traffic lights."
   },
   "scenes": [
     {
@@ -168,8 +169,8 @@
       "dialogue": [
         {
           "speaker": "Captain Tempo",
-          "line": "AND!",
-          "delivery": "one explosive shout, held, joyful",
+          "line": "GO!",
+          "delivery": "one explosive shout exactly as the light turns green",
           "on_camera": true
         }
       ],

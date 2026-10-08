@@ -150,3 +150,26 @@ class TestAudioModePrompts(unittest.TestCase):
             s["sound"]["music"] = "custom track"
         codes = {f["code"] for f in realisation_findings(p["production_format"], p)}
         self.assertIn("FORMAT_SOUNDTRACK_SPEC", codes)
+
+
+class TestInteraction(unittest.TestCase):
+    def test_dial_turn_on_screen_is_flagged_and_cut_staging_passes(self):
+        from engine.interaction import interaction_findings
+        bad = {"scene_id": "S3", "physical_beat": "Left hand lifts the paddle toward the lens, right index finger turns the dial from 2 to 1, umbrella rests across his lap."}
+        self.assertIn("INTERACTION_ONSCREEN_STATE_CHANGE", {f["code"] for f in interaction_findings(bad)})
+        good = {"scene_id": "S4", "state_change_by_cut": True, "physical_beat": "Left hand holds the paddle up at chest height, dial already at 1; right hand rests flat on the umbrella in his lap; body still."}
+        self.assertEqual(interaction_findings(good), [])
+
+    def test_loop_mirror_unparked(self):
+        from engine.interaction import interaction_findings
+        s = {"scene_id": "S1", "physical_beat": "Right hand presses the pump twice in front of the mirror."}
+        codes = {f["code"] for f in interaction_findings(s)}
+        self.assertTrue({"INTERACTION_LOOP_WORD", "INTERACTION_MIRROR", "INTERACTION_FREE_HAND_UNPARKED"} <= codes)
+
+    def test_prompt_has_hard_cut_hand_rule_and_negative_tail(self):
+        p = valid_packet()
+        for s in p["scenes"]:
+            s["physical_beat"] = "Right hand holds the clipboard at chest height, left hand rests at her side, feet planted."
+        p["scenes"][0]["transition_out"] = "hard cut"
+        txt = plan(p, bible())["units"][0]["prompt_text"]
+        self.assertIn("no third arm", txt.lower())

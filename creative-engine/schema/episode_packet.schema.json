@@ -535,6 +535,10 @@
             "type": "string",
             "maxLength": 320,
             "description": "One sentence (<=40 words): who moves what, with which hand, the contact point, what holds still, and any world event the joke depends on. The compact render prompt sends only this plus dialogue."
+          },
+          "state_change_by_cut": {
+            "type": "boolean",
+            "description": "True when a prop's state change (cap off, dial moved, garment on) happens across the hard cut that opens this scene: the scene starts already in the end state, hands in the end pose."
           }
         }
       }

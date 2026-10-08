@@ -72,8 +72,10 @@ def scene_physics_findings(scene: dict, tier: str = "") -> list[dict]:
 def physics_findings(packet: dict) -> list[dict]:
     tier = str((packet.get("brief") or {}).get("render_tier", "")).lower()
     out = []
+    from .interaction import interaction_findings
     for s in sorted(packet.get("scenes", []), key=lambda x: x.get("start_s", 0)):
         out.extend(scene_physics_findings(s, tier))
+        out.extend(dict(f, severity="warning") for f in interaction_findings(s))
     return out
 
 
@@ -133,11 +135,15 @@ def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_
             lines.append("Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip.")
         light = first.get("lighting", "").split(";")[0]
         lines.append(f"Setting: {first.get('location', '')}." + (f" {light}." if level < 4 and light else "") + " Passers-by, if any, are soft blurred shapes who never react.")
-        lines.append(f"Camera: {cam0.get('shot', '')}; {cam0.get('movement', '')}. No cuts.")
+        cuts = any("cut" in str(s.get("transition_out", "")).lower() for s in scenes[:-1])
+        lines.append(f"Camera: starts {cam0.get('shot', '')}; {cam0.get('movement', '')}." + ("" if cuts else " No cuts."))
         lines.append(PHYSICS_LONG if level < 3 else PHYSICS_SHORT)
         for s in scenes:
-            t = f"{float(s['start_s']):.0f}-{float(s['end_s']):.0f}s"
-            line = f"{t}: {str(s['physical_beat']).strip().rstrip('.')}."
+            fmt = lambda v: f"{float(v):.0f}" if float(v).is_integer() else f"{float(v):.1f}"
+            t = f"{fmt(s['start_s'])}-{fmt(s['end_s'])}s"
+            mv = str((s.get("camera") or {}).get("movement", "")).strip()
+            cam_note = f" Camera: {mv.split(';')[0].split(',')[0].strip()}." if (mv and s is not first) else ""  # camera moves are never trimmed (owner values camera motion)
+            line = f"{t}: {str(s['physical_beat']).strip().rstrip('.')}.{cam_note}"
             if speak:
                 for d in s.get("dialogue", []) or []:
                     if not d.get("on_camera", True) and am == "off_camera_dialogue":
@@ -145,14 +151,24 @@ def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_
                         continue
                     note = f" ({d['delivery']})" if (level < 1 and d.get("delivery")) else ""
                     line += f" {d.get('speaker', 'She')} says: \"{d['line']}\"{note}."
+            if s is not scenes[-1] and "cut" in str(s.get("transition_out", "")).lower():
+                line += " Hard cut to."
             lines.append(line)
         lines.append(_sound_line(packet, am, first))
-        lines.append("No readable text, logos or signage. Natural skin, natural hands, no blur on the face.")
+        from .interaction import NEGATIVE_TAIL, interaction_rule_line
+        lines.insert(4, interaction_rule_line(packet))  # never trimmed
+        lines.append("No readable text, logos or signage except a product's own label. Natural skin, no blur on the face. " + NEGATIVE_TAIL)
         return "\n".join(lines)
 
+    from .interaction import NEGATIVE_TAIL, interaction_rule_line
+    fixed = len(NEGATIVE_TAIL.split()) + len(interaction_rule_line(packet).split())  # safety lines from the platform recipe: outside the descriptive budget
+
+    def wc(t: str) -> int:
+        return len(t.split()) - fixed
+
     level, text = 0, build(0)
-    while len(text.split()) > budget and level < 4:
+    while wc(text) > budget and level < 4:
         level += 1
         text = build(level)
-    meta = {"audio_mode": am, "word_budget": budget, "words": len(text.split()), "shrink_level": level, "over_budget": len(text.split()) > budget}
+    meta = {"audio_mode": am, "word_budget": budget, "words": wc(text), "words_total_incl_safety_lines": len(text.split()), "shrink_level": level, "over_budget": wc(text) > budget}
     return (text, meta) if return_meta else text
