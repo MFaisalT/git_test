@@ -1,6 +1,6 @@
 {
   "bible_id": "inspector-v1",
-  "version": 1,
+  "version": 4,
   "show_title": "Inspector of Tiny Problems (working title; name/IP uncleared)",
   "logline": "A composed inspector treats trivial household faults as major infrastructure investigations, and always ends up committing the same fault herself.",
   "character": {
@@ -33,7 +33,9 @@
   "provenance": {
     "created": "2026-10-07",
     "basis": "comedy-report.md hypothesis 1, sharpened per independent-audit.md C2",
-    "status": "hypothesis, untested"
+    "status": "hypothesis, untested",
+    "saved_at": "2026-10-08T05:22:09Z",
+    "bump_reason": "owner-requested NB 2.1 comparison set on identical prompts (4 jobs, 8 credits); model-label note; no identity change"
   },
   "approved_assets": {
     "voice": {

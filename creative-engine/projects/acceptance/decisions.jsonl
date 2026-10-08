@@ -1,3 +1,4 @@
 {"type": "bible_version", "bible_id": "inspector-v1", "version": 1, "reason": "", "at": "2026-10-07T23:17:47Z"}
 {"type": "bible_version", "bible_id": "inspector-v1", "version": 2, "reason": "add approved_assets registry (voice, locations, character reference) so declared rights are cross-checked; no identity change", "at": "2026-10-07T23:53:25Z"}
 {"type": "bible_version", "bible_id": "inspector-v1", "version": 3, "reason": "owner decision 2026-10-08: global audience default; language visual-first/English", "at": "2026-10-08T00:18:35Z"}
+{"type": "bible_version", "bible_id": "inspector-v1", "version": 4, "reason": "owner-requested NB 2.1 comparison set on identical prompts (4 jobs, 8 credits); model-label note; no identity change", "at": "2026-10-08T05:22:09Z"}
