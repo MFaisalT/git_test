@@ -91,3 +91,15 @@ The owner clarified the question: not *replace* the engine, but *incorporate* ea
 - The cold-viewer check
 
 Everything else above stays a study item until the owner decides.
+
+## Status: review finished (2026-10-08)
+
+Both studies are complete. Final position, pending the owner's call:
+- **Do not install** `higgsfield-ai/skills` or any community pack. They run a curl|sh installer from an unreviewed repo, create a second credentials file, run a paid test generation on install, and the websites skill deploys live.
+- **Port text, not code**, stage by stage. Already ported: audio-first line fixes, prop-state continuity, speech fitted to the locked voice, beats-first prompts, montage assembly, cold-viewer check.
+- **Remaining candidates (owner to approve):**
+  1. Audio-first for every line (video-explainer): record all lines in the locked voice before the video, and pair them 1:1.
+  2. A cover and thumbnail gate (youtube-thumbnail): truthful concept, post-render check, text added by code.
+  3. A prop lock-state that invalidates dependent keyframes (brandkit). Needed for sponsored products (Mansour).
+  4. Kill filter and muted hook caption (content-engine).
+- These would live as stage reference files inside the packaged plugin, so each stage loads only what it needs.

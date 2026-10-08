@@ -471,3 +471,16 @@ class TestCameraModes(unittest.TestCase):
         self.assertEqual(camera_mode_findings(p)[0]["code"], "CAMERA_STATIC_MOTION_LEAK")
         p["scenes"][0]["camera"]["movement"] = "handheld with slight natural micro-shake from the grip"
         self.assertEqual(camera_mode_findings(p), [])
+
+
+class TestKpiReminders(unittest.TestCase):
+    def test_rival_move_waits_for_traction_and_mastery(self):
+        from engine.reminders import due_reminders
+        posts = [{"views": 30000, "shares": 300}] * 5
+        good = {"followers": 6000, "last_posts": posts, "episodes_published": 7, "first_pass_qa_rate": 0.7}
+        r = due_reminders({"vince": good})[0]
+        self.assertTrue(r["due"]) ; self.assertIn("owner approval", r["ask_owner"])
+        early = dict(good, followers=800, first_pass_qa_rate=0.3)
+        r = due_reminders({"vince": early})[0]
+        self.assertFalse(r["due"]); self.assertEqual(len(r["unmet"]), 2)
+        self.assertFalse(due_reminders({})[0]["due"])
