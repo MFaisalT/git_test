@@ -1,0 +1,48 @@
+{
+  "bible_id": "captain-tempo-v1",
+  "version": 1,
+  "show_title": "Captain Tempo (working title; name/IP uncleared)",
+  "logline": "A wiry, booming 60-year-old woman in a shiny tracksuit conducts the public like an orchestra, counts strangers through crossings, lifts and queues, and breaks into a victory dance whenever anything she counted happens, which it always would have anyway.",
+  "character": {
+    "name": "Captain Tempo",
+    "age_range": "58-65",
+    "sex_presentation": "woman",
+    "silhouette": "Glossy teal and gold tracksuit zipped to the chin, white sweatband, a referee whistle on a red cord, chunky white trainers, a small handheld metronome clipped to the waistband.",
+    "identity_anchors": "Lean weathered face, deep laugh lines, bright wide-set grey eyes, short silver hair cropped close at the sides and spiky on top, very mobile eyebrows, a wide gap-toothed grin.",
+    "hair": "short silver hair cropped close at the sides and spiky on top, matte",
+    "lower_body": "glossy teal tracksuit trousers with a gold side stripe, chunky white trainers",
+    "desire": "To make the whole city move in time.",
+    "flaw": "She takes credit for every event she counted toward, even though none of it needed her.",
+    "rule": "She counts something down out loud and with her whole body; it happens on its own schedule; she celebrates with an original victory move as if she caused it; a passer-by walks through her celebration without noticing. The camera lingers one beat too long on the celebration.",
+    "performance_register": "Big, physical, loud, breathless, joyful; arms conduct, legs bounce, the whistle blows; the comedy is total commitment to a pointless job plus the world's indifference.",
+    "voice": "Booming, rhythmic, counting in a hoarse shout: 'THREE... TWO... ONE... AND!' Short bursts, never sentences longer than six words.",
+    "signature_gesture": "The Tempo Stomp: two stomps, a hip swing, a whistle blast, both fists to the sky (original move; once per episode)."
+  },
+  "world": {
+    "recurring_locations": [
+      "pedestrian crossing at a busy junction",
+      "glass lift lobby of a shopping centre",
+      "bakery queue on a high street"
+    ],
+    "visual_language": "Handheld phone, wide, slightly low angle so she towers; saturated teal and gold against grey city; strangers as a blurred, indifferent stream.",
+    "sound_language": "Real traffic and crowd; her whistle and counting dominate; one original percussive sting in edit only if licensed."
+  },
+  "do_not": [
+    "No bob/moustache/white-tunic combination or any researched creator's identity, catchphrase, costume or footage.",
+    "No real people, no real brands, no religion, no politics, no mocking of strangers' bodies, accents, disabilities or faith; strangers in frame are generic extras who never become the joke.",
+    "No trending dance or sound that is not cleared; any dance is an original move described in the storyboard.",
+    "No firsthand product endorsements."
+  ],
+  "evolution_policy": "Locations and the thing she counts vary every episode; silhouette, rule, register and the Tempo Stomp are fixed until a versioned bump.",
+  "provenance": {
+    "created": "2026-10-08",
+    "basis": "owner feedback 2026-10-08: reference accounts are loud, physical, public and dance; hypothesis B is an original loud public character with an original move",
+    "status": "hypothesis, untested",
+    "saved_at": "2026-10-08T05:53:57Z",
+    "bump_reason": "character bake-off hypothesis"
+  },
+  "audience": {
+    "target": "global; physical comedy reads muted; counting is universal; no region-specific references",
+    "language_default": "visual-first; English numbers when spoken"
+  }
+}

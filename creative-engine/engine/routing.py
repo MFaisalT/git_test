@@ -89,17 +89,22 @@ def route_image_asset(kind: str, nb2_testing: bool = False) -> dict:
 
 
 def character_sheet_prompt(bible: dict) -> str:
-    """Slot architecture from the Higgsfield character-sheet workflow (read 2026-10-07), filled from the bible. Original character only."""
+    """Slot architecture from the Higgsfield character-sheet workflow (read 2026-10-07), filled from the bible. Original character only.
+    Sex presentation, hair and lower-body wardrobe come from the bible (added 2026-10-08 for the character bake-off); defaults keep the inspector-v1 wording."""
     c = bible.get("character", {})
+    sex = c.get("sex_presentation", "woman")
+    person = {"woman": "female", "man": "male"}.get(sex, "")
+    hair = c.get("hair", "hair in a tight low bun with a matte finish")
+    lower = c.get("lower_body", "plain dark trousers, flat black work shoes")
     return (
         "Split-screen character sheet composition, left side a full-body shot of the character standing upright in a neutral straight standing pose facing the camera with both feet flat on the ground and arms relaxed at the sides, "
-        "full head-to-toe framing with the whole body and both feet visible, right side a tight close-up chest-up portrait of the same character, identical original female character on both sides, single subject only exactly one person with only the character in frame, "
-        f"pure white seamless studio background, professional character sheet presentation, adult woman {c.get('age_range', '35-45')}, {c.get('identity_anchors', '')}, mature adult bone structure and facial proportions, not a youthful rounded babyface, "
-        "naturally muted catchlights, no oversized specular glare in the iris, eye color muted rather than glowing, hair in a tight low bun with a matte finish, "
-        "visible fine skin texture with natural pores, fine lines, subtle asymmetries and texture irregularities, natural visible makeup with slightly uneven foundation blending, slight natural sheen rather than glossy retouched finish, no digital smoothing, no beauty filter, no AI-airbrushed look, matte-to-natural complexion, "
-        f"average build with balanced proportions, wearing {c.get('silhouette', '')}, plain dark trousers, flat black work shoes, no jewellery, no bag, "
+        f"full head-to-toe framing with the whole body and both feet visible, right side a tight close-up chest-up portrait of the same character, identical original {person} character on both sides, single subject only exactly one person with only the character in frame, "
+        f"pure white seamless studio background, professional character sheet presentation, adult {sex} aged {c.get('age_range', '35-45')}, {c.get('identity_anchors', '')}, mature adult bone structure and facial proportions, not a youthful rounded babyface, "
+        f"naturally muted catchlights, no oversized specular glare in the iris, eye color muted rather than glowing, {hair}, "
+        "visible fine skin texture with natural pores, fine lines, subtle asymmetries and texture irregularities, natural minimal grooming, slight natural sheen rather than glossy retouched finish, no digital smoothing, no beauty filter, no AI-airbrushed look, matte-to-natural complexion, "
+        f"balanced natural proportions, wearing {c.get('silhouette', '')}, {lower}, no jewellery, no bag, "
         "natural anatomy, high-end but unretouched commercial photography style, soft diffused studio lighting without harsh reflections, cinematic realism, clean white background, 4K quality, sharp focus on skin texture detail, "
-        "single subject only, exactly one person, only the character in frame, no other people, no duplicate figures, no mannequin, no reflections, no props, no furniture, no background objects, empty seamless studio, left panel standing full-body head-to-toe not cropped not sitting, right panel tight close-up not full body, "
+        "single subject only, exactly one person, only the character in frame, no other people, no duplicate figures, no mannequin, no reflections, no props other than items worn or carried in the described silhouette, no furniture, no background objects, empty seamless studio, left panel standing full-body head-to-toe not cropped not sitting, right panel tight close-up not full body, "
         "no text, no watermark, no logos, no frame borders, no babyface, no plastic skin, original character that does not resemble any real person or existing copyrighted character"
     )
 

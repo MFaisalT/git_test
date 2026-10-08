@@ -1,0 +1,25 @@
+{
+  "brief_id": "CB1_intro_captain-tempo-v1",
+  "title": "Character bake-off intro: 12-second first public appearance of captain-tempo-v1",
+  "project": "charbakeoff",
+  "bible_ref": "captain-tempo-v1",
+  "format": "other",
+  "platform": "tiktok",
+  "duration_target_s": 12,
+  "language": "English or none - the engine decides with the audio mode",
+  "objective": "Introduce the character to a cold viewer in 12 seconds in a public setting so that the character's energy, rule and silhouette are legible muted; make the viewer want to see the next one. This is a bake-off: the same brief runs for three characters and the owner compares the rendered tests.",
+  "constraints": [
+    "Public setting from the bible's recurring locations; generic blurred passers-by allowed, never the joke.",
+    "Render tier: draft_mini (one 12 s Seedance 2.0 Mini unit, <=15 s, one generation unit, at most one cut) - this is a cost-capped test render.",
+    "The bible rule must land inside 12 seconds; the signature gesture may be used once.",
+    "Any dance or move is original and fully described; no trending dance or sound."
+  ],
+  "production_format": {},
+  "commercial": null,
+  "render_tier": "draft_mini",
+  "negative_constraints": [
+    "Do not copy any researched creator's look, catchphrase or footage.",
+    "No readable brand text in frame.",
+    "No real people or recognisable locations."
+  ]
+}

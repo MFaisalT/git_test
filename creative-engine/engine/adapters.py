@@ -95,7 +95,8 @@ def plan(packet: dict, bible: dict | None = None, quote_credits: dict | None = N
     audio_mode = pf.get("audio_mode") or ("silent_ambience" if packet["brief"].get("format") == "silent_gag" else "on_camera_dialogue")
     for i, u in enumerate(out_units, 1):
         dur = round(u[-1]["end_s"] - u[0]["start_s"], 1)
-        route = route_video_unit(pf, dur, audio_mode, needs_driving, identity_critical=True, budget_mode=False)
+        budget = str((packet.get("brief") or {}).get("render_tier", "")).lower() == "draft_mini"  # cost-capped test render requested by the brief
+        route = route_video_unit(pf, dur, audio_mode, needs_driving, identity_critical=True, budget_mode=budget)
         model = route["model"]
         lim = TOOL_LIMITS[model]
         controls = {"duration": max(lim["min_s"], min(lim["max_s"], int(round(dur)))), "aspect_ratio": packet["export"]["aspect_ratio"] if packet["export"]["aspect_ratio"] in (lim["aspect"] or [packet["export"]["aspect_ratio"]]) else "9:16",

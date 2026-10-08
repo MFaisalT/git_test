@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "logline": "Outside a corner shop, Uncle Verdict unfolds his chair and scores a closed umbrella 2 out of 10; rain arrives from the top edge, a dry stranger's umbrella drifts past, and he turns the dial down to 1.",
+      "audience_emotion": "Delighted exasperation: the viewer sees the rain before he admits it and itches to argue in the comments.",
+      "character_desire": "To be the final authority on umbrellas, today.",
+      "obstacle": "The rain and the plainly useful umbrella in the background contradict him in frame.",
+      "escalation": "Verdict at 2, first drops on the paddle, a generic passer-by's open umbrella slides through the frame edge, dial goes lower to 1.",
+      "surprise": "He does not move, shelter or blink; the rain lands on his bald crown and the serenity does not change.",
+      "payoff": "He turns the dial with one finger, holds the paddle to the lens, and says: 'Umbrella. Two out of ten. Correct answer: a tiny roof for nobody.' Rain pours, a dry umbrella passes, he lowers the dial to 1: 'Final.'",
+      "structure": "Rule-complete single beat: claim, evidence enters, doubling down, hold on the face.",
+      "why_send_it": "Sent to the friend who always argues about umbrellas with the message 'this is you'; the wrong take invites a reply.",
+      "commercial_fit": "None needed; no brands. Umbrellas are a universal object and suit sponsor-safe categories later.",
+      "rejected_because": "",
+      "production_format": {
+        "shot_architecture": "single_take_static",
+        "audio_mode": "on_camera_dialogue",
+        "camera_style": "Locked-off phone at seated eye level, centred portrait; rain and the passing umbrella enter from the frame edges.",
+        "continuity_reuse": {"voice": "same", "location": "same", "costume": "same"},
+        "trend_refs": [],
+        "rationale": "The cleanest cold-viewer introduction: static portrait shows silhouette, the verdict format and the rule within one generation unit, with the quiet delivery doing the work."
+      }
+    },
+    {
+      "id": "P2",
+      "logline": "In a laundrette window seat, Uncle Verdict scores a warm folded towel zero out of ten while a slow push-in reveals the dryer door swinging open and fresh towels spilling over his loafers.",
+      "audience_emotion": "Cosy absurdity with a slow-burn laugh at the pile building up.",
+      "character_desire": "To rule that towels are a failure.",
+      "obstacle": "Warm, clean, plainly excellent towels keep arriving in frame.",
+      "escalation": "Towel handed down from the edge, door pops, pile reaches his shoe, the dial already at 0 has nowhere lower so he taps the paddle itself as if the dial were broken.",
+      "surprise": "He treats the dial's floor as the world's fault.",
+      "payoff": "Voice-over: 'Towel. Zero out of ten. Correct answer: a sad flat blanket.' He turns the dial the wrong way, holds up the paddle, 'Final.'",
+      "structure": "Slow reveal; the camera finds the evidence while the voice stays certain.",
+      "why_send_it": "Sent to the flatmate who folds towels wrong, with the caption 'rate this'.",
+      "commercial_fit": "Laundry categories are generic; no brand text in frame.",
+      "rejected_because": "the dial floor makes the rule's wrong-direction step weaker than P1",
+      "production_format": {
+        "shot_architecture": "single_take_moving_camera",
+        "audio_mode": "voiceover_narration",
+        "camera_style": "Slow motivated push-in from window height to his face, steam and dryer drum glow as practical light.",
+        "continuity_reuse": {"voice": "same", "location": "new", "costume": "same"},
+        "trend_refs": [],
+        "rationale": "Moves the show to a second recurring location and voice-over so mouth sync is not a risk in a cheap render; the push-in motivates the reveal."
+      }
+    },
+    {
+      "id": "P3",
+      "logline": "On a park bench row, Uncle Verdict rates a paper cup of tea 10 out of 10 in a main shot; one cutaway insert shows the tea is cold with a leaf floating in it, and he turns the dial up to 10 anyway.",
+      "audience_emotion": "Smug disbelief; the insert lets the viewer feel superior to him.",
+      "character_desire": "To crown tea the best thing on earth.",
+      "obstacle": "The insert shows still, cold, leaf-dotted tea.",
+      "escalation": "Verdict 8, cut to insert, back to the main shot with 10.",
+      "surprise": "The insert shows what the camera knows and he does not.",
+      "payoff": "Text: 'Tea. Eight out of ten. Correct answer: warm water in a hurry.' After the insert he turns the dial up and holds up the paddle: 'Final.'",
+      "structure": "Main shot plus insert (the one allowed cut); evidence before the character sees it.",
+      "why_send_it": "Sent to the tea-obsessed sibling with 'you in a nutshell'.",
+      "commercial_fit": "Tea is a universal object; no brand shown.",
+      "rejected_because": "the insert spends the one cut and the caption-only delivery makes the character less warm than a spoken take",
+      "production_format": {
+        "shot_architecture": "split_or_insert",
+        "audio_mode": "text_over_broll",
+        "camera_style": "Locked medium main shot plus a single macro insert of the cup.",
+        "continuity_reuse": {"voice": "none", "location": "new", "costume": "same"},
+        "trend_refs": [],
+        "rationale": "Silent text option tests whether the character reads without any voice; the insert proves the evidence-before-him rule visually."
+      }
+    },
+    {
+      "id": "P4",
+      "logline": "Outside the corner shop, an unseen friend behind the phone asks Uncle Verdict about a banana; he scores it 4 out of 10, a hand from frame edge holds up a perfect one, and he lowers the dial to 2.",
+      "audience_emotion": "Warm, conversational comedy; the viewer feels like the third person in the chat.",
+      "character_desire": "To be asked, and to answer with authority.",
+      "obstacle": "The friend's spotless banana contradicts the score.",
+      "escalation": "Question, verdict, banana offered, verdict lowered.",
+      "surprise": "The off-camera voice stays kind and never mocks him.",
+      "payoff": "Friend: 'And the banana?' Uncle: 'Banana. Four out of ten. Correct answer: a yellow apology.' The banana is perfect; he turns the dial down to 2, holds the paddle to the lens: 'Final.'",
+      "structure": "Question-and-answer exchange with a visible object as evidence.",
+      "why_send_it": "Sent to a family member who has strong food opinions.",
+      "commercial_fit": "Fruit is generic; no brand text.",
+      "rejected_because": "off-camera voice dilutes the solo seated stillness and adds a second voice to a 12 s clip",
+      "production_format": {
+        "shot_architecture": "interview_offcamera",
+        "audio_mode": "off_camera_dialogue",
+        "camera_style": "Handheld phone at seated eye level, held by the friend, with slight settle; the friend's hand enters from an edge.",
+        "continuity_reuse": {"voice": "same", "location": "same", "costume": "same"},
+        "trend_refs": [],
+        "rationale": "Adds a relationship and a second voice to test whether the character holds a two-person beat in one cheap unit."
+      }
+    },
+    {
+      "id": "P5",
+      "logline": "Silent loop in a laundrette window seat: a leaf blows past, Uncle Verdict dials a verdict on the leaf, and the clip ends on the same empty-chair pose it opened with.",
+      "audience_emotion": "Hypnotic calm; the loop invites a second watch.",
+      "character_desire": "To rate even a leaf.",
+      "obstacle": "The leaf keeps coming back and he keeps reappraising it.",
+      "escalation": "Dial moves one notch each pass until the loop closes.",
+      "surprise": "The last frame equals the first, so the verdict starts again.",
+      "payoff": "He turns the dial, holds the paddle to the lens in silence, and the frame returns to where it began.",
+      "structure": "Loop with a repeated beat and no words.",
+      "why_send_it": "Sent to a friend as a mood clip.",
+      "commercial_fit": "None.",
+      "rejected_because": "silence leaves the verdict format and the wrongness illegible to a cold viewer",
+      "production_format": {
+        "shot_architecture": "loop",
+        "audio_mode": "silent_ambience",
+        "camera_style": "Locked-off window-seat portrait; first and last frames identical.",
+        "continuity_reuse": {"voice": "none", "location": "new", "costume": "same"},
+        "trend_refs": [],
+        "rationale": "A silent loop tests the silhouette and the dial click alone, but the rule is hard to land without the spoken verdict."
+      }
+    }
+  ],
+  "ranking": ["P1", "P4", "P2", "P3", "P5"],
+  "ranking_rationale": "P1 lands the full bible rule (claim, evidence entering from the edge, a lower wrong dial, 'Final.') in one locked take, so a cold viewer meets silhouette, voice and rule muted or with sound. P4 and P2 add relationship and location variety but each dilutes the solo stillness or the rule. P3 and P5 trade the spoken verdict for caption or silence and are the least legible as a first appearance."
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->

@@ -56,3 +56,20 @@ class TestRegistryRights(unittest.TestCase):
         _normalise_rights_against_registry(p, bible())
         self.assertEqual({r["rights_status"] for r in p["asset_rights"]}, {"unresolved"})
         self.assertTrue(any("downgraded" in e["claim"] for e in p["evidence"]))
+
+
+class TestBakeoffAdditions(unittest.TestCase):
+    def test_character_sheet_prompt_uses_bible_presentation(self):
+        from engine.routing import character_sheet_prompt
+        b = {"character": {"sex_presentation": "man", "age_range": "52-58", "identity_anchors": "round soft face", "hair": "bald crown with a ring of grey hair", "lower_body": "mustard trousers, loafers", "silhouette": "mustard suit"}}
+        p = character_sheet_prompt(b)
+        self.assertIn("adult man aged 52-58", p); self.assertIn("bald crown", p); self.assertIn("mustard trousers", p)
+        self.assertNotIn("woman", p); self.assertNotIn("low bun", p)
+        d = character_sheet_prompt({"character": {}})
+        self.assertIn("adult woman", d); self.assertIn("low bun", d)
+
+    def test_draft_mini_render_tier_routes_dialogue_to_mini(self):
+        p = valid_packet(); p["brief"]["render_tier"] = "draft_mini"
+        p["production_format"] = {"shot_architecture": "single_take_static", "audio_mode": "on_camera_dialogue", "continuity_reuse": {"voice": "new", "location": "new", "costume": "same"}, "rationale": "t"}
+        tm = plan(p, bible())
+        self.assertEqual(tm["units"][0]["model"], "seedance_2_0_mini")

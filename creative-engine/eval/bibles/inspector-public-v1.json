@@ -1,0 +1,64 @@
+{
+  "bible_id": "inspector-public-v1",
+  "version": 1,
+  "show_title": "Inspector of Tiny Problems: Field Unit (working title; name/IP uncleared)",
+  "logline": "The same composed Inspector takes her clipboard into public spaces, delivering formal verdicts on strangers' tiny faults to a city that does not react, and always ends up committing the fault herself.",
+  "character": {
+    "name": "The Inspector (unnamed on screen)",
+    "age_range": "35-45",
+    "sex_presentation": "woman",
+    "silhouette": "Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun.",
+    "identity_anchors": "Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger.",
+    "hair": "dark hair in a tight low bun with a matte finish",
+    "lower_body": "plain charcoal trousers, flat black work shoes",
+    "desire": "To restore public order one centimetre at a time.",
+    "flaw": "She is the main source of the faults she investigates.",
+    "rule": "Every investigation ends with the Inspector exposed as the culprit or the next offender; the camera notices before she does. In public, strangers never react to her, which makes her verdicts louder.",
+    "performance_register": "Stillness and procedure in a moving world: she announces findings to passers-by at normal volume while they walk through frame; comedy from disproportion and from being ignored, never from mugging.",
+    "voice": "Measured, bureaucratic cadence; short declarative lines spoken to strangers who do not answer.",
+    "signature_gesture": "A slow two-finger tap on the clipboard before delivering a verdict (rationed: once per episode)."
+  },
+  "world": {
+    "recurring_locations": [
+      "bus stop with a timetable board",
+      "supermarket self-checkout lane",
+      "pavement cafe terrace"
+    ],
+    "visual_language": "Clean modern phone look, eye-level, slightly too formal framing in busy public space; passers-by blurred and generic; aubergine against grey street.",
+    "sound_language": "Street ambience real and present; her foley exaggerated one notch (clipboard, lamp click); no music by default."
+  },
+  "do_not": [
+    "No bob/moustache/white-tunic combination or any researched creator's identity, catchphrase, costume or footage.",
+    "No real people, no real brands, no religion, no politics, no mocking of strangers' bodies, accents, disabilities or faith; strangers in frame are generic extras who never become the joke.",
+    "No trending dance or sound that is not cleared; any dance is an original move described in the storyboard.",
+    "No firsthand product endorsements."
+  ],
+  "evolution_policy": "Locations may vary; silhouette, rule, register and gesture fixed until a versioned bump.",
+  "provenance": {
+    "created": "2026-10-08",
+    "basis": "owner feedback 2026-10-08: the Inspector is too quiet and indoors versus the reference list; hypothesis A keeps the rule and moves her into public space",
+    "status": "hypothesis, untested"
+  },
+  "audience": {
+    "target": "global; visual comedy of recognition; subtitle-ready; no region-specific references",
+    "language_default": "visual-first; English when spoken"
+  },
+  "approved_assets": {
+    "character_reference": {
+      "asset_id": "char-inspector-v1",
+      "status": "generated_pending_owner_approval",
+      "candidates": [
+        {
+          "job_id": "6dd8c02f-06db-4e61-a160-b2d7ebedecd0",
+          "variant": 0
+        },
+        {
+          "job_id": "ee6ec308-aa8c-4474-91ac-04dad05e70f7",
+          "variant": 1
+        }
+      ],
+      "note": "reuses the inspector-v1 sheets; same identity"
+    },
+    "locations": []
+  }
+}
