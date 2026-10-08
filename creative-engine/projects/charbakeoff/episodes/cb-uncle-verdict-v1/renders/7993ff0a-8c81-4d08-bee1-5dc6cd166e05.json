@@ -1,0 +1,46 @@
+{
+ "model": "cinematic_studio_video_4_0",
+ "spoken": true,
+ "voice_id": "0138a858-eebd-4457-a488-396e2732279a",
+ "submitted_at": "2026-10-08",
+ "bible_version": 8,
+ "approval": "owner approved start frames db9c050c, c002a756 (2026-10-08)",
+ "job_id": "7993ff0a-8c81-4d08-bee1-5dc6cd166e05",
+ "generation_unit": "U1",
+ "scene_ids": [
+  "S1"
+ ],
+ "purpose": "v8 re-render from approved exact-2 start frame; line without 'Correct answer'",
+ "controls": {
+  "mode": "omni_reference",
+  "duration": 7,
+  "resolution": "480p",
+  "aspect_ratio": "9:16",
+  "generate_audio": true
+ },
+ "medias": [
+  {
+   "value": "cb1f3458-a537-48af-950d-c42de75a4b28",
+   "role": "image_references"
+  },
+  {
+   "value": "3a640e87-c426-48ff-bb01-b679ce36b0ed",
+   "role": "image_references"
+  },
+  {
+   "value": "a61301f9-422b-4334-9072-070ca23e6a8b",
+   "role": "audio_references"
+  },
+  {
+   "value": "db9c050c-8cce-4691-a36b-ed6fdf8289d6",
+   "role": "start_image"
+  }
+ ],
+ "quoted_credits": 21,
+ "auto_qa": {
+  "transcript": "'Umbrella. Two out of ten. A tiny roof for nobody.' once, 0.98-5.18 s",
+  "dial": "pointer exactly on 2 at 0.2 s and at the last frame (zoomed crops)",
+  "rain": "drops on crown and suit by 6.8 s",
+  "defect": "faint stray 'final' around 6.2 s (Whisper p 0.29-0.69); muted in assembly 5.7 s to the cut, refilled with scene rain"
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "job_id": "806fe91c-9103-4c32-8792-d3ad7f258bbc",
+ "kind": "assembly",
+ "episode": "cb-uncle-verdict-v1 v8",
+ "inputs": [
+  "7993ff0a-8c81-4d08-bee1-5dc6cd166e05",
+  "8c8e4bd4-3944-48d8-9301-e5a0d03bed5a",
+  "a61301f9 (locked take)"
+ ],
+ "edit": "hard cut at 7.05 s; U1 5.7 s-cut muted and refilled with scene rain; U2 model 'Final' (4.2-4.85 s) replaced by locked-voice 'Final.' (take 7.10-7.65 s) at 85% of the opening line's peak level, light room tail",
+ "duration_s": 12.13,
+ "qa": {
+  "transcript": "opening line once; 'Final' once at ~11.3 s (small.en on the tail, p 0.57)",
+  "not_checked_by_ear": "voice match is measured, not heard; owner listens"
+ }
+}
