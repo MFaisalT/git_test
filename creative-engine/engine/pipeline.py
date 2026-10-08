@@ -27,7 +27,7 @@ class StageFailure(Exception):
     pass
 
 
-PENDING_ASSET_STATES = ("to_be_generated", "to_be_designed", "to_be_recorded", "pending", "planned")
+PENDING_ASSET_STATES = ("to_be_generated", "to_be_designed", "to_be_recorded", "pending", "planned", "generated_pending_owner_approval", "pending_owner_approval")  # generated but not yet owner-approved is still not "owned"
 
 
 def _normalise_rights_against_registry(packet: dict, bible: dict) -> None:

@@ -8,7 +8,7 @@ A working local creative engine exists, is tested, and has repeatedly turned new
 
 | Item | Status |
 |---|---|
-| Engine code (schema, validators, pipeline, adapters, prompts, retrieval, repetition, trend radar, store, CLI) | **Implemented**; 95 unit/contract tests pass (`python3 -m unittest discover -s . -p "test_*.py"`) |
+| Engine code (schema, validators, pipeline, adapters, prompts, retrieval, repetition, trend radar, store, CLI) | **Implemented**; 94 unit/contract tests pass (`python3 -m unittest discover -s . -p "test_*.py"`) |
 | Deterministic gates (schema, timing gaps/overlaps/total, speech rate, missing camera/audio, continuity/props, unsupported tool controls, unit cut limits, rights, approval order, fixture quarantine, format-aware beats) | **Implemented and actually tested** with positive and negative cases; also exercised on 9 bake-off outputs and 5 real packets |
 | Broker provider (live Claude path via Agent-tool workers inside this authorised session) | **Actually used**: 31 worker calls for generation/QA (incl. 1 repair and the trend-aware run) (+3 blind judges, 1 held-out author, 1 trend refresh, 1 independent reviewer) |
 | `claude_cli` provider (`claude -p --output-format json`) | **Implemented, not exercised live** (non-interactive Fable may bill usage credits; see docs/MODEL-EVIDENCE.md) |
@@ -41,7 +41,7 @@ A working local creative engine exists, is tested, and has repeatedly turned new
 
 ```bash
 git clone <repo> && git checkout claude/routing-mode-code-7atd07 && cd creative-engine
-python3 -m unittest discover -s . -p "test_*.py"            # 60 tests, 0 failures (Python 3.13, stdlib only)
+python3 -m unittest discover -s . -p "test_*.py"            # 94 tests, 0 failures (Python 3.13, stdlib only)
 python3 -m engine init myshow
 python3 -m engine bible add myshow eval/bibles/inspector-v1.json
 python3 -m engine brief add myshow eval/briefs/B1_silent_gag.json
@@ -64,7 +64,7 @@ See `eval/heldout/ACCEPTANCE-RESULTS.md` §1–§4 for the three deliverables, t
 
 ## 7. Tests: commands, counts, failures
 
-`python3 -m unittest discover -s . -p "test_*.py"` → **95 tests, 0 failures, 0 errors** (validators 29; engine/pipeline 25; trends 6; review-driven regressions 18; formats 8; routing 9). Negative tests cover schema errors, gaps/overlaps/total, speech too fast, silent-with-dialogue, >1 cut, missing camera/audio, multi-speaker shot, undeclared prop, anchor drift, bible do-not token, unsupported control, unknown model, duration out of range, unmapped scene, motion transfer without driving video, music undeclared, driving-footage rights, unresolved rights at render, firsthand claim, missing disclosure, forbidden claim, render status without approval, rendered-verified without inspection, fixture quarantine, hook/premise mismatch, missing payoff/turn beat, unit with two cuts, trend staleness/rights/unknown. Independent reviewer's adversarial results: `eval/heldout/independent-review.json`.
+`python3 -m unittest discover -s . -p "test_*.py"` → **94 tests, 0 failures, 0 errors** (validators 35; engine/pipeline 19; trends 6; review-driven regressions 18; formats 8; routing 8). Negative tests cover schema errors, gaps/overlaps/total, speech too fast, silent-with-dialogue, >1 cut, missing camera/audio, multi-speaker shot, undeclared prop, anchor drift, bible do-not token, unsupported control, unknown model, duration out of range, unmapped scene, motion transfer without driving video, music undeclared, driving-footage rights, unresolved rights at render, firsthand claim, missing disclosure, forbidden claim, render status without approval, rendered-verified without inspection, fixture quarantine, hook/premise mismatch, missing payoff/turn beat, unit with two cuts, trend staleness/rights/unknown. Independent reviewer's adversarial results: `eval/heldout/independent-review.json`.
 
 ## 8. Evidence limitations (honest)
 

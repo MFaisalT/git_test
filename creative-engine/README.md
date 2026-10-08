@@ -74,7 +74,7 @@ schema/            episode_packet.schema.json (typed contract incl. negative con
 prompts/           premises.md · hooks.md · script_storyboard.md · qa_review.md · repair.md  (conditional sections <<IF SILENT>> <<IF COMMERCIAL>> <<IF HISTORY>>)
 demos/             3 approved demonstrations (observable outputs + justification); never derived from eval briefs
 eval/              rubric.md (predeclared) · briefs/ · bibles/ · arch_*.md · judge_prompt.md · bakeoff_runs/ · heldout/
-tests/             51 unit/contract tests (positive and negative)
+tests/             94 unit/contract tests (positive and negative)
 projects/          runtime store: bibles (versioned) · briefs · episodes/<id>/{packet.json, storyboard.md, adapter_plan.json, requests/, responses/, state.json} · decisions.jsonl · evidence.jsonl · runs.jsonl
 docs/              MODEL-EVIDENCE · TOOL-CAPABILITIES · ARCHITECTURE-BAKEOFF · NICHE-DECISION · EVIDENCE-LEDGER · LAUNCH-EXPERIMENT · FINAL-REPORT
 ```
