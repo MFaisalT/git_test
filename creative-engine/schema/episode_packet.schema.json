@@ -539,6 +539,31 @@
           "state_change_by_cut": {
             "type": "boolean",
             "description": "True when a prop's state change (cap off, dial moved, garment on) happens across the hard cut that opens this scene: the scene starts already in the end state, hands in the end pose."
+          },
+          "interaction": {
+            "type": "object",
+            "additionalProperties": false,
+            "description": "One shown hand-object interaction (turn a dial, open a lid, peel a seal). The scene is its own generation unit, animated between an approved start keyframe and end keyframe (keyframe board, inspected by the owner before any video).",
+            "required": ["actor_hand", "contact", "object", "part", "from_state", "to_state", "motion", "support_hand"],
+            "properties": {
+              "actor_hand": {"type": "string", "enum": ["left", "right", "both"]},
+              "contact": {"type": "string", "description": "Exact contact point, e.g. 'right index fingertip on the pointer tip'."},
+              "object": {"type": "string", "description": "Bible prop id or product id."},
+              "part": {"type": "string", "description": "The moving part, e.g. 'pointer'."},
+              "from_state": {"type": "string"},
+              "to_state": {"type": "string"},
+              "motion": {"type": "string", "description": "Path and speed, e.g. 'pushes the pointer tip slowly leftward; it pivots on the brass pin'."},
+              "support_hand": {"type": "string", "description": "What the other hand does, e.g. 'left hand holds the handle still, board square to the lens'."},
+              "keyframes": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "start": {"type": "string", "description": "job_id or media_id of the approved start frame"},
+                  "end": {"type": "string", "description": "job_id or media_id of the approved end frame"},
+                  "status": {"type": "string", "enum": ["planned", "generated_pending_owner_approval", "owner_approved"]}
+                }
+              }
+            }
           }
         }
       }

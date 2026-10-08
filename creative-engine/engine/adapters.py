@@ -78,15 +78,17 @@ def plan(packet: dict, bible: dict | None = None, quote_credits: dict | None = N
         if cur:
             units.append(list(cur)); cur.clear()
     for s in scenes:
+        if s.get("interaction"):
+            flush()  # a shown interaction is its own unit: the start/end keyframes bound exactly this move
         cur.append(s)
-        if "cut" in str(s.get("transition_out", "")).lower():
+        if s.get("interaction") or "cut" in str(s.get("transition_out", "")).lower():
             flush()  # any cut between scenes ends a generation unit; one hard cut inside a clip must be declared via cuts_inside_clip
     flush()
     # merge a too-short unit into its predecessor only if that keeps the predecessor at <=1 internal cut
     out_units = []
     for u in units:
         dur = u[-1]["end_s"] - u[0]["start_s"]
-        if out_units and dur < 4 and sum(1 for sc in out_units[-1][:-1] if "cut" in str(sc.get("transition_out", "")).lower()) == 0:
+        if out_units and dur < 4 and not any(sc.get("interaction") for sc in u + out_units[-1]) and sum(1 for sc in out_units[-1][:-1] if "cut" in str(sc.get("transition_out", "")).lower()) == 0:
             out_units[-1].extend(u)
         else:
             out_units.append(u)
@@ -105,7 +107,8 @@ def plan(packet: dict, bible: dict | None = None, quote_credits: dict | None = N
         speaks = any(s.get("dialogue") for s in u)
         if budget and (handled or speaks):
             budget = False
-        route = route_video_unit(pf, dur, audio_mode, needs_driving, identity_critical=True, budget_mode=budget, handles_props=handled)
+        inter = next((s for s in u if s.get("interaction")), None)
+        route = route_video_unit(pf, dur, audio_mode, needs_driving, identity_critical=True, budget_mode=budget, handles_props=handled, interaction=bool(inter))
         model = route["model"]
         lim = TOOL_LIMITS[model]
         controls = {"duration": max(lim["min_s"], min(lim["max_s"], int(round(dur)))), "aspect_ratio": packet["export"]["aspect_ratio"] if packet["export"]["aspect_ratio"] in (lim["aspect"] or [packet["export"]["aspect_ratio"]]) else "9:16",
@@ -122,12 +125,20 @@ def plan(packet: dict, bible: dict | None = None, quote_credits: dict | None = N
             char = reg.get("character_reference") or {}
             cand = (char.get("candidates") or [{}])[0].get("job_id")
             medias.append({"value": f"<media_id or job_id of approved character reference (asset {char.get('asset_id', 'char-ref')}{'; candidate job ' + cand if cand else ''})>", "role": "image_references"})
+            from .physics import referenced_props
+            for bp in referenced_props(bible):  # @image2.. in the prompt, same order
+                ra = bp.get("reference_asset") or {}
+                medias.append({"value": ra.get("media_id") or ra.get("job_id"), "role": "image_references", "prop": bp.get("id"), "status": ra.get("status")})
             if any(r["kind"] == "location_still" for r in packet.get("asset_rights", [])):
                 medias.append({"value": "<media_id of approved location still>", "role": "image_references"})
             if (pf.get("continuity_reuse") or {}).get("voice") == "same" and "audio_references" in lim["media_roles"] and audio_mode not in ("silent_ambience", "text_over_broll", "music_driven"):
                 medias.append({"value": f"<media_id of approved voice asset {((reg.get('voice') or {}).get('asset_id') or 'voice-ref')}>", "role": "audio_references"})
         elif "start_image" in lim["media_roles"]:
             medias.append({"value": "<media_id of approved first-frame still>", "role": "start_image"})
+        if inter and {"start_image", "end_image"} <= set(lim["media_roles"]):
+            kf = (inter.get("interaction") or {}).get("keyframes") or {}
+            medias.append({"value": kf.get("start") or "<job_id of approved start keyframe>", "role": "start_image"})
+            medias.append({"value": kf.get("end") or "<job_id of approved end keyframe>", "role": "end_image"})
         if model == "hf_mult_motion_control":
             medias.append({"value": "<media_id of OWNED/LICENSED driving footage>", "role": "video_references"})
         if route.get("mode") == "video_extension":
@@ -140,7 +151,9 @@ def plan(packet: dict, bible: dict | None = None, quote_credits: dict | None = N
                 "Lens is prompt language only."]
         if dur > lim["max_s"] or dur < lim["min_s"]:
             gaps.append(f"unit duration {dur}s outside {model} range {lim['min_s']}-{lim['max_s']}s; re-split scenes")
-        if route.get("status") == "gap":
+        if inter:
+            manual = ["Keyframe board first: generate the start frame and the end frame (gpt_image_2_5 with the character and prop references; the end frame edits the start frame so only the moving part and the acting finger change); the owner inspects both before any video is submitted."] + manual
+        if route.get("status") == "gap" or model == "cinematic_studio_video_4_0":
             gaps.append("Cinema Studio 4.0 native camera/lighting controls need creative-control ids not retrieved in this build; pass as prompt text meanwhile")
         est = quote_for(model, controls.get("duration", int(round(dur))), "720p")
         draft_est = quote_for(model, controls.get("duration", int(round(dur))), "480p-draft")

@@ -82,7 +82,7 @@ class TestAdapter(unittest.TestCase):
     def test_dry_run_plan_uses_verified_controls_only(self):
         p = valid_packet()
         tm = plan(p, bible(), QUOTES_2026_10_07)
-        self.assertEqual(tm["units"][0]["model"], "seedance_2_5")  # silent fixture handles props -> Seedance 2.5 (owner inspection 2026-10-08)
+        self.assertEqual(tm["units"][0]["model"], "cinematic_studio_video_4_0")  # handled props -> CS4 (owner ranking 2026-10-08)
         self.assertTrue(set(tm["units"][0]["controls"]) <= {"duration", "aspect_ratio", "resolution", "generate_audio", "mode"})
         self.assertIn("NO job submitted", tm["notes"].replace("No job submitted", "NO job submitted"))
         self.assertIn("not a native format", tm["notes"])

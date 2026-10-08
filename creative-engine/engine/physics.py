@@ -114,6 +114,27 @@ def _sound_line(packet: dict, am: str, first: dict) -> str:
     return f"Sound: only the quoted lines are spoken, each exactly once, then silence; {amb}; no music."
 
 
+def bible_props(bible: dict | None) -> list[dict]:
+    return [p for p in ((bible or {}).get("props") or []) if isinstance(p, dict)]
+
+
+def referenced_props(bible: dict | None) -> list[dict]:
+    """Bible props with a reference still, in media order (image_references after the character reference)."""
+    return [p for p in bible_props(bible) if ((p.get("reference_asset") or {}).get("job_id") or (p.get("reference_asset") or {}).get("media_id"))]
+
+
+def bible_prop_text(prop: str, bible: dict | None) -> str:
+    """Replace a short prop name with the bible's exact design (owner frames 2026-10-08: 'paddle with a dial' rendered as a
+    clock face with random numerals and no pointer). A prop with a reference still is tied to its @image slot."""
+    low = prop.lower()
+    refs = referenced_props(bible)
+    for bp in bible_props(bible):
+        if any(m.lower() in low for m in (bp.get("match") or [bp.get("id", "")]) if m):
+            tag = f" (exactly as @image{2 + refs.index(bp)})" if bp in refs else ""
+            return f"{bp.get('design', prop).rstrip('.')}{tag}"
+    return prop
+
+
 def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_meta: bool = False):
     """Physics-first render prompt held to a per-audio-mode word budget. Returns None when any scene lacks a physical_beat
     (caller falls back to the dense prompt). Shrinks deterministically: delivery notes -> long costume -> long physics block -> setting light."""
@@ -137,7 +158,7 @@ def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_
         lines.append(f"Setting: {first.get('location', '')}." + (f" {light}." if level < 4 and light else "") + " Passers-by, if any, are soft blurred shapes who never react.")
         cuts = any("cut" in str(s.get("transition_out", "")).lower() for s in scenes[:-1])
         lines.append(f"Camera: starts {cam0.get('shot', '')}; {cam0.get('movement', '')}." + ("" if cuts else " No cuts."))
-        props = [str(x).strip() for x in (cont.get("props") or []) if str(x).strip()]
+        props = [bible_prop_text(str(x).strip(), bible) for x in (cont.get("props") or []) if str(x).strip()]
         if props:
             lines.append("Props (exact design, exactly one of each, nothing else added): " + "; ".join(props) + ".")
         lines.append(PHYSICS_LONG if level < 3 else PHYSICS_SHORT)
@@ -147,6 +168,9 @@ def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_
             mv = str((s.get("camera") or {}).get("movement", "")).strip()
             cam_note = f" Camera: {mv.split(';')[0].split(',')[0].strip()}." if (mv and s is not first) else ""  # camera moves are never trimmed (owner values camera motion)
             line = f"{t}: {str(s['physical_beat']).strip().rstrip('.')}.{cam_note}"
+            if s.get("interaction"):
+                from .interaction import interaction_beat
+                line += " " + interaction_beat(s)  # never trimmed: the mechanics are the point of the shot
             if speak:
                 for d in s.get("dialogue", []) or []:
                     if not d.get("on_camera", True) and am == "off_camera_dialogue":
@@ -159,12 +183,13 @@ def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_
             lines.append(line)
         lines.append(_sound_line(packet, am, first))
         from .interaction import NEGATIVE_TAIL, interaction_rule_line
-        lines.insert(4, interaction_rule_line(packet))  # never trimmed
+        lines.insert(4, interaction_rule_line(packet, scenes))  # never trimmed
         lines.append("No readable text, logos or signage except a product's own label. Natural skin, no blur on the face. " + NEGATIVE_TAIL)
         return "\n".join(lines)
 
     from .interaction import NEGATIVE_TAIL, interaction_rule_line
-    fixed = len(NEGATIVE_TAIL.split()) + len(interaction_rule_line(packet).split())  # safety lines from the platform recipe: outside the descriptive budget
+    from .interaction import interaction_beat
+    fixed = len(NEGATIVE_TAIL.split()) + len(interaction_rule_line(packet, scenes).split()) + sum(len(interaction_beat(s).split()) for s in scenes)  # safety lines from the platform recipe: outside the descriptive budget
 
     def wc(t: str) -> int:
         return len(t.split()) - fixed

@@ -459,6 +459,11 @@ def validate_all(packet: dict, bible: dict | None = None) -> Report:
     from .physics import physics_findings
     for f in physics_findings(packet):
         rep.warn(f["code"], f["message"], f["path"])
+    from .interaction import interaction_spec_findings
+    unit_of = {sid: list(u.get("scene_ids") or []) for u in (packet.get("tool_mapping") or {}).get("units", []) or [] for sid in (u.get("scene_ids") or [])}
+    for sc in packet.get("scenes", []) or []:
+        for f in interaction_spec_findings(sc, unit_of.get(sc.get("scene_id"))):
+            (rep.error if f.get("severity") == "error" else rep.warn)(f["code"], f["message"], f["path"])
     for u in (packet.get("tool_mapping") or {}).get("units", []) or []:
         pb = u.get("prompt_budget") or {}
         if pb.get("over_budget"):

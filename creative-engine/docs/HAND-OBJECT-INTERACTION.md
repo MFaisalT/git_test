@@ -43,7 +43,7 @@ Their physical formats also generate keyframe **boards** first (a strip of 4 or 
 
 ## Not yet built
 
-- **Keyframe boards** for product formats (review, unboxing, try-on). The platform's recipe requires inspecting each board before animating it. This session cannot view images, so the owner would inspect boards in the widget before any video is generated from them.
+- **Keyframe boards** are built for a single shown interaction (see "Shown interaction, keyframed" below). Multi-beat boards (a 4 or 8 still strip for a full unboxing) are not built yet. This session cannot view images, so the owner inspects boards in the widget before any video is generated from them.
 - **Product references**: one product instance, front label, two or three angles uploaded by the owner for real products.
 - Whether Kling 3.0 or Seedance 2.5 handles product handling better is untested here; it needs a same-prompt comparison with a real product.
 
@@ -81,3 +81,38 @@ Every charge matched its quote. The session cannot view pixels, so the verdict b
 - Passers-by don't vanish and the frame doesn't jump.
 - "Final." is said once.
 - Camera feel.
+
+**Owner verdict:** Cinema Studio 4.0 best, Seedance 2.5 second. The engine now routes identity-critical units up to 15 s to Cinema Studio 4.0, with Seedance 2.5 as the fallback.
+
+**Defect in the Cinema Studio clip (owner frames):** the paddle rendered as a clock face with random numerals (23, 40, 51, -6, 55...) around a large "2", and no pointer arm. The prompt only said "large wooden scoring paddle with a 0-10 dial". The prop was underspecified.
+
+## Shown interaction, keyframed (implemented 2026-10-08)
+
+The owner's direction: his hand should interact with the paddle. The research above said how; this is the implementation. The earlier "always hide it behind a cut" rule was avoidance, not the fix.
+
+**What the research and platform recipe prescribe, and what the engine now does:**
+
+| Prescription | Engine |
+|---|---|
+| Exact object design, plus a product reference image | Bible `props[]` with `design` text and `reference_asset`. The render prompt replaces the short prop name with the exact design and ties it to its `@image` slot. The reference goes into `image_references` after the character. |
+| One interaction per shot | `scene.interaction` makes the scene its own generation unit, never merged. `INTERACTION_SHARED_UNIT` is an error. |
+| Name the hand, the contact point and the other hand | `interaction` requires actor_hand, contact, object, part, from_state, to_state, motion and support_hand (`INTERACTION_SPEC_INCOMPLETE`, error). The prompt gets one deterministic sentence built from them. |
+| Keyframe anchors, inspected before animating | `interaction.keyframes.start/end` become `start_image` / `end_image`. Missing keyframes are an error (`INTERACTION_KEYFRAMES_MISSING`). Keyframes not yet approved by the owner are a warning not to animate yet. The first manual step in the plan is the board. |
+| Slow, continuous move with a held end beat | At least 3 s (`INTERACTION_TOO_SHORT`). The prompt says "one slow continuous move and stops". |
+
+Incidental state changes can still go across a hard cut (`state_change_by_cut`). A shown interaction is the default when the moment is the point: reviews, unboxing, the signature gesture.
+
+**Uncle Verdict v4 restage:**
+- U1, 0-8 s: the verdict, then the rain.
+- Hard cut.
+- U2, 8-12 s: medium close-up. The paddle is held up by the left hand. The right index fingertip pushes the pointer from 2 to 1, then he says "Final."
+
+The bible is v3 and carries the paddle design: a light oak board, a white semicircular gauge, numerals 0-10 in order along the arc, and one black pointer on a brass pin.
+
+| Asset | Model | Job | Credits |
+|---|---|---|---|
+| Paddle reference still | gpt_image_2_5 high | `4c094812-ad7e-44df-a34a-48287565877c` | 1.5 |
+| U2 start keyframe (pointer at 2, fingertip on the tip) | gpt_image_2_5 high, refs: character + paddle | `70f2656d-22ca-422a-9bde-0d87667de225` | 1.5 |
+| U2 end keyframe (edit of the start frame: pointer at 1) | gpt_image_2_5 high, refs: start frame + paddle | `7ec903a7-e304-43af-af3c-f7d9896e7c82` | 1.5 |
+
+Next step: the owner inspects the three stills, checking the numerals 0-10 in order, one pointer, two hands with five fingers, the fingertip on the pointer tip and the same face. Only then is U2 animated on Cinema Studio 4.0 at 480p (4 s, about 12 credits), with Seedance 2.5 draft as a second take.

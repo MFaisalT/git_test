@@ -29,8 +29,8 @@
   },
   "bible_version": {
     "bible_id": "uncle-verdict-v1",
-    "version": 2,
-    "sha256": "a61f761a27c42b7651472983137e6c5ed600ae5b208b56aefa8e95de49889228"
+    "version": 3,
+    "sha256": "08056eab672e893a67b712ccfeee52abf3d57bab6eeeeedcc3373044fed3029a"
   },
   "evidence": [
     {
@@ -352,7 +352,7 @@
     {
       "scene_id": "S2",
       "start_s": 6,
-      "end_s": 9,
+      "end_s": 8,
       "location": "outside a corner shop on a pavement (generic, unrecognisable)",
       "action": "First drops land on the paddle wood, then on his bald crown, and a generic passer-by's open plain umbrella slides through from the right frame edge, dry underneath. He does not move; paddle, umbrella and chair stay still.",
       "physical_beat": "Rain starts: drops darken his bald crown and the paddle; a stranger's open dark umbrella slides past the right frame edge; his left hand keeps the paddle upright on his thigh, body still.",
@@ -379,48 +379,6 @@
         "voice": "none"
       },
       "captions": "",
-      "transition_out": "continuous",
-      "props_from_frame_one": [
-        "white folding plastic garden chair",
-        "large wooden scoring paddle with a 0-10 dial",
-        "closed plain umbrella (no logo) across his knees",
-        "passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure)",
-        "rain (top edge, then falling)",
-        "grey corner-shop wall with blank unreadable shutter"
-      ],
-      "cuts_inside_clip": 0,
-      "generation_unit": "U1"
-    },
-    {
-      "scene_id": "S3",
-      "start_s": 9,
-      "end_s": 10.5,
-      "location": "outside a corner shop on a pavement (generic, unrecognisable)",
-      "action": "His left hand lifts the paddle toward the lens; the dial reads 2; his right palm stays flat on the umbrella across his lap; rain keeps falling.",
-      "physical_beat": "Left hand lifts the paddle toward the lens, dial clearly at 2; right palm stays flat on the umbrella in his lap; body still on the chair; rain falling.",
-      "performance": "Present the corrected dial with total certainty, finger steady, eyes on the lens.",
-      "microexpression": "Slow blink after the word; rain on the crown, serenity unchanged.",
-      "dialogue": [],
-      "camera": {
-        "shot": "medium portrait, centred, seated eye level, 9:16",
-        "lens": "phone main lens, about 26mm equivalent",
-        "movement": "propped phone, locked, paddle comes toward lens; no move",
-        "rig": "phone propped on a low crate at seated eye level"
-      },
-      "lighting": "Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.",
-      "environment": "Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.",
-      "sound": {
-        "ambience": "steady rain on pavement, distant traffic",
-        "foley": [
-          "exaggerated dial click",
-          "rain on paddle",
-          "suit rustle",
-          "umbrella canvas drip"
-        ],
-        "music": "none",
-        "voice": "Uncle Verdict, soft and certain"
-      },
-      "captions": "Final.",
       "transition_out": "hard cut",
       "props_from_frame_one": [
         "white folding plastic garden chair",
@@ -434,26 +392,26 @@
       "generation_unit": "U1"
     },
     {
-      "scene_id": "S4",
-      "start_s": 10.5,
+      "scene_id": "S3",
+      "start_s": 8,
       "end_s": 12.0,
       "location": "outside a corner shop on a pavement (generic, unrecognisable)",
-      "action": "Same frame after a hard cut: the paddle held up at the lens now reads 1; his right palm rests on the umbrella; he says the last word; rain keeps falling.",
-      "physical_beat": "Left hand holds the paddle up at the lens, dial already at 1; right palm flat on the umbrella in his lap; body still; rain falling.",
-      "performance": "Present the corrected dial with total certainty, finger steady, eyes on the lens.",
-      "microexpression": "Slow blink after the word; rain on the crown, serenity unchanged.",
+      "action": "Hard cut to a closer frame: the paddle held up at chest height, square to the lens, pointer at 2, his right index fingertip on the pointer tip. He pushes the pointer slowly from 2 to 1, it stops, he says the last word; rain keeps falling.",
+      "physical_beat": "Left hand holds the paddle up at chest height, board square to the lens; right index fingertip on the pointer tip; body still on the chair; rain falling.",
+      "performance": "Lowers the score with the calm of a judge correcting a clerical error; eyes on the lens above the paddle.",
+      "microexpression": "Slow blink as the pointer stops; serenity unchanged.",
       "dialogue": [
         {
           "speaker": "Uncle Verdict",
           "line": "Final.",
-          "delivery": "one soft, unhurried word, certain",
+          "delivery": "one soft, unhurried word after the pointer stops",
           "on_camera": true
         }
       ],
       "camera": {
-        "shot": "medium portrait, centred, seated eye level, 9:16",
+        "shot": "medium close-up, centred, seated eye level, 9:16, paddle and face both in frame",
         "lens": "phone main lens, about 26mm equivalent",
-        "movement": "propped phone, locked, paddle comes toward lens; no move",
+        "movement": "propped phone, locked",
         "rig": "phone propped on a low crate at seated eye level"
       },
       "lighting": "Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.",
@@ -461,10 +419,9 @@
       "sound": {
         "ambience": "steady rain on pavement, distant traffic",
         "foley": [
-          "exaggerated dial click",
-          "rain on paddle",
-          "suit rustle",
-          "umbrella canvas drip"
+          "single soft ratchet click as the pointer moves",
+          "rain on the paddle",
+          "suit rustle"
         ],
         "music": "none",
         "voice": "Uncle Verdict, soft and certain"
@@ -481,7 +438,21 @@
       ],
       "cuts_inside_clip": 0,
       "generation_unit": "U1",
-      "state_change_by_cut": true
+      "interaction": {
+        "actor_hand": "right",
+        "contact": "right index fingertip rests on the pointer tip",
+        "object": "scoring paddle",
+        "part": "pointer",
+        "from_state": "pointing at 2",
+        "to_state": "pointing at 1",
+        "motion": "the fingertip pushes the pointer tip slowly to the left; the pointer pivots on the brass pin",
+        "support_hand": "Left hand holds the paddle handle still at chest height, board square to the lens",
+        "keyframes": {
+          "start": "70f2656d-22ca-422a-9bde-0d87667de225",
+          "end": "7ec903a7-e304-43af-af3c-f7d9896e7c82",
+          "status": "generated_pending_owner_approval"
+        }
+      }
     }
   ],
   "continuity": {
@@ -495,7 +466,7 @@
       "rain (top edge, then falling)",
       "grey corner-shop wall with blank unreadable shutter"
     ],
-    "notes": "Single continuous take, one generation unit U1, no cuts. Dial reads 2 until S3, then 1. Rain starts at the top edge in S1 and builds. Opinions are about objects only; the passer-by is a blurred generic extra, never the joke. Silhouette: mustard three-piece, white folding plastic chair, wooden paddle with 0-10 dial, brown loafers no socks."
+    "notes": "Two generation units: U1 0-8 s (verdict, rain), hard cut, U2 8-12 s (the shown pointer move, keyframed). Pointer at 2 until U2, then pushed to 1 on screen by the right index fingertip. Opinions are about objects only; the passer-by is a blurred generic extra."
   },
   "asset_rights": [
     {
@@ -528,39 +499,43 @@
         "generation_unit": "U1",
         "scene_ids": [
           "S1",
-          "S2",
-          "S3",
-          "S4"
+          "S2"
         ],
-        "model": "seedance_2_5",
+        "model": "cinematic_studio_video_4_0",
         "routing": {
-          "why": "dialogue + identity lock: Seedance 2.5 omni_reference carries image + audio references (voice lock) with native audio",
+          "why": "identity-critical unit (dialogue or handled props): Cinema Studio 4.0 ranked first by the owner in the same-prompt comparison 2026-10-08; image + audio references, native audio",
           "status": "verified_controls",
-          "fallback": "seedance_2_0_mini for drafts; cinematic_studio_video_4_0 for premium look",
-          "optimisation": "480p draft -> finalize"
+          "fallback": "seedance_2_5 omni_reference (ranked second; draft 480p -> finalize 1080p)",
+          "optimisation": "test at 480p (36 credits / 12 s measured), final at 720p (84 quoted)"
         },
         "controls": {
-          "duration": 12,
+          "duration": 8,
           "aspect_ratio": "9:16",
           "resolution": "720p",
           "generate_audio": true,
           "mode": "omni_reference"
         },
-        "prompt_text": "Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip; no rings, watches, microphones or accessories that are not in the reference.\nSetting: outside a corner shop on a pavement (generic, unrecognisable). Passers-by, if any, are soft blurred shapes who never react.\nCamera: starts medium portrait, centred, seated eye level, 9:16; propped phone with one small settle-wobble in the first second, then locked.\nProps (exact design, exactly one of each, nothing else added): white folding plastic garden chair; large wooden scoring paddle with a 0-10 dial; closed plain umbrella (no logo) across his knees; passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure); rain (top edge, then falling); grey corner-shop wall with blank unreadable shutter.\nHands: at most two hands act; each named hand does one thing; the other hand rests where stated; every object is either held or resting on a surface; one interaction per shot; state changes happen across the hard cuts, never mid-shot.\nPhysics: each held object stays in a named hand or rests on a surface; nothing floats or vanishes; mouth closed on anything in it; feet grounded except described steps; everything else holds still.\n0-6s: Left hand grips the paddle shaft upright on his left thigh, right palm flat on the closed umbrella across his lap, body and chair still. Uncle Verdict says once: \"Umbrella. Two out of ten. Correct answer: a tiny roof for nobody.\".\n6-9s: Rain starts: drops darken his bald crown and the paddle; a stranger's open dark umbrella slides past the right frame edge; his left hand keeps the paddle upright on his thigh, body still. Camera: propped phone.\n9-10.5s: Left hand lifts the paddle toward the lens, dial clearly at 2; right palm stays flat on the umbrella in his lap; body still on the chair; rain falling. Camera: propped phone. Hard cut to.\n10.5-12s: Left hand holds the paddle up at the lens, dial already at 1; right palm flat on the umbrella in his lap; body still; rain falling. Camera: propped phone. Uncle Verdict says once: \"Final.\".\nSound: only the quoted lines are spoken, each exactly once, then silence; quiet street ambience, distant traffic, faint wind; no music.\nNo readable text, logos or signage except a product's own label. Natural skin, no blur on the face. No third arm, no extra hands, no duplicated limbs, no extra fingers, no deformed hands; objects never merge with hands; exactly one of each prop; no mirrors or reflections; no slow motion.",
+        "prompt_text": "Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip; no rings, watches, microphones or accessories that are not in the reference.\nSetting: outside a corner shop on a pavement (generic, unrecognisable). Passers-by, if any, are soft blurred shapes who never react.\nCamera: starts medium portrait, centred, seated eye level, 9:16; propped phone with one small settle-wobble in the first second, then locked. No cuts.\nProps (exact design, exactly one of each, nothing else added): white folding plastic garden chair; one hand-held wooden scoring paddle: a light oak rounded-rectangle board on a straight round wooden handle; on its face a white semicircular gauge, arc on top, with eleven large bold black numerals 0 1 2 3 4 5 6 7 8 9 10 evenly spaced left to right along the arc and no other marks or text; one thick black pointer arm pivoting on a brass pin at the centre of the gauge's flat bottom edge (exactly as @image2); closed plain umbrella (no logo) across his knees; passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure); rain (top edge, then falling); grey corner-shop wall with blank unreadable shutter.\nHands: at most two hands act; each named hand does one thing; the other hand rests where stated; every object is either held or resting on a surface; one interaction per shot; state changes happen across the hard cuts, never mid-shot.\nPhysics: each held object stays in a named hand or rests on a surface; nothing floats or vanishes; mouth closed on anything in it; feet grounded except described steps; everything else holds still.\n0-6s: Left hand grips the paddle shaft upright on his left thigh, right palm flat on the closed umbrella across his lap, body and chair still. Uncle Verdict says once: \"Umbrella. Two out of ten. Correct answer: a tiny roof for nobody.\".\n6-8s: Rain starts: drops darken his bald crown and the paddle; a stranger's open dark umbrella slides past the right frame edge; his left hand keeps the paddle upright on his thigh, body still. Camera: propped phone.\nSound: only the quoted lines are spoken, each exactly once, then silence; quiet street ambience, distant traffic, faint wind; no music.\nNo readable text, logos or signage except a product's own label. Natural skin, no blur on the face. No third arm, no extra hands, no duplicated limbs, no extra fingers, no deformed hands; objects never merge with hands; exactly one of each prop; no mirrors or reflections; no slow motion.",
         "prompt_style": "compact_physics_first",
         "prompt_budget": {
           "audio_mode": "on_camera_dialogue",
           "word_budget": 260,
-          "words": 349,
-          "words_total_incl_safety_lines": 422,
+          "words": 351,
+          "words_total_incl_safety_lines": 424,
           "shrink_level": 4,
           "over_budget": true
         },
-        "prompt_text_full": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. Speak ONLY the quoted lines, in English, lips still when no line is spoken.\n3. Props exist from frame one and never appear, disappear or change design: white folding plastic garden chair, large wooden scoring paddle with a 0-10 dial, closed plain umbrella (no logo) across his knees, passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure), rain (top edge, then falling), grey corner-shop wall with blank unreadable shutter.\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Round soft face, heavy-lidded calm eyes, neat salt-and-pepper beard trimmed short, bald shining crown with a ring of grey hair, slow blink, serene half-smile that never changes. Costume: Mustard-yellow three-piece suit slightly too big, open collar, brown leather loafers with no socks, mustard trousers slightly too long; same costume all episode, no changes.. Register: Seated stillness and calm; the loudness is in the opinion, not the voice; comedy from the gap between certainty and evidence; invites the viewer to argue.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S1 (0.0-6.0s) ---\nLocation: outside a corner shop on a pavement (generic, unrecognisable). Environment: Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.\nAction: Locked portrait. Uncle Verdict sits on the white chair, left hand gripping the paddle upright on his left thigh with the dial at 2, right palm flat on the closed umbrella across his lap, thin grey rain edge at top of frame. He speaks the verdict; chair, umbrella and paddle stay still.\nPerformance: Present the verdict like a judge reading a ruling, eyes steady on the lens. Micro-expression: One slow blink on 'ten'; the half-smile does not change.\nCamera: medium portrait, centred, seated eye level, 9:16; lens feel phone main lens, about 26mm equivalent; movement propped phone with one small settle-wobble in the first second, then locked; rig phone propped on a low crate at seated eye level\nLighting: Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.\nAudio: ambience quiet street ambience, distant traffic, faint wind; foley: wooden paddle tapping thigh, suit fabric rustle, umbrella canvas shift, exaggerated dial click; no music\nDialogue (Uncle Verdict, on-camera): \"Umbrella. Two out of ten. Correct answer: a tiny roof for nobody.\" - slow, warm, certain; never raises his voice; short pauses after each sentence\n--- S2 (6.0-9.0s) ---\nLocation: outside a corner shop on a pavement (generic, unrecognisable). Environment: Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.\nAction: First drops land on the paddle wood, then on his bald crown, and a generic passer-by's open plain umbrella slides through from the right frame edge, dry underneath. He does not move; paddle, umbrella and chair stay still.\nPerformance: Hold his verdict against the weather, eyes fixed on the lens, not glancing at the sky. Micro-expression: Drop runs down his forehead; the half-smile and heavy-lidded calm do not change.\nCamera: medium portrait, centred, seated eye level, 9:16; lens feel phone main lens, about 26mm equivalent; movement propped phone, locked, no move; rig phone propped on a low crate at seated eye level\nLighting: Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.\nAudio: ambience street ambience as light rain begins, patter on pavement; foley: rain drops on wood, drops on skin, passing umbrella canopy whoosh, soft footstep; no music\n--- S3 (9.0-10.5s) ---\nLocation: outside a corner shop on a pavement (generic, unrecognisable). Environment: Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.\nAction: His left hand lifts the paddle toward the lens; the dial reads 2; his right palm stays flat on the umbrella across his lap; rain keeps falling.\nPerformance: Present the corrected dial with total certainty, finger steady, eyes on the lens. Micro-expression: Slow blink after the word; rain on the crown, serenity unchanged.\nCamera: medium portrait, centred, seated eye level, 9:16; lens feel phone main lens, about 26mm equivalent; movement propped phone, locked, paddle comes toward lens; no move; rig phone propped on a low crate at seated eye level\nLighting: Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.\nAudio: ambience steady rain on pavement, distant traffic; foley: exaggerated dial click, rain on paddle, suit rustle, umbrella canvas drip; no music\n--- S4 (10.5-12.0s) ---\nLocation: outside a corner shop on a pavement (generic, unrecognisable). Environment: Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.\nAction: Same frame after a hard cut: the paddle held up at the lens now reads 1; his right palm rests on the umbrella; he says the last word; rain keeps falling.\nPerformance: Present the corrected dial with total certainty, finger steady, eyes on the lens. Micro-expression: Slow blink after the word; rain on the crown, serenity unchanged.\nCamera: medium portrait, centred, seated eye level, 9:16; lens feel phone main lens, about 26mm equivalent; movement propped phone, locked, paddle comes toward lens; no move; rig phone propped on a low crate at seated eye level\nLighting: Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.\nAudio: ambience steady rain on pavement, distant traffic; foley: exaggerated dial click, rain on paddle, suit rustle, umbrella canvas drip; no music\nDialogue (Uncle Verdict, on-camera): \"Final.\" - one soft, unhurried word, certain\nON-SCREEN TEXT: none (added in post).",
+        "prompt_text_full": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. Speak ONLY the quoted lines, in English, lips still when no line is spoken.\n3. Props exist from frame one and never appear, disappear or change design: white folding plastic garden chair, large wooden scoring paddle with a 0-10 dial, closed plain umbrella (no logo) across his knees, passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure), rain (top edge, then falling), grey corner-shop wall with blank unreadable shutter.\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Round soft face, heavy-lidded calm eyes, neat salt-and-pepper beard trimmed short, bald shining crown with a ring of grey hair, slow blink, serene half-smile that never changes. Costume: Mustard-yellow three-piece suit slightly too big, open collar, brown leather loafers with no socks, mustard trousers slightly too long; same costume all episode, no changes.. Register: Seated stillness and calm; the loudness is in the opinion, not the voice; comedy from the gap between certainty and evidence; invites the viewer to argue.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S1 (0.0-6.0s) ---\nLocation: outside a corner shop on a pavement (generic, unrecognisable). Environment: Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.\nAction: Locked portrait. Uncle Verdict sits on the white chair, left hand gripping the paddle upright on his left thigh with the dial at 2, right palm flat on the closed umbrella across his lap, thin grey rain edge at top of frame. He speaks the verdict; chair, umbrella and paddle stay still.\nPerformance: Present the verdict like a judge reading a ruling, eyes steady on the lens. Micro-expression: One slow blink on 'ten'; the half-smile does not change.\nCamera: medium portrait, centred, seated eye level, 9:16; lens feel phone main lens, about 26mm equivalent; movement propped phone with one small settle-wobble in the first second, then locked; rig phone propped on a low crate at seated eye level\nLighting: Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.\nAudio: ambience quiet street ambience, distant traffic, faint wind; foley: wooden paddle tapping thigh, suit fabric rustle, umbrella canvas shift, exaggerated dial click; no music\nDialogue (Uncle Verdict, on-camera): \"Umbrella. Two out of ten. Correct answer: a tiny roof for nobody.\" - slow, warm, certain; never raises his voice; short pauses after each sentence\n--- S2 (6.0-8.0s) ---\nLocation: outside a corner shop on a pavement (generic, unrecognisable). Environment: Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.\nAction: First drops land on the paddle wood, then on his bald crown, and a generic passer-by's open plain umbrella slides through from the right frame edge, dry underneath. He does not move; paddle, umbrella and chair stay still.\nPerformance: Hold his verdict against the weather, eyes fixed on the lens, not glancing at the sky. Micro-expression: Drop runs down his forehead; the half-smile and heavy-lidded calm do not change.\nCamera: medium portrait, centred, seated eye level, 9:16; lens feel phone main lens, about 26mm equivalent; movement propped phone, locked, no move; rig phone propped on a low crate at seated eye level\nLighting: Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.\nAudio: ambience street ambience as light rain begins, patter on pavement; foley: rain drops on wood, drops on skin, passing umbrella canopy whoosh, soft footstep; no music\nON-SCREEN TEXT: none (added in post).",
         "medias": [
           {
             "value": "<media_id or job_id of approved character reference (asset char-uncle-verdict-v1; candidate job cb1f3458-a537-48af-950d-c42de75a4b28)>",
             "role": "image_references"
+          },
+          {
+            "value": "4c094812-ad7e-44df-a34a-48287565877c",
+            "role": "image_references",
+            "prop": "scoring-paddle",
+            "status": "generated_pending_owner_approval"
           },
           {
             "value": "<media_id of approved location still>",
@@ -581,10 +556,87 @@
         "gaps": [
           "No fps/container control; inspect exported file.",
           "Lip-sync and exact SFX timing are not controllable; inspect output.",
-          "Lens is prompt language only."
+          "Lens is prompt language only.",
+          "Cinema Studio 4.0 native camera/lighting controls need creative-control ids not retrieved in this build; pass as prompt text meanwhile"
         ],
-        "estimated_credits": 84,
-        "estimated_credits_draft": 36,
+        "estimated_credits": 56,
+        "estimated_credits_draft": 24,
+        "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
+      },
+      {
+        "generation_unit": "U2",
+        "scene_ids": [
+          "S3"
+        ],
+        "model": "cinematic_studio_video_4_0",
+        "routing": {
+          "why": "shown hand-object interaction: animated between the approved start and end keyframes (start_image/end_image) with character and prop references; Cinema Studio 4.0 ranked first by the owner 2026-10-08",
+          "status": "recommended_untested",
+          "fallback": "seedance_2_5 omni_reference, draft 480p, same start/end frames",
+          "optimisation": "test at 480p (3 credits/s measured); 720p quoted 7 credits/s"
+        },
+        "controls": {
+          "duration": 4,
+          "aspect_ratio": "9:16",
+          "resolution": "720p",
+          "generate_audio": true,
+          "mode": "omni_reference"
+        },
+        "prompt_text": "Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip; no rings, watches, microphones or accessories that are not in the reference.\nSetting: outside a corner shop on a pavement (generic, unrecognisable). Passers-by, if any, are soft blurred shapes who never react.\nCamera: starts medium close-up, centred, seated eye level, 9:16, paddle and face both in frame; propped phone, locked. No cuts.\nProps (exact design, exactly one of each, nothing else added): white folding plastic garden chair; one hand-held wooden scoring paddle: a light oak rounded-rectangle board on a straight round wooden handle; on its face a white semicircular gauge, arc on top, with eleven large bold black numerals 0 1 2 3 4 5 6 7 8 9 10 evenly spaced left to right along the arc and no other marks or text; one thick black pointer arm pivoting on a brass pin at the centre of the gauge's flat bottom edge (exactly as @image2); closed plain umbrella (no logo) across his knees; passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure); rain (top edge, then falling); grey corner-shop wall with blank unreadable shutter.\nHands: at most two hands act; each named hand does one thing; the other hand rests where stated; every object is either held or resting on a surface; one interaction per shot; the only state change is the one movement described, shown slowly from the start frame to the end frame.\nPhysics: each held object stays in a named hand or rests on a surface; nothing floats or vanishes; mouth closed on anything in it; feet grounded except described steps; everything else holds still.\n8-12s: Left hand holds the paddle up at chest height, board square to the lens; right index fingertip on the pointer tip; body still on the chair; rain falling. The one movement: right index fingertip rests on the pointer tip; the fingertip pushes the pointer tip slowly to the left; the pointer pivots on the brass pin; the pointer goes from pointing at 2 to pointing at 1 in one slow continuous move and stops. Left hand holds the paddle handle still at chest height, board square to the lens. Nothing else on the scoring paddle moves or changes; the clip starts on the start frame and ends on the end frame. Uncle Verdict says once: \"Final.\".\nSound: only the quoted lines are spoken, each exactly once, then silence; steady rain on pavement, distant traffic; no music.\nNo readable text, logos or signage except a product's own label. Natural skin, no blur on the face. No third arm, no extra hands, no duplicated limbs, no extra fingers, no deformed hands; objects never merge with hands; exactly one of each prop; no mirrors or reflections; no slow motion.",
+        "prompt_style": "compact_physics_first",
+        "prompt_budget": {
+          "audio_mode": "on_camera_dialogue",
+          "word_budget": 260,
+          "words": 302,
+          "words_total_incl_safety_lines": 468,
+          "shrink_level": 4,
+          "over_budget": true
+        },
+        "prompt_text_full": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. Speak ONLY the quoted lines, in English, lips still when no line is spoken.\n3. Props exist from frame one and never appear, disappear or change design: white folding plastic garden chair, large wooden scoring paddle with a 0-10 dial, closed plain umbrella (no logo) across his knees, passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure), rain (top edge, then falling), grey corner-shop wall with blank unreadable shutter.\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Round soft face, heavy-lidded calm eyes, neat salt-and-pepper beard trimmed short, bald shining crown with a ring of grey hair, slow blink, serene half-smile that never changes. Costume: Mustard-yellow three-piece suit slightly too big, open collar, brown leather loafers with no socks, mustard trousers slightly too long; same costume all episode, no changes.. Register: Seated stillness and calm; the loudness is in the opinion, not the voice; comedy from the gap between certainty and evidence; invites the viewer to argue.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S3 (8.0-12.0s) ---\nLocation: outside a corner shop on a pavement (generic, unrecognisable). Environment: Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.\nAction: Hard cut to a closer frame: the paddle held up at chest height, square to the lens, pointer at 2, his right index fingertip on the pointer tip. He pushes the pointer slowly from 2 to 1, it stops, he says the last word; rain keeps falling.\nPerformance: Lowers the score with the calm of a judge correcting a clerical error; eyes on the lens above the paddle. Micro-expression: Slow blink as the pointer stops; serenity unchanged.\nCamera: medium close-up, centred, seated eye level, 9:16, paddle and face both in frame; lens feel phone main lens, about 26mm equivalent; movement propped phone, locked; rig phone propped on a low crate at seated eye level\nLighting: Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.\nAudio: ambience steady rain on pavement, distant traffic; foley: single soft ratchet click as the pointer moves, rain on the paddle, suit rustle; no music\nDialogue (Uncle Verdict, on-camera): \"Final.\" - one soft, unhurried word after the pointer stops\nON-SCREEN TEXT: none (added in post).",
+        "medias": [
+          {
+            "value": "<media_id or job_id of approved character reference (asset char-uncle-verdict-v1; candidate job cb1f3458-a537-48af-950d-c42de75a4b28)>",
+            "role": "image_references"
+          },
+          {
+            "value": "4c094812-ad7e-44df-a34a-48287565877c",
+            "role": "image_references",
+            "prop": "scoring-paddle",
+            "status": "generated_pending_owner_approval"
+          },
+          {
+            "value": "<media_id of approved location still>",
+            "role": "image_references"
+          },
+          {
+            "value": "<media_id of approved voice asset voice-ref>",
+            "role": "audio_references"
+          },
+          {
+            "value": "70f2656d-22ca-422a-9bde-0d87667de225",
+            "role": "start_image"
+          },
+          {
+            "value": "7ec903a7-e304-43af-af3c-f7d9896e7c82",
+            "role": "end_image"
+          }
+        ],
+        "manual_steps": [
+          "Keyframe board first: generate the start frame and the end frame (gpt_image_2_5 with the character and prop references; the end frame edits the start frame so only the moving part and the acting finger change); the owner inspects both before any video is submitted.",
+          "Upload approved reference stills via media_upload (owner action; upload requires approval).",
+          "Burn captions/on-screen text in edit.",
+          "Add licensed music in edit if any.",
+          "Assemble generation units with hard cuts in edit; verify total duration and loop.",
+          "Run get_cost:true preflight and record quote before any submit; submit only after render_approved and credit_cap."
+        ],
+        "gaps": [
+          "No fps/container control; inspect exported file.",
+          "Lip-sync and exact SFX timing are not controllable; inspect output.",
+          "Lens is prompt language only.",
+          "Cinema Studio 4.0 native camera/lighting controls need creative-control ids not retrieved in this build; pass as prompt text meanwhile"
+        ],
+        "estimated_credits": 28,
+        "estimated_credits_draft": 12,
         "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
       }
     ],
@@ -878,7 +930,7 @@
       "costume": "same"
     },
     "trend_refs": [],
-    "rationale": "The cleanest cold-viewer introduction: static portrait shows silhouette, the verdict format and the rule within one generation unit, with the quiet delivery doing the work. Revised 2026-10-08: one hard cut hides the dial change (state 2 -> cut -> state 1), per platform hand-object staging rules.",
+    "rationale": "The cleanest cold-viewer introduction: static portrait shows silhouette, the verdict format and the rule within one generation unit, with the quiet delivery doing the work. Revised 2026-10-08: one hard cut hides the dial change (state 2 -> cut -> state 1), per platform hand-object staging rules. Revised again 2026-10-08 (owner): the dial change is shown, not hidden: a hard cut to a closer frame where his right index finger pushes the pointer from 2 to 1, animated between owner-inspected start and end keyframes. Revised again 2026-10-08 (owner): the dial change is shown, not hidden: a hard cut to a closer frame where his right index finger pushes the pointer from 2 to 1, animated between owner-inspected start and end keyframes. Revised again 2026-10-08 (owner): the dial change is shown, not hidden: a hard cut to a closer frame where his right index finger pushes the pointer from 2 to 1, animated between owner-inspected start and end keyframes.",
     "chosen_by": "engine"
   }
 }

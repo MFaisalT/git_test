@@ -42,6 +42,8 @@ QUOTES = {
     ("seedance_2_5", 16, "720p"): 112, ("seedance_2_5", 16, "480p-draft"): 48, ("seedance_2_0_mini", 15, "720p"): 15,
     ("seedance_2_0_mini", 8, "720p"): 8, ("seedance_2_5", 8, "720p"): 56,  # lab captures 2026-10-07 18:22 UTC
     ("cinematic_studio_video_4_0", 16, "720p"): 112, ("cinematic_studio_3_0", 15, "720p"): 75,
+    # measured charges 2026-10-08 (five-model comparison, 12 s 9:16): CS4 480p 36, 720p 84 (quote); CS4 has no draft flag, its 480p is the test tier
+    ("cinematic_studio_video_4_0", 12, "480p-draft"): 36, ("cinematic_studio_video_4_0", 12, "720p"): 84, ("seedance_2_5", 12, "480p-draft"): 36,
 }
 IMAGE_QUOTES = {("nano_banana_pro", "2k"): 2, ("nano_banana_2_1", "2k"): 2}  # generate_image(get_cost=true) 2026-10-07, 16:9
 
@@ -55,8 +57,11 @@ def quote_for(model: str, duration: int, res: str = "720p") -> int | None:
     return int(round(credits * duration / d))
 
 
-def route_video_unit(pf: dict, duration: float, audio_mode: str, has_driving_footage: bool, identity_critical: bool = True, budget_mode: bool = False, handles_props: bool = False) -> dict:
-    """Pick a video model for one generation unit and explain it."""
+def route_video_unit(pf: dict, duration: float, audio_mode: str, has_driving_footage: bool, identity_critical: bool = True, budget_mode: bool = False, handles_props: bool = False,
+                     interaction: bool = False) -> dict:
+    """Pick a video model for one generation unit and explain it.
+    Owner verdict 2026-10-08 on five models, one identical prompt (Uncle Verdict): Cinema Studio 4.0 best, Seedance 2.5 second;
+    so identity-critical units up to 15 s go to Cinema Studio 4.0, with Seedance 2.5 as the fallback."""
     sa = (pf or {}).get("shot_architecture", "")
     silent = audio_mode in ("silent_ambience", "text_over_broll", "music_driven")
     if has_driving_footage or sa == "motion_transfer_owned_footage":
@@ -64,6 +69,10 @@ def route_video_unit(pf: dict, duration: float, audio_mode: str, has_driving_foo
                 "fallback": "seedance_2_5 omni_reference if transfer artefacts are unacceptable"}
     if sa == "continuation_from_last_frame":
         return {"model": "seedance_2_5", "mode": "video_extension", "generate_audio": not silent, "why": "video_extension (forward) continues from the approved reference clip", "status": "recommended_untested", "fallback": "cinematic_studio_video_4_0 video_extension"}
+    if interaction:
+        return {"model": "cinematic_studio_video_4_0", "mode": "omni_reference", "generate_audio": not silent,
+                "why": "shown hand-object interaction: animated between the approved start and end keyframes (start_image/end_image) with character and prop references; Cinema Studio 4.0 ranked first by the owner 2026-10-08",
+                "status": "recommended_untested", "fallback": "seedance_2_5 omni_reference, draft 480p, same start/end frames", "optimisation": "test at 480p (3 credits/s measured); 720p quoted 7 credits/s"}
     if duration > 15:
         return {"model": "seedance_2_5", "mode": "omni_reference", "generate_audio": not silent, "why": f"{duration:.0f}s exceeds the 15 s mini/Cinema-3.0 ceiling; Seedance 2.5 keeps identity refs + native audio up to 30 s", "status": "verified_controls",
                 "fallback": "cinematic_studio_video_4_0 omni_reference (same ranges; native lens/lighting controls once control ids are retrieved)",
@@ -72,8 +81,9 @@ def route_video_unit(pf: dict, duration: float, audio_mode: str, has_driving_foo
         return {"model": "seedance_2_0_mini", "mode": None, "generate_audio": not silent, "why": "<=15 s; identity refs supported; cheapest adequate (15 credits / 15 s / 720p quoted)", "status": "verified_controls",
                 "fallback": "seedance_2_5 omni_reference if identity or physics fail on mini"}
     if identity_critical:
-        return {"model": "seedance_2_5", "mode": "omni_reference", "generate_audio": not silent, "why": ("hands-free rule: handled props need Seedance 2.5 (Mini forked prop states in owner inspection 2026-10-08); identity refs kept" if silent else "dialogue + identity lock: Seedance 2.5 omni_reference carries image + audio references (voice lock) with native audio"), "status": "verified_controls",
-                "fallback": "seedance_2_0_mini for drafts; cinematic_studio_video_4_0 for premium look", "optimisation": "480p draft -> finalize"}
+        return {"model": "cinematic_studio_video_4_0", "mode": "omni_reference", "generate_audio": not silent,
+                "why": "identity-critical unit (dialogue or handled props): Cinema Studio 4.0 ranked first by the owner in the same-prompt comparison 2026-10-08; image + audio references, native audio",
+                "status": "verified_controls", "fallback": "seedance_2_5 omni_reference (ranked second; draft 480p -> finalize 1080p)", "optimisation": "test at 480p (36 credits / 12 s measured), final at 720p (84 quoted)"}
     return {"model": "cinematic_studio_3_0", "mode": None, "generate_audio": not silent, "why": "premium cinematic look where the character is not in frame (inserts, establishing shots)", "status": "recommended_untested", "fallback": "seedance_2_5"}
 
 
