@@ -1,0 +1,24 @@
+{
+  "kind": "interaction_staging_test",
+  "purpose": "owner 2026-10-08: dial arm moved unnaturally (2.5) / another arm appeared from the clock centre reaching his finger (Mini); test platform hand-object staging (state change across a hard cut, hand-count rule, negative list) and restored per-beat camera",
+  "packet_id": "CB-captain-tempo-v1",
+  "job_id": "c3087214-ee7e-428c-b1aa-fe390232fb51",
+  "model_requested": "seedance_2_0_mini",
+  "resolution": "720p",
+  "duration": 12,
+  "prompt_style": "compact_physics_first + interaction rules (engine/interaction.py)",
+  "medias": [
+    {
+      "role": "image_references",
+      "job_id": "5706fd02-b2bb-4923-a879-ee8c5a571529"
+    }
+  ],
+  "cost": {
+    "quoted_credits": 12,
+    "charged_credits": 12,
+    "note": "ledger 2026-10-08T07:00Z = quote"
+  },
+  "render_inspection": {
+    "status": "pending_owner"
+  }
+}

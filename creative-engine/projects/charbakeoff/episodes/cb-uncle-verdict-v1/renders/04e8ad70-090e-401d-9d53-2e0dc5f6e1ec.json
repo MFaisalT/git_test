@@ -1,0 +1,24 @@
+{
+  "kind": "interaction_staging_test",
+  "purpose": "owner 2026-10-08: dial arm moved unnaturally (2.5) / another arm appeared from the clock centre reaching his finger (Mini); test platform hand-object staging (state change across a hard cut, hand-count rule, negative list) and restored per-beat camera",
+  "packet_id": "CB-uncle-verdict-v1",
+  "job_id": "04e8ad70-090e-401d-9d53-2e0dc5f6e1ec",
+  "model_requested": "seedance_2_0_mini",
+  "resolution": "720p",
+  "duration": 12,
+  "prompt_style": "compact_physics_first + interaction rules (engine/interaction.py)",
+  "medias": [
+    {
+      "role": "image_references",
+      "job_id": "cb1f3458-a537-48af-950d-c42de75a4b28"
+    }
+  ],
+  "cost": {
+    "quoted_credits": 12,
+    "charged_credits": 12,
+    "note": "ledger 2026-10-08T07:00Z = quote"
+  },
+  "render_inspection": {
+    "status": "pending_owner"
+  }
+}
