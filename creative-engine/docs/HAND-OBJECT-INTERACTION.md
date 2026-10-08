@@ -233,3 +233,18 @@ Only the regenerated close-up is wrong.
 **Full episode, take 2:** U1 `17fe9dae` + U2 `18a32f05`, 12.2 s, media `4231584f-8ce6-44d7-9326-c438064aff77`.
 
 **Still open in U1:** the rain and the passing umbrella are missing, because the speech filled the slot. The fix is to start the rain under the line.
+
+### First cold-viewer check (2026-10-08, episode `648c2168`, locked-voice "Final.")
+
+A fresh reviewer with no brief or context went through three rounds: 2 s muted, the whole clip muted, then with the transcript.
+- **Engine score (`engine/cold_viewer.py`):** verdict "pass" (muted coverage 0.5, with speech 0.75).
+- **Stop scrolling:** weakly yes, because of the costume and prop. Nothing happens in the first 2 s.
+- **Muted read:** "rain, he never opens the umbrella, lowers the needle". It misread the dial as his mood.
+- **With the words:** it got the joke exactly. "The joke is on him, the snob who would rather get wet than admit the umbrella works." Comment: "Sir, the tiny roof was for YOU."
+
+**Problems it named:**
+1. The dial looks like a different prop in the close-up because the "0" is missing. Cause: his fingertip covers the 0 in the approved source frame. A wider crop does not help. Staging rule for next time: keep the hand clear of the scale's end numerals.
+2. "Final." alone lands flat, and you have to read the needle to get the punchline. Candidate line: "One. Final." (owner's call).
+3. About 5 s with no speech in the middle (5.5-10.3 s). The v7 restage puts the rain under the line. A dial-click foley on the move would fill the push; the bible already asks for an "exaggerated dial click".
+4. "Correct answer" confused a cold viewer ("correct answer to what?"). It is part of the bible's fixed verdict format, so changing it is the owner's call.
+5. The spliced "Final." sounds quieter and drier than the opening line. The level was matched to the model's quiet word, so it needs a louder mix and matching room reverb.
