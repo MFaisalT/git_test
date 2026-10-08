@@ -554,6 +554,7 @@
               "to_state": {"type": "string"},
               "motion": {"type": "string", "description": "Path and speed, e.g. 'pushes the pointer tip slowly leftward; it pivots on the brass pin'."},
               "support_hand": {"type": "string", "description": "What the other hand does, e.g. 'left hand holds the handle still, board square to the lens'."},
+              "direction": {"type": "string", "description": "For rotating parts (dials, pointers, knobs, caps): rotation sense, size and the end it moves toward, e.g. 'counter-clockwise, one notch (about 18 degrees), toward the 0 end'. 'Left'/'right' on a curved scale is ambiguous (CS4 2026-10-08 swung a pointer from 2 up to 5)."},
               "keyframes": {
                 "type": "object",
                 "additionalProperties": false,

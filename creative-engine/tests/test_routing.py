@@ -366,3 +366,11 @@ class TestLockedPlateFraming(unittest.TestCase):
         self.assertIn("KEYFRAME_FRAMING_REGENERATED", {f["code"] for f in interaction_spec_findings(s, ["S3", "S4"])})
         s["interaction"]["keyframes"]["end_derivation"] = {"method": "crop", "source": "a", "box": [0, 0, 10, 18]}
         self.assertNotIn("KEYFRAME_FRAMING_REGENERATED", {f["code"] for f in interaction_spec_findings(s, ["S3", "S4"])})
+
+
+class TestRotationDirection(unittest.TestCase):
+    def test_direction_is_stated_and_end_state_restated(self):
+        from engine.interaction import interaction_beat
+        t = interaction_beat({"interaction": dict(TestShownInteraction.SPEC, direction="counter-clockwise, one notch (about 18 degrees), toward the 0 end")})
+        self.assertIn("It rotates counter-clockwise, one notch (about 18 degrees), toward the 0 end, and only that far.", t)
+        self.assertIn("ends on the end frame, where the pointer is exactly pointing at 1", t)

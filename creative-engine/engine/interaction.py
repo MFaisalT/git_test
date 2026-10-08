@@ -115,10 +115,11 @@ def interaction_beat(scene: dict, prop_design: str = "") -> str:
     obj = it.get("object", "object")
     # Owner 2026-10-08 (CS4 77ecb61d): the pointer started near 4, not 2. State the opening state as a hard fact and forbid any
     # travel outside from -> to, so the model cannot begin elsewhere and sweep across.
-    return (f"At 0 s the {it.get('part')} is exactly {it.get('from_state')}, as in the start frame. The one movement: {it.get('contact')}; {it.get('motion')}; "
+    turn = f" It rotates {it['direction']}, and only that far." if it.get("direction") else ""
+    return (f"At 0 s the {it.get('part')} is exactly {it.get('from_state')}, as in the start frame.{turn} The one movement: {it.get('contact')}; {it.get('motion')}; "
             f"the {it.get('part')} goes from {it.get('from_state')} to {it.get('to_state')} in one slow continuous move and stops; it never passes any other position "
             f"and never moves the other way. {str(it.get('support_hand')).rstrip('.')}. Nothing else on the {obj} moves or changes; "
-            f"the clip starts on the start frame and ends on the end frame.")
+            f"the clip starts on the start frame and ends on the end frame, where the {it.get('part')} is exactly {it.get('to_state')}.")
 
 
 def interaction_rule_line(packet: dict, scenes: list[dict] | None = None) -> str:

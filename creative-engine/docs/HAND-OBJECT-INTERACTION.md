@@ -206,3 +206,19 @@ Only the regenerated close-up is wrong.
 - Schema: `keyframes.end_derivation {method: crop|edit|generate, source, box}`.
 - The engine warns `KEYFRAME_FRAMING_REGENERATED` when a closer end frame is regenerated.
 - The adapter's keyframe step says crops are made in the sandbox.
+
+### U2 ending with the locked voice (2026-10-08)
+
+**Job `31072c5c` (CS4, 480p, 18 credits).** Frames checked in the sandbox:
+- **Camera:** the punch-in to a close-up is visible between 3.6 s and 4.5 s.
+- **Line:** "Final." is said once, at 4.3-5.0 s.
+- **Voice:** it held the lock (correlation 0.962).
+- **Defect:** the pointer swung from about 2 up to 5, the wrong way, and ended on 5. CS4 took its framing from the end frame but not the pointer state.
+
+**Fix:**
+- New interaction field `direction` for rotating parts. For this shot: "counter-clockwise, one notch (about 18 degrees), toward the 0 end; the tip moves down and to the left, never up toward 5".
+- The end state is restated in the end-frame sentence.
+
+**Retake:** `18a32f05`.
+
+**Episode draft:** U1 `17fe9dae` and U2 `31072c5c` were joined in the sandbox into a 12.1 s file and uploaded as media `b972af6c-e822-4c89-b606-af5c541ae4d8`.

@@ -40,8 +40,29 @@
   "spoken": true,
   "voice_id": "0138a858-eebd-4457-a488-396e2732279a",
   "quoted_credits": 18,
-  "charged_credits": null,
+  "charged_credits": 18,
   "submitted_at": "2026-10-08",
   "bible_version": 6,
-  "prompt_source": "tool_mapping.U2.prompt_text"
+  "prompt_source": "tool_mapping.U2.prompt_text",
+  "auto_qa": {
+    "voice": {
+      "locked_ref_f0_hz": 115,
+      "video_f0_hz": 110,
+      "timbre_corr_vs_locked_ref": 0.962,
+      "verdict": "voice lock held"
+    },
+    "transcript": "'Final.' once at 4.28-5.0 s",
+    "frames_checked_s": [
+      0.2,
+      1.5,
+      2.9,
+      3.6,
+      4.5,
+      5.8
+    ],
+    "camera": "punch-in to tight close-up visible between 3.6 s and 4.5 s (owner ask met)",
+    "defects": [
+      "pointer swung from about 2 UP to 5 (wrong direction, wrong end state); close-up ends with pointer on 5, not 1 - CS4 followed the end frame's framing but not the pointer state"
+    ]
+  }
 }
