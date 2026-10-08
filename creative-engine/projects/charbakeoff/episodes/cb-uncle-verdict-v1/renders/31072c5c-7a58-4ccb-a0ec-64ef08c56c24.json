@@ -1,0 +1,47 @@
+{
+  "job_id": "31072c5c-7a58-4ccb-a0ec-64ef08c56c24",
+  "model": "cinematic_studio_video_4_0",
+  "generation_unit": "U2",
+  "scene_ids": [
+    "S3",
+    "S4"
+  ],
+  "purpose": "v6 ending: keyframed pointer push 2->1, quick handheld punch-in to close-up, 'Final.' in the locked voice (owner: 'still no final shot with different camera transition')",
+  "controls": {
+    "mode": "omni_reference",
+    "duration": 6,
+    "resolution": "480p",
+    "aspect_ratio": "9:16",
+    "generate_audio": true
+  },
+  "medias": [
+    {
+      "value": "cb1f3458-a537-48af-950d-c42de75a4b28",
+      "role": "image_references"
+    },
+    {
+      "value": "3a640e87-c426-48ff-bb01-b679ce36b0ed",
+      "role": "image_references"
+    },
+    {
+      "value": "a61301f9-422b-4334-9072-070ca23e6a8b",
+      "role": "audio_references"
+    },
+    {
+      "value": "e38bd7f1-3fca-4d58-8f64-03ad49a46a3d",
+      "role": "start_image"
+    },
+    {
+      "value": "4611a013-46d6-4b07-9a83-f71dfc2f1c09",
+      "role": "end_image",
+      "note": "crop of approved 7a0020db"
+    }
+  ],
+  "spoken": true,
+  "voice_id": "0138a858-eebd-4457-a488-396e2732279a",
+  "quoted_credits": 18,
+  "charged_credits": null,
+  "submitted_at": "2026-10-08",
+  "bible_version": 6,
+  "prompt_source": "tool_mapping.U2.prompt_text"
+}
