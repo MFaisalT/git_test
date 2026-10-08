@@ -10,6 +10,7 @@ from __future__ import annotations
 
 from .validators import TOOL_LIMITS
 from .routing import asset_requests, quote_for, route_video_unit
+from .physics import compact_prompt
 
 FIELD_MAP = {
     # packet field -> ("native" | "prompt_text" | "manual" | "gap", note)
@@ -137,7 +138,7 @@ def plan(packet: dict, bible: dict | None = None, quote_credits: dict | None = N
         draft_est = quote_for(model, controls.get("duration", int(round(dur))), "480p-draft")
         plan_units.append({
             "generation_unit": f"U{i}", "scene_ids": [s["scene_id"] for s in u], "model": model, "routing": {k: route.get(k) for k in ("why", "status", "fallback", "optimisation") if route.get(k)},
-            "controls": controls, "prompt_text": build_prompt_text(packet, u, bible), "medias": medias,
+            "controls": controls, "prompt_text": (compact_prompt(packet, u, bible) or build_prompt_text(packet, u, bible)), "prompt_style": ("compact_physics_first" if compact_prompt(packet, u, bible) else "dense_legacy"), "prompt_text_full": build_prompt_text(packet, u, bible), "medias": medias,
             "manual_steps": manual, "gaps": gaps,
             "estimated_credits": est, "estimated_credits_draft": draft_est,
             "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply",

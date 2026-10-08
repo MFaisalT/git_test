@@ -1,0 +1,25 @@
+{
+  "kind": "physics_ab_test",
+  "purpose": "owner inspection 2026-10-08 found floating props and a whistle in an open mouth on v1 renders; test prompt fix alone (Mini) vs prompt fix + stronger model (Seedance 2.5 draft)",
+  "packet_id": "CB-captain-tempo-v1",
+  "job_id": "3134bcab-2efd-4ef9-9c03-640c778f6bf7",
+  "model_requested": "seedance_2_0_mini",
+  "resolution": "720p",
+  "duration": 12,
+  "generate_audio": true,
+  "prompt_style": "compact_physics_first (engine/physics.py)",
+  "medias": [
+    {
+      "role": "image_references",
+      "job_id": "5706fd02-b2bb-4923-a879-ee8c5a571529"
+    }
+  ],
+  "cost": {
+    "quoted_credits": 12,
+    "charged_credits": null
+  },
+  "submitted_at": "2026-10-08",
+  "render_inspection": {
+    "status": "pending_owner"
+  }
+}

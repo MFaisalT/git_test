@@ -1,339 +1,343 @@
 {
- "script": {
-  "title": "Captain Tempo Counts the Crossing",
-  "synopsis": "At a busy junction Captain Tempo counts down THREE, TWO, ONE, AND with her whole body; the signal flips on its own timer; she erupts into the Tempo Stomp as if she caused it; a commuter walks through her celebration without a glance and the camera lingers one beat too long.",
-  "beats": [
-   {
-    "beat": "Wide low shot: towering teal-and-gold woman, arms raised like a conductor, red figure glowing; downbeat on THREE",
-    "function": "hook"
-   },
-   {
-    "beat": "Conducting arms and bounce build; the countdown is the rule stated aloud",
-    "function": "setup"
-   },
-   {
-    "beat": "Whistle blast on TWO, roar of ONE, push-in tightens",
-    "function": "escalation"
-   },
-   {
-    "beat": "AND: the signal flips on its own timer; Tempo Stomp",
-    "function": "payoff"
-   },
-   {
-    "beat": "Commuter walks through her frozen victory; camera lingers one beat too long",
-    "function": "button"
-   }
-  ],
-  "dialogue": [
-   {
-    "speaker": "Captain Tempo",
-    "line": "THREE!",
-    "delivery": "hoarse booming downbeat",
-    "on_camera": true
-   },
-   {
-    "speaker": "Captain Tempo",
-    "line": "TWO!",
-    "delivery": "louder, whistle after",
-    "on_camera": true
-   },
-   {
-    "speaker": "Captain Tempo",
-    "line": "ONE!",
-    "delivery": "roaring, breathless",
-    "on_camera": true
-   },
-   {
-    "speaker": "Captain Tempo",
-    "line": "AND!",
-    "delivery": "explosive, held",
-    "on_camera": true
-   }
-  ],
-  "caption_text": "She counted. The light changed. Obviously she did that.",
-  "cta": "",
-  "disclosure_line": "AI-generated character and footage; original character."
- },
- "scenes": [
-  {
-   "scene_id": "S1",
-   "start_s": 0,
-   "end_s": 3,
-   "location": "Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her",
-   "action": "Wide, slightly low across the road: Captain Tempo stands at the kerb towering over a blurred grey stream of pedestrians, both arms raised like a conductor about to cue an orchestra, red standing figure glowing on the signal behind her. Her raised arms slam down on the beat as she bellows THREE and the handheld camera starts its slow push-in.",
-   "performance": "Invested task: set the downbeat for the entire crossing; she stares down the blurred crowd, hunting for any sign they are following her tempo, and sharpens her baton arms when they ignore it.",
-   "microexpression": "Eyebrows shoot up on the downbeat, then lock into a stern conductor's frown.",
-   "dialogue": [
-    {
-     "speaker": "Captain Tempo",
-     "line": "THREE!",
-     "delivery": "hoarse booming shout on the downbeat, rhythmic",
-     "on_camera": true
-    }
-   ],
-   "camera": {
-    "shot": "wide, slightly low angle, full body head to trainers",
-    "lens": "phone main camera feel, wide (about 24mm equivalent)",
-    "movement": "slow handheld push-in begins, gentle bob, camera noticing her before she notices it",
-    "rig": "handheld phone, operator walking slowly forward from across the road"
-   },
-   "lighting": "Overcast daylight key from high camera-left, soft; fill from the open grey sky; warm gold bounce off her tracksuit stripe onto her jaw and forearms and teal bounce onto the pavement beside her; soft contact shadows under her trainers and each pedestrian. Light stays constant, no clouds breaking.",
-   "environment": "Busy junction, grey tarmac and kerb, a stream of generic pedestrians as soft blurred shapes with no faces readable, distant traffic out of focus, no readable signs, logos or text.",
-   "sound": {
-    "ambience": "real junction traffic, footsteps and crowd murmur, idling engines",
-    "foley": [
-     "metronome tick on the waistband",
-     "tracksuit fabric swish as arms drop",
-     "trainer scuff on kerb",
-     "whistle cord swinging"
+  "script": {
+    "title": "Captain Tempo Counts the Crossing",
+    "synopsis": "At a busy junction Captain Tempo counts down THREE, TWO, ONE, AND with her whole body; the signal flips on its own timer; she erupts into the Tempo Stomp as if she caused it; a commuter walks through her celebration without a glance and the camera lingers one beat too long.",
+    "beats": [
+      {
+        "beat": "Wide low shot: towering teal-and-gold woman, arms raised like a conductor, red figure glowing; downbeat on THREE",
+        "function": "hook"
+      },
+      {
+        "beat": "Conducting arms and bounce build; the countdown is the rule stated aloud",
+        "function": "setup"
+      },
+      {
+        "beat": "TWO shouted, then a silent whistle blast with lips sealed, then the roar of ONE; push-in tightens",
+        "function": "escalation"
+      },
+      {
+        "beat": "AND: the signal flips on its own timer; Tempo Stomp",
+        "function": "payoff"
+      },
+      {
+        "beat": "Commuter walks through her frozen victory; camera lingers one beat too long",
+        "function": "button"
+      }
     ],
-    "music": "none",
-    "voice": "Captain Tempo, on camera, hoarse booming count"
-   },
-   "captions": "",
-   "transition_out": "continuous",
-   "props_from_frame_one": [
-    "referee whistle on red cord",
-    "small handheld metronome clipped to waistband",
-    "white sweatband",
-    "pedestrian signal head showing red standing figure then green walking figure (pictograms only, no text)",
-    "blurred generic pedestrians (extras)"
-   ],
-   "cuts_inside_clip": 0,
-   "generation_unit": "U1"
+    "dialogue": [
+      {
+        "speaker": "Captain Tempo",
+        "line": "THREE!",
+        "delivery": "hoarse booming downbeat",
+        "on_camera": true
+      },
+      {
+        "speaker": "Captain Tempo",
+        "line": "TWO!",
+        "delivery": "louder, whistle hanging on its cord",
+        "on_camera": true
+      },
+      {
+        "speaker": "Captain Tempo",
+        "line": "ONE!",
+        "delivery": "roaring, breathless, after the whistle blast",
+        "on_camera": true
+      },
+      {
+        "speaker": "Captain Tempo",
+        "line": "AND!",
+        "delivery": "explosive, held",
+        "on_camera": true
+      }
+    ],
+    "caption_text": "She counted. The light changed. Obviously she did that.",
+    "cta": "",
+    "disclosure_line": "AI-generated character and footage; original character."
   },
-  {
-   "scene_id": "S2",
-   "start_s": 3,
-   "end_s": 6,
-   "location": "Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her",
-   "action": "Push-in continues. Her arms conduct harder, left hand chopping time, right hand circling; legs bounce on the spot. On TWO she clamps the whistle in her teeth and blasts it, then spits it out into a roar of ONE, knees bending, torso leaning toward camera as the lens closes in.",
-   "performance": "Invested task: wind the whole street up to a single instant; she drives each number into the crowd with her entire body and checks the red figure over her shoulder with a flick of the eyes between counts.",
-   "microexpression": "Eyes widen on the whistle blast, cheeks puff, a quick sideways glance at the signal.",
-   "dialogue": [
+  "scenes": [
     {
-     "speaker": "Captain Tempo",
-     "line": "TWO!",
-     "delivery": "louder, whistle blast right after",
-     "on_camera": true
+      "scene_id": "S1",
+      "start_s": 0,
+      "end_s": 3,
+      "location": "Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her",
+      "action": "Wide, slightly low across the road: Captain Tempo stands at the kerb, both arms raised, hands open, red standing figure glowing on the signal behind her. Her arms drop on THREE and rise again on TWO, mouth open to shout, whistle hanging on its cord and metronome clipped to the waistband; the handheld camera begins its slow push-in. Feet, signal pole and kerb stay still.",
+      "performance": "Stern conductor's stare at the crowd, jaw set, open-mouthed shouts of THREE and TWO, whistle hanging on its cord.",
+      "microexpression": "Eyebrows shoot up on the downbeat, then lock into a stern frown.",
+      "dialogue": [
+        {
+          "speaker": "Captain Tempo",
+          "line": "THREE!",
+          "delivery": "hoarse booming shout on the downbeat, rhythmic",
+          "on_camera": true
+        },
+        {
+          "speaker": "Captain Tempo",
+          "line": "TWO!",
+          "delivery": "louder, whistle hanging on its cord",
+          "on_camera": true
+        }
+      ],
+      "camera": {
+        "shot": "wide, slightly low angle, full body head to trainers",
+        "lens": "phone main camera feel, wide (about 24mm equivalent)",
+        "movement": "slow handheld push-in begins, gentle bob, camera noticing her before she notices it",
+        "rig": "handheld phone, operator walking slowly forward from across the road"
+      },
+      "lighting": "Overcast daylight key from high camera-left, soft; fill from the open grey sky; warm gold bounce off her tracksuit stripe onto her jaw and forearms and teal bounce onto the pavement beside her; soft contact shadows under her trainers and each pedestrian. Light stays constant, no clouds breaking.",
+      "environment": "Busy junction, grey tarmac and kerb, a stream of generic pedestrians as soft blurred shapes with no faces readable, distant traffic out of focus, no readable signs, logos or text.",
+      "sound": {
+        "ambience": "real junction traffic, footsteps and crowd murmur, idling engines",
+        "foley": [
+          "metronome tick on the waistband",
+          "tracksuit fabric swish as arms drop",
+          "trainer scuff on kerb",
+          "whistle cord swinging against her chest"
+        ],
+        "music": "none",
+        "voice": "Captain Tempo, on camera, hoarse booming count THREE then TWO"
+      },
+      "captions": "",
+      "transition_out": "continuous",
+      "props_from_frame_one": [
+        "referee whistle on red cord",
+        "small handheld metronome clipped to waistband",
+        "white sweatband",
+        "pedestrian signal head showing red standing figure then green walking figure (pictograms only, no text)",
+        "blurred generic pedestrians (extras)"
+      ],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1",
+      "physical_beat": "Both arms raised, hands open as a conductor, slam down on THREE and rise on TWO; red standing figure glows on the signal behind her; whistle hangs on its cord; feet planted."
     },
     {
-     "speaker": "Captain Tempo",
-     "line": "ONE!",
-     "delivery": "roaring, breathless, almost a bark",
-     "on_camera": true
-    }
-   ],
-   "camera": {
-    "shot": "wide, low angle, tightening to knees-up as the push-in closes",
-    "lens": "phone main camera feel, wide (about 24mm equivalent)",
-    "movement": "continuing slow low-angle handheld push-in, bob grows slightly with her bounce",
-    "rig": "handheld phone, operator walking slowly forward from across the road"
-   },
-   "lighting": "Overcast daylight key from high camera-left, soft; fill from the open grey sky; warm gold bounce off her tracksuit stripe onto her jaw and forearms and teal bounce onto the pavement beside her; soft contact shadows under her trainers and each pedestrian. Light stays constant, no clouds breaking.",
-   "environment": "Busy junction, grey tarmac and kerb, a stream of generic pedestrians as soft blurred shapes with no faces readable, distant traffic out of focus, no readable signs, logos or text.",
-   "sound": {
-    "ambience": "real junction traffic, footsteps and crowd murmur, idling engines",
-    "foley": [
-     "sharp referee whistle blast",
-     "metronome rattling with her bounce",
-     "trainer slaps on pavement",
-     "tracksuit swish"
-    ],
-    "music": "none",
-    "voice": "Captain Tempo, on camera, shouts TWO then ONE"
-   },
-   "captions": "",
-   "transition_out": "continuous",
-   "props_from_frame_one": [
-    "referee whistle on red cord",
-    "small handheld metronome clipped to waistband",
-    "white sweatband",
-    "pedestrian signal head showing red standing figure then green walking figure (pictograms only, no text)",
-    "blurred generic pedestrians (extras)"
-   ],
-   "cuts_inside_clip": 0,
-   "generation_unit": "U1"
-  },
-  {
-   "scene_id": "S3",
-   "start_s": 6,
-   "end_s": 9,
-   "location": "Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her",
-   "action": "On AND she freezes, arms raised, and the signal behind her flips from red standing figure to green walking figure exactly on its own timer. She detonates the Tempo Stomp: two stomps of her white trainers, a hip swing, one whistle blast, both fists thrust to the sky. The blurred crowd begins crossing without looking at her.",
-   "performance": "Invested task: claim the change of light as her own work; she holds the instant of the flip with total certainty, then spends every limb on the celebration to sell that she caused it.",
-   "microexpression": "Gap-toothed grin explodes wide, eyebrows lifting skyward with the fists.",
-   "dialogue": [
+      "scene_id": "S2",
+      "start_s": 3,
+      "end_s": 6,
+      "location": "Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her",
+      "action": "Push-in continues. Her right hand lifts the whistle by the cord to her sealed lips and blows one blast, no speech, no grin, left arm hanging at her side. She lets go and the whistle drops to hang on its cord at her chest, then she shouts ONE, knees bending. Feet, signal pole and kerb stay still.",
+      "performance": "Eyes fixed on the crowd; lips sealed on the whistle for the blast, then mouth open for ONE with the whistle hanging.",
+      "microexpression": "Cheeks puff on the sealed-lip blast, then a quick sideways glance at the signal.",
+      "dialogue": [
+        {
+          "speaker": "Captain Tempo",
+          "line": "ONE!",
+          "delivery": "roaring, breathless, almost a bark, whistle hanging on its cord",
+          "on_camera": true
+        }
+      ],
+      "camera": {
+        "shot": "wide, low angle, tightening to knees-up as the push-in closes",
+        "lens": "phone main camera feel, wide (about 24mm equivalent)",
+        "movement": "continuing slow low-angle handheld push-in, bob grows slightly with her bounce",
+        "rig": "handheld phone, operator walking slowly forward from across the road"
+      },
+      "lighting": "Overcast daylight key from high camera-left, soft; fill from the open grey sky; warm gold bounce off her tracksuit stripe onto her jaw and forearms and teal bounce onto the pavement beside her; soft contact shadows under her trainers and each pedestrian. Light stays constant, no clouds breaking.",
+      "environment": "Busy junction, grey tarmac and kerb, a stream of generic pedestrians as soft blurred shapes with no faces readable, distant traffic out of focus, no readable signs, logos or text.",
+      "sound": {
+        "ambience": "real junction traffic, footsteps and crowd murmur, idling engines",
+        "foley": [
+          "sharp referee whistle blast",
+          "whistle cord slapping her chest",
+          "metronome rattling with her bounce",
+          "tracksuit swish"
+        ],
+        "music": "none",
+        "voice": "Silent during the whistle blast; Captain Tempo shouts ONE after the whistle drops"
+      },
+      "captions": "",
+      "transition_out": "continuous",
+      "props_from_frame_one": [
+        "referee whistle on red cord",
+        "small handheld metronome clipped to waistband",
+        "white sweatband",
+        "pedestrian signal head showing red standing figure then green walking figure (pictograms only, no text)",
+        "blurred generic pedestrians (extras)"
+      ],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1",
+      "physical_beat": "Right hand lifts the whistle to sealed lips and blows once, then drops it on its cord and shouts ONE; left arm hangs; feet planted; signal still."
+    },
     {
-     "speaker": "Captain Tempo",
-     "line": "AND!",
-     "delivery": "one explosive shout, held, joyful",
-     "on_camera": true
+      "scene_id": "S3",
+      "start_s": 6,
+      "end_s": 9,
+      "location": "Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her",
+      "action": "On AND she shouts, mouth open, and the signal behind her flips from red standing figure to green walking figure on its own timer. Her white trainers stomp twice, her hips swing and both empty fists thrust to the sky; the whistle swings on its cord. The blurred crowd begins crossing without looking at her. Signal pole and kerb stay still.",
+      "performance": "Holds the instant of the flip with certainty, then grins wide through the Tempo Stomp, whistle hanging on its cord.",
+      "microexpression": "Gap-toothed grin explodes wide, eyebrows lifting skyward with the fists.",
+      "dialogue": [
+        {
+          "speaker": "Captain Tempo",
+          "line": "AND!",
+          "delivery": "one explosive shout, held, joyful",
+          "on_camera": true
+        }
+      ],
+      "camera": {
+        "shot": "wide, low angle, full body, towering silhouette against grey sky",
+        "lens": "phone main camera feel, wide (about 24mm equivalent)",
+        "movement": "low-angle handheld push-in slows to a settle as she peaks, one small wobble on the stomp impact",
+        "rig": "handheld phone, operator walking slowly forward from across the road"
+      },
+      "lighting": "Overcast daylight key from high camera-left, soft; fill from the open grey sky; warm gold bounce off her tracksuit stripe onto her jaw and forearms and teal bounce onto the pavement beside her; soft contact shadows under her trainers and each pedestrian. Light stays constant, no clouds breaking.",
+      "environment": "Busy junction, grey tarmac and kerb, a stream of generic pedestrians as soft blurred shapes with no faces readable, distant traffic out of focus, no readable signs, logos or text.",
+      "sound": {
+        "ambience": "real junction traffic, footsteps and crowd murmur, idling engines",
+        "foley": [
+          "two heavy trainer stomps",
+          "tracksuit swish on hip swing",
+          "whistle cord swinging",
+          "metronome clack",
+          "green-signal beep tone, generic and unlabelled"
+        ],
+        "music": "none",
+        "voice": "Captain Tempo, on camera, shouts AND"
+      },
+      "captions": "",
+      "transition_out": "continuous",
+      "props_from_frame_one": [
+        "referee whistle on red cord",
+        "small handheld metronome clipped to waistband",
+        "white sweatband",
+        "pedestrian signal head showing red standing figure then green walking figure (pictograms only, no text)",
+        "blurred generic pedestrians (extras)"
+      ],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1",
+      "physical_beat": "Both fists thrust skyward after two trainer stomps and a hip swing; whistle swings on its cord; signal flips on its own timer; camera and crowd hold steady."
+    },
+    {
+      "scene_id": "S4",
+      "start_s": 9,
+      "end_s": 12,
+      "location": "Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her",
+      "action": "Fists still in the air, Captain Tempo holds her frozen victory pose, beaming, whistle hanging on its cord at her chest. A single blurred commuter in a dark coat walks calmly through the frame between her raised fists and the camera, hair-width from her, never looking over. Her feet and the camera hold still, then the camera rests, no cut.",
+      "performance": "Proud grin held, eyes locked on camera, pose unbroken as the commuter passes.",
+      "microexpression": "Proud grin holds, one eyebrow twitches up as the commuter passes.",
+      "dialogue": [],
+      "camera": {
+        "shot": "wide settling to medium-wide, low angle, full figure held",
+        "lens": "phone main camera feel, wide (about 24mm equivalent)",
+        "movement": "camera settles into a final held framing with a small handheld breathe, no cut",
+        "rig": "handheld phone, operator walking slowly forward from across the road"
+      },
+      "lighting": "Overcast daylight key from high camera-left, soft; fill from the open grey sky; warm gold bounce off her tracksuit stripe onto her jaw and forearms and teal bounce onto the pavement beside her; soft contact shadows under her trainers and each pedestrian. Light stays constant, no clouds breaking.",
+      "environment": "Busy junction, grey tarmac and kerb, a stream of generic pedestrians as soft blurred shapes with no faces readable, distant traffic out of focus, no readable signs, logos or text.",
+      "sound": {
+        "ambience": "real junction traffic, footsteps and crowd murmur, idling engines",
+        "foley": [
+          "commuter footsteps passing",
+          "fabric brush of the passing coat",
+          "distant traffic",
+          "one last metronome tick"
+        ],
+        "music": "none",
+        "voice": "No speech; crowd murmur and traffic only"
+      },
+      "captions": "",
+      "transition_out": "end of clip, hold on frozen pose",
+      "props_from_frame_one": [
+        "referee whistle on red cord",
+        "small handheld metronome clipped to waistband",
+        "white sweatband",
+        "pedestrian signal head showing red standing figure then green walking figure (pictograms only, no text)",
+        "blurred generic pedestrians (extras)"
+      ],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1",
+      "physical_beat": "Both fists held up in the frozen pose, whistle hanging on its cord, grin steady; a commuter walks past; feet planted; signal and camera hold still."
     }
-   ],
-   "camera": {
-    "shot": "wide, low angle, full body, towering silhouette against grey sky",
-    "lens": "phone main camera feel, wide (about 24mm equivalent)",
-    "movement": "low-angle handheld push-in slows to a settle as she peaks, one small wobble on the stomp impact",
-    "rig": "handheld phone, operator walking slowly forward from across the road"
-   },
-   "lighting": "Overcast daylight key from high camera-left, soft; fill from the open grey sky; warm gold bounce off her tracksuit stripe onto her jaw and forearms and teal bounce onto the pavement beside her; soft contact shadows under her trainers and each pedestrian. Light stays constant, no clouds breaking.",
-   "environment": "Busy junction, grey tarmac and kerb, a stream of generic pedestrians as soft blurred shapes with no faces readable, distant traffic out of focus, no readable signs, logos or text.",
-   "sound": {
-    "ambience": "real junction traffic, footsteps and crowd murmur, idling engines",
-    "foley": [
-     "two heavy trainer stomps",
-     "tracksuit swish on hip swing",
-     "whistle blast",
-     "metronome clack",
-     "green-signal beep tone, generic and unlabelled"
-    ],
-    "music": "none",
-    "voice": "Captain Tempo, on camera, shouts AND"
-   },
-   "captions": "",
-   "transition_out": "continuous",
-   "props_from_frame_one": [
-    "referee whistle on red cord",
-    "small handheld metronome clipped to waistband",
-    "white sweatband",
-    "pedestrian signal head showing red standing figure then green walking figure (pictograms only, no text)",
-    "blurred generic pedestrians (extras)"
-   ],
-   "cuts_inside_clip": 0,
-   "generation_unit": "U1"
-  },
-  {
-   "scene_id": "S4",
-   "start_s": 9,
-   "end_s": 12,
-   "location": "Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her",
-   "action": "Fists still in the air, Captain Tempo holds her frozen victory pose, beaming, whistle in her teeth. A single blurred commuter in a dark coat walks calmly through the frame between her raised fists and the camera, hair-width from her, never looking over. The camera lingers one beat too long on her unblinking triumphant face, then rests, still held.",
-   "performance": "Invested task: soak up the applause nobody is giving; she scans the crowd for acknowledgement, finds none, and refuses to drop the pose.",
-   "microexpression": "Proud grin holds, one eyebrow twitches up as the commuter passes, eyes stay locked on camera.",
-   "dialogue": [],
-   "camera": {
-    "shot": "wide settling to medium-wide, low angle, full figure held",
-    "lens": "phone main camera feel, wide (about 24mm equivalent)",
-    "movement": "camera settles into a final held framing with a small handheld breathe, no cut",
-    "rig": "handheld phone, operator walking slowly forward from across the road"
-   },
-   "lighting": "Overcast daylight key from high camera-left, soft; fill from the open grey sky; warm gold bounce off her tracksuit stripe onto her jaw and forearms and teal bounce onto the pavement beside her; soft contact shadows under her trainers and each pedestrian. Light stays constant, no clouds breaking.",
-   "environment": "Busy junction, grey tarmac and kerb, a stream of generic pedestrians as soft blurred shapes with no faces readable, distant traffic out of focus, no readable signs, logos or text.",
-   "sound": {
-    "ambience": "real junction traffic, footsteps and crowd murmur, idling engines",
-    "foley": [
-     "commuter footsteps passing",
-     "fabric brush of the passing coat",
-     "distant traffic",
-     "one last metronome tick"
-    ],
-    "music": "none",
-    "voice": "No speech; crowd murmur and traffic only"
-   },
-   "captions": "",
-   "transition_out": "end of clip, hold on frozen pose",
-   "props_from_frame_one": [
-    "referee whistle on red cord",
-    "small handheld metronome clipped to waistband",
-    "white sweatband",
-    "pedestrian signal head showing red standing figure then green walking figure (pictograms only, no text)",
-    "blurred generic pedestrians (extras)"
-   ],
-   "cuts_inside_clip": 0,
-   "generation_unit": "U1"
-  }
- ],
- "continuity": {
-  "identity_anchors": "Lean weathered face, deep laugh lines, bright wide-set grey eyes, short silver hair cropped close at the sides and spiky on top, very mobile eyebrows, a wide gap-toothed grin.",
-  "costume": "Glossy teal and gold tracksuit zipped to the chin, white sweatband, a referee whistle on a red cord, chunky white trainers, a small handheld metronome clipped to the waistband; glossy teal tracksuit trousers with a gold side stripe. Same outfit throughout the episode.",
-  "props": [
-   "referee whistle on red cord",
-   "small handheld metronome clipped to waistband",
-   "white sweatband",
-   "pedestrian signal head showing red standing figure then green walking figure (pictograms only, no text)",
-   "blurred generic pedestrians (extras)"
   ],
-  "notes": "Single continuous take, one generation unit U1 of 12 s, zero cuts. Light constant overcast. Signal pictograms only, no text. Strangers are blurred generic extras and never the joke; the passing commuter is a neutral background figure. The Tempo Stomp is original and used once: two stomps, hip swing, whistle blast, both fists to the sky."
- },
- "asset_rights": [
-  {
-   "asset": "captain-tempo-v1 character reference (identity anchors and costume)",
-   "kind": "character_reference",
-   "source": "bible captain-tempo-v1, original character",
-   "rights_status": "owned",
-   "scope": "charbakeoff bake-off test render"
+  "continuity": {
+    "identity_anchors": "Lean weathered face, deep laugh lines, bright wide-set grey eyes, short silver hair cropped close at the sides and spiky on top, very mobile eyebrows, a wide gap-toothed grin.",
+    "costume": "Glossy teal and gold tracksuit zipped to the chin, white sweatband, a referee whistle on a red cord, chunky white trainers, a small handheld metronome clipped to the waistband; glossy teal tracksuit trousers with a gold side stripe. Same outfit throughout the episode.",
+    "props": [
+      "referee whistle on red cord",
+      "small handheld metronome clipped to waistband",
+      "white sweatband",
+      "pedestrian signal head showing red standing figure then green walking figure (pictograms only, no text)",
+      "blurred generic pedestrians (extras)"
+    ],
+    "notes": "Single continuous take, one generation unit U1 of 12 s, zero cuts. Light constant overcast. Signal pictograms only, no text. Strangers are blurred generic extras and never the joke; the passing commuter is a neutral background figure. The Tempo Stomp is original and used once: two stomps, hip swing, both fists to the sky, whistle swinging on its cord."
   },
-  {
-   "asset": "captain-tempo-v1 voice (same voice, booming hoarse counting)",
-   "kind": "voice",
-   "source": "bible approved voice for captain-tempo-v1 / generated on-camera audio",
-   "rights_status": "owned",
-   "scope": "charbakeoff bake-off test render"
-  },
-  {
-   "asset": "pedestrian crossing at a busy junction location still (same location)",
-   "kind": "location_still",
-   "source": "bible recurring location, generated generic junction, no recognisable place",
-   "rights_status": "owned",
-   "scope": "charbakeoff bake-off test render"
-  },
-  {
-   "asset": "Tempo Stomp choreography (original move described in S3)",
-   "kind": "other",
-   "source": "bible signature gesture, original",
-   "rights_status": "owned",
-   "scope": "charbakeoff"
-  }
- ],
- "export": {
-  "aspect_ratio": "9:16",
-  "resolution": "1080x1920",
-  "fps": 30,
-  "container": "mp4",
-  "max_duration_s": 12,
-  "edit_plan": [
-   "Single 12 s Seedance 2.0 Mini generation unit U1, no cuts",
-   "Trim to exactly 12 s; keep generated audio (shouted counting, whistle, ambience)",
-   "Optional burned caption 'She counted. The light changed.' placed lower third, no brand text",
-   "No music"
+  "asset_rights": [
+    {
+      "asset": "captain-tempo-v1 character reference (identity anchors and costume)",
+      "kind": "character_reference",
+      "source": "bible captain-tempo-v1, original character",
+      "rights_status": "owned",
+      "scope": "charbakeoff bake-off test render"
+    },
+    {
+      "asset": "captain-tempo-v1 voice (same voice, booming hoarse counting)",
+      "kind": "voice",
+      "source": "bible approved voice for captain-tempo-v1 / generated on-camera audio",
+      "rights_status": "owned",
+      "scope": "charbakeoff bake-off test render"
+    },
+    {
+      "asset": "pedestrian crossing at a busy junction location still (same location)",
+      "kind": "location_still",
+      "source": "bible recurring location, generated generic junction, no recognisable place",
+      "rights_status": "owned",
+      "scope": "charbakeoff bake-off test render"
+    },
+    {
+      "asset": "Tempo Stomp choreography (original move described in S3)",
+      "kind": "other",
+      "source": "bible signature gesture, original",
+      "rights_status": "owned",
+      "scope": "charbakeoff"
+    }
   ],
-  "disclosure_plan": [
-   "Label as AI-generated content per platform setting",
-   "Note original character, no real people"
+  "export": {
+    "aspect_ratio": "9:16",
+    "resolution": "1080x1920",
+    "fps": 30,
+    "container": "mp4",
+    "max_duration_s": 12,
+    "edit_plan": [
+      "Single 12 s Seedance 2.0 Mini generation unit U1, no cuts",
+      "Trim to exactly 12 s; keep generated audio (shouted counting, whistle, ambience)",
+      "Optional burned caption 'She counted. The light changed.' placed lower third, no brand text",
+      "No music"
+    ],
+    "disclosure_plan": [
+      "Label as AI-generated content per platform setting",
+      "Note original character, no real people"
+    ]
+  },
+  "growth_hypotheses": [
+    {
+      "hypothesis": "A muted viewer reads the rule (count, event, celebration, indifference) from the silhouette and body language alone and watches to the held end.",
+      "metric": "3-second hold rate and average watch percentage",
+      "falsifier": "Under 60 percent hold at 3 s or under 50 percent average watch percentage"
+    },
+    {
+      "hypothesis": "The held beat after a commuter ignores the Stomp drives shares to the friend who thinks they control the light.",
+      "metric": "shares per 1000 views",
+      "falsifier": "Share rate no higher than the comparison bake-off characters"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "Total speech is 4 words across 12 s, far under the 2.8 words/s limit",
+      "kind": "fact",
+      "source": "dialogue count in this storyboard",
+      "confidence": "high"
+    },
+    {
+      "claim": "One continuous take with zero cuts fits the draft_mini single-unit limit",
+      "kind": "fact",
+      "source": "brief render_tier and constraints",
+      "confidence": "high"
+    },
+    {
+      "claim": "Low-angle wide framing with saturated teal and gold against grey keeps the silhouette legible muted",
+      "kind": "inference",
+      "source": "bible visual_language",
+      "confidence": "medium"
+    }
   ]
- },
- "growth_hypotheses": [
-  {
-   "hypothesis": "A muted viewer reads the rule (count, event, celebration, indifference) from the silhouette and body language alone and watches to the held end.",
-   "metric": "3-second hold rate and average watch percentage",
-   "falsifier": "Under 60 percent hold at 3 s or under 50 percent average watch percentage"
-  },
-  {
-   "hypothesis": "The held beat after a commuter ignores the Stomp drives shares to the friend who thinks they control the light.",
-   "metric": "shares per 1000 views",
-   "falsifier": "Share rate no higher than the comparison bake-off characters"
-  }
- ],
- "evidence": [
-  {
-   "claim": "Total speech is 4 words across 12 s, far under the 2.8 words/s limit",
-   "kind": "fact",
-   "source": "dialogue count in this storyboard",
-   "confidence": "high"
-  },
-  {
-   "claim": "One continuous take with zero cuts fits the draft_mini single-unit limit",
-   "kind": "fact",
-   "source": "brief render_tier and constraints",
-   "confidence": "high"
-  },
-  {
-   "claim": "Low-angle wide framing with saturated teal and gold against grey keeps the silhouette legible muted",
-   "kind": "inference",
-   "source": "bible visual_language",
-   "confidence": "medium"
-  }
- ]
 }
 <!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->

@@ -1,0 +1,25 @@
+{
+  "kind": "physics_ab_test",
+  "purpose": "owner inspection 2026-10-08 found floating props and a whistle in an open mouth on v1 renders; test prompt fix alone (Mini) vs prompt fix + stronger model (Seedance 2.5 draft)",
+  "packet_id": "CB-uncle-verdict-v1",
+  "job_id": "a07f073b-a622-42e4-8e90-a30aa2594d2f",
+  "model_requested": "seedance_2_0_mini",
+  "resolution": "720p",
+  "duration": 12,
+  "generate_audio": true,
+  "prompt_style": "compact_physics_first (engine/physics.py)",
+  "medias": [
+    {
+      "role": "image_references",
+      "job_id": "cb1f3458-a537-48af-950d-c42de75a4b28"
+    }
+  ],
+  "cost": {
+    "quoted_credits": 12,
+    "charged_credits": null
+  },
+  "submitted_at": "2026-10-08",
+  "render_inspection": {
+    "status": "pending_owner"
+  }
+}

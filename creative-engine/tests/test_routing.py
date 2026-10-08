@@ -82,3 +82,30 @@ class TestBakeoffAdditions(unittest.TestCase):
                              {"asset": "Foley", "kind": "other", "source": "x", "rights_status": "owned", "scope": "s"}]
         _normalise_rights_against_registry(p, {"approved_assets": {"locations": []}})
         self.assertEqual([r["rights_status"] for r in p["asset_rights"]], ["unresolved", "owned"])
+
+
+class TestPhysics(unittest.TestCase):
+    def test_mouth_conflict_and_overload(self):
+        from engine.physics import scene_physics_findings
+        s = {"scene_id": "S3", "start_s": 6, "end_s": 9, "action": "She clamps the whistle in her teeth and blasts it. She grins wide and shouts AND. She lifts the paddle, the umbrella and the clipboard.", "performance": "", "dialogue": [{"speaker": "x", "line": "AND!"}]}
+        codes = {f["code"] for f in scene_physics_findings(s, "draft_mini")}
+        self.assertIn("PHYSICS_MOUTH_CONFLICT", codes); self.assertIn("PHYSICS_HANDS_OVERLOAD", codes); self.assertIn("PHYSICS_ACTION_DENSITY", codes)
+        s2 = {"scene_id": "S2", "start_s": 0, "end_s": 3, "action": "She lifts the paddle and writes with the pen.", "performance": ""}
+        self.assertIn("PHYSICS_NO_CONTACT", {f["code"] for f in scene_physics_findings(s2, "draft_mini")})
+
+    def test_clean_beat_passes(self):
+        from engine.physics import scene_physics_findings
+        s = {"scene_id": "S1", "start_s": 0, "end_s": 3, "action": "Her right hand grips the paddle shaft on her thigh; the umbrella rests across her lap; everything else holds still.", "performance": "", "dialogue": [], "physical_beat": "Right hand grips the paddle on her thigh, left hand flat on the umbrella across her lap, body still."}
+        self.assertEqual(scene_physics_findings(s, "draft_mini"), [])
+
+    def test_compact_prompt_used_when_beats_exist(self):
+        p = valid_packet()
+        for s in p["scenes"]:
+            s["physical_beat"] = "Right hand grips the clipboard at chest height, left hand still at her side, feet planted."
+        tm = plan(p, bible())
+        u = tm["units"][0]
+        self.assertEqual(u["prompt_style"], "compact_physics_first")
+        self.assertLess(len(u["prompt_text"].split()), 320); self.assertIn("Physics:", u["prompt_text"]); self.assertIn("TOP PRIORITY", u["prompt_text_full"])
+        for s in p["scenes"]:
+            s.pop("physical_beat")
+        self.assertEqual(plan(p, bible())["units"][0]["prompt_style"], "dense_legacy")

@@ -15,7 +15,8 @@ Realisation rules: single-take architectures = no cuts and one generation unit (
 
 ## Rules
 - Scenes tile [0, duration_target_s] exactly: first start_s = 0, each start_s = previous end_s, last end_s = target.
-- Each scene: location, action, performance (an invested task, not an emotion adjective), microexpression, camera {shot, lens, movement, rig}, lighting (key direction + colour bounce + contact shadows), environment, sound {ambience, foley[], music, voice}, transition_out, props_from_frame_one, cuts_inside_clip (0 or 1), generation_unit (which clip this belongs to; clips are 4-30 s).
+- PHYSICS CONTRACT (added 2026-10-08 after rendered tests showed floating props and a whistle hovering in an open mouth): each scene carries ONE `physical_beat` sentence (<=40 words) stating who moves what, with which hand, the contact point (grip, palm, lap, strap, surface), what holds still, AND any world event the joke depends on (rain starts, a light changes, a stranger passes). The render prompt sends only this beat plus dialogue, so anything missing from it will not be rendered. Rules: two hands, so at most two held objects per beat, everything else rests on a strap, lap or surface; an object in the mouth means no speech and no open grin in that beat (put the whistle on its cord before the line); one main physical action per 3 seconds; describe the chain cause -> movement -> contact -> consequence, never an acting label; say what stays still. Dense multi-action beats are where cheap models drift.
+- Each scene: physical_beat, location, action, performance (an invested task, not an emotion adjective), microexpression, camera {shot, lens, movement, rig}, lighting (key direction + colour bounce + contact shadows), environment, sound {ambience, foley[], music, voice}, transition_out, props_from_frame_one, cuts_inside_clip (0 or 1), generation_unit (which clip this belongs to; clips are 4-30 s).
 - One on-camera speaker per scene at most; a second voice is off-camera.
 - Signature gesture at most once. The bible's rule must cause the payoff.
 - Continuity: restate identity anchors verbatim from the bible; list every moving prop; costume per episode.
@@ -47,11 +48,11 @@ Realisation rules: single-take architectures = no cuts and one generation unit (
 ## Output contract (JSON only)
 {
   "script": {"title": "", "synopsis": "", "beats": [{"beat": "", "function": "hook|setup|escalation|turn|payoff|button|cta"}], "dialogue": [{"speaker": "", "line": "", "delivery": "", "on_camera": true}], "caption_text": "", "cta": "", "disclosure_line": ""},
-  "scenes": [ {"scene_id": "S1", "start_s": 0, "end_s": 0, "location": "", "action": "", "performance": "", "microexpression": "", "dialogue": [], "camera": {"shot": "", "lens": "", "movement": "", "rig": ""}, "lighting": "", "environment": "", "sound": {"ambience": "", "foley": [], "music": "none", "voice": ""}, "captions": "", "transition_out": "", "props_from_frame_one": [], "cuts_inside_clip": 0, "generation_unit": "U1"} ],
+  "scenes": [ {"scene_id": "S1", "start_s": 0, "end_s": 0, "physical_beat": "", "location": "", "action": "", "performance": "", "microexpression": "", "dialogue": [], "camera": {"shot": "", "lens": "", "movement": "", "rig": ""}, "lighting": "", "environment": "", "sound": {"ambience": "", "foley": [], "music": "none", "voice": ""}, "captions": "", "transition_out": "", "props_from_frame_one": [], "cuts_inside_clip": 0, "generation_unit": "U1"} ],
   "continuity": {"identity_anchors": "", "costume": "", "props": [], "notes": ""},
   "asset_rights": [ {"asset": "", "kind": "character_reference|location_still|voice|music|driving_footage|product_image|font|other", "source": "", "rights_status": "owned|licensed|consented|unresolved|not_needed", "scope": ""} ],
   "export": {"aspect_ratio": "9:16", "resolution": "1080x1920", "fps": 30, "container": "mp4", "max_duration_s": 0, "edit_plan": [""], "disclosure_plan": [""]},
   "growth_hypotheses": [ {"hypothesis": "", "metric": "", "falsifier": ""} ],
   "evidence": [ {"claim": "", "kind": "fact|inference|hypothesis", "source": "", "confidence": "low|medium|high"} ]
 }
-Self-check before answering: timings tile exactly; every scene has camera.shot/lens/movement and sound.ambience; props used appear in continuity.props; speech rate; one cut max; silent means no dialogue.
+Self-check before answering: every scene has a physical_beat obeying the physics contract; timings tile exactly; every scene has camera.shot/lens/movement and sound.ambience; props used appear in continuity.props; speech rate; one cut max; silent means no dialogue.

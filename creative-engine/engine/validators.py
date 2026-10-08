@@ -456,4 +456,7 @@ def validate_all(packet: dict, bible: dict | None = None) -> Report:
     validate_rights(packet, rep)
     validate_approval(packet, rep)
     validate_selection(packet, rep)
+    from .physics import physics_findings
+    for f in physics_findings(packet):
+        rep.warn(f["code"], f["message"], f["path"])
     return rep

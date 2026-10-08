@@ -219,7 +219,7 @@
             "function": "setup"
           },
           {
-            "beat": "Whistle blast on TWO, roar of ONE, push-in tightens",
+            "beat": "TWO shouted, then a silent whistle blast with lips sealed, then the roar of ONE; push-in tightens",
             "function": "escalation"
           },
           {
@@ -241,13 +241,13 @@
           {
             "speaker": "Captain Tempo",
             "line": "TWO!",
-            "delivery": "louder, whistle after",
+            "delivery": "louder, whistle hanging on its cord",
             "on_camera": true
           },
           {
             "speaker": "Captain Tempo",
             "line": "ONE!",
-            "delivery": "roaring, breathless",
+            "delivery": "roaring, breathless, after the whistle blast",
             "on_camera": true
           },
           {
@@ -267,14 +267,20 @@
           "start_s": 0,
           "end_s": 3,
           "location": "Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her",
-          "action": "Wide, slightly low across the road: Captain Tempo stands at the kerb towering over a blurred grey stream of pedestrians, both arms raised like a conductor about to cue an orchestra, red standing figure glowing on the signal behind her. Her raised arms slam down on the beat as she bellows THREE and the handheld camera starts its slow push-in.",
-          "performance": "Invested task: set the downbeat for the entire crossing; she stares down the blurred crowd, hunting for any sign they are following her tempo, and sharpens her baton arms when they ignore it.",
-          "microexpression": "Eyebrows shoot up on the downbeat, then lock into a stern conductor's frown.",
+          "action": "Wide, slightly low across the road: Captain Tempo stands at the kerb, both arms raised, hands open, red standing figure glowing on the signal behind her. Her arms drop on THREE and rise again on TWO, mouth open to shout, whistle hanging on its cord and metronome clipped to the waistband; the handheld camera begins its slow push-in. Feet, signal pole and kerb stay still.",
+          "performance": "Stern conductor's stare at the crowd, jaw set, open-mouthed shouts of THREE and TWO, whistle hanging on its cord.",
+          "microexpression": "Eyebrows shoot up on the downbeat, then lock into a stern frown.",
           "dialogue": [
             {
               "speaker": "Captain Tempo",
               "line": "THREE!",
               "delivery": "hoarse booming shout on the downbeat, rhythmic",
+              "on_camera": true
+            },
+            {
+              "speaker": "Captain Tempo",
+              "line": "TWO!",
+              "delivery": "louder, whistle hanging on its cord",
               "on_camera": true
             }
           ],
@@ -292,10 +298,10 @@
               "metronome tick on the waistband",
               "tracksuit fabric swish as arms drop",
               "trainer scuff on kerb",
-              "whistle cord swinging"
+              "whistle cord swinging against her chest"
             ],
             "music": "none",
-            "voice": "Captain Tempo, on camera, hoarse booming count"
+            "voice": "Captain Tempo, on camera, hoarse booming count THREE then TWO"
           },
           "captions": "",
           "transition_out": "continuous",
@@ -307,27 +313,22 @@
             "blurred generic pedestrians (extras)"
           ],
           "cuts_inside_clip": 0,
-          "generation_unit": "U1"
+          "generation_unit": "U1",
+          "physical_beat": "Both arms raised, hands open as a conductor, slam down on THREE and rise on TWO; red standing figure glows on the signal behind her; whistle hangs on its cord; feet planted."
         },
         {
           "scene_id": "S2",
           "start_s": 3,
           "end_s": 6,
           "location": "Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her",
-          "action": "Push-in continues. Her arms conduct harder, left hand chopping time, right hand circling; legs bounce on the spot. On TWO she clamps the whistle in her teeth and blasts it, then spits it out into a roar of ONE, knees bending, torso leaning toward camera as the lens closes in.",
-          "performance": "Invested task: wind the whole street up to a single instant; she drives each number into the crowd with her entire body and checks the red figure over her shoulder with a flick of the eyes between counts.",
-          "microexpression": "Eyes widen on the whistle blast, cheeks puff, a quick sideways glance at the signal.",
+          "action": "Push-in continues. Her right hand lifts the whistle by the cord to her sealed lips and blows one blast, no speech, no grin, left arm hanging at her side. She lets go and the whistle drops to hang on its cord at her chest, then she shouts ONE, knees bending. Feet, signal pole and kerb stay still.",
+          "performance": "Eyes fixed on the crowd; lips sealed on the whistle for the blast, then mouth open for ONE with the whistle hanging.",
+          "microexpression": "Cheeks puff on the sealed-lip blast, then a quick sideways glance at the signal.",
           "dialogue": [
             {
               "speaker": "Captain Tempo",
-              "line": "TWO!",
-              "delivery": "louder, whistle blast right after",
-              "on_camera": true
-            },
-            {
-              "speaker": "Captain Tempo",
               "line": "ONE!",
-              "delivery": "roaring, breathless, almost a bark",
+              "delivery": "roaring, breathless, almost a bark, whistle hanging on its cord",
               "on_camera": true
             }
           ],
@@ -343,12 +344,12 @@
             "ambience": "real junction traffic, footsteps and crowd murmur, idling engines",
             "foley": [
               "sharp referee whistle blast",
+              "whistle cord slapping her chest",
               "metronome rattling with her bounce",
-              "trainer slaps on pavement",
               "tracksuit swish"
             ],
             "music": "none",
-            "voice": "Captain Tempo, on camera, shouts TWO then ONE"
+            "voice": "Silent during the whistle blast; Captain Tempo shouts ONE after the whistle drops"
           },
           "captions": "",
           "transition_out": "continuous",
@@ -360,15 +361,16 @@
             "blurred generic pedestrians (extras)"
           ],
           "cuts_inside_clip": 0,
-          "generation_unit": "U1"
+          "generation_unit": "U1",
+          "physical_beat": "Right hand lifts the whistle to sealed lips and blows once, then drops it on its cord and shouts ONE; left arm hangs; feet planted; signal still."
         },
         {
           "scene_id": "S3",
           "start_s": 6,
           "end_s": 9,
           "location": "Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her",
-          "action": "On AND she freezes, arms raised, and the signal behind her flips from red standing figure to green walking figure exactly on its own timer. She detonates the Tempo Stomp: two stomps of her white trainers, a hip swing, one whistle blast, both fists thrust to the sky. The blurred crowd begins crossing without looking at her.",
-          "performance": "Invested task: claim the change of light as her own work; she holds the instant of the flip with total certainty, then spends every limb on the celebration to sell that she caused it.",
+          "action": "On AND she shouts, mouth open, and the signal behind her flips from red standing figure to green walking figure on its own timer. Her white trainers stomp twice, her hips swing and both empty fists thrust to the sky; the whistle swings on its cord. The blurred crowd begins crossing without looking at her. Signal pole and kerb stay still.",
+          "performance": "Holds the instant of the flip with certainty, then grins wide through the Tempo Stomp, whistle hanging on its cord.",
           "microexpression": "Gap-toothed grin explodes wide, eyebrows lifting skyward with the fists.",
           "dialogue": [
             {
@@ -391,7 +393,7 @@
             "foley": [
               "two heavy trainer stomps",
               "tracksuit swish on hip swing",
-              "whistle blast",
+              "whistle cord swinging",
               "metronome clack",
               "green-signal beep tone, generic and unlabelled"
             ],
@@ -408,16 +410,17 @@
             "blurred generic pedestrians (extras)"
           ],
           "cuts_inside_clip": 0,
-          "generation_unit": "U1"
+          "generation_unit": "U1",
+          "physical_beat": "Both fists thrust skyward after two trainer stomps and a hip swing; whistle swings on its cord; signal flips on its own timer; camera and crowd hold steady."
         },
         {
           "scene_id": "S4",
           "start_s": 9,
           "end_s": 12,
           "location": "Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her",
-          "action": "Fists still in the air, Captain Tempo holds her frozen victory pose, beaming, whistle in her teeth. A single blurred commuter in a dark coat walks calmly through the frame between her raised fists and the camera, hair-width from her, never looking over. The camera lingers one beat too long on her unblinking triumphant face, then rests, still held.",
-          "performance": "Invested task: soak up the applause nobody is giving; she scans the crowd for acknowledgement, finds none, and refuses to drop the pose.",
-          "microexpression": "Proud grin holds, one eyebrow twitches up as the commuter passes, eyes stay locked on camera.",
+          "action": "Fists still in the air, Captain Tempo holds her frozen victory pose, beaming, whistle hanging on its cord at her chest. A single blurred commuter in a dark coat walks calmly through the frame between her raised fists and the camera, hair-width from her, never looking over. Her feet and the camera hold still, then the camera rests, no cut.",
+          "performance": "Proud grin held, eyes locked on camera, pose unbroken as the commuter passes.",
+          "microexpression": "Proud grin holds, one eyebrow twitches up as the commuter passes.",
           "dialogue": [],
           "camera": {
             "shot": "wide settling to medium-wide, low angle, full figure held",
@@ -448,7 +451,8 @@
             "blurred generic pedestrians (extras)"
           ],
           "cuts_inside_clip": 0,
-          "generation_unit": "U1"
+          "generation_unit": "U1",
+          "physical_beat": "Both fists held up in the frozen pose, whistle hanging on its cord, grin steady; a commuter walks past; feet planted; signal and camera hold still."
         }
       ],
       "continuity": {
@@ -461,14 +465,14 @@
           "pedestrian signal head showing red standing figure then green walking figure (pictograms only, no text)",
           "blurred generic pedestrians (extras)"
         ],
-        "notes": "Single continuous take, one generation unit U1 of 12 s, zero cuts. Light constant overcast. Signal pictograms only, no text. Strangers are blurred generic extras and never the joke; the passing commuter is a neutral background figure. The Tempo Stomp is original and used once: two stomps, hip swing, whistle blast, both fists to the sky."
+        "notes": "Single continuous take, one generation unit U1 of 12 s, zero cuts. Light constant overcast. Signal pictograms only, no text. Strangers are blurred generic extras and never the joke; the passing commuter is a neutral background figure. The Tempo Stomp is original and used once: two stomps, hip swing, both fists to the sky, whistle swinging on its cord."
       },
       "asset_rights": [
         {
           "asset": "captain-tempo-v1 character reference (identity anchors and costume)",
           "kind": "character_reference",
           "source": "bible captain-tempo-v1, original character",
-          "rights_status": "unresolved",
+          "rights_status": "owned",
           "scope": "charbakeoff bake-off test render"
         },
         {
@@ -540,12 +544,6 @@
           "kind": "inference",
           "source": "bible visual_language",
           "confidence": "medium"
-        },
-        {
-          "claim": "asset 'captain-tempo-v1 character reference (identity anchors and costume)' declared owned but registry status is generated_pending_owner_approval; downgraded to unresolved",
-          "kind": "fact",
-          "source": "bible.approved_assets",
-          "confidence": "high"
         }
       ]
     },
@@ -629,6 +627,31 @@
       "provider": "broker",
       "latency_s": 0.0,
       "at": "2026-10-08T05:59:31Z"
+    },
+    {
+      "stage": "script_storyboard",
+      "attempt": 1,
+      "result": "ok",
+      "note": "physics repair after owner render inspection 2026-10-08 (floating props, whistle in open mouth)",
+      "observed_model": "not independently observable (Agent tool; model=sonnet requested)"
+    },
+    {
+      "stage": "qa_review",
+      "attempt": 0,
+      "result": "ok",
+      "errors": 0,
+      "requested_model": "sonnet",
+      "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+      "usage": {},
+      "provider": "broker",
+      "latency_s": 0.0,
+      "at": "2026-10-08T06:25:05Z"
+    },
+    {
+      "stage": "script_storyboard",
+      "attempt": 2,
+      "result": "ok",
+      "note": "orchestrator edit: world event added to physical_beat (rain/umbrella; signal) so the compact prompt carries the joke"
     }
   ],
   "demos": [

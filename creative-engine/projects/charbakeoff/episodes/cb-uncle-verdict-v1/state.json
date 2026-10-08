@@ -259,8 +259,9 @@
           "start_s": 0,
           "end_s": 6,
           "location": "outside a corner shop on a pavement (generic, unrecognisable)",
-          "action": "Locked portrait. Uncle Verdict sits on the white chair, paddle upright on his thigh with the dial at 2, closed umbrella across his knees, a thin grey rain edge at the top of frame. He lifts the paddle slightly so the 2 reads, and delivers the verdict.",
-          "performance": "Invested task: present the verdict like a judge reading a ruling, eyes steady on the lens, finger resting on the dial.",
+          "action": "Locked portrait. Uncle Verdict sits on the white chair, left hand gripping the paddle upright on his left thigh with the dial at 2, right palm flat on the closed umbrella across his lap, thin grey rain edge at top of frame. He speaks the verdict; chair, umbrella and paddle stay still.",
+          "physical_beat": "Left hand grips the paddle shaft upright on his left thigh, right palm flat on the closed umbrella across his lap, body and chair still.",
+          "performance": "Present the verdict like a judge reading a ruling, eyes steady on the lens.",
           "microexpression": "One slow blink on 'ten'; the half-smile does not change.",
           "dialogue": [
             {
@@ -307,8 +308,9 @@
           "start_s": 6,
           "end_s": 9,
           "location": "outside a corner shop on a pavement (generic, unrecognisable)",
-          "action": "First drops land on the paddle wood and then on his bald crown. From the right frame edge a generic passer-by's open plain umbrella slides through, dry underneath. He does not move, shelter or blink.",
-          "performance": "Invested task: hold his verdict against the weather, eyes fixed on the lens, refusing to glance at the sky.",
+          "action": "First drops land on the paddle wood, then on his bald crown, and a generic passer-by's open plain umbrella slides through from the right frame edge, dry underneath. He does not move; paddle, umbrella and chair stay still.",
+          "physical_beat": "Rain starts: drops darken his bald crown and the paddle; a stranger's open dark umbrella slides past the right frame edge; his left hand keeps the paddle upright on his thigh, body still.",
+          "performance": "Hold his verdict against the weather, eyes fixed on the lens, not glancing at the sky.",
           "microexpression": "Drop runs down his forehead; the half-smile and heavy-lidded calm do not change.",
           "dialogue": [],
           "camera": {
@@ -348,8 +350,9 @@
           "start_s": 9,
           "end_s": 12,
           "location": "outside a corner shop on a pavement (generic, unrecognisable)",
-          "action": "He turns the dial with one finger from 2 down to 1 (exaggerated click), holds the paddle up to the lens showing 1, rain pouring, umbrella gone from frame, and says the final word. Holds the pose on the last frame.",
-          "performance": "Invested task: correct the dial and present it with total certainty, finger steady, eyes on the lens.",
+          "action": "His right index finger turns the dial from 2 down to 1 with an exaggerated click while his left hand holds the paddle, then the left hand raises the paddle toward the lens showing 1 and he says the final word. Umbrella stays across his lap, chair stays still, final pose holds.",
+          "physical_beat": "Left hand grips the paddle shaft and lifts it toward the lens, right index finger turns the dial from 2 to 1, umbrella rests across his lap.",
+          "performance": "Present the corrected dial with total certainty, finger steady, eyes on the lens.",
           "microexpression": "Slow blink after the word; rain on the crown, serenity unchanged.",
           "dialogue": [
             {
@@ -424,7 +427,7 @@
           "asset": "uncle-verdict-v1/character_reference",
           "kind": "character_reference",
           "source": "original character, bible uncle-verdict-v1",
-          "rights_status": "unresolved",
+          "rights_status": "owned",
           "scope": "bake-off test render; name/IP uncleared"
         }
       ],
@@ -474,12 +477,6 @@
           "kind": "hypothesis",
           "source": "bible contains no approved_assets list",
           "confidence": "low"
-        },
-        {
-          "claim": "asset 'uncle-verdict-v1/character_reference' declared owned but registry status is generated_pending_owner_approval; downgraded to unresolved",
-          "kind": "fact",
-          "source": "bible.approved_assets",
-          "confidence": "high"
         }
       ]
     },
@@ -563,6 +560,31 @@
       "provider": "broker",
       "latency_s": 0.0,
       "at": "2026-10-08T05:59:18Z"
+    },
+    {
+      "stage": "script_storyboard",
+      "attempt": 1,
+      "result": "ok",
+      "note": "physics repair after owner render inspection 2026-10-08 (floating props, whistle in open mouth)",
+      "observed_model": "not independently observable (Agent tool; model=sonnet requested)"
+    },
+    {
+      "stage": "qa_review",
+      "attempt": 0,
+      "result": "ok",
+      "errors": 0,
+      "requested_model": "sonnet",
+      "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+      "usage": {},
+      "provider": "broker",
+      "latency_s": 0.0,
+      "at": "2026-10-08T06:25:05Z"
+    },
+    {
+      "stage": "script_storyboard",
+      "attempt": 2,
+      "result": "ok",
+      "note": "orchestrator edit: world event added to physical_beat (rain/umbrella; signal) so the compact prompt carries the joke"
     }
   ],
   "demos": [
