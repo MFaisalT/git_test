@@ -459,4 +459,8 @@ def validate_all(packet: dict, bible: dict | None = None) -> Report:
     from .physics import physics_findings
     for f in physics_findings(packet):
         rep.warn(f["code"], f["message"], f["path"])
+    for u in (packet.get("tool_mapping") or {}).get("units", []) or []:
+        pb = u.get("prompt_budget") or {}
+        if pb.get("over_budget"):
+            rep.warn("PROMPT_OVER_BUDGET", f"{u.get('generation_unit')}: render prompt {pb.get('words')} words after all trims, budget {pb.get('word_budget')} for {pb.get('audio_mode')}; shorten the physical_beat sentences", f"tool_mapping.{u.get('generation_unit')}")
     return rep

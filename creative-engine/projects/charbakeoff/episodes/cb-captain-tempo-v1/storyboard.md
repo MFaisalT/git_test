@@ -93,7 +93,7 @@ Disclosure: AI-generated character and footage; original character.
 - The held beat after a commuter ignores the Stomp drives shares to the friend who thinks they control the light. - metric: shares per 1000 views - falsifier: Share rate no higher than the comparison bake-off characters
 
 ## QA
-- Deterministic: PASS (0 errors, 1 warnings)
+- Deterministic: PASS (0 errors, 2 warnings)
 - Repetition check: no-lexical-repetition-detected flagged=[]
 - Creative review: A clean, well-specified single-take introduction that shows silhouette, rule and gesture legibly muted and stays inside the draft_mini and bible constraints. Its main weaknesses are a familiar comedic core, face-level identity anchors that a wide shot cannot deliver, and a very dense 12 s of choreography for one cheap generation.
 

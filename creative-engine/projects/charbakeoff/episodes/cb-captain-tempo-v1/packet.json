@@ -685,13 +685,19 @@
     "deterministic": {
       "ok": true,
       "error_count": 0,
-      "warning_count": 1,
+      "warning_count": 2,
       "findings": [
         {
           "code": "RIGHTS_UNRESOLVED",
           "severity": "warning",
           "message": "unresolved rights: ['captain-tempo-v1 character reference (identity anchors and costume)', 'captain-tempo-v1 voice (same voice, booming hoarse counting)', 'pedestrian crossing at a busy junction location still (same location)'] (acceptable while planning)",
           "path": ""
+        },
+        {
+          "code": "PROMPT_OVER_BUDGET",
+          "severity": "warning",
+          "message": "U1: render prompt 273 words after all trims, budget 260 for on_camera_dialogue; shorten the physical_beat sentences",
+          "path": "tool_mapping.U1"
         }
       ]
     },
@@ -761,12 +767,12 @@
       "flagged_fields": [],
       "recurring_motifs": [
         {
-          "motif": "prop:small",
+          "motif": "format:single_take_static+on_camera_dialogue",
           "episodes": 2,
           "share": 0.67
         },
         {
-          "motif": "format:single_take_static+on_camera_dialogue",
+          "motif": "prop:small",
           "episodes": 2,
           "share": 0.67
         },
@@ -794,7 +800,7 @@
     }
   ],
   "provenance": {
-    "generated_at": "2026-10-08T06:37:31Z",
+    "generated_at": "2026-10-08T06:37:44Z",
     "provider": "broker",
     "requested_model": "sonnet",
     "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
