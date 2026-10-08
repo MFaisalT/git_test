@@ -10,3 +10,4 @@
 {"type": "bible_version", "bible_id": "uncle-verdict-v1", "version": 6, "reason": "lock Uncle Verdict's custom voice (owner-picked designed take M3, cloned) - permanent", "at": "2026-10-08T09:28:03Z"}
 {"type": "bible_version", "bible_id": "uncle-verdict-v1", "version": 7, "reason": "record the locked voice's measured speaking rate (2.0 w/s) for scene timing; voice unchanged", "at": "2026-10-08T10:42:13Z"}
 {"type": "bible_version", "bible_id": "uncle-verdict-v1", "version": 8, "reason": "verdict format drops 'Correct answer:' (owner agreed it reads vague); voice unchanged", "at": "2026-10-08T11:19:24Z"}
+{"type": "bible_version", "bible_id": "uncle-verdict-v1", "version": 9, "reason": "dial lands on the spoken score (rests on 5, set to the verdict); voice unchanged", "at": "2026-10-08T14:34:39Z"}

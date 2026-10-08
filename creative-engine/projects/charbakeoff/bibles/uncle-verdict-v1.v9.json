@@ -1,0 +1,150 @@
+{
+  "bible_id": "uncle-verdict-v1",
+  "version": 9,
+  "show_title": "Uncle Verdict (working title; name/IP uncleared)",
+  "logline": "A serene 55-year-old man in a mustard suit sets up a plastic chair in public places and rates everyday things with total confidence and total wrongness, and when the world proves him wrong in front of him, he doubles down.",
+  "character": {
+    "name": "Uncle Verdict",
+    "age_range": "52-58",
+    "sex_presentation": "man",
+    "silhouette": "Mustard-yellow three-piece suit slightly too big, open collar, a folding white plastic garden chair he carries everywhere, a large wooden scoring paddle with a dial from 0 to 10, brown leather loafers with no socks.",
+    "identity_anchors": "Round soft face, heavy-lidded calm eyes, neat salt-and-pepper beard trimmed short, bald shining crown with a ring of grey hair, slow blink, serene half-smile that never changes.",
+    "hair": "bald crown with a short ring of grey hair, neat short salt-and-pepper beard",
+    "lower_body": "mustard suit trousers slightly too long, brown leather loafers, no socks",
+    "desire": "To be the final authority on how things should be.",
+    "flaw": "He is confidently wrong about everything measurable and immune to evidence.",
+    "rule": "He rates an everyday thing on the paddle with serene certainty; the world shows the obvious truth in frame; he turns the dial from its resting 5 down to the score he just spoke and says 'Final.' (owner 2026-10-08: the dial must land on the spoken score) The camera shows the evidence before he does.",
+    "performance_register": "Seated stillness and calm; the loudness is in the opinion, not the voice; comedy from the gap between certainty and evidence; invites the viewer to argue.",
+    "voice": "Slow, warm, certain; verdict format: '[Thing]. [Score] out of ten. [Absurd one-line description].' (owner 2026-10-08: 'Correct answer' dropped as vague) Never raises his voice. Locked voice: 'Uncle Verdict v1' (element 0138a858), see approved_assets.voice.",
+    "signature_gesture": "A slow turn of the paddle dial with one finger, then he holds the paddle up to the lens (once per episode)."
+  },
+  "world": {
+    "recurring_locations": [
+      "outside a corner shop on a pavement",
+      "public park bench row",
+      "laundrette window seat"
+    ],
+    "visual_language": "Handheld UGC phone: a friend holds the phone at his seated eye level; breathing sway and small reframes in every shot; a slow creep-in while he delivers a verdict; the camera notices the evidence first (a small tilt or reframe to it); the payoff lands in a push-in to a tight close-up of his face; mustard against grey.",
+    "sound_language": "Quiet street ambience; the paddle dial click exaggerated; no music."
+  },
+  "do_not": [
+    "No bob/moustache/white-tunic combination or any researched creator's identity, catchphrase, costume or footage.",
+    "No real people, no real brands, no religion, no politics, no mocking of strangers' bodies, accents, disabilities or faith; strangers in frame are generic extras who never become the joke.",
+    "No trending dance or sound that is not cleared; any dance is an original move described in the storyboard.",
+    "No firsthand product endorsements.",
+    "Opinions are about objects, food, habits and everyday choices only; never about people, groups, places' inhabitants, beliefs or bodies."
+  ],
+  "evolution_policy": "The rated thing varies every episode; silhouette, rule, register and gesture are fixed until a versioned bump.",
+  "provenance": {
+    "created": "2026-10-08",
+    "basis": "owner feedback 2026-10-08: reference accounts provoke argument; hypothesis C provokes argument about taste only, keeping platform and legal exposure low",
+    "status": "hypothesis, untested",
+    "saved_at": "2026-10-08T14:34:39Z",
+    "bump_reason": "dial lands on the spoken score (rests on 5, set to the verdict); voice unchanged"
+  },
+  "audience": {
+    "target": "global; wrong takes on universal objects (tea, toast, umbrellas); subtitle-ready",
+    "language_default": "English when spoken; captions always"
+  },
+  "approved_assets": {
+    "character_reference": {
+      "asset_id": "char-uncle-verdict-v1",
+      "status": "generated_pending_owner_approval",
+      "candidates": [
+        {
+          "job_id": "cb1f3458-a537-48af-950d-c42de75a4b28",
+          "variant": 0
+        }
+      ],
+      "model_requested": "nano_banana_pro",
+      "model_reported_by_job": "nano_banana_2",
+      "credits_each": 2,
+      "generated_at": "2026-10-08T05:55Z"
+    },
+    "locations": [],
+    "voice": {
+      "asset_id": "voice-uncle-verdict-v1",
+      "voice_id": "0138a858-eebd-4457-a488-396e2732279a",
+      "voice_type": "element",
+      "name": "Uncle Verdict v1",
+      "reference_audio": "a61301f9-422b-4334-9072-070ca23e6a8b",
+      "status": "locked",
+      "provenance": "designed_from_character",
+      "locked_at": "2026-10-08",
+      "owner_picked_take": {
+        "job_id": "9b8b9239-6271-4aae-ad23-c344182eee83",
+        "engine": "elevenlabs_v4",
+        "base_preset": "Holden 3c9d6053-6334-592c-8997-4e325286af3f",
+        "stability": 0.3,
+        "similarity_boost": 0.8,
+        "clone_source_media": "2593920c-f99c-42ab-bc51-2f0f7690280a"
+      },
+      "tts_engine": {
+        "model": "elevenlabs_v4",
+        "stability": 0.3,
+        "similarity_boost": 0.8,
+        "tags_per_line_max": 2
+      },
+      "direction_block": "A calm, warm man in his mid-fifties, seated, speaking to one friend a metre away. Light baritone, soft grain, unhurried. Serene certainty, quiet half-smile in the voice. Natural breaths; pauses between phrases, not words. Sentences end low. The absurd part softer, as if obvious. Never loud, rising, theatrical or a narrator. Neutral international English.",
+      "clone_qa": {
+        "R1_episode_line": {
+          "job": "a61301f9",
+          "f0_median_hz": 115,
+          "timbre_corr_vs_source": 0.987
+        },
+        "R2_new_line": {
+          "job": "4c6a968d",
+          "f0_median_hz": 113,
+          "timbre_corr_vs_source": 0.988
+        },
+        "source_f0_median_hz": 117
+      },
+      "rights": "original synthetic voice designed for this character; no real person's voice; not derived from excluded assets",
+      "measured_wps": 2.0,
+      "measured_wps_source": "U1 17fe9dae: 12 words in 5.8 s (2.07 w/s); locked TTS take f00c763f about 1.9 w/s; 2026-10-08"
+    }
+  },
+  "props": [
+    {
+      "id": "scoring-paddle",
+      "match": [
+        "scoring paddle",
+        "paddle"
+      ],
+      "design": "one hand-held wooden scoring paddle: a light oak rounded-rectangle board on a straight round wooden handle; on its face a white semicircular gauge, arc on top, with eleven large bold black numerals 0 1 2 3 4 5 6 7 8 9 10 evenly spaced left to right along the arc and no other marks or text; one thick black pointer arm pivoting on a brass pin at the centre of the gauge's flat bottom edge",
+      "moving_parts": [
+        {
+          "part": "pointer",
+          "pivot": "brass pin at the bottom centre of the gauge",
+          "states": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ]
+        }
+      ],
+      "reference_asset": {
+        "job_id": "3a640e87-c426-48ff-bb01-b679ce36b0ed",
+        "model_requested": "nano_banana_pro",
+        "model_reported_by_job": "nano_banana_2",
+        "resolution": "2k",
+        "status": "owner_approved",
+        "approved_at": "2026-10-08",
+        "credits": 2,
+        "alternatives_rejected": {
+          "nano_banana_2": "178cebe1-d735-4ab7-b8bb-b40859ab75e0",
+          "gpt_image_2_5": "4c094812-ad7e-44df-a34a-48287565877c"
+        }
+      },
+      "why": "Owner frames 2026-10-08 (Cinema Studio 4.0): 'a 0-10 dial' rendered as a clock face with random numerals (23, 40, 51...) and no pointer arm. Exact design text plus a reference still."
+    }
+  ]
+}

@@ -29,8 +29,8 @@
   },
   "bible_version": {
     "bible_id": "uncle-verdict-v1",
-    "version": 8,
-    "sha256": "2b673beecf194f6a16a573328b073085f4670ee9a1eb80b254ef913ca6aa3e0f"
+    "version": 9,
+    "sha256": "a3ad9b3ce7290f0980598844742e87893d5d85e408035645a21be65be1ccc3d4"
   },
   "evidence": [
     {
@@ -306,7 +306,7 @@
       "end_s": 7,
       "location": "outside a corner shop on a pavement (generic, unrecognisable)",
       "action": "Handheld medium portrait. He delivers the verdict; mid-line the first drops land on his crown and the paddle, and a dry stranger's umbrella drifts past the frame edge as he finishes. He does not flinch.",
-      "physical_beat": "Left hand grips the paddle upright on his left thigh, pointer on 2; right palm flat on the umbrella in his lap; body still. Mid-line, rain begins on his crown and the paddle; near the end a stranger's dark umbrella slides past the right edge; he does not react.",
+      "physical_beat": "Left hand grips the paddle upright on his left thigh, pointer straight up on 5 (resting position, untouched); right palm flat on the umbrella in his lap; body still. Mid-line, rain begins on his crown and the paddle; near the end a stranger's dark umbrella slides past the right edge; he does not react.",
       "performance": "Present the verdict like a judge reading a ruling, eyes steady on the lens.",
       "microexpression": "One slow blink on 'ten'; the half-smile does not change.",
       "dialogue": [
@@ -349,10 +349,10 @@
       "cuts_inside_clip": 0,
       "generation_unit": "U1",
       "prop_states": {
-        "scoring paddle.pointer": "pointing at 2"
+        "scoring paddle.pointer": "pointing at 5"
       },
       "start_frame": {
-        "job": "db9c050c-8cce-4691-a36b-ed6fdf8289d6",
+        "job": "956bd569-635c-4506-81c5-4aed9520384b",
         "status": "owner_approved"
       }
     },
@@ -401,26 +401,26 @@
         "contact": "right index fingertip rests on the pointer tip",
         "object": "scoring paddle",
         "part": "pointer",
-        "from_state": "pointing at 2",
-        "to_state": "pointing at 1",
+        "from_state": "pointing at 5",
+        "to_state": "pointing at 2",
         "motion": "the fingertip pushes the pointer tip slowly to the left; the pointer pivots on the brass pin",
         "support_hand": "Left hand holds the paddle handle still at chest height, board square to the lens",
         "keyframes": {
-          "start": "c002a756-d5ea-4d4e-9d7d-95f2c5bb4641",
-          "end": "4611a013-46d6-4b07-9a83-f71dfc2f1c09",
+          "start": "7799ea77-20d7-410a-b967-1288ea983547",
+          "end": "6120d87a-82c7-4c8f-a329-5e1b8a8f64dc",
           "status": "owner_approved",
           "end_derivation": {
             "method": "crop",
-            "source": "7a0020db-9398-4a5f-9320-12e2772e4cc2",
+            "source": "0fecebbb-d2ff-41c6-9e92-d8b8df519c91",
             "box": [
-              583,
-              357,
-              706,
-              1255
+              384,
+              138,
+              1536,
+              2186
             ]
           }
         },
-        "direction": "counter-clockwise, one notch (about 18 degrees), toward the 0 end of the gauge; the pointer tip moves down and to the left, never up toward 5"
+        "direction": "counter-clockwise, three notches (about 54 degrees), toward the 0 end of the gauge; the tip moves down and to the left past 4 and 3, never toward 6; stops exactly at 2"
       }
     },
     {
@@ -471,7 +471,7 @@
       "cuts_inside_clip": 0,
       "generation_unit": "U1",
       "prop_states": {
-        "scoring paddle.pointer": "pointing at 1"
+        "scoring paddle.pointer": "pointing at 2"
       }
     }
   ],
@@ -486,7 +486,7 @@
       "rain (top edge, then falling)",
       "grey corner-shop wall with blank unreadable shutter"
     ],
-    "notes": "U1 0-7 s: verdict with rain starting under the line and a stranger's umbrella passing (world event under the line), pointer on 2, start frame db9c050c. Hard cut. U2 7-12 s: start frame c002a756 (pointer exactly on 2), fingertip rotates the pointer counter-clockwise to 1, punch-in to close-up, 'Final.' in the locked voice. End frame 4611a013 (crop of approved 7a0020db)."
+    "notes": "Owner 2026-10-08: dial rests on 5 in U1 while he says 'Two out of ten'; U2 starts on 5 (same reading at the cut) and he turns it 5 -> 2, landing on the spoken score; end frame is a crop that keeps face and the whole gauge (0 visible). Keyframes are NB Pro edits of the approved frames (only the pointer changed): U1 956bd569, U2 start 7799ea77, U2 end 6120d87a (crop of 0fecebbb)."
   },
   "asset_rights": [
     {
@@ -534,13 +534,13 @@
           "generate_audio": true,
           "mode": "omni_reference"
         },
-        "prompt_text": "Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip; no rings, watches, microphones or accessories that are not in the reference.\nCamera: shot on an iPhone 18 Pro Max, 1x main lens (about 24 mm equivalent); starts medium portrait, centred, seated eye level, 9:16; handheld phone with slight natural micro-shake from the grip, creeping slowly in toward him through the verdict; a small tilt up as the first drops hit. No cuts.\n0-7s: Left hand grips the paddle upright on his left thigh, pointer on 2; right palm flat on the umbrella in his lap; body still. Mid-line, rain begins on his crown and the paddle; near the end a stranger's dark umbrella slides past the right edge; he does not react. Uncle Verdict says once: \"Umbrella. Two out of ten. A tiny roof for nobody.\".\nSound: only the quoted lines are spoken, each exactly once, then silence; quiet street ambience, distant traffic; light rain begins under the line; no music. English only.\nVoice: every spoken word is in exactly the voice of @audio1 (same timbre, pitch, accent, pace); never a different voice.\nSetting: exactly as in the start frame; passers-by, if any, stay soft blurred shapes who never react.\nProps (exact design, exactly one of each, nothing else added): white folding plastic garden chair; the scoring paddle (exactly as @image2); closed plain umbrella (no logo) across his knees; passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure); rain (top edge, then falling); grey corner-shop wall with blank unreadable shutter.\nHands: two hands at most, each named; the other rests where stated; every object held or resting; state changes only across hard cuts.\nPhysics: each held object stays in a named hand or rests on a surface; nothing floats or vanishes; mouth closed on anything in it; feet grounded except described steps; everything else holds still.\nNo readable text, logos or signage except a product's own label. Natural skin, no blur on the face. No extra hands, fingers or limbs; objects never merge with hands; one of each prop; no mirrors; no slow motion.",
+        "prompt_text": "Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip; no rings, watches, microphones or accessories that are not in the reference.\nCamera: shot on an iPhone 18 Pro Max, 1x main lens (about 24 mm equivalent); starts medium portrait, centred, seated eye level, 9:16; handheld phone with slight natural micro-shake from the grip, creeping slowly in toward him through the verdict; a small tilt up as the first drops hit. No cuts.\n0-7s: Left hand grips the paddle upright on his left thigh, pointer straight up on 5 (resting position, untouched); right palm flat on the umbrella in his lap; body still. Mid-line, rain begins on his crown and the paddle; near the end a stranger's dark umbrella slides past the right edge; he does not react. Uncle Verdict says once: \"Umbrella. Two out of ten. A tiny roof for nobody.\".\nSound: only the quoted lines are spoken, each exactly once, then silence; quiet street ambience, distant traffic; light rain begins under the line; no music. English only.\nVoice: every spoken word is in exactly the voice of @audio1 (same timbre, pitch, accent, pace); never a different voice.\nSetting: exactly as in the start frame; passers-by, if any, stay soft blurred shapes who never react.\nProps (exact design, exactly one of each, nothing else added): white folding plastic garden chair; the scoring paddle (exactly as @image2); closed plain umbrella (no logo) across his knees; passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure); rain (top edge, then falling); grey corner-shop wall with blank unreadable shutter.\nHands: two hands at most, each named; the other rests where stated; every object held or resting; state changes only across hard cuts.\nPhysics: each held object stays in a named hand or rests on a surface; nothing floats or vanishes; mouth closed on anything in it; feet grounded except described steps; everything else holds still.\nNo readable text, logos or signage except a product's own label. Natural skin, no blur on the face. No extra hands, fingers or limbs; objects never merge with hands; one of each prop; no mirrors; no slow motion.",
         "prompt_style": "compact_physics_first",
         "prompt_budget": {
           "audio_mode": "on_camera_dialogue",
           "word_budget": 260,
-          "words": 357,
-          "words_total_incl_safety_lines": 357,
+          "words": 362,
+          "words_total_incl_safety_lines": 362,
           "shrink_level": 7,
           "over_budget": true,
           "keyframed": true
@@ -568,7 +568,7 @@
             "voice_name": "Uncle Verdict v1"
           },
           {
-            "value": "db9c050c-8cce-4691-a36b-ed6fdf8289d6",
+            "value": "956bd569-635c-4506-81c5-4aed9520384b",
             "role": "start_image",
             "status": "owner_approved"
           }
@@ -611,13 +611,13 @@
           "generate_audio": true,
           "mode": "omni_reference"
         },
-        "prompt_text": "Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip; no rings, watches, microphones or accessories that are not in the reference.\nCamera: shot on an iPhone 18 Pro Max, 1x main lens (about 24 mm equivalent); starts medium close-up, paddle and face both in frame, 9:16; handheld with slight natural micro-shake from the grip, drifting slowly in toward the paddle as the finger pushes. No cuts.\n0-3s: Left hand holds the paddle up at chest height, board square to the lens; right index fingertip on the pointer tip; body still on the chair; rain falling. At 0 s the pointer is exactly pointing at 2, as in the start frame. The one movement: the fingertip pushes the pointer tip slowly to the left; the pointer pivots on the brass pin, counter-clockwise, one notch (about 18 degrees), toward the 0 end of the gauge; the pointer tip moves down and to the left, never up toward 5; one slow continuous move from pointing at 2 to pointing at 1, then it stops and stays exactly pointing at 1; never any other position. Left hand holds the paddle handle still at chest height, board square to the lens. Nothing else on the scoring paddle changes; the clip starts on the start frame and ends on the end frame.\n3-5s: Hands still: left hand holds the paddle at chest height, pointer on 1, right index fingertip resting on the pointer tip; he lifts his eyes from the paddle into the lens; body still; rain falling. Camera: a quick handheld punch-in at 3 s, rushing from the paddle up to a tight close-up of his face, then holds still with breathing sway while he speaks. Uncle Verdict says once: \"Final.\".\nSound: only the quoted lines are spoken, each exactly once, then silence; steady rain on pavement, distant traffic; no music. English only.\nVoice: every spoken word is in exactly the voice of @audio1 (same timbre, pitch, accent, pace); never a different voice.\nSetting: exactly as in the start frame; passers-by, if any, stay soft blurred shapes who never react.\nProps (exact design, exactly one of each, nothing else added): white folding plastic garden chair; the scoring paddle (exactly as @image2); closed plain umbrella (no logo) across his knees; passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure); rain (top edge, then falling); grey corner-shop wall with blank unreadable shutter.\nHands: two hands at most, each named; the other rests where stated; every object held or resting; the only state change is the one movement described.\nPhysics: each held object stays in a named hand or rests on a surface; nothing floats or vanishes; mouth closed on anything in it; feet grounded except described steps; everything else holds still.\nNo readable text, logos or signage except a product's own label. Natural skin, no blur on the face. No extra hands, fingers or limbs; objects never merge with hands; one of each prop; no mirrors; no slow motion.",
+        "prompt_text": "Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip; no rings, watches, microphones or accessories that are not in the reference.\nCamera: shot on an iPhone 18 Pro Max, 1x main lens (about 24 mm equivalent); starts medium close-up, paddle and face both in frame, 9:16; handheld with slight natural micro-shake from the grip, drifting slowly in toward the paddle as the finger pushes. No cuts.\n0-3s: Left hand holds the paddle up at chest height, board square to the lens; right index fingertip on the pointer tip; body still on the chair; rain falling. At 0 s the pointer is exactly pointing at 5, as in the start frame. The one movement: the fingertip pushes the pointer tip slowly to the left; the pointer pivots on the brass pin, counter-clockwise, three notches (about 54 degrees), toward the 0 end of the gauge; the tip moves down and to the left past 4 and 3, never toward 6; stops exactly at 2; one slow continuous move from pointing at 5 to pointing at 2, then it stops and stays exactly pointing at 2; never any other position. Left hand holds the paddle handle still at chest height, board square to the lens. Nothing else on the scoring paddle changes; the clip starts on the start frame and ends on the end frame.\n3-5s: Hands still: left hand holds the paddle at chest height, pointer on 1, right index fingertip resting on the pointer tip; he lifts his eyes from the paddle into the lens; body still; rain falling. Camera: a quick handheld punch-in at 3 s, rushing from the paddle up to a tight close-up of his face, then holds still with breathing sway while he speaks. Uncle Verdict says once: \"Final.\".\nSound: only the quoted lines are spoken, each exactly once, then silence; steady rain on pavement, distant traffic; no music. English only.\nVoice: every spoken word is in exactly the voice of @audio1 (same timbre, pitch, accent, pace); never a different voice.\nSetting: exactly as in the start frame; passers-by, if any, stay soft blurred shapes who never react.\nProps (exact design, exactly one of each, nothing else added): white folding plastic garden chair; the scoring paddle (exactly as @image2); closed plain umbrella (no logo) across his knees; passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure); rain (top edge, then falling); grey corner-shop wall with blank unreadable shutter.\nHands: two hands at most, each named; the other rests where stated; every object held or resting; the only state change is the one movement described.\nPhysics: each held object stays in a named hand or rests on a surface; nothing floats or vanishes; mouth closed on anything in it; feet grounded except described steps; everything else holds still.\nNo readable text, logos or signage except a product's own label. Natural skin, no blur on the face. No extra hands, fingers or limbs; objects never merge with hands; one of each prop; no mirrors; no slow motion.",
         "prompt_style": "compact_physics_first",
         "prompt_budget": {
           "audio_mode": "on_camera_dialogue",
           "word_budget": 260,
-          "words": 505,
-          "words_total_incl_safety_lines": 505,
+          "words": 511,
+          "words_total_incl_safety_lines": 511,
           "shrink_level": 7,
           "over_budget": true,
           "keyframed": true
@@ -645,11 +645,11 @@
             "voice_name": "Uncle Verdict v1"
           },
           {
-            "value": "c002a756-d5ea-4d4e-9d7d-95f2c5bb4641",
+            "value": "7799ea77-20d7-410a-b967-1288ea983547",
             "role": "start_image"
           },
           {
-            "value": "4611a013-46d6-4b07-9a83-f71dfc2f1c09",
+            "value": "6120d87a-82c7-4c8f-a329-5e1b8a8f64dc",
             "role": "end_image"
           }
         ],
