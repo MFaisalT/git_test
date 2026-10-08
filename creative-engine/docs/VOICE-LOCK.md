@@ -108,3 +108,12 @@ Jobs: A `3e9ba7a0`, B `f55d9d2c`, C `33fcd169`, D `0c7f437f`, E `0cb13166`, F `e
 This round applies the research: stability 0.25-0.3, at most two tags per line, connected text over 250 characters. The monologue doubles as the clone source.
 
 Jobs: M1 ElevenLabs/Gideon `2f3b5d99`, M2 ElevenLabs/Arthur `6ba36c93`, M3 ElevenLabs/Holden `9b8b9239`, M4 Qwen/Gideon `7356ff73`.
+
+| Take | Engine / base | Length | F0 median (p10-p90) | Pauses: mean / spread | Transcript |
+|---|---|---|---|---|---|
+| M1 | ElevenLabs v4 / Gideon, stability 0.25 | 45.4 s | 97 (64-144) | 0.40 / 0.11: most even | clean |
+| M2 | ElevenLabs v4 / Arthur, stability 0.25 | 50.8 s | 146 (86-255): widest range, lighter | 0.44 / 0.15 | clean |
+| M3 | ElevenLabs v4 / Holden, stability 0.3 | 50.1 s | 117 (74-192) | 0.53 / 0.20: most varied | clean |
+| M4 | Qwen / Gideon | 55.7 s | 83 (64-145): deepest | 0.65 / 0.16: slowest | clean |
+
+Credits: 2.76 per ElevenLabs monologue, 0.23 for the Qwen monologue. Round A cost 0.04-0.69 per take.
