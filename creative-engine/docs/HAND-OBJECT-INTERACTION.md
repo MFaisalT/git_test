@@ -133,3 +133,19 @@ All three chains ran the same three prompts: paddle, start frame, end frame. Eac
 Backend naming: jobs submitted as `nano_banana_pro` report `nano_banana_2`, and jobs submitted as `nano_banana_2` report `nano_banana_flash`. The engine records the requested id and the reported id side by side.
 
 The owner picks the chain. The winner's job ids replace the keyframes in Uncle Verdict's S3 interaction and the paddle's `reference_asset`. Animation follows only after that pick.
+
+### First keyframed interaction renders (2026-10-08)
+
+The owner picked the NB Pro board. Unit U2 (4 s) was animated with the same prompt and the same four media on both models. The completed jobs report the media roles start_image `e38bd7f1`, end_image `7a0020db` and references `cb1f3458` (character) and `3a640e87` (paddle). The roles survived, even though the submit echo listed all four as reference_images.
+
+| Model | Job | Res | Charged |
+|---|---|---|---|
+| Cinema Studio 4.0 | `77ecb61d-da10-4d4c-87c5-534891a30fc1` | 480p | 12 |
+| Seedance 2.5 draft | `6ec44d5b-551c-4d2f-bfba-94dbbe7f60c6` | 480p | 12 |
+
+The owner judges these. Checklist:
+- Does the fingertip stay on the pointer tip and push it, rather than the pointer moving by itself?
+- Does the pointer rotate on the pin, with no second pointer?
+- Do the numerals stay 0-10?
+- Does the left hand hold still?
+- Is "Final." said once, after the move?
