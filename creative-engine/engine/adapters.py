@@ -152,7 +152,7 @@ def plan(packet: dict, bible: dict | None = None, quote_credits: dict | None = N
         if dur > lim["max_s"] or dur < lim["min_s"]:
             gaps.append(f"unit duration {dur}s outside {model} range {lim['min_s']}-{lim['max_s']}s; re-split scenes")
         if inter:
-            manual = ["Keyframe board first: generate the start frame and the end frame (gpt_image_2_5 with the character and prop references; the end frame edits the start frame so only the moving part and the acting finger change); the owner inspects both before any video is submitted."] + manual
+            manual = ["Keyframe board first: generate the start frame and the end frame (route_image_asset('keyframe'): nano_banana_pro with the character and prop references; the end frame edits the start frame so only the moving part and the acting finger change); the owner inspects both before any video is submitted."] + manual
         if route.get("status") == "gap" or model == "cinematic_studio_video_4_0":
             gaps.append("Cinema Studio 4.0 native camera/lighting controls need creative-control ids not retrieved in this build; pass as prompt text meanwhile")
         est = quote_for(model, controls.get("duration", int(round(dur))), "720p")

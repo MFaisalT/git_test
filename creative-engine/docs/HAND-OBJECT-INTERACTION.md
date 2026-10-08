@@ -116,3 +116,20 @@ The bible is v3 and carries the paddle design: a light oak board, a white semici
 | U2 end keyframe (edit of the start frame: pointer at 1) | gpt_image_2_5 high, refs: start frame + paddle | `7ec903a7-e304-43af-af3c-f7d9896e7c82` | 1.5 |
 
 Next step: the owner inspects the three stills, checking the numerals 0-10 in order, one pointer, two hands with five fingers, the fingertip on the pointer tip and the same face. Only then is U2 animated on Cinema Studio 4.0 at 480p (4 s, about 12 credits), with Seedance 2.5 draft as a second take.
+
+### Image-model correction and the one-time NB 2 test (2026-10-08)
+
+The owner pointed out that the first board was made on `gpt_image_2_5` (Flare variant), while the engine recommends Nano Banana Pro. That was an ad-hoc pick. The engine now routes prop references and keyframes through `route_image_asset("prop_reference" | "keyframe")`, which returns NB Pro, and the adapter's keyframe step names it.
+
+All three chains ran the same three prompts: paddle, start frame, end frame. Each chain used only its own outputs as references; the character reference `cb1f3458` is shared. All images are 2k.
+
+| Step | NB Pro (recommended) | NB 2 (one-time test) | GPT Image 2.5 (first board, comparison only) |
+|---|---|---|---|
+| Paddle | `3a640e87-c426-48ff-bb01-b679ce36b0ed` | `178cebe1-d735-4ab7-b8bb-b40859ab75e0` | `4c094812` |
+| Start frame (pointer at 2) | `e38bd7f1-3fca-4d58-8f64-03ad49a46a3d` | `057d8420-bc13-4413-a13b-eebbfef7e5bd` | `70f2656d` |
+| End frame (pointer at 1) | `7a0020db-9398-4a5f-9320-12e2772e4cc2` | `9511f27f-26e5-4da2-ac4e-2afc24f74fe6` | `7ec903a7` |
+| Credits | 3 x 2 | 3 x 2 | 3 x 1.5 |
+
+Backend naming: jobs submitted as `nano_banana_pro` report `nano_banana_2`, and jobs submitted as `nano_banana_2` report `nano_banana_flash`. The engine records the requested id and the reported id side by side.
+
+The owner picks the chain. The winner's job ids replace the keyframes in Uncle Verdict's S3 interaction and the paddle's `reference_asset`. Animation follows only after that pick.

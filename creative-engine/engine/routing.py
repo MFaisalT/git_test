@@ -96,6 +96,12 @@ def route_image_asset(kind: str, nb2_testing: bool = False) -> dict:
     if kind == "location_still":
         return {"model": primary, "controls": {"resolution": "2k", "aspect_ratio": "9:16"}, "why": "empty lived-in location, no people, planned key light; reused across episodes for a consistent world", "status": "recommended_untested" if nb2_testing else "verified_controls",
                 "alternatives": ["cinematic_studio_2_5 for dramatic establishing stills"]}
+    if kind in ("prop_reference", "keyframe"):
+        # Owner 2026-10-08: stills follow the recommended image model (NB Pro), not an ad-hoc pick; the first paddle board was made on
+        # gpt_image_2_5 by mistake and is kept only as a comparison. NB 2 tested once on the same prompts (nb2_testing).
+        return {"model": primary, "controls": {"resolution": "2k", "aspect_ratio": "3:4" if kind == "prop_reference" else "9:16"},
+                "why": "prop reference (exact design, front view, no hands)" if kind == "prop_reference" else "keyframe board still: start/end frame for a shown interaction; end frame edits the start frame",
+                "status": "recommended_untested" if nb2_testing else "verified_controls", "alternatives": ["nano_banana_2 (one-time test 2026-10-08)", "gpt_image_2_5 (first board, comparison only)"]}
     if kind == "product_image":
         return {"model": primary, "controls": {"resolution": "2k", "aspect_ratio": "1:1"}, "why": "generic product reference, no brand text", "status": "recommended_untested", "alternatives": ["product-photoshoot workflow"]}
     return {"model": primary, "controls": {"resolution": "2k", "aspect_ratio": "9:16"}, "why": "generic", "status": "recommended_untested", "alternatives": []}
