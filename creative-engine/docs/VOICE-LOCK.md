@@ -137,3 +137,8 @@ The owner picked M3 (ElevenLabs v4 on base Holden, stability 0.3, job `9b8b9239`
 - The direction block and the TTS settings
 
 Every spoken unit now carries it automatically. First render with the locked voice: U1 `17fe9dae` (Cinema Studio 4.0). It tests whether CS4 follows `audio_references`.
+
+**Result of the first locked-voice render, U1 `17fe9dae` (CS4, 480p, 18 credits charged):**
+- **Voice:** the voice in the video matched the locked reference. F0 was 118 Hz against 115 Hz, and the timbre-envelope correlation was 0.992. Cinema Studio 4.0 follows `audio_references`.
+- **Transcript:** the line is exact and is said once, from 0.0 to 5.8 s.
+- **Defect:** the speech ran until 5.8 s, which left no time for the rain beat (4.5-6 s). No rain or passing umbrella is visible at 5.6 s.

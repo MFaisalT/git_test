@@ -31,8 +31,28 @@
   "spoken": true,
   "voice_id": "0138a858-eebd-4457-a488-396e2732279a",
   "quoted_credits": 18,
-  "charged_credits": null,
+  "charged_credits": 18,
   "submitted_at": "2026-10-08",
   "bible_version": 6,
-  "prompt_source": "tool_mapping.U1.prompt_text"
+  "prompt_source": "tool_mapping.U1.prompt_text",
+  "auto_qa": {
+    "voice": {
+      "locked_ref_f0_hz": 115,
+      "video_f0_hz": 118,
+      "timbre_corr_vs_locked_ref": 0.992,
+      "verdict": "voice lock held"
+    },
+    "transcript": "Umbrella. Two out of ten. Correct answer? A tiny roof for nobody. (0.0-5.8 s, said once)",
+    "frames_checked_s": [
+      0.3,
+      2.0,
+      4.0,
+      5.6
+    ],
+    "visual": "paddle gauge 0-10 in order, single pointer near 2 throughout; handheld creep-in visible (framing tightens); left hand holds paddle, right hand on umbrella; no extra limbs seen in sampled frames",
+    "defects": [
+      "rain and the passing stranger's umbrella are not visible in the 5.6 s frame: the 1.5 s rain beat appears not rendered (speech ran to 5.8 s)",
+      "no visible tilt-up camera move at the end"
+    ]
+  }
 }
