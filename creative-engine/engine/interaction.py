@@ -94,8 +94,12 @@ def interaction_spec_findings(scene: dict, unit_scene_ids: list[str] | None = No
     dur = float(scene.get("end_s", 0)) - float(scene.get("start_s", 0))
     if dur < INTERACTION_MIN_S:
         out.append({"code": "INTERACTION_TOO_SHORT", "severity": "warning", "path": f"scenes.{sid}", "message": f"{dur:.1f} s for a shown interaction; give it at least {INTERACTION_MIN_S:.0f} s (slow move plus a held end beat)"})
-    if unit_scene_ids is not None and len(unit_scene_ids) > 1:
-        out.append({"code": "INTERACTION_SHARED_UNIT", "severity": "error", "path": f"scenes.{sid}", "message": f"the interaction shares generation unit with {', '.join(x for x in unit_scene_ids if x != sid)}; it needs its own unit so the start and end frames bound exactly this move"})
+    # The interaction opens its unit (the start frame is its first frame). Continuous scenes may follow it in the same shot, e.g. the
+    # push-in to a close-up and the payoff line (owner 2026-10-08: "Final." was lost when it shared 4 s with the move).
+    if unit_scene_ids is not None and unit_scene_ids and unit_scene_ids[0] != sid:
+        out.append({"code": "INTERACTION_SHARED_UNIT", "severity": "error", "path": f"scenes.{sid}", "message": f"the interaction must open its generation unit (start frame = its first frame); {', '.join(unit_scene_ids[:unit_scene_ids.index(sid)] if sid in unit_scene_ids else unit_scene_ids)} come before it"})
+    if scene.get("dialogue"):
+        out.append({"code": "INTERACTION_LINE_CROWDED", "severity": "warning", "path": f"scenes.{sid}", "message": "a line spoken during the hand move gets swallowed (owner 2026-10-08: 'Final.' never arrived); put the line in the next continuous scene, after the move stops"})
     return out
 
 

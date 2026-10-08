@@ -167,7 +167,7 @@ def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_
             t0 = float(scenes[0]["start_s"])  # times are relative to this clip (a unit after a cut starts at 0 in its own render)
             t = f"{fmt(float(s['start_s']) - t0)}-{fmt(float(s['end_s']) - t0)}s"
             mv = str((s.get("camera") or {}).get("movement", "")).strip()
-            cam_note = f" Camera: {mv.split(';')[0].split(',')[0].strip()}." if (mv and s is not first) else ""  # camera moves are never trimmed (owner values camera motion)
+            cam_note = f" Camera: {mv.split(';')[0].strip().rstrip('.')}." if (mv and s is not first) else ""  # camera moves are never trimmed (owner values camera motion)
             line = f"{t}: {str(s['physical_beat']).strip().rstrip('.')}.{cam_note}"
             if s.get("interaction"):
                 from .interaction import interaction_beat

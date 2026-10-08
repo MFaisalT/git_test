@@ -319,3 +319,32 @@ class TestVoiceLock(unittest.TestCase):
         t = interaction_beat(s)
         self.assertIn("At 0 s the pointer is exactly pointing at 2", t)
         self.assertIn("never passes any other position", t)
+
+
+class TestUGCCameraAndPayoff(unittest.TestCase):
+    """Owner 2026-10-08: camera micro-movement, a push-in to a close-up before the last line, and the last line must land."""
+
+    def test_locked_camera_and_flat_punchline_are_flagged(self):
+        from engine.camera import camera_findings
+        p = {"scenes": [{"scene_id": "S1", "start_s": 0, "camera": {"shot": "medium", "movement": "propped phone, locked"}, "dialogue": [{"line": "Final."}]}]}
+        codes = {f["code"] for f in camera_findings(p)}
+        self.assertEqual(codes, {"CAMERA_DEAD", "CAMERA_PUNCHLINE_FLAT"})
+        p["scenes"][0]["camera"] = {"shot": "tight close-up", "movement": "handheld push-in, breathing sway"}
+        self.assertEqual(camera_findings(p), [])
+
+    def test_line_inside_the_move_is_flagged_and_payoff_scene_may_follow_in_unit(self):
+        from engine.interaction import interaction_spec_findings
+        s = {"scene_id": "S3", "start_s": 6, "end_s": 9, "interaction": dict(TestShownInteraction.SPEC, keyframes={"start": "a", "end": "b", "status": "owner_approved"}),
+             "dialogue": [{"line": "Final."}]}
+        codes = {f["code"] for f in interaction_spec_findings(s, ["S3", "S4"])}
+        self.assertIn("INTERACTION_LINE_CROWDED", codes)
+        self.assertNotIn("INTERACTION_SHARED_UNIT", codes)
+        self.assertIn("INTERACTION_SHARED_UNIT", {f["code"] for f in interaction_spec_findings(s, ["S2", "S3"])})
+
+    def test_per_beat_camera_direction_is_not_truncated_at_commas(self):
+        p = TestShownInteraction()._packet()
+        p["scenes"][1]["camera"]["movement"] = "handheld on her hip, slow breathing sway, small reframe to the plug"
+        for s in p["scenes"]:
+            s.setdefault("physical_beat", "She stands still, hands at her sides.")
+        txt = "\n".join(u["prompt_text"] for u in plan(p, bible())["units"])
+        self.assertIn("handheld on her hip, slow breathing sway, small reframe to the plug", txt)

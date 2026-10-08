@@ -35,7 +35,8 @@ Realisation rules: single-take architectures = no cuts and one generation unit (
 
 ## Craft rules (distilled from the content-engine and ugc-influencer-video skills; added after the 2026-10-07 bake-off)
 - Hook earns the next second: the most specific word or image first; no warm-up.
-- Camera alive, never "tripod": propped phone with one settle-wobble, handheld bob, or placement-open; angle changes come from the character, not cuts.
+- Camera alive, never "tripod" (owner 2026-10-08: "missing creative camera micro movement"): every scene's camera.movement names its micro-movement (breathing sway of a hand-held phone, phone resting on a knee that rises with a breath, small reframes that follow the eyes, a touch of focus breathing) plus at most one motivated move (slow creep-in during a claim, tilt to catch a reveal, whip reframe to the evidence, push-in or punch-in to a close-up). "Locked" or "static" alone is not direction.
+- The punchline lands closer: before the final line, the camera reaches a tighter framing by a push-in or a hard cut to a close-up; the line is spoken in that close-up, after any hand action has stopped, followed by a held beat of silence.
 - Performance = an invested task (goal, obstacle, tactic) with eye-work as action; emotion adjectives are not direction.
 - Lighting names key direction, fill, one colour bounce from a named surface and contact shadows; add a light-stability line if the light must not change.
 - Audio names ambience plus 3-5 diegetic foley per scene; music none by default.

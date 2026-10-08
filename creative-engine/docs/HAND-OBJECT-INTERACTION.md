@@ -151,3 +151,38 @@ The owner judges these. Checklist:
 - Is "Final." said once, after the move?
 
 **Owner verdict on the keyframed push:** Cinema Studio 4.0 (`77ecb61d`) is "more realistic than the other by far". Interaction units stay on Cinema Studio 4.0, with Seedance 2.5 as a fallback only. U1 (0-8 s, the verdict and the rain) was then rendered on Cinema Studio 4.0 at 480p as job `a60ce385-edde-4b12-89ff-71719dca8362` (quoted 24 credits), to pair with U2 for a full 12 s review. Before this render, S1's beat was changed to state "pointer at 2" so it matches U2's start frame.
+
+### Owner review of the full Cinema Studio pair, and the UGC restage (2026-10-08)
+
+**Owner feedback:**
+- The pointer moved from about 4 to 1, not from 2.
+- The camera has no creative micro-movement.
+- The camera transition to a close-up before "Final." is missing.
+- "Final." is never said.
+- "It needs more artistic UGC style direction."
+
+**Causes:**
+- The bible said "locked-off phone", and every shot inherited it.
+- The compact prompt cut per-beat camera direction at the first comma.
+- "Final." shared the 4 s interaction shot with the hand move, so the move used up the time.
+- The shot never stated where the pointer starts.
+
+**Engine fixes:**
+- `engine/camera.py` warns on `CAMERA_DEAD` (locked camera with no micro-movement) and `CAMERA_PUNCHLINE_FLAT` (the last line is not delivered in a closer framing).
+- Per-beat camera direction is no longer truncated.
+- An interaction must open its unit, and continuous scenes may follow it in the same shot. A line spoken during the move raises `INTERACTION_LINE_CROWDED`.
+- The interaction sentence states the opening position and forbids any travel outside from -> to.
+- The storyboard prompt now carries the camera and punchline rules.
+
+**Uncle Verdict v5:**
+- The bible (v5) now uses handheld UGC visual language.
+- U1, 0-6 s: the verdict with a handheld creep-in, then the rain with a tilt and a reframe to the passing umbrella.
+- Hard cut.
+- U2, 6-12 s, one continuous handheld shot:
+  - 6-9 s: the fingertip pushes the pointer from 2 to 1 (keyframed).
+  - 9-12 s: the camera pushes in to a tight close-up, he lifts his eyes and says "Final.", then silence.
+- U2 keyframes:
+  - Start: `e38bd7f1` (approved).
+  - End: new close-up `e30afec1-bd94-40bd-bd45-862032157fd3` (NB Pro, 2 credits), pending owner inspection.
+
+Rendering stays blocked until the owner picks Uncle's voice (voice lock).

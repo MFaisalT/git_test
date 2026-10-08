@@ -85,7 +85,7 @@ def plan(packet: dict, bible: dict | None = None, quote_credits: dict | None = N
         if s.get("interaction"):
             flush()  # a shown interaction is its own unit: the start/end keyframes bound exactly this move
         cur.append(s)
-        if s.get("interaction") or "cut" in str(s.get("transition_out", "")).lower():
+        if "cut" in str(s.get("transition_out", "")).lower():
             flush()  # any cut between scenes ends a generation unit; one hard cut inside a clip must be declared via cuts_inside_clip
     flush()
     # merge a too-short unit into its predecessor only if that keeps the predecessor at <=1 internal cut
