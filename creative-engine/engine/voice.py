@@ -28,6 +28,14 @@ class VoiceLockError(ValueError):
     pass
 
 
+# Owner 2026-10-08: "Always produce a custom iconic voice based on the character and make sure it's locked with every production."
+# So a lock must be a custom voice (voice_type 'element', cloned into the account) designed from the character, never a stock preset
+# another creator could also be using. Pipeline: seed_audio with the character sheet as image_references (voice designed from the
+# character) -> owner picks a take -> create_voice_from_confirmed_audio clones it into an element voice -> a clean sample in that
+# element voice becomes reference_audio -> status 'locked'.
+CUSTOM_PROVENANCE = ("designed_from_character", "owned_recording_with_consent")
+
+
 def voice_lock(bible: dict | None) -> dict | None:
     """The locked voice entry, or None. Locked = has voice_id, voice_type, reference_audio and status 'locked'."""
     v = ((bible or {}).get("approved_assets") or {}).get("voice") or {}
@@ -63,6 +71,10 @@ def voice_findings(packet: dict, bible: dict | None) -> list[dict]:
     if any(n in str(v.get("name", "")).lower() for n in FORBIDDEN_VOICE_NAMES):
         out.append({"code": "VOICE_FORBIDDEN", "severity": "error", "path": "bible.approved_assets.voice",
                     "message": f"voice '{v.get('name')}' comes from creative assets excluded from this project; pick another voice"})
+    if v.get("status") == "locked" and (v.get("voice_type") != "element" or v.get("provenance") not in CUSTOM_PROVENANCE):
+        out.append({"code": "VOICE_NOT_CUSTOM", "severity": "error", "path": "bible.approved_assets.voice",
+                    "message": "the locked voice must be a custom voice designed from the character (voice_type 'element', provenance "
+                               f"{' or '.join(CUSTOM_PROVENANCE)}), never a stock preset"})
     if packet_speaks(packet) and not voice_lock(bible):
         out.append({"code": "VOICE_LOCK_MISSING", "severity": "error", "path": "bible.approved_assets.voice",
                     "message": "spoken episode but the character has no locked voice (voice_id + reference_audio, status 'locked'); "
@@ -91,3 +103,18 @@ def voice_prompt_line(bible: dict | None) -> str:
     if not lock:
         return ""
     return "Voice: every spoken word is in exactly the voice of @audio1 (same timbre, pitch, accent, pace); never a different voice."
+
+
+def project_voice_findings(bibles: list[dict]) -> list[dict]:
+    """Two characters never share a voice."""
+    seen, out = {}, []
+    for b in bibles:
+        lock = voice_lock(b)
+        if not lock:
+            continue
+        other = seen.get(lock["voice_id"])
+        if other and other != b.get("bible_id"):
+            out.append({"code": "VOICE_SHARED", "severity": "error", "path": f"bibles.{b.get('bible_id')}",
+                        "message": f"{b.get('bible_id')} and {other} share voice {lock['voice_id']}; every character has its own voice"})
+        seen.setdefault(lock["voice_id"], b.get("bible_id"))
+    return out

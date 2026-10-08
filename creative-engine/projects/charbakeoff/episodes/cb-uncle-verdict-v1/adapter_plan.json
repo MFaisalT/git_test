@@ -118,12 +118,12 @@
           "role": "start_image"
         },
         {
-          "value": "e30afec1-bd94-40bd-bd45-862032157fd3",
+          "value": "4611a013-46d6-4b07-9a83-f71dfc2f1c09",
           "role": "end_image"
         }
       ],
       "manual_steps": [
-        "Keyframe board first: generate the start frame and the end frame (route_image_asset('keyframe'): nano_banana_pro with the character and prop references; the end frame edits the start frame so only the moving part and the acting finger change); the owner inspects both before any video is submitted.",
+        "Keyframe board first: generate the start frame and the end frame (route_image_asset('keyframe'): nano_banana_pro with the character and prop references; the end frame edits the start frame so only the moving part and the acting finger change; a closer end framing is a crop of the approved frame made in the Higgsfield sandbox, never a regeneration); the owner inspects both before any video is submitted.",
         "Upload approved reference stills via media_upload (owner action; upload requires approval).",
         "Burn captions/on-screen text in edit.",
         "Add licensed music in edit if any.",

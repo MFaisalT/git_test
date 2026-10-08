@@ -263,7 +263,15 @@ class TestUnitRelativeTimes(unittest.TestCase):
 
 class TestVoiceLock(unittest.TestCase):
     """Owner rule 2026-10-08: a character never changes voice id between generations or scenes."""
-    LOCK = {"voice_id": "v-123", "voice_type": "preset", "name": "Test Voice", "reference_audio": "aud-1", "status": "locked"}
+    LOCK = {"voice_id": "v-123", "voice_type": "element", "name": "Test Voice", "reference_audio": "aud-1", "status": "locked", "provenance": "designed_from_character"}
+
+    def test_preset_voice_is_refused_and_voices_are_not_shared(self):
+        from engine.voice import project_voice_findings, voice_findings
+        b = {"approved_assets": {"voice": dict(self.LOCK, voice_type="preset")}}
+        self.assertIn("VOICE_NOT_CUSTOM", {f["code"] for f in voice_findings({"scenes": []}, b)})
+        b1 = {"bible_id": "a", "approved_assets": {"voice": dict(self.LOCK)}}
+        b2 = {"bible_id": "b", "approved_assets": {"voice": dict(self.LOCK)}}
+        self.assertEqual(project_voice_findings([b1, b2])[0]["code"], "VOICE_SHARED")
 
     def _spoken(self):
         p = valid_packet()
@@ -348,3 +356,13 @@ class TestUGCCameraAndPayoff(unittest.TestCase):
             s.setdefault("physical_beat", "She stands still, hands at her sides.")
         txt = "\n".join(u["prompt_text"] for u in plan(p, bible())["units"])
         self.assertIn("handheld on her hip, slow breathing sway, small reframe to the plug", txt)
+
+
+class TestLockedPlateFraming(unittest.TestCase):
+    def test_regenerated_closer_end_frame_is_flagged_and_crop_passes(self):
+        from engine.interaction import interaction_spec_findings
+        kf = {"start": "a", "end": "b", "status": "owner_approved"}
+        s = {"scene_id": "S3", "start_s": 6, "end_s": 9, "interaction": dict(TestShownInteraction.SPEC, keyframes=dict(kf))}
+        self.assertIn("KEYFRAME_FRAMING_REGENERATED", {f["code"] for f in interaction_spec_findings(s, ["S3", "S4"])})
+        s["interaction"]["keyframes"]["end_derivation"] = {"method": "crop", "source": "a", "box": [0, 0, 10, 18]}
+        self.assertNotIn("KEYFRAME_FRAMING_REGENERATED", {f["code"] for f in interaction_spec_findings(s, ["S3", "S4"])})

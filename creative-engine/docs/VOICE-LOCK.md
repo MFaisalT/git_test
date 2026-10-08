@@ -48,3 +48,30 @@ Each sample is his line "Umbrella. Two out of ten. Correct answer: a tiny roof f
 | 8 | Gideon | middle-aged | `1ad38ba4-9cc4-4f2f-9fde-b0fefdf67ae5` | `f0e5b755` | 7.3 s |
 
 The two "Elias" voices in the account were excluded.
+
+## Custom voices only (owner, 2026-10-08)
+
+> "Always produce a custom iconic voice based on the character and make sure it's locked with every production."
+
+Preset voices are refused for a lock (`VOICE_NOT_CUSTOM`). The 8 preset samples above are withdrawn. Two characters may never share a voice (`VOICE_SHARED`).
+
+**Pipeline**
+
+1. **Design.** Run `seed_audio` with the character sheet as `image_references`, so the voice is cued from the character's face and age. Vary pitch and pace to get 4 takes of his real lines.
+2. **Pick.** The owner picks one take.
+3. **Extend.** Generate a 30-40 s in-character monologue with the picked take as `audio_references`. The cloning step needs 10 s to 3 min of clear speech, and the samples are only about 10 s.
+4. **Clone.** Run `create_voice_from_confirmed_audio` on the monologue to get a permanent element `voice_id` in the account.
+5. **Lock.** Make a clean sample in the element voice. It becomes `reference_audio`, and `status` is set to `locked` with `provenance: designed_from_character`.
+
+**Uncle Verdict designed takes** (character sheet `cb1f3458`)
+
+QA was run in the Higgsfield sandbox: a Whisper transcript and the median pitch (F0) of each take.
+
+| Take | Job | Speech rate / pitch | Length | Median F0 | Transcript check |
+|---|---|---|---|---|---|
+| A | `1f10b33a-4c70-408a-92b6-7fc65adce5dc` | -15 / -2 | 10.1 s | 121 Hz | clean |
+| B | `ef55be6e-c8fb-4c48-8ab3-6cf2a729e6d5` | -25 / -4 | 10.4 s | 82 Hz (deep) | clean |
+| C | `23224729-0238-49cc-97c6-52e85dc824c8` | -10 / 0 | 6.3 s | 113 Hz | clean, quicker |
+| D | `1e0d4b22-cf30-435d-8eab-be018442ffa0` | -20 / -6 | 9.1 s | 83 Hz (deep) | "roof" heard as "wolf": articulation risk |
+
+The video's verdict slot is 4.5 s. The video model sets its own pacing and takes only the timbre from the reference audio. If the audio is laid in the edit instead, the line will need a faster take.

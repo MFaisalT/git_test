@@ -560,7 +560,12 @@
                 "properties": {
                   "start": {"type": "string", "description": "job_id or media_id of the approved start frame"},
                   "end": {"type": "string", "description": "job_id or media_id of the approved end frame"},
-                  "status": {"type": "string", "enum": ["planned", "generated_pending_owner_approval", "owner_approved"]}
+                  "status": {"type": "string", "enum": ["planned", "generated_pending_owner_approval", "owner_approved"]},
+                  "end_derivation": {
+                    "type": "object",
+                    "description": "How the end frame was made. A different framing of an approved frame (push-in, close-up) is a crop of it ('crop'), never a regeneration: regenerating re-draws text and props (owner frame 2026-10-08: the gauge gained a second '1').",
+                    "properties": {"method": {"type": "string", "enum": ["crop", "edit", "generate"]}, "source": {"type": "string"}, "box": {"type": "array", "items": {"type": "number"}}}
+                  }
                 }
               }
             }

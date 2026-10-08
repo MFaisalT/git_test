@@ -91,6 +91,10 @@ def interaction_spec_findings(scene: dict, unit_scene_ids: list[str] | None = No
         out.append({"code": "INTERACTION_KEYFRAMES_MISSING", "severity": "error", "path": f"scenes.{sid}.interaction.keyframes", "message": "a shown interaction is animated between a start frame and an end frame; generate the keyframe board and have the owner inspect it before any video"})
     elif kf.get("status") != "owner_approved":
         out.append({"code": "INTERACTION_KEYFRAMES_UNAPPROVED", "severity": "warning", "path": f"scenes.{sid}.interaction.keyframes", "message": "keyframes exist but the owner has not approved them; do not animate yet"})
+    der = (kf.get("end_derivation") or {})
+    if kf.get("end") and der.get("method") == "generate" or (kf.get("end") and not der and unit_scene_ids and len(unit_scene_ids) > 1):
+        out.append({"code": "KEYFRAME_FRAMING_REGENERATED", "severity": "warning", "path": f"scenes.{sid}.interaction.keyframes",
+                    "message": "the end frame at a new framing was regenerated, which re-draws text and props; crop it from the approved frame instead (end_derivation.method 'crop')"})
     dur = float(scene.get("end_s", 0)) - float(scene.get("start_s", 0))
     if dur < INTERACTION_MIN_S:
         out.append({"code": "INTERACTION_TOO_SHORT", "severity": "warning", "path": f"scenes.{sid}", "message": f"{dur:.1f} s for a shown interaction; give it at least {INTERACTION_MIN_S:.0f} s (slow move plus a held end beat)"})

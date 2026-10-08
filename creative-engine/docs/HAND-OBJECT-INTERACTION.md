@@ -186,3 +186,23 @@ The owner judges these. Checklist:
   - End: new close-up `e30afec1-bd94-40bd-bd45-862032157fd3` (NB Pro, 2 credits), pending owner inspection.
 
 Rendering stays blocked until the owner picks Uncle's voice (voice lock).
+
+### Locked plate: closer framings are crops, never regenerations (2026-10-08)
+
+**Defect (owner frame):** the regenerated close-up end frame `e30afec1` showed the gauge as 0 1 1 2 3, with the "1" doubled.
+
+**Inspection:** this session could see the frames for the first time, via the Higgsfield sandbox (it fetches the generated images and returns them as images). The approved frames are correct:
+- `e38bd7f1`: the pointer is near 2, and the dial reads 0-10 in order.
+- `7a0020db`: the pointer is on 1.
+
+Only the regenerated close-up is wrong.
+
+**Cause:** an image model redraws the whole frame for a new framing. Text and small props are re-synthesized, not copied, and text rendering is a known weak point ([unite.ai](https://www.unite.ai/why-your-ai-images-come-with-errors-and-how-to-improve-them), [HN: underdrawings for accurate text and numbers](https://hn.nuxt.dev/item/47977990)). The standard way to fake a push-in is to crop and scale one correct master frame ([LRTimelapse forum](https://forum.lrtimelapse.com/thread-5453.html)). No source tests this on AI video models, so the engine treats it as a rule to verify on our own footage.
+
+**Fix (the owner's "locked environment"):**
+- The U2 end frame is now a pixel-exact crop of the approved `7a0020db`: box (583, 357, 706, 1255), about a 2.2x push-in.
+- It was made in the sandbox with PIL and uploaded as media `4611a013-46d6-4b07-9a83-f71dfc2f1c09`.
+- The face, paddle, numerals and pointer are identical to the approved frame.
+- Schema: `keyframes.end_derivation {method: crop|edit|generate, source, box}`.
+- The engine warns `KEYFRAME_FRAMING_REGENERATED` when a closer end frame is regenerated.
+- The adapter's keyframe step says crops are made in the sandbox.
