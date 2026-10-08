@@ -222,3 +222,14 @@ Only the regenerated close-up is wrong.
 **Retake:** `18a32f05`.
 
 **Episode draft:** U1 `17fe9dae` and U2 `31072c5c` were joined in the sandbox into a 12.1 s file and uploaded as media `b972af6c-e822-4c89-b606-af5c541ae4d8`.
+
+**Retake `18a32f05` (18 credits): pass.**
+- **Pointer:** starts near 2, rotates counter-clockwise, and is on 1 by 3.0 s. The `direction` wording fixed it.
+- **Camera:** punch-in from 3.0 to 4.2 s.
+- **Line:** "Final." is said once, at 3.4-4.8 s, in the close-up.
+- **Voice:** held the lock (correlation 0.969).
+- **Minor:** the pointer is out of frame in the close-up.
+
+**Full episode, take 2:** U1 `17fe9dae` + U2 `18a32f05`, 12.2 s, media `4231584f-8ce6-44d7-9326-c438064aff77`.
+
+**Still open in U1:** the rain and the passing umbrella are missing, because the speech filled the slot. The fix is to start the rain under the line.

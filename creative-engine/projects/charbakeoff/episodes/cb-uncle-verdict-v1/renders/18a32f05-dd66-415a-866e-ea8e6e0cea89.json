@@ -40,7 +40,29 @@
   "spoken": true,
   "voice_id": "0138a858-eebd-4457-a488-396e2732279a",
   "quoted_credits": 18,
-  "charged_credits": null,
+  "charged_credits": 18,
   "submitted_at": "2026-10-08",
-  "bible_version": 6
+  "bible_version": 6,
+  "auto_qa": {
+    "voice": {
+      "locked_ref_f0_hz": 115,
+      "video_f0_hz": 110,
+      "timbre_corr_vs_locked_ref": 0.969,
+      "verdict": "voice lock held"
+    },
+    "transcript": "'Final.' once at 3.44-4.84 s, in the close-up",
+    "frames_checked_s": [
+      0.2,
+      1.2,
+      2.2,
+      3.0,
+      4.2,
+      5.8
+    ],
+    "pointer": "starts near 2, rotates counter-clockwise, on 1 by 3.0 s (correct direction and end state)",
+    "camera": "handheld punch-in 3.0-4.2 s to a tight face close-up",
+    "notes": [
+      "in the close-up the paddle drops to the bottom edge so the pointer is out of frame (end frame showed it); acceptable, the state was established at 3.0 s"
+    ]
+  }
 }
