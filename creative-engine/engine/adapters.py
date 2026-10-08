@@ -97,6 +97,14 @@ def plan(packet: dict, bible: dict | None = None, quote_credits: dict | None = N
     for i, u in enumerate(out_units, 1):
         dur = round(u[-1]["end_s"] - u[0]["start_s"], 1)
         budget = str((packet.get("brief") or {}).get("render_tier", "")).lower() == "draft_mini"  # cost-capped test render requested by the brief
+        # Owner inspection 2026-10-08 (Uncle Verdict v3): Seedance 2.0 Mini rendered both prop states at once, invented text and duplicate
+        # props, dropped a passer-by mid-shot and repeated the last word; Seedance 2.5 draft held the cut-staged state change.
+        # So Mini is kept only for units with no dialogue and no handled props; everything else uses Seedance 2.5 (draft 480p for tests).
+        from .physics import HELD_PROPS
+        handled = any(any(h in str(s.get("physical_beat") or s.get("action") or "").lower() for h in HELD_PROPS) for s in u)
+        speaks = any(s.get("dialogue") for s in u)
+        if budget and (handled or speaks):
+            budget = False
         route = route_video_unit(pf, dur, audio_mode, needs_driving, identity_critical=True, budget_mode=budget)
         model = route["model"]
         lim = TOOL_LIMITS[model]

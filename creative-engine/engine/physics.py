@@ -111,7 +111,7 @@ def _sound_line(packet: dict, am: str, first: dict) -> str:
         return f"Sound: no speech, no music; {amb} and natural foley only."
     if am == "voiceover_narration":
         return f"Sound: nobody on screen speaks; lips stay closed; {amb}; narration and music are added in the edit."
-    return f"Sound: only the quoted lines are spoken; {amb}; no music."
+    return f"Sound: only the quoted lines are spoken, each exactly once, then silence; {amb}; no music."
 
 
 def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_meta: bool = False):
@@ -132,11 +132,14 @@ def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_
         if level < 2 and costume:
             lines.append(f"Identity: the person in @image1, exactly; same face and costume for the whole clip. {costume}".strip())
         else:
-            lines.append("Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip.")
+            lines.append("Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip; no rings, watches, microphones or accessories that are not in the reference.")
         light = first.get("lighting", "").split(";")[0]
         lines.append(f"Setting: {first.get('location', '')}." + (f" {light}." if level < 4 and light else "") + " Passers-by, if any, are soft blurred shapes who never react.")
         cuts = any("cut" in str(s.get("transition_out", "")).lower() for s in scenes[:-1])
         lines.append(f"Camera: starts {cam0.get('shot', '')}; {cam0.get('movement', '')}." + ("" if cuts else " No cuts."))
+        props = [str(x).strip() for x in (cont.get("props") or []) if str(x).strip()]
+        if props:
+            lines.append("Props (exact design, exactly one of each, nothing else added): " + "; ".join(props) + ".")
         lines.append(PHYSICS_LONG if level < 3 else PHYSICS_SHORT)
         for s in scenes:
             fmt = lambda v: f"{float(v):.0f}" if float(v).is_integer() else f"{float(v):.1f}"
@@ -150,7 +153,7 @@ def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_
                         line += f" An unseen voice off camera says: \"{d['line']}\"."
                         continue
                     note = f" ({d['delivery']})" if (level < 1 and d.get("delivery")) else ""
-                    line += f" {d.get('speaker', 'She')} says: \"{d['line']}\"{note}."
+                    line += f" {d.get('speaker', 'She')} says once: \"{d['line']}\"{note}."
             if s is not scenes[-1] and "cut" in str(s.get("transition_out", "")).lower():
                 line += " Hard cut to."
             lines.append(line)

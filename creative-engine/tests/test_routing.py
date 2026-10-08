@@ -70,9 +70,12 @@ class TestBakeoffAdditions(unittest.TestCase):
 
     def test_draft_mini_render_tier_routes_dialogue_to_mini(self):
         p = valid_packet(); p["brief"]["render_tier"] = "draft_mini"
-        p["production_format"] = {"shot_architecture": "single_take_static", "audio_mode": "on_camera_dialogue", "continuity_reuse": {"voice": "new", "location": "new", "costume": "same"}, "rationale": "t"}
-        tm = plan(p, bible())
-        self.assertEqual(tm["units"][0]["model"], "seedance_2_0_mini")
+        p["production_format"] = {"shot_architecture": "single_take_static", "audio_mode": "silent_ambience", "continuity_reuse": {"voice": "none", "location": "new", "costume": "same"}, "rationale": "t"}
+        for s in p["scenes"]:
+            s["dialogue"] = []; s["physical_beat"] = "She stands still at the window, arms at her sides, looking out; nothing moves."
+        self.assertEqual(plan(p, bible())["units"][0]["model"], "seedance_2_0_mini")
+        p["scenes"][0]["physical_beat"] = "Right hand lifts the clipboard to chest height, left hand at her side."
+        self.assertEqual(plan(p, bible())["units"][0]["model"], "seedance_2_5")
 
 
     def test_asset_without_registry_entry_cannot_be_owned(self):
@@ -173,3 +176,13 @@ class TestInteraction(unittest.TestCase):
         p["scenes"][0]["transition_out"] = "hard cut"
         txt = plan(p, bible())["units"][0]["prompt_text"]
         self.assertIn("no third arm", txt.lower())
+
+
+class TestPromptCarriesProps(unittest.TestCase):
+    def test_props_line_and_spoken_once(self):
+        p = valid_packet()
+        for s in p["scenes"]:
+            s["physical_beat"] = "Right hand holds the clipboard at chest height, left hand rests at her side, feet planted."
+        p["continuity"]["props"] = ["large wooden scoring paddle with a 0-10 dial"]
+        txt = plan(p, bible())["units"][0]["prompt_text"]
+        self.assertIn("scoring paddle with a 0-10 dial", txt)

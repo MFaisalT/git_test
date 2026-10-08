@@ -10,25 +10,27 @@
         "S3",
         "S4"
       ],
-      "model": "seedance_2_0_mini",
+      "model": "seedance_2_5",
       "routing": {
-        "why": "<=15 s; identity refs supported; cheapest adequate (15 credits / 15 s / 720p quoted)",
+        "why": "dialogue + identity lock: Seedance 2.5 omni_reference carries image + audio references (voice lock) with native audio",
         "status": "verified_controls",
-        "fallback": "seedance_2_5 omni_reference if identity or physics fail on mini"
+        "fallback": "seedance_2_0_mini for drafts; cinematic_studio_video_4_0 for premium look",
+        "optimisation": "480p draft -> finalize"
       },
       "controls": {
         "duration": 12,
         "aspect_ratio": "9:16",
         "resolution": "720p",
-        "generate_audio": true
+        "generate_audio": true,
+        "mode": "omni_reference"
       },
-      "prompt_text": "Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip.\nSetting: outside a corner shop on a pavement (generic, unrecognisable). Passers-by, if any, are soft blurred shapes who never react.\nCamera: starts medium portrait, centred, seated eye level, 9:16; propped phone with one small settle-wobble in the first second, then locked.\nPhysics: each held object stays in a named hand or rests on a surface; nothing floats or vanishes; mouth closed on anything in it; feet grounded except described steps; everything else holds still.\nHands: at most two hands act; each named hand does one thing; the other hand rests where stated; every object is either held or resting on a surface; one interaction per shot; state changes happen across the hard cuts, never mid-shot.\n0-6s: Left hand grips the paddle shaft upright on his left thigh, right palm flat on the closed umbrella across his lap, body and chair still. Uncle Verdict says: \"Umbrella. Two out of ten. Correct answer: a tiny roof for nobody.\".\n6-9s: Rain starts: drops darken his bald crown and the paddle; a stranger's open dark umbrella slides past the right frame edge; his left hand keeps the paddle upright on his thigh, body still. Camera: propped phone.\n9-10.5s: Left hand lifts the paddle toward the lens, dial clearly at 2; right palm stays flat on the umbrella in his lap; body still on the chair; rain falling. Camera: propped phone. Hard cut to.\n10.5-12s: Left hand holds the paddle up at the lens, dial already at 1; right palm flat on the umbrella in his lap; body still; rain falling. Camera: propped phone. Uncle Verdict says: \"Final.\".\nSound: only the quoted lines are spoken; quiet street ambience, distant traffic, faint wind; no music.\nNo readable text, logos or signage except a product's own label. Natural skin, no blur on the face. No third arm, no extra hands, no duplicated limbs, no extra fingers, no deformed hands; objects never merge with hands; exactly one of each prop; no mirrors or reflections; no slow motion.",
+      "prompt_text": "Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip; no rings, watches, microphones or accessories that are not in the reference.\nSetting: outside a corner shop on a pavement (generic, unrecognisable). Passers-by, if any, are soft blurred shapes who never react.\nCamera: starts medium portrait, centred, seated eye level, 9:16; propped phone with one small settle-wobble in the first second, then locked.\nProps (exact design, exactly one of each, nothing else added): white folding plastic garden chair; large wooden scoring paddle with a 0-10 dial; closed plain umbrella (no logo) across his knees; passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure); rain (top edge, then falling); grey corner-shop wall with blank unreadable shutter.\nHands: at most two hands act; each named hand does one thing; the other hand rests where stated; every object is either held or resting on a surface; one interaction per shot; state changes happen across the hard cuts, never mid-shot.\nPhysics: each held object stays in a named hand or rests on a surface; nothing floats or vanishes; mouth closed on anything in it; feet grounded except described steps; everything else holds still.\n0-6s: Left hand grips the paddle shaft upright on his left thigh, right palm flat on the closed umbrella across his lap, body and chair still. Uncle Verdict says once: \"Umbrella. Two out of ten. Correct answer: a tiny roof for nobody.\".\n6-9s: Rain starts: drops darken his bald crown and the paddle; a stranger's open dark umbrella slides past the right frame edge; his left hand keeps the paddle upright on his thigh, body still. Camera: propped phone.\n9-10.5s: Left hand lifts the paddle toward the lens, dial clearly at 2; right palm stays flat on the umbrella in his lap; body still on the chair; rain falling. Camera: propped phone. Hard cut to.\n10.5-12s: Left hand holds the paddle up at the lens, dial already at 1; right palm flat on the umbrella in his lap; body still; rain falling. Camera: propped phone. Uncle Verdict says once: \"Final.\".\nSound: only the quoted lines are spoken, each exactly once, then silence; quiet street ambience, distant traffic, faint wind; no music.\nNo readable text, logos or signage except a product's own label. Natural skin, no blur on the face. No third arm, no extra hands, no duplicated limbs, no extra fingers, no deformed hands; objects never merge with hands; exactly one of each prop; no mirrors or reflections; no slow motion.",
       "prompt_style": "compact_physics_first",
       "prompt_budget": {
         "audio_mode": "on_camera_dialogue",
         "word_budget": 260,
-        "words": 273,
-        "words_total_incl_safety_lines": 346,
+        "words": 349,
+        "words_total_incl_safety_lines": 422,
         "shrink_level": 4,
         "over_budget": true
       },
@@ -59,8 +61,8 @@
         "Lip-sync and exact SFX timing are not controllable; inspect output.",
         "Lens is prompt language only."
       ],
-      "estimated_credits": 12,
-      "estimated_credits_draft": null,
+      "estimated_credits": 84,
+      "estimated_credits_draft": 36,
       "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
     }
   ],
