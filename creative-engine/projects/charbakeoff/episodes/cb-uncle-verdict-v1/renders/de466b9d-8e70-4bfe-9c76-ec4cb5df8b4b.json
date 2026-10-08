@@ -16,7 +16,8 @@
   ],
   "cost": {
     "quoted_credits": 36,
-    "charged_credits": null
+    "charged_credits": 36,
+    "note": "ledger 2026-10-08T06:26Z, equal to quote"
   },
   "submitted_at": "2026-10-08",
   "render_inspection": {
