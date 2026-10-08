@@ -77,29 +77,82 @@ def physics_findings(packet: dict) -> list[dict]:
     return out
 
 
-def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None) -> str | None:
-    """Physics-first render prompt, ~150-260 words. Returns None when any scene lacks a physical_beat (caller falls back to the dense prompt)."""
+# Word budgets per audio mode. Public Seedance guides (vendor/blog grade) put useful prompts at ~60-260 words; the clip's
+# words go to picture when there is no speech, so non-spoken modes get tighter budgets (owner note 2026-10-08: silent clips
+# may still carry a custom soundtrack, which is laid in the edit and must never be generated or described as sung/spoken).
+PROMPT_BUDGET = {"on_camera_dialogue": 260, "off_camera_dialogue": 240, "voiceover_narration": 220,
+                 "silent_ambience": 220, "text_over_broll": 200, "music_driven": 220}
+SPOKEN_ON_CAMERA = ("on_camera_dialogue", "off_camera_dialogue")
+PHYSICS_LONG = ("Physics: every held object is gripped by a named hand and has weight; objects rest on a surface, a strap or a lap when not held; "
+                "nothing floats, appears or vanishes; an object in the mouth means no speech and no open grin in that beat; feet keep contact "
+                "with the ground except for the steps or stomps described; everything not described holds still.")
+PHYSICS_SHORT = ("Physics: each held object stays in a named hand or rests on a surface; nothing floats or vanishes; mouth closed on anything "
+                 "in it; feet grounded except described steps; everything else holds still.")
+
+
+def _audio_mode(packet: dict) -> str:
+    am = (packet.get("production_format") or {}).get("audio_mode")
+    if am:
+        return am
+    return "silent_ambience" if (packet.get("brief") or {}).get("format") == "silent_gag" else "on_camera_dialogue"
+
+
+def _sound_line(packet: dict, am: str, first: dict) -> str:
+    amb = (first.get("sound") or {}).get("ambience") or "real ambience"
+    if am == "music_driven":
+        st = (packet.get("production_format") or {}).get("soundtrack") or {}
+        beats = st.get("beat_times_s") or []
+        bpm = st.get("bpm")
+        timing = (f" Motion accents land on {', '.join(f'{float(b):.1f}s' for b in beats[:8])}." if beats else (f" Motion follows a steady {bpm} BPM pulse." if bpm else ""))
+        return "Sound: silent picture; no speech, no singing, no generated music; a soundtrack is added in the edit." + timing
+    if am in ("silent_ambience", "text_over_broll"):
+        return f"Sound: no speech, no music; {amb} and natural foley only."
+    if am == "voiceover_narration":
+        return f"Sound: nobody on screen speaks; lips stay closed; {amb}; narration and music are added in the edit."
+    return f"Sound: only the quoted lines are spoken; {amb}; no music."
+
+
+def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_meta: bool = False):
+    """Physics-first render prompt held to a per-audio-mode word budget. Returns None when any scene lacks a physical_beat
+    (caller falls back to the dense prompt). Shrinks deterministically: delivery notes -> long costume -> long physics block -> setting light."""
     if not scenes or any(not s.get("physical_beat") for s in scenes):
         return None
     cont = packet.get("continuity", {})
-    b = packet.get("brief", {})
-    am = (packet.get("production_format") or {}).get("audio_mode")
-    silent = b.get("format") == "silent_gag" or am in ("silent_ambience", "text_over_broll", "music_driven")
+    am = _audio_mode(packet)
+    budget = PROMPT_BUDGET.get(am, 240)
+    speak = am in SPOKEN_ON_CAMERA
     first = scenes[0]
-    lines = []
-    lines.append(f"Identity: the person in @image1, exactly; same face and costume for the whole clip. {cont.get('costume', '')}".strip())
-    lines.append(f"Setting: {first.get('location', '')}. {first.get('lighting', '').split(';')[0]}. Passers-by, if any, are soft blurred shapes who never react.")
     cam0 = first.get("camera", {})
-    lines.append(f"Camera: {cam0.get('shot', '')}; {cam0.get('movement', '')}. No cuts.")
-    lines.append("Physics: every held object is gripped by a named hand and has weight; objects rest on a surface, a strap or a lap when not held; nothing floats, appears or vanishes; an object in the mouth means no speech and no open grin in that beat; feet keep contact with the ground except for the steps or stomps described; everything not described holds still.")
-    for s in scenes:
-        t = f"{float(s['start_s']):.0f}-{float(s['end_s']):.0f}s"
-        beat = str(s["physical_beat"]).strip().rstrip(".")
-        line = f"{t}: {beat}."
-        for d in s.get("dialogue", []) or []:
-            if not silent:
-                line += f" {d.get('speaker', 'She')} says: \"{d['line']}\"" + (f" ({d['delivery']})" if d.get("delivery") else "") + "."
-        lines.append(line)
-    lines.append("Sound: " + ("no speech; " if silent else "only the quoted lines are spoken; ") + f"{first.get('sound', {}).get('ambience', 'real ambience')}; no music.")
-    lines.append("No readable text, logos or signage. Natural skin, natural hands, no blur on the face.")
-    return "\n".join(lines)
+
+    def build(level: int) -> str:
+        lines = []
+        costume = cont.get("costume", "")
+        if level < 2 and costume:
+            lines.append(f"Identity: the person in @image1, exactly; same face and costume for the whole clip. {costume}".strip())
+        else:
+            lines.append("Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip.")
+        light = first.get("lighting", "").split(";")[0]
+        lines.append(f"Setting: {first.get('location', '')}." + (f" {light}." if level < 4 and light else "") + " Passers-by, if any, are soft blurred shapes who never react.")
+        lines.append(f"Camera: {cam0.get('shot', '')}; {cam0.get('movement', '')}. No cuts.")
+        lines.append(PHYSICS_LONG if level < 3 else PHYSICS_SHORT)
+        for s in scenes:
+            t = f"{float(s['start_s']):.0f}-{float(s['end_s']):.0f}s"
+            line = f"{t}: {str(s['physical_beat']).strip().rstrip('.')}."
+            if speak:
+                for d in s.get("dialogue", []) or []:
+                    if not d.get("on_camera", True) and am == "off_camera_dialogue":
+                        line += f" An unseen voice off camera says: \"{d['line']}\"."
+                        continue
+                    note = f" ({d['delivery']})" if (level < 1 and d.get("delivery")) else ""
+                    line += f" {d.get('speaker', 'She')} says: \"{d['line']}\"{note}."
+            lines.append(line)
+        lines.append(_sound_line(packet, am, first))
+        lines.append("No readable text, logos or signage. Natural skin, natural hands, no blur on the face.")
+        return "\n".join(lines)
+
+    level, text = 0, build(0)
+    while len(text.split()) > budget and level < 4:
+        level += 1
+        text = build(level)
+    meta = {"audio_mode": am, "word_budget": budget, "words": len(text.split()), "shrink_level": level, "over_budget": len(text.split()) > budget}
+    return (text, meta) if return_meta else text

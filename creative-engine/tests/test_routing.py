@@ -109,3 +109,44 @@ class TestPhysics(unittest.TestCase):
         for s in p["scenes"]:
             s.pop("physical_beat")
         self.assertEqual(plan(p, bible())["units"][0]["prompt_style"], "dense_legacy")
+
+
+class TestAudioModePrompts(unittest.TestCase):
+    def _pk(self, am, dialogue=True):
+        p = valid_packet()
+        p["production_format"] = {"shot_architecture": "single_take_static", "audio_mode": am, "continuity_reuse": {"voice": "none", "location": "new", "costume": "same"}, "rationale": "t"}
+        for s in p["scenes"]:
+            s["physical_beat"] = "Right hand grips the clipboard at chest height, left hand still at her side, feet planted, everything else still."
+            if not dialogue:
+                s["dialogue"] = []
+        return p
+
+    def test_music_driven_prompt_has_no_speech_and_beats(self):
+        from engine.physics import compact_prompt
+        p = self._pk("music_driven", dialogue=False)
+        p["production_format"]["soundtrack"] = {"source": "custom", "title": "t", "rights_status": "owned", "bpm": 100, "beat_times_s": [0.6, 1.8, 3.0]}
+        text, meta = compact_prompt(p, sorted(p["scenes"], key=lambda s: s["start_s"]), bible(), return_meta=True)
+        self.assertIn("no generated music", text); self.assertIn("1.8s", text); self.assertNotIn(" says:", text)
+        self.assertLessEqual(meta["words"], meta["word_budget"])
+
+    def test_voiceover_lines_never_reach_render_prompt(self):
+        from engine.physics import compact_prompt
+        p = self._pk("voiceover_narration")
+        p["scenes"][0]["dialogue"] = [{"speaker": "VO", "line": "Case closed.", "on_camera": False}]
+        text = compact_prompt(p, sorted(p["scenes"], key=lambda s: s["start_s"]), bible())
+        self.assertNotIn("Case closed", text); self.assertIn("lips stay closed", text)
+
+    def test_budget_shrinks_long_prompts(self):
+        from engine.physics import compact_prompt
+        p = self._pk("on_camera_dialogue")
+        p["continuity"]["costume"] = "long costume " * 60
+        text, meta = compact_prompt(p, sorted(p["scenes"], key=lambda s: s["start_s"]), bible(), return_meta=True)
+        self.assertGreater(meta["shrink_level"], 0); self.assertNotIn("long costume long costume", text)
+
+    def test_music_driven_requires_soundtrack_spec(self):
+        from engine.formats import realisation_findings
+        p = self._pk("music_driven", dialogue=False)
+        for s in p["scenes"]:
+            s["sound"]["music"] = "custom track"
+        codes = {f["code"] for f in realisation_findings(p["production_format"], p)}
+        self.assertIn("FORMAT_SOUNDTRACK_SPEC", codes)

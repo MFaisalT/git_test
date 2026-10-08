@@ -36,3 +36,18 @@ How to read it: v1 versus v2-Mini isolates the prompt; v2-Mini versus v2-2.5 iso
 ## Captain Tempo's point
 
 The owner stopped on B but did not get the point. The intended joke: she counts the crossing down as if she controls the traffic light, the light changes on its own timer, she celebrates as if she caused it, and nobody notices her. If that is not legible in 12 s muted, the fix is in the edit and the next brief, not the renderer: a one-line caption in the first second ("She thinks she controls the traffic lights.") and a closer look at the signal on "AND".
+
+## Prompt length per audio mode (2026-10-08, after the owner's note that silent clips may carry a custom soundtrack)
+
+The v2 test prompts ran 308 and 379 words against a 260 target; the overrun came from a duplicated costume description, a 64-word physics block and delivery notes on every line. The builder now enforces a word budget per audio mode and shrinks in a fixed order (delivery notes, costume text, physics block, setting light) until it fits.
+
+| Audio mode | Budget (words) | What the render prompt says about sound |
+|---|---|---|
+| on_camera_dialogue | 260 | only the quoted lines are spoken; ambience; no music |
+| off_camera_dialogue | 240 | lines voiced by an unseen speaker; on-screen lips do not move for them |
+| voiceover_narration | 220 | nobody on screen speaks, lips stay closed; narration and music added in the edit; VO lines are never put in the render prompt |
+| silent_ambience | 220 | no speech, no music; ambience and foley only |
+| text_over_broll | 200 | as silent; text added in post |
+| music_driven (silent picture + custom soundtrack) | 220 | silent picture, no speech, no singing, no generated music; the track is laid in the edit; motion accents land on the listed beat times |
+
+`music_driven` now needs `production_format.soundtrack` (source: custom, licensed, owned or platform_library; title; rights_status; bpm and/or beat_times_s). Missing spec is an error; missing timing or uncleared rights are warnings; on-camera speech in a music-driven clip is warned because generation audio is off. The budgets are an engineering choice inside the published 60-260 range, not a measured optimum; one Mini A/B (24 credits) would test whether length alone matters.

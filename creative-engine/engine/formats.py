@@ -106,6 +106,23 @@ def realisation_findings(pf: dict, packet: dict) -> list[dict]:
         out.append({"code": "FORMAT_NO_VO", "severity": "error", "message": "voiceover_narration declared but no VO/narrator line"})
     if am == "music_driven" and not any(str((s.get("sound") or {}).get("music", "")).strip().lower() not in ("", "none", "no music") for s in scenes):
         out.append({"code": "FORMAT_NO_MUSIC", "severity": "error", "message": "music_driven declared but no scene names a (licensed) music cue"})
+    if am == "music_driven":
+        st = pf.get("soundtrack") or {}
+        if not st:
+            out.append({"code": "FORMAT_SOUNDTRACK_SPEC", "severity": "error", "message": "music_driven declared but production_format.soundtrack is missing (source, title, rights_status, bpm or beat_times_s)"})
+        else:
+            if st.get("source") not in ("custom", "licensed", "owned", "platform_library"):
+                out.append({"code": "FORMAT_SOUNDTRACK_SOURCE", "severity": "error", "message": "soundtrack.source must be custom | licensed | owned | platform_library"})
+            if st.get("rights_status") not in ("owned", "licensed", "cleared"):
+                out.append({"code": "FORMAT_SOUNDTRACK_RIGHTS", "severity": "warning", "message": f"soundtrack rights_status is '{st.get('rights_status')}'; render may proceed but publish needs owned/licensed/cleared"})
+            if not st.get("bpm") and not st.get("beat_times_s"):
+                out.append({"code": "FORMAT_SOUNDTRACK_TIMING", "severity": "warning", "message": "soundtrack has no bpm or beat_times_s; picture cannot be timed to the track"})
+            dur = max([float(s.get("end_s", 0)) for s in scenes] or [0])
+            bad = [b for b in (st.get("beat_times_s") or []) if not (0 <= float(b) <= dur)]
+            if bad:
+                out.append({"code": "FORMAT_SOUNDTRACK_BEATS_RANGE", "severity": "error", "message": f"beat times outside the clip: {bad}"})
+        if dialogue and not all(str(d.get("speaker", "")).lower().startswith(("vo", "narrat")) or not d.get("on_camera", True) for d in dialogue):
+            out.append({"code": "FORMAT_MUSIC_ONCAMERA_SPEECH", "severity": "warning", "message": "music_driven with on-camera speech: generation audio is off, so lips would move with no sound; move lines to captions or VO"})
     reuse = pf.get("continuity_reuse") or {}
     kinds = {r.get("kind"): r for r in packet.get("asset_rights", [])}
     if reuse.get("voice") == "same" and "voice" not in kinds:
