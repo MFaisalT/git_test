@@ -1,0 +1,32 @@
+{
+  "job_id": "a60ce385-edde-4b12-89ff-71719dca8362",
+  "model": "cinematic_studio_video_4_0",
+  "generation_unit": "U1",
+  "scene_ids": [
+    "S1",
+    "S2"
+  ],
+  "purpose": "first 8 s (verdict + rain) on the owner's chosen interaction model, to pair with U2 77ecb61d",
+  "controls": {
+    "mode": "omni_reference",
+    "duration": 8,
+    "resolution": "480p",
+    "aspect_ratio": "9:16",
+    "generate_audio": true
+  },
+  "medias": [
+    {
+      "value": "cb1f3458-a537-48af-950d-c42de75a4b28",
+      "role": "image_references"
+    },
+    {
+      "value": "3a640e87-c426-48ff-bb01-b679ce36b0ed",
+      "role": "image_references"
+    }
+  ],
+  "quoted_credits": 24,
+  "charged_credits": null,
+  "submitted_at": "2026-10-08",
+  "bible_version": 4,
+  "prompt_source": "tool_mapping.U1.prompt_text"
+}

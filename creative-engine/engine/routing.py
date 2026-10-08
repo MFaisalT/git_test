@@ -71,8 +71,8 @@ def route_video_unit(pf: dict, duration: float, audio_mode: str, has_driving_foo
         return {"model": "seedance_2_5", "mode": "video_extension", "generate_audio": not silent, "why": "video_extension (forward) continues from the approved reference clip", "status": "recommended_untested", "fallback": "cinematic_studio_video_4_0 video_extension"}
     if interaction:
         return {"model": "cinematic_studio_video_4_0", "mode": "omni_reference", "generate_audio": not silent,
-                "why": "shown hand-object interaction: animated between the approved start and end keyframes (start_image/end_image) with character and prop references; Cinema Studio 4.0 ranked first by the owner 2026-10-08",
-                "status": "recommended_untested", "fallback": "seedance_2_5 omni_reference, draft 480p, same start/end frames", "optimisation": "test at 480p (3 credits/s measured); 720p quoted 7 credits/s"}
+                "why": "shown hand-object interaction: animated between the approved start and end keyframes (start_image/end_image) with character and prop references; Cinema Studio 4.0 ranked first by the owner 2026-10-08 and again on the keyframed interaction test (job 77ecb61d)",
+                "status": "verified_controls", "fallback": "seedance_2_5 omni_reference, draft 480p, same start/end frames (owner: far less realistic on the keyframed paddle push, 2026-10-08)", "optimisation": "test at 480p (3 credits/s measured); 720p quoted 7 credits/s"}
     if duration > 15:
         return {"model": "seedance_2_5", "mode": "omni_reference", "generate_audio": not silent, "why": f"{duration:.0f}s exceeds the 15 s mini/Cinema-3.0 ceiling; Seedance 2.5 keeps identity refs + native audio up to 30 s", "status": "verified_controls",
                 "fallback": "cinematic_studio_video_4_0 omni_reference (same ranges; native lens/lighting controls once control ids are retrieved)",

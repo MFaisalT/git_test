@@ -35,5 +35,6 @@
   "charged_credits": 12,
   "submitted_at": "2026-10-08",
   "bible_version": 4,
-  "prompt_source": "tool_mapping.U2.prompt_text"
+  "prompt_source": "tool_mapping.U2.prompt_text",
+  "owner_verdict": "owner: more realistic than Seedance 2.5 by far (2026-10-08) - chosen"
 }

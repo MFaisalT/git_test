@@ -149,3 +149,5 @@ The owner judges these. Checklist:
 - Do the numerals stay 0-10?
 - Does the left hand hold still?
 - Is "Final." said once, after the move?
+
+**Owner verdict on the keyframed push:** Cinema Studio 4.0 (`77ecb61d`) is "more realistic than the other by far". Interaction units stay on Cinema Studio 4.0, with Seedance 2.5 as a fallback only. U1 (0-8 s, the verdict and the rain) was then rendered on Cinema Studio 4.0 at 480p as job `a60ce385-edde-4b12-89ff-71719dca8362` (quoted 24 credits), to pair with U2 for a full 12 s review. Before this render, S1's beat was changed to state "pointer at 2" so it matches U2's start frame.
