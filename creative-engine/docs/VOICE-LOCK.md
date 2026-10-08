@@ -117,3 +117,23 @@ Jobs: M1 ElevenLabs/Gideon `2f3b5d99`, M2 ElevenLabs/Arthur `6ba36c93`, M3 Eleve
 | M4 | Qwen / Gideon | 55.7 s | 83 (64-145): deepest | 0.65 / 0.16: slowest | clean |
 
 Credits: 2.76 per ElevenLabs monologue, 0.23 for the Qwen monologue. Round A cost 0.04-0.69 per take.
+
+## Locked: Uncle Verdict v1 (2026-10-08)
+
+The owner picked M3 (ElevenLabs v4 on base Holden, stability 0.3, job `9b8b9239`).
+
+**Clone:**
+- Made with `create_voice_from_confirmed_audio` from the 50 s take (media `2593920c`).
+- Result: element voice **`0138a858-eebd-4457-a488-396e2732279a` "Uncle Verdict v1"**. It finished processing immediately.
+
+**Clone QA (sandbox):**
+- **Episode line:** job `a61301f9`. F0 115 Hz, timbre-envelope correlation with the source 0.987.
+- **New line:** job `4c6a968d`, "Escalator...". F0 113 Hz, correlation 0.988; the transcript is clean.
+- **Source:** F0 117 Hz.
+
+**Locked in bible v6:**
+- `reference_audio` = `a61301f9`
+- `provenance: designed_from_character`
+- The direction block and the TTS settings
+
+Every spoken unit now carries it automatically. First render with the locked voice: U1 `17fe9dae` (Cinema Studio 4.0). It tests whether CS4 follows `audio_references`.

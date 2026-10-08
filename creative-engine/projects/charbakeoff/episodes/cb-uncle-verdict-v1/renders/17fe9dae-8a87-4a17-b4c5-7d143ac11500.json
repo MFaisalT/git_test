@@ -1,0 +1,38 @@
+{
+  "job_id": "17fe9dae-8a87-4a17-b4c5-7d143ac11500",
+  "model": "cinematic_studio_video_4_0",
+  "generation_unit": "U1",
+  "scene_ids": [
+    "S1",
+    "S2"
+  ],
+  "purpose": "v6: handheld UGC camera + first render with the locked custom voice (voice adherence test)",
+  "controls": {
+    "mode": "omni_reference",
+    "duration": 6,
+    "resolution": "480p",
+    "aspect_ratio": "9:16",
+    "generate_audio": true
+  },
+  "medias": [
+    {
+      "value": "cb1f3458-a537-48af-950d-c42de75a4b28",
+      "role": "image_references"
+    },
+    {
+      "value": "3a640e87-c426-48ff-bb01-b679ce36b0ed",
+      "role": "image_references"
+    },
+    {
+      "value": "a61301f9-422b-4334-9072-070ca23e6a8b",
+      "role": "audio_references"
+    }
+  ],
+  "spoken": true,
+  "voice_id": "0138a858-eebd-4457-a488-396e2732279a",
+  "quoted_credits": 18,
+  "charged_credits": null,
+  "submitted_at": "2026-10-08",
+  "bible_version": 6,
+  "prompt_source": "tool_mapping.U1.prompt_text"
+}
