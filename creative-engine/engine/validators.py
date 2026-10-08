@@ -45,7 +45,7 @@ FORBIDDEN_SYNONYMS = {
     "any user result": ["results", "transformed", "fixed my", "solved my", "customers say", "reviews say", "people love"],
     "health": ["cures", "heals", "clinically", "doctor"],
 }
-SPEECH_WPS_MAX = 3.3   # ~200 wpm brisk ceiling
+SPEECH_WPS_MAX = 2.8   # 2026-10-08: Higgsfield/skills guidance 2.3-2.8 w/s; 3.3 let a slow locked voice overrun its scene
 SPEECH_WPS_MIN = 1.6   # below this, dialogue leaves dead air that must be deliberate
 TIMING_TOLERANCE_S = 0.05
 
@@ -459,6 +459,11 @@ def validate_all(packet: dict, bible: dict | None = None) -> Report:
     from .physics import physics_findings
     for f in physics_findings(packet):
         rep.warn(f["code"], f["message"], f["path"])
+    from .continuity import prop_state_findings, speech_fit_findings, world_event_findings
+    for f in speech_fit_findings(packet, bible) + world_event_findings(packet) + prop_state_findings(packet):
+        if f["code"] == "SPEECH_TOO_FAST":
+            continue  # validate_timing already reports it with the same ceiling
+        (rep.error if f.get("severity") == "error" else rep.warn)(f["code"], f["message"], f["path"])
     from .camera import camera_findings, lens_findings
     for f in camera_findings(packet) + lens_findings(packet):
         rep.warn(f["code"], f["message"], f["path"])

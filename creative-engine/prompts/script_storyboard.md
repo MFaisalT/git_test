@@ -27,7 +27,9 @@ Realisation rules: single-take architectures = no cuts and one generation unit (
 - Silent gag: dialogue arrays must be empty. Use timed action, facial performance, camera, ambience, a reveal, and a loop-friendly final pose.
 <<ENDIF SILENT>>
 <<IF SPOKEN>>
-- Dialogue lines fit their scene at <=2.8 words/s. Write for the ear: short lines, no thesis sentences.
+- Dialogue lines fit their scene at <=2.8 words/s, and at the character's locked-voice rate when the bible records one (approved_assets.voice.measured_wps), plus about 0.4 s of breath and settle. Write for the ear: short lines, no thesis sentences.
+- World events the joke needs (rain starts, a stranger passes) happen UNDER the line, inside the speaking scene, not in a short silent scene after it; the character talks over them.
+- Stateful props (a dial, a lid, a cap) declare scene.prop_states, e.g. {"scoring paddle.pointer": "pointing at 2"}. The state at the end of one generation unit must equal the state at the start of the next, unless the change is the intended state_change_by_cut.
 <<ENDIF SPOKEN>>
 <<IF COMMERCIAL>>
 - Commercial: product solves or escalates the story problem; include disclosure_line and a disclosure_plan entry; use only verified facts {{COMMERCIAL_FACTS}}; never imply the character used or benefited from it. Forbidden topics: {{FORBIDDEN}}.

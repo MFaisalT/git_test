@@ -8,3 +8,4 @@
 {"type": "bible_version", "bible_id": "uncle-verdict-v1", "version": 4, "reason": "owner picked the NB Pro paddle reference (2026-10-08); no identity change", "at": "2026-10-08T08:07:53Z"}
 {"type": "bible_version", "bible_id": "uncle-verdict-v1", "version": 5, "reason": "owner 2026-10-08: replace locked-off camera with handheld UGC direction (micro-movement, creep-in, push-in to close-up for the payoff)", "at": "2026-10-08T08:38:24Z"}
 {"type": "bible_version", "bible_id": "uncle-verdict-v1", "version": 6, "reason": "lock Uncle Verdict's custom voice (owner-picked designed take M3, cloned) - permanent", "at": "2026-10-08T09:28:03Z"}
+{"type": "bible_version", "bible_id": "uncle-verdict-v1", "version": 7, "reason": "record the locked voice's measured speaking rate (2.0 w/s) for scene timing; voice unchanged", "at": "2026-10-08T10:42:13Z"}

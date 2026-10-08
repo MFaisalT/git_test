@@ -540,6 +540,17 @@
             "type": "boolean",
             "description": "True when a prop's state change (cap off, dial moved, garment on) happens across the hard cut that opens this scene: the scene starts already in the end state, hands in the end pose."
           },
+          "prop_states": {
+            "type": "object",
+            "additionalProperties": {"type": "string"},
+            "description": "State of each stateful prop part in this scene, e.g. {\"scoring paddle.pointer\": \"pointing at 2\"}; must match across cuts unless state_change_by_cut."
+          },
+          "start_frame": {
+            "type": "object",
+            "additionalProperties": false,
+            "description": "Approved still that the unit opening with this scene starts from (start_image), so prop states and framing are pinned at frame one.",
+            "properties": {"job": {"type": "string"}, "status": {"type": "string", "enum": ["planned", "generated_pending_owner_approval", "owner_approved"]}}
+          },
           "interaction": {
             "type": "object",
             "additionalProperties": false,

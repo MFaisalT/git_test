@@ -30,6 +30,7 @@ PARK_WORDS = ("rests", "resting", "parked", "at her side", "at his side", "flat 
               "on his thigh", "on her thigh", "hangs", "relaxed")
 HEAVY_WORDS = ("heavy", "appliance", "dumbbell", "kettle", "crate", "suitcase", "litre", "liter")
 
+NEGATIVE_TAIL_SHORT = "No extra hands, fingers or limbs; objects never merge with hands; one of each prop; no mirrors; no slow motion."
 NEGATIVE_TAIL = ("No third arm, no extra hands, no duplicated limbs, no extra fingers, no deformed hands; objects never merge with hands; "
                  "exactly one of each prop; no mirrors or reflections; no slow motion.")
 
@@ -108,22 +109,25 @@ def interaction_spec_findings(scene: dict, unit_scene_ids: list[str] | None = No
 
 
 def interaction_beat(scene: dict, prop_design: str = "") -> str:
-    """Deterministic sentence for the render prompt; the model gets the mechanics, not a paraphrase."""
+    """Deterministic sentence for the render prompt; the model gets the mechanics, not a paraphrase.
+    Kept tight (every word counts against the budget since 2026-10-08): opening state, the one move with its direction, the stop and
+    hold, the other hand, and the frame anchors. The physical_beat already places the hands, so the contact is not repeated."""
     it = scene.get("interaction") or {}
     if not it:
         return ""
-    obj = it.get("object", "object")
-    # Owner 2026-10-08 (CS4 77ecb61d): the pointer started near 4, not 2. State the opening state as a hard fact and forbid any
-    # travel outside from -> to, so the model cannot begin elsewhere and sweep across.
-    turn = f" It rotates {it['direction']}, and only that far." if it.get("direction") else ""
-    return (f"At 0 s the {it.get('part')} is exactly {it.get('from_state')}, as in the start frame.{turn} The one movement: {it.get('contact')}; {it.get('motion')}; "
-            f"the {it.get('part')} goes from {it.get('from_state')} to {it.get('to_state')} in one slow continuous move and stops; it never passes any other position "
-            f"and never moves the other way. {str(it.get('support_hand')).rstrip('.')}. Nothing else on the {obj} moves or changes; "
-            f"the clip starts on the start frame and ends on the end frame, where the {it.get('part')} is exactly {it.get('to_state')}.")
+    obj, part = it.get("object", "object"), it.get("part", "part")
+    turn = f", {it['direction']}" if it.get("direction") else ""
+    return (f"At 0 s the {part} is exactly {it.get('from_state')}, as in the start frame. The one movement: {it.get('motion')}{turn}; "
+            f"one slow continuous move from {it.get('from_state')} to {it.get('to_state')}, then it stops and stays exactly {it.get('to_state')}; "
+            f"never any other position. {str(it.get('support_hand')).rstrip('.')}. Nothing else on the {obj} changes; "
+            f"the clip starts on the start frame and ends on the end frame.")
 
 
-def interaction_rule_line(packet: dict, scenes: list[dict] | None = None) -> str:
+def interaction_rule_line(packet: dict, scenes: list[dict] | None = None, short: bool = False) -> str:
     shown = any((s or {}).get("interaction") for s in (scenes or []))
+    if short:
+        return ("Hands: two hands at most, each named; the other rests where stated; every object held or resting; "
+                + ("the only state change is the one movement described." if shown else "state changes only across hard cuts."))
     tail = ("one interaction per shot; the only state change is the one movement described, shown slowly from the start frame to the end frame."
             if shown else "one interaction per shot; state changes happen across the hard cuts, never mid-shot.")
     return ("Hands: at most two hands act; each named hand does one thing; the other hand rests where stated; every object is either held or resting on a surface; " + tail)

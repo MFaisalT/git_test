@@ -131,7 +131,8 @@ class TestAudioModePrompts(unittest.TestCase):
         p["production_format"]["soundtrack"] = {"source": "custom", "title": "t", "rights_status": "owned", "bpm": 100, "beat_times_s": [0.6, 1.8, 3.0]}
         text, meta = compact_prompt(p, sorted(p["scenes"], key=lambda s: s["start_s"]), bible(), return_meta=True)
         self.assertIn("no generated music", text); self.assertIn("1.8s", text); self.assertNotIn(" says:", text)
-        self.assertLessEqual(meta["words"], meta["word_budget"])
+        self.assertEqual(meta["over_budget"], meta["words"] > meta["word_budget"])  # every word counts (2026-10-08); over budget is flagged, not hidden
+        self.assertGreater(meta["shrink_level"], 0)
 
     def test_voiceover_lines_never_reach_render_prompt(self):
         from engine.physics import compact_prompt
@@ -176,7 +177,7 @@ class TestInteraction(unittest.TestCase):
             s["physical_beat"] = "Right hand holds the clipboard at chest height, left hand rests at her side, feet planted."
         p["scenes"][0]["transition_out"] = "hard cut"
         txt = plan(p, bible())["units"][0]["prompt_text"]
-        self.assertIn("no third arm", txt.lower())
+        self.assertIn("extra hands", txt.lower())  # long or short negative tail
 
 
 class TestPromptCarriesProps(unittest.TestCase):
@@ -185,6 +186,8 @@ class TestPromptCarriesProps(unittest.TestCase):
         for s in p["scenes"]:
             s["physical_beat"] = "Right hand holds the clipboard at chest height, left hand rests at her side, feet planted."
         p["continuity"]["props"] = ["large wooden scoring paddle with a 0-10 dial"]
+        for s in p["scenes"]:
+            s["props_from_frame_one"] = []  # fall back to the continuity list
         txt = plan(p, bible())["units"][0]["prompt_text"]
         self.assertIn("scoring paddle with a 0-10 dial", txt)
 
@@ -234,8 +237,8 @@ class TestShownInteraction(unittest.TestCase):
         roles = {m["role"]: m["value"] for m in u["medias"]}
         self.assertEqual((roles.get("start_image"), roles.get("end_image")), ("kf-start", "kf-end"))
         self.assertTrue(u["manual_steps"][0].startswith("Keyframe board first"))
-        self.assertIn("the pointer goes from pointing at 2 to pointing at 1", u["prompt_text"])
-        self.assertIn("shown slowly from the start frame to the end frame", u["prompt_text"])
+        self.assertIn("one slow continuous move from pointing at 2 to pointing at 1", u["prompt_text"])
+        self.assertTrue("shown slowly from the start frame to the end frame" in u["prompt_text"] or "the only state change is the one movement described" in u["prompt_text"])
 
     def test_missing_keyframes_blocks_validation(self):
         from engine.validators import validate_all
@@ -326,7 +329,7 @@ class TestVoiceLock(unittest.TestCase):
         s = {"interaction": dict(TestShownInteraction.SPEC)}
         t = interaction_beat(s)
         self.assertIn("At 0 s the pointer is exactly pointing at 2", t)
-        self.assertIn("never passes any other position", t)
+        self.assertIn("never any other position", t)
 
 
 class TestUGCCameraAndPayoff(unittest.TestCase):
@@ -372,8 +375,8 @@ class TestRotationDirection(unittest.TestCase):
     def test_direction_is_stated_and_end_state_restated(self):
         from engine.interaction import interaction_beat
         t = interaction_beat({"interaction": dict(TestShownInteraction.SPEC, direction="counter-clockwise, one notch (about 18 degrees), toward the 0 end")})
-        self.assertIn("It rotates counter-clockwise, one notch (about 18 degrees), toward the 0 end, and only that far.", t)
-        self.assertIn("ends on the end frame, where the pointer is exactly pointing at 1", t)
+        self.assertIn("counter-clockwise, one notch (about 18 degrees), toward the 0 end", t)
+        self.assertIn("then it stops and stays exactly pointing at 1", t)
 
 
 class TestPlainCameraNaming(unittest.TestCase):
@@ -397,3 +400,65 @@ class TestPlainCameraNaming(unittest.TestCase):
     def test_unnamed_lens_warns(self):
         from engine.camera import lens_findings
         self.assertEqual(lens_findings({"scenes": [{"scene_id": "S1", "camera": {"lens": "cinematic glass"}}]})[0]["code"], "CAMERA_LENS_UNNAMED")
+
+
+class TestContinuityAndTiming(unittest.TestCase):
+    """2026-10-08: prop states continuous across cuts; speech fits the locked voice's real rate; world events under the line."""
+
+    def test_prop_state_jump_across_cut(self):
+        from engine.continuity import prop_state_findings
+        a = {"scene_id": "S2", "start_s": 0, "end_s": 6, "prop_states": {"scoring paddle.pointer": "pointing at 2"}, "transition_out": "hard cut"}
+        b = {"scene_id": "S3", "start_s": 6, "end_s": 9, "interaction": dict(TestShownInteraction.SPEC, from_state="pointing at 3")}
+        self.assertEqual(prop_state_findings({"scenes": [a, b]})[0]["code"], "PROP_STATE_DISCONTINUITY")
+        b["interaction"]["from_state"] = "pointing at 2"
+        self.assertEqual(prop_state_findings({"scenes": [a, b]}), [])
+
+    def test_speech_overruns_at_measured_voice_rate(self):
+        from engine.continuity import speech_fit_findings
+        s = {"scene_id": "S1", "start_s": 0, "end_s": 4.5, "dialogue": [{"line": "Umbrella. Two out of ten. Correct answer: a tiny roof for nobody."}]}
+        b = {"approved_assets": {"voice": {"measured_wps": 2.1}}}
+        self.assertIn("SPEECH_OVERRUNS_SCENE", {f["code"] for f in speech_fit_findings({"scenes": [s]}, b)})
+        s["end_s"] = 6.5
+        self.assertEqual(speech_fit_findings({"scenes": [s]}, b), [])
+
+    def test_world_event_after_speech_warns(self):
+        from engine.continuity import world_event_findings
+        a = {"scene_id": "S1", "start_s": 0, "end_s": 4.5, "dialogue": [{"line": "x"}], "transition_out": "continuous"}
+        b = {"scene_id": "S2", "start_s": 4.5, "end_s": 6, "physical_beat": "Rain starts; a stranger's umbrella slides past."}
+        self.assertEqual(world_event_findings({"scenes": [a, b]})[0]["code"], "WORLD_EVENT_AFTER_SPEECH")
+
+    def test_keyframed_unit_does_not_redescribe_setting(self):
+        p = TestShownInteraction()._packet()
+        u = plan(p, bible())["units"][-1]
+        self.assertIn("Setting: exactly as in the start frame", u["prompt_text"])
+        self.assertTrue(u["prompt_budget"]["keyframed"])
+
+
+class TestUnitProps(unittest.TestCase):
+    def test_props_line_lists_only_this_clips_props(self):
+        p = valid_packet()
+        for s in p["scenes"]:
+            s["physical_beat"] = "Right hand holds the clipboard at chest height, left hand rests at her side, feet planted."
+            s["props_from_frame_one"] = ["clipboard"]
+        txt = plan(p, bible())["units"][0]["prompt_text"]
+        line = [l for l in txt.splitlines() if l.startswith("Props")][0]
+        self.assertIn("clipboard", line); self.assertNotIn("cones", line)
+
+
+class TestAssemblyAndColdViewer(unittest.TestCase):
+    def test_captions_off_by_default_and_guarded_when_on(self):
+        from engine.assembly import AssemblyPlan, caption_commands, concat_commands
+        p = AssemblyPlan(unit_urls=["https://x/a.mp4", "https://x/b.mp4"])
+        self.assertEqual(caption_commands(p), [])
+        self.assertIn("concat=n=2", concat_commands(p)[-1])
+        p.captions = "subtitles"; p.script_lines = ["Umbrella. Two out of ten."]
+        cmds = caption_commands(p)
+        self.assertTrue(any("--profile safe" in c for c in cmds)); self.assertTrue(sum(c.startswith("# REVIEW") for c in cmds) == 3)
+
+    def test_cold_viewer_scoring(self):
+        from engine.cold_viewer import score
+        terms = ["rates", "wrong", "umbrella", "rain"]
+        s = score({"muted_what_happens": "an old man sits in the rain holding a score paddle", "muted_joke": "",
+                   "joke": "he rates the umbrella badly while getting rained on, so he is wrong", "stop_scroll": True}, terms)
+        self.assertEqual(s["verdict"], "pass")
+        self.assertEqual(score({"joke": "a man sits outside"}, terms)["verdict"], "fail")

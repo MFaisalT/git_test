@@ -123,7 +123,7 @@ def referenced_props(bible: dict | None) -> list[dict]:
     return [p for p in bible_props(bible) if ((p.get("reference_asset") or {}).get("job_id") or (p.get("reference_asset") or {}).get("media_id"))]
 
 
-def bible_prop_text(prop: str, bible: dict | None) -> str:
+def bible_prop_text(prop: str, bible: dict | None, short: bool = False) -> str:
     """Replace a short prop name with the bible's exact design (owner frames 2026-10-08: 'paddle with a dial' rendered as a
     clock face with random numerals and no pointer). A prop with a reference still is tied to its @image slot."""
     low = prop.lower()
@@ -131,13 +131,21 @@ def bible_prop_text(prop: str, bible: dict | None) -> str:
     for bp in bible_props(bible):
         if any(m.lower() in low for m in (bp.get("match") or [bp.get("id", "")]) if m):
             tag = f" (exactly as @image{2 + refs.index(bp)})" if bp in refs else ""
+            if short and tag:  # the reference image carries the design; keep the name and the slot
+                return f"the {bp.get('id', prop).replace('-', ' ')}{tag}"
             return f"{bp.get('design', prop).rstrip('.')}{tag}"
     return prop
 
 
 def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_meta: bool = False):
     """Physics-first render prompt held to a per-audio-mode word budget. Returns None when any scene lacks a physical_beat
-    (caller falls back to the dense prompt). Shrinks deterministically: delivery notes -> long costume -> long physics block -> setting light."""
+    (caller falls back to the dense prompt).
+
+    2026-10-08 (owner-approved, from the independent skills review): every word counts against the budget; the timed beats come
+    straight after identity and camera, before the boilerplate (critical facts first); when the unit opens on an approved start
+    frame the static setting is not re-described (image-to-video: describe motion, not the frame); English is locked.
+    Shrink order: delivery notes -> long costume -> short physics -> setting light -> short hands line -> short negative tail ->
+    referenced props by @image only."""
     if not scenes or any(not s.get("physical_beat") for s in scenes):
         return None
     cont = packet.get("continuity", {})
@@ -146,6 +154,9 @@ def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_
     speak = am in SPOKEN_ON_CAMERA
     first = scenes[0]
     cam0 = first.get("camera", {})
+    keyframed = bool((first.get("start_frame") or {}).get("job") or ((first.get("interaction") or {}).get("keyframes") or {}).get("start"))
+    from .camera import camera_device_clause, lens_phrase
+    from .interaction import NEGATIVE_TAIL, NEGATIVE_TAIL_SHORT, interaction_beat, interaction_rule_line
 
     def build(level: int) -> str:
         lines = []
@@ -154,16 +165,9 @@ def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_
             lines.append(f"Identity: the person in @image1, exactly; same face and costume for the whole clip. {costume}".strip())
         else:
             lines.append("Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip; no rings, watches, microphones or accessories that are not in the reference.")
-        light = first.get("lighting", "").split(";")[0]
-        lines.append(f"Setting: {first.get('location', '')}." + (f" {light}." if level < 4 and light else "") + " Passers-by, if any, are soft blurred shapes who never react.")
         cuts = any("cut" in str(s.get("transition_out", "")).lower() for s in scenes[:-1])
-        from .camera import camera_device_clause
         dev = camera_device_clause(packet, first)  # owner rule: plain device/lens naming; phone looks are always iPhone 18 Pro Max
         lines.append(f"Camera: {dev + '; ' if dev else ''}starts {cam0.get('shot', '')}; {cam0.get('movement', '')}." + ("" if cuts else " No cuts."))
-        props = [bible_prop_text(str(x).strip(), bible) for x in (cont.get("props") or []) if str(x).strip()]
-        if props:
-            lines.append("Props (exact design, exactly one of each, nothing else added): " + "; ".join(props) + ".")
-        lines.append(PHYSICS_LONG if level < 3 else PHYSICS_SHORT)
         for s in scenes:
             fmt = lambda v: f"{float(v):.0f}" if float(v).is_integer() else f"{float(v):.1f}"
             t0 = float(scenes[0]["start_s"])  # times are relative to this clip (a unit after a cut starts at 0 in its own render)
@@ -172,14 +176,12 @@ def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_
             prev = scenes[scenes.index(s) - 1] if s is not first else None
             lens_change = ""
             if prev is not None:
-                from .camera import lens_phrase
                 cur_l, prev_l = lens_phrase((s.get("camera") or {}).get("lens", "")), lens_phrase((prev.get("camera") or {}).get("lens", ""))
                 if cur_l and cur_l != prev_l:  # only a real lens change (0.5x/1x/2x/5x) is worth words
                     lens_change = f" Lens: {cur_l}."
             cam_note = (f" Camera: {mv.split(';')[0].strip().rstrip('.')}.{lens_change}" if (mv and s is not first) else "")  # camera moves are never trimmed (owner values camera motion)
             line = f"{t}: {str(s['physical_beat']).strip().rstrip('.')}.{cam_note}"
             if s.get("interaction"):
-                from .interaction import interaction_beat
                 line += " " + interaction_beat(s)  # never trimmed: the mechanics are the point of the shot
             if speak:
                 for d in s.get("dialogue", []) or []:
@@ -191,29 +193,37 @@ def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_
             if s is not scenes[-1] and "cut" in str(s.get("transition_out", "")).lower():
                 line += " Hard cut to."
             lines.append(line)
-        lines.append(_sound_line(packet, am, first))
+        snd = _sound_line(packet, am, first)
+        if speak:
+            snd += " English only."
+        lines.append(snd)
         if speak:
             from .voice import voice_prompt_line
             vl = voice_prompt_line(bible)
             if vl:
                 lines.append(vl)  # never trimmed
-        from .interaction import NEGATIVE_TAIL, interaction_rule_line
-        lines.insert(4, interaction_rule_line(packet, scenes))  # never trimmed
-        lines.append("No readable text, logos or signage except a product's own label. Natural skin, no blur on the face. " + NEGATIVE_TAIL)
+        if not keyframed:  # the start frame already shows the place; describe motion, not the frame
+            light = first.get("lighting", "").split(";")[0]
+            lines.append(f"Setting: {first.get('location', '')}." + (f" {light}." if level < 4 and light else "") + " Passers-by, if any, are soft blurred shapes who never react.")
+        else:
+            lines.append("Setting: exactly as in the start frame; passers-by, if any, stay soft blurred shapes who never react.")
+        unit_props = [x for sc in scenes for x in (sc.get("props_from_frame_one") or [])]  # only what this clip shows
+        src = list(dict.fromkeys(unit_props)) or (cont.get("props") or [])
+        props = [bible_prop_text(str(x).strip(), bible, short=level >= 7) for x in src if str(x).strip()]
+        if props:
+            lines.append("Props (exact design, exactly one of each, nothing else added): " + "; ".join(props) + ".")
+        lines.append(interaction_rule_line(packet, scenes, short=level >= 5))  # never dropped
+        lines.append(PHYSICS_LONG if level < 3 else PHYSICS_SHORT)
+        lines.append("No readable text, logos or signage except a product's own label. Natural skin, no blur on the face. " + (NEGATIVE_TAIL if level < 6 else NEGATIVE_TAIL_SHORT))
         return "\n".join(lines)
 
-    from .interaction import NEGATIVE_TAIL, interaction_rule_line
-    from .interaction import interaction_beat
-    from .camera import camera_device_clause
-    fixed = (len(NEGATIVE_TAIL.split()) + len(interaction_rule_line(packet, scenes).split()) + sum(len(interaction_beat(s).split()) for s in scenes)
-             + len(camera_device_clause(packet, scenes[0]).split()))  # mandatory device/lens naming (owner rule) sits outside the descriptive budget  # safety lines from the platform recipe: outside the descriptive budget
-
     def wc(t: str) -> int:
-        return len(t.split()) - fixed
+        return len(t.split())  # every word counts (2026-10-08)
 
     level, text = 0, build(0)
-    while wc(text) > budget and level < 4:
+    while wc(text) > budget and level < 7:
         level += 1
         text = build(level)
-    meta = {"audio_mode": am, "word_budget": budget, "words": wc(text), "words_total_incl_safety_lines": len(text.split()), "shrink_level": level, "over_budget": wc(text) > budget}
+    meta = {"audio_mode": am, "word_budget": budget, "words": wc(text), "words_total_incl_safety_lines": wc(text), "shrink_level": level,
+            "over_budget": wc(text) > budget, "keyframed": keyframed}
     return (text, meta) if return_meta else text

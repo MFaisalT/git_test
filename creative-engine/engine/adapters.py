@@ -146,6 +146,9 @@ def plan(packet: dict, bible: dict | None = None, quote_credits: dict | None = N
                 render_blocked = "VOICE_LOCK_MISSING" if not lock else f"VOICE_LOCK_UNSUPPORTED: {model} takes no audio_references"
         elif "start_image" in lim["media_roles"]:
             medias.append({"value": "<media_id of approved first-frame still>", "role": "start_image"})
+        sf = (u[0].get("start_frame") or {}).get("job")
+        if sf and not inter and "start_image" in lim["media_roles"]:
+            medias.append({"value": sf, "role": "start_image", "status": (u[0].get("start_frame") or {}).get("status")})
         if inter and {"start_image", "end_image"} <= set(lim["media_roles"]):
             kf = (inter.get("interaction") or {}).get("keyframes") or {}
             medias.append({"value": kf.get("start") or "<job_id of approved start keyframe>", "role": "start_image"})
