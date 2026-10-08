@@ -1,0 +1,43 @@
+{
+  "kind": "render_test",
+  "purpose": "owner-approved character bake-off test render (owner: 'Yes' to the three-character plan, 2026-10-08)",
+  "packet_id": "CB-captain-tempo-v1",
+  "unit": "U1",
+  "job_id": "f8a1f505-369d-47a2-8bc7-8a151f5f5a98",
+  "submitted_at": "2026-10-08T06:1xZ",
+  "model_requested": "seedance_2_0_mini",
+  "params": {
+    "duration": 12,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "generate_audio": true
+  },
+  "prompt_source": "adapter prompt_text for U1 submitted literally with the '@image2 location still' reference line removed (no location still exists for this public setting); preset 'IN THE DARK' declined via declined_preset_id",
+  "medias": [
+    {
+      "role": "image_references",
+      "job_id": "5706fd02-b2bb-4923-a879-ee8c5a571529",
+      "asset": "character sheet (nano_banana_pro)"
+    }
+  ],
+  "cost": {
+    "quoted_credits": 12,
+    "charged_credits": null,
+    "note": "fill from transactions ledger after completion"
+  },
+  "approval_path": "owner approval in chat for the bake-off; not via `engine approve` because the character reference and voice assets are unresolved pending owner approval; packet stays planning-ready; render unverified",
+  "render_inspection": {
+    "status": "pending_owner",
+    "by": "owner (session cannot view pixels)",
+    "checklist": [
+      "identity match to sheet",
+      "rule lands inside 12 s",
+      "signature gesture present once",
+      "speech only the quoted lines, lip-sync",
+      "strangers blurred, never the joke",
+      "no readable text",
+      "artefacts (hands, props, physics)",
+      "energy and presence versus the other two characters"
+    ]
+  }
+}
