@@ -1,0 +1,602 @@
+<title>Velvet, Faux &amp; Mansour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a production binder. One reading column, a sticky section rail, and character tabs coded by a single colour each. */
+:root{
+  --paper:#f6f5f2; --sheet:#ffffff; --ink:#1d1b22; --muted:#5d5866; --rule:#dcd8e0;
+  --velvet:#8a1f3d; --faux:#1d6f8a; --mansour:#9a6a12; --flag:#b4321f; --ok:#2f6b3a;
+  --tint-v:#f6e8ec; --tint-f:#e5f1f5; --tint-m:#f6eedd; --code:#efedf2;
+  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#141317; --sheet:#1c1a20; --ink:#ece9f0; --muted:#a8a2b2; --rule:#34313b;
+  --velvet:#e07a97; --faux:#6cc3dc; --mansour:#e0b25a; --flag:#f08a74; --ok:#84c98f;
+  --tint-v:#2a1820; --tint-f:#14262c; --tint-m:#2a2214; --code:#25222b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#141317; --sheet:#1c1a20; --ink:#ece9f0; --muted:#a8a2b2; --rule:#34313b;
+  --velvet:#e07a97; --faux:#6cc3dc; --mansour:#e0b25a; --flag:#f08a74; --ok:#84c98f;
+  --tint-v:#2a1820; --tint-f:#14262c; --tint-m:#2a2214; --code:#25222b; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15.5px;line-height:1.6;margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px;padding-block:28px 80px;display:grid;grid-template-columns:200px minmax(0,1fr);gap:40px}
+@media (max-width:880px){.wrap{grid-template-columns:minmax(0,1fr);gap:0;padding-inline:16px}.rail{display:none}}
+.rail{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;font-size:13px;display:flex;flex-direction:column;gap:4px}
+.rail a{color:var(--muted);text-decoration:none;padding:3px 0}
+.rail a:hover,.rail a:focus-visible{color:var(--ink);outline:none;text-decoration:underline}
+.rail .k{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;margin-top:10px}
+main{min-width:0}
+h1,h2,h3,h4{font-family:var(--display);text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.01em}
+h2{font-size:28px;font-weight:800;margin-top:56px;padding-top:14px;border-top:2px solid var(--ink)}
+h3{font-size:21px;font-weight:700;margin-top:30px}
+h4{font-size:16px;font-weight:700;margin-top:20px}
+p,li{max-width:72ch}
+p{margin:10px 0}
+ul,ol{padding-left:20px;margin:8px 0}
+li{margin:3px 0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:17px;color:var(--ink);max-width:70ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:12px}
+.tag{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;padding:1px 7px;border-radius:3px;border:1px solid currentColor;vertical-align:1px;white-space:nowrap}
+.t-ver{color:var(--ok)} .t-rep{color:var(--mansour)} .t-hyp{color:var(--faux)} .t-unt{color:var(--flag)} .t-ass{color:var(--muted)}
+.v{color:var(--velvet)} .f{color:var(--faux)} .m{color:var(--mansour)}
+.tbl{overflow-x:auto;margin:14px 0;border:1px solid var(--rule);border-radius:6px;background:var(--sheet)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
+th,td{text-align:left;vertical-align:top;padding:9px 11px;border-bottom:1px solid var(--rule)}
+th{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--code)}
+tr:last-child td{border-bottom:none}
+td.c{font-weight:600}
+.bible{border-left:6px solid var(--accent);background:var(--sheet);padding:18px 22px;margin:24px 0;border-radius:0 6px 6px 0}
+.bible.v1{--accent:var(--velvet)} .bible.f1{--accent:var(--faux)} .bible.m1{--accent:var(--mansour)}
+.bible h3{margin-top:0;color:var(--accent)}
+.premise{font-size:17px;font-style:italic;margin:6px 0 14px}
+dl.spec{display:grid;grid-template-columns:170px minmax(0,1fr);gap:8px 18px;margin:12px 0}
+dl.spec dt{font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);padding-top:2px}
+dl.spec dd{margin:0;min-width:0}
+@media (max-width:560px){dl.spec{grid-template-columns:minmax(0,1fr)}dl.spec dt{padding-top:8px}}
+.callout{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:14px 18px;margin:16px 0}
+.callout.warn{border-color:var(--flag)}
+.callout h4{margin-top:0}
+.beats td:first-child{font-family:var(--mono);white-space:nowrap;font-size:13px}
+pre{background:var(--code);border-radius:6px;padding:14px 16px;overflow-x:auto;font-family:var(--mono);font-size:12.5px;line-height:1.55;white-space:pre-wrap;word-break:break-word;margin:12px 0}
+code{font-family:var(--mono);font-size:.9em;background:var(--code);padding:0 4px;border-radius:3px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:14px 0}
+@media (max-width:820px){.grid3{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--sheet);border:1px solid var(--rule);border-top:4px solid var(--accent);border-radius:4px;padding:14px 16px;min-width:0}
+.card.v1{--accent:var(--velvet)} .card.f1{--accent:var(--faux)} .card.m1{--accent:var(--mansour)}
+.card h4{margin-top:0}
+.decisions{counter-reset:d;list-style:none;padding:0}
+.decisions li{counter-increment:d;position:relative;padding-left:44px;margin:16px 0;max-width:76ch}
+.decisions li::before{content:counter(d);position:absolute;left:0;top:-2px;font-family:var(--display);font-weight:800;font-size:28px;color:var(--velvet)}
+a{color:var(--faux)}
+a:focus-visible{outline:2px solid var(--faux);outline-offset:2px}
+.small{font-size:13px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+html{scroll-behavior:smooth}
+</style>
+
+<div class="wrap">
+<nav class="rail" aria-label="Sections">
+  <span class="k">Brief</span>
+  <a href="#top">Summary</a>
+  <a href="#refs">References checked</a>
+  <a href="#team">Team disagreements</a>
+  <span class="k">Sections</span>
+  <a href="#a">A. Portfolio strategy</a>
+  <a href="#b">B. Character bibles</a>
+  <a href="#c">C. Pilot content</a>
+  <a href="#d">D. Production blueprint</a>
+  <a href="#e">E. Monetization</a>
+  <a href="#f">F. 14-day pilot</a>
+  <a href="#decide">Owner decisions</a>
+</nav>
+
+<main>
+<header id="top">
+  <div class="eyebrow">Viral Character Lab · development brief · 8 Oct 2026</div>
+  <h1>Vince Velvet, Felix Faux &amp; Mansour</h1>
+  <p class="lede">Three original AI characters built around one commercial idea each: <b class="v">Vince</b> makes people want to create, <b class="f">Felix</b> teaches them how, and <b class="m">Mansour</b> carries brands. This brief adds to the existing creative engine and Uncle Verdict pilot. It does not replace them. The voice lock, locked-plate keyframes, interaction rules and cold-viewer check all carry over.</p>
+  <div class="meta"><span>Prepared by four specialist review roles plus two research agents</span><span>No credits spent · nothing published · no one contacted</span></div>
+  <p class="small">Evidence labels used throughout: <span class="tag t-ver">verified</span> tested or read at source in this project · <span class="tag t-rep">reported</span> third-party or platform listing, not tested · <span class="tag t-hyp">hypothesis</span> a threshold or number to test · <span class="tag t-unt">untested</span> a production proposal not yet tried · <span class="tag t-ass">assumption</span> made to keep moving, owner can overrule.</p>
+
+  <div class="callout">
+    <h4>The recommendation in five lines</h4>
+    <ol>
+      <li><b>Build all three bibles now. Launch two accounts in the pilot: Vince and Felix.</b> Mansour gets his bible, his locked voice and one unpublished proof episode, then launches after a cultural review.</li>
+      <li><b>Vince and Felix work as a pair.</b> Vince's spectacle creates the "how did they make that?" question. Felix answers it, including with Vince's failed takes. Failures become free content, not wasted credits.</li>
+      <li><b>Dance comes from real motion, not from prompts.</b> A licensed dancer's reference clip is transferred onto the character. Prompt-only dancing is the fallback and gets tested once, side by side.</li>
+      <li><b>Credits are the real bottleneck.</b> At 440 credits, the 14-day plan covers two newly generated pilots (Vince and Felix), one dance technique test, Mansour's reference pack, and four more posts cut from footage we already have. More volume needs a credit decision, not more planning.</li>
+      <li><b>No meme coins, no fake fans, no fake testimonials.</b> The reference accounts monetize partly through speculative tokens. We are deliberately not copying that.</li>
+    </ol>
+  </div>
+</header>
+
+<section id="refs">
+<h2>References checked</h2>
+<p>A research agent looked up each reference. Instagram, TikTok and news pages could not be opened from this environment (the network proxy blocked them). Everything below therefore comes from search-result summaries of the cited pages. <b>No videos were watched.</b> Follower counts disagree between sources and are not used for any decision.</p>
+<div class="tbl"><table>
+<thead><tr><th>Owner's name</th><th>Resolved account</th><th>What sources describe <span class="tag t-rep">reported</span></th><th>Mechanism we borrow (our inference)</th><th>What we must not copy</th></tr></thead>
+<tbody>
+<tr><td class="c">@jeanphilanthrope</td><td><b>@jean_philanthrope</b> (Instagram; underscore). Also on TikTok. Known as "Jean Phil". The owner's spelling without the underscore matched nothing.</td><td>An AI-generated man in a brown houndstooth suit with a blond bob and a curled moustache. He does ordinary things in Paris public spaces (espresso, oysters, cafés), then silently shadowboxes. Earliest post reported 17 Sept 2026. His bio reportedly links a Pump.fun meme token. No merch or brand deals found.</td><td>One locked silhouette. Dignified look against an absurd movement. Real-looking public places. The format repeats while only the location changes.</td><td>Houndstooth suit, bob haircut, curled moustache, Paris café settings, shadowboxing.</td></tr>
+<tr><td class="c">Abu Shalab</td><td><b>@abu.shalab</b> (Instagram), medium confidence. Also X @AbuShalab_, reportedly tied to a token site. TikTok handle not confirmed.</td><td>An AI-generated character dancing in a white thobe, with a distinctive haircut and moustache. Described as "the Jean Phil format with a thobe instead of a suit, dancing instead of boxing". A $ABU token is promoted around it; whether it is official is unconfirmed.</td><td>Instant recognition from a few specific traits. Movement is the entertainment.</td><td><b>Closest overlap with our Saudi character.</b> Mansour must not be "a man in a white thobe who dances". See the differentiation note in his bible.</td></tr>
+<tr><td class="c">Milton</td><td><b>@MiltonBumford</b>: confirmed as the most likely match, not assumed. His own site says he is "a fictional character, and he is AI-generated" and lists Instagram, X, TikTok and YouTube. No other "Milton" creator fits.</td><td>Swaggering meme clips with the catchphrase "Bumford Business". Often appears together with Jean Phil. His site sells Cameo videos made by "milton's real, human creator", $5 tips, and a meme coin.</td><td>Crossovers between characters build a shared universe. A personal-video product (Cameo-style) is a cleaner way to make money than a token.</td><td>Catchphrase, styling, crossover partners.</td></tr>
+</tbody></table></div>
+<p><b>What this tells the team:</b> the wave these accounts belong to started weeks ago. Its main mechanism, a dignified figure doing absurd movement in public, is already crowded. Our edge has to come from what those accounts reportedly lack: a <b>personality with a point of view</b>, <b>episodes that escalate</b>, <b>speech where it helps</b>, and <b>a commercial path that is not a token</b>. Copying the mechanism alone would make us arrive late to a crowded format.</p>
+</section>
+
+<section id="team">
+<h2>Where the specialists disagreed, and how it was settled</h2>
+<div class="tbl"><table>
+<thead><tr><th>Topic</th><th>Positions</th><th>Resolution (Product &amp; Production Manager)</th></tr></thead>
+<tbody>
+<tr><td class="c">Which account first</td><td><b>Growth:</b> Felix first, because the course is the only product with real money per buyer. <b>Showrunner:</b> Vince first, because he is the most shareable. <b>Engineer:</b> Vince is the hardest to make (full-body dance, foot contact) and Mansour's accent has never been tested.</td><td>Launch Vince and Felix together, because each feeds the other. Run a one-day dance technique test before committing Vince's credits. Hold Mansour until his voice and cultural review pass.</td></tr>
+<tr><td class="c">How often to sell</td><td><b>Growth:</b> a call to action every post. <b>Showrunner:</b> selling kills the mystique.</td><td>Link in bio always. A spoken or on-screen call to action in at most 1 of every 3 posts. A behind-the-scenes reveal in 1 of every 4 Vince posts.</td></tr>
+<tr><td class="c">How controversial Felix is</td><td><b>Growth:</b> rage-bait works. <b>Showrunner:</b> keep the edge. <b>PM:</b> the course needs trust.</td><td>Felix's controversy targets craft and industry habits ("most AI tutorials are ads"). It never targets groups of people or named small creators. Every claim he makes as fact must be demonstrable on screen.</td></tr>
+<tr><td class="c">Fans and crowds</td><td><b>Showrunner:</b> fan encounters are funny. <b>Growth:</b> generated crowds look like faked popularity. <b>Engineer:</b> crowds are expensive and drift.</td><td>At most one or two fictional people per scene, framed as a sketch, never as a real fan moment. Background people stay blurred.</td></tr>
+<tr><td class="c">Dance length</td><td><b>Showrunner:</b> long unbroken dance. <b>Engineer:</b> one generation holds about 4–10 s before feet slide and hands melt.</td><td>Choreography is built from cuts: 3–5 shots of 2–5 s each, cut on the beat, with a style change at every cut. That cut pattern becomes Vince's signature.</td></tr>
+<tr><td class="c">Uncle Verdict</td><td><b>Showrunner:</b> keep developing him. <b>PM:</b> three new characters plus him is too much.</td><td>Pause new Uncle Verdict episodes. His real failures (the doubled "1" on the dial, the voice that changed between clips) become Felix's first lessons. That work is already paid for.</td></tr>
+</tbody></table></div>
+</section>
+
+<!-- ============================ A ============================ -->
+<section id="a">
+<h2>A. Portfolio strategy</h2>
+<div class="tbl"><table>
+<thead><tr><th></th><th class="v">Vince Velvet</th><th class="f">Felix Faux</th><th class="m">Mansour</th></tr></thead>
+<tbody>
+<tr><td class="c">Audience <span class="tag t-ass">assumption</span></td><td>Broad, global, 18–34. Watches with sound off as often as on. A creative minority (about 1 in 20 viewers) wants to make things themselves.</td><td>Aspiring AI-video creators, freelancers and small-brand marketers, 20–40. They have already tried AI video and been burned by faces that change and voices that drift.</td><td>Family-safe, global English-speaking audience with a strong Gulf and Arab-diaspora core, 18–45. They love hospitality humour and "my uncle is exactly like this".</td></tr>
+<tr><td class="c">Entertainment promise</td><td>"Wait for the beat change." You never know which style he will be terrible at and which one he will suddenly nail.</td><td>"A fake man tells the truth." A sharp opinion, then proof, then one trick you can use today.</td><td>"He will host you whether you like it or not." Warm chaos, escalating generosity, and a surprise talent.</td></tr>
+<tr><td class="c">Distinctive behaviour</td><td>Taps a tuning fork on something in the room, "hears" the beat, performs a commissioned piece nobody asked for, and bows to an object.</td><td>Snaps his fingers to regenerate himself, breaks his own render on purpose, then repairs it on screen.</td><td>Insists. Serves Arabic coffee to people who are trying to serve him. Turns every errand into a formal state visit.</td></tr>
+<tr><td class="c">Reason to follow</td><td>Every location and style is new; you follow to see where he goes next.</td><td>Each video teaches one technique you can use; it is a growing toolkit.</td><td>A small recurring world: the nephew filming, the wife on voice notes, the rival neighbour.</td></tr>
+<tr><td class="c">How it makes money</td><td>Higgsfield affiliate link (organic only).</td><td>Course website: free lesson → waitlist → pre-sale → course.</td><td>Product integrations and brand partnerships.</td></tr>
+<tr><td class="c">Main commercial metric</td><td>Affiliate link clicks per 1,000 views, then affiliate sign-ups from the program dashboard.</td><td>Waitlist sign-ups per 1,000 views, and landing-page conversion rate.</td><td>Brand-safety record plus audience proof: share rate, comment sentiment, audience location share. Then inbound brand interest.</td></tr>
+<tr><td class="c">Mostly speaks?</td><td>Almost never (1–3 words per episode).</td><td>Fast, constant talk to camera.</td><td>Scripted dialogue sketches.</td></tr>
+</tbody></table></div>
+<h3>Why they do not overlap</h3>
+<ul>
+<li><b>Sound, face and pace differ by design.</b> Vince is music and movement. Felix is speech and screens. Mansour is dialogue and warmth. Someone who sees all three in one feed should never mistake one for another.</li>
+<li><b>One job each.</b> Only Felix teaches. Vince shows a "how it's made" reveal at most once every four posts, then points to Felix's account and the affiliate link. Mansour never mentions how he is made beyond the required AI label. His commercial value depends on staying inside his world.</li>
+<li><b>Planned cross-traffic.</b> Felix dissects Vince's outtakes ("this is why his foot slid"). That sends curious viewers from the spectacle to the method. Mansour stays separate so brands get a clean context.</li>
+<li><b>Separate risk.</b> If Felix's opinions draw heat, it stays on his account and does not touch Mansour's brand safety.</li>
+</ul>
+</section>
+
+<!-- ============================ B ============================ -->
+<section id="b">
+<h2>B. Character bibles</h2>
+<p class="small">Names and handles still need a clearance check (search the handles on both platforms and do a quick trademark search) before any account is created. The traits marked "locked" go into each character's bible in the engine. Changing them later means a new character, following the same rule as the voice lock.</p>
+
+<div class="bible v1" id="vince">
+<h3>Vince Velvet</h3>
+<p class="premise">A self-declared world-famous street maestro hears music no one else can hear and performs uninvited, fully committed "commissioned works" in places that never asked for them.</p>
+<dl class="spec">
+<dt>Visual identity</dt><dd>Mid-40s, very tall and lanky with long arms and legs (they read well in dance). Clean-shaven. A silver pompadour that never moves. Heavy expressive black eyebrows doing most of the acting. Natural teeth and weathered skin with visible pores, not a glossy model face.</dd>
+<dt>Personality</dt><dd>Grandly courteous, completely sincere, thinks he is famous ("my public"). Never admits a mistake: an awkward move is "avant-garde". Generous with compliments to objects.</dd>
+<dt>Comic contradiction</dt><dd>He is sometimes brilliant and sometimes awful, and <b>cannot tell which is which</b>. He is proudest of the terrible moves and shrugs off the beautiful ones.</dd>
+<dt>Voice &amp; accent</dt><dd>Rarely speaks. When he does: a slow, warm mid-Atlantic baritone, theatrical, one to three words ("Maestro." "Available."). He gets a custom voice designed from the character and locked under the voice rule. Speaking so little keeps lip-sync risk and cost low.</dd>
+<dt>Signature mannerisms</dt><dd>(1) Taps a <b>brass tuning fork</b> on something in the room, holds it to his ear and nods: the beat starts. (2) Two finger snaps toward an invisible DJ: "Maestro." (3) A deep bow to an object (a palm, a vending machine, a bollard). (4) Gives the object a business card that reads only "VINCE VELVET — AVAILABLE."</dd>
+<dt>Wardrobe (locked)</dt><dd>Crushed burgundy velvet tuxedo jacket with black satin lapels. Black trousers cut 5 cm too short. White sports socks. Gold loafers. A black bow tie that is always slightly crooked. One red carnation that never falls off, whatever happens.</dd>
+<dt>Recurring settings</dt><dd>Grand hotel lobbies, museum atriums, a laundromat, a car park, train concourses, a supermarket aisle, a wedding venue after hours. All generic and unbranded.</dd>
+<dt>Must stay consistent</dt><dd>Face and eyebrows, the pompadour, the burgundy velvet, the too-short trousers with white socks, the carnation, the tuning-fork ritual, the locked voice.</dd>
+<dt>Difference from the references</dt><dd>No moustache, no suit pattern, no boxing, no Paris café setting. His joke engine is the <b>style roulette and the excellence surprise</b>, not one repeated gag.</dd>
+</dl>
+<h4>Three recurring series</h4>
+<div class="tbl"><table>
+<thead><tr><th>Series</th><th>Format</th><th>Why it doesn't repeat the joke</th></tr></thead>
+<tbody>
+<tr><td class="c">Style Roulette</td><td>15–22 s. The beat changes every 3–5 s across 4–5 dance styles. He is awkward in some and suddenly excellent in one.</td><td>Three things vary each time: the location, the set of styles, and <b>which style he turns out to master</b>. The audience starts guessing, and that guessing drives comments.</td></tr>
+<tr><td class="c">The Commission</td><td>20–30 s. A "site-specific work" for one ordinary object: the revolving door, the escalator, the self-checkout. He treats the object as a dance partner and the object wins.</td><td>Each object has its own physics, so the failure is different every time. The payoff rotates between him losing, him winning, and the object "applauding".</td></tr>
+<tr><td class="c">Behind the Velvet</td><td>15–25 s, about 1 post in 4. A split screen shows the real dancer's reference clip next to the finished shot, then a bloopers strip of failed takes. His line: "The city plays. I just use the right tools."</td><td>Every reveal shows a different technique (motion transfer, keyframes, voice lock, repairs). This is the affiliate bridge. It shows how it was made without becoming a tutorial.</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="bible f1" id="felix">
+<h3>Felix Faux</h3>
+<p class="premise">An openly fake, fast-talking AI man exposes exactly how he is made, insults bad AI craft, and gives away one real technique per video.</p>
+<dl class="spec">
+<dt>Visual identity</dt><dd>Early 30s. Bleached buzzcut with dark roots. Slightly crooked nose, freckles, a small scar through the left eyebrow. One silver hoop in his left ear, which is his deliberate "drift detector". Natural skin texture, never airbrushed.</dd>
+<dt>Personality</dt><dd>Quick, blunt, cheerfully rude about bad work, unexpectedly generous with real knowledge. He treats the audience as smart.</dd>
+<dt>Comic contradiction</dt><dd>He calls himself superior to humans, yet he credits "the human" for 40% of every video and can't stop pointing out his own flaws. A product that despises low-quality AI output, and is AI himself.</dd>
+<dt>Voice &amp; accent</dt><dd>Fast, dry, clipped. Neutral international English with a slight British edge and a slightly raspy texture. Speaking rate stays under the engine's 2.8 words-per-second ceiling so captions stay readable. Custom voice, locked.</dd>
+<dt>Signature mannerisms</dt><dd>(1) Snaps his fingers to "regenerate" (a hard cut to a new place or outfit). (2) Taps his cheek: "Still me." (3) Two coloured stamps appear on screen: <b>BIT</b> (a joke or fiction) and <b>FACT</b> (a technique that is true and reproducible). This keeps his self-aware fiction separate from his technical claims. (4) Signs off with "I'm not real. The method is."</dd>
+<dt>Wardrobe (locked)</dt><dd>Oversized black hoodie with a small embroidered "#0417" (his "seed") on the chest. Grey work trousers. White sneakers worn grey.</dd>
+<dt>Recurring settings</dt><dd>The <b>Grey Room</b>: a matte grey void studio with one ring light, a rolling whiteboard and a monitor. Plus any absurd location he "regenerates" into to prove a point.</dd>
+<dt>Must stay consistent</dt><dd>Face, the scar, hair and roots, the hoop in the <b>left</b> ear, the "#0417" hoodie, the voice, the BIT/FACT system.</dd>
+</dl>
+<h4>Three recurring series</h4>
+<div class="tbl"><table>
+<thead><tr><th>Series</th><th>Format</th><th>Why it doesn't repeat the joke</th></tr></thead>
+<tbody>
+<tr><td class="c">Autopsy</td><td>25–40 s. A real failed generation (ours) is "on the table". He names the cause, shows the fix, and shows the before and after.</td><td>New material keeps coming in for free: every Vince or Mansour production produces failures. Each failure has a different cause (hands, feet, voice drift, background change).</td></tr>
+<tr><td class="c">Hot Take, Cold Proof</td><td>20–35 s. One opinion that people will argue with ("Prompts don't make characters consistent. References do."), proved by an A/B test inside the same video.</td><td>The opinion changes each time, and so does the type of proof. Comment arguments feed the next take.</td></tr>
+<tr><td class="c">Make Me Worse</td><td>20–30 s. Commenters ask him to change his outfit, setting or hair. He complies and shows what was needed. He refuses one request every time, with a reason, e.g. "Voice? Never. Here's why."</td><td>The audience writes the episodes. The refusal each time teaches a different rule (voice lock, licensed motion, no real people's faces).</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="bible m1" id="mansour">
+<h3>Mansour Al-Hafawa</h3>
+<p class="premise">A Riyadh gentleman who cannot stop hosting turns every hotel lobby, supermarket and stranger into a guest he must honour, and once in a while reveals a genuinely beautiful ballroom talent.</p>
+<dl class="spec">
+<dt>Name</dt><dd>"Hafawa" (حفاوة) means a warm welcome. It is a stage name, not a real family name. A Saudi reviewer must confirm it reads as charming rather than odd. No "Abu" nickname, to keep clear of the Abu Shalab reference.</dd>
+<dt>Visual identity</dt><dd>Early 50s. Broad shoulders and a round belly. A neatly trimmed salt-and-pepper beard joined to a sharp moustache. Thick brows, large expressive eyes, deep laugh lines. His head is <b>always covered</b> by shemagh and agal, so his silhouette is the red-and-white headdress, never a haircut.</dd>
+<dt>Personality</dt><dd>Generous to the point of aggression, proud, sentimental, easily offended on behalf of others' comfort, secretly afraid of only one person: his wife.</dd>
+<dt>Comic contradiction</dt><dd>He insists he is "a very simple, quiet man" while being the loudest and most extravagant presence in every room. Fully traditional in dress and manners, and secretly a superb Viennese-waltz and tap dancer. He will not explain where he learned it.</dd>
+<dt>Voice &amp; accent</dt><dd>A warm, booming baritone. English with a Najdi (central Saudi) colour: some /p/ sounds lean toward /b/, a tapped "r", lengthened vowels for emphasis. Everyday Gulf expressions with on-screen translation the first time each appears: "yalla" (come on), "zain" (good), "ya rajjal" (oh man). He avoids religious oaths and expressions as punchlines. Intelligibility comes first: if a cold viewer can't transcribe a line, the accent is too heavy. Custom voice designed from the character, not imitated from any real person, and locked.</dd>
+<dt>Signature mannerisms</dt><dd>(1) "No no no. I insist." with a raised palm. (2) Pours Arabic coffee from his own dallah, which he brings everywhere: dallah in the left hand, cup offered with the right. (3) Points with his camel stick (a thin traditional riding cane, the mishab). (4) Looks into the lens and whispers "Turki, film this" to the nephew filming him.</dd>
+<dt>Wardrobe (locked)</dt><dd>Thobe: <b>off-white in summer episodes, charcoal wool in winter episodes</b> (a real seasonal practice, and visually different from the white-thobe reference). Red-and-white shemagh in a fixed fold, black agal, brown leather sandals. A black bisht with gold trim appears <b>only when he considers the mission "official"</b>, which works as a visual sign that things are escalating. Camel stick.</dd>
+<dt>Recurring settings</dt><dd>His majlis at home (floor cushions, incense burner, dallah set), generic five-star lobbies, a supermarket, airport arrivals, a winter desert camp. All unbranded until a sponsor is involved.</dd>
+<dt>Recurring relationships (all off-screen or voice-only, which also saves generation cost)</dt><dd><b>Turki</b>, his long-suffering nephew filming every episode; heard sighing, his hand sometimes in shot. <b>Umm Fahad</b>, his wife, heard only through voice notes; the one force that stops him mid-move. <b>Abu Saleh</b>, the neighbour whose majlis is "slightly bigger"; never seen, often referenced.</dd>
+<dt>Must stay consistent</dt><dd>Face, beard shape, headdress fold and pattern, sandals, camel stick, dallah, the locked voice and accent level, the cast of three off-screen characters.</dd>
+<dt>Cultural guardrails</dt><dd>The comedy comes from <b>excess of a real virtue</b> (hospitality and karam), never from mocking Saudi people, Islam or religious practice. No prayer, mosque or religious-object gags. No "rich sheikh" money jokes. Mansour is never the punchline of a nationality joke; the situation is. A Saudi reviewer reads every script before it is produced <span class="tag t-ass">assumption: owner can source one</span>.</dd>
+</dl>
+<h4>Dance direction: specific styles, not "Saudi" or "Western"</h4>
+<ul>
+<li><b>Najdi ʿArḍah-inspired steps</b>: a dignified, upright side-step with his stick raised in place of a sword, to a frame-drum rhythm. He performs it <b>straight and proudly</b>; the comedy comes from the context (a hotel corridor with a room-service trolley as his "drum section"). The cultural reviewer must approve each use, because the ʿArḍah is a national heritage dance.</li>
+<li><b>Mizmar-inspired stick work</b> (the Hijazi stick dance): rhythmic stick twirls and turns, with his camel stick.</li>
+<li><b>Viennese waltz</b>, his surprise talent: continuous natural and reverse turns, rise and fall, arms framed around an <b>invisible partner</b>, 3/4 time at about 58–60 bars per minute. The bisht flares on the turns.</li>
+<li><b>Rhythm tap</b>: shuffles, flaps and a time step, in tap shoes he reveals under the thobe hem.</li>
+<li>Not used: dabke. It is Levantine, not Saudi, and using it would be careless.</li>
+</ul>
+<h4>Three recurring series</h4>
+<div class="tbl"><table>
+<thead><tr><th>Series</th><th>Format</th><th>Why it doesn't repeat the joke</th></tr></thead>
+<tbody>
+<tr><td class="c">The Inspection</td><td>25–35 s. Wearing the bisht, he "inspects" a hotel, café or airline lounge for hospitality, finds it lacking, and demonstrates how it's done.</td><td>Every venue offers a different hospitality ritual to overdo, and a different staff member to win over. This format is the natural home for brand integrations (hotels, coffee, travel).</td></tr>
+<tr><td class="c">I Insist</td><td>15–25 s. A duel of courtesy: who pays, who goes through the door first, who carries the bag. He escalates absurdly to win.</td><td>Each escalation tactic is new (a waltz as a distraction, his nephew as a decoy, a voice note to his wife). Sometimes he loses, and losing is the funniest version.</td></tr>
+<tr><td class="c">Umm Fahad Calling</td><td>15–20 s. He is mid-performance (tap in a supermarket aisle, ʿArḍah steps in a lobby) when a voice note from his wife arrives. He instantly becomes a model citizen.</td><td>A different performance is interrupted each time, and her demands differ. It builds an unseen character the audience asks about.</td></tr>
+</tbody></table></div>
+</div>
+</section>
+
+<!-- ============================ C ============================ -->
+<section id="c">
+<h2>C. Pilot content</h2>
+<h3>Nine pilot concepts</h3>
+<div class="grid3">
+<div class="card v1"><h4>Vince</h4><ol>
+<li><b>Style Roulette: The Grand Lobby</b> <span class="tag t-ver">developed below</span>. Minuet, krump, flamenco footwork, then sudden ballet excellence, then a wobble and a bow to a potted palm.</li>
+<li><b>The Commission: Revolving Door.</b> A tango with a revolving door. Each time it turns, he has a new "partner" (the empty segment). He gets dizzy, exits on the wrong side, bows to the door.</li>
+<li><b>Behind the Velvet #1.</b> A split screen of the dancer's reference clip and Vince, then three failed takes (a sliding foot, a melted carnation). His line: "The city plays. I just use the right tools."</li>
+</ol></div>
+<div class="card f1"><h4>Felix</h4><ol>
+<li><b>Hot Take: "Four faces, one man"</b> <span class="tag t-ver">developed below</span>. He has changed faces four times in the video, and the viewer is dared to rewatch. Then the reference-pack fix.</li>
+<li><b>Autopsy #1: The Dial That Lied.</b> Uncle Verdict's real doubled "1" and the needle turning the wrong way, then the cropped-still fix ("never regenerate a closer shot; crop the approved frame"). Footage already exists, so near-zero credits.</li>
+<li><b>Make Me Worse #1: "Give me a different voice."</b> He refuses and shows the voice drift between two unlocked clips (real footage), then the lock.</li>
+</ol></div>
+<div class="card m1"><h4>Mansour</h4><ol>
+<li><b>The Inspection: Five-Star Lobby</b> <span class="tag t-ver">developed below</span>. He serves the concierge Arabic coffee until the concierge's hand shakes, then waltzes to the lift.</li>
+<li><b>I Insist: The Bill.</b> A restaurant bill fight with a fictional tourist. He loses, so he waltzes the waiter away from the table to pay on the way out.</li>
+<li><b>Umm Fahad Calling: Aisle 7.</b> He is tap dancing in the dates aisle. A voice note arrives ("Did you buy the cardamom?"), and he freezes mid-time-step into perfect posture.</li>
+</ol></div>
+</div>
+
+<!-- Vince pilot -->
+<h3 class="v">Vince · "Style Roulette: The Grand Lobby"</h3>
+<p><b>Duration:</b> 20 s (hook in the first 1.5 s; every style change on a cut, so retention is reset every 3–5 s). <b>Format:</b> 9:16, phone-look rule applies: shot on an iPhone 18 Pro Max, 1x main lens (about 24 mm equivalent), handheld with gentle sway, plus one 2x push-in.</p>
+<h4>Two opening hooks</h4>
+<ul>
+<li><b>Hook A (ritual):</b> an extreme close-up of the brass tuning fork tapped on a brass handrail, with a clean "ting". He lifts it to his ear; his eyebrows rise. On-screen text: <i>"he heard the lobby playing his song"</i>.</li>
+<li><b>Hook B (peak first):</b> open on the frozen best moment, a perfect arabesque in a marble lobby, with the text <i>"nobody invited him"</i>. Then a rewind effect to "3 seconds earlier". This shows the payoff up front to earn the full watch.</li>
+</ul>
+<div class="tbl beats"><table>
+<thead><tr><th>Time</th><th>Picture</th><th>Sound</th><th>Camera / edit</th></tr></thead>
+<tbody>
+<tr><td>0.0–1.5</td><td>Hook A. A tuning-fork tap on the brass handrail; he holds it to his ear and nods.</td><td>"Ting" (foley); quiet lobby room tone.</td><td>2x lens close-up, handheld micro-sway. Hard cut on the downbeat.</td></tr>
+<tr><td>1.5–5.0</td><td><b>Baroque minuet:</b> tiny steps on the balls of the feet, a wrist flourish, a courtly bow to a potted palm. Too stiff, too proud.</td><td>Harpsichord minuet, 3/4.</td><td>1x wide, full body, feet in frame. A cut on the bar line.</td></tr>
+<tr><td>5.0–8.5</td><td><b>Krump attempt:</b> chest pops a beat late, an arm swing that overshoots, a stomp that makes the carnation bounce. His face stays completely serious.</td><td>A hard 808 beat at about 140 BPM.</td><td>1x, the camera "flinches" on each stomp. A cut on the snare.</td></tr>
+<tr><td>8.5–11.5</td><td><b>Flamenco footwork (zapateado):</b> rapid heel strikes, louder than the floor deserves. A passer-by in the background (blurred) turns. His arms are confidently wrong.</td><td>Palmas (handclaps) and heel strikes.</td><td>Low angle at ankle height, 1x. Heels must visibly touch the floor.</td></tr>
+<tr><td>11.5–16.0</td><td><b>Sudden excellence: contemporary ballet.</b> Two chaîné turns into a slow développé and a held arabesque. Long lines, pompadour perfect, carnation intact. The best 4 seconds on the account.</td><td>Soft piano with strings swelling.</td><td>The only camera move: a slow handheld push from 1x to 2x. No cut for the full 4.5 s.</td></tr>
+<tr><td>16.0–17.0</td><td>The music cuts out mid-arabesque. He wobbles once and holds.</td><td>Silence apart from a single shoe squeak.</td><td>Hold.</td></tr>
+<tr><td>17.0–19.0</td><td>He drops the pose, straightens his bow tie, bows deeply to the potted palm, and tucks a business card into its soil.</td><td>Lobby room tone; a soft "thank you" from no one.</td><td>1x medium.</td></tr>
+<tr><td>19.0–20.0</td><td>Card insert: <b>VINCE VELVET — AVAILABLE.</b></td><td>The "ting" again (a loop point back to the opening).</td><td>Static insert. The loop sends viewers back to the start.</td></tr>
+</tbody></table></div>
+<p><b>Dialogue:</b> none spoken. On-screen text only at 0.0 s and on the card. <b>Payoff:</b> his only flawless section is the one he immediately undercuts; the bow to the palm signals that he believes it was all intentional. <b>Call to action:</b> none in this video. It is pure spectacle and builds the "how?" question. A pinned comment answers only the AI question: <i>"Yes, Vince is AI. Every dance starts from a real dancer's moves."</i> The affiliate pitch is saved for the Behind the Velvet post, where "#ad" appears on screen and in the spoken line. A disclosure only in a comment or caption is not enough.</p>
+<p><b>Music:</b> five short cues, licensed or composed once and owned. Reused across the whole Style Roulette series, with new cues added over time.</p>
+<p><b>Packaging:</b> <b>TikTok</b>: hook text burned in the top third; caption "which one was he actually good at?" (prompts comments); AI label on. <b>Instagram Reels</b>: cover is the arabesque frame with "nobody invited him" for the profile grid; caption ends with a guessing question; enable the remix option so dancers can stitch their own "commissions".</p>
+
+<!-- Felix pilot -->
+<h3 class="f">Felix · "Hot Take: Four faces, one man"</h3>
+<p><b>Duration:</b> 32 s. <b>Teaches:</b> the reference pack that keeps a face consistent (a FACT). <b>Opinion:</b> "Prompts don't make characters consistent. References do."</p>
+<h4>Two opening hooks</h4>
+<ul>
+<li><b>Hook A (challenge):</b> Felix to camera, fast: "I've had four different faces in this video. You didn't notice. Rewatch it later. First, the reason."</li>
+<li><b>Hook B (confession):</b> "I'm not real. I've already changed faces twice since you started watching."</li>
+</ul>
+<div class="tbl beats"><table>
+<thead><tr><th>Time</th><th>Picture</th><th>Dialogue / on-screen text</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>0–3</td><td>Grey Room, medium close-up, ring-light catchlights.</td><td>"I've had four faces in this video. You didn't notice." Stamp: <b>BIT</b>.</td><td>The first 3 s are rendered <b>without</b> the reference pack on purpose, so his face really is subtly different.</td></tr>
+<tr><td>3–9</td><td>Finger snap and hard cuts: a car park, a kitchen, a rooftop. Each 2 s shot is a slightly different "Felix" (nose, jaw, the earring jumps ears).</td><td>"Car park me. Kitchen me. Rooftop me. Same prompt, word for word."</td><td>The drift is real and shown honestly. The earring jumping to the other ear is the visual clue.</td></tr>
+<tr><td>9–13</td><td>The four faces frozen side by side.</td><td>"Prompts describe a man. They don't <i>pin</i> one." Text: <b>FACT</b>.</td><td>Hard pause frame; this is the screenshot moment.</td></tr>
+<tr><td>13–22</td><td>Whiteboard: five printed photos taped up (front, three-quarter, profile, full body, wardrobe laid flat).</td><td>"Fix: a reference pack. Five images, same light, neutral face, one wardrobe. Every generation gets them. Not some. Every." Text: <b>FACT — the 5-image pack</b>.</td><td>The pack is real; the five images become a free downloadable resource.</td></tr>
+<tr><td>22–28</td><td>The same three locations again, now with the pack. The earring stays left.</td><td>"Car park. Kitchen. Rooftop. Same guy. Unfortunately."</td><td>Cut on each word.</td></tr>
+<tr><td>28–32</td><td>Back in the Grey Room. Cheek tap.</td><td>"Still me. Full checklist's on the site. I'm not real. The method is."</td><td>Spoken call to action (this is 1 of every 3 posts that gets one).</td></tr>
+</tbody></table></div>
+<p><b>Camera &amp; sound:</b> 1x, handheld, a light breathing sway. Each location has its own room tone. Every spoken line in the locked voice. Burned captions are on for Felix by default (dense speech, sound-off viewers). The caption region avoids the bottom 20% and the right-hand button column. <b>Payoff:</b> the rewatch challenge ("find the earring") plus a useful rule you can screenshot. <b>Packaging:</b> <b>TikTok</b>: caption "find the frame where my earring switches ears", which drives rewatches and comments. <b>Instagram</b>: post the five-image pack as a carousel the next day, linked in the Reel caption, because carousels collect saves.</p>
+
+<!-- Mansour pilot -->
+<h3 class="m">Mansour · "The Inspection: Five-Star Lobby"</h3>
+<p><b>Duration:</b> 30 s. A dialogue sketch with a surprise dance exit. Sponsor-ready structure: the venue category (hotels) is the obvious first brand fit, but the pilot stays unbranded.</p>
+<h4>Two opening hooks</h4>
+<ul>
+<li><b>Hook A (entrance):</b> the revolving door spins; he steps through in full bisht, points his camel stick into the lens. "Turki. Film. Today we inspect." Text: <i>"He inspects 5-star hotels. Nobody asked."</i></li>
+<li><b>Hook B (mid-chaos):</b> open on the concierge, eyes wide, holding a coffee cup with a trembling hand, as Mansour pours a fifth cup. Text: <i>"cup number five"</i>. Then cut back to the arrival.</li>
+</ul>
+<div class="tbl beats"><table>
+<thead><tr><th>Time</th><th>Picture</th><th>Dialogue / on-screen text</th></tr></thead>
+<tbody>
+<tr><td>0–3</td><td>Hook A. Marble lobby, the bisht settling as he stops.</td><td>MANSOUR: "Turki. Film. Today we inspect."</td></tr>
+<tr><td>3–7</td><td>Reception. A smiling young concierge (fictional) begins the welcome.</td><td>CONCIERGE: "Welcome, sir, how can I—" MANSOUR (raised palm): "No no no. Who welcomes who? Sit."</td></tr>
+<tr><td>7–12</td><td>He seats the concierge in a lobby armchair, produces his own dallah, and pours a small cup (dallah in the left hand, cup offered with the right).</td><td>MANSOUR: "Arabic coffee. With cardamom. You are my guest."</td></tr>
+<tr><td>12–19</td><td>The concierge drinks politely and hands the cup back; Mansour refills it. Again. Again. A fast three-shot montage, a counter in the corner: 3, 4, 5.</td><td>Text: <i>"(tip: shake the cup to say 'enough')"</i>. MANSOUR: "He does not shake. He wants more."</td></tr>
+<tr><td>19–23</td><td>The concierge, overcaffeinated, holds out the cup; his hand trembles visibly.</td><td>MANSOUR (delighted): "Ahh! <i>Now</i> he shakes." He takes the cup.</td></tr>
+<tr><td>23–28</td><td>He stands and adjusts the bisht. Strings swell. He waltzes across the marble to the lift: continuous natural turns, rise and fall, arms framing an invisible partner, the bisht flaring. A blurred passer-by stops.</td><td>Viennese waltz cue (licensed or owned).</td></tr>
+<tr><td>28–30</td><td>The lift doors close on him in a perfect finishing pose.</td><td>MANSOUR: "Five stars. For me." Text: <i>"Inspection #1 — Hotel: ★★★★☆"</i></td></tr>
+</tbody></table></div>
+<p><b>Why it works:</b> the joke is a real Gulf custom (shaking the coffee cup to say "enough") used affectionately; viewers who know it feel seen, and those who don't learn it. The concierge's trembling hand turns the custom into the punchline. <b>Camera:</b> phone look; Turki's handheld iPhone 18 Pro Max at 1x; a 2x punch-in on "Now he shakes"; wide 0.5x for the waltz so the feet stay in frame. <b>Sound:</b> lobby room tone and cup clinks; the coffee pour is foley; dialogue in the locked voice; the waltz cue enters at 23 s only. <b>Call to action:</b> none in the pilot, by design. Brands need proof he can be funny without selling. <b>Packaging:</b> <b>TikTok</b>: caption "Gulf people, explain the cup rule to everyone else 👇"; comments from people who know the custom become the community engine. <b>Instagram</b>: Arabic and English captions, cover on the trembling-cup frame, collaborator post later with a venue partner.</p>
+</section>
+
+<!-- ============================ D ============================ -->
+<section id="d">
+<h2>D. Production blueprint</h2>
+<h3>One shared pipeline</h3>
+<div class="tbl"><table>
+<thead><tr><th>Stage</th><th>What happens</th><th>Tool or model</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td class="c">1. Reference assets</td><td>The five-image pack (front, three-quarter, profile, full body, wardrobe flat) at matched light. Recurring props (tuning fork, dallah, camel stick) get their own reference images. Each character gets a custom voice designed from the character sheet; the owner picks a take; it is cloned and locked.</td><td>Nano Banana Pro (2 credits per 2K image); seed_audio voice design, then the voice is cloned as an element voice.</td><td><span class="tag t-ver">verified</span> on Uncle Verdict</td></tr>
+<tr><td class="c">2. Shot planning</td><td>The episode packet: beats with times relative to each shot, camera and lens named in plain words, at most one movement per shot, words-per-second check, prop states, and which shots need start and end keyframes.</td><td>The engine's validators (voice lock, lens, speech fit, interaction rules).</td><td><span class="tag t-ver">verified</span></td></tr>
+<tr><td class="c">3a. Generation: acting and dialogue</td><td>Keyframed shots with the character, prop references and the locked voice audio.</td><td>Cinema Studio 4.0 (owner's first choice); Seedance 2.5 as fallback.</td><td><span class="tag t-ver">verified</span> (Uncle Verdict)</td></tr>
+<tr><td class="c">3b. Generation: dance</td><td>A licensed dancer films each 3–5 s phrase against a plain wall in matching framing. The motion is transferred onto the character still.</td><td><code>motion_control</code> (Kling 3.0 Motion Control), or Genjutsu motion transfer, or Seedance 2.5 with a video reference.</td><td><span class="tag t-unt">untested</span> in this project; the tools are listed in the account</td></tr>
+<tr><td class="c">4. Voice and sound</td><td>Dialogue only in the locked voice. A line that comes out in a different voice is replaced in the edit with a take in the locked voice. Foley and room tone are added under every line. Music is licensed or owned.</td><td>elevenlabs_v4 / qwen TTS with the element voice; ffmpeg in the sandbox.</td><td><span class="tag t-ver">verified</span> (the "Final." splice)</td></tr>
+<tr><td class="c">5. Editing</td><td>Hard cuts on the beat; captions for Felix only; titles kept clear of platform buttons; every cut checked.</td><td>The video-montage workflow scripts; Higgsfield sandbox (ffmpeg, Whisper).</td><td><span class="tag t-ver">verified</span> parts; full pipeline <span class="tag t-unt">untested</span></td></tr>
+<tr><td class="c">6. Quality review</td><td>The checklist below, then a cold-viewer test (2 s muted, the whole clip muted, then with the transcript).</td><td>engine/cold_viewer.py</td><td><span class="tag t-ver">verified</span> once</td></tr>
+<tr><td class="c">7. Export</td><td>1080×1920, H.264, AAC 48 kHz, two cover frames, separate captions for each platform, the AI label and the ad disclosure recorded per post.</td><td>ffmpeg</td><td><span class="tag t-unt">untested</span> as a full step</td></tr>
+</tbody></table></div>
+
+<h3>Character-specific variations</h3>
+<ul>
+<li><b class="v">Vince:</b> dance shots come only from motion transfer. Feet must be in frame on every dance shot. 720p minimum for posting, because the spectacle needs detail.</li>
+<li><b class="f">Felix:</b> mostly talking head plus screen recordings and real outtakes, which cost no credits. He is the cheapest to produce and should test the cheaper Seedance 2.0 Mini for talking-head shots <span class="tag t-unt">untested for quality</span>.</li>
+<li><b class="m">Mansour:</b> dialogue-heavy, so the voice lock and lip-sync matter most. Every hand-object interaction (dallah, cup, stick) follows the engine's keyframe rules. A cultural review is a hard gate before generation, not after.</li>
+</ul>
+
+<h3>Reusable shot-prompt structure</h3>
+<p>Same order as the engine's compact prompt. Every word counts against the model's prompt budget, so beats come first and nothing decorative is included.</p>
+<pre>Identity: the person in @image1, exactly; [locked traits]; no accessories that are not in the reference.
+Camera: shot on an iPhone 18 Pro Max, [lens] ([mm] equivalent); [handheld with micro-sway | locked off]; [one move, if any].
+0-Xs: [one action, named hand, named body part, exact start state → end state].
+X-Ys: [next beat]. [Character] says once: "[line]".
+Sound: [room tone, foley, music cue]; only the quoted lines are spoken, each exactly once. English only.
+Voice: every spoken word is in exactly the voice of @audio1; never a different voice.
+Setting: [place], exactly as in the start frame.
+Props: [this shot's props only, exact design, exactly one of each].
+Hands / Feet: [what each hand does]; [feet planted on stance, no sliding].
+Physics: [fabric, contact, weight]; everything else holds still.
+[Negative tail: no extra fingers, no readable text or logos, natural skin, no slow motion.]</pre>
+
+<h4 class="v">Vince: the ballet shot (11.5–16 s)</h4>
+<pre>Identity: the man in @image1, exactly; silver pompadour that never moves, clean-shaven, heavy black eyebrows; burgundy crushed-velvet tuxedo jacket with black satin lapels, black trousers cut short over white sports socks, gold loafers, crooked black bow tie, one red carnation on the lapel.
+Camera: shot on an iPhone 18 Pro Max, 1x main lens (about 24 mm equivalent), full body with feet in frame; handheld, one slow push to 2x over 4 s.
+Motion: follow the dancer's movement in @video1 exactly (two chaîné turns, développé, held arabesque); keep his face serious and calm.
+Setting: a marble hotel lobby with a potted palm and brass handrail, exactly as in the start frame; a blurred passer-by far back.
+Feet: the supporting foot stays planted on the marble with a contact shadow; no sliding between steps.
+Physics: velvet jacket swings with each turn and settles with weight; carnation stays attached; pompadour does not move.
+No extra limbs, no extra fingers, natural skin with pores, no readable text or logos, no slow motion.</pre>
+
+<h4 class="f">Felix: drift demo, car park shot (3–5 s)</h4>
+<pre>Identity: a man in his early 30s, bleached buzzcut with dark roots, freckles, slightly crooked nose, small scar through the left eyebrow, silver hoop earring, oversized black hoodie with small "#0417" embroidery.   ← deliberately NO @image refs for this shot (the lesson)
+Camera: shot on an iPhone 18 Pro Max, 1x main lens (about 24 mm equivalent), chest-up selfie framing; handheld micro-sway.
+0-2s: he looks into the lens and says once: "Car park me."
+Sound: concrete car park echo, distant car door; only the quoted line is spoken. English only.
+Voice: every spoken word is in exactly the voice of @audio1.
+Setting: an empty multi-storey car park, grey concrete, sodium lights.
+Natural skin, no readable text except "#0417", no extra fingers.</pre>
+<p class="small">The "fixed" version of the same shot adds <code>@image1–5</code> (the pack) and "exactly the man in @image1–5; hoop earring in his LEFT ear".</p>
+
+<h4 class="m">Mansour: the refill shot (12–19 s)</h4>
+<pre>Identity: the man in @image1, exactly; early 50s, trimmed salt-and-pepper beard joined to a sharp moustache; red-and-white shemagh in the same fold as @image1, black agal, black bisht with gold trim over an off-white thobe.
+Camera: shot on an iPhone 18 Pro Max, 1x main lens (about 24 mm equivalent), medium two-shot; handheld with gentle sway.
+0-3s: his left hand holds the brass dallah by its handle; he tilts it and pours a thin stream of coffee into the small handleless cup held in the concierge's right hand; the cup fills a third and he lifts the spout. He says once: "He does not shake. He wants more."
+Sound: lobby room tone, soft pouring, a cup clink; only the quoted line is spoken. English only.
+Voice: every spoken word is in exactly the voice of @audio1.
+Setting: a marble hotel lobby, armchairs, exactly as in the start frame.
+Props: one brass dallah with a curved spout (exactly as @image2); one small white handleless coffee cup (exactly as @image3).
+Hands: Mansour's right hand rests on his camel stick; the concierge's left hand rests on the armrest; the coffee stream lands inside the cup.
+Natural skin, no extra fingers, no readable text or logos, no slow motion.</pre>
+
+<h3>Quality checks (every shot, before it reaches the edit)</h3>
+<div class="tbl"><table>
+<thead><tr><th>Check</th><th>Pass condition</th><th>Cheapest repair</th></tr></thead>
+<tbody>
+<tr><td class="c">Identity drift</td><td>Locked traits match the reference pack frame by frame (Felix's earring stays in the left ear, Mansour's headdress fold, Vince's carnation).</td><td>Re-run with the full pack; if only one frame range drifts, cut around it.</td></tr>
+<tr><td class="c">Anatomy</td><td>Five fingers, no merged hands, joints bend the right way.</td><td>Cut to a different angle before the error; re-run that 2–4 s only.</td></tr>
+<tr><td class="c">Foot contact</td><td>The supporting foot does not slide; contact shadow present; heels hit on the beat in footwork.</td><td>A tighter reference clip; shorter phrase; low-angle framing hides small slips.</td></tr>
+<tr><td class="c">Fabric</td><td>Velvet and bisht swing with momentum and settle; thobe hem follows the legs; shemagh stays pinned under the agal.</td><td>Add the fabric line to Physics; re-run.</td></tr>
+<tr><td class="c">Lip-sync</td><td>Lips close on p, b and m; no speech while the mouth is closed.</td><td>Replace the line with a locked-voice take in the edit, or cut to a reaction shot.</td></tr>
+<tr><td class="c">Timing</td><td>Every cut lands on the beat within 2 frames; no line is cut off.</td><td>Re-edit; no new generation needed.</td></tr>
+<tr><td class="c">Background continuity</td><td>Same room, same light and props across cuts.</td><td>Use the locked-plate method: crop closer shots from the approved frame, never regenerate them.</td></tr>
+<tr><td class="c">Timed framing</td><td>Text and faces stay out of the bottom 20% and the right-hand button column at every timestamp.</td><td>Reposition text; for faces, a reframe or crop.</td></tr>
+<tr><td class="c">Product accuracy (sponsored)</td><td>Pack shape, colour and logo match the brand's approved files in every frame; no invented claims or text.</td><td>Product shots as composited stills or real product footage, not generated; claims only from the brand's approved list.</td></tr>
+<tr><td class="c">Voice</td><td>The same locked voice in every spoken shot, measured against the reference clip.</td><td>Replace the line with a locked take.</td></tr>
+</tbody></table></div>
+
+<h3>Effort and cost assumptions <span class="tag t-hyp">hypothesis</span></h3>
+<p>Measured rates in this project: Cinema Studio 4.0 at 480p costs 36 credits for 12 s (3 per second); 720p is quoted at 84 for 12 s (7 per second); Nano Banana Pro images cost 2 credits each; voice takes cost about 0.5 credits each. Motion-transfer pricing has not been checked yet. Balance today: <b>440 credits</b> (Ultra plan).</p>
+<div class="tbl"><table>
+<thead><tr><th>Episode type</th><th>Credits per finished episode (estimate)</th><th>Human time (estimate)</th><th>Main risk</th></tr></thead>
+<tbody>
+<tr><td class="c">Vince, Style Roulette (20 s)</td><td>~100 at 480p tests + ~140 at 720p finals + transfer cost (unknown) → <b>250–350</b></td><td>4–6 h, plus booking a dancer</td><td>Feet sliding; the transfer losing the face.</td></tr>
+<tr><td class="c">Felix, Hot Take (30 s)</td><td>~60 drift/fix shots + talking head → <b>80–150</b></td><td>3–4 h</td><td>A dry talking head; voice drift.</td></tr>
+<tr><td class="c">Felix, Autopsy (using existing failures)</td><td><b>0–20</b></td><td>2 h</td><td>Running out of real failures, which is unlikely.</td></tr>
+<tr><td class="c">Mansour, Inspection (30 s)</td><td>~6 keyframes + ~4 shots → <b>150–250</b></td><td>4–6 h plus cultural review</td><td>Accent intelligibility; the coffee pour physics.</td></tr>
+</tbody></table></div>
+</section>
+
+<!-- ============================ E ============================ -->
+<section id="e">
+<h2>E. Monetization design</h2>
+
+<h3 class="v">Vince: spectacle to affiliate</h3>
+<p><b>Program facts</b> <span class="tag t-rep">reported</span>. These come from search summaries of higgsfield.ai/affiliate and the Higgsfield blog; the pages themselves could not be opened from here:</p>
+<ul>
+<li>Commission is up to 25% of plan revenue, tiered, recurring for up to 12 months per referral. Monthly plans pay at each renewal; quarterly and annual plans are credited upfront. Refunds earn nothing.</li>
+<li>Referred users get up to 50% off, valid for 3 hours after logging in through the link.</li>
+<li>Prohibited: paid ads, bidding on the Higgsfield brand name, coupon and cashback sites. An older ambassador page says "up to 15%" (Impact.com) and requires promoters to identify as an independent affiliate. The two pages conflict.</li>
+<li><b>Still unknown:</b> the attribution (cookie) window, payout threshold and method, whether sub-IDs per post are supported, and the full terms page. All of these must be read in the dashboard after joining, which is an owner action.</li>
+</ul>
+<h4>Conversion path</h4>
+<ol>
+<li><b>Spectacle</b> (Style Roulette, The Commission) creates the question "how is this made?". No selling in these posts.</li>
+<li><b>Behind the Velvet</b> (1 post in 4) answers it. It shows the real dancer's clip next to Vince, then the failed takes, then the tool. The "#ad · affiliate link" disclosure appears <b>on screen and in Vince's spoken line</b>, and the platform's commercial-content toggle is on. A disclosure only in the caption is not enough for the FTC.</li>
+<li><b>Link</b>: on Instagram, a bio link to a simple link page (clearly "Vince Velvet's links", never styled to look like Higgsfield) plus a story link sticker. <b>TikTok links in bio require 1,000 followers</b>, so on TikTok the reveal posts point viewers to Instagram or to Felix's site until then.</li>
+<li><b>Deeper intent</b> goes to Felix: "the full method is on Felix's account". The course also links the tool honestly, with disclosure.</li>
+<li><b>The 3-hour discount</b> is a real, fair urgency lever, if the dashboard confirms it is still offered: "50% off for 3 hours after you tap".</li>
+</ol>
+<h4>Attribution plan</h4>
+<ul>
+<li>Use one affiliate link per platform and series if the program supports sub-IDs. If not, the link page records which post a click came from (a short code per post) before handing off to the affiliate link.</li>
+<li>Log each post's views, link clicks, and the dashboard's sign-ups and revenue weekly. Sign-ups usually lag clicks by days, so judge on a 14-day window, not per post.</li>
+<li><b>Economics</b> (formula only, no invented prices): <code>affiliate revenue ≈ views × link-click rate × sign-up rate × average plan revenue × commission rate</code>. Vince only pays off if this beats roughly 250–350 credits per spectacle episode. The pilot measures the first two rates; the rest come from the dashboard.</li>
+</ul>
+
+<h3 class="f">Felix: the course</h3>
+<dl class="spec">
+<dt>Target learner</dt><dd>The "stuck creator". They have made AI clips and can't keep a character consistent across episodes, so their face drifts and the voice changes. They want a recurring character for their own channel or for clients. Not complete beginners; not developers.</dd>
+<dt>Course outcome</dt><dd><b>In 21 days, build one original AI character and publish three finished 15–30 s episodes with the same face, the same voice and the same world.</b> Measured by the learner's own three exports, passing the course's QA checklist.</dd>
+<dt>Minimum viable curriculum</dt><dd>
+<ol>
+<li><b>Character before face:</b> premise, contradiction, a format that can generate new episodes. The bible template.</li>
+<li><b>The reference pack:</b> the five-image method, prop references, what "locked" means.</li>
+<li><b>Voice:</b> design a custom voice from the character, pick a take, clone it, lock it, and keep it identical across shots.</li>
+<li><b>Shot planning:</b> timed beats, one movement per shot, naming the lens in plain words, speech rate, start and end keyframes.</li>
+<li><b>Generate and repair:</b> the locked-plate crop, hand-object interactions, motion transfer from licensed movement, and a library of real failures with what each repair cost.</li>
+<li><b>Edit, test, disclose:</b> replacing a line with the locked voice, cutting on the beat, the cold-viewer test, AI labels versus ad disclosure.</li>
+</ol></dd>
+<dt>Included resources</dt><dd>Bible template, shot-prompt template, QA checklist, the failure library (real before-and-after clips with credit costs), a credit budget sheet, a disclosure checklist, and the reference pack for Felix himself to practise with.</dd>
+<dt>Differentiation</dt><dd>Taught from <b>a logged production record</b>, not a tool list. Every lesson comes from a real failure in this lab (the doubled dial numeral, the drifting voice, the wrong-way needle), with what the fix cost. It is honest about paid tools, about human work, and about what still fails. The free content teaches complete techniques; the paid course adds the organised sequence, templates, the failure library and, at the higher tier, feedback.</dd>
+<dt>Pricing hypothesis</dt><dd><span class="tag t-hyp">hypothesis</span> $79 self-paced. $199 with two recorded critiques of the learner's episodes. Founding pre-sale at $49 for the first 30 learners, with a refund promise if the course does not ship by the stated date. These numbers are a starting point to test, not market research.</dd>
+<dt>Demand test before building</dt><dd>
+<ol>
+<li><b>Free lesson</b> (the five-image pack plus the QA checklist) on a one-page site, in exchange for an email, with one question: "Describe the character you want to build."</li>
+<li><b>Waitlist conversion</b> is measured for 14 days from Felix's posts. A spoken, memorable URL works around TikTok's link limit.</li>
+<li><b>Gate:</b> at <span class="tag t-hyp">hypothesis</span> ≥ 25 waitlist sign-ups, open a founding pre-sale to the waitlist only.</li>
+<li><b>Build the full course only after ≥ 10 pre-sales.</b> Until then, only the free lesson and module 1 exist.</li>
+</ol>
+Taking payment needs owner approval and a checkout set up by the owner.</dd>
+</dl>
+
+<h3 class="m">Mansour: partnerships</h3>
+<div class="tbl"><table>
+<thead><tr><th>Good fit</th><th>Why it suits him</th><th>Poor fit</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Hotels, resorts, airline lounges</td><td>The Inspection format <i>is</i> a hospitality review.</td><td>Alcohol, gambling, pork products</td><td>Breaks character and his audience's values.</td></tr>
+<tr><td>Coffee, dates, cafés, kitchen appliances</td><td>The dallah and the coffee customs are his props already.</td><td>Crypto, meme coins, trading apps</td><td>Speculative; and exactly what the reference accounts do.</td></tr>
+<tr><td>Perfume and oud, beard and grooming</td><td>Pride in presentation; the bisht moment.</td><td>Political or government campaigns, religious products</td><td>Comedy and a sacred or political message don't mix.</td></tr>
+<tr><td>Grocery and food-delivery apps</td><td>The Umm Fahad errands and the bill duels.</td><td>Brands that need "real customer" testimonials</td><td>A fictional AI character cannot give a real testimonial (FTC fake-reviews rule).</td></tr>
+<tr><td>Phones and cameras</td><td>"Turki, film this": the phone is in every episode.</td><td>Children's products; weight-loss or medical claims</td><td>Minor-likeness rules; claims a character cannot stand behind.</td></tr>
+<tr><td>Tailors and menswear</td><td>The seasonal thobe and the bisht.</td><td>Very conservative brands that need zero surprises</td><td>His value is the unpredictability.</td></tr>
+</tbody></table></div>
+<h4>Three integration concepts</h4>
+<ul>
+<li><b>Hotel: "The Inspection, sponsored".</b> For the first time a venue out-hosts him; its own welcome ritual is the product feature. He awards five stars through gritted teeth. The brand wins by beating Mansour at his own game.</li>
+<li><b>Coffee: "Umm Fahad Calling".</b> A voice note: "Bring the good coffee. Not the one from last time." He waltzes through the aisle to the right pack (a real packshot, composited, never generated).</li>
+<li><b>Delivery app: "I Insist".</b> He and a guest fight over the bill; the order has already been paid through the app by Umm Fahad. He has lost to his wife again.</li>
+</ul>
+<h4>Starter collaboration package</h4>
+<ul>
+<li>One integrated Reel and TikTok (30–45 s), one 15 s cut-down and three stories.</li>
+<li><b>Script approval before generation</b>, up to two rounds. Regeneration costs credits, so revisions happen on paper.</li>
+<li>Product accuracy: the brand's real packshots and approved claims only. Product shots are composited, not generated.</li>
+<li>Labels: an AI label and a paid-partnership label on every post, plus "#ad" up front, spoken or on screen.</li>
+<li>Rights: a written statement that the voice was designed for the character, the music is licensed, and no real person's likeness is used. Organic usage rights for 30 days; paid usage is quoted separately.</li>
+<li>A cultural review is included in every script.</li>
+<li><b>Fees:</b> not set until audience evidence exists. No rate card is invented here.</li>
+</ul>
+<h4>What a sponsor will need to see</h4>
+<ul>
+<li>Median views over the last 10 posts (not the best one), share and save rates, and follower growth over time.</li>
+<li>Audience country and age split from platform insights, with the Gulf share stated.</li>
+<li>A comment sample with the coding method, a brand-safety record (no strikes), and the AI disclosure policy.</li>
+<li>A spec ad made for a <b>fictional</b> brand, clearly labelled as a spec, never using a real logo without permission.</li>
+<li><b>Saudi-market deals:</b> paid social advertising in Saudi Arabia requires the Mawthooq licence (regulator now GAMR). Non-Saudi operators reportedly need a licensed agency route <span class="tag t-rep">reported</span>. Saudi counsel must confirm before any Gulf brand is approached.</li>
+</ul>
+
+<h3>Disclosure rules that apply to all three</h3>
+<div class="tbl"><table>
+<thead><tr><th>Rule</th><th>What we do</th><th>Source status</th></tr></thead>
+<tbody>
+<tr><td class="c">AI label (separate from ads)</td><td>TikTok "AI-generated" label on every realistic AI post (it cannot be removed later). Meta "AI info" label on every post. Instagram's new "AI-generated profile" account label on all three accounts, because unlabelled AI-persona accounts become non-recommendable. Each bio also states that the character is AI-generated and fictional.</td><td><span class="tag t-rep">reported</span> from TikTok and Meta pages; Instagram profile label from TechCrunch, 31 Aug 2026</td></tr>
+<tr><td class="c">Ad disclosure (separate from AI)</td><td>Platform toggle (TikTok commercial content; Instagram paid partnership) <b>plus</b> "#ad" up front, spoken or on screen, and a disclosure next to every affiliate link. Affiliate posts are treated as advertising.</td><td>FTC Endorsement Guides 2023 (covers virtual influencers) and the UK ASA <span class="tag t-rep">reported</span></td></tr>
+<tr><td class="c">No fake people or reviews</td><td>No real people's likenesses, no minors, no testimonials from fictional people, no "fan" footage presented as real.</td><td>FTC rule on reviews and testimonials (16 CFR 465); TikTok guidelines effective 24 Sep 2026</td></tr>
+<tr><td class="c">Music</td><td>Owned or licensed cues. TikTok's Commercial Music Library or Instagram's Sound Collection for anything commercial. No general-library tracks on affiliate or sponsored posts.</td><td><span class="tag t-rep">reported</span></td></tr>
+</tbody></table></div>
+
+</section>
+
+<!-- ============================ F ============================ -->
+<section id="f">
+<h2>F. 14-day pilot plan</h2>
+<p><b>Shape:</b> two live accounts (Vince and Felix, both platforms). Mansour is built but not published. About 7 posts in 14 days. That is enough for directional signal, not proof. Roles: <b>GS</b> Growth Strategist, <b>SR</b> Showrunner, <b>EN</b> Engineer, <b>PM</b> Product &amp; Production Manager (these are review roles that Claude runs), <b>OWNER</b> (approvals and anything outside the session).</p>
+<h3>Credit envelope</h3>
+<div class="tbl"><table>
+<thead><tr><th>Item</th><th>Credits (estimate)</th></tr></thead>
+<tbody>
+<tr><td>Reference packs for Vince and Felix (about 20 images)</td><td>40</td></tr>
+<tr><td>Voice design for Vince, Felix and Mansour</td><td>5</td></tr>
+<tr><td>Dance technique test: one 4 s phrase, three methods, at 480p</td><td>30 + transfer price (quote on day 2)</td></tr>
+<tr><td>Felix "Four faces" (the rest of Felix's posts reuse existing footage)</td><td>80</td></tr>
+<tr><td>Vince "Style Roulette" (480p tests + 720p finals)</td><td>200</td></tr>
+<tr><td>Mansour reference pack (unpublished)</td><td>25</td></tr>
+<tr><td><b>Total / reserve</b></td><td><b>~380 of 440 / ~60 reserve</b></td></tr>
+</tbody></table></div>
+<p class="small">If the motion-transfer quote is high, or the dance test fails, Vince's budget moves to a non-dance Commission episode and to Felix. No paid generation starts without owner approval of this envelope.</p>
+
+<h3>Schedule</h3>
+<div class="tbl"><table>
+<thead><tr><th>Day</th><th>Work</th><th>Owner</th><th>Depends on</th><th>Deliverable / gate</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Owner decisions 1–3 below. Name and handle clearance. Join the affiliate program and read the real terms.</td><td>OWNER, PM</td><td>—</td><td><b>Gate G0:</b> budget, sourcing and offer approved</td></tr>
+<tr><td>1–2</td><td>Reference packs for Vince and Felix; voice design takes for all three characters.</td><td>EN</td><td>G0</td><td>Packs plus voice samples</td></tr>
+<tr><td>2</td><td>Dance technique test (Cinema Studio 4.0 prompt-only vs Seedance 2.5 with a video reference vs Kling motion control) on one minuet phrase. Felix "Autopsy #1" edited from existing Uncle Verdict footage.</td><td>EN, SR</td><td>A licensed reference clip</td><td>Side-by-side test; edited Autopsy</td></tr>
+<tr><td>3</td><td>The owner picks the voices (each is then locked for good) and the dance method. Mansour's bible goes to the cultural reviewer.</td><td>OWNER, SR</td><td>Day 2</td><td><b>Gate G1:</b> voices locked, method chosen</td></tr>
+<tr><td>3–5</td><td>Felix "Four faces" produced; a QA pass and a cold-viewer test. The free-lesson page is drafted. The dancer films the Style Roulette phrases.</td><td>EN, GS, OWNER</td><td>G1</td><td>Episode plus draft site</td></tr>
+<tr><td>6</td><td>The owner creates the accounts (AI labels, bios, link page) and approves the site going live. Felix Autopsy #1 is posted.</td><td>OWNER</td><td>Approval</td><td><b>Gate G2:</b> live accounts</td></tr>
+<tr><td>7–9</td><td>Vince Style Roulette produced. Felix "Four faces" posted on day 8; the five-image carousel on day 9.</td><td>EN, SR</td><td>Dancer clips</td><td>Vince episode</td></tr>
+<tr><td>9</td><td>QA plus a cold-viewer test on Vince: the muted round must get the "unexpected excellence" beat.</td><td>SR, PM</td><td>Day 7–9</td><td><b>Gate G3:</b> publish or repair</td></tr>
+<tr><td>10</td><td>Vince pilot posted. Mansour voice and reference pack (not published).</td><td>OWNER, EN</td><td>G3; cultural notes</td><td>Post; Mansour assets</td></tr>
+<tr><td>12</td><td>Felix "Make Me Worse #1: give me a different voice", using the real voice-drift footage.</td><td>SR</td><td>—</td><td>Post</td></tr>
+<tr><td>13</td><td>Vince "Behind the Velvet #1", using the dancer's clip and failed takes, with "#ad" on screen and spoken.</td><td>SR, GS</td><td>Vince takes</td><td>Post</td></tr>
+<tr><td>14</td><td>Felix "Autopsy #2: why Vince's foot slid", then the review against the criteria below.</td><td>PM, GS</td><td>All</td><td><b>Gate G4:</b> continue / change / stop</td></tr>
+</tbody></table></div>
+
+<h3>Metrics and criteria <span class="tag t-hyp">all thresholds are hypotheses for this pilot, not industry benchmarks</span></h3>
+<div class="tbl"><table>
+<thead><tr><th>Metric</th><th>Why</th><th>Continue</th><th>Change</th><th>Stop</th></tr></thead>
+<tbody>
+<tr><td class="c">Hook hold (share of viewers still watching at 3 s; TikTok retention curve, Instagram skip rate)</td><td>Is the opening working?</td><td>≥ 60% hold</td><td>40–60%: change the opening (swap hook A for B)</td><td>&lt; 40% on two posts in a row: rethink the format</td></tr>
+<tr><td class="c">Shares per 1,000 views</td><td>Entertainment that people pass on</td><td>≥ 8</td><td>3–8: sharpen the payoff</td><td>&lt; 3 across all of one character's posts</td></tr>
+<tr><td class="c">Follows per 1,000 views</td><td>Is there a reason to come back?</td><td>≥ 5</td><td>1–5: make the series hook clearer</td><td>&lt; 1</td></tr>
+<tr><td class="c v">Vince: affiliate link clicks per 1,000 views (Instagram)</td><td>Is the spectacle turning into creative intent?</td><td>≥ 2 on the reveal post</td><td>&lt; 2: change how the reveal is shown</td><td>Zero clicks after two reveal posts: turn Vince into a pure reach account that feeds Felix</td></tr>
+<tr><td class="c f">Felix: waitlist sign-ups (total) and landing-page conversion</td><td>Course demand</td><td>≥ 25 sign-ups and ≥ 15% conversion, then open the pre-sale</td><td>10–24: change the free lesson or the course promise</td><td>&lt; 10 after 4 posts: test a different learner promise before building anything</td></tr>
+<tr><td class="c m">Mansour (not live): cold-viewer transcription accuracy and cultural review</td><td>Is he ready to launch?</td><td>≥ 90% of words transcribed and the review passes, then launch in the next phase</td><td>Accent too heavy: lighten it with a new character version (the voice lock forbids changing the existing one)</td><td>The review fails on the premise: rework the bible</td></tr>
+</tbody></table></div>
+<p class="small">Affiliate sign-ups and revenue are recorded but not used as a stop signal at day 14; the lag and the small number of posts make them too noisy. Comment coding uses the existing engine scheme (amusement, recognition, quotes, sequel requests, AI questions, offence, fatigue).</p>
+
+</section>
+
+<section id="decide">
+<h2>Three decisions the owner needs to make</h2>
+<ol class="decisions">
+<li><b>Credits and accounts.</b> Approve the ~380-credit pilot envelope (of the 440 available) and say whether to add credits. Approve creating Vince's and Felix's Instagram and TikTok accounts on day 6, with AI labels on. Nothing is spent or created until you say so.</li>
+<li><b>Licensed movement and music.</b> Hire a dancer to film reference phrases, with a written release that covers AI motion reference, and choose a music source (a library licence or commissioned cues you own). The alternative is the cheaper, untested prompt-only dance route. If you take it, Vince's quality rests on the day-2 test alone.</li>
+<li><b>Felix's offer and the affiliate account.</b> Approve the course promise ("one consistent character, three finished episodes, 21 days"), the price hypothesis, and a one-page free-lesson site (where it is hosted is your call). Join the Higgsfield affiliate program yourself, so its real terms can replace the reported ones in this brief.</li>
+</ol>
+<p class="small">Also needed before Mansour launches, not blocking the pilot: a Saudi cultural reviewer for his bible and scripts, and Saudi legal advice on the Mawthooq licence route before any Gulf brand is approached.</p>
+
+</section>
+</main>
+</div>
