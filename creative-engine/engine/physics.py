@@ -157,7 +157,9 @@ def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_
         light = first.get("lighting", "").split(";")[0]
         lines.append(f"Setting: {first.get('location', '')}." + (f" {light}." if level < 4 and light else "") + " Passers-by, if any, are soft blurred shapes who never react.")
         cuts = any("cut" in str(s.get("transition_out", "")).lower() for s in scenes[:-1])
-        lines.append(f"Camera: starts {cam0.get('shot', '')}; {cam0.get('movement', '')}." + ("" if cuts else " No cuts."))
+        from .camera import camera_device_clause
+        dev = camera_device_clause(packet, first)  # owner rule: plain device/lens naming; phone looks are always iPhone 18 Pro Max
+        lines.append(f"Camera: {dev + '; ' if dev else ''}starts {cam0.get('shot', '')}; {cam0.get('movement', '')}." + ("" if cuts else " No cuts."))
         props = [bible_prop_text(str(x).strip(), bible) for x in (cont.get("props") or []) if str(x).strip()]
         if props:
             lines.append("Props (exact design, exactly one of each, nothing else added): " + "; ".join(props) + ".")
@@ -167,7 +169,14 @@ def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_
             t0 = float(scenes[0]["start_s"])  # times are relative to this clip (a unit after a cut starts at 0 in its own render)
             t = f"{fmt(float(s['start_s']) - t0)}-{fmt(float(s['end_s']) - t0)}s"
             mv = str((s.get("camera") or {}).get("movement", "")).strip()
-            cam_note = f" Camera: {mv.split(';')[0].strip().rstrip('.')}." if (mv and s is not first) else ""  # camera moves are never trimmed (owner values camera motion)
+            prev = scenes[scenes.index(s) - 1] if s is not first else None
+            lens_change = ""
+            if prev is not None:
+                from .camera import lens_phrase
+                cur_l, prev_l = lens_phrase((s.get("camera") or {}).get("lens", "")), lens_phrase((prev.get("camera") or {}).get("lens", ""))
+                if cur_l and cur_l != prev_l:  # only a real lens change (0.5x/1x/2x/5x) is worth words
+                    lens_change = f" Lens: {cur_l}."
+            cam_note = (f" Camera: {mv.split(';')[0].strip().rstrip('.')}.{lens_change}" if (mv and s is not first) else "")  # camera moves are never trimmed (owner values camera motion)
             line = f"{t}: {str(s['physical_beat']).strip().rstrip('.')}.{cam_note}"
             if s.get("interaction"):
                 from .interaction import interaction_beat
@@ -195,7 +204,9 @@ def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_
 
     from .interaction import NEGATIVE_TAIL, interaction_rule_line
     from .interaction import interaction_beat
-    fixed = len(NEGATIVE_TAIL.split()) + len(interaction_rule_line(packet, scenes).split()) + sum(len(interaction_beat(s).split()) for s in scenes)  # safety lines from the platform recipe: outside the descriptive budget
+    from .camera import camera_device_clause
+    fixed = (len(NEGATIVE_TAIL.split()) + len(interaction_rule_line(packet, scenes).split()) + sum(len(interaction_beat(s).split()) for s in scenes)
+             + len(camera_device_clause(packet, scenes[0]).split()))  # mandatory device/lens naming (owner rule) sits outside the descriptive budget  # safety lines from the platform recipe: outside the descriptive budget
 
     def wc(t: str) -> int:
         return len(t.split()) - fixed

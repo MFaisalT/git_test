@@ -459,8 +459,8 @@ def validate_all(packet: dict, bible: dict | None = None) -> Report:
     from .physics import physics_findings
     for f in physics_findings(packet):
         rep.warn(f["code"], f["message"], f["path"])
-    from .camera import camera_findings
-    for f in camera_findings(packet):
+    from .camera import camera_findings, lens_findings
+    for f in camera_findings(packet) + lens_findings(packet):
         rep.warn(f["code"], f["message"], f["path"])
     from .voice import voice_findings
     for f in voice_findings(packet, bible):

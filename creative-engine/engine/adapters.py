@@ -165,7 +165,7 @@ def plan(packet: dict, bible: dict | None = None, quote_credits: dict | None = N
         if inter:
             manual = ["Keyframe board first: generate the start frame and the end frame (route_image_asset('keyframe'): nano_banana_pro with the character and prop references; the end frame edits the start frame so only the moving part and the acting finger change; a closer end framing is a crop of the approved frame made in the Higgsfield sandbox, never a regeneration); the owner inspects both before any video is submitted."] + manual
         if route.get("status") == "gap" or model == "cinematic_studio_video_4_0":
-            gaps.append("Cinema Studio 4.0 native camera/lighting controls need creative-control ids not retrieved in this build; pass as prompt text meanwhile")
+            gaps.append("Camera body/lens/lighting are given in plain prompt language (device, zoom factor, equivalent focal length), not Cinema Studio creative-control ids (owner rule 2026-10-08; the ids are unpublished)")
         est = quote_for(model, controls.get("duration", int(round(dur))), "720p")
         draft_est = quote_for(model, controls.get("duration", int(round(dur))), "480p-draft")
         _cp = compact_prompt(packet, u, bible, return_meta=True)

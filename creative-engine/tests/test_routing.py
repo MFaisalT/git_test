@@ -374,3 +374,26 @@ class TestRotationDirection(unittest.TestCase):
         t = interaction_beat({"interaction": dict(TestShownInteraction.SPEC, direction="counter-clockwise, one notch (about 18 degrees), toward the 0 end")})
         self.assertIn("It rotates counter-clockwise, one notch (about 18 degrees), toward the 0 end, and only that far.", t)
         self.assertIn("ends on the end frame, where the pointer is exactly pointing at 1", t)
+
+
+class TestPlainCameraNaming(unittest.TestCase):
+    """Owner rule 2026-10-08: plain lens naming; phone looks are always shot on an iPhone 18 Pro Max."""
+
+    def test_lens_phrases(self):
+        from engine.camera import lens_phrase
+        self.assertIn("1x main", lens_phrase("phone main lens, about 26mm equivalent"))
+        self.assertIn("0.5x ultra-wide", lens_phrase("0.5x"))
+        self.assertIn("5x telephoto", lens_phrase("tele"))
+        self.assertIsNone(lens_phrase("cinematic"))
+
+    def test_phone_look_names_device_in_prompt(self):
+        p = TestShownInteraction()._packet()
+        for s in p["scenes"]:
+            s.setdefault("physical_beat", "She stands still, hands at her sides.")
+            s["camera"]["rig"] = "handheld phone"
+        txt = plan(p, bible())["units"][0]["prompt_text"]
+        self.assertIn("shot on an iPhone 18 Pro Max", txt)
+
+    def test_unnamed_lens_warns(self):
+        from engine.camera import lens_findings
+        self.assertEqual(lens_findings({"scenes": [{"scene_id": "S1", "camera": {"lens": "cinematic glass"}}]})[0]["code"], "CAMERA_LENS_UNNAMED")
