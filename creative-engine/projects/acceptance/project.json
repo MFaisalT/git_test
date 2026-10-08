@@ -7,5 +7,11 @@
     "instagram_reels",
     "tiktok",
     "youtube_shorts"
-  ]
+  ],
+  "audience_policy": {
+    "default": "global (visual-first; English subtitle variant; no region-locked references)",
+    "override": "only when a brief or bible specifies a region/language",
+    "owner_region": "not disclosed; native payouts stay $0 until platform dashboards confirm eligibility",
+    "set_on": "2026-10-08"
+  }
 }
