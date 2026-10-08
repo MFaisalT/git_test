@@ -61,3 +61,23 @@ Causes and fixes:
 - **Ring, microphone:** the identity line now forbids accessories not in the reference.
 - **Repeated last word:** lines are now written "says once" and the sound line ends "each exactly once, then silence".
 - **Mini:** routed away from any unit with dialogue or handled props, even on the cheap test tier; Mini stays for silent, hands-free clips only. Seedance 2.5 draft (36 credits per 12 s) becomes the test tier for interaction.
+
+## Five-model comparison on one identical prompt (2026-10-08)
+
+The owner asked for this so the comparison is fair: every clip below used the same current Uncle Verdict prompt, the same reference still (`cb1f3458`), 12 s, 9:16, with audio on. The earlier Mini and 2.5 clips used older prompts, so Mini and 2.5 were re-rendered for this test.
+
+| # | Model | Res | Credits (charged) | Job |
+|---|---|---|---|---|
+| 1 | Seedance 2.0 Mini | 720p | 12 | `fab09815-da4b-4b40-be21-90c6c75c88c6` |
+| 2 | Kling O3 (std, image reference) | 720p | 15 | `30625b53-9856-40f2-9247-376b4f63866a` |
+| 3 | Seedance 2.0 fast | 720p | 30 | `f39a8cfd-0029-4ec8-b93f-b7f3d6dedbd4` |
+| 4 | Seedance 2.5 draft | 480p | 36 | `e4fd3681-5de5-4cdb-a66d-57d42d9208fc` |
+| 5 | Cinema Studio 4.0 (no control ids set) | 480p | 36 | `1e996219-8648-4325-95ef-4795cf3854da` |
+
+Every charge matched its quote. The session cannot view pixels, so the verdict belongs to the owner. Checklist:
+- Paddle at 2, then a hard cut to the paddle at 1, with no morph on screen.
+- Hands: two at most, with no extra hand or arm growing from the prop.
+- Exactly one umbrella and one paddle; no added ring, watch or mic.
+- Passers-by don't vanish and the frame doesn't jump.
+- "Final." is said once.
+- Camera feel.

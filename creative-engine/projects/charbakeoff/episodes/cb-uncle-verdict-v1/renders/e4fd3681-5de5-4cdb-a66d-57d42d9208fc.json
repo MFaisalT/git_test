@@ -14,7 +14,7 @@
   ],
   "cost": {
     "quoted_credits": 36,
-    "charged_credits": null
+    "charged_credits": 36
   },
   "render_inspection": {
     "status": "pending_owner"
