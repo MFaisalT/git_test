@@ -462,3 +462,12 @@ class TestAssemblyAndColdViewer(unittest.TestCase):
                    "joke": "he rates the umbrella badly while getting rained on, so he is wrong", "stop_scroll": True}, terms)
         self.assertEqual(s["verdict"], "pass")
         self.assertEqual(score({"joke": "a man sits outside"}, terms)["verdict"], "fail")
+
+
+class TestCameraModes(unittest.TestCase):
+    def test_static_with_sway_words_warns(self):
+        from engine.camera import camera_mode_findings
+        p = {"scenes": [{"scene_id": "S1", "camera": {"movement": "propped phone, locked, gentle breathing sway"}}]}
+        self.assertEqual(camera_mode_findings(p)[0]["code"], "CAMERA_STATIC_MOTION_LEAK")
+        p["scenes"][0]["camera"]["movement"] = "handheld with slight natural micro-shake from the grip"
+        self.assertEqual(camera_mode_findings(p), [])

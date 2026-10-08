@@ -83,3 +83,23 @@ def lens_findings(packet: dict) -> list[dict]:
             out.append({"code": "CAMERA_LENS_UNNAMED", "severity": "warning", "path": f"scenes.{s.get('scene_id')}.camera.lens",
                         "message": "name the lens in plain terms: a zoom factor (0.5x, 1x, 2x, 5x) or an equivalent focal length in mm"})
     return out
+
+
+# Higgsfield ugc-video/references/ugc-clip.md (read at source 2026-10-08, owner asked to recheck): handheld/selfie shots carry
+# "slight natural handheld micro-shake from the grip" (L187-188, L543); locked-off/static shots are "absolutely frozen" and must not
+# contain handheld/shake/drift/wobble/sway words, which "leak motion into the render" (L177-181); a single deliberate slow push-in
+# is the sole exception on a locked shot, and a candid handheld zoom-in is allowed as an opener (L145-151).
+STATIC_WORDS = re.compile(r"\b(propped|locked|locked-off|static|tripod)\b", re.I)
+MOTION_LEAK = re.compile(r"\b(handheld|hand-held|shake|micro-shake|drift|drifting|wobble|sway|breathing sway|subtle movement|natural movement)\b", re.I)
+
+
+def camera_mode_findings(packet: dict) -> list[dict]:
+    out = []
+    for s in packet.get("scenes", []) or []:
+        cam = s.get("camera") or {}
+        mv = f"{cam.get('movement', '')} {cam.get('rig', '')}"
+        if STATIC_WORDS.search(mv) and MOTION_LEAK.search(mv):
+            out.append({"code": "CAMERA_STATIC_MOTION_LEAK", "severity": "warning", "path": f"scenes.{s.get('scene_id')}.camera",
+                        "message": "a locked/propped shot also names handheld/sway/shake words; pick one: handheld with micro-shake from the grip, "
+                                   "or locked-off with zero motion (one deliberate push-in is the only exception)"})
+    return out

@@ -54,3 +54,40 @@ The owner asked for an "honest independent review" of the skills people recommen
 - Every "proven" claim in the synced skills
 - Whether CS4 or Seedance lip-sync to a full supplied line audio
 - The Cinema Studio 4.0 control ids. These are now moot: the owner ruled on 2026-10-08 that camera and lens are named in plain language.
+
+## Study 2: incorporating skills per workflow stage (2026-10-08, study only, nothing adopted)
+
+The owner clarified the question: not *replace* the engine, but *incorporate* each relevant skill into the relevant stage. A second independent reviewer read Higgsfield's first-party repo `higgsfield-ai/skills`. It was cloned read-only as untrusted text: not installed, nothing run. The reviewer also re-read the four synced skills.
+
+| Skill | Stage | How it would be used | Value | Main risk |
+|---|---|---|---|---|
+| higgsfield-video-explainer | S2 voice, S8 assembly | Its audio-first procedure: record every line in the locked voice, then video, then pair them 1:1. Not its 10 s-block assembler. | High | Auto-assembles without a gate |
+| higgsfield-youtube-thumbnail | S9 packaging | Truthful concepts and a post-render gate; text added by code. Not its imitation of a named creator's style. | High (S9) | Imitates a creator's style |
+| higgsfield-brandkit | S5 props, S11 brands | Lock states, plus invalidating dependent keyframes when a prop changes. Not its scripts. | Medium | Installs packages, runs subprocesses |
+| higgsfield-generate | S6, S7 | A few prompt rules (image-to-video: describe motion, not the frame). Virality Predictor only as an optional, gated extra. | Medium | Installs the CLI with curl\|sh; "don't pre-estimate cost"; auto-uploads |
+| higgsfield-product-photoshoot | S11 | Reference stills of an owner-supplied product only, gated | Medium (later) | The backend writes the prompt |
+| higgsfield-soul-id | S1 (future) | Not now: our characters are generated originals | Low | Paid training on face photos; needs consent |
+| higgsfield-marketplace-cards, higgsfield-websites | none | Don't use | none | websites deploys live and claims precedence over other skills |
+| ugc-influencer-video (synced) | S4, S6 | Per-clip line audio as "the ONLY spoken content", a language lock, a relight line, the continuation pattern | High | "fake-UGC" framing; no disclosure rule |
+| content-engine (synced) | S3, S4, S7, S9 | Kill filter, muted hook caption, AI-tell list | Medium-high | Bans product handling (rejected) |
+| charsheet-soul (synced) | S1, S5 | Critical facts first, positive phrasing, counted accessories, a face-fix edit | Medium | Mostly specific to Soul |
+| digital-product (synced) | S12 | Don't use now | none | Out of scope |
+
+**What `npx skills add higgsfield-ai/skills` would do (from its docs, not run):**
+- It installs all eight skills, and their triggers fire on everyday phrases ("make a video").
+- Each skill's first step has the agent run a remote CLI installer by curl\|sh, from another repo nobody here has reviewed. It may ask for sudo.
+- It stores a second set of credentials in `~/.config/higgsfield/credentials.json`.
+- Install verification runs a paid test generation.
+- The websites skill deploys live.
+
+**Conclusion so far:** read and port text; don't install.
+
+**Already applied from this study (owner approved the highest-impact items):**
+- Audio-first line fixes in assembly. A locked-voice "Final." replaced the model-voiced one.
+- Prop-state continuity
+- Speech rate fitted to the locked voice
+- Every prompt word counted, with beats first
+- The montage-based assembly stage
+- The cold-viewer check
+
+Everything else above stays a study item until the owner decides.

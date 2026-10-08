@@ -464,8 +464,8 @@ def validate_all(packet: dict, bible: dict | None = None) -> Report:
         if f["code"] == "SPEECH_TOO_FAST":
             continue  # validate_timing already reports it with the same ceiling
         (rep.error if f.get("severity") == "error" else rep.warn)(f["code"], f["message"], f["path"])
-    from .camera import camera_findings, lens_findings
-    for f in camera_findings(packet) + lens_findings(packet):
+    from .camera import camera_findings, camera_mode_findings, lens_findings
+    for f in camera_findings(packet) + lens_findings(packet) + camera_mode_findings(packet):
         rep.warn(f["code"], f["message"], f["path"])
     from .voice import voice_findings
     for f in voice_findings(packet, bible):
