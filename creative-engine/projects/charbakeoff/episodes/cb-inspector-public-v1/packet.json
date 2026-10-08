@@ -1,7 +1,7 @@
 {
   "packet_version": "1.0",
   "packet_id": "CB-inspector-public-v1",
-  "status": "draft",
+  "status": "planning-ready; render unverified",
   "brief": {
     "brief_id": "CB1_intro_inspector-public-v1",
     "title": "Character bake-off intro: 12-second first public appearance of inspector-public-v1",
@@ -18,7 +18,9 @@
       "The bible rule must land inside 12 seconds; the signature gesture may be used once.",
       "Any dance or move is original and fully described; no trending dance or sound."
     ],
+    "production_format": {},
     "commercial": null,
+    "render_tier": "draft_mini",
     "negative_constraints": [
       "Do not copy any researched creator's look, catchphrase or footage.",
       "No readable brand text in frame.",
@@ -532,24 +534,22 @@
           "S3",
           "S4"
         ],
-        "model": "seedance_2_5",
+        "model": "seedance_2_0_mini",
         "routing": {
-          "why": "dialogue + identity lock: Seedance 2.5 omni_reference carries image + audio references (voice lock) with native audio",
+          "why": "<=15 s; identity refs supported; cheapest adequate (15 credits / 15 s / 720p quoted)",
           "status": "verified_controls",
-          "fallback": "seedance_2_0_mini for drafts; cinematic_studio_video_4_0 for premium look",
-          "optimisation": "480p draft -> finalize"
+          "fallback": "seedance_2_5 omni_reference if identity or physics fail on mini"
         },
         "controls": {
           "duration": 12,
           "aspect_ratio": "9:16",
           "resolution": "720p",
-          "generate_audio": true,
-          "mode": "omni_reference"
+          "generate_audio": true
         },
         "prompt_text": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. Speak ONLY the quoted lines, in English, lips still when no line is spoken.\n3. Props exist from frame one and never appear, disappear or change design: tiny clipboard on lanyard, bright circular inspection lamp on chest strap, small paper ticket stub (the cited fault), street bin, pen, ribbon of identical paper ticket stubs spilling from her flap pockets, bus stop bench, bus stop timetable board (unreadable, no text).\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger. Costume: Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun; plain charcoal trousers, flat black work shoes. Same costume for the whole episode.. Register: Stillness and procedure in a moving world: she announces findings to passers-by at normal volume while they walk through frame; comedy from disproportion and from being ignored, never from mugging.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S1 (0.0-3.0s) ---\nLocation: Bus stop with a timetable board (recurring bible location). Environment: Generic grey street bus stop, unreadable blank timetable board, steel bin, wooden bench behind her; blurred generic passers-by cross at mid-distance, never in focus and never reacting to her.\nAction: Frame one: the Inspector stands centre-left beside the blank timetable board, lamp lit on her chest, facing a single ticket stub on the pavement four centimetres from the steel bin. A blurred passer-by crosses behind. After one beat she gives one slow two-finger tap on the clipboard, then speaks.\nPerformance: Invested task: formally open a finding; goal is to get the stub on record, obstacle is the crowd walking through frame, tactic is stillness and procedure. Eyes stay on the stub, then lift to the passing blur. Micro-expression: Brows level; a faint settle of the glasses down the nose as she looks at the stub.\nCamera: medium-wide, eye level, slightly too formal framing, Inspector centre-left; lens feel 28mm-equivalent phone main camera, mild wide; movement Locked-off propped phone with a single small settle-wobble in the first half second, then still; rig phone propped on a low wall at eye level\nLighting: Soft overcast daylight key from camera-left above; cool grey fill from the sky; faint warm bounce off the sandstone pavement into the jacket underside; soft contact shadows under shoes and bin. Light stays constant for the whole clip.\nAudio: ambience real street ambience: distant traffic, footsteps, soft wind; foley: slow two-finger clipboard tap, exaggerated one notch, lamp hum-click as it settles, footsteps passing; no music\nDialogue (Inspector, on-camera): \"Finding one.\" - measured, bureaucratic, normal volume, aimed at passers-by\n--- S2 (3.0-6.0s) ---\nLocation: Bus stop with a timetable board (recurring bible location). Environment: Generic grey street bus stop, unreadable blank timetable board, steel bin, wooden bench behind her; blurred generic passers-by cross at mid-distance, never in focus and never reacting to her.\nAction: She raises the lamp and sweeps it onto the stub. A second blurred stranger crosses frame without a glance. She states the finding to them.\nPerformance: Invested task: pin the fault down for the record; obstacle is that nobody answers, tactic is to enunciate every word and measure the gap with two fingers held up. Micro-expression: Warm disappointment starts at the corners of her mouth, not anger.\nCamera: medium-wide, eye level, slightly too formal framing, Inspector centre-left; lens feel 28mm-equivalent phone main camera, mild wide; movement Locked-off, no move; rig phone propped on a low wall at eye level\nLighting: Soft overcast daylight key from camera-left above; cool grey fill from the sky; faint warm bounce off the sandstone pavement into the jacket underside; soft contact shadows under shoes and bin. Light stays constant for the whole clip.\nAudio: ambience real street ambience: distant traffic, footsteps, soft wind; foley: lamp click on, paper rustle of the stub in the breeze, clipboard knock on lanyard; no music\nDialogue (Inspector, on-camera): \"A stub. Four centimetres from the bin.\" - short declarative lines, slightly louder than the first\n--- S3 (6.0-9.0s) ---\nLocation: Bus stop with a timetable board (recurring bible location). Environment: Generic grey street bus stop, unreadable blank timetable board, steel bin, wooden bench behind her; blurred generic passers-by cross at mid-distance, never in focus and never reacting to her.\nAction: A third blurred passer-by walks through frame ignoring her. Louder, she gives the verdict, picks up the stub, bins it with ceremony and writes on the clipboard with a pen. Behind her, unseen by her, a first ticket stub slips from a flap pocket.\nPerformance: Invested task: carry out the sentence precisely; obstacle is the stub needing a formal reach, tactic is a stiff, correct posture while she bins and logs. Micro-expression: Brief satisfied press of the lips as the stub drops into the bin.\nCamera: medium-wide, eye level, slightly too formal framing, Inspector centre-left; lens feel 28mm-equivalent phone main camera, mild wide; movement Locked-off, no move; rig phone propped on a low wall at eye level\nLighting: Soft overcast daylight key from camera-left above; cool grey fill from the sky; faint warm bounce off the sandstone pavement into the jacket underside; soft contact shadows under shoes and bin. Light stays constant for the whole clip.\nAudio: ambience real street ambience: distant traffic, footsteps, soft wind; foley: stub drops into the bin with a hollow tick, pen scratch on the clipboard, lamp click off, pocket flap slap; no music\nDialogue (Inspector, on-camera): \"Litter. Noted. Filed.\" - verdict volume up one notch, crisp\n--- S4 (9.0-12.0s) ---\nLocation: Bus stop with a timetable board (recurring bible location). Environment: Generic grey street bus stop, unreadable blank timetable board, steel bin, wooden bench behind her; blurred generic passers-by cross at mid-distance, never in focus and never reacting to her.\nAction: She turns and walks out of frame-right satisfied. Behind her a ribbon of identical ticket stubs spills from her flap pockets and runs along the pavement back to the bench. The frame holds one beat on the trail after she leaves, then ends.\nPerformance: Invested task: leave the scene correct and orderly; she never looks down. The camera notices the trail before she does. Micro-expression: Calm, content half-nod; no glance back.\nCamera: medium-wide, eye level, frame holds on the trail after she exits frame-right; lens feel 28mm-equivalent phone main camera, mild wide; movement Locked-off, no move; hold on the empty frame with the trail; rig phone propped on a low wall at eye level\nLighting: Soft overcast daylight key from camera-left above; cool grey fill from the sky; faint warm bounce off the sandstone pavement into the jacket underside; soft contact shadows under shoes and bin. Light stays constant for the whole clip.\nAudio: ambience real street ambience: distant traffic, footsteps, soft wind; foley: two flat shoe steps receding, stubs fluttering and ticking on pavement, distant traffic swells; no music\nON-SCREEN TEXT: none (added in post).",
         "medias": [
           {
-            "value": "<media_id of approved character reference (asset char-inspector-v1)>",
+            "value": "<media_id or job_id of approved character reference (asset char-inspector-v1; candidate job 6dd8c02f-06db-4e61-a160-b2d7ebedecd0)>",
             "role": "image_references"
           },
           {
@@ -557,7 +557,7 @@
             "role": "image_references"
           },
           {
-            "value": "<media_id of approved voice asset voice-inspector-v1>",
+            "value": "<media_id of approved voice asset voice-ref>",
             "role": "audio_references"
           }
         ],
@@ -573,8 +573,8 @@
           "Lip-sync and exact SFX timing are not controllable; inspect output.",
           "Lens is prompt language only."
         ],
-        "estimated_credits": 84,
-        "estimated_credits_draft": 36,
+        "estimated_credits": 12,
+        "estimated_credits_draft": null,
         "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
       }
     ],
@@ -639,8 +639,56 @@
     ]
   },
   "qa": {
-    "deterministic": {},
-    "creative": {},
+    "deterministic": {
+      "ok": true,
+      "error_count": 0,
+      "warning_count": 2,
+      "findings": [
+        {
+          "code": "RIGHTS_UNRESOLVED",
+          "severity": "warning",
+          "message": "unresolved rights: ['inspector-public-v1 character reference (silhouette and identity anchors)', 'Inspector voice (measured bureaucratic cadence), asset_id not listed in bible', 'Bus stop location still, asset_id not listed in bible'] (acceptable while planning)",
+          "path": ""
+        },
+        {
+          "code": "FORMAT_REPEATS_RECENT",
+          "severity": "warning",
+          "message": "format pair ('single_take_static', 'on_camera_dialogue') already used in CB-uncle-verdict-v1 within the last 4 episodes",
+          "path": ""
+        }
+      ]
+    },
+    "creative": {
+      "scores": {
+        "originality": 3,
+        "hook": 4,
+        "coherence": 4,
+        "identity": 4,
+        "audiovisual": 4,
+        "feasibility": 3,
+        "grounding": 4,
+        "commercial_fit": 3
+      },
+      "evidence": {
+        "originality": "The hypocrite-inspector reveal (cites a fault, is the bigger offender) is a well-worn sitcom/sketch structure, and the premise itself admits it is the safe baseline; the specific 4 cm stub and pocket-ribbon trail are the only fresh touches.",
+        "hook": "Silhouette, lamp and a deadpan 'Finding one.' give a clear locked first frame, but the first 3s is a slow settle plus a wait-a-beat tap with no motion or surprise, and the real payoff only arrives at 9s, so the swipe-away window is exposed.",
+        "coherence": "Setup, procedure, verdict, reveal escalate cleanly with one rule and a plausible seeding at 6-9s (first stub slips from the pocket), though S3 is overloaded (verdict, pick up, bin, write, stub slip) and the trail 'running back to the bench where she began' conflicts with her starting by the timetable board.",
+        "identity": "Aubergine jacket, four flap pockets, chest lamp, clipboard, glasses and bun are repeated consistently and the dry bureaucratic voice stays constant, but the microexpression notes (warm disappointment, half-nod) are subtle and will not read at phone scale muted.",
+        "audiovisual": "Per-scene lighting, camera, foley and delivery cues are specific and continuous, with captions covering the muted case; however the closing caption '(She is the litter.)' explains the joke the image already lands, and the brief's final hold has no sound or music accent to punctuate it.",
+        "feasibility": "Single static 12s unit with zero cuts fits draft_mini, but a 4 cm stub gap, a two-finger tap, a pen write, a lamp toggle, three lines of lip-synced speech and a physically coherent ribbon of stubs spilling along the pavement is a lot of fine-detail action for a Mini model, and the stub and ribbon will likely be unreadable at medium-wide.",
+        "grounding": "Uses the bible's recurring bus-stop location, costume and signature tap exactly once, honours the no-readable-text and blurred-extras constraints, and the selected rationale accurately weighs P2 as runner-up.",
+        "commercial_fit": "The brief has no commercial and the packet correctly adds none; it serves the bake-off goal of legible energy, rule and silhouette and a 'this is you' share hook, but the next-one tease is not engineered into the ending beyond the held trail."
+      },
+      "weighted_total": 3.63,
+      "pass_thresholds": {
+        "character_intent": true,
+        "premise_specific_payoff": true,
+        "complete_direction": true,
+        "commercial_fit": true
+      },
+      "summary": "A competent, constraint-respecting and well-specified direction whose rule lands clearly via the pocket-trail reveal, but it is a familiar hypocrisy gag with a slow-starting hook. Execution risk is concentrated in the tiny-prop and ribbon-spill details that a draft_mini model may not render legibly.",
+      "top_fix": "Make the reveal render-safe and earlier: show the first stubs trailing from her pockets visibly in S2/S3 (not just a slip) and simplify the S3 action load, so the camera-notices-first gag reads at phone scale and the hook does not rely on a 9s payoff."
+    },
     "repetition": {
       "threshold": 0.35,
       "fields": {
@@ -649,12 +697,12 @@
           "closest_packet": "CB-uncle-verdict-v1"
         },
         "premise": {
-          "max_similarity": 0.0,
-          "closest_packet": null
+          "max_similarity": 0.026,
+          "closest_packet": "CB-captain-tempo-v1"
         },
         "payoff": {
-          "max_similarity": 0.0,
-          "closest_packet": null
+          "max_similarity": 0.02,
+          "closest_packet": "CB-captain-tempo-v1"
         },
         "surprise": {
           "max_similarity": 0.0,
@@ -669,16 +717,26 @@
           "closest_packet": null
         },
         "devices": {
-          "max_similarity": 0.073,
-          "closest_packet": "CB-uncle-verdict-v1"
+          "max_similarity": 0.091,
+          "closest_packet": "CB-captain-tempo-v1"
         }
       },
       "flagged_fields": [],
       "recurring_motifs": [
         {
+          "motif": "prop:white",
+          "episodes": 2,
+          "share": 0.67
+        },
+        {
+          "motif": "prop:small",
+          "episodes": 2,
+          "share": 0.67
+        },
+        {
           "motif": "format:single_take_static+on_camera_dialogue",
           "episodes": 2,
-          "share": 1.0
+          "share": 0.67
         }
       ],
       "verdict": "no-lexical-repetition-detected",
@@ -699,7 +757,7 @@
     }
   ],
   "provenance": {
-    "generated_at": "2026-10-08T05:58:31Z",
+    "generated_at": "2026-10-08T06:00:51Z",
     "provider": "broker",
     "requested_model": "sonnet",
     "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
@@ -746,6 +804,18 @@
         "provider": "broker",
         "latency_s": 0.0,
         "at": "2026-10-08T05:58:31Z"
+      },
+      {
+        "stage": "qa_review",
+        "attempt": 0,
+        "result": "ok",
+        "errors": 0,
+        "requested_model": "sonnet",
+        "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+        "usage": {},
+        "provider": "broker",
+        "latency_s": 0.0,
+        "at": "2026-10-08T05:59:30Z"
       }
     ],
     "repair_passes": 0,

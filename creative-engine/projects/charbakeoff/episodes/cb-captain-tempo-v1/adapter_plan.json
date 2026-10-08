@@ -1,0 +1,93 @@
+{
+  "adapter": "higgsfield-mcp/generate_video + generate_image",
+  "verified_on": "2026-10-07",
+  "units": [
+    {
+      "generation_unit": "U1",
+      "scene_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "model": "seedance_2_0_mini",
+      "routing": {
+        "why": "<=15 s; identity refs supported; cheapest adequate (15 credits / 15 s / 720p quoted)",
+        "status": "verified_controls",
+        "fallback": "seedance_2_5 omni_reference if identity or physics fail on mini"
+      },
+      "controls": {
+        "duration": 12,
+        "aspect_ratio": "9:16",
+        "resolution": "720p",
+        "generate_audio": true
+      },
+      "prompt_text": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. Speak ONLY the quoted lines, in English, lips still when no line is spoken.\n3. Props exist from frame one and never appear, disappear or change design: referee whistle on red cord, small handheld metronome clipped to waistband, white sweatband, pedestrian signal head showing red standing figure then green walking figure (pictograms only, no text), blurred generic pedestrians (extras).\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Lean weathered face, deep laugh lines, bright wide-set grey eyes, short silver hair cropped close at the sides and spiky on top, very mobile eyebrows, a wide gap-toothed grin. Costume: Glossy teal and gold tracksuit zipped to the chin, white sweatband, a referee whistle on a red cord, chunky white trainers, a small handheld metronome clipped to the waistband; glossy teal tracksuit trousers with a gold side stripe. Same outfit throughout the episode.. Register: Big, physical, loud, breathless, joyful; arms conduct, legs bounce, the whistle blows; the comedy is total commitment to a pointless job plus the world's indifference.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S1 (0.0-3.0s) ---\nLocation: Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her. Environment: Busy junction, grey tarmac and kerb, a stream of generic pedestrians as soft blurred shapes with no faces readable, distant traffic out of focus, no readable signs, logos or text.\nAction: Wide, slightly low across the road: Captain Tempo stands at the kerb towering over a blurred grey stream of pedestrians, both arms raised like a conductor about to cue an orchestra, red standing figure glowing on the signal behind her. Her raised arms slam down on the beat as she bellows THREE and the handheld camera starts its slow push-in.\nPerformance: Invested task: set the downbeat for the entire crossing; she stares down the blurred crowd, hunting for any sign they are following her tempo, and sharpens her baton arms when they ignore it. Micro-expression: Eyebrows shoot up on the downbeat, then lock into a stern conductor's frown.\nCamera: wide, slightly low angle, full body head to trainers; lens feel phone main camera feel, wide (about 24mm equivalent); movement slow handheld push-in begins, gentle bob, camera noticing her before she notices it; rig handheld phone, operator walking slowly forward from across the road\nLighting: Overcast daylight key from high camera-left, soft; fill from the open grey sky; warm gold bounce off her tracksuit stripe onto her jaw and forearms and teal bounce onto the pavement beside her; soft contact shadows under her trainers and each pedestrian. Light stays constant, no clouds breaking.\nAudio: ambience real junction traffic, footsteps and crowd murmur, idling engines; foley: metronome tick on the waistband, tracksuit fabric swish as arms drop, trainer scuff on kerb, whistle cord swinging; no music\nDialogue (Captain Tempo, on-camera): \"THREE!\" - hoarse booming shout on the downbeat, rhythmic\n--- S2 (3.0-6.0s) ---\nLocation: Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her. Environment: Busy junction, grey tarmac and kerb, a stream of generic pedestrians as soft blurred shapes with no faces readable, distant traffic out of focus, no readable signs, logos or text.\nAction: Push-in continues. Her arms conduct harder, left hand chopping time, right hand circling; legs bounce on the spot. On TWO she clamps the whistle in her teeth and blasts it, then spits it out into a roar of ONE, knees bending, torso leaning toward camera as the lens closes in.\nPerformance: Invested task: wind the whole street up to a single instant; she drives each number into the crowd with her entire body and checks the red figure over her shoulder with a flick of the eyes between counts. Micro-expression: Eyes widen on the whistle blast, cheeks puff, a quick sideways glance at the signal.\nCamera: wide, low angle, tightening to knees-up as the push-in closes; lens feel phone main camera feel, wide (about 24mm equivalent); movement continuing slow low-angle handheld push-in, bob grows slightly with her bounce; rig handheld phone, operator walking slowly forward from across the road\nLighting: Overcast daylight key from high camera-left, soft; fill from the open grey sky; warm gold bounce off her tracksuit stripe onto her jaw and forearms and teal bounce onto the pavement beside her; soft contact shadows under her trainers and each pedestrian. Light stays constant, no clouds breaking.\nAudio: ambience real junction traffic, footsteps and crowd murmur, idling engines; foley: sharp referee whistle blast, metronome rattling with her bounce, trainer slaps on pavement, tracksuit swish; no music\nDialogue (Captain Tempo, on-camera): \"TWO!\" - louder, whistle blast right after\nDialogue (Captain Tempo, on-camera): \"ONE!\" - roaring, breathless, almost a bark\n--- S3 (6.0-9.0s) ---\nLocation: Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her. Environment: Busy junction, grey tarmac and kerb, a stream of generic pedestrians as soft blurred shapes with no faces readable, distant traffic out of focus, no readable signs, logos or text.\nAction: On AND she freezes, arms raised, and the signal behind her flips from red standing figure to green walking figure exactly on its own timer. She detonates the Tempo Stomp: two stomps of her white trainers, a hip swing, one whistle blast, both fists thrust to the sky. The blurred crowd begins crossing without looking at her.\nPerformance: Invested task: claim the change of light as her own work; she holds the instant of the flip with total certainty, then spends every limb on the celebration to sell that she caused it. Micro-expression: Gap-toothed grin explodes wide, eyebrows lifting skyward with the fists.\nCamera: wide, low angle, full body, towering silhouette against grey sky; lens feel phone main camera feel, wide (about 24mm equivalent); movement low-angle handheld push-in slows to a settle as she peaks, one small wobble on the stomp impact; rig handheld phone, operator walking slowly forward from across the road\nLighting: Overcast daylight key from high camera-left, soft; fill from the open grey sky; warm gold bounce off her tracksuit stripe onto her jaw and forearms and teal bounce onto the pavement beside her; soft contact shadows under her trainers and each pedestrian. Light stays constant, no clouds breaking.\nAudio: ambience real junction traffic, footsteps and crowd murmur, idling engines; foley: two heavy trainer stomps, tracksuit swish on hip swing, whistle blast, metronome clack, green-signal beep tone, generic and unlabelled; no music\nDialogue (Captain Tempo, on-camera): \"AND!\" - one explosive shout, held, joyful\n--- S4 (9.0-12.0s) ---\nLocation: Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her. Environment: Busy junction, grey tarmac and kerb, a stream of generic pedestrians as soft blurred shapes with no faces readable, distant traffic out of focus, no readable signs, logos or text.\nAction: Fists still in the air, Captain Tempo holds her frozen victory pose, beaming, whistle in her teeth. A single blurred commuter in a dark coat walks calmly through the frame between her raised fists and the camera, hair-width from her, never looking over. The camera lingers one beat too long on her unblinking triumphant face, then rests, still held.\nPerformance: Invested task: soak up the applause nobody is giving; she scans the crowd for acknowledgement, finds none, and refuses to drop the pose. Micro-expression: Proud grin holds, one eyebrow twitches up as the commuter passes, eyes stay locked on camera.\nCamera: wide settling to medium-wide, low angle, full figure held; lens feel phone main camera feel, wide (about 24mm equivalent); movement camera settles into a final held framing with a small handheld breathe, no cut; rig handheld phone, operator walking slowly forward from across the road\nLighting: Overcast daylight key from high camera-left, soft; fill from the open grey sky; warm gold bounce off her tracksuit stripe onto her jaw and forearms and teal bounce onto the pavement beside her; soft contact shadows under her trainers and each pedestrian. Light stays constant, no clouds breaking.\nAudio: ambience real junction traffic, footsteps and crowd murmur, idling engines; foley: commuter footsteps passing, fabric brush of the passing coat, distant traffic, one last metronome tick; no music\nON-SCREEN TEXT: none (added in post).",
+      "medias": [
+        {
+          "value": "<media_id or job_id of approved character reference (asset char-captain-tempo-v1; candidate job 5706fd02-b2bb-4923-a879-ee8c5a571529)>",
+          "role": "image_references"
+        },
+        {
+          "value": "<media_id of approved location still>",
+          "role": "image_references"
+        },
+        {
+          "value": "<media_id of approved voice asset voice-ref>",
+          "role": "audio_references"
+        }
+      ],
+      "manual_steps": [
+        "Upload approved reference stills via media_upload (owner action; upload requires approval).",
+        "Burn captions/on-screen text in edit.",
+        "Add licensed music in edit if any.",
+        "Assemble generation units with hard cuts in edit; verify total duration and loop.",
+        "Run get_cost:true preflight and record quote before any submit; submit only after render_approved and credit_cap."
+      ],
+      "gaps": [
+        "No fps/container control; inspect exported file.",
+        "Lip-sync and exact SFX timing are not controllable; inspect output.",
+        "Lens is prompt language only."
+      ],
+      "estimated_credits": 12,
+      "estimated_credits_draft": null,
+      "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
+    }
+  ],
+  "asset_requests": [
+    {
+      "asset_id": "char-captain-tempo-v1",
+      "kind": "character_reference",
+      "model": "nano_banana_pro",
+      "controls": {
+        "resolution": "2k",
+        "aspect_ratio": "16:9"
+      },
+      "why": "split-screen character sheet per Higgsfield character-sheet workflow (photoreal-unretouched preset); 16:9 for split-screen",
+      "status": "verified_controls",
+      "alternatives": [
+        "nano_banana_2_1 (NB 2.1: image+video refs, inpaint - to be tested)",
+        "soul_2 / soul_cast (Higgsfield identity models; different pipeline)"
+      ],
+      "prompt_text": "Split-screen character sheet composition, left side a full-body shot of the character standing upright in a neutral straight standing pose facing the camera with both feet flat on the ground and arms relaxed at the sides, full head-to-toe framing with the whole body and both feet visible, right side a tight close-up chest-up portrait of the same character, identical original female character on both sides, single subject only exactly one person with only the character in frame, pure white seamless studio background, professional character sheet presentation, adult woman aged 58-65, Lean weathered face, deep laugh lines, bright wide-set grey eyes, short silver hair cropped close at the sides and spiky on top, very mobile eyebrows, a wide gap-toothed grin., mature adult bone structure and facial proportions, not a youthful rounded babyface, naturally muted catchlights, no oversized specular glare in the iris, eye color muted rather than glowing, short silver hair cropped close at the sides and spiky on top, matte, visible fine skin texture with natural pores, fine lines, subtle asymmetries and texture irregularities, natural minimal grooming, slight natural sheen rather than glossy retouched finish, no digital smoothing, no beauty filter, no AI-airbrushed look, matte-to-natural complexion, balanced natural proportions, wearing Glossy teal and gold tracksuit zipped to the chin, white sweatband, a referee whistle on a red cord, chunky white trainers, a small handheld metronome clipped to the waistband., glossy teal tracksuit trousers with a gold side stripe, chunky white trainers, no jewellery, no bag, natural anatomy, high-end but unretouched commercial photography style, soft diffused studio lighting without harsh reflections, cinematic realism, clean white background, 4K quality, sharp focus on skin texture detail, single subject only, exactly one person, only the character in frame, no other people, no duplicate figures, no mannequin, no reflections, no props other than items worn or carried in the described silhouette, no furniture, no background objects, empty seamless studio, left panel standing full-body head-to-toe not cropped not sitting, right panel tight close-up not full body, no text, no watermark, no logos, no frame borders, no babyface, no plastic skin, original character that does not resemble any real person or existing copyrighted character",
+      "reuse": "approved once, reused every episode (continuity_reuse.costume=same unless bumped)"
+    },
+    {
+      "asset_id": "loc-pedestrian-crossing-at-a-busy-",
+      "kind": "location_still",
+      "model": "nano_banana_pro",
+      "controls": {
+        "resolution": "2k",
+        "aspect_ratio": "9:16"
+      },
+      "why": "empty lived-in location, no people, planned key light; reused across episodes for a consistent world",
+      "status": "verified_controls",
+      "alternatives": [
+        "cinematic_studio_2_5 for dramatic establishing stills"
+      ],
+      "prompt_text": "Authentic candid iPhone photo of an empty pedestrian crossing at a busy junction location still (same location), no people, lived-in not staged, casual slightly imperfect framing, eye level, Handheld phone, wide, slightly low angle so she towers; saturated teal and gold against grey city; strangers as a blurred, indifferent stream., soft window daylight from one side already planned as the key light for a later video, mild HDR, true-to-life colors, subtle sensor grain, no retouching, no readable text, no brands, no logos, vertical 9:16 composition with calm upper third for captions",
+      "reuse": "approved once per recurring location; continuity_reuse.location=same reuses it"
+    }
+  ],
+  "notes": "DRY RUN. No job submitted. prompt_text is free text, the only creative payload the tool accepts; internal JSON is not a native format. Field map: scene.action->prompt_text; scene.performance->prompt_text; scene.microexpression->prompt_text; scene.camera.shot->prompt_text; scene.camera.lens->prompt_text; scene.camera.movement->prompt_text; scene.lighting->prompt_text; scene.environment->prompt_text; scene.sound.ambience->native+prompt_text; scene.sound.music->manual; scene.dialogue->prompt_text; scene.captions->manual; scene.transition_out->manual; scene.cuts_inside_clip->prompt_text; continuity.identity_anchors->native+prompt_text; duration->native; aspect_ratio->native; resolution->native; export.fps->gap; export.container->gap; disclosure->manual"
+}

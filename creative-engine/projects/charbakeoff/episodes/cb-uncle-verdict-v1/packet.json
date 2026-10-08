@@ -1,7 +1,7 @@
 {
   "packet_version": "1.0",
   "packet_id": "CB-uncle-verdict-v1",
-  "status": "draft",
+  "status": "planning-ready; render unverified",
   "brief": {
     "brief_id": "CB1_intro_uncle-verdict-v1",
     "title": "Character bake-off intro: 12-second first public appearance of uncle-verdict-v1",
@@ -18,7 +18,9 @@
       "The bible rule must land inside 12 seconds; the signature gesture may be used once.",
       "Any dance or move is original and fully described; no trending dance or sound."
     ],
+    "production_format": {},
     "commercial": null,
+    "render_tier": "draft_mini",
     "negative_constraints": [
       "Do not copy any researched creator's look, catchphrase or footage.",
       "No readable brand text in frame.",
@@ -27,8 +29,8 @@
   },
   "bible_version": {
     "bible_id": "uncle-verdict-v1",
-    "version": 1,
-    "sha256": "ec5b4c7b9a986ed6d83ba28bb90bbb5ae8207787e9a9a236a67873e8925a68c0"
+    "version": 2,
+    "sha256": "a61f761a27c42b7651472983137e6c5ed600ae5b208b56aefa8e95de49889228"
   },
   "evidence": [
     {
@@ -48,6 +50,12 @@
       "kind": "hypothesis",
       "source": "bible contains no approved_assets list",
       "confidence": "low"
+    },
+    {
+      "claim": "asset 'uncle-verdict-v1/character_reference' declared owned but registry status is generated_pending_owner_approval; downgraded to unresolved",
+      "kind": "fact",
+      "source": "bible.approved_assets",
+      "confidence": "high"
     }
   ],
   "premises": [
@@ -461,7 +469,7 @@
       "asset": "uncle-verdict-v1/character_reference",
       "kind": "character_reference",
       "source": "original character, bible uncle-verdict-v1",
-      "rights_status": "owned",
+      "rights_status": "unresolved",
       "scope": "bake-off test render; name/IP uncleared"
     }
   ],
@@ -476,24 +484,22 @@
           "S2",
           "S3"
         ],
-        "model": "seedance_2_5",
+        "model": "seedance_2_0_mini",
         "routing": {
-          "why": "dialogue + identity lock: Seedance 2.5 omni_reference carries image + audio references (voice lock) with native audio",
+          "why": "<=15 s; identity refs supported; cheapest adequate (15 credits / 15 s / 720p quoted)",
           "status": "verified_controls",
-          "fallback": "seedance_2_0_mini for drafts; cinematic_studio_video_4_0 for premium look",
-          "optimisation": "480p draft -> finalize"
+          "fallback": "seedance_2_5 omni_reference if identity or physics fail on mini"
         },
         "controls": {
           "duration": 12,
           "aspect_ratio": "9:16",
           "resolution": "720p",
-          "generate_audio": true,
-          "mode": "omni_reference"
+          "generate_audio": true
         },
         "prompt_text": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. Speak ONLY the quoted lines, in English, lips still when no line is spoken.\n3. Props exist from frame one and never appear, disappear or change design: white folding plastic garden chair, large wooden scoring paddle with a 0-10 dial, closed plain umbrella (no logo) across his knees, passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure), rain (top edge, then falling), grey corner-shop wall with blank unreadable shutter.\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Round soft face, heavy-lidded calm eyes, neat salt-and-pepper beard trimmed short, bald shining crown with a ring of grey hair, slow blink, serene half-smile that never changes. Costume: Mustard-yellow three-piece suit slightly too big, open collar, brown leather loafers with no socks, mustard trousers slightly too long; same costume all episode, no changes.. Register: Seated stillness and calm; the loudness is in the opinion, not the voice; comedy from the gap between certainty and evidence; invites the viewer to argue.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S1 (0.0-6.0s) ---\nLocation: outside a corner shop on a pavement (generic, unrecognisable). Environment: Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.\nAction: Locked portrait. Uncle Verdict sits on the white chair, paddle upright on his thigh with the dial at 2, closed umbrella across his knees, a thin grey rain edge at the top of frame. He lifts the paddle slightly so the 2 reads, and delivers the verdict.\nPerformance: Invested task: present the verdict like a judge reading a ruling, eyes steady on the lens, finger resting on the dial. Micro-expression: One slow blink on 'ten'; the half-smile does not change.\nCamera: medium portrait, centred, seated eye level, 9:16; lens feel phone main lens, about 26mm equivalent; movement propped phone with one small settle-wobble in the first second, then locked; rig phone propped on a low crate at seated eye level\nLighting: Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.\nAudio: ambience quiet street ambience, distant traffic, faint wind; foley: wooden paddle tapping thigh, suit fabric rustle, umbrella canvas shift, exaggerated dial click; no music\nDialogue (Uncle Verdict, on-camera): \"Umbrella. Two out of ten. Correct answer: a tiny roof for nobody.\" - slow, warm, certain; never raises his voice; short pauses after each sentence\n--- S2 (6.0-9.0s) ---\nLocation: outside a corner shop on a pavement (generic, unrecognisable). Environment: Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.\nAction: First drops land on the paddle wood and then on his bald crown. From the right frame edge a generic passer-by's open plain umbrella slides through, dry underneath. He does not move, shelter or blink.\nPerformance: Invested task: hold his verdict against the weather, eyes fixed on the lens, refusing to glance at the sky. Micro-expression: Drop runs down his forehead; the half-smile and heavy-lidded calm do not change.\nCamera: medium portrait, centred, seated eye level, 9:16; lens feel phone main lens, about 26mm equivalent; movement propped phone, locked, no move; rig phone propped on a low crate at seated eye level\nLighting: Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.\nAudio: ambience street ambience as light rain begins, patter on pavement; foley: rain drops on wood, drops on skin, passing umbrella canopy whoosh, soft footstep; no music\n--- S3 (9.0-12.0s) ---\nLocation: outside a corner shop on a pavement (generic, unrecognisable). Environment: Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.\nAction: He turns the dial with one finger from 2 down to 1 (exaggerated click), holds the paddle up to the lens showing 1, rain pouring, umbrella gone from frame, and says the final word. Holds the pose on the last frame.\nPerformance: Invested task: correct the dial and present it with total certainty, finger steady, eyes on the lens. Micro-expression: Slow blink after the word; rain on the crown, serenity unchanged.\nCamera: medium portrait, centred, seated eye level, 9:16; lens feel phone main lens, about 26mm equivalent; movement propped phone, locked, paddle comes toward lens; no move; rig phone propped on a low crate at seated eye level\nLighting: Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.\nAudio: ambience steady rain on pavement, distant traffic; foley: exaggerated dial click, rain on paddle, suit rustle, umbrella canvas drip; no music\nDialogue (Uncle Verdict, on-camera): \"Final.\" - one soft, unhurried word, certain\nON-SCREEN TEXT: none (added in post).",
         "medias": [
           {
-            "value": "<media_id of approved character reference (asset char-inspector-v1)>",
+            "value": "<media_id or job_id of approved character reference (asset char-uncle-verdict-v1; candidate job cb1f3458-a537-48af-950d-c42de75a4b28)>",
             "role": "image_references"
           },
           {
@@ -501,7 +507,7 @@
             "role": "image_references"
           },
           {
-            "value": "<media_id of approved voice asset voice-inspector-v1>",
+            "value": "<media_id of approved voice asset voice-ref>",
             "role": "audio_references"
           }
         ],
@@ -517,8 +523,8 @@
           "Lip-sync and exact SFX timing are not controllable; inspect output.",
           "Lens is prompt language only."
         ],
-        "estimated_credits": 84,
-        "estimated_credits_draft": 36,
+        "estimated_credits": 12,
+        "estimated_credits_draft": null,
         "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
       }
     ],
@@ -540,7 +546,7 @@
         "reuse": "approved once per recurring location; continuity_reuse.location=same reuses it"
       },
       {
-        "asset_id": "char-ref",
+        "asset_id": "char-uncle-verdict-v1",
         "kind": "character_reference",
         "model": "nano_banana_pro",
         "controls": {
@@ -584,42 +590,106 @@
     ]
   },
   "qa": {
-    "deterministic": {},
-    "creative": {},
+    "deterministic": {
+      "ok": true,
+      "error_count": 0,
+      "warning_count": 2,
+      "findings": [
+        {
+          "code": "RIGHTS_UNRESOLVED",
+          "severity": "warning",
+          "message": "unresolved rights: ['uncle-verdict-v1/voice', 'uncle-verdict-v1/location_still_corner_shop', 'uncle-verdict-v1/character_reference'] (acceptable while planning)",
+          "path": ""
+        },
+        {
+          "code": "FORMAT_REPEATS_RECENT",
+          "severity": "warning",
+          "message": "format pair ('single_take_static', 'on_camera_dialogue') already used in CB-inspector-public-v1 within the last 4 episodes",
+          "path": ""
+        }
+      ]
+    },
+    "creative": {
+      "scores": {
+        "originality": 3,
+        "hook": 4,
+        "coherence": 4,
+        "identity": 4,
+        "audiovisual": 4,
+        "feasibility": 3,
+        "grounding": 3,
+        "commercial_fit": 3
+      },
+      "evidence": {
+        "originality": "A confident wrong rating contradicted by the scene is a familiar deadpan-reviewer structure, and the 2-to-1 dial drop is a mild twist, though the unmoved man in the rain gives it some freshness.",
+        "hook": "Frame one shows the mustard suit, white chair, paddle at 2, closed umbrella and rain edge, so the claim and the coming contradiction read muted, but the first 6 s is a long spoken line with little visual movement.",
+        "coherence": "Claim, rain, passing dry umbrella, dial to 1, and 'Final.' escalate cleanly and pay off the logline, but the 2-to-1 drop is a small, easy-to-miss change and the unopened umbrella on his knees is never stated as the joke.",
+        "identity": "Silhouette, face, costume and the unchanged half-smile are specified consistently across all three scenes and make a distinct, repeatable character, with serenity-in-rain doing real character work.",
+        "audiovisual": "Lighting, foley, ambience, dial click and caption beats are specified per scene and match the action, though the dialogue is dense for the available time and the final hold plus 'Final.' leaves little room to breathe.",
+        "feasibility": "One locked unit with no cuts is cost-appropriate, but rain building on the head, a dry passer-by umbrella entering at the edge, a readable dial turn 2 to 1 and lip-synced speech in one Mini render are high risk for artifacts and wrong dial digits.",
+        "grounding": "Location, props and costume follow the stated bible and the negative constraints are respected, but the passer-by's open umbrella is listed as a prop from frame one while the scene says slabs are damp-free, and the bible rule itself is not quoted so the link is asserted rather than shown.",
+        "commercial_fit": "It is brand-safe and shareable, with a clear comment prompt in the CTA, but there is no commercial angle and the argue-in-comments hook rests on a mild, low-stakes take about umbrellas."
+      },
+      "weighted_total": 3.55,
+      "pass_thresholds": {
+        "character_intent": true,
+        "premise_specific_payoff": true,
+        "complete_direction": true,
+        "commercial_fit": true
+      },
+      "summary": "A clean, well-specified single-take introduction with a strong readable silhouette and a payoff tied to its premise, but the joke is gentle and the dial change is small. The render risks are real: lip sync, a readable 1, and a stranger's umbrella entering on cue in one cheap unit.",
+      "top_fix": "Make the contradiction land harder and more legibly in the first seconds: have the dry umbrella and first drops arrive earlier (about 4 s) and make the dial drop large and unmistakable (for example from 2 to 0) so the wrong-direction joke survives muted and a failed digit render."
+    },
     "repetition": {
       "threshold": 0.35,
       "fields": {
         "hook": {
-          "max_similarity": 0.0,
-          "closest_packet": null
+          "max_similarity": 0.045,
+          "closest_packet": "CB-inspector-public-v1"
         },
         "premise": {
           "max_similarity": 0.0,
           "closest_packet": null
         },
         "payoff": {
-          "max_similarity": 0.0,
-          "closest_packet": null
+          "max_similarity": 0.016,
+          "closest_packet": "CB-captain-tempo-v1"
         },
         "surprise": {
-          "max_similarity": 0.0,
-          "closest_packet": null
+          "max_similarity": 0.022,
+          "closest_packet": "CB-captain-tempo-v1"
         },
         "shots": {
-          "max_similarity": 0.0,
-          "closest_packet": null
+          "max_similarity": 0.077,
+          "closest_packet": "CB-inspector-public-v1"
         },
         "pitch": {
           "max_similarity": 0.0,
           "closest_packet": null
         },
         "devices": {
-          "max_similarity": 0.0,
-          "closest_packet": null
+          "max_similarity": 0.096,
+          "closest_packet": "CB-captain-tempo-v1"
         }
       },
       "flagged_fields": [],
-      "recurring_motifs": [],
+      "recurring_motifs": [
+        {
+          "motif": "prop:small",
+          "episodes": 2,
+          "share": 0.67
+        },
+        {
+          "motif": "prop:white",
+          "episodes": 2,
+          "share": 0.67
+        },
+        {
+          "motif": "format:single_take_static+on_camera_dialogue",
+          "episodes": 2,
+          "share": 0.67
+        }
+      ],
       "verdict": "no-lexical-repetition-detected",
       "note": "Lexical similarity only; a reviewer must judge whether flagged overlap is identity (allowed) or a repeated joke/plot/device (not). 'devices' covers hook mechanism, props, lighting language, off-camera-voice use and the surprise device."
     },
@@ -638,7 +708,7 @@
     }
   ],
   "provenance": {
-    "generated_at": "2026-10-08T05:58:19Z",
+    "generated_at": "2026-10-08T06:00:51Z",
     "provider": "broker",
     "requested_model": "sonnet",
     "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
@@ -685,6 +755,18 @@
         "provider": "broker",
         "latency_s": 0.0,
         "at": "2026-10-08T05:58:19Z"
+      },
+      {
+        "stage": "qa_review",
+        "attempt": 0,
+        "result": "ok",
+        "errors": 0,
+        "requested_model": "sonnet",
+        "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+        "usage": {},
+        "provider": "broker",
+        "latency_s": 0.0,
+        "at": "2026-10-08T05:59:18Z"
       }
     ],
     "repair_passes": 0,

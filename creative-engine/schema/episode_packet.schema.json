@@ -130,6 +130,10 @@
               "type": "string"
             }
           }
+        },
+        "render_tier": {
+          "type": "string",
+          "description": "Optional cost tier requested by the brief: draft_mini routes every <=15 s unit to Seedance 2.0 Mini for a cost-capped test render."
         }
       }
     },

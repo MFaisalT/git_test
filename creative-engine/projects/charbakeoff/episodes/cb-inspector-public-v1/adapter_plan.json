@@ -1,0 +1,93 @@
+{
+  "adapter": "higgsfield-mcp/generate_video + generate_image",
+  "verified_on": "2026-10-07",
+  "units": [
+    {
+      "generation_unit": "U1",
+      "scene_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "model": "seedance_2_0_mini",
+      "routing": {
+        "why": "<=15 s; identity refs supported; cheapest adequate (15 credits / 15 s / 720p quoted)",
+        "status": "verified_controls",
+        "fallback": "seedance_2_5 omni_reference if identity or physics fail on mini"
+      },
+      "controls": {
+        "duration": 12,
+        "aspect_ratio": "9:16",
+        "resolution": "720p",
+        "generate_audio": true
+      },
+      "prompt_text": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. Speak ONLY the quoted lines, in English, lips still when no line is spoken.\n3. Props exist from frame one and never appear, disappear or change design: tiny clipboard on lanyard, bright circular inspection lamp on chest strap, small paper ticket stub (the cited fault), street bin, pen, ribbon of identical paper ticket stubs spilling from her flap pockets, bus stop bench, bus stop timetable board (unreadable, no text).\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger. Costume: Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun; plain charcoal trousers, flat black work shoes. Same costume for the whole episode.. Register: Stillness and procedure in a moving world: she announces findings to passers-by at normal volume while they walk through frame; comedy from disproportion and from being ignored, never from mugging.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S1 (0.0-3.0s) ---\nLocation: Bus stop with a timetable board (recurring bible location). Environment: Generic grey street bus stop, unreadable blank timetable board, steel bin, wooden bench behind her; blurred generic passers-by cross at mid-distance, never in focus and never reacting to her.\nAction: Frame one: the Inspector stands centre-left beside the blank timetable board, lamp lit on her chest, facing a single ticket stub on the pavement four centimetres from the steel bin. A blurred passer-by crosses behind. After one beat she gives one slow two-finger tap on the clipboard, then speaks.\nPerformance: Invested task: formally open a finding; goal is to get the stub on record, obstacle is the crowd walking through frame, tactic is stillness and procedure. Eyes stay on the stub, then lift to the passing blur. Micro-expression: Brows level; a faint settle of the glasses down the nose as she looks at the stub.\nCamera: medium-wide, eye level, slightly too formal framing, Inspector centre-left; lens feel 28mm-equivalent phone main camera, mild wide; movement Locked-off propped phone with a single small settle-wobble in the first half second, then still; rig phone propped on a low wall at eye level\nLighting: Soft overcast daylight key from camera-left above; cool grey fill from the sky; faint warm bounce off the sandstone pavement into the jacket underside; soft contact shadows under shoes and bin. Light stays constant for the whole clip.\nAudio: ambience real street ambience: distant traffic, footsteps, soft wind; foley: slow two-finger clipboard tap, exaggerated one notch, lamp hum-click as it settles, footsteps passing; no music\nDialogue (Inspector, on-camera): \"Finding one.\" - measured, bureaucratic, normal volume, aimed at passers-by\n--- S2 (3.0-6.0s) ---\nLocation: Bus stop with a timetable board (recurring bible location). Environment: Generic grey street bus stop, unreadable blank timetable board, steel bin, wooden bench behind her; blurred generic passers-by cross at mid-distance, never in focus and never reacting to her.\nAction: She raises the lamp and sweeps it onto the stub. A second blurred stranger crosses frame without a glance. She states the finding to them.\nPerformance: Invested task: pin the fault down for the record; obstacle is that nobody answers, tactic is to enunciate every word and measure the gap with two fingers held up. Micro-expression: Warm disappointment starts at the corners of her mouth, not anger.\nCamera: medium-wide, eye level, slightly too formal framing, Inspector centre-left; lens feel 28mm-equivalent phone main camera, mild wide; movement Locked-off, no move; rig phone propped on a low wall at eye level\nLighting: Soft overcast daylight key from camera-left above; cool grey fill from the sky; faint warm bounce off the sandstone pavement into the jacket underside; soft contact shadows under shoes and bin. Light stays constant for the whole clip.\nAudio: ambience real street ambience: distant traffic, footsteps, soft wind; foley: lamp click on, paper rustle of the stub in the breeze, clipboard knock on lanyard; no music\nDialogue (Inspector, on-camera): \"A stub. Four centimetres from the bin.\" - short declarative lines, slightly louder than the first\n--- S3 (6.0-9.0s) ---\nLocation: Bus stop with a timetable board (recurring bible location). Environment: Generic grey street bus stop, unreadable blank timetable board, steel bin, wooden bench behind her; blurred generic passers-by cross at mid-distance, never in focus and never reacting to her.\nAction: A third blurred passer-by walks through frame ignoring her. Louder, she gives the verdict, picks up the stub, bins it with ceremony and writes on the clipboard with a pen. Behind her, unseen by her, a first ticket stub slips from a flap pocket.\nPerformance: Invested task: carry out the sentence precisely; obstacle is the stub needing a formal reach, tactic is a stiff, correct posture while she bins and logs. Micro-expression: Brief satisfied press of the lips as the stub drops into the bin.\nCamera: medium-wide, eye level, slightly too formal framing, Inspector centre-left; lens feel 28mm-equivalent phone main camera, mild wide; movement Locked-off, no move; rig phone propped on a low wall at eye level\nLighting: Soft overcast daylight key from camera-left above; cool grey fill from the sky; faint warm bounce off the sandstone pavement into the jacket underside; soft contact shadows under shoes and bin. Light stays constant for the whole clip.\nAudio: ambience real street ambience: distant traffic, footsteps, soft wind; foley: stub drops into the bin with a hollow tick, pen scratch on the clipboard, lamp click off, pocket flap slap; no music\nDialogue (Inspector, on-camera): \"Litter. Noted. Filed.\" - verdict volume up one notch, crisp\n--- S4 (9.0-12.0s) ---\nLocation: Bus stop with a timetable board (recurring bible location). Environment: Generic grey street bus stop, unreadable blank timetable board, steel bin, wooden bench behind her; blurred generic passers-by cross at mid-distance, never in focus and never reacting to her.\nAction: She turns and walks out of frame-right satisfied. Behind her a ribbon of identical ticket stubs spills from her flap pockets and runs along the pavement back to the bench. The frame holds one beat on the trail after she leaves, then ends.\nPerformance: Invested task: leave the scene correct and orderly; she never looks down. The camera notices the trail before she does. Micro-expression: Calm, content half-nod; no glance back.\nCamera: medium-wide, eye level, frame holds on the trail after she exits frame-right; lens feel 28mm-equivalent phone main camera, mild wide; movement Locked-off, no move; hold on the empty frame with the trail; rig phone propped on a low wall at eye level\nLighting: Soft overcast daylight key from camera-left above; cool grey fill from the sky; faint warm bounce off the sandstone pavement into the jacket underside; soft contact shadows under shoes and bin. Light stays constant for the whole clip.\nAudio: ambience real street ambience: distant traffic, footsteps, soft wind; foley: two flat shoe steps receding, stubs fluttering and ticking on pavement, distant traffic swells; no music\nON-SCREEN TEXT: none (added in post).",
+      "medias": [
+        {
+          "value": "<media_id or job_id of approved character reference (asset char-inspector-v1; candidate job 6dd8c02f-06db-4e61-a160-b2d7ebedecd0)>",
+          "role": "image_references"
+        },
+        {
+          "value": "<media_id of approved location still>",
+          "role": "image_references"
+        },
+        {
+          "value": "<media_id of approved voice asset voice-ref>",
+          "role": "audio_references"
+        }
+      ],
+      "manual_steps": [
+        "Upload approved reference stills via media_upload (owner action; upload requires approval).",
+        "Burn captions/on-screen text in edit.",
+        "Add licensed music in edit if any.",
+        "Assemble generation units with hard cuts in edit; verify total duration and loop.",
+        "Run get_cost:true preflight and record quote before any submit; submit only after render_approved and credit_cap."
+      ],
+      "gaps": [
+        "No fps/container control; inspect exported file.",
+        "Lip-sync and exact SFX timing are not controllable; inspect output.",
+        "Lens is prompt language only."
+      ],
+      "estimated_credits": 12,
+      "estimated_credits_draft": null,
+      "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
+    }
+  ],
+  "asset_requests": [
+    {
+      "asset_id": "char-inspector-v1",
+      "kind": "character_reference",
+      "model": "nano_banana_pro",
+      "controls": {
+        "resolution": "2k",
+        "aspect_ratio": "16:9"
+      },
+      "why": "split-screen character sheet per Higgsfield character-sheet workflow (photoreal-unretouched preset); 16:9 for split-screen",
+      "status": "verified_controls",
+      "alternatives": [
+        "nano_banana_2_1 (NB 2.1: image+video refs, inpaint - to be tested)",
+        "soul_2 / soul_cast (Higgsfield identity models; different pipeline)"
+      ],
+      "prompt_text": "Split-screen character sheet composition, left side a full-body shot of the character standing upright in a neutral straight standing pose facing the camera with both feet flat on the ground and arms relaxed at the sides, full head-to-toe framing with the whole body and both feet visible, right side a tight close-up chest-up portrait of the same character, identical original female character on both sides, single subject only exactly one person with only the character in frame, pure white seamless studio background, professional character sheet presentation, adult woman aged 35-45, Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger., mature adult bone structure and facial proportions, not a youthful rounded babyface, naturally muted catchlights, no oversized specular glare in the iris, eye color muted rather than glowing, dark hair in a tight low bun with a matte finish, visible fine skin texture with natural pores, fine lines, subtle asymmetries and texture irregularities, natural minimal grooming, slight natural sheen rather than glossy retouched finish, no digital smoothing, no beauty filter, no AI-airbrushed look, matte-to-natural complexion, balanced natural proportions, wearing Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun., plain charcoal trousers, flat black work shoes, no jewellery, no bag, natural anatomy, high-end but unretouched commercial photography style, soft diffused studio lighting without harsh reflections, cinematic realism, clean white background, 4K quality, sharp focus on skin texture detail, single subject only, exactly one person, only the character in frame, no other people, no duplicate figures, no mannequin, no reflections, no props other than items worn or carried in the described silhouette, no furniture, no background objects, empty seamless studio, left panel standing full-body head-to-toe not cropped not sitting, right panel tight close-up not full body, no text, no watermark, no logos, no frame borders, no babyface, no plastic skin, original character that does not resemble any real person or existing copyrighted character",
+      "reuse": "approved once, reused every episode (continuity_reuse.costume=same unless bumped)"
+    },
+    {
+      "asset_id": "loc-bus-stop-location-still,-asset",
+      "kind": "location_still",
+      "model": "nano_banana_pro",
+      "controls": {
+        "resolution": "2k",
+        "aspect_ratio": "9:16"
+      },
+      "why": "empty lived-in location, no people, planned key light; reused across episodes for a consistent world",
+      "status": "verified_controls",
+      "alternatives": [
+        "cinematic_studio_2_5 for dramatic establishing stills"
+      ],
+      "prompt_text": "Authentic candid iPhone photo of an empty Bus stop location still, asset_id not listed in bible, no people, lived-in not staged, casual slightly imperfect framing, eye level, Clean modern phone look, eye-level, slightly too formal framing in busy public space; passers-by blurred and generic; aubergine against grey street., soft window daylight from one side already planned as the key light for a later video, mild HDR, true-to-life colors, subtle sensor grain, no retouching, no readable text, no brands, no logos, vertical 9:16 composition with calm upper third for captions",
+      "reuse": "approved once per recurring location; continuity_reuse.location=same reuses it"
+    }
+  ],
+  "notes": "DRY RUN. No job submitted. prompt_text is free text, the only creative payload the tool accepts; internal JSON is not a native format. Field map: scene.action->prompt_text; scene.performance->prompt_text; scene.microexpression->prompt_text; scene.camera.shot->prompt_text; scene.camera.lens->prompt_text; scene.camera.movement->prompt_text; scene.lighting->prompt_text; scene.environment->prompt_text; scene.sound.ambience->native+prompt_text; scene.sound.music->manual; scene.dialogue->prompt_text; scene.captions->manual; scene.transition_out->manual; scene.cuts_inside_clip->prompt_text; continuity.identity_anchors->native+prompt_text; duration->native; aspect_ratio->native; resolution->native; export.fps->gap; export.container->gap; disclosure->manual"
+}

@@ -109,11 +109,14 @@ def plan(packet: dict, bible: dict | None = None, quote_credits: dict | None = N
             controls = {"resolution": "720p"}
         medias = []
         if "image_references" in lim["media_roles"]:
-            medias.append({"value": "<media_id of approved character reference (asset char-inspector-v1)>", "role": "image_references"})
+            reg = (bible or {}).get("approved_assets", {}) if isinstance(bible, dict) else {}
+            char = reg.get("character_reference") or {}
+            cand = (char.get("candidates") or [{}])[0].get("job_id")
+            medias.append({"value": f"<media_id or job_id of approved character reference (asset {char.get('asset_id', 'char-ref')}{'; candidate job ' + cand if cand else ''})>", "role": "image_references"})
             if any(r["kind"] == "location_still" for r in packet.get("asset_rights", [])):
                 medias.append({"value": "<media_id of approved location still>", "role": "image_references"})
             if (pf.get("continuity_reuse") or {}).get("voice") == "same" and "audio_references" in lim["media_roles"] and audio_mode not in ("silent_ambience", "text_over_broll", "music_driven"):
-                medias.append({"value": "<media_id of approved voice asset voice-inspector-v1>", "role": "audio_references"})
+                medias.append({"value": f"<media_id of approved voice asset {((reg.get('voice') or {}).get('asset_id') or 'voice-ref')}>", "role": "audio_references"})
         elif "start_image" in lim["media_roles"]:
             medias.append({"value": "<media_id of approved first-frame still>", "role": "start_image"})
         if model == "hf_mult_motion_control":

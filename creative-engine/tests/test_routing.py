@@ -73,3 +73,12 @@ class TestBakeoffAdditions(unittest.TestCase):
         p["production_format"] = {"shot_architecture": "single_take_static", "audio_mode": "on_camera_dialogue", "continuity_reuse": {"voice": "new", "location": "new", "costume": "same"}, "rationale": "t"}
         tm = plan(p, bible())
         self.assertEqual(tm["units"][0]["model"], "seedance_2_0_mini")
+
+
+    def test_asset_without_registry_entry_cannot_be_owned(self):
+        from engine.pipeline import _normalise_rights_against_registry
+        p = valid_packet()
+        p["asset_rights"] = [{"asset": "Captain voice", "kind": "voice", "source": "x", "rights_status": "owned", "scope": "s"},
+                             {"asset": "Foley", "kind": "other", "source": "x", "rights_status": "owned", "scope": "s"}]
+        _normalise_rights_against_registry(p, {"approved_assets": {"locations": []}})
+        self.assertEqual([r["rights_status"] for r in p["asset_rights"]], ["unresolved", "owned"])

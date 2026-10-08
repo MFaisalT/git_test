@@ -1,0 +1,92 @@
+{
+  "adapter": "higgsfield-mcp/generate_video + generate_image",
+  "verified_on": "2026-10-07",
+  "units": [
+    {
+      "generation_unit": "U1",
+      "scene_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "model": "seedance_2_0_mini",
+      "routing": {
+        "why": "<=15 s; identity refs supported; cheapest adequate (15 credits / 15 s / 720p quoted)",
+        "status": "verified_controls",
+        "fallback": "seedance_2_5 omni_reference if identity or physics fail on mini"
+      },
+      "controls": {
+        "duration": 12,
+        "aspect_ratio": "9:16",
+        "resolution": "720p",
+        "generate_audio": true
+      },
+      "prompt_text": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. Speak ONLY the quoted lines, in English, lips still when no line is spoken.\n3. Props exist from frame one and never appear, disappear or change design: white folding plastic garden chair, large wooden scoring paddle with a 0-10 dial, closed plain umbrella (no logo) across his knees, passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure), rain (top edge, then falling), grey corner-shop wall with blank unreadable shutter.\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Round soft face, heavy-lidded calm eyes, neat salt-and-pepper beard trimmed short, bald shining crown with a ring of grey hair, slow blink, serene half-smile that never changes. Costume: Mustard-yellow three-piece suit slightly too big, open collar, brown leather loafers with no socks, mustard trousers slightly too long; same costume all episode, no changes.. Register: Seated stillness and calm; the loudness is in the opinion, not the voice; comedy from the gap between certainty and evidence; invites the viewer to argue.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S1 (0.0-6.0s) ---\nLocation: outside a corner shop on a pavement (generic, unrecognisable). Environment: Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.\nAction: Locked portrait. Uncle Verdict sits on the white chair, paddle upright on his thigh with the dial at 2, closed umbrella across his knees, a thin grey rain edge at the top of frame. He lifts the paddle slightly so the 2 reads, and delivers the verdict.\nPerformance: Invested task: present the verdict like a judge reading a ruling, eyes steady on the lens, finger resting on the dial. Micro-expression: One slow blink on 'ten'; the half-smile does not change.\nCamera: medium portrait, centred, seated eye level, 9:16; lens feel phone main lens, about 26mm equivalent; movement propped phone with one small settle-wobble in the first second, then locked; rig phone propped on a low crate at seated eye level\nLighting: Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.\nAudio: ambience quiet street ambience, distant traffic, faint wind; foley: wooden paddle tapping thigh, suit fabric rustle, umbrella canvas shift, exaggerated dial click; no music\nDialogue (Uncle Verdict, on-camera): \"Umbrella. Two out of ten. Correct answer: a tiny roof for nobody.\" - slow, warm, certain; never raises his voice; short pauses after each sentence\n--- S2 (6.0-9.0s) ---\nLocation: outside a corner shop on a pavement (generic, unrecognisable). Environment: Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.\nAction: First drops land on the paddle wood and then on his bald crown. From the right frame edge a generic passer-by's open plain umbrella slides through, dry underneath. He does not move, shelter or blink.\nPerformance: Invested task: hold his verdict against the weather, eyes fixed on the lens, refusing to glance at the sky. Micro-expression: Drop runs down his forehead; the half-smile and heavy-lidded calm do not change.\nCamera: medium portrait, centred, seated eye level, 9:16; lens feel phone main lens, about 26mm equivalent; movement propped phone, locked, no move; rig phone propped on a low crate at seated eye level\nLighting: Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.\nAudio: ambience street ambience as light rain begins, patter on pavement; foley: rain drops on wood, drops on skin, passing umbrella canopy whoosh, soft footstep; no music\n--- S3 (9.0-12.0s) ---\nLocation: outside a corner shop on a pavement (generic, unrecognisable). Environment: Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.\nAction: He turns the dial with one finger from 2 down to 1 (exaggerated click), holds the paddle up to the lens showing 1, rain pouring, umbrella gone from frame, and says the final word. Holds the pose on the last frame.\nPerformance: Invested task: correct the dial and present it with total certainty, finger steady, eyes on the lens. Micro-expression: Slow blink after the word; rain on the crown, serenity unchanged.\nCamera: medium portrait, centred, seated eye level, 9:16; lens feel phone main lens, about 26mm equivalent; movement propped phone, locked, paddle comes toward lens; no move; rig phone propped on a low crate at seated eye level\nLighting: Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.\nAudio: ambience steady rain on pavement, distant traffic; foley: exaggerated dial click, rain on paddle, suit rustle, umbrella canvas drip; no music\nDialogue (Uncle Verdict, on-camera): \"Final.\" - one soft, unhurried word, certain\nON-SCREEN TEXT: none (added in post).",
+      "medias": [
+        {
+          "value": "<media_id or job_id of approved character reference (asset char-uncle-verdict-v1; candidate job cb1f3458-a537-48af-950d-c42de75a4b28)>",
+          "role": "image_references"
+        },
+        {
+          "value": "<media_id of approved location still>",
+          "role": "image_references"
+        },
+        {
+          "value": "<media_id of approved voice asset voice-ref>",
+          "role": "audio_references"
+        }
+      ],
+      "manual_steps": [
+        "Upload approved reference stills via media_upload (owner action; upload requires approval).",
+        "Burn captions/on-screen text in edit.",
+        "Add licensed music in edit if any.",
+        "Assemble generation units with hard cuts in edit; verify total duration and loop.",
+        "Run get_cost:true preflight and record quote before any submit; submit only after render_approved and credit_cap."
+      ],
+      "gaps": [
+        "No fps/container control; inspect exported file.",
+        "Lip-sync and exact SFX timing are not controllable; inspect output.",
+        "Lens is prompt language only."
+      ],
+      "estimated_credits": 12,
+      "estimated_credits_draft": null,
+      "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
+    }
+  ],
+  "asset_requests": [
+    {
+      "asset_id": "loc-uncle-verdict-v1/location_stil",
+      "kind": "location_still",
+      "model": "nano_banana_pro",
+      "controls": {
+        "resolution": "2k",
+        "aspect_ratio": "9:16"
+      },
+      "why": "empty lived-in location, no people, planned key light; reused across episodes for a consistent world",
+      "status": "verified_controls",
+      "alternatives": [
+        "cinematic_studio_2_5 for dramatic establishing stills"
+      ],
+      "prompt_text": "Authentic candid iPhone photo of an empty uncle-verdict-v1/location_still_corner_shop, no people, lived-in not staged, casual slightly imperfect framing, eye level, Locked-off phone at seated eye level, centred, like a portrait; mustard against grey; the evidence enters frame from an edge., soft window daylight from one side already planned as the key light for a later video, mild HDR, true-to-life colors, subtle sensor grain, no retouching, no readable text, no brands, no logos, vertical 9:16 composition with calm upper third for captions",
+      "reuse": "approved once per recurring location; continuity_reuse.location=same reuses it"
+    },
+    {
+      "asset_id": "char-uncle-verdict-v1",
+      "kind": "character_reference",
+      "model": "nano_banana_pro",
+      "controls": {
+        "resolution": "2k",
+        "aspect_ratio": "16:9"
+      },
+      "why": "split-screen character sheet per Higgsfield character-sheet workflow (photoreal-unretouched preset); 16:9 for split-screen",
+      "status": "verified_controls",
+      "alternatives": [
+        "nano_banana_2_1 (NB 2.1: image+video refs, inpaint - to be tested)",
+        "soul_2 / soul_cast (Higgsfield identity models; different pipeline)"
+      ],
+      "prompt_text": "Split-screen character sheet composition, left side a full-body shot of the character standing upright in a neutral straight standing pose facing the camera with both feet flat on the ground and arms relaxed at the sides, full head-to-toe framing with the whole body and both feet visible, right side a tight close-up chest-up portrait of the same character, identical original male character on both sides, single subject only exactly one person with only the character in frame, pure white seamless studio background, professional character sheet presentation, adult man aged 52-58, Round soft face, heavy-lidded calm eyes, neat salt-and-pepper beard trimmed short, bald shining crown with a ring of grey hair, slow blink, serene half-smile that never changes., mature adult bone structure and facial proportions, not a youthful rounded babyface, naturally muted catchlights, no oversized specular glare in the iris, eye color muted rather than glowing, bald crown with a short ring of grey hair, neat short salt-and-pepper beard, visible fine skin texture with natural pores, fine lines, subtle asymmetries and texture irregularities, natural minimal grooming, slight natural sheen rather than glossy retouched finish, no digital smoothing, no beauty filter, no AI-airbrushed look, matte-to-natural complexion, balanced natural proportions, wearing Mustard-yellow three-piece suit slightly too big, open collar, a folding white plastic garden chair he carries everywhere, a large wooden scoring paddle with a dial from 0 to 10, brown leather loafers with no socks., mustard suit trousers slightly too long, brown leather loafers, no socks, no jewellery, no bag, natural anatomy, high-end but unretouched commercial photography style, soft diffused studio lighting without harsh reflections, cinematic realism, clean white background, 4K quality, sharp focus on skin texture detail, single subject only, exactly one person, only the character in frame, no other people, no duplicate figures, no mannequin, no reflections, no props other than items worn or carried in the described silhouette, no furniture, no background objects, empty seamless studio, left panel standing full-body head-to-toe not cropped not sitting, right panel tight close-up not full body, no text, no watermark, no logos, no frame borders, no babyface, no plastic skin, original character that does not resemble any real person or existing copyrighted character",
+      "reuse": "approved once, reused every episode (continuity_reuse.costume=same unless bumped)"
+    }
+  ],
+  "notes": "DRY RUN. No job submitted. prompt_text is free text, the only creative payload the tool accepts; internal JSON is not a native format. Field map: scene.action->prompt_text; scene.performance->prompt_text; scene.microexpression->prompt_text; scene.camera.shot->prompt_text; scene.camera.lens->prompt_text; scene.camera.movement->prompt_text; scene.lighting->prompt_text; scene.environment->prompt_text; scene.sound.ambience->native+prompt_text; scene.sound.music->manual; scene.dialogue->prompt_text; scene.captions->manual; scene.transition_out->manual; scene.cuts_inside_clip->prompt_text; continuity.identity_anchors->native+prompt_text; duration->native; aspect_ratio->native; resolution->native; export.fps->gap; export.container->gap; disclosure->manual"
+}

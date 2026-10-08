@@ -46,6 +46,10 @@ def _normalise_rights_against_registry(packet: dict, bible: dict) -> None:
         entry = next((v for k, v in by_id.items() if k and k in str(r.get("asset", ""))), None) or kind_default.get(r.get("kind"))
         if entry is None and r.get("kind") == "location_still" and reg.get("locations"):
             entry = next((l for l in reg["locations"] if l.get("label", "").lower() in str(r.get("asset", "")).lower()), None)
+        if entry is None and r.get("kind") in ("character_reference", "voice", "location_still") and r.get("rights_status") in ("owned", "licensed", "consented"):
+            packet.setdefault("evidence", []).append({"claim": f"asset '{r.get('asset')}' ({r.get('kind')}) declared {r['rights_status']} but no such asset exists in the bible registry; downgraded to unresolved", "kind": "fact", "source": "bible.approved_assets", "confidence": "high"})
+            r["rights_status"] = "unresolved"
+            continue
         if entry and str(entry.get("status", "")).lower() in PENDING_ASSET_STATES and r.get("rights_status") in ("owned", "licensed", "consented"):
             packet.setdefault("evidence", []).append({"claim": f"asset '{r.get('asset')}' declared {r['rights_status']} but registry status is {entry.get('status')}; downgraded to unresolved", "kind": "fact", "source": "bible.approved_assets", "confidence": "high"})
             r["rights_status"] = "unresolved"
@@ -221,7 +225,7 @@ class Pipeline:
         provider_name = getattr(self.provider, "name", "manual")
         packet = {
             "packet_version": "1.0", "packet_id": packet_id, "status": "draft",
-            "brief": {k: brief[k] for k in brief if k in ("brief_id", "title", "project", "bible_ref", "format", "platform", "duration_target_s", "language", "objective", "constraints", "commercial", "negative_constraints")},
+            "brief": {k: brief[k] for k in brief if k in ("brief_id", "title", "project", "bible_ref", "format", "platform", "duration_target_s", "language", "objective", "constraints", "commercial", "negative_constraints", "production_format", "render_tier")},
             "bible_version": {"bible_id": bible["bible_id"], "version": bible["version"], "sha256": sha256_json(bible)},
             "evidence": ss.get("evidence", []),
             "premises": prem["premises"], "hook_variants": hooks["hook_variants"], "selected": hooks["selected"],

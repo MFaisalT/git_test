@@ -1,7 +1,7 @@
 {
   "packet_version": "1.0",
   "packet_id": "CB-captain-tempo-v1",
-  "status": "draft",
+  "status": "planning-ready; render unverified",
   "brief": {
     "brief_id": "CB1_intro_captain-tempo-v1",
     "title": "Character bake-off intro: 12-second first public appearance of captain-tempo-v1",
@@ -18,7 +18,9 @@
       "The bible rule must land inside 12 seconds; the signature gesture may be used once.",
       "Any dance or move is original and fully described; no trending dance or sound."
     ],
+    "production_format": {},
     "commercial": null,
+    "render_tier": "draft_mini",
     "negative_constraints": [
       "Do not copy any researched creator's look, catchphrase or footage.",
       "No readable brand text in frame.",
@@ -51,6 +53,18 @@
     },
     {
       "claim": "asset 'captain-tempo-v1 character reference (identity anchors and costume)' declared owned but registry status is generated_pending_owner_approval; downgraded to unresolved",
+      "kind": "fact",
+      "source": "bible.approved_assets",
+      "confidence": "high"
+    },
+    {
+      "claim": "asset 'captain-tempo-v1 voice (same voice, booming hoarse counting)' (voice) declared owned but no such asset exists in the bible registry; downgraded to unresolved",
+      "kind": "fact",
+      "source": "bible.approved_assets",
+      "confidence": "high"
+    },
+    {
+      "claim": "asset 'pedestrian crossing at a busy junction location still (same location)' (location_still) declared owned but no such asset exists in the bible registry; downgraded to unresolved",
       "kind": "fact",
       "source": "bible.approved_assets",
       "confidence": "high"
@@ -518,14 +532,14 @@
       "asset": "captain-tempo-v1 voice (same voice, booming hoarse counting)",
       "kind": "voice",
       "source": "bible approved voice for captain-tempo-v1 / generated on-camera audio",
-      "rights_status": "owned",
+      "rights_status": "unresolved",
       "scope": "charbakeoff bake-off test render"
     },
     {
       "asset": "pedestrian crossing at a busy junction location still (same location)",
       "kind": "location_still",
       "source": "bible recurring location, generated generic junction, no recognisable place",
-      "rights_status": "owned",
+      "rights_status": "unresolved",
       "scope": "charbakeoff bake-off test render"
     },
     {
@@ -548,24 +562,22 @@
           "S3",
           "S4"
         ],
-        "model": "seedance_2_5",
+        "model": "seedance_2_0_mini",
         "routing": {
-          "why": "dialogue + identity lock: Seedance 2.5 omni_reference carries image + audio references (voice lock) with native audio",
+          "why": "<=15 s; identity refs supported; cheapest adequate (15 credits / 15 s / 720p quoted)",
           "status": "verified_controls",
-          "fallback": "seedance_2_0_mini for drafts; cinematic_studio_video_4_0 for premium look",
-          "optimisation": "480p draft -> finalize"
+          "fallback": "seedance_2_5 omni_reference if identity or physics fail on mini"
         },
         "controls": {
           "duration": 12,
           "aspect_ratio": "9:16",
           "resolution": "720p",
-          "generate_audio": true,
-          "mode": "omni_reference"
+          "generate_audio": true
         },
         "prompt_text": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. Speak ONLY the quoted lines, in English, lips still when no line is spoken.\n3. Props exist from frame one and never appear, disappear or change design: referee whistle on red cord, small handheld metronome clipped to waistband, white sweatband, pedestrian signal head showing red standing figure then green walking figure (pictograms only, no text), blurred generic pedestrians (extras).\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Lean weathered face, deep laugh lines, bright wide-set grey eyes, short silver hair cropped close at the sides and spiky on top, very mobile eyebrows, a wide gap-toothed grin. Costume: Glossy teal and gold tracksuit zipped to the chin, white sweatband, a referee whistle on a red cord, chunky white trainers, a small handheld metronome clipped to the waistband; glossy teal tracksuit trousers with a gold side stripe. Same outfit throughout the episode.. Register: Big, physical, loud, breathless, joyful; arms conduct, legs bounce, the whistle blows; the comedy is total commitment to a pointless job plus the world's indifference.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S1 (0.0-3.0s) ---\nLocation: Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her. Environment: Busy junction, grey tarmac and kerb, a stream of generic pedestrians as soft blurred shapes with no faces readable, distant traffic out of focus, no readable signs, logos or text.\nAction: Wide, slightly low across the road: Captain Tempo stands at the kerb towering over a blurred grey stream of pedestrians, both arms raised like a conductor about to cue an orchestra, red standing figure glowing on the signal behind her. Her raised arms slam down on the beat as she bellows THREE and the handheld camera starts its slow push-in.\nPerformance: Invested task: set the downbeat for the entire crossing; she stares down the blurred crowd, hunting for any sign they are following her tempo, and sharpens her baton arms when they ignore it. Micro-expression: Eyebrows shoot up on the downbeat, then lock into a stern conductor's frown.\nCamera: wide, slightly low angle, full body head to trainers; lens feel phone main camera feel, wide (about 24mm equivalent); movement slow handheld push-in begins, gentle bob, camera noticing her before she notices it; rig handheld phone, operator walking slowly forward from across the road\nLighting: Overcast daylight key from high camera-left, soft; fill from the open grey sky; warm gold bounce off her tracksuit stripe onto her jaw and forearms and teal bounce onto the pavement beside her; soft contact shadows under her trainers and each pedestrian. Light stays constant, no clouds breaking.\nAudio: ambience real junction traffic, footsteps and crowd murmur, idling engines; foley: metronome tick on the waistband, tracksuit fabric swish as arms drop, trainer scuff on kerb, whistle cord swinging; no music\nDialogue (Captain Tempo, on-camera): \"THREE!\" - hoarse booming shout on the downbeat, rhythmic\n--- S2 (3.0-6.0s) ---\nLocation: Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her. Environment: Busy junction, grey tarmac and kerb, a stream of generic pedestrians as soft blurred shapes with no faces readable, distant traffic out of focus, no readable signs, logos or text.\nAction: Push-in continues. Her arms conduct harder, left hand chopping time, right hand circling; legs bounce on the spot. On TWO she clamps the whistle in her teeth and blasts it, then spits it out into a roar of ONE, knees bending, torso leaning toward camera as the lens closes in.\nPerformance: Invested task: wind the whole street up to a single instant; she drives each number into the crowd with her entire body and checks the red figure over her shoulder with a flick of the eyes between counts. Micro-expression: Eyes widen on the whistle blast, cheeks puff, a quick sideways glance at the signal.\nCamera: wide, low angle, tightening to knees-up as the push-in closes; lens feel phone main camera feel, wide (about 24mm equivalent); movement continuing slow low-angle handheld push-in, bob grows slightly with her bounce; rig handheld phone, operator walking slowly forward from across the road\nLighting: Overcast daylight key from high camera-left, soft; fill from the open grey sky; warm gold bounce off her tracksuit stripe onto her jaw and forearms and teal bounce onto the pavement beside her; soft contact shadows under her trainers and each pedestrian. Light stays constant, no clouds breaking.\nAudio: ambience real junction traffic, footsteps and crowd murmur, idling engines; foley: sharp referee whistle blast, metronome rattling with her bounce, trainer slaps on pavement, tracksuit swish; no music\nDialogue (Captain Tempo, on-camera): \"TWO!\" - louder, whistle blast right after\nDialogue (Captain Tempo, on-camera): \"ONE!\" - roaring, breathless, almost a bark\n--- S3 (6.0-9.0s) ---\nLocation: Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her. Environment: Busy junction, grey tarmac and kerb, a stream of generic pedestrians as soft blurred shapes with no faces readable, distant traffic out of focus, no readable signs, logos or text.\nAction: On AND she freezes, arms raised, and the signal behind her flips from red standing figure to green walking figure exactly on its own timer. She detonates the Tempo Stomp: two stomps of her white trainers, a hip swing, one whistle blast, both fists thrust to the sky. The blurred crowd begins crossing without looking at her.\nPerformance: Invested task: claim the change of light as her own work; she holds the instant of the flip with total certainty, then spends every limb on the celebration to sell that she caused it. Micro-expression: Gap-toothed grin explodes wide, eyebrows lifting skyward with the fists.\nCamera: wide, low angle, full body, towering silhouette against grey sky; lens feel phone main camera feel, wide (about 24mm equivalent); movement low-angle handheld push-in slows to a settle as she peaks, one small wobble on the stomp impact; rig handheld phone, operator walking slowly forward from across the road\nLighting: Overcast daylight key from high camera-left, soft; fill from the open grey sky; warm gold bounce off her tracksuit stripe onto her jaw and forearms and teal bounce onto the pavement beside her; soft contact shadows under her trainers and each pedestrian. Light stays constant, no clouds breaking.\nAudio: ambience real junction traffic, footsteps and crowd murmur, idling engines; foley: two heavy trainer stomps, tracksuit swish on hip swing, whistle blast, metronome clack, green-signal beep tone, generic and unlabelled; no music\nDialogue (Captain Tempo, on-camera): \"AND!\" - one explosive shout, held, joyful\n--- S4 (9.0-12.0s) ---\nLocation: Pedestrian crossing at a busy junction, grey city street, kerb on the near side of the road, signal pole behind her. Environment: Busy junction, grey tarmac and kerb, a stream of generic pedestrians as soft blurred shapes with no faces readable, distant traffic out of focus, no readable signs, logos or text.\nAction: Fists still in the air, Captain Tempo holds her frozen victory pose, beaming, whistle in her teeth. A single blurred commuter in a dark coat walks calmly through the frame between her raised fists and the camera, hair-width from her, never looking over. The camera lingers one beat too long on her unblinking triumphant face, then rests, still held.\nPerformance: Invested task: soak up the applause nobody is giving; she scans the crowd for acknowledgement, finds none, and refuses to drop the pose. Micro-expression: Proud grin holds, one eyebrow twitches up as the commuter passes, eyes stay locked on camera.\nCamera: wide settling to medium-wide, low angle, full figure held; lens feel phone main camera feel, wide (about 24mm equivalent); movement camera settles into a final held framing with a small handheld breathe, no cut; rig handheld phone, operator walking slowly forward from across the road\nLighting: Overcast daylight key from high camera-left, soft; fill from the open grey sky; warm gold bounce off her tracksuit stripe onto her jaw and forearms and teal bounce onto the pavement beside her; soft contact shadows under her trainers and each pedestrian. Light stays constant, no clouds breaking.\nAudio: ambience real junction traffic, footsteps and crowd murmur, idling engines; foley: commuter footsteps passing, fabric brush of the passing coat, distant traffic, one last metronome tick; no music\nON-SCREEN TEXT: none (added in post).",
         "medias": [
           {
-            "value": "<media_id of approved character reference (asset char-inspector-v1)>",
+            "value": "<media_id or job_id of approved character reference (asset char-captain-tempo-v1; candidate job 5706fd02-b2bb-4923-a879-ee8c5a571529)>",
             "role": "image_references"
           },
           {
@@ -573,7 +585,7 @@
             "role": "image_references"
           },
           {
-            "value": "<media_id of approved voice asset voice-inspector-v1>",
+            "value": "<media_id of approved voice asset voice-ref>",
             "role": "audio_references"
           }
         ],
@@ -589,8 +601,8 @@
           "Lip-sync and exact SFX timing are not controllable; inspect output.",
           "Lens is prompt language only."
         ],
-        "estimated_credits": 84,
-        "estimated_credits_draft": 36,
+        "estimated_credits": 12,
+        "estimated_credits_draft": null,
         "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
       }
     ],
@@ -657,8 +669,50 @@
     ]
   },
   "qa": {
-    "deterministic": {},
-    "creative": {},
+    "deterministic": {
+      "ok": true,
+      "error_count": 0,
+      "warning_count": 1,
+      "findings": [
+        {
+          "code": "RIGHTS_UNRESOLVED",
+          "severity": "warning",
+          "message": "unresolved rights: ['captain-tempo-v1 character reference (identity anchors and costume)', 'captain-tempo-v1 voice (same voice, booming hoarse counting)', 'pedestrian crossing at a busy junction location still (same location)'] (acceptable while planning)",
+          "path": ""
+        }
+      ]
+    },
+    "creative": {
+      "scores": {
+        "originality": 3,
+        "hook": 4,
+        "coherence": 4,
+        "identity": 3,
+        "audiovisual": 4,
+        "feasibility": 3,
+        "grounding": 4,
+        "commercial_fit": 3
+      },
+      "evidence": {
+        "originality": "The 'takes credit for something that was always going to happen' gag is a familiar, well-worn comedic shape, and the passer-by-walks-through-the-celebration deflation is the only fresh turn, so it is competent rather than surprising.",
+        "hook": "Frame one shows the full towering teal-and-gold silhouette with conductor arms raised and a glowing red figure plus a THREE downbeat at 0 s, which reads muted, but the hook is a setup image rather than a curiosity gap and the payoff is 6 s away.",
+        "coherence": "The setup-countdown-release-deflation chain is clean and every scene carries one function, though the caption line 'Obviously she did that' is unplaced because every scene captions field is empty, and the whistle appears in her teeth in S4 after being blasted twice with no stated hand-off.",
+        "identity": "The bible anchors (silver spiky hair, gap-toothed grin, laugh lines, mobile eyebrows) are well specified, but at a 24mm wide, full-body, handheld push-in most of them (grey eyes, laugh lines) will not survive a draft_mini render, so identity will rest on the tracksuit and silhouette only.",
+        "audiovisual": "Lighting, lens, rig, per-second foley, ambience and voice delivery are all specified per scene and consistent, and music is deliberately none; the weak spots are no explicit on-screen caption timing and an unresolved question of how the loud shouts sit above the junction ambience.",
+        "feasibility": "One unit, zero cuts and no readable text are well respected, but 12 s of continuous high-load action (shouted lip-sync, whistle in teeth, two stomps plus hip swing, fists up, a blurred extra passing hair-width from her fists, a signal flipping on cue) is a lot of precise choreography to expect from a single Mini generation and will likely need rerolls.",
+        "grounding": "Location, rule, props, signature gesture used once and the no-text and no-real-people constraints are all honoured and traceable to the bible and brief, with a clear runner-up trade-off recorded in the rationale.",
+        "commercial_fit": "The brief has no commercial element and the packet correctly adds none, yet the shareable angle is generic ('friend who controls the light') and there is no clear hook toward the next bake-off entry, so 'make the viewer want to see the next one' is only implicitly served."
+      },
+      "weighted_total": 3.53,
+      "pass_thresholds": {
+        "character_intent": true,
+        "premise_specific_payoff": true,
+        "complete_direction": true,
+        "commercial_fit": true
+      },
+      "summary": "A clean, well-specified single-take introduction that shows silhouette, rule and gesture legibly muted and stays inside the draft_mini and bible constraints. Its main weaknesses are a familiar comedic core, face-level identity anchors that a wide shot cannot deliver, and a very dense 12 s of choreography for one cheap generation.",
+      "top_fix": "Reduce the choreography load or sharpen the surprise: for example make the passer-by's walk-through the single clear visual joke and simplify the S2-S3 whistle/stomp business, so a one-take Mini generation can land it and the payoff is more than a standard 'takes credit' gag."
+    },
     "repetition": {
       "threshold": 0.35,
       "fields": {
@@ -694,12 +748,12 @@
       "flagged_fields": [],
       "recurring_motifs": [
         {
-          "motif": "prop:small",
+          "motif": "format:single_take_static+on_camera_dialogue",
           "episodes": 2,
           "share": 0.67
         },
         {
-          "motif": "format:single_take_static+on_camera_dialogue",
+          "motif": "prop:small",
           "episodes": 2,
           "share": 0.67
         },
@@ -727,7 +781,7 @@
     }
   ],
   "provenance": {
-    "generated_at": "2026-10-08T05:58:31Z",
+    "generated_at": "2026-10-08T06:00:51Z",
     "provider": "broker",
     "requested_model": "sonnet",
     "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
@@ -774,6 +828,18 @@
         "provider": "broker",
         "latency_s": 0.0,
         "at": "2026-10-08T05:58:31Z"
+      },
+      {
+        "stage": "qa_review",
+        "attempt": 0,
+        "result": "ok",
+        "errors": 0,
+        "requested_model": "sonnet",
+        "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+        "usage": {},
+        "provider": "broker",
+        "latency_s": 0.0,
+        "at": "2026-10-08T05:59:31Z"
       }
     ],
     "repair_passes": 0,

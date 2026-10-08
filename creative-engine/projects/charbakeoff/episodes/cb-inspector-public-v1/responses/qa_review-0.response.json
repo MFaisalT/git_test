@@ -1,0 +1,32 @@
+{
+  "scores": {
+    "originality": 3,
+    "hook": 4,
+    "coherence": 4,
+    "identity": 4,
+    "audiovisual": 4,
+    "feasibility": 3,
+    "grounding": 4,
+    "commercial_fit": 3
+  },
+  "evidence": {
+    "originality": "The hypocrite-inspector reveal (cites a fault, is the bigger offender) is a well-worn sitcom/sketch structure, and the premise itself admits it is the safe baseline; the specific 4 cm stub and pocket-ribbon trail are the only fresh touches.",
+    "hook": "Silhouette, lamp and a deadpan 'Finding one.' give a clear locked first frame, but the first 3s is a slow settle plus a wait-a-beat tap with no motion or surprise, and the real payoff only arrives at 9s, so the swipe-away window is exposed.",
+    "coherence": "Setup, procedure, verdict, reveal escalate cleanly with one rule and a plausible seeding at 6-9s (first stub slips from the pocket), though S3 is overloaded (verdict, pick up, bin, write, stub slip) and the trail 'running back to the bench where she began' conflicts with her starting by the timetable board.",
+    "identity": "Aubergine jacket, four flap pockets, chest lamp, clipboard, glasses and bun are repeated consistently and the dry bureaucratic voice stays constant, but the microexpression notes (warm disappointment, half-nod) are subtle and will not read at phone scale muted.",
+    "audiovisual": "Per-scene lighting, camera, foley and delivery cues are specific and continuous, with captions covering the muted case; however the closing caption '(She is the litter.)' explains the joke the image already lands, and the brief's final hold has no sound or music accent to punctuate it.",
+    "feasibility": "Single static 12s unit with zero cuts fits draft_mini, but a 4 cm stub gap, a two-finger tap, a pen write, a lamp toggle, three lines of lip-synced speech and a physically coherent ribbon of stubs spilling along the pavement is a lot of fine-detail action for a Mini model, and the stub and ribbon will likely be unreadable at medium-wide.",
+    "grounding": "Uses the bible's recurring bus-stop location, costume and signature tap exactly once, honours the no-readable-text and blurred-extras constraints, and the selected rationale accurately weighs P2 as runner-up.",
+    "commercial_fit": "The brief has no commercial and the packet correctly adds none; it serves the bake-off goal of legible energy, rule and silhouette and a 'this is you' share hook, but the next-one tease is not engineered into the ending beyond the held trail."
+  },
+  "weighted_total": 3.63,
+  "pass_thresholds": {
+    "character_intent": true,
+    "premise_specific_payoff": true,
+    "complete_direction": true,
+    "commercial_fit": true
+  },
+  "summary": "A competent, constraint-respecting and well-specified direction whose rule lands clearly via the pocket-trail reveal, but it is a familiar hypocrisy gag with a slow-starting hook. Execution risk is concentrated in the tiny-prop and ribbon-spill details that a draft_mini model may not render legibly.",
+  "top_fix": "Make the reveal render-safe and earlier: show the first stubs trailing from her pockets visibly in S2/S3 (not just a slip) and simplify the S3 action load, so the camera-notices-first gag reads at phone scale and the hook does not rely on a 9s payoff."
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->
