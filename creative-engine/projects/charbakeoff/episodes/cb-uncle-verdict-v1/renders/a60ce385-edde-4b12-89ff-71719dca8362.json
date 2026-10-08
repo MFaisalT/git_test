@@ -25,7 +25,7 @@
     }
   ],
   "quoted_credits": 24,
-  "charged_credits": null,
+  "charged_credits": 24,
   "submitted_at": "2026-10-08",
   "bible_version": 4,
   "prompt_source": "tool_mapping.U1.prompt_text"
