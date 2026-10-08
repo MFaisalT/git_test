@@ -14,7 +14,8 @@
   ],
   "cost": {
     "quoted_credits": 36,
-    "charged_credits": null
+    "charged_credits": 36,
+    "note": "ledger 'Cinema Studio 4.0'; no creative-control ids set"
   },
   "render_inspection": {
     "status": "pending_owner"

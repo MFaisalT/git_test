@@ -14,7 +14,8 @@
   ],
   "cost": {
     "quoted_credits": 15,
-    "charged_credits": null
+    "charged_credits": 15,
+    "note": "ledger display name 'Kling O3 Video (Frames)'"
   },
   "render_inspection": {
     "status": "pending_owner"

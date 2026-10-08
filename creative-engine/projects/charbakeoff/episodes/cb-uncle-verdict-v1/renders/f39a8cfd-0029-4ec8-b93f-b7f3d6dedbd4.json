@@ -14,7 +14,8 @@
   ],
   "cost": {
     "quoted_credits": 30,
-    "charged_credits": null
+    "charged_credits": 30,
+    "note": "ledger 'Seedance 2.0'; job reports seedance_2_0_fast"
   },
   "render_inspection": {
     "status": "pending_owner"
