@@ -183,6 +183,11 @@ def compact_prompt(packet: dict, scenes: list[dict], bible: dict | None, return_
                 line += " Hard cut to."
             lines.append(line)
         lines.append(_sound_line(packet, am, first))
+        if speak:
+            from .voice import voice_prompt_line
+            vl = voice_prompt_line(bible)
+            if vl:
+                lines.append(vl)  # never trimmed
         from .interaction import NEGATIVE_TAIL, interaction_rule_line
         lines.insert(4, interaction_rule_line(packet, scenes))  # never trimmed
         lines.append("No readable text, logos or signage except a product's own label. Natural skin, no blur on the face. " + NEGATIVE_TAIL)

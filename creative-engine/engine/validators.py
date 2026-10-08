@@ -459,6 +459,12 @@ def validate_all(packet: dict, bible: dict | None = None) -> Report:
     from .physics import physics_findings
     for f in physics_findings(packet):
         rep.warn(f["code"], f["message"], f["path"])
+    from .voice import voice_findings
+    for f in voice_findings(packet, bible):
+        (rep.error if f.get("severity") == "error" else rep.warn)(f["code"], f["message"], f["path"])
+    for u in (packet.get("tool_mapping") or {}).get("units", []) or []:
+        if u.get("render_blocked"):
+            rep.error("RENDER_BLOCKED", f"{u.get('generation_unit')}: {u['render_blocked']}", f"tool_mapping.{u.get('generation_unit')}")
     from .interaction import interaction_spec_findings
     unit_of = {sid: list(u.get("scene_ids") or []) for u in (packet.get("tool_mapping") or {}).get("units", []) or [] for sid in (u.get("scene_ids") or [])}
     for sc in packet.get("scenes", []) or []:

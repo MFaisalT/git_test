@@ -259,3 +259,63 @@ class TestUnitRelativeTimes(unittest.TestCase):
         dur = float(last["end_s"]) - float(last["start_s"])
         if float(last["start_s"]) > 0:
             self.assertIn(f"0-{dur:.0f}s:" if dur.is_integer() else f"0-{dur:.1f}s:", u["prompt_text"])
+
+
+class TestVoiceLock(unittest.TestCase):
+    """Owner rule 2026-10-08: a character never changes voice id between generations or scenes."""
+    LOCK = {"voice_id": "v-123", "voice_type": "preset", "name": "Test Voice", "reference_audio": "aud-1", "status": "locked"}
+
+    def _spoken(self):
+        p = valid_packet()
+        p["production_format"] = {"shot_architecture": "single_take_static", "audio_mode": "on_camera_dialogue", "camera_style": "propped phone",
+                                  "continuity_reuse": {"voice": "same", "location": "same", "costume": "same"}, "trend_refs": [], "rationale": "test"}
+        p["scenes"][0]["dialogue"] = [{"speaker": "X", "line": "Hello there.", "on_camera": True}]
+        return p
+
+    def test_spoken_packet_without_lock_is_blocked(self):
+        from engine.validators import validate_all
+        p = self._spoken()
+        b = bible(); b.setdefault("approved_assets", {}).pop("voice", None)
+        p["tool_mapping"] = plan(p, b)
+        codes = {f.code for f in validate_all(p, b).errors}
+        self.assertIn("VOICE_LOCK_MISSING", codes)
+        self.assertIn("RENDER_BLOCKED", codes)
+
+    def test_locked_voice_rides_every_spoken_unit(self):
+        p = self._spoken()
+        b = bible(); b.setdefault("approved_assets", {})["voice"] = dict(self.LOCK)
+        for u in plan(p, b)["units"]:
+            if any(s.get("dialogue") for s in p["scenes"] if s["scene_id"] in u["scene_ids"]):
+                self.assertIn({"value": "aud-1", "role": "audio_references", "voice_id": "v-123", "voice_name": "Test Voice"}, u["medias"])
+                self.assertIsNone(u["render_blocked"])
+                self.assertIn("exactly the voice of @audio1", u["prompt_text"])
+
+    def test_store_refuses_voice_change(self):
+        import tempfile
+        from engine.store import Store
+        from engine.voice import VoiceLockError
+        st = Store(tempfile.mkdtemp())
+        b = bible(); b.setdefault("approved_assets", {})["voice"] = dict(self.LOCK)
+        st.save_bible("t", b)
+        b2 = bible(); b2.setdefault("approved_assets", {})["voice"] = dict(self.LOCK, voice_id="v-999")
+        with self.assertRaises(VoiceLockError):
+            st.save_bible("t", b2)
+        b3 = bible(); b3.setdefault("approved_assets", {}).pop("voice", None)
+        with self.assertRaises(VoiceLockError):
+            st.save_bible("t", b3)
+        st.save_bible("t", b)  # same voice: fine
+
+    def test_render_drift_and_forbidden_voice(self):
+        from engine.voice import render_voice_findings, voice_findings
+        b = {"approved_assets": {"voice": dict(self.LOCK)}}
+        self.assertEqual(render_voice_findings([{"job_id": "j1", "voice_id": "v-123"}], b), [])
+        self.assertEqual(render_voice_findings([{"job_id": "j2", "voice_id": None}], b)[0]["code"], "VOICE_DRIFT")
+        bad = {"approved_assets": {"voice": dict(self.LOCK, name="Elias Hale")}}
+        self.assertIn("VOICE_FORBIDDEN", {f["code"] for f in voice_findings({"scenes": []}, bad)})
+
+    def test_interaction_states_opening_position_and_one_direction(self):
+        from engine.interaction import interaction_beat
+        s = {"interaction": dict(TestShownInteraction.SPEC)}
+        t = interaction_beat(s)
+        self.assertIn("At 0 s the pointer is exactly pointing at 2", t)
+        self.assertIn("never passes any other position", t)

@@ -66,6 +66,10 @@ def build_prompt_text(packet: dict, scenes: list[dict], bible: dict | None) -> s
         lines.append(f"Audio: ambience {snd['ambience']}; foley: {', '.join(snd.get('foley', []))}" + ("; no music" if not snd.get("music") or snd.get("music", "").lower() in ("none", "no music") else "; music added in post, do not generate music"))
         for d in s.get("dialogue", []) or []:
             lines.append(f"Dialogue ({d['speaker']}, {'on' if d.get('on_camera', True) else 'off'}-camera): \"{d['line']}\"" + (f" - {d['delivery']}" if d.get("delivery") else ""))
+    if any(s.get("dialogue") for s in scenes):
+        from .voice import voice_prompt_line
+        if voice_prompt_line(bible):
+            lines.append(voice_prompt_line(bible))
     lines.append("ON-SCREEN TEXT: none (added in post).")
     return "\n".join(lines)
 
@@ -131,8 +135,15 @@ def plan(packet: dict, bible: dict | None = None, quote_credits: dict | None = N
                 medias.append({"value": ra.get("media_id") or ra.get("job_id"), "role": "image_references", "prop": bp.get("id"), "status": ra.get("status")})
             if any(r["kind"] == "location_still" for r in packet.get("asset_rights", [])):
                 medias.append({"value": "<media_id of approved location still>", "role": "image_references"})
-            if (pf.get("continuity_reuse") or {}).get("voice") == "same" and "audio_references" in lim["media_roles"] and audio_mode not in ("silent_ambience", "text_over_broll", "music_driven"):
-                medias.append({"value": f"<media_id of approved voice asset {((reg.get('voice') or {}).get('asset_id') or 'voice-ref')}>", "role": "audio_references"})
+        from .voice import voice_lock
+        unit_speaks = any(s.get("dialogue") for s in u) and audio_mode not in ("silent_ambience", "text_over_broll", "music_driven")
+        render_blocked = None
+        if unit_speaks:  # voice lock (owner rule 2026-10-08): the same locked voice on every spoken render, never a model-invented one
+            lock = voice_lock(bible)
+            if lock and "audio_references" in lim["media_roles"]:
+                medias.append({"value": lock["reference_audio"], "role": "audio_references", "voice_id": lock["voice_id"], "voice_name": lock.get("name")})
+            else:
+                render_blocked = "VOICE_LOCK_MISSING" if not lock else f"VOICE_LOCK_UNSUPPORTED: {model} takes no audio_references"
         elif "start_image" in lim["media_roles"]:
             medias.append({"value": "<media_id of approved first-frame still>", "role": "start_image"})
         if inter and {"start_image", "end_image"} <= set(lim["media_roles"]):
@@ -163,7 +174,7 @@ def plan(packet: dict, bible: dict | None = None, quote_credits: dict | None = N
         plan_units.append({
             "generation_unit": f"U{i}", "scene_ids": [s["scene_id"] for s in u], "model": model, "routing": {k: route.get(k) for k in ("why", "status", "fallback", "optimisation") if route.get(k)},
             "controls": controls, "prompt_text": (_cp[0] if _cp else build_prompt_text(packet, u, bible)), "prompt_style": ("compact_physics_first" if _cp else "dense_legacy"), "prompt_budget": (_cp[1] if _cp else None), "prompt_text_full": build_prompt_text(packet, u, bible), "medias": medias,
-            "manual_steps": manual, "gaps": gaps,
+            "manual_steps": manual, "gaps": gaps, "render_blocked": render_blocked,
             "estimated_credits": est, "estimated_credits_draft": draft_est,
             "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply",
         })

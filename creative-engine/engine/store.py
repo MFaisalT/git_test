@@ -56,6 +56,9 @@ class Store:
         d = self.project_dir(project, create=True)
         bid = bible["bible_id"]
         existing = self.bible_versions(project, bid)
+        if existing:  # voice lock: a locked voice never changes or disappears (owner rule 2026-10-08)
+            from .voice import assert_voice_unchanged
+            assert_voice_unchanged(self.load_bible(project, bid), bible)
         version = (max(existing) + 1) if existing else int(bible.get("version", 1))
         bible = dict(bible, version=version)
         bible.setdefault("provenance", {})

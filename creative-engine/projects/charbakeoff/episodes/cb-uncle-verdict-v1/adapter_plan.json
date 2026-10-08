@@ -47,10 +47,6 @@
         {
           "value": "<media_id of approved location still>",
           "role": "image_references"
-        },
-        {
-          "value": "<media_id of approved voice asset voice-ref>",
-          "role": "audio_references"
         }
       ],
       "manual_steps": [
@@ -66,6 +62,7 @@
         "Lens is prompt language only.",
         "Cinema Studio 4.0 native camera/lighting controls need creative-control ids not retrieved in this build; pass as prompt text meanwhile"
       ],
+      "render_blocked": "VOICE_LOCK_MISSING",
       "estimated_credits": 56,
       "estimated_credits_draft": 24,
       "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
@@ -77,9 +74,9 @@
       ],
       "model": "cinematic_studio_video_4_0",
       "routing": {
-        "why": "shown hand-object interaction: animated between the approved start and end keyframes (start_image/end_image) with character and prop references; Cinema Studio 4.0 ranked first by the owner 2026-10-08",
-        "status": "recommended_untested",
-        "fallback": "seedance_2_5 omni_reference, draft 480p, same start/end frames",
+        "why": "shown hand-object interaction: animated between the approved start and end keyframes (start_image/end_image) with character and prop references; Cinema Studio 4.0 ranked first by the owner 2026-10-08 and again on the keyframed interaction test (job 77ecb61d)",
+        "status": "verified_controls",
+        "fallback": "seedance_2_5 omni_reference, draft 480p, same start/end frames (owner: far less realistic on the keyframed paddle push, 2026-10-08)",
         "optimisation": "test at 480p (3 credits/s measured); 720p quoted 7 credits/s"
       },
       "controls": {
@@ -89,13 +86,13 @@
         "generate_audio": true,
         "mode": "omni_reference"
       },
-      "prompt_text": "Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip; no rings, watches, microphones or accessories that are not in the reference.\nSetting: outside a corner shop on a pavement (generic, unrecognisable). Passers-by, if any, are soft blurred shapes who never react.\nCamera: starts medium close-up, centred, seated eye level, 9:16, paddle and face both in frame; propped phone, locked. No cuts.\nProps (exact design, exactly one of each, nothing else added): white folding plastic garden chair; one hand-held wooden scoring paddle: a light oak rounded-rectangle board on a straight round wooden handle; on its face a white semicircular gauge, arc on top, with eleven large bold black numerals 0 1 2 3 4 5 6 7 8 9 10 evenly spaced left to right along the arc and no other marks or text; one thick black pointer arm pivoting on a brass pin at the centre of the gauge's flat bottom edge (exactly as @image2); closed plain umbrella (no logo) across his knees; passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure); rain (top edge, then falling); grey corner-shop wall with blank unreadable shutter.\nHands: at most two hands act; each named hand does one thing; the other hand rests where stated; every object is either held or resting on a surface; one interaction per shot; the only state change is the one movement described, shown slowly from the start frame to the end frame.\nPhysics: each held object stays in a named hand or rests on a surface; nothing floats or vanishes; mouth closed on anything in it; feet grounded except described steps; everything else holds still.\n0-4s: Left hand holds the paddle up at chest height, board square to the lens; right index fingertip on the pointer tip; body still on the chair; rain falling. The one movement: right index fingertip rests on the pointer tip; the fingertip pushes the pointer tip slowly to the left; the pointer pivots on the brass pin; the pointer goes from pointing at 2 to pointing at 1 in one slow continuous move and stops. Left hand holds the paddle handle still at chest height, board square to the lens. Nothing else on the scoring paddle moves or changes; the clip starts on the start frame and ends on the end frame. Uncle Verdict says once: \"Final.\".\nSound: only the quoted lines are spoken, each exactly once, then silence; steady rain on pavement, distant traffic; no music.\nNo readable text, logos or signage except a product's own label. Natural skin, no blur on the face. No third arm, no extra hands, no duplicated limbs, no extra fingers, no deformed hands; objects never merge with hands; exactly one of each prop; no mirrors or reflections; no slow motion.",
+      "prompt_text": "Identity: the person in @image1, exactly; same face and costume as the reference for the whole clip; no rings, watches, microphones or accessories that are not in the reference.\nSetting: outside a corner shop on a pavement (generic, unrecognisable). Passers-by, if any, are soft blurred shapes who never react.\nCamera: starts medium close-up, centred, seated eye level, 9:16, paddle and face both in frame; propped phone, locked. No cuts.\nProps (exact design, exactly one of each, nothing else added): white folding plastic garden chair; one hand-held wooden scoring paddle: a light oak rounded-rectangle board on a straight round wooden handle; on its face a white semicircular gauge, arc on top, with eleven large bold black numerals 0 1 2 3 4 5 6 7 8 9 10 evenly spaced left to right along the arc and no other marks or text; one thick black pointer arm pivoting on a brass pin at the centre of the gauge's flat bottom edge (exactly as @image2); closed plain umbrella (no logo) across his knees; passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure); rain (top edge, then falling); grey corner-shop wall with blank unreadable shutter.\nHands: at most two hands act; each named hand does one thing; the other hand rests where stated; every object is either held or resting on a surface; one interaction per shot; the only state change is the one movement described, shown slowly from the start frame to the end frame.\nPhysics: each held object stays in a named hand or rests on a surface; nothing floats or vanishes; mouth closed on anything in it; feet grounded except described steps; everything else holds still.\n0-4s: Left hand holds the paddle up at chest height, board square to the lens; right index fingertip on the pointer tip; body still on the chair; rain falling. At 0 s the pointer is exactly pointing at 2, as in the start frame. The one movement: right index fingertip rests on the pointer tip; the fingertip pushes the pointer tip slowly to the left; the pointer pivots on the brass pin; the pointer goes from pointing at 2 to pointing at 1 in one slow continuous move and stops; it never passes any other position and never moves the other way. Left hand holds the paddle handle still at chest height, board square to the lens. Nothing else on the scoring paddle moves or changes; the clip starts on the start frame and ends on the end frame. Uncle Verdict says once: \"Final.\".\nSound: only the quoted lines are spoken, each exactly once, then silence; steady rain on pavement, distant traffic; no music.\nNo readable text, logos or signage except a product's own label. Natural skin, no blur on the face. No third arm, no extra hands, no duplicated limbs, no extra fingers, no deformed hands; objects never merge with hands; exactly one of each prop; no mirrors or reflections; no slow motion.",
       "prompt_style": "compact_physics_first",
       "prompt_budget": {
         "audio_mode": "on_camera_dialogue",
         "word_budget": 260,
         "words": 302,
-        "words_total_incl_safety_lines": 468,
+        "words_total_incl_safety_lines": 495,
         "shrink_level": 4,
         "over_budget": true
       },
@@ -114,10 +111,6 @@
         {
           "value": "<media_id of approved location still>",
           "role": "image_references"
-        },
-        {
-          "value": "<media_id of approved voice asset voice-ref>",
-          "role": "audio_references"
         },
         {
           "value": "e38bd7f1-3fca-4d58-8f64-03ad49a46a3d",
@@ -142,6 +135,7 @@
         "Lens is prompt language only.",
         "Cinema Studio 4.0 native camera/lighting controls need creative-control ids not retrieved in this build; pass as prompt text meanwhile"
       ],
+      "render_blocked": "VOICE_LOCK_MISSING",
       "estimated_credits": 28,
       "estimated_credits_draft": 12,
       "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
