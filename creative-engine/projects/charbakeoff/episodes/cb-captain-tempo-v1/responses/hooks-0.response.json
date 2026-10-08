@@ -1,0 +1,64 @@
+{
+  "hook_variants": [
+    {
+      "id": "H1",
+      "premise_id": "P1",
+      "first_frame": "Handheld phone, wide and slightly low across a busy junction: Captain Tempo in glossy teal and gold tracksuit, white sweatband, red-cord whistle, chunky white trainers, stands at the kerb towering over a blurred grey stream of pedestrians, both arms raised like a conductor about to cue the orchestra, the red standing-man signal glowing behind her (no readable text).",
+      "first_line_or_action": "Her raised arms slam down on the beat as she bellows 'THREE!' and the camera starts its slow push-in.",
+      "mechanism": "escalating_ritual",
+      "score": 9,
+      "rationale": "Silhouette, scale, public setting and the conducting posture read in one second muted, and the downbeat promises a countdown with a payoff; it is the cleanest send-to-the-friend-who-thinks-they-control-the-light hook."
+    },
+    {
+      "id": "H2",
+      "premise_id": "P1",
+      "first_frame": "Extreme low-angle close frame on the small metronome clipped to her glossy teal waistband, its arm ticking left and right in sharp focus, the red crossing signal and blurred legs of passers-by soft behind it.",
+      "first_line_or_action": "Without a cut the phone tilts up the tracksuit zip to her gap-toothed grin as she whistle-blasts once and shouts 'TWO!'.",
+      "mechanism": "curiosity_gap",
+      "score": 7,
+      "rationale": "The ticking prop is a vivid, specific tease and the tilt-up reveals the character, but the first frame alone does not show her silhouette or the crossing clearly enough to hit full legibility."
+    },
+    {
+      "id": "H3",
+      "premise_id": "P1",
+      "first_frame": "Wide low-angle shot from the far kerb: Captain Tempo stands with her back half to camera, facing the blurred crowd gathered at the crossing the way a conductor faces an orchestra, fists clenched at chest height, whistle in her teeth, saturated teal and gold against grey tarmac.",
+      "first_line_or_action": "She blasts the whistle and flings her arms wide in a huge cue; the stream of pedestrians simply keeps walking, unaffected, as she hisses 'AND...' under her breath.",
+      "mechanism": "status_contradiction",
+      "score": 8,
+      "rationale": "A tiny woman commanding an indifferent crowd shows the bible's core contradiction instantly and reads muted, though the setup arrives slightly before the countdown so the rule is promised a beat later than in H1."
+    },
+    {
+      "id": "H4",
+      "premise_id": "P3",
+      "first_frame": "Selfie-view at arm's length, wobbling: Captain Tempo's lean weathered face, wide grey eyes and raised silver-spiky hair fill the frame, her eyebrows arched mid-bounce, a blurred bakery queue and an unlabelled glowing number display behind her shoulder.",
+      "first_line_or_action": "She jabs a finger at the number display behind her and stage-whispers 'FOUR...' with huge eyebrow work straight to lens.",
+      "mechanism": "visible_problem",
+      "score": 8,
+      "rationale": "The face, eyebrows and a very legible small problem (waiting for your number) read muted and feel intimate, though the full silhouette is not yet visible, which costs a point on legibility."
+    },
+    {
+      "id": "H5",
+      "premise_id": "P3",
+      "first_frame": "Selfie-view at arm's length: Captain Tempo, mid-sentence, leans toward the lens and points her whole arm directly at the viewer, the blurred bakery queue behind, her sweatband and whistle cord visible at the frame edge.",
+      "first_line_or_action": "She mouths and hisses 'YOU. Hold my place. THREE...' then swings the phone round to the queue and begins counting down with a finger.",
+      "mechanism": "callout",
+      "score": 7,
+      "rationale": "Directly addressing the viewer makes it highly sendable and the countdown starts at once, but the command is spoken so it reads weaker muted and the pointing gesture is generic rather than specific to her."
+    },
+    {
+      "id": "H6",
+      "premise_id": "P3",
+      "first_frame": "Phone dropped to waist height so her whole teal-and-gold figure bounces on tiptoe in the foreground, arms half raised, chunky white trainers visible, the blurred bakery queue shuffling forward behind her.",
+      "first_line_or_action": "A flat off-camera voice says 'Forty-one.' and she answers by throwing both arms up and shouting 'COMING IN ON THE BEAT!'.",
+      "mechanism": "recognition",
+      "score": 6,
+      "rationale": "The full silhouette is strong and anyone who narrates a queue will recognise the mood, but the deadpan voice is audio-dependent and the rule does not appear in the first second."
+    }
+  ],
+  "selected": {
+    "premise_id": "P1",
+    "hook_id": "H1",
+    "rationale": "P1 with H1 shows the full silhouette, public setting, conducting body language and a countdown promise in the first frame, so energy, rule and silhouette are legible muted, and its single-take moving-camera plus on-camera-dialogue pair is not in the recent list (empty) and fits one draft_mini unit with zero cuts. The trade-off against the runner-up (P3 with H4) is that P3 is more intimate and tests close-range identity anchors, but it loses her full-body silhouette and the Tempo Stomp and risks readable bakery text, so P1 is the safer cold introduction."
+  }
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->

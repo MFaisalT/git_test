@@ -141,6 +141,69 @@
         "P5"
       ],
       "ranking_rationale": "P1 lands the full bible rule (claim, evidence entering from the edge, a lower wrong dial, 'Final.') in one locked take, so a cold viewer meets silhouette, voice and rule muted or with sound. P4 and P2 add relationship and location variety but each dilutes the solo stillness or the rule. P3 and P5 trade the spoken verdict for caption or silence and are the least legible as a first appearance."
+    },
+    "hooks": {
+      "hook_variants": [
+        {
+          "id": "H1",
+          "premise_id": "P1",
+          "first_frame": "Locked-off seated-eye-level portrait outside a grey corner shop: Uncle Verdict centred in the mustard three-piece on the white plastic chair, serene half-smile, holding the wooden paddle with the dial already pointing at 2, a closed umbrella across his knees, a thin grey rain edge visible at the top of frame.",
+          "first_line_or_action": "He turns the dial with one finger (exaggerated click) and holds the paddle to the lens; caption and voice: 'Umbrella. Two out of ten.'",
+          "mechanism": "status_contradiction",
+          "score": 9,
+          "rationale": "The mustard silhouette, paddle reading 2 and closed umbrella read in one second muted, and the dark sky promises the contradiction, so anyone with an umbrella argument will want to send it."
+        },
+        {
+          "id": "H2",
+          "premise_id": "P1",
+          "first_frame": "Tight on the paddle held up to the lens with the dial at 2 and a single wet drop landing on the wood, Uncle Verdict's calm half-smile soft-focus behind it, the closed umbrella resting on his knee.",
+          "first_line_or_action": "A second drop hits his bald crown and he does not blink; the dial clicks down one notch toward 1 while the caption reads 'Umbrella: 2/10'.",
+          "mechanism": "visible_problem",
+          "score": 8,
+          "rationale": "The rain on the paddle and his unmoved face make the problem concrete in the first frame, though the tighter crop shows less of the silhouette than a full portrait."
+        },
+        {
+          "id": "H3",
+          "premise_id": "P1",
+          "first_frame": "Full portrait: the white plastic chair unfolded alone on the pavement outside the corner shop, empty, with the mustard-suited man's loafers just entering frame as he carries the paddle in.",
+          "first_line_or_action": "He sits, settles the paddle on his knee and slowly lifts a closed umbrella; caption: 'Rating things. Correctly.'",
+          "mechanism": "curiosity_gap",
+          "score": 6,
+          "rationale": "The empty chair and the deliberate sit-down are a curious setup, but the wrong take is not visible yet, so it is slower to read and less likely to be sent."
+        },
+        {
+          "id": "H4",
+          "premise_id": "P4",
+          "first_frame": "Slightly handheld seated-eye-level shot outside the corner shop: Uncle Verdict on the white chair in mustard, paddle dial at 4, looking calmly just past the lens; a hand enters from the right edge holding a perfect, unmarked banana.",
+          "first_line_or_action": "He eyes the banana and says, slow and warm, 'Banana. Four out of ten.' while a finger rests on the dial.",
+          "mechanism": "status_contradiction",
+          "score": 8,
+          "rationale": "The perfect banana against a 4 shows the wrongness instantly and is easy to send to a friend with strong food opinions, but the second hand adds clutter to the stillness."
+        },
+        {
+          "id": "H5",
+          "premise_id": "P4",
+          "first_frame": "Close seated portrait of Uncle Verdict with a caption 'Rate the banana' across the lower third, the paddle dial at 4 visible, the white chair edge in frame, and a yellow blur at the right edge.",
+          "first_line_or_action": "He gives one slow blink, then turns the dial a notch down with one finger as the banana comes fully into view.",
+          "mechanism": "callout",
+          "score": 7,
+          "rationale": "The caption invites the viewer to take part and the slow blink shows his calm, but the banana is only a blur so the proof arrives half a beat late."
+        },
+        {
+          "id": "H6",
+          "premise_id": "P4",
+          "first_frame": "Wide locked shot of the corner-shop pavement: the white chair, Uncle Verdict in mustard with the paddle at his side, and a tilted banana hanging into frame from the top edge.",
+          "first_line_or_action": "He raises the paddle to the lens without a word, the dial reading 2, and the caption lands: 'Banana. Final.'",
+          "mechanism": "curiosity_gap",
+          "score": 6,
+          "rationale": "Starting at the verdict makes a strong image, but it skips the setup, so the wrongness is harder to read cold and the rule feels rushed."
+        }
+      ],
+      "selected": {
+        "premise_id": "P1",
+        "hook_id": "H1",
+        "rationale": "H1 shows the full silhouette, the dial at 2, the umbrella and the rain edge in the first frame, so the rule and the coming contradiction read muted in about one second, and the on_camera_dialogue / single_take_static pair is not in the recent list. The trade-off against the runner-up (P4 with H4) is that the banana hook has a cleaner single prop but adds a second hand and a more handheld frame that dilutes the seated stillness."
+      }
     }
   },
   "log": [
@@ -155,6 +218,18 @@
       "provider": "broker",
       "latency_s": 0.0,
       "at": "2026-10-08T05:55:50Z"
+    },
+    {
+      "stage": "hooks",
+      "attempt": 0,
+      "result": "ok",
+      "errors": 0,
+      "requested_model": "sonnet",
+      "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+      "usage": {},
+      "provider": "broker",
+      "latency_s": 0.0,
+      "at": "2026-10-08T05:57:03Z"
     }
   ],
   "demos": [
