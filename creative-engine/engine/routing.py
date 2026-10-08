@@ -35,6 +35,9 @@ CATALOGUE = {
 }
 
 # generate_video(get_cost=true) on 2026-10-07, 9:16, 720p unless noted; credits
+# 2026-10-08 get_cost preflights, 12 s, 9:16, audio on: seedance_2_0 fast 480p 12 / fast 720p 30 / std 720p 54;
+# kling_o3_image_reference std 15; minimax_h3_max 768p 30; gemini_omni 720p 30 per 10 s (max 10 s);
+# seedance_2_5 480p 36 (draft or not); cinematic_studio_video_4_0 omni_reference 480p 36 / 720p 84. Quotes, not quality claims.
 QUOTES = {
     ("seedance_2_5", 16, "720p"): 112, ("seedance_2_5", 16, "480p-draft"): 48, ("seedance_2_0_mini", 15, "720p"): 15,
     ("seedance_2_0_mini", 8, "720p"): 8, ("seedance_2_5", 8, "720p"): 56,  # lab captures 2026-10-07 18:22 UTC

@@ -1,0 +1,22 @@
+{
+  "kind": "model_comparison",
+  "purpose": "owner 2026-10-08: is there a model between Mini (12) and 2.5 draft (36)? plus Cinema Studio 4.0; identical prompt and reference as Uncle v3 + props line",
+  "packet_id": "CB-uncle-verdict-v1",
+  "job_id": "1e996219-8648-4325-95ef-4795cf3854da",
+  "model_requested": "cinematic_studio_video_4_0",
+  "setting": "omni_reference 480p",
+  "duration": 12,
+  "medias": [
+    {
+      "role": "image_references",
+      "job_id": "cb1f3458-a537-48af-950d-c42de75a4b28"
+    }
+  ],
+  "cost": {
+    "quoted_credits": 36,
+    "charged_credits": null
+  },
+  "render_inspection": {
+    "status": "pending_owner"
+  }
+}
