@@ -75,3 +75,36 @@ QA was run in the Higgsfield sandbox: a Whisper transcript and the median pitch 
 | D | `1e0d4b22-cf30-435d-8eab-be018442ffa0` | -20 / -6 | 9.1 s | 83 Hz (deep) | "roof" heard as "wolf": articulation risk |
 
 The video's verdict slot is 4.5 s. The video model sets its own pacing and takes only the timbre from the reference audio. If the audio is laid in the edit instead, the line will need a faster take.
+
+## Round 2: specialist voice design (2026-10-08)
+
+The owner said the designed Seed Audio takes "all sound like computer voices" and asked for specialist agents. Two ran: a voice-casting director, whose output became prompts/voice_design.md, and a researcher on making TTS sound natural.
+
+**Research sources:**
+- ElevenLabs: [v4 launch](https://elevenlabs.io/blog/eleven-v4), [best practices](https://elevenlabs.io/docs/overview/capabilities/text-to-speech/best-practices), [audio tags](https://elevenlabs.io/blog/v3-audiotags), [voice settings](https://elevenlabs.io/docs/api-reference/voices/settings.md), [instant voice cloning](https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/instant-voice-cloning)
+- Qwen: [Qwen3-TTS repo](https://github.com/QwenLM/Qwen3-TTS), [Alibaba Model Studio](https://www.alibabacloud.com/help/en/model-studio/qwen-tts)
+- Seed: [Seed-TTS paper](https://arxiv.org/abs/2406.02430)
+- Research on disfluencies and naturalness: [arXiv 2412.12710](https://arxiv.org/html/2412.12710v1)
+
+The researcher could fetch only GitHub in full. Other claims come from search excerpts.
+
+### Round A: short line plus "Final."
+
+QA was run in the Higgsfield sandbox.
+
+| Take | Engine / base | Settings | Length | F0 median (p10-p90) | Pauses (s) | Transcript |
+|---|---|---|---|---|---|---|
+| A | ElevenLabs v4 / Gideon | stability 0.5, 5 tags | 9.4 s | 81 (62-221) | 0.56, 0.58, 0.5, 0.48, 0.54, 1.1: too even | clean, no tags read aloud |
+| B | ElevenLabs v4 / Arthur | stability 0.3 | 9.1 s | 133 (85-238) | 0.38-0.66, 1.2 | clean |
+| C | ElevenLabs v4 / Holden | punctuation only | 8.2 s | 110 (77-178) | 0.4-0.78 | clean |
+| D | Qwen / Gideon | 128-character instruction | 11.2 s | 87 (62-121) | 0.16-0.88: most varied | clean |
+| E | Qwen / Alistair | character-led instruction | 9.5 s | 101 (65-219) | 0.2-0.92 | "Mm" rendered |
+| F | Seed Audio / image cue | rate -5, pitch 0 | 7.2 s | 101 (78-149) | 0.16-0.64 | clean |
+
+Jobs: A `3e9ba7a0`, B `f55d9d2c`, C `33fcd169`, D `0c7f437f`, E `0cb13166`, F `ed57adc0`.
+
+### Round B: the 40 s casting monologue
+
+This round applies the research: stability 0.25-0.3, at most two tags per line, connected text over 250 characters. The monologue doubles as the clone source.
+
+Jobs: M1 ElevenLabs/Gideon `2f3b5d99`, M2 ElevenLabs/Arthur `6ba36c93`, M3 ElevenLabs/Holden `9b8b9239`, M4 Qwen/Gideon `7356ff73`.
