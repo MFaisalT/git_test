@@ -105,7 +105,7 @@ def plan(packet: dict, bible: dict | None = None, quote_credits: dict | None = N
         speaks = any(s.get("dialogue") for s in u)
         if budget and (handled or speaks):
             budget = False
-        route = route_video_unit(pf, dur, audio_mode, needs_driving, identity_critical=True, budget_mode=budget)
+        route = route_video_unit(pf, dur, audio_mode, needs_driving, identity_critical=True, budget_mode=budget, handles_props=handled)
         model = route["model"]
         lim = TOOL_LIMITS[model]
         controls = {"duration": max(lim["min_s"], min(lim["max_s"], int(round(dur)))), "aspect_ratio": packet["export"]["aspect_ratio"] if packet["export"]["aspect_ratio"] in (lim["aspect"] or [packet["export"]["aspect_ratio"]]) else "9:16",

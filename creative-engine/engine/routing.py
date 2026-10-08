@@ -52,7 +52,7 @@ def quote_for(model: str, duration: int, res: str = "720p") -> int | None:
     return int(round(credits * duration / d))
 
 
-def route_video_unit(pf: dict, duration: float, audio_mode: str, has_driving_footage: bool, identity_critical: bool = True, budget_mode: bool = False) -> dict:
+def route_video_unit(pf: dict, duration: float, audio_mode: str, has_driving_footage: bool, identity_critical: bool = True, budget_mode: bool = False, handles_props: bool = False) -> dict:
     """Pick a video model for one generation unit and explain it."""
     sa = (pf or {}).get("shot_architecture", "")
     silent = audio_mode in ("silent_ambience", "text_over_broll", "music_driven")
@@ -65,7 +65,7 @@ def route_video_unit(pf: dict, duration: float, audio_mode: str, has_driving_foo
         return {"model": "seedance_2_5", "mode": "omni_reference", "generate_audio": not silent, "why": f"{duration:.0f}s exceeds the 15 s mini/Cinema-3.0 ceiling; Seedance 2.5 keeps identity refs + native audio up to 30 s", "status": "verified_controls",
                 "fallback": "cinematic_studio_video_4_0 omni_reference (same ranges; native lens/lighting controls once control ids are retrieved)",
                 "optimisation": "draft=true at 480p first (quoted 48 vs 112 credits at 16 s), finalize the approved take at 1080p within 7 days"}
-    if budget_mode or silent:
+    if (budget_mode or silent) and not handles_props:  # Mini only for hands-free units (owner inspection 2026-10-08)
         return {"model": "seedance_2_0_mini", "mode": None, "generate_audio": not silent, "why": "<=15 s; identity refs supported; cheapest adequate (15 credits / 15 s / 720p quoted)", "status": "verified_controls",
                 "fallback": "seedance_2_5 omni_reference if identity or physics fail on mini"}
     if identity_critical:
