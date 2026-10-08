@@ -1,0 +1,716 @@
+{
+  "packet_version": "1.0",
+  "packet_id": "CB-uncle-verdict-v1",
+  "status": "draft",
+  "brief": {
+    "brief_id": "CB1_intro_uncle-verdict-v1",
+    "title": "Character bake-off intro: 12-second first public appearance of uncle-verdict-v1",
+    "project": "charbakeoff",
+    "bible_ref": "uncle-verdict-v1",
+    "format": "other",
+    "platform": "tiktok",
+    "duration_target_s": 12,
+    "language": "English or none - the engine decides with the audio mode",
+    "objective": "Introduce the character to a cold viewer in 12 seconds in a public setting so that the character's energy, rule and silhouette are legible muted; make the viewer want to see the next one. This is a bake-off: the same brief runs for three characters and the owner compares the rendered tests.",
+    "constraints": [
+      "Public setting from the bible's recurring locations; generic blurred passers-by allowed, never the joke.",
+      "Render tier: draft_mini (one 12 s Seedance 2.0 Mini unit, <=15 s, one generation unit, at most one cut) - this is a cost-capped test render.",
+      "The bible rule must land inside 12 seconds; the signature gesture may be used once.",
+      "Any dance or move is original and fully described; no trending dance or sound."
+    ],
+    "commercial": null,
+    "negative_constraints": [
+      "Do not copy any researched creator's look, catchphrase or footage.",
+      "No readable brand text in frame.",
+      "No real people or recognisable locations."
+    ]
+  },
+  "bible_version": {
+    "bible_id": "uncle-verdict-v1",
+    "version": 1,
+    "sha256": "ec5b4c7b9a986ed6d83ba28bb90bbb5ae8207787e9a9a236a67873e8925a68c0"
+  },
+  "evidence": [
+    {
+      "claim": "Dialogue is 11 words in 6 s (1.8 w/s) and 1 word in 3 s, below the 2.8 w/s limit",
+      "kind": "fact",
+      "source": "counted from this storyboard",
+      "confidence": "high"
+    },
+    {
+      "claim": "Evidence entering before his reaction makes the rule legible to a cold viewer",
+      "kind": "inference",
+      "source": "bible rule and selected premise P1",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Approved voice and location asset ids may not exist yet",
+      "kind": "hypothesis",
+      "source": "bible contains no approved_assets list",
+      "confidence": "low"
+    }
+  ],
+  "premises": [
+    {
+      "id": "P1",
+      "logline": "Outside a corner shop, Uncle Verdict unfolds his chair and scores a closed umbrella 2 out of 10; rain arrives from the top edge, a dry stranger's umbrella drifts past, and he turns the dial down to 1.",
+      "audience_emotion": "Delighted exasperation: the viewer sees the rain before he admits it and itches to argue in the comments.",
+      "character_desire": "To be the final authority on umbrellas, today.",
+      "obstacle": "The rain and the plainly useful umbrella in the background contradict him in frame.",
+      "escalation": "Verdict at 2, first drops on the paddle, a generic passer-by's open umbrella slides through the frame edge, dial goes lower to 1.",
+      "surprise": "He does not move, shelter or blink; the rain lands on his bald crown and the serenity does not change.",
+      "payoff": "He turns the dial with one finger, holds the paddle to the lens, and says: 'Umbrella. Two out of ten. Correct answer: a tiny roof for nobody.' Rain pours, a dry umbrella passes, he lowers the dial to 1: 'Final.'",
+      "structure": "Rule-complete single beat: claim, evidence enters, doubling down, hold on the face.",
+      "why_send_it": "Sent to the friend who always argues about umbrellas with the message 'this is you'; the wrong take invites a reply.",
+      "commercial_fit": "None needed; no brands. Umbrellas are a universal object and suit sponsor-safe categories later.",
+      "rejected_because": "",
+      "production_format": {
+        "shot_architecture": "single_take_static",
+        "audio_mode": "on_camera_dialogue",
+        "camera_style": "Locked-off phone at seated eye level, centred portrait; rain and the passing umbrella enter from the frame edges.",
+        "continuity_reuse": {
+          "voice": "same",
+          "location": "same",
+          "costume": "same"
+        },
+        "trend_refs": [],
+        "rationale": "The cleanest cold-viewer introduction: static portrait shows silhouette, the verdict format and the rule within one generation unit, with the quiet delivery doing the work."
+      }
+    },
+    {
+      "id": "P2",
+      "logline": "In a laundrette window seat, Uncle Verdict scores a warm folded towel zero out of ten while a slow push-in reveals the dryer door swinging open and fresh towels spilling over his loafers.",
+      "audience_emotion": "Cosy absurdity with a slow-burn laugh at the pile building up.",
+      "character_desire": "To rule that towels are a failure.",
+      "obstacle": "Warm, clean, plainly excellent towels keep arriving in frame.",
+      "escalation": "Towel handed down from the edge, door pops, pile reaches his shoe, the dial already at 0 has nowhere lower so he taps the paddle itself as if the dial were broken.",
+      "surprise": "He treats the dial's floor as the world's fault.",
+      "payoff": "Voice-over: 'Towel. Zero out of ten. Correct answer: a sad flat blanket.' He turns the dial the wrong way, holds up the paddle, 'Final.'",
+      "structure": "Slow reveal; the camera finds the evidence while the voice stays certain.",
+      "why_send_it": "Sent to the flatmate who folds towels wrong, with the caption 'rate this'.",
+      "commercial_fit": "Laundry categories are generic; no brand text in frame.",
+      "rejected_because": "the dial floor makes the rule's wrong-direction step weaker than P1",
+      "production_format": {
+        "shot_architecture": "single_take_moving_camera",
+        "audio_mode": "voiceover_narration",
+        "camera_style": "Slow motivated push-in from window height to his face, steam and dryer drum glow as practical light.",
+        "continuity_reuse": {
+          "voice": "same",
+          "location": "new",
+          "costume": "same"
+        },
+        "trend_refs": [],
+        "rationale": "Moves the show to a second recurring location and voice-over so mouth sync is not a risk in a cheap render; the push-in motivates the reveal."
+      }
+    },
+    {
+      "id": "P3",
+      "logline": "On a park bench row, Uncle Verdict rates a paper cup of tea 10 out of 10 in a main shot; one cutaway insert shows the tea is cold with a leaf floating in it, and he turns the dial up to 10 anyway.",
+      "audience_emotion": "Smug disbelief; the insert lets the viewer feel superior to him.",
+      "character_desire": "To crown tea the best thing on earth.",
+      "obstacle": "The insert shows still, cold, leaf-dotted tea.",
+      "escalation": "Verdict 8, cut to insert, back to the main shot with 10.",
+      "surprise": "The insert shows what the camera knows and he does not.",
+      "payoff": "Text: 'Tea. Eight out of ten. Correct answer: warm water in a hurry.' After the insert he turns the dial up and holds up the paddle: 'Final.'",
+      "structure": "Main shot plus insert (the one allowed cut); evidence before the character sees it.",
+      "why_send_it": "Sent to the tea-obsessed sibling with 'you in a nutshell'.",
+      "commercial_fit": "Tea is a universal object; no brand shown.",
+      "rejected_because": "the insert spends the one cut and the caption-only delivery makes the character less warm than a spoken take",
+      "production_format": {
+        "shot_architecture": "split_or_insert",
+        "audio_mode": "text_over_broll",
+        "camera_style": "Locked medium main shot plus a single macro insert of the cup.",
+        "continuity_reuse": {
+          "voice": "none",
+          "location": "new",
+          "costume": "same"
+        },
+        "trend_refs": [],
+        "rationale": "Silent text option tests whether the character reads without any voice; the insert proves the evidence-before-him rule visually."
+      }
+    },
+    {
+      "id": "P4",
+      "logline": "Outside the corner shop, an unseen friend behind the phone asks Uncle Verdict about a banana; he scores it 4 out of 10, a hand from frame edge holds up a perfect one, and he lowers the dial to 2.",
+      "audience_emotion": "Warm, conversational comedy; the viewer feels like the third person in the chat.",
+      "character_desire": "To be asked, and to answer with authority.",
+      "obstacle": "The friend's spotless banana contradicts the score.",
+      "escalation": "Question, verdict, banana offered, verdict lowered.",
+      "surprise": "The off-camera voice stays kind and never mocks him.",
+      "payoff": "Friend: 'And the banana?' Uncle: 'Banana. Four out of ten. Correct answer: a yellow apology.' The banana is perfect; he turns the dial down to 2, holds the paddle to the lens: 'Final.'",
+      "structure": "Question-and-answer exchange with a visible object as evidence.",
+      "why_send_it": "Sent to a family member who has strong food opinions.",
+      "commercial_fit": "Fruit is generic; no brand text.",
+      "rejected_because": "off-camera voice dilutes the solo seated stillness and adds a second voice to a 12 s clip",
+      "production_format": {
+        "shot_architecture": "interview_offcamera",
+        "audio_mode": "off_camera_dialogue",
+        "camera_style": "Handheld phone at seated eye level, held by the friend, with slight settle; the friend's hand enters from an edge.",
+        "continuity_reuse": {
+          "voice": "same",
+          "location": "same",
+          "costume": "same"
+        },
+        "trend_refs": [],
+        "rationale": "Adds a relationship and a second voice to test whether the character holds a two-person beat in one cheap unit."
+      }
+    },
+    {
+      "id": "P5",
+      "logline": "Silent loop in a laundrette window seat: a leaf blows past, Uncle Verdict dials a verdict on the leaf, and the clip ends on the same empty-chair pose it opened with.",
+      "audience_emotion": "Hypnotic calm; the loop invites a second watch.",
+      "character_desire": "To rate even a leaf.",
+      "obstacle": "The leaf keeps coming back and he keeps reappraising it.",
+      "escalation": "Dial moves one notch each pass until the loop closes.",
+      "surprise": "The last frame equals the first, so the verdict starts again.",
+      "payoff": "He turns the dial, holds the paddle to the lens in silence, and the frame returns to where it began.",
+      "structure": "Loop with a repeated beat and no words.",
+      "why_send_it": "Sent to a friend as a mood clip.",
+      "commercial_fit": "None.",
+      "rejected_because": "silence leaves the verdict format and the wrongness illegible to a cold viewer",
+      "production_format": {
+        "shot_architecture": "loop",
+        "audio_mode": "silent_ambience",
+        "camera_style": "Locked-off window-seat portrait; first and last frames identical.",
+        "continuity_reuse": {
+          "voice": "none",
+          "location": "new",
+          "costume": "same"
+        },
+        "trend_refs": [],
+        "rationale": "A silent loop tests the silhouette and the dial click alone, but the rule is hard to land without the spoken verdict."
+      }
+    }
+  ],
+  "hook_variants": [
+    {
+      "id": "H1",
+      "premise_id": "P1",
+      "first_frame": "Locked-off seated-eye-level portrait outside a grey corner shop: Uncle Verdict centred in the mustard three-piece on the white plastic chair, serene half-smile, holding the wooden paddle with the dial already pointing at 2, a closed umbrella across his knees, a thin grey rain edge visible at the top of frame.",
+      "first_line_or_action": "He turns the dial with one finger (exaggerated click) and holds the paddle to the lens; caption and voice: 'Umbrella. Two out of ten.'",
+      "mechanism": "status_contradiction",
+      "score": 9,
+      "rationale": "The mustard silhouette, paddle reading 2 and closed umbrella read in one second muted, and the dark sky promises the contradiction, so anyone with an umbrella argument will want to send it."
+    },
+    {
+      "id": "H2",
+      "premise_id": "P1",
+      "first_frame": "Tight on the paddle held up to the lens with the dial at 2 and a single wet drop landing on the wood, Uncle Verdict's calm half-smile soft-focus behind it, the closed umbrella resting on his knee.",
+      "first_line_or_action": "A second drop hits his bald crown and he does not blink; the dial clicks down one notch toward 1 while the caption reads 'Umbrella: 2/10'.",
+      "mechanism": "visible_problem",
+      "score": 8,
+      "rationale": "The rain on the paddle and his unmoved face make the problem concrete in the first frame, though the tighter crop shows less of the silhouette than a full portrait."
+    },
+    {
+      "id": "H3",
+      "premise_id": "P1",
+      "first_frame": "Full portrait: the white plastic chair unfolded alone on the pavement outside the corner shop, empty, with the mustard-suited man's loafers just entering frame as he carries the paddle in.",
+      "first_line_or_action": "He sits, settles the paddle on his knee and slowly lifts a closed umbrella; caption: 'Rating things. Correctly.'",
+      "mechanism": "curiosity_gap",
+      "score": 6,
+      "rationale": "The empty chair and the deliberate sit-down are a curious setup, but the wrong take is not visible yet, so it is slower to read and less likely to be sent."
+    },
+    {
+      "id": "H4",
+      "premise_id": "P4",
+      "first_frame": "Slightly handheld seated-eye-level shot outside the corner shop: Uncle Verdict on the white chair in mustard, paddle dial at 4, looking calmly just past the lens; a hand enters from the right edge holding a perfect, unmarked banana.",
+      "first_line_or_action": "He eyes the banana and says, slow and warm, 'Banana. Four out of ten.' while a finger rests on the dial.",
+      "mechanism": "status_contradiction",
+      "score": 8,
+      "rationale": "The perfect banana against a 4 shows the wrongness instantly and is easy to send to a friend with strong food opinions, but the second hand adds clutter to the stillness."
+    },
+    {
+      "id": "H5",
+      "premise_id": "P4",
+      "first_frame": "Close seated portrait of Uncle Verdict with a caption 'Rate the banana' across the lower third, the paddle dial at 4 visible, the white chair edge in frame, and a yellow blur at the right edge.",
+      "first_line_or_action": "He gives one slow blink, then turns the dial a notch down with one finger as the banana comes fully into view.",
+      "mechanism": "callout",
+      "score": 7,
+      "rationale": "The caption invites the viewer to take part and the slow blink shows his calm, but the banana is only a blur so the proof arrives half a beat late."
+    },
+    {
+      "id": "H6",
+      "premise_id": "P4",
+      "first_frame": "Wide locked shot of the corner-shop pavement: the white chair, Uncle Verdict in mustard with the paddle at his side, and a tilted banana hanging into frame from the top edge.",
+      "first_line_or_action": "He raises the paddle to the lens without a word, the dial reading 2, and the caption lands: 'Banana. Final.'",
+      "mechanism": "curiosity_gap",
+      "score": 6,
+      "rationale": "Starting at the verdict makes a strong image, but it skips the setup, so the wrongness is harder to read cold and the rule feels rushed."
+    }
+  ],
+  "selected": {
+    "premise_id": "P1",
+    "hook_id": "H1",
+    "rationale": "H1 shows the full silhouette, the dial at 2, the umbrella and the rain edge in the first frame, so the rule and the coming contradiction read muted in about one second, and the on_camera_dialogue / single_take_static pair is not in the recent list. The trade-off against the runner-up (P4 with H4) is that the banana hook has a cleaner single prop but adds a second hand and a more handheld frame that dilutes the seated stillness."
+  },
+  "script": {
+    "title": "Umbrella. Final.",
+    "synopsis": "Outside a corner shop Uncle Verdict rates a closed umbrella 2 out of 10; rain arrives and a dry stranger's umbrella drifts past; he lowers the dial to 1 and says Final.",
+    "beats": [
+      {
+        "beat": "Mustard-suited man, paddle at 2, closed umbrella, rain edge visible",
+        "function": "hook"
+      },
+      {
+        "beat": "Verdict spoken: Umbrella, two out of ten, a tiny roof for nobody",
+        "function": "setup"
+      },
+      {
+        "beat": "Rain lands on paddle and bald crown; he stays serene",
+        "function": "escalation"
+      },
+      {
+        "beat": "Dry passer-by umbrella slides through the frame edge",
+        "function": "turn"
+      },
+      {
+        "beat": "Dial turned down to 1, paddle held to lens, Final.",
+        "function": "payoff"
+      },
+      {
+        "beat": "Held calm pose in the rain",
+        "function": "button"
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "Uncle Verdict",
+        "line": "Umbrella. Two out of ten. Correct answer: a tiny roof for nobody.",
+        "delivery": "slow, warm, certain; never raises his voice; short pauses after each sentence",
+        "on_camera": true
+      },
+      {
+        "speaker": "Uncle Verdict",
+        "line": "Final.",
+        "delivery": "one soft, unhurried word, certain",
+        "on_camera": true
+      }
+    ],
+    "caption_text": "Umbrella. 2/10. ... Final.",
+    "cta": "Argue with him in the comments: what should he rate next?",
+    "disclosure_line": "Fictional character; AI-generated video."
+  },
+  "scenes": [
+    {
+      "scene_id": "S1",
+      "start_s": 0,
+      "end_s": 6,
+      "location": "outside a corner shop on a pavement (generic, unrecognisable)",
+      "action": "Locked portrait. Uncle Verdict sits on the white chair, paddle upright on his thigh with the dial at 2, closed umbrella across his knees, a thin grey rain edge at the top of frame. He lifts the paddle slightly so the 2 reads, and delivers the verdict.",
+      "performance": "Invested task: present the verdict like a judge reading a ruling, eyes steady on the lens, finger resting on the dial.",
+      "microexpression": "One slow blink on 'ten'; the half-smile does not change.",
+      "dialogue": [
+        {
+          "speaker": "Uncle Verdict",
+          "line": "Umbrella. Two out of ten. Correct answer: a tiny roof for nobody.",
+          "delivery": "slow, warm, certain; never raises his voice; short pauses after each sentence",
+          "on_camera": true
+        }
+      ],
+      "camera": {
+        "shot": "medium portrait, centred, seated eye level, 9:16",
+        "lens": "phone main lens, about 26mm equivalent",
+        "movement": "propped phone with one small settle-wobble in the first second, then locked",
+        "rig": "phone propped on a low crate at seated eye level"
+      },
+      "lighting": "Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.",
+      "environment": "Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.",
+      "sound": {
+        "ambience": "quiet street ambience, distant traffic, faint wind",
+        "foley": [
+          "wooden paddle tapping thigh",
+          "suit fabric rustle",
+          "umbrella canvas shift",
+          "exaggerated dial click"
+        ],
+        "music": "none",
+        "voice": "Uncle Verdict, slow warm confident, on camera, matches voice asset"
+      },
+      "captions": "Umbrella. 2/10.",
+      "transition_out": "continuous",
+      "props_from_frame_one": [
+        "white folding plastic garden chair",
+        "large wooden scoring paddle with a 0-10 dial",
+        "closed plain umbrella (no logo) across his knees",
+        "passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure)",
+        "rain (top edge, then falling)",
+        "grey corner-shop wall with blank unreadable shutter"
+      ],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1"
+    },
+    {
+      "scene_id": "S2",
+      "start_s": 6,
+      "end_s": 9,
+      "location": "outside a corner shop on a pavement (generic, unrecognisable)",
+      "action": "First drops land on the paddle wood and then on his bald crown. From the right frame edge a generic passer-by's open plain umbrella slides through, dry underneath. He does not move, shelter or blink.",
+      "performance": "Invested task: hold his verdict against the weather, eyes fixed on the lens, refusing to glance at the sky.",
+      "microexpression": "Drop runs down his forehead; the half-smile and heavy-lidded calm do not change.",
+      "dialogue": [],
+      "camera": {
+        "shot": "medium portrait, centred, seated eye level, 9:16",
+        "lens": "phone main lens, about 26mm equivalent",
+        "movement": "propped phone, locked, no move",
+        "rig": "phone propped on a low crate at seated eye level"
+      },
+      "lighting": "Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.",
+      "environment": "Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.",
+      "sound": {
+        "ambience": "street ambience as light rain begins, patter on pavement",
+        "foley": [
+          "rain drops on wood",
+          "drops on skin",
+          "passing umbrella canopy whoosh",
+          "soft footstep"
+        ],
+        "music": "none",
+        "voice": "none"
+      },
+      "captions": "",
+      "transition_out": "continuous",
+      "props_from_frame_one": [
+        "white folding plastic garden chair",
+        "large wooden scoring paddle with a 0-10 dial",
+        "closed plain umbrella (no logo) across his knees",
+        "passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure)",
+        "rain (top edge, then falling)",
+        "grey corner-shop wall with blank unreadable shutter"
+      ],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1"
+    },
+    {
+      "scene_id": "S3",
+      "start_s": 9,
+      "end_s": 12,
+      "location": "outside a corner shop on a pavement (generic, unrecognisable)",
+      "action": "He turns the dial with one finger from 2 down to 1 (exaggerated click), holds the paddle up to the lens showing 1, rain pouring, umbrella gone from frame, and says the final word. Holds the pose on the last frame.",
+      "performance": "Invested task: correct the dial and present it with total certainty, finger steady, eyes on the lens.",
+      "microexpression": "Slow blink after the word; rain on the crown, serenity unchanged.",
+      "dialogue": [
+        {
+          "speaker": "Uncle Verdict",
+          "line": "Final.",
+          "delivery": "one soft, unhurried word, certain",
+          "on_camera": true
+        }
+      ],
+      "camera": {
+        "shot": "medium portrait, centred, seated eye level, 9:16",
+        "lens": "phone main lens, about 26mm equivalent",
+        "movement": "propped phone, locked, paddle comes toward lens; no move",
+        "rig": "phone propped on a low crate at seated eye level"
+      },
+      "lighting": "Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.",
+      "environment": "Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.",
+      "sound": {
+        "ambience": "steady rain on pavement, distant traffic",
+        "foley": [
+          "exaggerated dial click",
+          "rain on paddle",
+          "suit rustle",
+          "umbrella canvas drip"
+        ],
+        "music": "none",
+        "voice": "Uncle Verdict, soft and certain"
+      },
+      "captions": "Final.",
+      "transition_out": "end hold on the final frame",
+      "props_from_frame_one": [
+        "white folding plastic garden chair",
+        "large wooden scoring paddle with a 0-10 dial",
+        "closed plain umbrella (no logo) across his knees",
+        "passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure)",
+        "rain (top edge, then falling)",
+        "grey corner-shop wall with blank unreadable shutter"
+      ],
+      "cuts_inside_clip": 0,
+      "generation_unit": "U1"
+    }
+  ],
+  "continuity": {
+    "identity_anchors": "Round soft face, heavy-lidded calm eyes, neat salt-and-pepper beard trimmed short, bald shining crown with a ring of grey hair, slow blink, serene half-smile that never changes.",
+    "costume": "Mustard-yellow three-piece suit slightly too big, open collar, brown leather loafers with no socks, mustard trousers slightly too long; same costume all episode, no changes.",
+    "props": [
+      "white folding plastic garden chair",
+      "large wooden scoring paddle with a 0-10 dial",
+      "closed plain umbrella (no logo) across his knees",
+      "passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure)",
+      "rain (top edge, then falling)",
+      "grey corner-shop wall with blank unreadable shutter"
+    ],
+    "notes": "Single continuous take, one generation unit U1, no cuts. Dial reads 2 until S3, then 1. Rain starts at the top edge in S1 and builds. Opinions are about objects only; the passer-by is a blurred generic extra, never the joke. Silhouette: mustard three-piece, white folding plastic chair, wooden paddle with 0-10 dial, brown loafers no socks."
+  },
+  "asset_rights": [
+    {
+      "asset": "uncle-verdict-v1/voice",
+      "kind": "voice",
+      "source": "bible voice spec; synthetic voice from generation tool",
+      "rights_status": "unresolved",
+      "scope": "character voice, same as bible; confirm approved voice asset_id"
+    },
+    {
+      "asset": "uncle-verdict-v1/location_still_corner_shop",
+      "kind": "location_still",
+      "source": "bible recurring location: outside a corner shop on a pavement",
+      "rights_status": "unresolved",
+      "scope": "generic generated location, no real place; confirm approved asset_id"
+    },
+    {
+      "asset": "uncle-verdict-v1/character_reference",
+      "kind": "character_reference",
+      "source": "original character, bible uncle-verdict-v1",
+      "rights_status": "owned",
+      "scope": "bake-off test render; name/IP uncleared"
+    }
+  ],
+  "tool_mapping": {
+    "adapter": "higgsfield-mcp/generate_video + generate_image",
+    "verified_on": "2026-10-07",
+    "units": [
+      {
+        "generation_unit": "U1",
+        "scene_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "model": "seedance_2_5",
+        "routing": {
+          "why": "dialogue + identity lock: Seedance 2.5 omni_reference carries image + audio references (voice lock) with native audio",
+          "status": "verified_controls",
+          "fallback": "seedance_2_0_mini for drafts; cinematic_studio_video_4_0 for premium look",
+          "optimisation": "480p draft -> finalize"
+        },
+        "controls": {
+          "duration": 12,
+          "aspect_ratio": "9:16",
+          "resolution": "720p",
+          "generate_audio": true,
+          "mode": "omni_reference"
+        },
+        "prompt_text": "TOP PRIORITY (read first):\n1. Face and identity match @image1 100% for the entire take; identity reference ONLY, never its lighting.\n2. Speak ONLY the quoted lines, in English, lips still when no line is spoken.\n3. Props exist from frame one and never appear, disappear or change design: white folding plastic garden chair, large wooden scoring paddle with a 0-10 dial, closed plain umbrella (no logo) across his knees, passer-by's open plain dark umbrella (generic, no logo, passer-by only a blurred edge figure), rain (top edge, then falling), grey corner-shop wall with blank unreadable shutter.\n4. Never staged, never stiff, never puppet-like; the comedy is in disproportion, not mugging.\n5. No readable brand text, logos or signage anywhere in frame.\n=== REFERENCE KEY === @image1 character reference; @image2 location still (scene reference only).\nCHARACTER: Round soft face, heavy-lidded calm eyes, neat salt-and-pepper beard trimmed short, bald shining crown with a ring of grey hair, slow blink, serene half-smile that never changes. Costume: Mustard-yellow three-piece suit slightly too big, open collar, brown leather loafers with no socks, mustard trousers slightly too long; same costume all episode, no changes.. Register: Seated stillness and calm; the loudness is in the opinion, not the voice; comedy from the gap between certainty and evidence; invites the viewer to argue.\nCRITICAL - RELIGHT: discard the reference's lighting; relight to the scene as described per shot, with true contact shadows; must look physically present, never a cut-out.\n--- S1 (0.0-6.0s) ---\nLocation: outside a corner shop on a pavement (generic, unrecognisable). Environment: Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.\nAction: Locked portrait. Uncle Verdict sits on the white chair, paddle upright on his thigh with the dial at 2, closed umbrella across his knees, a thin grey rain edge at the top of frame. He lifts the paddle slightly so the 2 reads, and delivers the verdict.\nPerformance: Invested task: present the verdict like a judge reading a ruling, eyes steady on the lens, finger resting on the dial. Micro-expression: One slow blink on 'ten'; the half-smile does not change.\nCamera: medium portrait, centred, seated eye level, 9:16; lens feel phone main lens, about 26mm equivalent; movement propped phone with one small settle-wobble in the first second, then locked; rig phone propped on a low crate at seated eye level\nLighting: Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.\nAudio: ambience quiet street ambience, distant traffic, faint wind; foley: wooden paddle tapping thigh, suit fabric rustle, umbrella canvas shift, exaggerated dial click; no music\nDialogue (Uncle Verdict, on-camera): \"Umbrella. Two out of ten. Correct answer: a tiny roof for nobody.\" - slow, warm, certain; never raises his voice; short pauses after each sentence\n--- S2 (6.0-9.0s) ---\nLocation: outside a corner shop on a pavement (generic, unrecognisable). Environment: Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.\nAction: First drops land on the paddle wood and then on his bald crown. From the right frame edge a generic passer-by's open plain umbrella slides through, dry underneath. He does not move, shelter or blink.\nPerformance: Invested task: hold his verdict against the weather, eyes fixed on the lens, refusing to glance at the sky. Micro-expression: Drop runs down his forehead; the half-smile and heavy-lidded calm do not change.\nCamera: medium portrait, centred, seated eye level, 9:16; lens feel phone main lens, about 26mm equivalent; movement propped phone, locked, no move; rig phone propped on a low crate at seated eye level\nLighting: Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.\nAudio: ambience street ambience as light rain begins, patter on pavement; foley: rain drops on wood, drops on skin, passing umbrella canopy whoosh, soft footstep; no music\n--- S3 (9.0-12.0s) ---\nLocation: outside a corner shop on a pavement (generic, unrecognisable). Environment: Pavement outside a corner shop, grey wall and blank shutter behind, damp-free slabs at start, blurred generic passers-by far background, no readable text or brands.\nAction: He turns the dial with one finger from 2 down to 1 (exaggerated click), holds the paddle up to the lens showing 1, rain pouring, umbrella gone from frame, and says the final word. Holds the pose on the last frame.\nPerformance: Invested task: correct the dial and present it with total certainty, finger steady, eyes on the lens. Micro-expression: Slow blink after the word; rain on the crown, serenity unchanged.\nCamera: medium portrait, centred, seated eye level, 9:16; lens feel phone main lens, about 26mm equivalent; movement propped phone, locked, paddle comes toward lens; no move; rig phone propped on a low crate at seated eye level\nLighting: Soft overcast key from camera-left top (grey sky); weak fill from the pale shop wall at right; warm mustard bounce from his suit onto the white chair and the paddle; soft contact shadows under chair legs, loafers and the umbrella on his knees. Light stays flat and stable apart from rain darkening.\nAudio: ambience steady rain on pavement, distant traffic; foley: exaggerated dial click, rain on paddle, suit rustle, umbrella canvas drip; no music\nDialogue (Uncle Verdict, on-camera): \"Final.\" - one soft, unhurried word, certain\nON-SCREEN TEXT: none (added in post).",
+        "medias": [
+          {
+            "value": "<media_id of approved character reference (asset char-inspector-v1)>",
+            "role": "image_references"
+          },
+          {
+            "value": "<media_id of approved location still>",
+            "role": "image_references"
+          },
+          {
+            "value": "<media_id of approved voice asset voice-inspector-v1>",
+            "role": "audio_references"
+          }
+        ],
+        "manual_steps": [
+          "Upload approved reference stills via media_upload (owner action; upload requires approval).",
+          "Burn captions/on-screen text in edit.",
+          "Add licensed music in edit if any.",
+          "Assemble generation units with hard cuts in edit; verify total duration and loop.",
+          "Run get_cost:true preflight and record quote before any submit; submit only after render_approved and credit_cap."
+        ],
+        "gaps": [
+          "No fps/container control; inspect exported file.",
+          "Lip-sync and exact SFX timing are not controllable; inspect output.",
+          "Lens is prompt language only."
+        ],
+        "estimated_credits": 84,
+        "estimated_credits_draft": 36,
+        "quote_source": "generate_video get_cost preflights 2026-10-07 (9:16/720p), linearly scaled by duration; quotes, not measured completed-output costs; retakes multiply"
+      }
+    ],
+    "asset_requests": [
+      {
+        "asset_id": "loc-uncle-verdict-v1/location_stil",
+        "kind": "location_still",
+        "model": "nano_banana_pro",
+        "controls": {
+          "resolution": "2k",
+          "aspect_ratio": "9:16"
+        },
+        "why": "empty lived-in location, no people, planned key light; reused across episodes for a consistent world",
+        "status": "verified_controls",
+        "alternatives": [
+          "cinematic_studio_2_5 for dramatic establishing stills"
+        ],
+        "prompt_text": "Authentic candid iPhone photo of an empty uncle-verdict-v1/location_still_corner_shop, no people, lived-in not staged, casual slightly imperfect framing, eye level, Locked-off phone at seated eye level, centred, like a portrait; mustard against grey; the evidence enters frame from an edge., soft window daylight from one side already planned as the key light for a later video, mild HDR, true-to-life colors, subtle sensor grain, no retouching, no readable text, no brands, no logos, vertical 9:16 composition with calm upper third for captions",
+        "reuse": "approved once per recurring location; continuity_reuse.location=same reuses it"
+      },
+      {
+        "asset_id": "char-ref",
+        "kind": "character_reference",
+        "model": "nano_banana_pro",
+        "controls": {
+          "resolution": "2k",
+          "aspect_ratio": "16:9"
+        },
+        "why": "split-screen character sheet per Higgsfield character-sheet workflow (photoreal-unretouched preset); 16:9 for split-screen",
+        "status": "verified_controls",
+        "alternatives": [
+          "nano_banana_2_1 (NB 2.1: image+video refs, inpaint - to be tested)",
+          "soul_2 / soul_cast (Higgsfield identity models; different pipeline)"
+        ],
+        "prompt_text": "Split-screen character sheet composition, left side a full-body shot of the character standing upright in a neutral straight standing pose facing the camera with both feet flat on the ground and arms relaxed at the sides, full head-to-toe framing with the whole body and both feet visible, right side a tight close-up chest-up portrait of the same character, identical original male character on both sides, single subject only exactly one person with only the character in frame, pure white seamless studio background, professional character sheet presentation, adult man aged 52-58, Round soft face, heavy-lidded calm eyes, neat salt-and-pepper beard trimmed short, bald shining crown with a ring of grey hair, slow blink, serene half-smile that never changes., mature adult bone structure and facial proportions, not a youthful rounded babyface, naturally muted catchlights, no oversized specular glare in the iris, eye color muted rather than glowing, bald crown with a short ring of grey hair, neat short salt-and-pepper beard, visible fine skin texture with natural pores, fine lines, subtle asymmetries and texture irregularities, natural minimal grooming, slight natural sheen rather than glossy retouched finish, no digital smoothing, no beauty filter, no AI-airbrushed look, matte-to-natural complexion, balanced natural proportions, wearing Mustard-yellow three-piece suit slightly too big, open collar, a folding white plastic garden chair he carries everywhere, a large wooden scoring paddle with a dial from 0 to 10, brown leather loafers with no socks., mustard suit trousers slightly too long, brown leather loafers, no socks, no jewellery, no bag, natural anatomy, high-end but unretouched commercial photography style, soft diffused studio lighting without harsh reflections, cinematic realism, clean white background, 4K quality, sharp focus on skin texture detail, single subject only, exactly one person, only the character in frame, no other people, no duplicate figures, no mannequin, no reflections, no props other than items worn or carried in the described silhouette, no furniture, no background objects, empty seamless studio, left panel standing full-body head-to-toe not cropped not sitting, right panel tight close-up not full body, no text, no watermark, no logos, no frame borders, no babyface, no plastic skin, original character that does not resemble any real person or existing copyrighted character",
+        "reuse": "approved once, reused every episode (continuity_reuse.costume=same unless bumped)"
+      }
+    ],
+    "notes": "DRY RUN. No job submitted. prompt_text is free text, the only creative payload the tool accepts; internal JSON is not a native format. Field map: scene.action->prompt_text; scene.performance->prompt_text; scene.microexpression->prompt_text; scene.camera.shot->prompt_text; scene.camera.lens->prompt_text; scene.camera.movement->prompt_text; scene.lighting->prompt_text; scene.environment->prompt_text; scene.sound.ambience->native+prompt_text; scene.sound.music->manual; scene.dialogue->prompt_text; scene.captions->manual; scene.transition_out->manual; scene.cuts_inside_clip->prompt_text; continuity.identity_anchors->native+prompt_text; duration->native; aspect_ratio->native; resolution->native; export.fps->gap; export.container->gap; disclosure->manual"
+  },
+  "approval": {
+    "render_approved": false,
+    "spend_approved": false,
+    "publish_approved": false,
+    "approved_by": "",
+    "approved_at": "",
+    "credit_cap": null
+  },
+  "export": {
+    "aspect_ratio": "9:16",
+    "resolution": "1080x1920",
+    "fps": 30,
+    "container": "mp4",
+    "max_duration_s": 12,
+    "edit_plan": [
+      "Single 12 s Seedance 2.0 Mini unit U1, no cuts",
+      "Burn captions in edit: 'Umbrella. 2/10.' at 0-6 s, 'Final.' at 9-12 s",
+      "No music; keep quiet street and rain ambience"
+    ],
+    "disclosure_plan": [
+      "Label as AI-generated per platform setting",
+      "Fictional character note in caption"
+    ]
+  },
+  "qa": {
+    "deterministic": {},
+    "creative": {},
+    "repetition": {
+      "threshold": 0.35,
+      "fields": {
+        "hook": {
+          "max_similarity": 0.0,
+          "closest_packet": null
+        },
+        "premise": {
+          "max_similarity": 0.0,
+          "closest_packet": null
+        },
+        "payoff": {
+          "max_similarity": 0.0,
+          "closest_packet": null
+        },
+        "surprise": {
+          "max_similarity": 0.0,
+          "closest_packet": null
+        },
+        "shots": {
+          "max_similarity": 0.0,
+          "closest_packet": null
+        },
+        "pitch": {
+          "max_similarity": 0.0,
+          "closest_packet": null
+        },
+        "devices": {
+          "max_similarity": 0.0,
+          "closest_packet": null
+        }
+      },
+      "flagged_fields": [],
+      "recurring_motifs": [],
+      "verdict": "no-lexical-repetition-detected",
+      "note": "Lexical similarity only; a reviewer must judge whether flagged overlap is identity (allowed) or a repeated joke/plot/device (not). 'devices' covers hook mechanism, props, lighting language, off-camera-voice use and the surprise device."
+    },
+    "render_inspection": null
+  },
+  "growth_hypotheses": [
+    {
+      "hypothesis": "A confident wrong take on a universal object makes viewers argue and share to a friend",
+      "metric": "comments per 1k views and shares",
+      "falsifier": "Comment rate below baseline with no arguments about umbrellas"
+    },
+    {
+      "hypothesis": "The mustard silhouette reads muted within one second",
+      "metric": "3-second hold rate on muted autoplay",
+      "falsifier": "3-second hold below the account baseline"
+    }
+  ],
+  "provenance": {
+    "generated_at": "2026-10-08T05:58:19Z",
+    "provider": "broker",
+    "requested_model": "sonnet",
+    "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+    "effort": "medium",
+    "demonstrations_used": [
+      "D1_silent_gag",
+      "D2_spoken_tool_honesty"
+    ],
+    "trends_used": [],
+    "trends_snapshot_age_days": null,
+    "stage_log": [
+      {
+        "stage": "premises",
+        "attempt": 0,
+        "result": "ok",
+        "errors": 0,
+        "requested_model": "sonnet",
+        "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+        "usage": {},
+        "provider": "broker",
+        "latency_s": 0.0,
+        "at": "2026-10-08T05:55:50Z"
+      },
+      {
+        "stage": "hooks",
+        "attempt": 0,
+        "result": "ok",
+        "errors": 0,
+        "requested_model": "sonnet",
+        "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+        "usage": {},
+        "provider": "broker",
+        "latency_s": 0.0,
+        "at": "2026-10-08T05:57:03Z"
+      },
+      {
+        "stage": "script_storyboard",
+        "attempt": 0,
+        "result": "ok",
+        "errors": 0,
+        "requested_model": "sonnet",
+        "observed_model": "not independently observable (Agent tool; model=sonnet requested)",
+        "usage": {},
+        "provider": "broker",
+        "latency_s": 0.0,
+        "at": "2026-10-08T05:58:19Z"
+      }
+    ],
+    "repair_passes": 0,
+    "engine_version": "0.1.0"
+  },
+  "negative_constraints": [
+    "Do not copy any researched creator's look, catchphrase or footage.",
+    "No readable brand text in frame.",
+    "No real people or recognisable locations.",
+    "No bob/moustache/white-tunic combination or any researched creator's identity, catchphrase, costume or footage.",
+    "No real people, no real brands, no religion, no politics, no mocking of strangers' bodies, accents, disabilities or faith; strangers in frame are generic extras who never become the joke.",
+    "No trending dance or sound that is not cleared; any dance is an original move described in the storyboard.",
+    "No firsthand product endorsements.",
+    "Opinions are about objects, food, habits and everyday choices only; never about people, groups, places' inhabitants, beliefs or bodies."
+  ],
+  "production_format": {
+    "shot_architecture": "single_take_static",
+    "audio_mode": "on_camera_dialogue",
+    "camera_style": "Locked-off phone at seated eye level, centred portrait; rain and the passing umbrella enter from the frame edges.",
+    "continuity_reuse": {
+      "voice": "same",
+      "location": "same",
+      "costume": "same"
+    },
+    "trend_refs": [],
+    "rationale": "The cleanest cold-viewer introduction: static portrait shows silhouette, the verdict format and the rule within one generation unit, with the quiet delivery doing the work.",
+    "chosen_by": "engine"
+  }
+}

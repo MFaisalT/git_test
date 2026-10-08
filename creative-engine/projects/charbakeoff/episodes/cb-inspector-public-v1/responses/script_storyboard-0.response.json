@@ -1,0 +1,321 @@
+{
+ "script": {
+  "title": "Finding One",
+  "synopsis": "At a bus stop the Inspector formally cites a single ticket stub four centimetres from the bin while the city ignores her, bins it with ceremony, and walks away trailing a ribbon of identical stubs from her own pockets.",
+  "beats": [
+   {
+    "beat": "Locked frame shows silhouette, lamp and the stub; one two-finger tap",
+    "function": "hook"
+   },
+   {
+    "beat": "She states the finding to indifferent passers-by",
+    "function": "setup"
+   },
+   {
+    "beat": "Louder verdict, bins and logs the stub",
+    "function": "escalation"
+   },
+   {
+    "beat": "Ribbon of stubs spills from her pockets as she exits",
+    "function": "turn"
+   },
+   {
+    "beat": "Held beat on the trail she does not see",
+    "function": "payoff"
+   }
+  ],
+  "dialogue": [
+   {
+    "speaker": "Inspector",
+    "line": "Finding one.",
+    "delivery": "measured, bureaucratic",
+    "on_camera": true
+   },
+   {
+    "speaker": "Inspector",
+    "line": "A stub. Four centimetres from the bin.",
+    "delivery": "short declarative, slightly louder",
+    "on_camera": true
+   },
+   {
+    "speaker": "Inspector",
+    "line": "Litter. Noted. Filed.",
+    "delivery": "verdict volume up one notch",
+    "on_camera": true
+   }
+  ],
+  "caption_text": "Finding one. A stub. Four centimetres from the bin. Litter. Noted. Filed.",
+  "cta": "",
+  "disclosure_line": "AI-generated character and footage."
+ },
+ "scenes": [
+  {
+   "scene_id": "S1",
+   "start_s": 0,
+   "end_s": 3,
+   "location": "Bus stop with a timetable board (recurring bible location)",
+   "action": "Frame one: the Inspector stands centre-left beside the blank timetable board, lamp lit on her chest, facing a single ticket stub on the pavement four centimetres from the steel bin. A blurred passer-by crosses behind. After one beat she gives one slow two-finger tap on the clipboard, then speaks.",
+   "performance": "Invested task: formally open a finding; goal is to get the stub on record, obstacle is the crowd walking through frame, tactic is stillness and procedure. Eyes stay on the stub, then lift to the passing blur.",
+   "microexpression": "Brows level; a faint settle of the glasses down the nose as she looks at the stub.",
+   "dialogue": [
+    {
+     "speaker": "Inspector",
+     "line": "Finding one.",
+     "delivery": "measured, bureaucratic, normal volume, aimed at passers-by",
+     "on_camera": true
+    }
+   ],
+   "camera": {
+    "shot": "medium-wide, eye level, slightly too formal framing, Inspector centre-left",
+    "lens": "28mm-equivalent phone main camera, mild wide",
+    "movement": "Locked-off propped phone with a single small settle-wobble in the first half second, then still",
+    "rig": "phone propped on a low wall at eye level"
+   },
+   "lighting": "Soft overcast daylight key from camera-left above; cool grey fill from the sky; faint warm bounce off the sandstone pavement into the jacket underside; soft contact shadows under shoes and bin. Light stays constant for the whole clip.",
+   "environment": "Generic grey street bus stop, unreadable blank timetable board, steel bin, wooden bench behind her; blurred generic passers-by cross at mid-distance, never in focus and never reacting to her.",
+   "sound": {
+    "ambience": "real street ambience: distant traffic, footsteps, soft wind",
+    "foley": [
+     "slow two-finger clipboard tap, exaggerated one notch",
+     "lamp hum-click as it settles",
+     "footsteps passing"
+    ],
+    "music": "none",
+    "voice": "on-camera, close-in room tone, flat bureaucratic cadence"
+   },
+   "captions": "",
+   "transition_out": "continuous",
+   "props_from_frame_one": [
+    "tiny clipboard on lanyard",
+    "bright circular inspection lamp on chest strap",
+    "small paper ticket stub (the cited fault)",
+    "street bin",
+    "bus stop timetable board (unreadable, no text)",
+    "bus stop bench"
+   ],
+   "cuts_inside_clip": 0,
+   "generation_unit": "U1"
+  },
+  {
+   "scene_id": "S2",
+   "start_s": 3,
+   "end_s": 6,
+   "location": "Bus stop with a timetable board (recurring bible location)",
+   "action": "She raises the lamp and sweeps it onto the stub. A second blurred stranger crosses frame without a glance. She states the finding to them.",
+   "performance": "Invested task: pin the fault down for the record; obstacle is that nobody answers, tactic is to enunciate every word and measure the gap with two fingers held up.",
+   "microexpression": "Warm disappointment starts at the corners of her mouth, not anger.",
+   "dialogue": [
+    {
+     "speaker": "Inspector",
+     "line": "A stub. Four centimetres from the bin.",
+     "delivery": "short declarative lines, slightly louder than the first",
+     "on_camera": true
+    }
+   ],
+   "camera": {
+    "shot": "medium-wide, eye level, slightly too formal framing, Inspector centre-left",
+    "lens": "28mm-equivalent phone main camera, mild wide",
+    "movement": "Locked-off, no move",
+    "rig": "phone propped on a low wall at eye level"
+   },
+   "lighting": "Soft overcast daylight key from camera-left above; cool grey fill from the sky; faint warm bounce off the sandstone pavement into the jacket underside; soft contact shadows under shoes and bin. Light stays constant for the whole clip.",
+   "environment": "Generic grey street bus stop, unreadable blank timetable board, steel bin, wooden bench behind her; blurred generic passers-by cross at mid-distance, never in focus and never reacting to her.",
+   "sound": {
+    "ambience": "real street ambience: distant traffic, footsteps, soft wind",
+    "foley": [
+     "lamp click on",
+     "paper rustle of the stub in the breeze",
+     "clipboard knock on lanyard"
+    ],
+    "music": "none",
+    "voice": "on-camera, a notch louder"
+   },
+   "captions": "",
+   "transition_out": "continuous",
+   "props_from_frame_one": [
+    "tiny clipboard on lanyard",
+    "bright circular inspection lamp on chest strap",
+    "small paper ticket stub (the cited fault)",
+    "street bin",
+    "bus stop timetable board (unreadable, no text)",
+    "bus stop bench"
+   ],
+   "cuts_inside_clip": 0,
+   "generation_unit": "U1"
+  },
+  {
+   "scene_id": "S3",
+   "start_s": 6,
+   "end_s": 9,
+   "location": "Bus stop with a timetable board (recurring bible location)",
+   "action": "A third blurred passer-by walks through frame ignoring her. Louder, she gives the verdict, picks up the stub, bins it with ceremony and writes on the clipboard with a pen. Behind her, unseen by her, a first ticket stub slips from a flap pocket.",
+   "performance": "Invested task: carry out the sentence precisely; obstacle is the stub needing a formal reach, tactic is a stiff, correct posture while she bins and logs.",
+   "microexpression": "Brief satisfied press of the lips as the stub drops into the bin.",
+   "dialogue": [
+    {
+     "speaker": "Inspector",
+     "line": "Litter. Noted. Filed.",
+     "delivery": "verdict volume up one notch, crisp",
+     "on_camera": true
+    }
+   ],
+   "camera": {
+    "shot": "medium-wide, eye level, slightly too formal framing, Inspector centre-left",
+    "lens": "28mm-equivalent phone main camera, mild wide",
+    "movement": "Locked-off, no move",
+    "rig": "phone propped on a low wall at eye level"
+   },
+   "lighting": "Soft overcast daylight key from camera-left above; cool grey fill from the sky; faint warm bounce off the sandstone pavement into the jacket underside; soft contact shadows under shoes and bin. Light stays constant for the whole clip.",
+   "environment": "Generic grey street bus stop, unreadable blank timetable board, steel bin, wooden bench behind her; blurred generic passers-by cross at mid-distance, never in focus and never reacting to her.",
+   "sound": {
+    "ambience": "real street ambience: distant traffic, footsteps, soft wind",
+    "foley": [
+     "stub drops into the bin with a hollow tick",
+     "pen scratch on the clipboard",
+     "lamp click off",
+     "pocket flap slap"
+    ],
+    "music": "none",
+    "voice": "on-camera, verdict volume"
+   },
+   "captions": "",
+   "transition_out": "continuous",
+   "props_from_frame_one": [
+    "tiny clipboard on lanyard",
+    "bright circular inspection lamp on chest strap",
+    "small paper ticket stub (the cited fault)",
+    "street bin",
+    "bus stop timetable board (unreadable, no text)",
+    "bus stop bench"
+   ],
+   "cuts_inside_clip": 0,
+   "generation_unit": "U1"
+  },
+  {
+   "scene_id": "S4",
+   "start_s": 9,
+   "end_s": 12,
+   "location": "Bus stop with a timetable board (recurring bible location)",
+   "action": "She turns and walks out of frame-right satisfied. Behind her a ribbon of identical ticket stubs spills from her flap pockets and runs along the pavement back to the bench. The frame holds one beat on the trail after she leaves, then ends.",
+   "performance": "Invested task: leave the scene correct and orderly; she never looks down. The camera notices the trail before she does.",
+   "microexpression": "Calm, content half-nod; no glance back.",
+   "dialogue": [],
+   "camera": {
+    "shot": "medium-wide, eye level, frame holds on the trail after she exits frame-right",
+    "lens": "28mm-equivalent phone main camera, mild wide",
+    "movement": "Locked-off, no move; hold on the empty frame with the trail",
+    "rig": "phone propped on a low wall at eye level"
+   },
+   "lighting": "Soft overcast daylight key from camera-left above; cool grey fill from the sky; faint warm bounce off the sandstone pavement into the jacket underside; soft contact shadows under shoes and bin. Light stays constant for the whole clip.",
+   "environment": "Generic grey street bus stop, unreadable blank timetable board, steel bin, wooden bench behind her; blurred generic passers-by cross at mid-distance, never in focus and never reacting to her.",
+   "sound": {
+    "ambience": "real street ambience: distant traffic, footsteps, soft wind",
+    "foley": [
+     "two flat shoe steps receding",
+     "stubs fluttering and ticking on pavement",
+     "distant traffic swells"
+    ],
+    "music": "none",
+    "voice": "none"
+   },
+   "captions": "Verdict: litter. (She is the litter.)",
+   "transition_out": "end of clip",
+   "props_from_frame_one": [
+    "tiny clipboard on lanyard",
+    "bright circular inspection lamp on chest strap",
+    "street bin",
+    "bus stop bench",
+    "bus stop timetable board (unreadable, no text)",
+    "ribbon of identical paper ticket stubs spilling from her flap pockets"
+   ],
+   "cuts_inside_clip": 0,
+   "generation_unit": "U1"
+  }
+ ],
+ "continuity": {
+  "identity_anchors": "Oval face, straight dark brows, small round glasses pushed slightly down the nose, neutral expression that breaks into warm disappointment rather than anger.",
+  "costume": "Aubergine utility jacket with four flap pockets, bright circular inspection lamp on a chest strap, tiny clipboard on a lanyard, hair in a tight low bun; plain charcoal trousers, flat black work shoes. Same costume for the whole episode.",
+  "props": [
+   "tiny clipboard on lanyard",
+   "bright circular inspection lamp on chest strap",
+   "small paper ticket stub (the cited fault)",
+   "street bin",
+   "pen",
+   "ribbon of identical paper ticket stubs spilling from her flap pockets",
+   "bus stop bench",
+   "bus stop timetable board (unreadable, no text)"
+  ],
+  "notes": "Rule: the Inspector is exposed as the culprit of the fault she cited; the camera notices first via the trail. Signature two-finger clipboard tap used exactly once, in S1. Strangers are blurred generic extras who never react and are never the joke. No readable text anywhere, including timetable board and stubs. Hair: dark hair in a tight low bun with a matte finish."
+ },
+ "asset_rights": [
+  {
+   "asset": "inspector-public-v1 character reference (silhouette and identity anchors)",
+   "kind": "character_reference",
+   "source": "bible inspector-public-v1; original character",
+   "rights_status": "owned",
+   "scope": "bake-off test render"
+  },
+  {
+   "asset": "Inspector voice (measured bureaucratic cadence), asset_id not listed in bible",
+   "kind": "voice",
+   "source": "generated with the tool; no approved voice asset exists in the bible",
+   "rights_status": "unresolved",
+   "scope": "bake-off test render; the engine must confirm or assign an approved voice asset_id"
+  },
+  {
+   "asset": "Bus stop location still, asset_id not listed in bible",
+   "kind": "location_still",
+   "source": "generic fictional bus stop; no approved location_still exists in the bible",
+   "rights_status": "unresolved",
+   "scope": "bake-off test render; confirm or assign an approved location_still asset_id"
+  }
+ ],
+ "export": {
+  "aspect_ratio": "9:16",
+  "resolution": "1080x1920",
+  "fps": 30,
+  "container": "mp4",
+  "max_duration_s": 12,
+  "edit_plan": [
+   "Single 12 s Seedance 2.0 Mini unit U1, no cuts",
+   "Burn captions in edit if audio is muted",
+   "No music"
+  ],
+  "disclosure_plan": [
+   "Platform AI-generated content label on post"
+  ]
+ },
+ "growth_hypotheses": [
+  {
+   "hypothesis": "The trail reveal at 9-12 s lands the rule muted and prompts the share 'this is you'.",
+   "metric": "share rate and completion rate",
+   "falsifier": "completion under 60% or fewer than 1 share per 100 views"
+  },
+  {
+   "hypothesis": "Escalating verdict volume to ignoring strangers reads as the character's energy without mugging.",
+   "metric": "comment mentions of her being ignored or of the trail",
+   "falsifier": "comments do not reference the trail or the ignoring"
+  }
+ ],
+ "evidence": [
+  {
+   "claim": "Total speech is 14 words across 12 s, about 1.2 words/s, within the 2.8 w/s limit.",
+   "kind": "fact",
+   "source": "dialogue counts in this storyboard",
+   "confidence": "high"
+  },
+  {
+   "claim": "Static single-take plus a late spill reads muted via the held trail beat.",
+   "kind": "hypothesis",
+   "source": "selected premise P1 rationale",
+   "confidence": "medium"
+  },
+  {
+   "claim": "Seedance may not render the stub trail or lip-sync reliably; inspect the render.",
+   "kind": "inference",
+   "source": "known generation-tool limits",
+   "confidence": "low"
+  }
+ ]
+}
+<!-- meta:{"requested_model":"sonnet","observed_model":"not independently observable (Agent tool; model=sonnet requested)","worker":"agent"} -->
