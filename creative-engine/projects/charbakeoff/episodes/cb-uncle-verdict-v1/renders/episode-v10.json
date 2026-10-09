@@ -1,0 +1,20 @@
+{
+ "kind": "episode_v10",
+ "date": "2026-10-09",
+ "owner_direction": "voice not constant in v9 A/B; speech plays while his lips are closed",
+ "routing_deviation": "OFF-ROUTING, pending owner decision. engine/routing.py sends spoken identity-critical units to cinematic_studio_video_4_0 (fallback seedance_2_5). U1 and U3 were rendered on wan2_7, which is not in the routing registry and was not owner-ranked. Chosen because it lip-syncs to a supplied audio track, so the audio is the exact locked-voice TTS; CS4 and Seedance only take timbre from audio_references and write their own speech. This is the 'lay the locked-voice lines in and lip-sync' fallback in docs/VOICE-LOCK.md, but the model pick should have been proposed first.",
+ "audio": {
+  "voice": "element 0138a858 'Uncle Verdict v1' (elevenlabs_v4)",
+  "line_tts": "ebd77daa, padded to 7 s -> media 1f00a65a",
+  "final_tts": "3fd0be7a, 0.7 s lead-in, 3 s -> media f32a0eec",
+  "bed": "U2's speech-free first 3 s (rain/street) looped at 0.6 under U1 and U3"
+ },
+ "renders": {
+  "U1": "122155c4 (wan2_7 720p 7 s, start 956bd569, audio 1f00a65a): output audio identical to the TTS; mouth moves 1.0-5.6 s only; dial on 5",
+  "U2": "bfb45bb2 (CS4 480p, from v9) trimmed to 0-3.0 s: dial turn 5 -> 2; its own 'Final.' at 3.2 s is cut off",
+  "U3": "db98a2a2 (wan2_7 720p 3 s, start 6120d87a, audio f32a0eec): 'Final.' 0.0-1.1 s, mouth closed before/after; dial on 2"
+ },
+ "episode": "media 38f997ce (720x1280, 24 fps, 13.04 s, loudnorm -14 LUFS)",
+ "qa": "whisper: 'Umbrella. Two out of ten. A tiny roof for nobody.' 0.86-5.46 s, 'Final.' 10.92 s; one voice throughout. Known flaw carried from U2: the umbrella on his knees is missing in shot 2.",
+ "credits": "wan2_7 10.5 + 4.5, TTS 0.46. Balance 9.39 on 2026-10-09 13:05 UTC: about 335 credits were spent between 2026-10-08 15:08 and 2026-10-09 05:18 by jobs not run from this session (Seedance 2.5 x3, Genjutsu motion transfer, Kling 3.0 Turbo x4, GPT Image, FLUX, NB Pro)."
+}
