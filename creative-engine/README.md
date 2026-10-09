@@ -22,12 +22,13 @@ python3 -m engine bible add <project> eval/bibles/inspector-v1.json [--reason ".
 python3 -m engine brief add <project> eval/briefs/B1_silent_gag.json
 python3 -m engine run   <project> B1_silent_gag inspector-v1 --packet-id EP01 --provider broker --model sonnet
 python3 -m engine resume <project> B1_silent_gag inspector-v1 --packet-id EP01      # after answering the pending request
-python3 -m engine validate projects/<project>/episodes/ep01/packet.json --bible eval/bibles/inspector-v1.json
+python3 -m engine validate projects/<project>/episodes/ep01/packet.json            # uses the bible version the packet pins; --bible <file> overrides
 python3 -m engine render   projects/<project>/episodes/ep01/packet.json --out storyboard.md
 python3 -m engine adapter  projects/<project>/episodes/ep01/packet.json            # dry run; no job submitted
 python3 -m engine history  <project> --packet-id EP01                              # repetition evidence vs episode history
 python3 -m engine approve  <project> EP01 --by "owner" --credit-cap 60 --render     # refuses drafts and unresolved rights
 python3 -m engine learn    <project> EP01 --json '{"shares_7d": 0, "lesson": "..."}'
+python3 -m engine list     <project>                                             # packets in a project
 ```
 
 ### Providers (the creative path genuinely invokes Claude; nothing is replayed silently)
@@ -49,7 +50,7 @@ Format is a first-class, tracked decision, not a side effect of the brief. `engi
 
 ## Higgsfield production routing
 
-`engine/routing.py` routes every reference asset and video unit to a verified Higgsfield model with a stated reason, status (verified controls / recommended-untested / gap) and a credit estimate from `get_cost` preflights: Nano Banana Pro (NB 2.1 switchable for testing) for character sheets and location stills; Seedance 2.5 `omni_reference` for dialogue, voice-lock and >15 s units with a 480p draft -> 1080p finalize optimisation; Seedance 2.0 Mini for short silent units and drafts; Cinema Studio 4.0 flagged as a gap until its creative-control ids are retrieved; Genjutsu for owned footage. See docs/TOOL-CAPABILITIES.md.
+`engine/routing.py` routes every reference asset and video unit to a verified Higgsfield model with a stated reason, status (verified controls / recommended-untested / gap) and a credit estimate from `get_cost` preflights. Nano Banana Pro (NB 2.1 switchable for testing) makes character sheets and location stills. Cinema Studio 4.0 `omni_reference` takes dialogue, voice-lock, handled-prop and keyframed-interaction units up to 15 s (owner ranking 2026-10-08; Seedance 2.5 is the fallback). Seedance 2.5 takes single takes over 15 s, Seedance 2.0 Mini short silent units with no props handled, and Genjutsu owned footage. Models the owner rejected (`REJECTED_MODELS`, currently `wan2_7`) fail validation. `routing_table_markdown()` prints the table. See docs/TOOL-CAPABILITIES.md.
 
 ## Trend radar (fresh research when needed)
 
@@ -69,14 +70,14 @@ Each LLM stage has a typed contract, a stage validator and at most two repair pa
 ## Layout
 
 ```
-engine/            validators.py (deterministic gates) · pipeline.py · adapters.py (Higgsfield dry-run) · prompts.py · retrieval.py · repetition.py · render.py · store.py · cli.py · providers/
+engine/            validators.py (deterministic gates) · pipeline.py · adapters.py (Higgsfield dry-run) · routing.py (model choice) · prompts.py · formats.py · trends.py · physics.py · camera.py · interaction.py · continuity.py · voice.py (voice lock) · assembly.py · cold_viewer.py · reminders.py (KPI reminders) · retrieval.py · repetition.py · render.py · store.py · cli.py · providers/
 schema/            episode_packet.schema.json (typed contract incl. negative constraints + provenance)
-prompts/           premises.md · hooks.md · script_storyboard.md · qa_review.md · repair.md  (conditional sections <<IF SILENT>> <<IF COMMERCIAL>> <<IF HISTORY>>)
+prompts/           premises.md · hooks.md · script_storyboard.md · qa_review.md · repair.md · trend_refresh.md · voice_design.md · cold_viewer.md  (conditional sections <<IF SILENT>> <<IF COMMERCIAL>> <<IF HISTORY>>)
 demos/             3 approved demonstrations (observable outputs + justification); never derived from eval briefs
 eval/              rubric.md (predeclared) · briefs/ · bibles/ · arch_*.md · judge_prompt.md · bakeoff_runs/ · heldout/
-tests/             94 unit/contract tests (positive and negative)
+tests/             142 unit/contract tests (positive and negative; `python3 -m unittest discover -s . -p "test_*.py"`)
 projects/          runtime store: bibles (versioned) · briefs · episodes/<id>/{packet.json, storyboard.md, adapter_plan.json, requests/, responses/, state.json} · decisions.jsonl · evidence.jsonl · runs.jsonl
-docs/              MODEL-EVIDENCE · TOOL-CAPABILITIES · ARCHITECTURE-BAKEOFF · NICHE-DECISION · EVIDENCE-LEDGER · LAUNCH-EXPERIMENT · FINAL-REPORT
+docs/              MODEL-EVIDENCE · TOOL-CAPABILITIES · ARCHITECTURE-BAKEOFF · NICHE-DECISION · EVIDENCE-LEDGER · LAUNCH-EXPERIMENT · FINAL-REPORT · CHARACTER-BAKEOFF · VOICE-LOCK · HAND-OBJECT-INTERACTION · PHYSICS-REALISM · RESOLUTION-POLICY · SKILLS-REVIEW · THREE-CHARACTERS-BRIEF.html
 ```
 
 ## What the gates can and cannot establish

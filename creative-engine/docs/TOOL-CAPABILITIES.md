@@ -63,18 +63,21 @@ Catalogue re-read via `models_explore` (get/search/recommend) and credit preflig
 
 ### Routing table
 
+_Current table (printed by `routing_table_markdown()`, matches `route_video_unit` as of 2026-10-09). The notes below are the original 2026-10-07 reasoning; the owner's 2026-10-08 ranking moved dialogue and identity-critical units from Seedance 2.5 to Cinema Studio 4.0, and its "gap" now applies only to the native camera/lens/light ids._
+
 | Job | Model | Why | Status |
 |---|---|---|---|
 | Character reference sheet | nano_banana_pro (NB 2.1 to be tested) | 2k/4k, image refs, split-screen sheet recipe | verified controls / NB2.1 untested |
 | Location stills (reused per location) | nano_banana_pro | 9:16 2k empty lived-in scene with planned key light | verified controls |
-| Video <=15 s, silent or draft | seedance_2_0_mini | identity refs + audio, 15 credits/15 s quoted | verified controls |
-| Video with dialogue / identity-critical, <=30 s | seedance_2_5 omni_reference (480p draft -> 1080p finalize) | image + audio refs (voice lock), native audio; 112 credits/16 s/720p, draft 48 | verified controls |
-| Single take > 15 s | seedance_2_5 omni_reference | only identity-ref model besides Cinema 4.0 that reaches 30 s | verified controls |
+| Video with dialogue or handled props, <=15 s | cinematic_studio_video_4_0 omni_reference (fallback seedance_2_5) | owner-ranked first 2026-10-08; image + audio refs (voice lock), native audio; 480p test, 720p final | verified controls |
+| Shown hand-object interaction | cinematic_studio_video_4_0 between approved start/end keyframes | owner-ranked first again on the keyframed paddle test | verified controls |
+| Single take > 15 s | seedance_2_5 omni_reference (fallback cinematic_studio_video_4_0) | identity refs + native audio up to 30 s; 480p draft -> 1080p finalize | verified controls |
+| Video <=15 s, silent or budget, no props handled | seedance_2_0_mini | identity refs + audio, 15 credits/15 s quoted | verified controls |
 | Premium cinematic look, character off-frame | cinematic_studio_3_0 | 4k, premium; no identity refs | recommended, untested |
-| Native lens/lighting/pacing controls | cinematic_studio_video_4_0 | exposes camera_lens_id, light_custom, pacing_id... but needs control ids not retrieved | gap |
 | Multi-shot inside one clip | cinematic_studio_video_v2 (multi_shots) or kling3_0 | native shot planning; no identity refs -> use for inserts only | recommended, untested |
 | Owned footage re-cast | hf_mult_motion_control | Genjutsu; driving video + character refs | verified controls |
 | Continuation (part 2) | seedance_2_5 video_extension | extends an approved clip | recommended, untested |
+| Audio-driven lip-sync | none: wan2_7 rejected by the owner 2026-10-09 | see REJECTED_MODELS | rejected |
 
 ### Recommendation and honesty notes
 

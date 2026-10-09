@@ -489,3 +489,11 @@ class TestKpiReminders(unittest.TestCase):
         r = due_reminders({"vince": early})[0]
         self.assertFalse(r["due"]); self.assertEqual(len(r["unmet"]), 2)
         self.assertFalse(due_reminders({})[0]["due"])
+
+
+class TestRoutingTable(unittest.TestCase):
+    def test_table_matches_the_router_for_spoken_units(self):
+        from engine.routing import routing_table_markdown
+        route = route_video_unit({}, 7, "on_camera_dialogue", False)
+        self.assertEqual(route["model"], "cinematic_studio_video_4_0")
+        self.assertIn("| Video with dialogue or handled props, <=15 s | cinematic_studio_video_4_0", routing_table_markdown())

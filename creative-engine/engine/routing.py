@@ -25,7 +25,7 @@ CATALOGUE = {
     "cinematic_studio_video_4_0": {"kind": "video", "min_s": 4, "max_s": 30, "res": ["480p", "720p", "1080p"], "aspect": ["auto", "21:9", "16:9", "4:3", "1:1", "3:4", "9:16"],
                                    "roles": ["start_image", "end_image", "image_references", "video_references", "audio_references"], "modes": ["t2v", "omni_reference", "video_edit", "video_extension"],
                                    "extras": ["era_id", "camera_model_id", "camera_lens_id", "camera_aperture_id", "pacing_id", "genre_id", "light/light_id/light_custom", "color_palette"],
-                                   "notes": "Cinema Studio 4.0: the only model exposing NATIVE camera-body/lens/aperture/lighting/pacing controls - but they take creative-control ids from a catalogue this build has not retrieved", "status": "gap"},
+                                   "notes": "Cinema Studio 4.0: owner-ranked first 2026-10-08 for identity-critical and interaction units (omni_reference, image + audio refs verified on renders). Its native camera/lens/light/pacing controls need ids no MCP surface lists, so lens and lighting stay prompt text", "status": "verified_controls"},
     "cinematic_studio_3_0": {"kind": "video", "min_s": 4, "max_s": 15, "res": ["480p", "720p", "1080p", "4k"], "aspect": ["auto", "21:9", "16:9", "4:3", "1:1", "3:4", "9:16"],
                              "roles": ["image", "start_image", "end_image"], "notes": "Cinema Studio Video 3.0: premium look, but no identity image_references role -> weaker character lock", "status": "verified_controls"},
     "cinematic_studio_video_v2": {"kind": "video", "min_s": 3, "max_s": 12, "res": [], "aspect": ["1:1", "4:3", "3:4", "16:9", "9:16"], "roles": ["image", "start_image", "end_image"],
@@ -164,15 +164,17 @@ def asset_requests(packet: dict, bible: dict, nb2_testing: bool = False) -> list
 
 
 def routing_table_markdown() -> str:
+    """Human-readable summary of route_video_unit / route_image_asset; keep in step with them."""
     rows = ["| Job | Model | Why | Status |", "|---|---|---|---|",
             "| Character reference sheet | nano_banana_pro (NB 2.1 to be tested) | 2k/4k, image refs, split-screen sheet recipe | verified controls / NB2.1 untested |",
             "| Location stills (reused per location) | nano_banana_pro | 9:16 2k empty lived-in scene with planned key light | verified controls |",
-            "| Video <=15 s, silent or draft | seedance_2_0_mini | identity refs + audio, 15 credits/15 s quoted | verified controls |",
-            "| Video with dialogue / identity-critical, <=30 s | seedance_2_5 omni_reference (480p draft -> 1080p finalize) | image + audio refs (voice lock), native audio; 112 credits/16 s/720p, draft 48 | verified controls |",
-            "| Single take > 15 s | seedance_2_5 omni_reference | only identity-ref model besides Cinema 4.0 that reaches 30 s | verified controls |",
+            "| Video with dialogue or handled props, <=15 s | cinematic_studio_video_4_0 omni_reference (fallback seedance_2_5) | owner-ranked first 2026-10-08; image + audio refs (voice lock), native audio; 480p test, 720p final | verified controls |",
+            "| Shown hand-object interaction | cinematic_studio_video_4_0 between approved start/end keyframes | owner-ranked first again on the keyframed paddle test | verified controls |",
+            "| Single take > 15 s | seedance_2_5 omni_reference (fallback cinematic_studio_video_4_0) | identity refs + native audio up to 30 s; 480p draft -> 1080p finalize | verified controls |",
+            "| Video <=15 s, silent or budget, no props handled | seedance_2_0_mini | identity refs + audio, 15 credits/15 s quoted | verified controls |",
             "| Premium cinematic look, character off-frame | cinematic_studio_3_0 | 4k, premium; no identity refs | recommended, untested |",
-            "| Native lens/lighting/pacing controls | cinematic_studio_video_4_0 | exposes camera_lens_id, light_custom, pacing_id... but needs control ids not retrieved | gap |",
             "| Multi-shot inside one clip | cinematic_studio_video_v2 (multi_shots) or kling3_0 | native shot planning; no identity refs -> use for inserts only | recommended, untested |",
             "| Owned footage re-cast | hf_mult_motion_control | Genjutsu; driving video + character refs | verified controls |",
-            "| Continuation (part 2) | seedance_2_5 video_extension | extends an approved clip | recommended, untested |"]
+            "| Continuation (part 2) | seedance_2_5 video_extension | extends an approved clip | recommended, untested |",
+            "| Audio-driven lip-sync | none: wan2_7 rejected by the owner 2026-10-09 | see REJECTED_MODELS | rejected |"]
     return "\n".join(rows)

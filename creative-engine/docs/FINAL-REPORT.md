@@ -8,7 +8,7 @@ A working local creative engine exists, is tested, and has repeatedly turned new
 
 | Item | Status |
 |---|---|
-| Engine code (schema, validators, pipeline, adapters, prompts, retrieval, repetition, trend radar, store, CLI) | **Implemented**; 94 unit/contract tests pass (`python3 -m unittest discover -s . -p "test_*.py"`) |
+| Engine code (schema, validators, pipeline, adapters, prompts, retrieval, repetition, trend radar, store, CLI) | **Implemented**; 94 unit/contract tests passed at this report (142 as of 2026-10-09) (`python3 -m unittest discover -s . -p "test_*.py"`) |
 | Deterministic gates (schema, timing gaps/overlaps/total, speech rate, missing camera/audio, continuity/props, unsupported tool controls, unit cut limits, rights, approval order, fixture quarantine, format-aware beats) | **Implemented and actually tested** with positive and negative cases; also exercised on 9 bake-off outputs and 5 real packets |
 | Broker provider (live Claude path via Agent-tool workers inside this authorised session) | **Actually used**: 31 worker calls for generation/QA (incl. 1 repair and the trend-aware run) (+3 blind judges, 1 held-out author, 1 trend refresh, 1 independent reviewer) |
 | `claude_cli` provider (`claude -p --output-format json`) | **Implemented, not exercised live** (non-interactive Fable may bill usage credits; see docs/MODEL-EVIDENCE.md) |
@@ -31,7 +31,7 @@ A working local creative engine exists, is tested, and has repeatedly turned new
 - Demonstrations: `demos/D1_silent_gag.json`, `D2_spoken_tool_honesty.json`, `D3_commercial_mechanism.json`
 - Predeclared rubric and briefs: `eval/rubric.md`, `eval/briefs/B1..B4`, `eval/bibles/inspector-v1.json`
 - Bake-off: `eval/bakeoff_runs/` (A/B requests+responses, sealed `judge-*/mapping.json`, judge responses, `structural.json`, `results.json`, `worker_usage.tsv`, `tuning_log.txt`), `docs/ARCHITECTURE-BAKEOFF.md`
-- Packets: `projects/bakeoff/episodes/*/`, `projects/acceptance/episodes/*/` (each: `packet.json`, `storyboard.md`, `adapter_plan.json`, `state.json`, `requests/`, `responses/`)
+- Packets: `projects/bakeoff/episodes/*/`, `projects/acceptance/episodes/*/` (each: `packet.json`, `requests/`, `responses/`; all but acceptance c-b1/c-b2/c-b3 also have `storyboard.md`, `adapter_plan.json`, `state.json`)
 - Held-out: `eval/heldout/HELDOUT_brief.json`, `eval/heldout/ACCEPTANCE-RESULTS.md`, `eval/heldout/independent-review.json`
 - Trend radar: `projects/acceptance/trends.jsonl`, `projects/acceptance/trends_requests/2026-10-07.{request.md,response.json}`
 - Decision docs: `docs/MODEL-EVIDENCE.md`, `docs/TOOL-CAPABILITIES.md`, `docs/NICHE-DECISION.md`, `docs/EVIDENCE-LEDGER.md`, `docs/LAUNCH-EXPERIMENT.md`, this file
@@ -41,7 +41,7 @@ A working local creative engine exists, is tested, and has repeatedly turned new
 
 ```bash
 git clone <repo> && git checkout claude/routing-mode-code-7atd07 && cd creative-engine
-python3 -m unittest discover -s . -p "test_*.py"            # 94 tests, 0 failures (Python 3.13, stdlib only)
+python3 -m unittest discover -s . -p "test_*.py"            # 94 tests at this report, 142 as of 2026-10-09; 0 failures (Python 3.13, stdlib only)
 python3 -m engine init myshow
 python3 -m engine bible add myshow eval/bibles/inspector-v1.json
 python3 -m engine brief add myshow eval/briefs/B1_silent_gag.json

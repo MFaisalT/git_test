@@ -14,7 +14,7 @@ The owner's reference list is loud, physical, public and polarising. The Inspect
 | Signature | two-finger clipboard tap | the Tempo Stomp (original move) | one-finger dial turn, paddle to lens |
 | Platform/legal exposure | low | low (no real people, no cleared-dance dependency) | low by design: do_not forbids opinions about people, groups, beliefs, bodies |
 
-Full bibles: `eval/bibles/{inspector-public-v1,captain-tempo-v1,uncle-verdict-v1}.json`. Shared brief: `eval/briefs/CB1_intro_*.json` (12 s public introduction, `render_tier: draft_mini`).
+Seed bibles: `eval/bibles/{inspector-public-v1,captain-tempo-v1,uncle-verdict-v1}.json`. Current versions live in `projects/charbakeoff/bibles/` (Uncle Verdict is at v9: locked voice, no "Correct answer", dial 5 → 2). Shared brief: `eval/briefs/CB1_intro_*.json` (12 s public introduction, `render_tier: draft_mini`).
 
 ## What the engine produced (real broker workflow, sonnet workers, 0 repairs)
 

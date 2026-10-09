@@ -246,5 +246,5 @@ A fresh reviewer with no brief or context went through three rounds: 2 s muted, 
 1. The dial looks like a different prop in the close-up because the "0" is missing. Cause: his fingertip covers the 0 in the approved source frame. A wider crop does not help. Staging rule for next time: keep the hand clear of the scale's end numerals.
 2. "Final." alone lands flat, and you have to read the needle to get the punchline. Candidate line: "One. Final." (owner's call).
 3. About 5 s with no speech in the middle (5.5-10.3 s). The v7 restage puts the rain under the line. A dial-click foley on the move would fill the push; the bible already asks for an "exaggerated dial click".
-4. "Correct answer" confused a cold viewer ("correct answer to what?"). It is part of the bible's fixed verdict format, so changing it is the owner's call.
+4. "Correct answer" confused a cold viewer ("correct answer to what?"). It was part of the bible's fixed verdict format. **Resolved:** the owner dropped it (bible v8, 2026-10-08), and bible v9 has the dial rest on 5 and turn 5 → 2 to land on the spoken score; the 2 → 1 staging above is superseded.
 5. The spliced "Final." sounds quieter and drier than the opening line. The level was matched to the model's quiet word, so it needs a louder mix and matching room reverb.

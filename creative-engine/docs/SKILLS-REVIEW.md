@@ -36,7 +36,7 @@ The owner asked for an "honest independent review" of the skills people recommen
 ## Rules to port, by impact
 
 1. **Rain beat (lost because the line filled the slot):**
-   - Check speech against the character's measured speaking rate from the locked voice. Fall back to Higgsfield's density limits, about 2.3 words/s at most; the engine currently allows 3.3.
+   - Check speech against the character's measured speaking rate from the locked voice. Fall back to Higgsfield's density limits, about 2.3 words/s at most; the engine now allows 2.8 (`SPEECH_WPS_MAX`, lowered from 3.3 on 2026-10-08).
    - World events happen *under* the line, not after it.
 2. **Prompts over budget:**
    - Count every word.
