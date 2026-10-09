@@ -1,7 +1,7 @@
 import unittest
 
 from engine.adapters import plan
-from engine.routing import CATALOGUE, asset_requests, character_sheet_prompt, quote_for, route_image_asset, route_video_unit
+from engine.routing import CATALOGUE, REJECTED_MODELS, asset_requests, character_sheet_prompt, quote_for, route_image_asset, route_video_unit
 from tests.helpers import bible, valid_packet
 
 
@@ -46,6 +46,11 @@ class TestRouting(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestRejectedModels(unittest.TestCase):
+    def test_rejected_models_stay_out_of_the_catalogue(self):
+        self.assertFalse(set(REJECTED_MODELS) & set(CATALOGUE))
 
 
 class TestRegistryRights(unittest.TestCase):

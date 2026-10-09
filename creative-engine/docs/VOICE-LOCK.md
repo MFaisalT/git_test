@@ -26,7 +26,7 @@ Each character bible has `approved_assets.voice`:
 
 | Character | Voice | Render status |
 |---|---|---|
-| Uncle Verdict | Not locked: the owner is choosing from 8 preset samples of his actual line | Blocked (`U1`, `U2`) |
+| Uncle Verdict | Locked 2026-10-08: element `0138a858` "Uncle Verdict v1", reference `a61301f9` (bible v6 onward; see below) | Renders allowed |
 | Captain Tempo | Not locked | Spoken packets blocked |
 | Inspector (public) | Not locked | Spoken packets blocked |
 
@@ -142,3 +142,14 @@ Every spoken unit now carries it automatically. First render with the locked voi
 - **Voice:** the voice in the video matched the locked reference. F0 was 118 Hz against 115 Hz, and the timbre-envelope correlation was 0.992. Cinema Studio 4.0 follows `audio_references`.
 - **Transcript:** the line is exact and is said once, from 0.0 to 5.8 s.
 - **Defect:** the speech ran until 5.8 s, which left no time for the rain beat (4.5-6 s). No rain or passing umbrella is visible at 5.6 s.
+
+## Voice consistency after v9 and v10 (2026-10-09)
+
+**Owner finding on v9** (version A `3cec4fb0`, native CS4 audio; version B `e166af18`, `voice_change` to the locked element): "the voice is not constant", and in both versions there is speech while his lips are closed.
+
+- **Cause, A:** Cinema Studio 4.0 takes the timbre from `audio_references` but writes its own performance. Across clips and within one clip, the delivery drifts. In U1 `8d6eafc7`, "a tiny roof for nobody" (about 5.0-6.3 s) plays over a closed mouth.
+- **Cause, B:** `voice_change` swaps the timbre but keeps A's timing, so it inherits the closed-lips speech.
+
+**v10, rejected:** the lines were generated in the locked voice first and then lip-synced on Wan 2.7 (`122155c4`, `db98a2a2`; record `renders/episode-v10.json`). This was off-routing. Owner verdict: "absolutely reject. it looks extremely fake and lip sync is so bad." `wan2_7` is now in `REJECTED_MODELS` (`engine/routing.py`), and the validator refuses it (`TOOL_REJECTED_MODEL`). The "lip-sync in the edit" fallback above is withdrawn for this model.
+
+**Open, to test after the credit top-up (inside the routing rules, Cinema Studio 4.0 only):** shorter units so the line ends well before the clip does, and a prompt line tying every spoken word to visible mouth movement. Nothing is decided until the owner has seen a render.

@@ -90,6 +90,10 @@ class TestToolMapping(unittest.TestCase):
         p = valid_packet(); p["tool_mapping"]["units"][0]["model"] = "sora_9000"
         self.assertIn("TOOL_UNKNOWN_MODEL", codes(validate_tool_mapping(p)))
 
+    def test_rejected_model(self):
+        p = valid_packet(); p["tool_mapping"]["units"][0]["model"] = "wan2_7"
+        self.assertIn("TOOL_REJECTED_MODEL", codes(validate_tool_mapping(p)))
+
     def test_duration_out_of_range(self):
         p = valid_packet(); p["tool_mapping"]["units"][0]["model"] = "kling3_0"
         p["scenes"][2]["end_s"] = 30; p["brief"]["duration_target_s"] = 30

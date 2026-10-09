@@ -34,6 +34,11 @@ CATALOGUE = {
     "hf_mult_motion_control": {"kind": "video", "min_s": 4, "max_s": 30, "res": ["480p", "720p", "1080p"], "aspect": [], "roles": ["image_references", "video_references"], "notes": "Genjutsu motion transfer; needs owned/licensed driving video", "status": "verified_controls"},
 }
 
+# Models the owner has tried and rejected. The validator refuses them; never re-add one to CATALOGUE without a new owner verdict.
+REJECTED_MODELS = {
+    "wan2_7": "owner 2026-10-09 on episode v10 (jobs 122155c4, db98a2a2): audio-driven lip-sync 'looks extremely fake and lip sync is so bad'",
+}
+
 # generate_video(get_cost=true) on 2026-10-07, 9:16, 720p unless noted; credits
 # 2026-10-08 get_cost preflights, 12 s, 9:16, audio on: seedance_2_0 fast 480p 12 / fast 720p 30 / std 720p 54;
 # kling_o3_image_reference std 15; minimax_h3_max 768p 30; gemini_omni 720p 30 per 10 s (max 10 s);

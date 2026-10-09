@@ -14,6 +14,8 @@ import re
 from dataclasses import dataclass, field
 from typing import Any
 
+from engine.routing import REJECTED_MODELS
+
 SCHEMA_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "schema", "episode_packet.schema.json")
 
 # Verified 2026-10-07 via Higgsfield MCP models_explore (read-only). See docs/TOOL-CAPABILITIES.md.
@@ -287,6 +289,9 @@ def validate_tool_mapping(packet: dict, rep: Report | None = None) -> Report:
     for u in tm.get("units", []):
         p = f"/tool_mapping/units/{u.get('generation_unit')}"
         model = u.get("model")
+        if model in REJECTED_MODELS:
+            rep.error("TOOL_REJECTED_MODEL", f"model '{model}' was rejected by the owner: {REJECTED_MODELS[model]}", p)
+            continue
         limits = TOOL_LIMITS.get(model)
         if not limits:
             rep.error("TOOL_UNKNOWN_MODEL", f"model '{model}' is not in the verified catalog", p)
