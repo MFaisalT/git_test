@@ -144,3 +144,11 @@ class TestSilentSingleQuotes(unittest.TestCase):
     def test_quoted_label_not_speech(self):
         p = valid_packet(); p["scenes"][0]["action"] += " The tag reads 'EVIDENCE' in marker."
         self.assertNotIn("SILENT_SPEECH_IN_ACTION", codes(validate_timing(p)))
+
+
+class TestValidateUsesPinnedBible(unittest.TestCase):
+    def test_validate_without_bible_flag_loads_the_pinned_version(self):
+        packet = os.path.join("projects", "charbakeoff", "episodes", "cb-uncle-verdict-v1", "packet.json")
+        r = subprocess.run([sys.executable, "-m", "engine", "validate", packet], capture_output=True, text=True, cwd=ROOT)
+        self.assertIn("using pinned bible", r.stderr)
+        self.assertNotIn("VOICE_LOCK_MISSING", r.stdout)

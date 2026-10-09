@@ -31,7 +31,7 @@ from .pipeline import QUOTES_2026_10_07, Pipeline, StageFailure
 from .providers import BrokerProvider, ClaudeCliProvider, FixtureProvider, PendingResponse
 from .render import storyboard_md
 from .repetition import compare
-from .store import Store, now_iso
+from .store import Store, now_iso, sha256_json
 from .prompts import render_trend_refresh
 from .trends import DEFAULT_FRESH_DAYS, age_days, parse_refresh_response, select_relevant, validate_entry
 from .validators import validate_all
@@ -42,6 +42,26 @@ DEFAULT_ROOT = os.environ.get("CE_ROOT", os.path.dirname(os.path.dirname(os.path
 def _load(p):
     with open(p, encoding="utf-8") as fh:
         return json.load(fh)
+
+
+def _bible_for(a, packet):
+    """--bible if given, else the bible version the packet pins (projects/<p>/bibles/<id>.v<N>.json), so bible checks
+    such as the voice lock are never skipped silently."""
+    if a.bible:
+        return _load(a.bible)
+    bv = packet.get("bible_version") or {}
+    if not bv.get("bible_id") or not bv.get("version"):
+        return None
+    project_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(a.packet))))
+    path = os.path.join(project_dir, "bibles", f"{bv['bible_id']}.v{bv['version']}.json")
+    if not os.path.exists(path):
+        print(f"warning: pinned bible {bv['bible_id']} v{bv['version']} not found; bible checks skipped", file=sys.stderr)
+        return None
+    bible = _load(path)
+    if bv.get("sha256") and sha256_json(bible) != bv["sha256"]:
+        print(f"warning: {path} changed since the packet pinned it (sha256 mismatch)", file=sys.stderr)
+    print(f"using pinned bible {os.path.relpath(path)}", file=sys.stderr)
+    return bible
 
 
 def cmd_init(a, store):
@@ -100,7 +120,7 @@ def cmd_run(a, store):
 
 def cmd_validate(a, store):
     packet = _load(a.packet)
-    bible = _load(a.bible) if a.bible else None
+    bible = _bible_for(a, packet)
     rep = validate_all(packet, bible)
     print(json.dumps(rep.as_dict(), indent=2))
     sys.exit(0 if rep.ok else 4)
@@ -116,7 +136,7 @@ def cmd_render(a, store):
 
 def cmd_adapter(a, store):
     packet = _load(a.packet)
-    bible = _load(a.bible) if a.bible else None
+    bible = _bible_for(a, packet)
     print(json.dumps(adapter_plan(packet, bible, QUOTES_2026_10_07), indent=2))
 
 
